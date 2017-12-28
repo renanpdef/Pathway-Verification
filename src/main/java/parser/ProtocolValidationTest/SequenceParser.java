@@ -42,7 +42,7 @@ public class SequenceParser {
 	public boolean isThereSameOutputStep() {
 		for (int i = 0; i < protocol.getSequence().size(); i++) {
 			for (int j = i+1; j < protocol.getSequence().size(); j++) {
-				if(protocol.getSequence().get(i).getPassoDeSaida() == protocol.getSequence().get(j).getPassoDeSaida()) {
+				if(protocol.getSequence().get(i).getOutputStep() == protocol.getSequence().get(j).getOutputStep()) {
 					return true;
 				}
 			}
@@ -52,83 +52,104 @@ public class SequenceParser {
 
 	//Function to verify if the sequences with the same output step have the same condition guard
 	//Use the choco solver to get possible solutions and return them
-	public List<Solution> sameGuardCondition() {
-		
-		//Initialize choco solver model
-		Model model = new Model("Same Guard Condition");
-		
+	public List<Solution> findNonDeterminism() {
+		//Lista de operandos
+		List<BoolVar>  boolVars = new ArrayList<BoolVar>();
 		//Loop to get sequences with the same output step
 		for (int i = 0; i < protocol.getSequence().size(); i++) {
+			//List of operations with the operations of each sequence
+			List<Operation> operations = new ArrayList<Operation>();
+			//Initialize choco solver model
+			Model model = new Model("Same Guard Condition");
+			//Clauses to find possible solutions with choco solver
+			//These clauses are the conditions guard
+			List<LogOp> clauses = new ArrayList<LogOp>();
+			
 			for (int j = i+1; j < protocol.getSequence().size(); j++) {
-				if(protocol.getSequence().get(i).getPassoDeSaida() == protocol.getSequence().get(j).getPassoDeSaida()) {
-					//System.out.println(protocol.getSequence().get(i).getOperation().getOperator().getValue());
-					Operation opi =  protocol.getSequence().get(i).getOperation();
-					Operation opj =  protocol.getSequence().get(j).getOperation();
-					
-					//List of operations with the operations of each sequence
-					List<Operation> operations = new ArrayList<Operation>();
-					operations.add(opi);
-					operations.add(opj);
-					
-					//Clauses to find possible solutions with choco solver
-					//These clauses are the conditions guard
-					List<LogOp> clauses = new ArrayList<LogOp>();
-					
-					//Loop to store the clauses of each operation on the clauses list
-					for(int k = 0; k < operations.size(); k++){
-						
-						//Verify the operator of each operation.
-						//Create the clauses according to the operator and 
-						//add them on the clauses list
-						switch (operations.get(k).getOperator()) {
-							case AND:
-							case OR:
-							case IMPLIES:
-							case XOR:
-								BoolVar[] boolVars = createBoolVars(model, k);
-								
-								calcBoolVar(clauses, operations.get(k), boolVars[0], boolVars[1]);
-								break;
-							
-							case EQUAL:
-							case EQUAL_OR_GREATER:
-							case EQUAL_OR_SMALLER:
-							case BIGGER_THAN:
-							case SMALLER_THAN:
-								IntVar[] intVars = createIntVars(model, k);
-								
-								calcIntVar(model, operations.get(k), intVars[0], intVars[1]);								
-								break;
-							case SUM:								
-								break;							
-							case MINUS:								
-								break;								
-							case MULTIPLICATION:								
-								break;								
-							case DIVISION:							
-								break;								
-							case NOT:								
-								break;							
-							case AFFIRMATION:								
-								break;					
-							default:
-								break;
-						}
+				if(protocol.getSequence().get(i).getOutputStep() == protocol.getSequence().get(j).getOutputStep()) {				
+					if(!operations.contains(protocol.getSequence().get(i).getOperation())) {
+						operations.add(protocol.getSequence().get(i).getOperation());
 					}
-					
-					//Add clauses list to the model
-					model.addClauses(LogOp.xor(clauses.get(0), clauses.get(1)));
-					List<Solution> solutions = new ArrayList<Solution>();
-					
-					//Get possible solutions
-					while(model.getSolver().solve()) {
-						solutions.add(model.getSolver().findSolution());
+					if(!operations.contains(protocol.getSequence().get(j).getOperation())) {
+						operations.add(protocol.getSequence().get(j).getOperation());
 					}
-					return solutions;
+
+					createClauses(boolVars, clauses, model, operations);
 				}
+			}
+			
+			if (!clauses.isEmpty()) {
+				//Add clauses list to the model
+				List<LogOp> XorClauses = new ArrayList<LogOp>();
+				for(int k = 1; k < clauses.size(); k++) {
+					if(XorClauses.isEmpty()) {
+						XorClauses.add(LogOp.xor(clauses.get(k-1), clauses.get(k)));
+					}else {
+						XorClauses.add(0, LogOp.xor(XorClauses.get(0), clauses.get(k)));
+					}
+				}
+				System.out.println("add clauses to model...");
+				model.addClauses(XorClauses.get(0));
+				System.out.println("finally");
+				List<Solution> solutions = new ArrayList<Solution>();
+				//Get possible solutions
+				while(model.getSolver().solve()) {
+					solutions.add(model.getSolver().findSolution());
+				}
+				return solutions;
 			}
 		}
 		return null;
+	}
+	
+	
+	//Create Clauses
+	public void createClauses(List<BoolVar> boolVars, List<LogOp> clauses, Model model, List<Operation> operations){
+		//Loop to store the clauses of each operation on the clauses list
+		for(int k = 0; k < operations.size(); k++){
+			int index[] = null;
+			//Verify the operator of each operation.
+			//Create the clauses according to the operator and 
+			//add them on the clauses list
+			switch (operations.get(k).getOperator()) {
+				case AND:
+				case OR:
+				case IMPLIES:
+				case XOR:
+					index = createBoolVars(boolVars, model, operations.get(k));
+					
+					calcBoolVar(clauses, operations.get(k), boolVars.get(index[0]), boolVars.get(index[1]));
+					break;
+				
+				case EQUAL:
+				case EQUAL_OR_GREATER:
+				case EQUAL_OR_SMALLER:
+				case BIGGER_THAN:
+				case SMALLER_THAN:
+					IntVar[] intVars = createIntVars(model, k);
+					
+					calcIntVar(model, operations.get(k), intVars[0], intVars[1]);								
+					break;
+				case SUM:								
+					break;							
+				case MINUS:								
+					break;								
+				case MULTIPLICATION:								
+					break;								
+				case DIVISION:							
+					break;								
+				case NOT:
+					index = createBoolVars(boolVars, model, operations.get(k));
+					clauses.add(LogOp.nand(boolVars.get(index[0]), boolVars.get(index[0])));
+					break;							
+				case AFFIRMATION:								
+					break;					
+				default:
+					index = createBoolVars(boolVars, model, operations.get(k));
+					clauses.add(LogOp.nand(boolVars.get(index[0]), boolVars.get(index[0])));
+					break;
+			}
+		}
 	}
 	
 	//create the IntVars
@@ -146,19 +167,18 @@ public class SequenceParser {
 		return intVars;
 	}
 	
-	//create the BoolVars
-	public BoolVar[] createBoolVars(Model model, int k) {		
-		BoolVar boolA = model.boolVar("A"+k);								
-		findDeadlock(boolA.getName(), elements);
-		existVar(null, boolA);
-		
-		BoolVar boolB = model.boolVar("B"+k);
-		findDeadlock(boolB.getName(), elements);
-		existVar(null, boolB);
-		
-		BoolVar[] boolVars = {boolA, boolB};
-		
-		return boolVars;
+	//create the BoolVars and return the index of the operation's operands.
+	public int[] createBoolVars(List<BoolVar> boolVars, Model model, Operation operation) {
+		int index[] = new int[operation.getOperand().size()];
+		for(int i = 0; i < operation.getOperand().size(); i++) {
+			if(!boolVars.contains(model.boolVar(operation.getOperand().get(i).getName()))) {
+				boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
+				index[i] = boolVars.size() -1;
+			}else {
+				index[i] = boolVars.indexOf(model.boolVar(operation.getOperand().get(i).getName()));
+			}
+		}
+		return index;
 	}
 	
 	private void existVar(IntVar intVar, BoolVar boolVar) {
