@@ -55,38 +55,42 @@ public class SequenceParser {
 	public List<Solution> findNonDeterminism() {
 		//Lista de operandos
 		List<BoolVar>  boolVars = new ArrayList<BoolVar>();
+		//List of operations with the operations of each sequence
+		List<Operation> operations = new ArrayList<Operation>();
+		//Initialize choco solver model
+		Model model = new Model("Same Guard Condition");
 		//Loop to get sequences with the same output step
 		for (int i = 0; i < protocol.getSequence().size(); i++) {
-			//List of operations with the operations of each sequence
-			List<Operation> operations = new ArrayList<Operation>();
-			//Initialize choco solver model
-			Model model = new Model("Same Guard Condition");
 			//Clauses to find possible solutions with choco solver
 			//These clauses are the conditions guard
 			List<LogOp> clauses = new ArrayList<LogOp>();
 			
 			for (int j = i+1; j < protocol.getSequence().size(); j++) {
-				if(protocol.getSequence().get(i).getOutputStep() == protocol.getSequence().get(j).getOutputStep()) {				
-					if(!operations.contains(protocol.getSequence().get(i).getOperation())) {
-						operations.add(protocol.getSequence().get(i).getOperation());
+				if(protocol.getSequence().get(i).getOutputStep() == protocol.getSequence().get(j).getOutputStep()) {	
+					Operation opi = protocol.getSequence().get(i).getOperation();
+					Operation opj = protocol.getSequence().get(j).getOperation();
+					
+					if(!operations.contains(opi)) {
+						operations.add(opi);
+						createClauses(boolVars, clauses, model, opi);
 					}
-					if(!operations.contains(protocol.getSequence().get(j).getOperation())) {
-						operations.add(protocol.getSequence().get(j).getOperation());
+					if(!operations.contains(opj)) {
+						operations.add(opj);
+						createClauses(boolVars, clauses, model, opj);
 					}
-
-					createClauses(boolVars, clauses, model, operations);
 				}
 			}
-			
 			if (!clauses.isEmpty()) {
 				//Add clauses list to the model
 				List<LogOp> XorClauses = new ArrayList<LogOp>();
+				System.out.println(clauses);
 				for(int k = 1; k < clauses.size(); k++) {
 					if(XorClauses.isEmpty()) {
 						XorClauses.add(LogOp.xor(clauses.get(k-1), clauses.get(k)));
 					}else {
 						XorClauses.add(0, LogOp.xor(XorClauses.get(0), clauses.get(k)));
 					}
+					System.out.println(XorClauses.get(0));
 				}
 				System.out.println("add clauses to model...");
 				model.addClauses(XorClauses.get(0));
@@ -103,52 +107,49 @@ public class SequenceParser {
 	}
 	
 	
-	//Create Clauses
-	public void createClauses(List<BoolVar> boolVars, List<LogOp> clauses, Model model, List<Operation> operations){
-		//Loop to store the clauses of each operation on the clauses list
-		for(int k = 0; k < operations.size(); k++){
-			int index[] = null;
-			//Verify the operator of each operation.
-			//Create the clauses according to the operator and 
-			//add them on the clauses list
-			switch (operations.get(k).getOperator()) {
-				case AND:
-				case OR:
-				case IMPLIES:
-				case XOR:
-					index = createBoolVars(boolVars, model, operations.get(k));
-					
-					calcBoolVar(clauses, operations.get(k), boolVars.get(index[0]), boolVars.get(index[1]));
-					break;
+	//Create Clauses for one operation
+	public void createClauses(List<BoolVar> boolVars, List<LogOp> clauses, Model model, Operation operation){
+		int index[] = null;
+		//Verify the operator of each operation.
+		//Create the clauses according to the operator and 
+		//add them on the clauses list
+		switch (operation.getOperator()) {
+			case AND:
+			case OR:
+			case IMPLIES:
+			case XOR:
+				index = createBoolVars(boolVars, model, operation);
 				
-				case EQUAL:
-				case EQUAL_OR_GREATER:
-				case EQUAL_OR_SMALLER:
-				case BIGGER_THAN:
-				case SMALLER_THAN:
-					IntVar[] intVars = createIntVars(model, k);
-					
-					calcIntVar(model, operations.get(k), intVars[0], intVars[1]);								
-					break;
-				case SUM:								
-					break;							
-				case MINUS:								
-					break;								
-				case MULTIPLICATION:								
-					break;								
-				case DIVISION:							
-					break;								
-				case NOT:
-					index = createBoolVars(boolVars, model, operations.get(k));
-					clauses.add(LogOp.nand(boolVars.get(index[0]), boolVars.get(index[0])));
-					break;							
-				case AFFIRMATION:								
-					break;					
-				default:
-					index = createBoolVars(boolVars, model, operations.get(k));
-					clauses.add(LogOp.nand(boolVars.get(index[0]), boolVars.get(index[0])));
-					break;
-			}
+				calcBoolVar(clauses, operation, boolVars.get(index[0]), boolVars.get(index[1]));
+				break;
+			
+			case EQUAL:
+			case EQUAL_OR_GREATER:
+			case EQUAL_OR_SMALLER:
+			case BIGGER_THAN:
+			case SMALLER_THAN:
+				IntVar[] intVars = createIntVars(model, 2);//ATENCAO
+				
+				calcIntVar(model, operation, intVars[0], intVars[1]);								
+				break;
+			case SUM:								
+				break;							
+			case MINUS:								
+				break;								
+			case MULTIPLICATION:								
+				break;								
+			case DIVISION:							
+				break;								
+			case NOT:
+				index = createBoolVars(boolVars, model, operation);
+				clauses.add(LogOp.nand(boolVars.get(index[0]), boolVars.get(index[0])));
+				break;							
+			case AFFIRMATION:								
+				break;					
+			default:
+				index = createBoolVars(boolVars, model, operation);
+				clauses.add(LogOp.nand(boolVars.get(index[0]), boolVars.get(index[0])));
+				break;
 		}
 	}
 	
@@ -171,11 +172,13 @@ public class SequenceParser {
 	public int[] createBoolVars(List<BoolVar> boolVars, Model model, Operation operation) {
 		int index[] = new int[operation.getOperand().size()];
 		for(int i = 0; i < operation.getOperand().size(); i++) {
-			if(!boolVars.contains(model.boolVar(operation.getOperand().get(i).getName()))) {
+			Model model_aux = new Model("Axiliary Model");
+			BoolVar boolVar = model_aux.boolVar(operation.getOperand().get(i).getName());
+			if(!boolVarsContain(boolVars, boolVar)) {
 				boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
 				index[i] = boolVars.size() -1;
 			}else {
-				index[i] = boolVars.indexOf(model.boolVar(operation.getOperand().get(i).getName()));
+				index[i] = boolVarIndexOf(boolVars, boolVar);
 			}
 		}
 		return index;
@@ -245,5 +248,28 @@ public class SequenceParser {
 			default:
 				break;
 		}
+	}
+	
+	//Verify whether list boolVars already has the boolvar
+	public boolean boolVarsContain(List<BoolVar> boolVars, BoolVar boolVar) {
+		String bName = boolVar.getName();
+		for(int i = 0; i < boolVars.size(); i++) {
+			String bNames = boolVars.get(i).getName();
+			if(bNames.equals(bName)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public int boolVarIndexOf(List<BoolVar> boolVars, BoolVar boolVar) {
+		String bName = boolVar.getName();
+		for(int i = 0; i < boolVars.size(); i++) {
+			String bNames = boolVars.get(i).getName();
+			if(bNames.equals(bName)) {
+				return i;
+			}
+		}
+		return -1;
 	}
 }
