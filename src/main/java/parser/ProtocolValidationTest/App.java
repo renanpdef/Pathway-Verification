@@ -12,9 +12,22 @@ public class App {
         
         System.out.println("Are there sequences with the same output step on teste.xmi? "+seq.isThereSameOutputStep());
         
-        List<Solution> solutions = seq.findNonDeterminism();
-        for (int i = 0; i < solutions.size(); i++) {
-        	System.out.println(solutions.get(i));
+        List<Solution> all_s = seq.findAllSolutions();
+        System.out.println("Find All Possible Solutions:");
+        for (int i = 0; i < all_s.size(); i++) {
+        	System.out.println(all_s.get(i));
+        }
+        
+        List<Solution> nd_s = seq.findNonDeterminismSolutions();
+        System.out.println("\nFind Non Determinism Solutions:");
+        for (int i = 0; i < nd_s.size(); i++) {
+        	System.out.println(nd_s.get(i));
+        }
+        
+        List<Solution> dl_s = seq.findDeadLockSolutions();
+        System.out.println("\nFind DeadLock Solutions:");
+        for (int i = 0; i < dl_s.size(); i++) {
+        	System.out.println(dl_s.get(i));
         }
         
     }

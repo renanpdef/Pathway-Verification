@@ -50,65 +50,120 @@ public class SequenceParser {
 		return false;
 	}
 
-	//Function to verify if the sequences with the same output step have the same condition guard
-	//Use the choco solver to get possible solutions and return them
-	public List<Solution> findNonDeterminism() {
+	//Function to get the sequences with the same output step
+	public List<BoolVar> getSequences(Model model) {
 		//Lista de operandos
 		List<BoolVar>  boolVars = new ArrayList<BoolVar>();
 		//List of operations with the operations of each sequence
 		List<Operation> operations = new ArrayList<Operation>();
-		//Initialize choco solver model
-		Model model = new Model("Same Guard Condition");
 		//Loop to get sequences with the same output step
 		for (int i = 0; i < protocol.getSequence().size(); i++) {
-			//Clauses to find possible solutions with choco solver
-			//These clauses are the conditions guard
-			List<LogOp> clauses = new ArrayList<LogOp>();
+			//List of boolVars with a boolVar for each sequence
+			//These boolVar are the conditions guard
+			List<BoolVar> sequences = new ArrayList<BoolVar>();
 			
 			for (int j = i+1; j < protocol.getSequence().size(); j++) {
 				if(protocol.getSequence().get(i).getOutputStep() == protocol.getSequence().get(j).getOutputStep()) {	
 					Operation opi = protocol.getSequence().get(i).getOperation();
 					Operation opj = protocol.getSequence().get(j).getOperation();
-					
 					if(!operations.contains(opi)) {
 						operations.add(opi);
-						createClauses(boolVars, clauses, model, opi);
+						createSequenceList(boolVars, sequences, model, opi);
 					}
 					if(!operations.contains(opj)) {
 						operations.add(opj);
-						createClauses(boolVars, clauses, model, opj);
+						createSequenceList(boolVars, sequences, model, opj);
 					}
 				}
 			}
-			if (!clauses.isEmpty()) {
-				//Add clauses list to the model
-				List<LogOp> XorClauses = new ArrayList<LogOp>();
-				System.out.println(clauses);
-				for(int k = 1; k < clauses.size(); k++) {
-					if(XorClauses.isEmpty()) {
-						XorClauses.add(LogOp.xor(clauses.get(k-1), clauses.get(k)));
-					}else {
-						XorClauses.add(0, LogOp.xor(XorClauses.get(0), clauses.get(k)));
-					}
-					System.out.println(XorClauses.get(0));
-				}
-				System.out.println("add clauses to model...");
-				model.addClauses(XorClauses.get(0));
-				System.out.println("finally");
-				List<Solution> solutions = new ArrayList<Solution>();
-				//Get possible solutions
-				while(model.getSolver().solve()) {
-					solutions.add(model.getSolver().findSolution());
-				}
-				return solutions;
+			
+			if (sequences!=null && !sequences.isEmpty()) {
+				return sequences;
 			}
+		}
+		return null;
+	}
+	
+	public List<Solution> findDeadLockSolutions(){
+		//Initialize choco solver model
+		Model model = new Model("Same Guard Condition");
+		List<BoolVar> sequences = getSequences(model);
+		if (sequences!=null && !sequences.isEmpty()) {
+			//Add clauses list to the model
+			List<BoolVar> seq_aux = new ArrayList<BoolVar>();
+			for(int k = 1; k < sequences.size(); k++) {
+				if (seq_aux.isEmpty()) {
+					model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 0).post();
+					BoolVar s = model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 0).reify();
+					seq_aux.add(s);
+				}else {
+					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 1).post();
+					BoolVar s = model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 1).reify();
+					seq_aux.add(s);
+				}
+			}
+
+			//List<Solution> solutions = new ArrayList<Solution>();
+			return model.getSolver().findAllSolutions();
+		}
+		return null;
+	}
+	
+	public List<Solution> findNonDeterminismSolutions(){
+		//Initialize choco solver model
+		Model model = new Model("Same Guard Condition");
+		List<BoolVar> sequences = getSequences(model);
+		if (sequences!=null && !sequences.isEmpty()) {
+			//Add clauses list to the model
+			List<BoolVar> seq_aux = new ArrayList<BoolVar>();
+			for(int k = 1; k < sequences.size(); k++) {
+				if (seq_aux.isEmpty()) {
+					model.arithm(sequences.get(k-1), "+", sequences.get(k), "<", 3).post();
+					BoolVar s = model.arithm(sequences.get(k-1), "+", sequences.get(k), "<", 3).reify();
+					seq_aux.add(s);
+				}else {
+					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 2).post();
+					BoolVar s = model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 2).reify();
+					seq_aux.add(s);
+				}
+			}
+
+			//List<Solution> solutions = new ArrayList<Solution>();
+			return model.getSolver().findAllSolutions();
+		}
+		return null;
+	}
+	
+	//Function to return all solutions in a list of sequences with the same output step.
+	//Use the choco solver to get possible solutions and return them
+	public List<Solution> findAllSolutions() {
+		//Initialize choco solver model
+		Model model = new Model("Same Guard Condition");
+		List<BoolVar> sequences = getSequences(model);
+		if (sequences!=null && !sequences.isEmpty()) {
+			//Add clauses list to the model
+			List<BoolVar> seq_aux = new ArrayList<BoolVar>();
+			for(int k = 1; k < sequences.size(); k++) {
+				if (seq_aux.isEmpty()) {
+					model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 1).post();
+					BoolVar s = model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 1).reify();
+					seq_aux.add(s);
+				}else {
+					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 1).post();
+					BoolVar s = model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 1).reify();
+					seq_aux.add(s);
+				}
+			}
+
+			//List<Solution> solutions = new ArrayList<Solution>();
+			return model.getSolver().findAllSolutions();
 		}
 		return null;
 	}
 	
 	
 	//Create Clauses for one operation
-	public void createClauses(List<BoolVar> boolVars, List<LogOp> clauses, Model model, Operation operation){
+	public void createSequenceList(List<BoolVar> boolVars, List<BoolVar> sequences, Model model, Operation operation){
 		int index[] = null;
 		//Verify the operator of each operation.
 		//Create the clauses according to the operator and 
@@ -120,7 +175,7 @@ public class SequenceParser {
 			case XOR:
 				index = createBoolVars(boolVars, model, operation);
 				
-				calcBoolVar(clauses, operation, boolVars.get(index[0]), boolVars.get(index[1]));
+				calcBoolVar(sequences, operation, boolVars.get(index[0]), boolVars.get(index[1]));
 				break;
 			
 			case EQUAL:
@@ -142,13 +197,15 @@ public class SequenceParser {
 				break;								
 			case NOT:
 				index = createBoolVars(boolVars, model, operation);
-				clauses.add(LogOp.nand(boolVars.get(index[0]), boolVars.get(index[0])));
+				BoolVar bool_s1 = model.arithm(boolVars.get(index[0]), "+", boolVars.get(index[0]), "=", 0).reify();
+				sequences.add(bool_s1);
 				break;							
 			case AFFIRMATION:								
 				break;					
 			default:
 				index = createBoolVars(boolVars, model, operation);
-				clauses.add(LogOp.nand(boolVars.get(index[0]), boolVars.get(index[0])));
+				BoolVar bool_s2 = model.arithm(boolVars.get(index[0]), "+", boolVars.get(index[0]), "=", 0).reify();
+				sequences.add(bool_s2);
 				break;
 		}
 	}
@@ -231,19 +288,24 @@ public class SequenceParser {
 	}
 	
 	//calculate the bool variables on choco solver
-	public void calcBoolVar(List<LogOp> clauses, Operation op, BoolVar boolA, BoolVar boolB){
+	public void calcBoolVar(List<BoolVar> sequences, Operation op, BoolVar boolA, BoolVar boolB){
+		Model model_aux = new Model("Axiliary Model");
 		switch(op.getOperator()) {
 			case AND:
-				clauses.add(LogOp.and(boolA,boolB));
+				BoolVar bool_s1 = model_aux.arithm(boolA, "+", boolB, "=", 2).reify();
+				sequences.add(bool_s1);
 				break;
 			case OR:
-				clauses.add(LogOp.or(boolA,boolB));
+				BoolVar bool_s2 = model_aux.arithm(boolA, "+", boolB, "!=", 0).reify();
+				sequences.add(bool_s2);
 				break;
 			case IMPLIES:
-				clauses.add(LogOp.implies(boolA, boolB));
+				BoolVar bool_s3 = model_aux.arithm(boolA, "-", boolB, "=", 1).reify();
+				sequences.add(bool_s3);
 				break;
 			case XOR:
-				clauses.add(LogOp.xor(boolA,boolB));
+				BoolVar bool_s4 = model_aux.arithm(boolA, "+", boolB, "=", 1).reify();
+				sequences.add(bool_s4);
 				break;
 			default:
 				break;
