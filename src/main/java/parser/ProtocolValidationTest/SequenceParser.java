@@ -2,12 +2,12 @@ package parser.ProtocolValidationTest;
 
 import java.util.ArrayList;
 
+
 import java.util.List;
 import java.util.Map;
 
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.Solution;
-import org.chocosolver.solver.constraints.nary.cnf.LogOp;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.eclipse.emf.common.util.URI;
@@ -211,25 +211,17 @@ public class SequenceParser {
 	}
 	
 	//create the IntVars
-	public IntVar[] createIntVars(Model model, int k) {
-		IntVar intA = model.intVar("A"+k,0,Integer.MAX_VALUE);
-		findDeadlock(intA.getName(), elements);
-		existVar(intA, null);
-		
-		IntVar intB = model.intVar("B"+k,0,Integer.MAX_VALUE); 
-		findDeadlock(intB.getName(), elements);
-		existVar(intB, null);
-		
-		IntVar[] intVars = {intA, intB};
+	public IntVar[] createIntVars(Model model, int k) {		
+		IntVar[] intVars = {};
 		
 		return intVars;
 	}
 	
-	//create the BoolVars and return the index of the operation's operands.
+	//create the BoolVars and return the index of the operands of the operation.
 	public int[] createBoolVars(List<BoolVar> boolVars, Model model, Operation operation) {
 		int index[] = new int[operation.getOperand().size()];
 		for(int i = 0; i < operation.getOperand().size(); i++) {
-			Model model_aux = new Model("Axiliary Model");
+			Model model_aux = new Model("Auxiliary Model");
 			BoolVar boolVar = model_aux.boolVar(operation.getOperand().get(i).getName());
 			if(!boolVarsContain(boolVars, boolVar)) {
 				boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
@@ -239,29 +231,6 @@ public class SequenceParser {
 			}
 		}
 		return index;
-	}
-	
-	private void existVar(IntVar intVar, BoolVar boolVar) {
-		if(intVar != null) {
-			
-		}
-		else if(boolVar != null) {
-			
-		}
-	}
-
-	//Find deadlock
-	public boolean findDeadlock(String elem,List<String> elements){
-		for (String object : elements) {
-			if(elem.equals(object)) {
-				System.out.println("DEADLOCK");
-				return true;
-			}
-		}
-		
-		elements.add(elem);
-		
-		return false;
 	}
 	
 	//calculate the int variables on choco solver
