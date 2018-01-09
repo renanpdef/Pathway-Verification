@@ -44,17 +44,8 @@ public class SequenceParser {
 		List<BoolVar> sequences = getSequences(model);
 		if (sequences!=null && !sequences.isEmpty()) {
 			//Add clauses list to the model
-			List<BoolVar> seq_aux = new ArrayList<BoolVar>();
 			for(int k = 1; k < sequences.size(); k++) {
-				if (seq_aux.isEmpty()) {
-					model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 0).post();
-					BoolVar s = model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 0).reify();
-					seq_aux.add(s);
-				}else {
-					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 1).post();
-					BoolVar s = model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 1).reify();
-					seq_aux.add(s);
-				}
+				model.arithm(sequences.get(k), "=", 0).post();
 			}
 
 			//List<Solution> solutions = new ArrayList<Solution>();
