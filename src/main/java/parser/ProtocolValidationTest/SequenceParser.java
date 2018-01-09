@@ -93,10 +93,12 @@ public class SequenceParser {
 					model.arithm(sequences.get(k-1), "+", sequences.get(k), "<", 2).post();
 					BoolVar s = model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 1).reify();
 					seq_aux.add(s);
-				}else {
-					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 1).post();
+				}else if(k < sequences.size()-1){
+					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "<", 2).post();
 					BoolVar s = model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 1).reify();
 					seq_aux.add(s);
+				}else {
+					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 1).post();
 				}
 			}
 
