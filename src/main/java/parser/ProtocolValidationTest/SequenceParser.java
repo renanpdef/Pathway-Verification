@@ -131,6 +131,7 @@ public class SequenceParser {
 	public List<BoolVar> getSequences(Model model) {
 		//Lista de operandos
 		List<BoolVar>  boolVars = new ArrayList<BoolVar>();
+		List<IntVar>  intVars = new ArrayList<IntVar>();
 		//List of operations with the operations of each sequence
 		List<Operation> operations = new ArrayList<Operation>();
 		//Loop to get sequences with the same output step
@@ -145,11 +146,11 @@ public class SequenceParser {
 					Operation opj = protocol.getSequence().get(j).getOperation();
 					if(!operations.contains(opi)) {
 						operations.add(opi);
-						createSequenceList(boolVars, sequences, model, opi);
+						createSequenceList(boolVars, intVars, sequences, model, opi);
 					}
 					if(!operations.contains(opj)) {
 						operations.add(opj);
-						createSequenceList(boolVars, sequences, model, opj);
+						createSequenceList(boolVars, intVars, sequences, model, opj);
 					}
 				}
 			}
@@ -162,7 +163,7 @@ public class SequenceParser {
 	}		
 	
 	//Create Clauses for one operation
-	public void createSequenceList(List<BoolVar> boolVars, List<BoolVar> sequences, Model model, Operation operation){
+	public void createSequenceList(List<BoolVar> boolVars, List<IntVar> intVars, List<BoolVar> sequences, Model model, Operation operation){
 		int index[] = null;
 		//Verify the operator of each operation.
 		//Create the clauses according to the operator and 
@@ -174,7 +175,6 @@ public class SequenceParser {
 			case XOR:
 				index = createBoolVars(boolVars, model, operation);
 				
-				//addSequencesBoolVar(sequences, operation, boolVars.get(index[0]), boolVars.get(index[1]));
 				addSequencesBoolVar(sequences, operation, boolVars, index);
 				break;
 			
@@ -183,9 +183,9 @@ public class SequenceParser {
 			case EQUAL_OR_SMALLER:
 			case BIGGER_THAN:
 			case SMALLER_THAN:
-				IntVar[] intVars = createIntVars(model, 2);//ATENCAO
+				index = createIntVars(intVars, model, operation);//ATENCAO
 				
-				addIntVar(sequences, operation, intVars[0], intVars[1]);								
+				addSequencesIntVar(sequences, operation, intVars, index);								
 				break;
 			case SUM:								
 				break;							
@@ -206,29 +206,29 @@ public class SequenceParser {
 	}
 	
 	//calculate the int variables on choco solver
-	public void addIntVar(List<BoolVar> sequences, Operation op, IntVar intA, IntVar intB) {
+	public void addSequencesIntVar(List<BoolVar> sequences, Operation op, List<IntVar> intVars, int[] index) {
 		Model model_aux = new Model("Axiliary IntVar Model");
-		BoolVar boolVar;
+		BoolVar boolVar = null;
 		
 		switch(op.getOperator()) {
 			case EQUAL:
-				boolVar = model_aux.arithm(intA,"==",intB, "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),"==",intVars.get(index[1]), "=", 1).reify();
 				sequences.add(boolVar);
 				break;
 			case EQUAL_OR_GREATER:
-				boolVar = model_aux.arithm(intA,">=",intB, "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),">=",intVars.get(index[1]), "=", 1).reify();
 				sequences.add(boolVar);
 				break;
 			case EQUAL_OR_SMALLER:
-				boolVar = model_aux.arithm(intA,"<=",intB, "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),"<=",intVars.get(index[1]), "=", 1).reify();
 				sequences.add(boolVar);
 				break;
 			case BIGGER_THAN:
-				boolVar = model_aux.arithm(intA,">",intB, "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),">",intVars.get(index[1]), "=", 1).reify();
 				sequences.add(boolVar);
 				break;
 			case SMALLER_THAN:
-				boolVar = model_aux.arithm(intA,"<",intB, "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),"<",intVars.get(index[1]), "=", 1).reify();
 				sequences.add(boolVar);
 				break;
 			default:
@@ -289,10 +289,20 @@ public class SequenceParser {
 	}
 	
 	//create the IntVars
-	public IntVar[] createIntVars(Model model, int k) {		
-		IntVar[] intVars = {};
-		
-		return intVars;
+	public int[] createIntVars(List<IntVar> intVars, Model model, Operation operation) {		
+		int index[] = new int[operation.getOperand().size()];
+		for(int i = 0; i < operation.getOperand().size(); i++) {
+			Model model_aux = new Model("Auxiliary Model");
+			BoolVar intVar = model_aux.boolVar(operation.getOperand().get(i).getName());
+			if(!containsInt(intVars, intVar)) {
+				//trocar 0
+				intVars.add(model.intVar(operation.getOperand().get(i).getName(), 0));
+				index[i] = intVars.size() -1;
+			}else {
+				index[i] = indexOfInt(intVars, intVar);
+			}
+		}
+		return index;
 	}
 	
 	//create the BoolVars and return the index of the operands of the operation.
@@ -301,18 +311,18 @@ public class SequenceParser {
 		for(int i = 0; i < operation.getOperand().size(); i++) {
 			Model model_aux = new Model("Auxiliary Model");
 			BoolVar boolVar = model_aux.boolVar(operation.getOperand().get(i).getName());
-			if(!contains(boolVars, boolVar)) {
+			if(!containsBool(boolVars, boolVar)) {
 				boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
 				index[i] = boolVars.size() -1;
 			}else {
-				index[i] = indexOf(boolVars, boolVar);
+				index[i] = indexOfBool(boolVars, boolVar);
 			}
 		}
 		return index;
 	}
 	
 	//Verify whether list boolVars already has the boolvar
-	public boolean contains(List<BoolVar> boolVars, BoolVar boolVar) {
+	public boolean containsBool(List<BoolVar> boolVars, BoolVar boolVar) {
 		String bName = boolVar.getName();
 		for(int i = 0; i < boolVars.size(); i++) {
 			String bNames = boolVars.get(i).getName();
@@ -323,10 +333,33 @@ public class SequenceParser {
 		return false;
 	}
 	
-	public int indexOf(List<BoolVar> boolVars, BoolVar boolVar) {
+	public int indexOfBool(List<BoolVar> boolVars, BoolVar boolVar) {
 		String bName = boolVar.getName();
 		for(int i = 0; i < boolVars.size(); i++) {
 			String bNames = boolVars.get(i).getName();
+			if(bNames.equals(bName)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	//Verify whether list boolVars already has the boolvar
+	public boolean containsInt(List<IntVar> intVars, IntVar intVar) {
+		String bName = intVar.getName();
+		for(int i = 0; i < intVars.size(); i++) {
+			String bNames = intVars.get(i).getName();
+			if(bNames.equals(bName)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public int indexOfInt(List<IntVar> intVars, IntVar intVar) {
+		String bName = intVar.getName();
+		for(int i = 0; i < intVars.size(); i++) {
+			String bNames = intVars.get(i).getName();
 			if(bNames.equals(bName)) {
 				return i;
 			}
