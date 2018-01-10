@@ -61,15 +61,22 @@ public class SequenceParser {
 		if (sequences!=null && !sequences.isEmpty()) {
 			//Add clauses list to the model
 			List<BoolVar> seq_aux = new ArrayList<BoolVar>();
+			BoolVar b_flag = model.boolVar();
+			BoolVar b_flag2 = model.boolVar();
 			for(int k = 1; k < sequences.size(); k++) {
 				if (seq_aux.isEmpty()) {
-					model.arithm(sequences.get(k-1), "+", sequences.get(k), ">", 0).post();
-					BoolVar s = model.arithm(sequences.get(k-1), "+", sequences.get(k), ">", 0).reify();
+					BoolVar s = model.arithm(sequences.get(k-1), "+", sequences.get(k), ">=", 1).reify();
+					model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 2).reifyWith(b_flag);
+					
+					seq_aux.add(s);
+				}else if(k < sequences.size()-1){
+					BoolVar s = model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), ">=", 1).reify();
+					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 2).reifyWith(b_flag);
 					seq_aux.add(s);
 				}else {
-					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 2).post();
-					BoolVar s = model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 2).reify();
-					seq_aux.add(s);
+					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), ">=", 1).post();
+					model.arithm(seq_aux.get(seq_aux.size()-1), "+", sequences.get(k), "=", 2).reifyWith(b_flag2);
+					model.arithm(b_flag, "+", b_flag2, ">=", 1).post();
 				}
 			}
 
