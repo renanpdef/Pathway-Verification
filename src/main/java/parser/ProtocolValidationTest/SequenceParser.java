@@ -212,23 +212,23 @@ public class SequenceParser {
 		
 		switch(op.getOperator()) {
 			case EQUAL:
-				boolVar = model_aux.arithm(intVars.get(index[0]),"==",intVars.get(index[1]), "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),"==",intVars.get(index[1])).reify();
 				sequences.add(boolVar);
 				break;
 			case EQUAL_OR_GREATER:
-				boolVar = model_aux.arithm(intVars.get(index[0]),">=",intVars.get(index[1]), "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),">=",intVars.get(index[1])).reify();
 				sequences.add(boolVar);
 				break;
 			case EQUAL_OR_SMALLER:
-				boolVar = model_aux.arithm(intVars.get(index[0]),"<=",intVars.get(index[1]), "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),"<=",intVars.get(index[1])).reify();
 				sequences.add(boolVar);
 				break;
 			case BIGGER_THAN:
-				boolVar = model_aux.arithm(intVars.get(index[0]),">",intVars.get(index[1]), "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),">",intVars.get(index[1])).reify();
 				sequences.add(boolVar);
 				break;
 			case SMALLER_THAN:
-				boolVar = model_aux.arithm(intVars.get(index[0]),"<",intVars.get(index[1]), "=", 1).reify();
+				boolVar = model_aux.arithm(intVars.get(index[0]),"<",intVars.get(index[1])).reify();
 				sequences.add(boolVar);
 				break;
 			default:
@@ -293,10 +293,9 @@ public class SequenceParser {
 		int index[] = new int[operation.getOperand().size()];
 		for(int i = 0; i < operation.getOperand().size(); i++) {
 			Model model_aux = new Model("Auxiliary Model");
-			BoolVar intVar = model_aux.boolVar(operation.getOperand().get(i).getName());
+			IntVar intVar = model_aux.intVar(operation.getOperand().get(i).getName(), 0, Integer.MAX_VALUE);
 			if(!containsInt(intVars, intVar)) {
-				//trocar 0
-				intVars.add(model.intVar(operation.getOperand().get(i).getName(), 0));
+				intVars.add(model.intVar(operation.getOperand().get(i).getName(), 0, Integer.MAX_VALUE));
 				index[i] = intVars.size() -1;
 			}else {
 				index[i] = indexOfInt(intVars, intVar);
