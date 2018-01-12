@@ -15,7 +15,11 @@ public class IntVarOperations {
 		return indexes;
 	}
 	
-	//calculate the int variables on choco solver
+	//Add a boolVar variables on a list of sequences.
+	//sequences is a list of boolvar variables where the operation of each sequence with the same output step will be stored.
+	//op is the operation of each sequence with the same output step.
+	//intVars is a list of the integer operands that make up all operation in the protocol.
+	//index is a vector with the index of the operands in the intVars that are used in the operation op.
 	public void addSequences(List<BoolVar> sequences, Operation op, List<IntVar> intVars, int[] index) {
 		Model auxModel = new Model("Axiliary IntVar Model");
 		BoolVar boolVar = null;
@@ -46,7 +50,8 @@ public class IntVarOperations {
 		}
 	}
 		
-	//create the IntVars
+	//get the operands from the operation and put it in the list intVars if the list do not contain it.
+	//return the index of the operands of the operation in the intVars.
 	public void createIntVars(List<IntVar> intVars, Model model, Operation operation) {		
 		int indexes[] = new int[operation.getOperand().size()];
 		for(int i = 0; i < operation.getOperand().size(); i++) {
@@ -62,7 +67,7 @@ public class IntVarOperations {
 		this.indexes = indexes;
 	}
 	
-	//Verify whether list boolVars already has the boolvar
+	//Verify whether list intVars already has the intVar
 	public boolean contains(List<IntVar> intVars, IntVar intVar) {
 		String name = intVar.getName();
 		for(int i = 0; i < intVars.size(); i++) {
@@ -73,7 +78,7 @@ public class IntVarOperations {
 		}
 		return false;
 	}
-	
+	//retun the index of the intVar from the list intVars.
 	public int indexOf(List<IntVar> intVars, IntVar intVar) {
 		String name = intVar.getName();
 		for(int i = 0; i < intVars.size(); i++) {

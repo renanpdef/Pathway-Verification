@@ -7,14 +7,18 @@ import org.chocosolver.solver.variables.BoolVar;
 
 import protocolosv2.Operation;
 
-public class BoolVarOperations {
+public class BoolVarOperations { 
 	private int[] indexes = null;	
 	
 	public int[] getIndexes() {
 		return indexes;
 	}
 
-	//add the bool variables on choco solver
+	//Add a boolVar variables on a list of sequences.
+	//sequences is a list of boolvar variables where the operation of each sequence with the same output step will be stored.
+	//op is the operation of each sequence with the same output step.
+	//boolVars is a list of the logical operands that make up all operation in the protocol.
+	//index is a vector with the index of the operands in the boolVars that are used in the operation op. 
 	public void addSequences(List<BoolVar> sequences, Operation op, List<BoolVar> boolVars, int[] index){
 		Model auxModel = new Model("Auxiliary Model");
 		BoolVar bool = null;
@@ -66,7 +70,8 @@ public class BoolVarOperations {
 		}
 	}
 		
-	//create the BoolVars and return the index of the operands of the operation.
+	//get the operands from the operation and put it in the list boolVars if the list do not contain it.
+	//return the index of the operands of the operation in the boolVars.
 	public void createBoolVars(List<BoolVar> boolVars, Model model, Operation operation) {
 		int indexes[] = new int[operation.getOperand().size()];
 		for(int i = 0; i < operation.getOperand().size(); i++) {
@@ -95,6 +100,7 @@ public class BoolVarOperations {
 		return false;
 	}
 	
+	//retun the index of the boolVar from the list boolVars. 
 	public int indexOf(List<BoolVar> boolVars, BoolVar boolVar) {
 		String name = boolVar.getName();
 		for(int i = 0; i < boolVars.size(); i++) {

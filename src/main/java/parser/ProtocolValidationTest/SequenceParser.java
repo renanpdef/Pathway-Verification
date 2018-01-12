@@ -23,9 +23,11 @@ public class SequenceParser {
 		this.protocol = protocol;
 	}
 
+	//returns a list of all solutions that occur deadlock.
+	//If the operands have the same values presented in the solution, then deadlock occurs.
 	public List<Solution> findDeadLockSolutions(){
 		//Initialize choco solver model
-		Model model = new Model("Same Guard Condition");
+		Model model = new Model("Find Deadlock Solution");
 		List<BoolVar> sequences = getSequences(model);
 		if (sequences!=null && !sequences.isEmpty()) {
 			//Add clauses list to the model
@@ -38,39 +40,29 @@ public class SequenceParser {
 		return null;
 	}
 	
+	//returns a list of some solutions that occur Non Determinism.
+	//If the operands have the same values presented in the solution, then Non Determinism occurs.
 	public List<Solution> findNonDeterminismSolutions(){
 		//Initialize choco solver model
 		Model model = new Model("Same Guard Condition");
 		List<BoolVar> sequences = getSequences(model);
 		if (sequences!=null && !sequences.isEmpty()) {
 			//Add clauses list to the model
-			List<BoolVar> auxSeq = new ArrayList<BoolVar>();
-			BoolVar b_flag = model.boolVar();
-			BoolVar b_flag2 = model.boolVar();
-			for(int k = 1; k < sequences.size(); k++) {
-				if (auxSeq.isEmpty()) {
-					BoolVar aux = model.arithm(sequences.get(k-1), "+", sequences.get(k), ">=", 1).reify();
-					model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 2).reifyWith(b_flag);
-					
-					auxSeq.add(aux);
-				}else if(k < sequences.size()-1){
-					BoolVar aux = model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), ">=", 1).reify();
-					model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 2).reifyWith(b_flag);
-					auxSeq.add(aux);
-				}else {
-					model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), ">=", 1).post();
-					model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 2).reifyWith(b_flag2);
-					model.arithm(b_flag, "+", b_flag2, ">=", 1).post();
+			for (int i = 0; i < sequences.size(); i++) {
+				for(int j = i+1; j < sequences.size(); j++) {
+					model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post();
+					List<Solution> solutions = model.getSolver().findAllSolutions();
+					if(solutions != null) {
+						return solutions;
+					}
 				}
 			}
-
-			//List<Solution> solutions = new ArrayList<Solution>();
 			return model.getSolver().findAllSolutions();
 		}
 		return null;
 	}
 	
-	//Function to return all solutions in a list of sequences with the same output step.
+	//return all correct solutions in a list of sequences with the same output step.
 	//Use the choco solver to get possible solutions and return them
 	public List<Solution> findAllSolutions() {
 		//Initialize choco solver model
@@ -99,7 +91,7 @@ public class SequenceParser {
 		return null;
 	}
 	
-	//Function to verify whether there are sequences with the same output step
+	//verify whether if there are sequences with the same output step
 	public boolean isThereSameOutputStep() {
 		for (int i = 0; i < getProtocol().getSequence().size(); i++) {
 			for (int j = i+1; j < getProtocol().getSequence().size(); j++) {
@@ -111,7 +103,7 @@ public class SequenceParser {
 		return false;
 	}
 
-	//Function to get the sequences with the same output step
+	//get the sequences with the same output step
 	public List<BoolVar> getSequences(Model model) {
 		//Lista de operandos
 		List<BoolVar>  boolVars = new ArrayList<BoolVar>();
