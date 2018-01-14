@@ -1,13 +1,12 @@
 package parser.ProtocolValidationTest;
 
 import java.util.List;
-import java.util.Map;
+
 
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 
-import protocolosv2.Element;
 import protocolosv2.Operation;
 import protocolosv2.Sequence;
 
@@ -23,39 +22,34 @@ public class IntVarOperations {
 	//op is the operation of each sequence with the same output step.
 	//intVars is a list of the integer operands that make up all operation in the protocol.
 	//index is a vector with the index of the operands in the intVars that are used in the operation op.
-	public void addSequences(List<BoolVar> boolSequences, Sequence sequence, List<IntVar> intVars, int[] index) {
+	public BoolVar createSequences(Sequence sequence, List<IntVar> intVars, int[] index) {
 		Model auxModel = new Model("Axiliary IntVar Model");
 		BoolVar boolVar = null;
 		
 		switch(sequence.getOperation().getOperator()) {
 			case EQUAL:
 				boolVar = auxModel.arithm(intVars.get(index[0]),"==",intVars.get(index[1])).reify();
-				boolSequences.add(boolVar);	
-				break;
+				return boolVar;
 			case EQUAL_OR_GREATER:
 				boolVar = auxModel.arithm(intVars.get(index[0]),">=",intVars.get(index[1])).reify();
-				boolSequences.add(boolVar);
-				break;
+				return boolVar;
 			case EQUAL_OR_SMALLER:
 				boolVar = auxModel.arithm(intVars.get(index[0]),"<=",intVars.get(index[1])).reify();
-				boolSequences.add(boolVar);
-				break;
+				return boolVar;
 			case BIGGER_THAN:
 				boolVar = auxModel.arithm(intVars.get(index[0]),">",intVars.get(index[1])).reify();
-				boolSequences.add(boolVar);
-				break;
+				return boolVar;
 			case SMALLER_THAN:
 				boolVar = auxModel.arithm(intVars.get(index[0]),"<",intVars.get(index[1])).reify();
-				boolSequences.add(boolVar);
-				break;
+				return boolVar;
 			default:
-				break;
+				return boolVar;
 		}
 	}
 		
 	//get the operands from the operation and put it in the list intVars if the list do not contain it.
 	//return the index of the operands of the operation in the intVars.
-	public void createIntVars(List<IntVar> intVars, Model model, Operation operation) {		
+	public void create(List<IntVar> intVars, Model model, Operation operation) {		
 		int indexes[] = new int[operation.getOperand().size()];
 		for(int i = 0; i < operation.getOperand().size(); i++) {
 			Model auxModel = new Model("Auxiliary Model");

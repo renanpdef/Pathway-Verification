@@ -12,11 +12,8 @@ public class Solutions {
         String file1 = "Test_Non_Determinism.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
-        SequenceParser sequenceParser = new SequenceParser(protocolReader.getProtocol());
-        
-        System.out.println("Are there sequences with the same output step on teste.xmi? "
-        							+ sequenceParser.isThereSameOutputStep());
-        
+        SequenceParser sequenceParser = new SequenceParser(protocolReader.createProtocol());
+               
         Map<Element, List<Solution>> mapAllSolutions = sequenceParser.findAllSolutions();
         
         System.out.println("Find All Possible Solutions:");

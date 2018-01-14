@@ -1,16 +1,15 @@
 package parser.ProtocolValidationTest;
 
 import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.Solution;
-import org.chocosolver.solver.constraints.Constraint;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
-import org.eclipse.jdt.core.dom.BooleanLiteral;
 
 import protocolosv2.Element;
 import protocolosv2.Operation;
@@ -18,13 +17,10 @@ import protocolosv2.Protocol;
 import protocolosv2.Sequence;
 
 public class SequenceParser {
-	BoolVarOperations boolVarOp = new BoolVarOperations();
+	private BoolVarOperations boolVarOp = new BoolVarOperations();
 	private IntVarOperations intVarOp = new IntVarOperations();
 	private Protocol protocol;
 	private Map<Element, List<Sequence>> mapSequences = new HashMap<Element, List<Sequence>>();
-//	private List<BoolVar>  boolVars = new ArrayList<BoolVar>();
-//	private List<IntVar>  intVars = new ArrayList<IntVar>();
-//	private Model model = new Model("Sequences Parser");
 	
 	public SequenceParser(Protocol protocol) {
 		this.protocol = protocol;
@@ -108,18 +104,6 @@ public class SequenceParser {
 		}
 		return mapSolutions;
 	}
-	
-	//verify whether if there are sequences with the same output step
-	public boolean isThereSameOutputStep() {
-		for (int i = 0; i < protocol.getSequence().size(); i++) {
-			for (int j = i+1; j < protocol.getSequence().size(); j++) {
-				if(protocol.getSequence().get(i).getOutputStep() == protocol.getSequence().get(j).getOutputStep()) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
 
 	//get all the sequences from the protocol and put it into a arraylist sequences.
 	public void getModelFragmentsForVerification(){
@@ -155,25 +139,29 @@ public class SequenceParser {
 		//Verify the operator of each operation.
 		//Create the clauses according to the operator and 
 		//add them on the clauses list
+		BoolVar bool = null;
 		Operation op = sequence.getOperation();
 		switch (op.getOperator()) {
 			case AND:
 			case OR:
 			case IMPLIES:
 			case XOR:
-				boolVarOp.createBoolVars(boolVars, model, op);
+				boolVarOp.create(boolVars, model, op);
 				
-				boolVarOp.addSequences(boolSequences, sequence, boolVars, boolVarOp.getIndexes());
+				bool = boolVarOp.createSequences(sequence, boolVars, boolVarOp.getIndexes());
+				
+				boolSequences.add(bool);
 				break;
-			
 			case EQUAL:
 			case EQUAL_OR_GREATER:
 			case EQUAL_OR_SMALLER:
 			case BIGGER_THAN:
 			case SMALLER_THAN:
-				intVarOp.createIntVars(intVars, model, op);//ATENCAO
+				intVarOp.create(intVars, model, op);//ATENCAO
 				
-				intVarOp.addSequences(boolSequences, sequence, intVars, intVarOp.getIndexes());								
+				bool = intVarOp.createSequences(sequence, intVars, intVarOp.getIndexes());								
+				
+				boolSequences.add(bool);
 				break;
 			case SUM:								
 				break;							
@@ -186,23 +174,11 @@ public class SequenceParser {
 			case AFFIRMATION:								
 				break;					
 			default:
-				boolVarOp.createBoolVars(boolVars, model, op);
+				boolVarOp.create(boolVars, model, op);
 				int[] indexes = boolVarOp.getIndexes();
-				BoolVar bool = model.arithm(boolVars.get(indexes[0]), "+", boolVars.get(indexes[0]), "=", 0).reify();
+				bool = model.arithm(boolVars.get(indexes[0]), "+", boolVars.get(indexes[0]), "=", 0).reify();
 				boolSequences.add(bool);
 				break;
 		}
-	}
-	
-	//Remove all constraint in the model
-//	public void removeAllModelConstraints() {
-//		Constraint constraint[] = model.getCstrs();
-//		if(constraint != null) {
-//			for (int i = 0; i < constraint.length; i++) {
-//				System.out.println(constraint[i]);
-//				model.unpost(constraint[i]);
-//			}
-//		}
-//	}
-	
+	}	
 }

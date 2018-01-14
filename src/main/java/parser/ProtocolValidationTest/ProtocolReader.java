@@ -12,16 +12,16 @@ import protocolosv2.Protocol;
 import protocolosv2.Protocolosv2Package;
 
 public class ProtocolReader {
-	private Protocol protocol;	
-	
-	public Protocol getProtocol() {
-		return protocol;
-	}
+	private String file;
 	
 	public ProtocolReader() {}
 	
 	//Constructor: initialize the protocol with XMI file.
 	public ProtocolReader(String file) {
+		this.file = file;
+	}	
+	
+	public Protocol createProtocol() {
 		Protocolosv2Package.eINSTANCE.eClass();
 		
 		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
@@ -30,6 +30,8 @@ public class ProtocolReader {
     
         ResourceSet resSet = new ResourceSetImpl();
         Resource resouce = resSet.getResource(URI.createURI(file), true);
-        this.protocol = (Protocol) resouce.getContents().get(0);
-	}	
+        Protocol protocol = (Protocol) resouce.getContents().get(0);
+		
+        return protocol; 
+	}
 }
