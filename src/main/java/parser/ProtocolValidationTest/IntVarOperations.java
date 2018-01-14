@@ -1,12 +1,15 @@
 package parser.ProtocolValidationTest;
 
 import java.util.List;
+import java.util.Map;
 
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 
+import protocolosv2.Element;
 import protocolosv2.Operation;
+import protocolosv2.Sequence;
 
 public class IntVarOperations {
 	private int[] indexes = null;	
@@ -20,30 +23,30 @@ public class IntVarOperations {
 	//op is the operation of each sequence with the same output step.
 	//intVars is a list of the integer operands that make up all operation in the protocol.
 	//index is a vector with the index of the operands in the intVars that are used in the operation op.
-	public void addSequences(List<BoolVar> sequences, Operation op, List<IntVar> intVars, int[] index) {
+	public void addSequences(List<BoolVar> boolSequences, Sequence sequence, List<IntVar> intVars, int[] index) {
 		Model auxModel = new Model("Axiliary IntVar Model");
 		BoolVar boolVar = null;
 		
-		switch(op.getOperator()) {
+		switch(sequence.getOperation().getOperator()) {
 			case EQUAL:
 				boolVar = auxModel.arithm(intVars.get(index[0]),"==",intVars.get(index[1])).reify();
-				sequences.add(boolVar);
+				boolSequences.add(boolVar);	
 				break;
 			case EQUAL_OR_GREATER:
 				boolVar = auxModel.arithm(intVars.get(index[0]),">=",intVars.get(index[1])).reify();
-				sequences.add(boolVar);
+				boolSequences.add(boolVar);
 				break;
 			case EQUAL_OR_SMALLER:
 				boolVar = auxModel.arithm(intVars.get(index[0]),"<=",intVars.get(index[1])).reify();
-				sequences.add(boolVar);
+				boolSequences.add(boolVar);
 				break;
 			case BIGGER_THAN:
 				boolVar = auxModel.arithm(intVars.get(index[0]),">",intVars.get(index[1])).reify();
-				sequences.add(boolVar);
+				boolSequences.add(boolVar);
 				break;
 			case SMALLER_THAN:
 				boolVar = auxModel.arithm(intVars.get(index[0]),"<",intVars.get(index[1])).reify();
-				sequences.add(boolVar);
+				boolSequences.add(boolVar);
 				break;
 			default:
 				break;

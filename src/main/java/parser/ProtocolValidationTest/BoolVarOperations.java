@@ -1,11 +1,14 @@
 package parser.ProtocolValidationTest;
 
 import java.util.List;
+import java.util.Map;
 
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 
+import protocolosv2.Element;
 import protocolosv2.Operation;
+import protocolosv2.Sequence;
 
 public class BoolVarOperations { 
 	private int[] indexes = null;	
@@ -19,12 +22,12 @@ public class BoolVarOperations {
 	//op is the operation of each sequence with the same output step.
 	//boolVars is a list of the logical operands that make up all operation in the protocol.
 	//index is a vector with the index of the operands in the boolVars that are used in the operation op. 
-	public void addSequences(List<BoolVar> sequences, Operation op, List<BoolVar> boolVars, int[] index){
+	public void addSequences(List<BoolVar> boolSequences, Sequence sequence, List<BoolVar> boolVars, int[] index){
 		Model auxModel = new Model("Auxiliary Model");
 		BoolVar bool = null;
 		BoolVar bool2 = null;
 		
-		switch(op.getOperator()) {
+		switch(sequence.getOperation().getOperator()) {
 			case AND:				
 				bool = auxModel.arithm(boolVars.get(index[0]), "+", boolVars.get(index[1]), "=", 2).reify();
 				
@@ -33,7 +36,7 @@ public class BoolVarOperations {
 					bool = bool2;
 				}
 				
-				sequences.add(bool);				
+				boolSequences.add(bool);				
 				break;
 			case OR:
 				bool = auxModel.arithm(boolVars.get(index[0]), "+", boolVars.get(index[1]), "!=", 0).reify();
@@ -43,17 +46,17 @@ public class BoolVarOperations {
 					bool = bool2;
 				}
 				
-				sequences.add(bool);		
+				boolSequences.add(bool);			
 				break;
 			case IMPLIES:
-				bool = auxModel.arithm(boolVars.get(index[0]), "-", boolVars.get(index[1]), "=", 1).reify();
+				bool = auxModel.arithm(boolVars.get(index[0]), "-", boolVars.get(index[1]), "!=", 1).reify();
 				
 				for (int i = 2; i < index.length; i++) {
-					bool2 = auxModel.arithm(bool, "-", boolVars.get(index[i]), "=", 1).reify();
+					bool2 = auxModel.arithm(bool, "-", boolVars.get(index[i]), "!=", 1).reify();
 					bool = bool2;
 				}
 				
-				sequences.add(bool);
+				boolSequences.add(bool);	
 				break;
 			case XOR:
 				bool = auxModel.arithm(boolVars.get(index[0]), "+", boolVars.get(index[1]), "=", 1).reify();
@@ -63,7 +66,7 @@ public class BoolVarOperations {
 					bool = bool2;
 				}
 				
-				sequences.add(bool);
+				boolSequences.add(bool);	
 				break;
 			default:
 				break;
