@@ -22,28 +22,42 @@ public class IntVarOperations {
 	//op is the operation of each sequence with the same output step.
 	//intVars is a list of the integer operands that make up all operation in the protocol.
 	//index is a vector with the index of the operands in the intVars that are used in the operation op.
-	public BoolVar createSequences(Sequence sequence, List<IntVar> intVars, int[] index) {
+	public BoolVar createSequences(Operation op, List<IntVar> intVars, int[] index) {
 		Model auxModel = new Model("Axiliary IntVar Model");
-		BoolVar boolVar = null;
 		
-		switch(sequence.getOperation().getOperator()) {
+		switch(op.getOperator()) {
 			case EQUAL:
-				boolVar = auxModel.arithm(intVars.get(index[0]),"==",intVars.get(index[1])).reify();
-				return boolVar;
+				return auxModel.arithm(intVars.get(index[0]),"==",intVars.get(index[1])).reify();
 			case EQUAL_OR_GREATER:
-				boolVar = auxModel.arithm(intVars.get(index[0]),">=",intVars.get(index[1])).reify();
-				return boolVar;
+				return auxModel.arithm(intVars.get(index[0]),">=",intVars.get(index[1])).reify();
 			case EQUAL_OR_SMALLER:
-				boolVar = auxModel.arithm(intVars.get(index[0]),"<=",intVars.get(index[1])).reify();
-				return boolVar;
+				return auxModel.arithm(intVars.get(index[0]),"<=",intVars.get(index[1])).reify();
 			case BIGGER_THAN:
-				boolVar = auxModel.arithm(intVars.get(index[0]),">",intVars.get(index[1])).reify();
-				return boolVar;
+				return auxModel.arithm(intVars.get(index[0]),">",intVars.get(index[1])).reify();
 			case SMALLER_THAN:
-				boolVar = auxModel.arithm(intVars.get(index[0]),"<",intVars.get(index[1])).reify();
-				return boolVar;
+				return auxModel.arithm(intVars.get(index[0]),"<",intVars.get(index[1])).reify();
 			default:
-				return boolVar;
+				return null;
+		}
+	}
+	
+	public IntVar calculate(Operation op, List<IntVar> intVars, int[] index) {
+		Model auxModel = new Model("Axiliary IntVar Model");
+		IntVar result = null;
+		
+		switch(op.getOperator()) {
+			case SUM:
+				return auxModel.arithm(intVars.get(index[0]),"+",intVars.get(index[1])).reify();
+			case MINUS:							
+				return auxModel.arithm(intVars.get(index[0]),"-",intVars.get(index[1])).reify();
+			case MULTIPLICATION:			
+				auxModel.times(intVars.get(index[0]), intVars.get(index[1]), result).reify();
+				return result;
+			case DIVISION:			
+				auxModel.div(intVars.get(index[0]), intVars.get(index[1]), result).reify();
+				return result;
+			default:
+				return null;
 		}
 	}
 		
@@ -75,6 +89,7 @@ public class IntVarOperations {
 		}
 		return false;
 	}
+	
 	//retun the index of the intVar from the list intVars.
 	public int indexOf(List<IntVar> intVars, IntVar intVar) {
 		String name = intVar.getName();

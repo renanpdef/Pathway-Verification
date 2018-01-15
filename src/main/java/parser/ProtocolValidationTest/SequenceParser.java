@@ -152,35 +152,29 @@ public class SequenceParser {
 			case OR:
 			case IMPLIES:
 			case XOR:
-				boolVarOp.create(boolVars, model, op);
-				
-				return boolVarOp.createSequences(sequence, boolVars, boolVarOp.getIndexes());
+				boolVarOp.create(boolVars, model, op);			
+				return boolVarOp.createSequences(op, boolVars, boolVarOp.getIndexes());
 				
 			case EQUAL:
 			case EQUAL_OR_GREATER:
 			case EQUAL_OR_SMALLER:
 			case BIGGER_THAN:
 			case SMALLER_THAN:
-				intVarOp.create(intVars, model, op);//ATENCAO
+				intVarOp.create(intVars, model, op);				
+				return intVarOp.createSequences(op, intVars, intVarOp.getIndexes());
 				
-				return intVarOp.createSequences(sequence, intVars, intVarOp.getIndexes());								
-		
-			case SUM:								
-				return null;
-				
-			case MINUS:								
-				return null;
-				
-			case MULTIPLICATION:								
-				return null;
-				
+			case SUM:
+			case MINUS:
+			case MULTIPLICATION:
 			case DIVISION:							
+				intVarOp.create(intVars, model, op);				
+				IntVar result = intVarOp.calculate(op, intVars, intVarOp.getIndexes());
 				return null;
 				
 			case AFFIRMATION:								
 				return null;
 				
-			default:
+			default://NOT
 				boolVarOp.create(boolVars, model, op);
 				int[] indexes = boolVarOp.getIndexes();
 				return model.arithm(boolVars.get(indexes[0]), "+", boolVars.get(indexes[0]), "=", 0).reify();

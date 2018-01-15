@@ -20,12 +20,12 @@ public class BoolVarOperations {
 	//op is the operation of each sequence with the same output step.
 	//boolVars is a list of the logical operands that make up all operation in the protocol.
 	//index is a vector with the index of the operands in the boolVars that are used in the operation op. 
-	public BoolVar createSequences(Sequence sequence, List<BoolVar> boolVars, int[] index){
+	public BoolVar createSequences(Operation op, List<BoolVar> boolVars, int[] index){
 		Model auxModel = new Model("Auxiliary Model");
 		BoolVar bool = null;
 		BoolVar bool2 = null;
 		
-		switch(sequence.getOperation().getOperator()) {
+		switch(op.getOperator()) {
 			case AND:				
 				bool = auxModel.arithm(boolVars.get(index[0]), "+", boolVars.get(index[1]), "=", 2).reify();
 				
@@ -63,7 +63,7 @@ public class BoolVarOperations {
 				
 				return bool; 
 			default:
-				return bool;
+				return null;
 		}
 	}
 		
