@@ -15,7 +15,6 @@ public class Solutions {
         SequenceParser sequenceParser = new SequenceParser(protocolReader.createProtocol());
                
         Map<Element, List<Solution>> mapAllValidSolutions = sequenceParser.findAllValidSolutions();
-        
         System.out.println("Find All Valid Solutions:");
         for (int k = 0; k < mapAllValidSolutions.size(); k++) {
         	List<Solution> allValidSolutions = (List<Solution>) mapAllValidSolutions.values().toArray()[k];
