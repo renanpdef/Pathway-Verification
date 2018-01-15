@@ -17,50 +17,56 @@ import protocolosv2.Protocol;
 import protocolosv2.Sequence;
 
 public class SequenceParser {
-	private BoolVarOperations boolVarOp = new BoolVarOperations();
-	private IntVarOperations intVarOp = new IntVarOperations();
-	private Protocol protocol;
-	private Map<Element, List<Sequence>> mapSequences = new HashMap<Element, List<Sequence>>();
+	private BoolVarOperations boolVarOp = new BoolVarOperations(); //Instantiates the class that handles operations between BoolBar variables.
+	private IntVarOperations intVarOp = new IntVarOperations(); //Instantiates the class that handles operations between IntVar variables.
+	private Protocol protocol; //The protocol to be analyzed.
+	private Map<Element, List<Sequence>> mapSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the protocol.
 	
+	// A constructor to initialize the protocol and the mapSequences.
 	public SequenceParser(Protocol protocol) {
 		this.protocol = protocol;
 		getModelFragmentsForVerification();
 	}
 
-	//returns a list of all solutions that occur deadlock.
+	//Returns a map with Elements like a key and a list of all solutions that occur deadlock in the element like a value of the key.
 	//If the operands have the same values presented in the solution, then deadlock occurs.
+	//An element is in deadlock when all its output sequences are false.
 	public Map<Element, List<Solution>> findDeadLockSolutions(){
 		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
 		for(int i = 0; i < mapSequences.values().size(); i++){
-			Model model = new Model("Find All Solutions: " + i);
-			List<BoolVar> sequences = sequencesTranformation(model,(List<Sequence>) mapSequences.values().toArray()[i]);
+			Model model = new Model("Find DeadLock Solutions: " + i);//Create a model to verify deadlock of a element in the mapSequences with ChocoSolver.
+			List<BoolVar> sequences = sequenceListTranformation(model,(List<Sequence>) mapSequences.values().toArray()[i]); //Get a list of BoolVar from a list of sequence of the mapSequences.
 			if (sequences!=null && !sequences.isEmpty()) {
+				//Go through all the BoolVars in the list sequences.
 				for(int k = 0; k < sequences.size(); k++) {
-					model.arithm(sequences.get(k), "=", 0).post();
+					model.arithm(sequences.get(k), "=", 0).post();//Post the constraint "the sequence i have to be false" to the model.
 				}
-				mapSolutions.put((Element) mapSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());
+				mapSolutions.put((Element) mapSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
 			}
 		}
 		return mapSolutions;
 	}
 	
-	//returns a list of some solutions that occur Non Determinism.
+	//Returns a map with Elements like a key and a list of some solutions that occur Non Determinism in the element like a value of the key.
 	//If the operands have the same values presented in the solution, then Non Determinism occurs.
+	//An element has a Non Determinism problem when at leat two of its output sequences are true.
 	public Map<Element, List<Solution>> findNonDeterminismSolutions(){
 		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
 		for(int k = 0; k < mapSequences.values().size(); k++){
-			Model model = new Model("Find Non Determinism Solution: " + k);
-			List<BoolVar> sequences = sequencesTranformation(model,(List<Sequence>) mapSequences.values().toArray()[k]);
+			Model model = new Model("Find Non Determinism Solution: " + k);//Create a model to verify non determinism of a element in the mapSequences with ChocoSolver.
+			List<BoolVar> sequences = sequenceListTranformation(model,(List<Sequence>) mapSequences.values().toArray()[k]);//Get a list of BoolVar from a list of sequence of the mapSequences.
 			if (sequences!=null && !sequences.isEmpty() && sequences.size()>1) {
-				//Add clauses list to the model
+				//Go through all the BoolVars in the list "sequences" to find the first list of solution there are non determinism problem.
 				for (int i = 0; i < sequences.size(); i++) {
 					for(int j = i+1; j < sequences.size(); j++) {
-						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post();
-						mapSolutions.put((Element) mapSequences.keySet().toArray()[k], model.getSolver().findAllSolutions());
+						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
+						mapSolutions.put((Element) mapSequences.keySet().toArray()[k], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
+						//If the mapSolutions already has a list of solutions for the Element, than break "for" loop.
 						if(mapSolutions.get((Element) mapSequences.keySet().toArray()[k]) != null) {
 							break;
 						}
 					}
+					//If the mapSolutions already has a list of solutions for the Element, than break "for" loop.
 					if(mapSolutions.get((Element) mapSequences.keySet().toArray()[k]) != null) {
 						break;
 					}
@@ -70,75 +76,76 @@ public class SequenceParser {
 		return mapSolutions;
 	}
 	
-	//return all correct solutions in a list of sequences with the same output step.
-	//Use the choco solver to get possible solutions and return them
-	public Map<Element, List<Solution>> findAllSolutions() {
-		//removeAllModelConstraints();
+	//Returns a map with Elements like a key and a list of all valid solutions in the element like a value of the key.
+	//An element has no problem when one, and only one, of its output sequences are true.
+	public Map<Element, List<Solution>> findAllValidSolutions() {
 		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
 		for(int i = 0; i < mapSequences.values().size(); i++){
-			Model model = new Model("Find All Solutions: " + i);
-			List<BoolVar> sequences = sequencesTranformation(model,(List<Sequence>) mapSequences.values().toArray()[i]);
+			Model model = new Model("Find All Solutions: " + i); //Create a model to verify the valid solutions of a element in the mapSequences with ChocoSolver.
+			List<BoolVar> sequences = sequenceListTranformation(model,(List<Sequence>) mapSequences.values().toArray()[i]);//Get a list of BoolVar from a list of sequence of the mapSequences.
 			if (sequences!=null && !sequences.isEmpty()) {
+				//Verify if there are just one boolvar in the list.
 				if(sequences.size()==1) {
-					model.arithm(sequences.get(0), "=", 1).post();
+					model.arithm(sequences.get(0), "=", 1).post();//Post the constraint "the sequence have to be true" to the model.
 					mapSolutions.put((Element) mapSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());
 				}
 				else {
-					List<BoolVar> auxSeq = new ArrayList<BoolVar>();
+					List<BoolVar> auxSeq = new ArrayList<BoolVar>();//Auxiliary list of boolvar to store the new boolvar variables.
 					for(int k = 1; k < sequences.size(); k++) {
 						if (auxSeq.isEmpty()) {
-							model.arithm(sequences.get(k-1), "+", sequences.get(k), "<", 2).post();
-							BoolVar aux = model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 1).reify();
+							model.arithm(sequences.get(k-1), "+", sequences.get(k), "<", 2).post();//Post the constraint "sequence k-1 and sequence k can't be both true" to the model.
+							BoolVar aux = model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 1).reify();//Create a boolvar with the constraint "sequences.get(k-1) xor sequences.get(k)".
 							auxSeq.add(aux);
 						}else if(k < sequences.size()-1){
-							model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "<", 2).post();
-							BoolVar aux = model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 1).reify();
+							model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "<", 2).post();//Post the constraint "the last boolvar in the auxSeq and sequence k can't be both true" to the model.
+							BoolVar aux = model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 1).reify();//Create a boolvar with the constraint "the last boolvar in the auxSeq xor sequences.get(k)".
 							auxSeq.add(aux);
+						//in the last sequence of the list
 						}else {
-							model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 1).post();
+							model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 1).post();//Post the constraint "the last boolvar in the auxSeq xor sequence k" to the model.
 						}
 					}
-					mapSolutions.put((Element) mapSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());
+					mapSolutions.put((Element) mapSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
 				}
 			}
 		}
 		return mapSolutions;
 	}
 
-	//get all the sequences from the protocol and put it into a arraylist sequences.
+	//get all the sequences from the protocol and put it into a map "mapSequences".
+	//mapSequences associates sequences with their respective output steps.
 	public void getModelFragmentsForVerification(){
-		//Loop to get all the sequences same output step
 		for (int i = 0; i < protocol.getSequence().size(); i++) {
 			if(!mapSequences.containsKey(protocol.getSequence().get(i).getOutputStep())) {
 				List<Sequence> sequences = new ArrayList<Sequence>();
 				mapSequences.put(protocol.getSequence().get(i).getOutputStep(), sequences);
 				mapSequences.get(protocol.getSequence().get(i).getOutputStep()).add(protocol.getSequence().get(i));
-				//createSequenceList(mapSequences, protocol.getSequence().get(i));
 			}else {
 				mapSequences.get(protocol.getSequence().get(i).getOutputStep()).add(protocol.getSequence().get(i));
-				//createSequenceList(mapSequences, protocol.getSequence().get(i));
 			}
 		}
 	}
 	
-	//tranform a list of sequences in a list of boolvar.
-	public List<BoolVar> sequencesTranformation(Model model, List<Sequence> sequences) {
-		//Lista de operandos
+	//Tranform a list of sequences in a list of boolvar.
+	//This boolvar are constrained with some operation.
+	public List<BoolVar> sequenceListTranformation(Model model, List<Sequence> sequences) {
 		List<BoolVar>  boolVars = new ArrayList<BoolVar>();
 		List<IntVar>  intVars = new ArrayList<IntVar>();
 		List<BoolVar> boolSequences = new ArrayList<BoolVar>();
-		//Loop to get sequences with the same output step
+		//Go through all sequences in the list.
 		for (int i = 0; i < sequences.size(); i++) {
-			createSequenceList(model, sequences.get(i), boolVars, intVars, boolSequences);
+			sequenceTransformation(model, sequences.get(i), boolVars, intVars, boolSequences);
 		}
 		return boolSequences;
 	}		
 	
-	//Create Clauses for one operation
-	public void createSequenceList(Model model, Sequence sequence, List<BoolVar> boolVars, List<IntVar> intVars, List<BoolVar> boolSequences){
-		//Verify the operator of each operation.
-		//Create the clauses according to the operator and 
-		//add them on the clauses list
+	//function to convert a sequence in a boolvar and put it in a list of boolvar "boolSequences".
+	//model is a chocosolver model where the constraints will be post.
+	//Sequence is the sequence that will be transform.
+	//boolVars is a list that will contain the operands like a boolvar variables.
+	//intVars is a list that will contain the operands like a intVar variables.
+	//boolSequences is a list that will contain a sequence structure like a boolvar.
+	public void sequenceTransformation(Model model, Sequence sequence, List<BoolVar> boolVars, List<IntVar> intVars, List<BoolVar> boolSequences){
 		BoolVar bool = null;
 		Operation op = sequence.getOperation();
 		switch (op.getOperator()) {

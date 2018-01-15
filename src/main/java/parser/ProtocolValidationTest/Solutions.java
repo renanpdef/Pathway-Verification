@@ -14,14 +14,14 @@ public class Solutions {
         ProtocolReader protocolReader = new ProtocolReader(file1);
         SequenceParser sequenceParser = new SequenceParser(protocolReader.createProtocol());
                
-        Map<Element, List<Solution>> mapAllSolutions = sequenceParser.findAllSolutions();
+        Map<Element, List<Solution>> mapAllValidSolutions = sequenceParser.findAllValidSolutions();
         
-        System.out.println("Find All Possible Solutions:");
-        for (int k = 0; k < mapAllSolutions.size(); k++) {
-        	List<Solution> allSolutions = (List<Solution>) mapAllSolutions.values().toArray()[k];
+        System.out.println("Find All Valid Solutions:");
+        for (int k = 0; k < mapAllValidSolutions.size(); k++) {
+        	List<Solution> allValidSolutions = (List<Solution>) mapAllValidSolutions.values().toArray()[k];
         	System.out.println("Elemento " + k);
-	        for (int i = 0; i < allSolutions.size(); i++) {
-	        	String str[] = allSolutions.get(i).toString().split(",");
+	        for (int i = 0; i < allValidSolutions.size(); i++) {
+	        	String str[] = allValidSolutions.get(i).toString().split(",");
 	        	for(int j = 0; j < str.length; j++) {
 	        		if(!str[j].contains("REIF")) {
 	        			System.out.print(str[j]);
