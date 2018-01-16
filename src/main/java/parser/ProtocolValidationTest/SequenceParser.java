@@ -61,18 +61,15 @@ public class SequenceParser {
 					for(int j = i+1; j < sequences.size(); j++) {
 						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
 						mapSolutions.put((Element) mapSequences.keySet().toArray()[k], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
-						//If the mapSolutions already has a list of solutions for the Element, than break "for" loop.
+						//If the mapSolutions already has a list of solutions for the Element, then return the list.
 						if(mapSolutions.get((Element) mapSequences.keySet().toArray()[k]) != null) {
-							break;
+							return mapSolutions;
 						}
-					}
-					//If the mapSolutions already has a list of solutions for the Element, than break "for" loop.
-					if(mapSolutions.get((Element) mapSequences.keySet().toArray()[k]) != null) {
-						break;
 					}
 				}
 			}
 		}
+		
 		return mapSolutions;
 	}
 	
@@ -134,7 +131,10 @@ public class SequenceParser {
 		List<BoolVar> boolSequences = new ArrayList<BoolVar>();//boolSequences is a list that will contain a sequence structure like a boolvar.
 		//Go through all sequences in the list.
 		for (int i = 0; i < sequences.size(); i++) {
-			boolSequences.add(sequenceToBoolVar(model, sequences.get(i), boolVars, intVars));
+			BoolVar bool = sequenceToBoolVar(model, sequences.get(i), boolVars, intVars);
+			if(bool != null) {
+				boolSequences.add(bool);
+			}			
 		}
 		return boolSequences;
 	}		
