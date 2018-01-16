@@ -9,18 +9,12 @@ import protocolosv2.Operation;
 import protocolosv2.Sequence;
 
 public class BoolVarOperations { 
-	private int[] indexes = null;	
-	
-	public int[] getIndexes() {
-		return indexes;
-	}
 
-	//Add a boolVar variables on a list of sequences.
-	//sequences is a list of boolvar variables where the operation of each sequence with the same output step will be stored.
+	//return a sequence representation as a BoolVar.
 	//op is the operation of each sequence with the same output step.
 	//boolVars is a list of the logical operands that make up all operation in the protocol.
-	//index is a vector with the index of the operands in the boolVars that are used in the operation op. 
-	public BoolVar createSequences(Operation op, List<BoolVar> boolVars, int[] index){
+	//index is a vector with the index of the operands in the list boolVars that are used in the operation op. 
+	public BoolVar createBoolVarSequence(Operation op, List<BoolVar> boolVars, int[] index){
 		Model auxModel = new Model("Auxiliary Model");
 		BoolVar bool = null;
 		BoolVar bool2 = null;
@@ -69,7 +63,7 @@ public class BoolVarOperations {
 		
 	//get the operands from the operation and put it in the list boolVars if the list do not contain it.
 	//return the index of the operands of the operation in the boolVars.
-	public void create(List<BoolVar> boolVars, Model model, Operation operation) {
+	public int[] operandsIntoBoolVarList(List<BoolVar> boolVars, Model model, Operation operation) {
 		int indexes[] = new int[operation.getOperand().size()];
 		for(int i = 0; i < operation.getOperand().size(); i++) {
 			Model auxModel = new Model("Auxiliary Model");
@@ -82,7 +76,7 @@ public class BoolVarOperations {
 			}
 		}
 		
-		this.indexes = indexes;
+		return indexes;
 	}
 		
 	//Verify whether list boolVars already has the boolvar

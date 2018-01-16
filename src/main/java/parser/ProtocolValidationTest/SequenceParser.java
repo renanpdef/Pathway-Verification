@@ -147,36 +147,36 @@ public class SequenceParser {
 	//boolSequences is a list that will contain a sequence structure like a boolvar.
 	private BoolVar sequenceToBoolVar(Model model, Sequence sequence, List<BoolVar> boolVars, List<IntVar> intVars){
 		Operation op = sequence.getOperation();
+		int[] indexes;
 		switch (op.getOperator()) {
 			case AND:
 			case OR:
 			case IMPLIES:
 			case XOR:
-				boolVarOp.create(boolVars, model, op);			
-				return boolVarOp.createSequences(op, boolVars, boolVarOp.getIndexes());
+				indexes = boolVarOp.operandsIntoBoolVarList(boolVars, model, op);			
+				return boolVarOp.createBoolVarSequence(op, boolVars, indexes);
 				
 			case EQUAL:
 			case EQUAL_OR_GREATER:
 			case EQUAL_OR_SMALLER:
 			case BIGGER_THAN:
 			case SMALLER_THAN:
-				intVarOp.create(intVars, model, op);				
-				return intVarOp.createSequences(op, intVars, intVarOp.getIndexes());
+				indexes = intVarOp.operandsIntoIntVarList(intVars, model, op);				
+				return intVarOp.createBoolVarSequence(op, intVars, indexes);
 				
 			case SUM:
 			case MINUS:
 			case MULTIPLICATION:
 			case DIVISION:							
-				intVarOp.create(intVars, model, op);				
-				IntVar result = intVarOp.calculate(op, intVars, intVarOp.getIndexes());
+				indexes = intVarOp.operandsIntoIntVarList(intVars, model, op);				
+				IntVar result = intVarOp.calculate(op, intVars, indexes);
 				return null;
 				
 			case AFFIRMATION:								
 				return null;
 				
 			default://NOT
-				boolVarOp.create(boolVars, model, op);
-				int[] indexes = boolVarOp.getIndexes();
+				indexes = boolVarOp.operandsIntoBoolVarList(boolVars, model, op);
 				return model.arithm(boolVars.get(indexes[0]), "+", boolVars.get(indexes[0]), "=", 0).reify();
 		}
 	}	
