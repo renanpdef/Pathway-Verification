@@ -11,6 +11,7 @@ import protocolosv2.Operation;
 import protocolosv2.Sequence;
 
 public class IntVarOperations {
+	int index = 0;
 	
 	//return a sequence representation as a BoolVar.
 	//op is the operation of each sequence with the same output step.
@@ -23,11 +24,9 @@ public class IntVarOperations {
 		
 		switch(op.getOperator()) {
 			case EQUAL:
-				System.out.println(index[0]);
-				System.out.println(index[1]);
-				bool = auxModel.arithm(intVars.get(index[0]),"==",intVars.get(index[1])).reify();
+				bool = auxModel.arithm(intVars.get(index[0]),"=",intVars.get(index[1])).reify();
 				for (int i = 2; i < index.length; i++) {
-					bool2 = auxModel.arithm(bool, "==", intVars.get(index[i])).reify();
+					bool2 = auxModel.arithm(bool, "=", intVars.get(index[i])).reify();
 					bool = bool2;
 				}
 				
@@ -99,13 +98,25 @@ public class IntVarOperations {
 		int indexes[] = new int[operation.getOperand().size()];
 		for(int i = 0; i < operation.getOperand().size(); i++) {
 			Model auxModel = new Model("Auxiliary Model");
-			IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), 0, 5);
-			if(!contains(intVars, intVar)) {
+			
+			if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
+				String name = operation.getOperator().getName() + index++;		
+				
+				operation.getOperand().get(i).setName(name);
+				
 				intVars.add(model.intVar(operation.getOperand().get(i).getName(), 0, 5));
 				indexes[i] = intVars.size() -1;
-			}else {
-				indexes[i] = indexOf(intVars, intVar);
 			}
+			else {
+				IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), 0, 5);
+				
+				if(!contains(intVars, intVar)) {
+					intVars.add(model.intVar(operation.getOperand().get(i).getName(), 0, 5));
+					indexes[i] = intVars.size() -1;
+				}else {
+					indexes[i] = indexOf(intVars, intVar);
+				}
+			}			
 		}
 		return indexes;
 	}
@@ -115,9 +126,10 @@ public class IntVarOperations {
 		String name = intVar.getName();
 		for(int i = 0; i < intVars.size(); i++) {
 			String bName = intVars.get(i).getName();
+			
 			if(bName.equals(name)) {
 				return true;
-			}
+			}			
 		}
 		return false;
 	}

@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
+import org.chocosolver.solver.variables.IntVar;
 
 import protocolosv2.Operation;
 import protocolosv2.Sequence;
 
 public class BoolVarOperations { 
+	int index = 0;
 
 	//return a sequence representation as a BoolVar.
 	//op is the operation of each sequence with the same output step.
@@ -67,13 +69,26 @@ public class BoolVarOperations {
 		int indexes[] = new int[operation.getOperand().size()];
 		for(int i = 0; i < operation.getOperand().size(); i++) {
 			Model auxModel = new Model("Auxiliary Model");
-			BoolVar boolVar = auxModel.boolVar(operation.getOperand().get(i).getName());
-			if(!contains(boolVars, boolVar)) {
+			
+			if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
+				String name = operation.getOperator().getName() + index++;		
+				
+				operation.getOperand().get(i).setName(name);
+				
 				boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
 				indexes[i] = boolVars.size() -1;
-			}else {
-				indexes[i] = indexOf(boolVars, boolVar);
 			}
+			else {
+				BoolVar boolVar = auxModel.boolVar(operation.getOperand().get(i).getName());
+				
+				if(!contains(boolVars, boolVar)) {
+					boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
+					indexes[i] = boolVars.size() -1;
+				}else {
+					indexes[i] = indexOf(boolVars, boolVar);
+				}
+			}			
+	
 		}
 		
 		return indexes;
