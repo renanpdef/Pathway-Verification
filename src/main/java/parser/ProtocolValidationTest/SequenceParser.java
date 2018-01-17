@@ -162,15 +162,13 @@ public class SequenceParser {
 			case EQUAL_OR_SMALLER:
 			case BIGGER_THAN:
 			case SMALLER_THAN:
-				indexes = intVarOp.operandsIntoIntVarList(intVars, model, op);				
-				return intVarOp.createBoolVarSequence(op, intVars, indexes);
+				intVarOp.operandsIntoIntVarList(intVars, model, op);				
+				return intVarOp.createBoolVarSequence(op, intVars);
 				
 			case SUM:
 			case MINUS:
 			case MULTIPLICATION:
 			case DIVISION:							
-				indexes = intVarOp.operandsIntoIntVarList(intVars, model, op);				
-				IntVar result = intVarOp.calculate(op, intVars, indexes);
 				return null;
 				
 			case AFFIRMATION:								
