@@ -1,109 +1,16 @@
 package parser.ProtocolValidationTest;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
-import org.chocosolver.solver.variables.IntVar;
 
 import protocolosv2.Operand;
 import protocolosv2.Operation;
-import protocolosv2.Sequence;
-import protocolosv2.impl.OperandImpl;
 
-public class BoolVarOperations { 
+public class BoolVarOperations {
 	int index = 0;
 	
-	//return a sequence representation as a BoolVar.
-	//op is the operation of each sequence with the same output step.
-	//boolVars is a list of the logical operands that make up all operation in the protocol.
-	//index is a vector with the index of the operands in the list boolVars that are used in the operation op. 
-	public BoolVar createBoolVarSequence(Operation op, List<BoolVar> boolVars){
-		Model auxModel = new Model("Auxiliary Model");
-		BoolVar boolSequence = null;
-		
-		switch(op.getOperator()) {
-			case AND:
-				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "=", 2).reify();
-				}
-				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "=", 2).reify();
-				}
-				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "=", 2).reify();
-				}
-				else {
-					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "=", 2).reify();
-				}		
-				return boolSequence;
-				
-			case OR:
-				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "!=", 0).reify();
-				}
-				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "!=", 0).reify();
-				}
-				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "!=", 0).reify();
-				}
-				else {
-					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "!=", 0).reify();
-				}		
-				return boolSequence;
-				
-			case IMPLIES:
-				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "-", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "!=", 1).reify();
-				}
-				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "-", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "!=", 1).reify();
-				}
-				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "-",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "!=", 1).reify();
-				}
-				else {
-					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "-", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "!=", 1).reify();
-				}		
-				return boolSequence;
-				
-			case XOR:
-				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "=", 1).reify();
-				}
-				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "=", 1).reify();
-				}
-				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "=", 1).reify();
-				}
-				else {
-					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "=", 1).reify();
-				}		
-				return boolSequence;
-				
-			case EQUAL:
-			case EQUAL_OR_GREATER:
-			case EQUAL_OR_SMALLER:
-			case BIGGER_THAN:
-			case SMALLER_THAN:
-//				intVarOp.operandsIntoIntVarList(intVars, model, op);				
-//				return intVarOp.createBoolVarSequence(op, intVars);
-				return null;
-				
-			default:
-				if(op.getOperand().get(0).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "=", 0).reify();
-				}
-				else {
-					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "=", 0).reify();
-				}		
-				return boolSequence;
-		}
-	}
-		
 	//get the operands from the operation and put it in the list boolVars if the list do not contain it.
 	public void operandsIntoBoolVarList(List<BoolVar> boolVars, Model model, Operation operation) {
 		for(int i = 0; i < operation.getOperand().size(); i++) {

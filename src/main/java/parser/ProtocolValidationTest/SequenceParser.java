@@ -17,8 +17,9 @@ import protocolosv2.Protocol;
 import protocolosv2.Sequence;
 
 public class SequenceParser {
-	private BoolVarOperations boolVarOp = new BoolVarOperations(); //Instantiates the class that handles operations between BoolBar variables.
-	private IntVarOperations intVarOp = new IntVarOperations(); //Instantiates the class that handles operations between IntVar variables.
+	private Operations operations = new Operations(); //Instantiates the class that handles operations between BoolBar variables.
+	private IntVarOperations intVarOp = new IntVarOperations(); 
+	private BoolVarOperations boolOp = new BoolVarOperations();  //Instantiates the class that handles operations between BoolVar variables.
 	private Protocol protocol; //The protocol to be analyzed.
 	private Map<Element, List<Sequence>> mapSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the protocol.
 	
@@ -148,14 +149,14 @@ public class SequenceParser {
 	//boolSequences is a list that will contain a sequence structure like a boolvar.
 	private BoolVar sequenceToBoolVar(Model model, Sequence sequence, List<BoolVar> boolVars, List<IntVar> intVars){
 		Operation op = sequence.getOperation();
-		int[] indexes;
+		
 		switch (op.getOperator()) {
 			case AND:
 			case OR:
 			case IMPLIES:
 			case XOR:
-				boolVarOp.operandsIntoBoolVarList(boolVars, model, op);			
-				return boolVarOp.createBoolVarSequence(op, boolVars);
+				boolOp.operandsIntoBoolVarList(boolVars, model, op);			
+				return operations.createBoolVarSequence(op, boolVars, intVars);
 				
 			case EQUAL:
 			case EQUAL_OR_GREATER:
@@ -163,20 +164,21 @@ public class SequenceParser {
 			case BIGGER_THAN:
 			case SMALLER_THAN:
 				intVarOp.operandsIntoIntVarList(intVars, model, op);				
-				return intVarOp.createBoolVarSequence(op, intVars);
+				return operations.createBoolVarSequence(op, boolVars, intVars);
 				
 			case SUM:
 			case MINUS:
 			case MULTIPLICATION:
 			case DIVISION:							
+				intVarOp.operandsIntoIntVarList(intVars, model, op);				
 				return null;
 				
 			case AFFIRMATION:								
 				return null;
 				
 			default://NOT
-				boolVarOp.operandsIntoBoolVarList(boolVars, model, op);
-				return boolVarOp.createBoolVarSequence(op, boolVars);
+				boolOp.operandsIntoBoolVarList(boolVars, model, op);
+				return operations.createBoolVarSequence(op, boolVars, intVars);
 		}
 	}	
 }
