@@ -62,14 +62,15 @@ public class SequenceParser {
 						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
 						mapSolutions.put((Element) mapSequences.keySet().toArray()[k], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
 						//If the mapSolutions already has a list of solutions for the Element, then return the list.
-						if(mapSolutions.get((Element) mapSequences.keySet().toArray()[k]) != null) {
+						if(!mapSolutions.get((Element) mapSequences.keySet().toArray()[k]).isEmpty()) {
 							return mapSolutions;
 						}
+						model.getSolver().reset();
+						model.unpost(model.getCstrs()[model.getCstrs().length-1]);
 					}
 				}
 			}
 		}
-		
 		return mapSolutions;
 	}
 	
@@ -153,8 +154,8 @@ public class SequenceParser {
 			case OR:
 			case IMPLIES:
 			case XOR:
-				indexes = boolVarOp.operandsIntoBoolVarList(boolVars, model, op);			
-				return boolVarOp.createBoolVarSequence(op, boolVars, indexes);
+				boolVarOp.operandsIntoBoolVarList(boolVars, model, op);			
+				return boolVarOp.createBoolVarSequence(op, boolVars);
 				
 			case EQUAL:
 			case EQUAL_OR_GREATER:
@@ -176,8 +177,8 @@ public class SequenceParser {
 				return null;
 				
 			default://NOT
-				indexes = boolVarOp.operandsIntoBoolVarList(boolVars, model, op);
-				return model.arithm(boolVars.get(indexes[0]), "+", boolVars.get(indexes[0]), "=", 0).reify();
+				boolVarOp.operandsIntoBoolVarList(boolVars, model, op);
+				return boolVarOp.createBoolVarSequence(op, boolVars);
 		}
 	}	
 }

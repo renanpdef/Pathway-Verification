@@ -1,97 +1,125 @@
 package parser.ProtocolValidationTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 
+import protocolosv2.Operand;
 import protocolosv2.Operation;
 import protocolosv2.Sequence;
+import protocolosv2.impl.OperandImpl;
 
 public class BoolVarOperations { 
 	int index = 0;
-
+	
 	//return a sequence representation as a BoolVar.
 	//op is the operation of each sequence with the same output step.
 	//boolVars is a list of the logical operands that make up all operation in the protocol.
 	//index is a vector with the index of the operands in the list boolVars that are used in the operation op. 
-	public BoolVar createBoolVarSequence(Operation op, List<BoolVar> boolVars, int[] index){
+	public BoolVar createBoolVarSequence(Operation op, List<BoolVar> boolVars){
 		Model auxModel = new Model("Auxiliary Model");
-		BoolVar bool = null;
-		BoolVar bool2 = null;
+		BoolVar boolSequence = null;
 		
 		switch(op.getOperator()) {
-			case AND:				
-				bool = auxModel.arithm(boolVars.get(index[0]), "+", boolVars.get(index[1]), "=", 2).reify();
-				
-				for (int i = 2; i < index.length; i++) {
-					bool2 = auxModel.arithm(bool, "+", boolVars.get(index[i]), "=", 2).reify();
-					bool = bool2;
+			case AND:
+				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "=", 2).reify();
 				}
+				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "=", 2).reify();
+				}
+				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "=", 2).reify();
+				}
+				else {
+					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "=", 2).reify();
+				}		
+				return boolSequence;
 				
-				return bool; 
 			case OR:
-				bool = auxModel.arithm(boolVars.get(index[0]), "+", boolVars.get(index[1]), "!=", 0).reify();
-				
-				for (int i = 2; i < index.length; i++) {
-					bool2 = auxModel.arithm(bool, "+", boolVars.get(index[i]), "!=", 0).reify();
-					bool = bool2;
+				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "!=", 0).reify();
 				}
+				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "!=", 0).reify();
+				}
+				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "!=", 0).reify();
+				}
+				else {
+					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "!=", 0).reify();
+				}		
+				return boolSequence;
 				
-				return bool; 
 			case IMPLIES:
-				bool = auxModel.arithm(boolVars.get(index[0]), "-", boolVars.get(index[1]), "!=", 1).reify();
-				
-				for (int i = 2; i < index.length; i++) {
-					bool2 = auxModel.arithm(bool, "-", boolVars.get(index[i]), "!=", 1).reify();
-					bool = bool2;
+				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "-", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "!=", 1).reify();
 				}
+				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "-", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "!=", 1).reify();
+				}
+				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "-",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "!=", 1).reify();
+				}
+				else {
+					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "-", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "!=", 1).reify();
+				}		
+				return boolSequence;
 				
-				return bool; 
 			case XOR:
-				bool = auxModel.arithm(boolVars.get(index[0]), "+", boolVars.get(index[1]), "=", 1).reify();
-				
-				for (int i = 2; i < index.length; i++) {
-					bool2 = auxModel.arithm(bool, "+", boolVars.get(index[i]), "=", 1).reify();
-					bool = bool2;
+				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "=", 1).reify();
 				}
+				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "=", 1).reify();
+				}
+				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars), "=", 1).reify();
+				}
+				else {
+					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(1))), "=", 1).reify();
+				}		
+				return boolSequence;
 				
-				return bool; 
 			default:
-				return null;
+				if(op.getOperand().get(0).getClass().toString().contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "=", 0).reify();
+				}
+				else {
+					boolSequence = auxModel.arithm(boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(indexOf(boolVars, op.getOperand().get(0))), "=", 0).reify();
+				}		
+				return boolSequence;
 		}
 	}
 		
 	//get the operands from the operation and put it in the list boolVars if the list do not contain it.
-	//return the index of the operands of the operation in the boolVars.
-	public int[] operandsIntoBoolVarList(List<BoolVar> boolVars, Model model, Operation operation) {
-		int indexes[] = new int[operation.getOperand().size()];
+	public void operandsIntoBoolVarList(List<BoolVar> boolVars, Model model, Operation operation) {
 		for(int i = 0; i < operation.getOperand().size(); i++) {
 			Model auxModel = new Model("Auxiliary Model");
-			
-			if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
-				String name = operation.getOperator().getName() + index++;		
-				
-				operation.getOperand().get(i).setName(name);
-				
-				boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
-				indexes[i] = boolVars.size() -1;
+			if(operation.getOperand().get(i).getClass().toString().contains("Operation")) {
+				operandsIntoBoolVarList(boolVars, model, (Operation) operation.getOperand().get(i));
 			}
 			else {
-				BoolVar boolVar = auxModel.boolVar(operation.getOperand().get(i).getName());
-				
-				if(!contains(boolVars, boolVar)) {
+			
+				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
+					String name = operation.getOperator().getName() + index++;		
+					
+					operation.getOperand().get(i).setName(name);
+					
 					boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
-					indexes[i] = boolVars.size() -1;
-				}else {
-					indexes[i] = indexOf(boolVars, boolVar);
 				}
-			}			
-	
+				else {
+					BoolVar boolVar = auxModel.boolVar(operation.getOperand().get(i).getName());
+					
+					if(!contains(boolVars, boolVar)) {
+						boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
+					}
+				}
+			}	
 		}
-		
-		return indexes;
 	}
 		
 	//Verify whether list boolVars already has the boolvar
@@ -107,8 +135,8 @@ public class BoolVarOperations {
 	}
 	
 	//retun the index of the boolVar from the list boolVars. 
-	public int indexOf(List<BoolVar> boolVars, BoolVar boolVar) {
-		String name = boolVar.getName();
+	public int indexOf(List<BoolVar> boolVars, Operand operand) {
+		String name = operand.getName();
 		for(int i = 0; i < boolVars.size(); i++) {
 			String bName = boolVars.get(i).getName();
 			if(bName.equals(name)) {
