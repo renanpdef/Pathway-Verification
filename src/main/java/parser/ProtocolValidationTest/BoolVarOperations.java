@@ -84,6 +84,15 @@ public class BoolVarOperations {
 				}		
 				return boolSequence;
 				
+			case EQUAL:
+			case EQUAL_OR_GREATER:
+			case EQUAL_OR_SMALLER:
+			case BIGGER_THAN:
+			case SMALLER_THAN:
+//				intVarOp.operandsIntoIntVarList(intVars, model, op);				
+//				return intVarOp.createBoolVarSequence(op, intVars);
+				return null;
+				
 			default:
 				if(op.getOperand().get(0).getClass().toString().contains("Operation")) {
 					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "+", createBoolVarSequence((Operation) op.getOperand().get(0), boolVars), "=", 0).reify();

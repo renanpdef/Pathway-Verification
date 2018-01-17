@@ -9,7 +9,7 @@ import protocolosv2.Element;
 
 public class Solutions {
     public static void main( String[] args )    {
-        String file1 = "XMIs_Test\\Test_02.xmi";
+        String file1 = "XMIs_Test\\Test_04.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
         SequenceParser sequenceParser = new SequenceParser(protocolReader.createProtocol());
@@ -23,7 +23,7 @@ public class Solutions {
 	        for (int i = 0; i < allValidSolutions.size(); i++) {
 	        	String str[] = allValidSolutions.get(i).toString().split(",");
 	        	for(int j = 0; j < str.length; j++) {
-	        		if(!str[j].contains("REIF")) {
+	        		if(!str[j].contains("REIF") && !str[j].contains("exp")) {
 	        			System.out.print(str[j]);
 	        		}
 	        	}
@@ -40,7 +40,7 @@ public class Solutions {
 	        for (int i = 0; i < nonDeterminismSolutions.size(); i++) {
 	        	String str[] = nonDeterminismSolutions.get(i).toString().split(",");
 	        	for(int j = 0; j < str.length; j++) {
-	        		if(!str[j].contains("REIF")) {
+	        		if(!str[j].contains("REIF") && !str[j].contains("exp")) {
 	        			System.out.print(str[j]);
 	        		}
 	        	}
@@ -57,7 +57,7 @@ public class Solutions {
 	        for (int i = 0; i < deadLockSolutions.size(); i++) {
 	        	String str[] = deadLockSolutions.get(i).toString().split(",");
 	        	for(int j = 0; j < str.length; j++) {
-	        		if(!str[j].contains("REIF")) {
+	        		if(!str[j].contains("REIF") && !str[j].contains("exp")) {
 	        			System.out.print(str[j]);
 	        		}
 	        	}

@@ -104,73 +104,68 @@ public class IntVarOperations {
 	}
 	
 	public IntVar calculate(Operation op, List<IntVar> intVars) {
-		Model auxModel = new Model("Axiliary IntVar Model");
-		IntVar result = auxModel.intVar(0,4);
-		BoolVar boolvar = null;
+		IntVar result;
+
 		
 		switch(op.getOperator()) {
 			case SUM:
 				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.arithm(result, "=", calculate((Operation) op.getOperand().get(0), intVars), "+", calculate((Operation) op.getOperand().get(1), intVars)).reify();
+					result = calculate((Operation) op.getOperand().get(0), intVars).add(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.arithm(result, "=", calculate((Operation) op.getOperand().get(0), intVars), "+", intVars.get(indexOf(intVars, op.getOperand().get(1)))).reify();
+					result = calculate((Operation) op.getOperand().get(0), intVars).add(intVars.get(indexOf(intVars, op.getOperand().get(1)))).intVar();
 				}
 				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.arithm(result, "=", intVars.get(indexOf(intVars, op.getOperand().get(0))), "+", calculate((Operation) op.getOperand().get(1), intVars)).reify();
+					result = intVars.get(indexOf(intVars, op.getOperand().get(0))).add(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else {
-					boolvar = auxModel.arithm(result, "=", intVars.get(indexOf(intVars, op.getOperand().get(0))), "+", intVars.get(indexOf(intVars, op.getOperand().get(1)))).reify();
+					result = intVars.get(indexOf(intVars, op.getOperand().get(0))).add(intVars.get(indexOf(intVars, op.getOperand().get(1)))).intVar();
 				}
-				auxModel.arithm(boolvar, "=", 1).post();
 				return result;
 				
 			case MINUS:
 				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.arithm(result, "=", calculate((Operation) op.getOperand().get(0), intVars), "-", calculate((Operation) op.getOperand().get(1), intVars)).reify();
+					result = calculate((Operation) op.getOperand().get(0), intVars).sub(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.arithm(result, "=", calculate((Operation) op.getOperand().get(0), intVars), "-", intVars.get(indexOf(intVars, op.getOperand().get(1)))).reify();
+					result = calculate((Operation) op.getOperand().get(0), intVars).sub(intVars.get(indexOf(intVars, op.getOperand().get(1)))).intVar();
 				}
 				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.arithm(result, "=", intVars.get(indexOf(intVars, op.getOperand().get(0))), "-", calculate((Operation) op.getOperand().get(1), intVars)).reify();
+					result = intVars.get(indexOf(intVars, op.getOperand().get(0))).sub(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else {
-					boolvar = auxModel.arithm(result, "=", intVars.get(indexOf(intVars, op.getOperand().get(0))), "-", intVars.get(indexOf(intVars, op.getOperand().get(1)))).reify();
+					result = intVars.get(indexOf(intVars, op.getOperand().get(0))).sub(intVars.get(indexOf(intVars, op.getOperand().get(1)))).intVar();
 				}
-				auxModel.arithm(boolvar, "=", 1).post();
 				return result;
 				
 			case MULTIPLICATION:
 				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.times(calculate((Operation) op.getOperand().get(0), intVars), calculate((Operation) op.getOperand().get(1), intVars), result).reify();
+					result = calculate((Operation) op.getOperand().get(0), intVars).mul(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.times(calculate((Operation) op.getOperand().get(0), intVars), intVars.get(indexOf(intVars, op.getOperand().get(1))), result).reify();
+					result = calculate((Operation) op.getOperand().get(0), intVars).mul(intVars.get(indexOf(intVars, op.getOperand().get(1)))).intVar();
 				}
 				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.times(intVars.get(indexOf(intVars, op.getOperand().get(0))), calculate((Operation) op.getOperand().get(1), intVars), result).reify();
+					result = intVars.get(indexOf(intVars, op.getOperand().get(0))).mul(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else {
-					boolvar = auxModel.times(intVars.get(indexOf(intVars, op.getOperand().get(0))), intVars.get(indexOf(intVars, op.getOperand().get(1))), result).reify();
+					result = intVars.get(indexOf(intVars, op.getOperand().get(0))).mul(intVars.get(indexOf(intVars, op.getOperand().get(1)))).intVar();
 				}
-				auxModel.arithm(boolvar, "=", 1).post();
 				return result;
 				
 			case DIVISION:
 				if(op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.div(calculate((Operation) op.getOperand().get(0), intVars), calculate((Operation) op.getOperand().get(1), intVars), result).reify();
+					result = calculate((Operation) op.getOperand().get(0), intVars).div(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else if(op.getOperand().get(0).getClass().toString().contains("Operation") && !op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.div(calculate((Operation) op.getOperand().get(0), intVars), intVars.get(indexOf(intVars, op.getOperand().get(1))), result).reify();
+					result = calculate((Operation) op.getOperand().get(0), intVars).div(intVars.get(indexOf(intVars, op.getOperand().get(1)))).intVar();
 				}
 				else if(!op.getOperand().get(0).getClass().toString().contains("Operation") && op.getOperand().get(1).getClass().toString().contains("Operation")) {
-					boolvar = auxModel.div(intVars.get(indexOf(intVars, op.getOperand().get(0))), calculate((Operation) op.getOperand().get(1), intVars), result).reify();
+					result = intVars.get(indexOf(intVars, op.getOperand().get(0))).div(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else {
-					boolvar = auxModel.div(intVars.get(indexOf(intVars, op.getOperand().get(0))), intVars.get(indexOf(intVars, op.getOperand().get(1))), result).reify();
+					result = intVars.get(indexOf(intVars, op.getOperand().get(0))).div(intVars.get(indexOf(intVars, op.getOperand().get(1)))).intVar();
 				}
-				auxModel.arithm(boolvar, "=", 1).post();
 				return result;
 				
 			default:
@@ -192,13 +187,13 @@ public class IntVarOperations {
 					
 					operation.getOperand().get(i).setName(name);
 					
-					intVars.add(model.intVar(operation.getOperand().get(i).getName(), 0, 2));
+					intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
 				}
 				else {
-					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), 0, 2);
+					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), 1, 3);
 					
 					if(!contains(intVars, intVar)) {
-						intVars.add(model.intVar(operation.getOperand().get(i).getName(), 0, 2));
+						intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
 					}
 				}
 			}
