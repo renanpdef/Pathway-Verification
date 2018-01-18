@@ -12,40 +12,43 @@ import protocolosv2.Operation;
 public class Operands {
 	int index = 0;
 	
-	//get the operands from the operation and put it in the list boolVars if the list do not contain it.
-	public void operandsIntoList(List<BoolVar> boolVars, List<IntVar> intVars, Model model, Operation operation) {
+	//get the operands from operation and put it in boolVars list or intVars list.
+	//Create the variable for model.
+	public void operandsIntoLists(List<BoolVar> boolVars, List<IntVar> intVars, Model model, Operation operation) {
+		//Go through all operands in operation.
 		for(int i = 0; i < operation.getOperand().size(); i++) {
 			Model auxModel = new Model("Auxiliary Model");
+			//If operand is a operation.
 			if(operation.getOperand().get(i).getClass().toString().contains("Operation")) {
-				operandsIntoList(boolVars, intVars, model, (Operation) operation.getOperand().get(i));
+				operandsIntoLists(boolVars, intVars, model, (Operation) operation.getOperand().get(i));
 			}
+			//if operand is a Numeric operand.
 			else if(operation.getOperand().get(i).getClass().toString().contains("Numeric")) {
+				//if the operand's name is null or "".
 				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
 					String name = operation.getOperator().getName() + index++;		
-					
 					operation.getOperand().get(i).setName(name);
-					
 					intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
 				}
 				else {
 					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), 1, 3);
-					
+					//if intVars list don't already contain the new intVar.
 					if(!containsIntVar(intVars, intVar)) {
 						intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
 					}
 				}
 			}
+			//if operand is a YesOrNo (boolean) operand.
 			else {
+				//if the operand's name is null or "".
 				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
 					String name = operation.getOperator().getName() + index++;		
-					
 					operation.getOperand().get(i).setName(name);
-					
 					boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
 				}
 				else {
 					BoolVar boolVar = auxModel.boolVar(operation.getOperand().get(i).getName());
-					
+					//if boolVars list don't already contain the new boolVar.
 					if(!containsBoolVar(boolVars, boolVar)) {
 						boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
 					}

@@ -132,9 +132,9 @@ public class SequenceParser {
 		List<BoolVar> boolSequences = new ArrayList<BoolVar>();//boolSequences is a list that will contain a sequence structure like a boolvar.
 		//Go through all sequences in the list.
 		for (int i = 0; i < sequences.size(); i++) {
-			BoolVar bool = sequenceToBoolVar(model, sequences.get(i), boolVars, intVars);
-			if(bool != null) {
-				boolSequences.add(bool);
+			BoolVar boolSequence = sequenceToBoolVar(model, sequences.get(i), boolVars, intVars);
+			if(boolSequence != null) {
+				boolSequences.add(boolSequence);
 			}			
 		}
 		return boolSequences;
@@ -145,29 +145,9 @@ public class SequenceParser {
 	//Sequence is the sequence that will be transform.
 	//boolVars is a list that will contain the operands like a boolvar variables.
 	//intVars is a list that will contain the operands like a intVar variables.
-	//boolSequences is a list that will contain a sequence structure like a boolvar.
 	private BoolVar sequenceToBoolVar(Model model, Sequence sequence, List<BoolVar> boolVars, List<IntVar> intVars){
-		Operation op = sequence.getOperation();
-		
-		switch (op.getOperator()) {
-			case AND:
-			case OR:
-			case IMPLIES:
-			case XOR:
-				operands.operandsIntoList(boolVars, intVars, model, op);			
-				return operations.createBoolVarSequence(op, boolVars, intVars);
-				
-			case EQUAL:
-			case EQUAL_OR_GREATER:
-			case EQUAL_OR_SMALLER:
-			case BIGGER_THAN:
-			case SMALLER_THAN:
-				operands.operandsIntoList(boolVars, intVars, model, op);				
-				return operations.createBoolVarSequence(op, boolVars, intVars);
-				
-			default://NOT
-				operands.operandsIntoList(boolVars, intVars, model, op);
-				return operations.createBoolVarSequence(op, boolVars, intVars);
-		}
+		Operation operation = sequence.getOperation();
+		operands.operandsIntoLists(boolVars, intVars, model, operation); //Update the lists boolVars and intVars with new operands from op.			
+		return operations.createBoolVarSequence(operation, boolVars, intVars); //return the sequence as a BoolVar variable.	
 	}	
 }
