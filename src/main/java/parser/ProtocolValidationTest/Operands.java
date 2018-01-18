@@ -82,7 +82,7 @@ public class Operands {
 			return false;
 		}
 	
-	//retun the index of the boolVar from the list boolVars. 
+	//retun the index of a operand from the list boolVars. 
 	public int indexOfBoolVar(List<BoolVar> boolVars, Operand operand) {
 		String name = operand.getName();
 		for(int i = 0; i < boolVars.size(); i++) {
@@ -94,7 +94,7 @@ public class Operands {
 		return -1;
 	}
 	
-	//retun the index of the intVar from the list intVars.
+	//retun the index of a operand from the list intVars.
 		public int indexOfIntVar(List<IntVar> intVars, Operand operand) {
 			String name = operand.getName();
 			for(int i = 0; i < intVars.size(); i++) {

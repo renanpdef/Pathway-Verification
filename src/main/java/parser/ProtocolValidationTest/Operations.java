@@ -186,7 +186,7 @@ public class Operations {
 		}
 	}
 	
-	//Return an IntVar as a result with the possible sums.
+	//Return an IntVar as a result of a possible sums.
 	//operation is the operation of a sequence from the protocol.
 	//intVars is a list of the numeric operands that make up all operations in the protocol.
 	public IntVar calculate(Operation operation, List<IntVar> intVars) {
