@@ -18,8 +18,7 @@ import protocolosv2.Sequence;
 
 public class SequenceParser {
 	private Operations operations = new Operations(); //Instantiates the class that handles operations between BoolBar variables.
-	private IntVarOperations intVarOp = new IntVarOperations(); 
-	private BoolVarOperations boolOp = new BoolVarOperations();  //Instantiates the class that handles operations between BoolVar variables.
+	private Operands operands = new Operands();  //Instantiates the class that handles operations between BoolVar variables.
 	private Protocol protocol; //The protocol to be analyzed.
 	private Map<Element, List<Sequence>> mapSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the protocol.
 	
@@ -155,7 +154,7 @@ public class SequenceParser {
 			case OR:
 			case IMPLIES:
 			case XOR:
-				boolOp.operandsIntoBoolVarList(boolVars, model, op);			
+				operands.operandsIntoList(boolVars, intVars, model, op);			
 				return operations.createBoolVarSequence(op, boolVars, intVars);
 				
 			case EQUAL:
@@ -163,21 +162,11 @@ public class SequenceParser {
 			case EQUAL_OR_SMALLER:
 			case BIGGER_THAN:
 			case SMALLER_THAN:
-				intVarOp.operandsIntoIntVarList(intVars, model, op);				
+				operands.operandsIntoList(boolVars, intVars, model, op);				
 				return operations.createBoolVarSequence(op, boolVars, intVars);
 				
-			case SUM:
-			case MINUS:
-			case MULTIPLICATION:
-			case DIVISION:							
-				intVarOp.operandsIntoIntVarList(intVars, model, op);				
-				return null;
-				
-			case AFFIRMATION:								
-				return null;
-				
 			default://NOT
-				boolOp.operandsIntoBoolVarList(boolVars, model, op);
+				operands.operandsIntoList(boolVars, intVars, model, op);
 				return operations.createBoolVarSequence(op, boolVars, intVars);
 		}
 	}	

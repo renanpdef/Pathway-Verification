@@ -10,8 +10,7 @@ import org.chocosolver.solver.variables.IntVar;
 import protocolosv2.Operation;
 
 public class Operations { 
-	IntVarOperations intOp = new IntVarOperations(); //Instantiates the class that handles operations between IntVar variables.
-	BoolVarOperations boolOp = new BoolVarOperations();  //Instantiates the class that handles operations between BoolVar variables.
+	Operands operands = new Operands();  //Instantiates the class that handles operations between BoolVar variables.
 	int index = 0;
 	
 	//return a sequence representation as a BoolVar.
@@ -22,7 +21,10 @@ public class Operations {
 		Model auxModel = new Model("Auxiliary Model");
 		BoolVar boolSequence = null;
 		String varA = op.getOperand().get(0).getClass().toString();
-		String varB = op.getOperand().get(1).getClass().toString(); 
+		String varB = "";
+		if(op.getOperand().size() > 1) {
+			varB = op.getOperand().get(1).getClass().toString();
+		}
 		
 		switch(op.getOperator()) {
 			case AND:
@@ -30,13 +32,13 @@ public class Operations {
 					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "=", 2).reify();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(1))), "=", 2).reify();
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(1))), "=", 2).reify();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "=", 2).reify();
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "=", 2).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(1))), "=", 2).reify();
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "+", boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(1))), "=", 2).reify();
 				}		
 				return boolSequence;
 				
@@ -45,13 +47,13 @@ public class Operations {
 					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "!=", 0).reify();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(1))), "!=", 0).reify();
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(1))), "!=", 0).reify();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "!=", 0).reify();
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "!=", 0).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(1))), "!=", 0).reify();
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "+", boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(1))), "!=", 0).reify();
 				}		
 				return boolSequence;
 				
@@ -60,13 +62,13 @@ public class Operations {
 					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "-", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "!=", 1).reify();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "-", boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(1))), "!=", 1).reify();
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "-", boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(1))), "!=", 1).reify();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "-",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "!=", 1).reify();
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "-",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "!=", 1).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "-", boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(1))), "!=", 1).reify();
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "-", boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(1))), "!=", 1).reify();
 				}		
 				return boolSequence;
 				
@@ -75,13 +77,13 @@ public class Operations {
 					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "=", 1).reify();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(1))), "=", 1).reify();
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(1))), "=", 1).reify();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "=", 1).reify();
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "+",createBoolVarSequence((Operation) op.getOperand().get(1), boolVars, intVars), "=", 1).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(1))), "=", 1).reify();
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "+", boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(1))), "=", 1).reify();
 				}		
 				return boolSequence;
 				
@@ -90,13 +92,13 @@ public class Operations {
 					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), "=", calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), "=", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), "=", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), "=",calculate((Operation) op.getOperand().get(1), intVars)).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), "=",calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), "=", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), "=", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				return boolSequence; 
 				
@@ -105,13 +107,13 @@ public class Operations {
 					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), ">=", calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), ">=", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), ">=", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), ">=",calculate((Operation) op.getOperand().get(1), intVars)).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), ">=",calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), ">=", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), ">=", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				return boolSequence; 
 		
@@ -120,13 +122,13 @@ public class Operations {
 					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), "<=", calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), "<=", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), "<=", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), "<=",calculate((Operation) op.getOperand().get(1), intVars)).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), "<=",calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), "<=", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), "<=", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				return boolSequence; 
 				 
@@ -135,13 +137,13 @@ public class Operations {
 					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), ">", calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), ">", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), ">", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), ">",calculate((Operation) op.getOperand().get(1), intVars)).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), ">",calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), ">", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), ">", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				return boolSequence; 
 				
@@ -150,13 +152,13 @@ public class Operations {
 					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), "<", calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), "<", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(calculate((Operation) op.getOperand().get(0), intVars), "<", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), "<",calculate((Operation) op.getOperand().get(1), intVars)).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), "<",calculate((Operation) op.getOperand().get(1), intVars)).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))), "<", intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).reify();
+					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))), "<", intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).reify();
 				}
 				return boolSequence; 
 				
@@ -165,7 +167,7 @@ public class Operations {
 					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "+", createBoolVarSequence((Operation) op.getOperand().get(0), boolVars, intVars), "=", 0).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "+", boolVars.get(boolOp.indexOf(boolVars, op.getOperand().get(0))), "=", 0).reify();
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "+", boolVars.get(operands.indexOfBoolVar(boolVars, op.getOperand().get(0))), "=", 0).reify();
 				}		
 				return boolSequence;
 		}
@@ -182,13 +184,13 @@ public class Operations {
 					result = calculate((Operation) op.getOperand().get(0), intVars).add(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					result = calculate((Operation) op.getOperand().get(0), intVars).add(intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).intVar();
+					result = calculate((Operation) op.getOperand().get(0), intVars).add(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).intVar();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					result = intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))).add(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
+					result = intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))).add(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else {
-					result = intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))).add(intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).intVar();
+					result = intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))).add(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).intVar();
 				}
 				return result;
 				
@@ -197,13 +199,13 @@ public class Operations {
 					result = calculate((Operation) op.getOperand().get(0), intVars).sub(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					result = calculate((Operation) op.getOperand().get(0), intVars).sub(intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).intVar();
+					result = calculate((Operation) op.getOperand().get(0), intVars).sub(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).intVar();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					result = intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))).sub(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
+					result = intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))).sub(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else {
-					result = intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))).sub(intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).intVar();
+					result = intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))).sub(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).intVar();
 				}
 				return result;
 				
@@ -212,13 +214,13 @@ public class Operations {
 					result = calculate((Operation) op.getOperand().get(0), intVars).mul(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					result = calculate((Operation) op.getOperand().get(0), intVars).mul(intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).intVar();
+					result = calculate((Operation) op.getOperand().get(0), intVars).mul(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).intVar();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					result = intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))).mul(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
+					result = intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))).mul(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else {
-					result = intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))).mul(intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).intVar();
+					result = intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))).mul(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).intVar();
 				}
 				return result;
 				
@@ -227,13 +229,13 @@ public class Operations {
 					result = calculate((Operation) op.getOperand().get(0), intVars).div(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					result = calculate((Operation) op.getOperand().get(0), intVars).div(intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).intVar();
+					result = calculate((Operation) op.getOperand().get(0), intVars).div(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).intVar();
 				}
 				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					result = intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))).div(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
+					result = intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))).div(calculate((Operation) op.getOperand().get(1), intVars)).intVar();
 				}
 				else {
-					result = intVars.get(intOp.indexOf(intVars, op.getOperand().get(0))).div(intVars.get(intOp.indexOf(intVars, op.getOperand().get(1)))).intVar();
+					result = intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(0))).div(intVars.get(operands.indexOfIntVar(intVars, op.getOperand().get(1)))).intVar();
 				}
 				return result;
 				
