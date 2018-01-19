@@ -15,13 +15,13 @@ public class Operations {
 	
 	//return a sequence representation as a BoolVar.
 	//operation is the operation of a sequence from the protocol.
-	//boolVars is a list of the logical operands that make up all operations in the protocol.
-	//intVars is a list of the numeric operands that make up all operations in the protocol.
+	//boolVars is a list of the logical operands that makes up all operations in the protocol.
+	//intVars is a list of the numeric operands that makes up all operations in the protocol.
 	public BoolVar createBoolVarSequence(Operation operation, List<BoolVar> boolVars, List<IntVar> intVars){
 		Model auxModel = new Model("Auxiliary Model");
 		BoolVar boolSequence = null;
 		
-		//operation.getOperand() is a list of operands form operation whose size can be 1 or 2;
+		//operation.getOperand() is a list of operands from operation whose size can be 1 or 2
 		//varA and varB is a string to verify if the operand is a operation or not.
 		String varA = operation.getOperand().get(0).getClass().toString();
 		String varB = "";
@@ -34,7 +34,7 @@ public class Operations {
 		//Create a Boolvar with a constraint corresponding to the operator from operation and return it.
 		//For each case, verify if the operands from operation are other operation or not.
 		//When the operand is a operation:
-			//For AND, OR, IMLPLIES, XOR or Default (NOT) operators:
+			//For AND, OR, IMPLIES, XOR or Default (NOT) operators:
 				//this function is called recursively with operand as a parameter.
 			//For EQUAL, EQUAL_OR_GREATER, EQUAL_OR_SMALLER, BIGGER_THAN, SMALLER_THAN operators:
 				//the function calculate is called.
@@ -188,17 +188,17 @@ public class Operations {
 	
 	//Return an IntVar as a result of a possible sums.
 	//operation is the operation of a sequence from the protocol.
-	//intVars is a list of the numeric operands that make up all operations in the protocol.
+	//intVars is a list of the numeric operands that makes up all operations in the protocol.
 	public IntVar calculate(Operation operation, List<IntVar> intVars) {
 		IntVar result;
 		
-		//operation.getOperand() is a list of operands form operation whose size can be 1 or 2;
-		//varA and varB is a string to verify if the operand is a operation or not.
+		//operation.getOperand() is a list of operands from operation whose size can be 1 or 2;
+		//varA and varB are strings to verify if the operand is a operation or not.
 		String varA = operation.getOperand().get(0).getClass().toString();
 		String varB = operation.getOperand().get(1).getClass().toString(); 
 		
-		//For each case, verify if the operands from operation are other operation or not.
-		//When the operand is a operation this function is called recursively with operand as a parameter.
+		//For each case, verify if the operands of operation are other operation or not.
+		//When the operand is a operation, this method is called recursively with operand as a parameter.
 		switch(operation.getOperator()) {
 			case SUM:
 				if(varA.contains("Operation") && varB.contains("Operation")) {

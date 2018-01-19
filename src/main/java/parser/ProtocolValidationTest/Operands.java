@@ -24,7 +24,7 @@ public class Operands {
 			}
 			//if operand is a Numeric operand.
 			else if(operation.getOperand().get(i).getClass().toString().contains("Numeric")) {
-				//if the operand's name is null or "".
+				//if the name of operand is null or "".
 				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
 					String name = operation.getOperator().getName() + index++;		
 					operation.getOperand().get(i).setName(name);
@@ -32,7 +32,7 @@ public class Operands {
 				}
 				else {
 					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), 1, 3);
-					//if intVars list don't already contain the new intVar.
+					//if intVars list still doesn't contain the new intVar.
 					if(!containsIntVar(intVars, intVar)) {
 						intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
 					}
@@ -40,7 +40,7 @@ public class Operands {
 			}
 			//if operand is a YesOrNo (boolean) operand.
 			else {
-				//if the operand's name is null or "".
+				//if the name of operand is null or "".
 				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
 					String name = operation.getOperator().getName() + index++;		
 					operation.getOperand().get(i).setName(name);

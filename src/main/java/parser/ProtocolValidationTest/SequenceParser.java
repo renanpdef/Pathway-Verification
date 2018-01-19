@@ -28,7 +28,7 @@ public class SequenceParser {
 		getModelFragmentsForVerification();
 	}
 
-	//Returns a map with Elements like a key and a list of all solutions that occur deadlock in the element as a value of the key.
+	//Return a map with Elements as a key and a list of all solutions that occurs deadlock in the element as a value of the key.
 	//If the operands have the same values in the solution, then deadlock occurs.
 	//An element is in deadlock when all its output sequences are false.
 	public Map<Element, List<Solution>> findDeadLockSolutions(){
@@ -47,7 +47,7 @@ public class SequenceParser {
 		return mapSolutions;
 	}
 	
-	//Returns a map with Elements like a key and a list of some solutions that occur Non Determinism in the element like a value of the key.
+	//Return a map with Elements as a key and a list of some solutions that occur Non Determinism in the element as a value of the key.
 	//If the operands have the same values presented in the solution, then Non Determinism occurs.
 	//An element has a Non Determinism problem when at least two of its output sequences are true.
 	public Map<Element, List<Solution>> findNonDeterminismSolutions(){
@@ -56,12 +56,12 @@ public class SequenceParser {
 			Model model = new Model("Find Non Determinism Solution: " + k);//Create a model to verify non determinism of a element in the mapSequences with ChocoSolver.
 			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapSequences.values().toArray()[k]);//Get a list of BoolVar from a list of sequence of the mapSequences.
 			if (sequences!=null && !sequences.isEmpty() && sequences.size()>1) {
-				//Go through all the BoolVars in the list "sequences" to find the first list of solution there are non determinism problem.
+				//Go through all the BoolVars in the list "sequences" to find the first list of solution that there are non determinism problem.
 				for (int i = 0; i < sequences.size(); i++) {
 					for(int j = i+1; j < sequences.size(); j++) {
 						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
 						mapSolutions.put((Element) mapSequences.keySet().toArray()[k], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
-						//If the mapSolutions already has a list of solutions for the Element, then return the list.
+						//If mapSolutions has already a list of solutions for the Element, then it returns the list.
 						if(!mapSolutions.get((Element) mapSequences.keySet().toArray()[k]).isEmpty()) {
 							return mapSolutions;
 						}
@@ -74,7 +74,7 @@ public class SequenceParser {
 		return mapSolutions;
 	}
 	
-	//Returns a map with Elements like a key and a list of all valid solutions in the element like a value of the key.
+	//Return a map with Elements as a key and a list of all valid solutions in the element as a value of the key.
 	//An element has no problem when one, and only one, of its output sequences are true.
 	public Map<Element, List<Solution>> findAllValidSolutions() {
 		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
@@ -82,7 +82,7 @@ public class SequenceParser {
 			Model model = new Model("Find All Solutions: " + i); //Create a model to verify the valid solutions of a element in the mapSequences with ChocoSolver.
 			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapSequences.values().toArray()[i]);//Get a list of BoolVar from a list of sequence of the mapSequences.
 			if (sequences!=null && !sequences.isEmpty()) {
-				//Verify if there are just one boolvar in the list.
+				//Verify if there is only one boolvar in the list.
 				if(sequences.size()==1) {
 					model.arithm(sequences.get(0), "=", 1).post();//Post the constraint "the sequence have to be true" to the model.
 					mapSolutions.put((Element) mapSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());
@@ -111,7 +111,7 @@ public class SequenceParser {
 	}
 
 	//get all the sequences from the protocol and put it into a map "mapSequences".
-	//mapSequences associates sequences with their respective output steps.
+	//mapSequences associate sequences with their respective output steps.
 	private void getModelFragmentsForVerification(){
 		for (int i = 0; i < protocol.getSequence().size(); i++) {
 			if(!mapSequences.containsKey(protocol.getSequence().get(i).getOutputStep())) {
@@ -125,11 +125,11 @@ public class SequenceParser {
 	}
 	
 	//Tranform a list of sequences in a list of boolvar.
-	//This boolvar are constrained with some operation.
+	//This boolvar are constrained with some operations.
 	private List<BoolVar> sequenceListToBoolVarList(Model model, List<Sequence> sequences) {
-		List<BoolVar>  boolVars = new ArrayList<BoolVar>();//boolVars is a list that will contain the operands like a boolvar variables.
-		List<IntVar>  intVars = new ArrayList<IntVar>();//intVars is a list that will contain the operands like a intVar variables.
-		List<BoolVar> boolSequences = new ArrayList<BoolVar>();//boolSequences is a list that will contain a sequence structure like a boolvar.
+		List<BoolVar>  boolVars = new ArrayList<BoolVar>();//boolVars is a list that will contain the operands as a boolvar variables.
+		List<IntVar>  intVars = new ArrayList<IntVar>();//intVars is a list that will contain the operands as a intVar variables.
+		List<BoolVar> boolSequences = new ArrayList<BoolVar>();//boolSequences is a list that will contain a sequence structure as a boolvar.
 		//Go through all sequences in the list.
 		for (int i = 0; i < sequences.size(); i++) {
 			BoolVar boolSequence = sequenceToBoolVar(model, sequences.get(i), boolVars, intVars);
@@ -143,8 +143,8 @@ public class SequenceParser {
 	//function to convert a sequence in a boolvar.
 	//model is a chocosolver model where the constraints will be post.
 	//Sequence is the sequence that will be transform.
-	//boolVars is a list that will contain the operands like a boolvar variables.
-	//intVars is a list that will contain the operands like a intVar variables.
+	//boolVars is a list that will contain the operands as a boolvar variables.
+	//intVars is a list that will contain the operands as a intVar variables.
 	private BoolVar sequenceToBoolVar(Model model, Sequence sequence, List<BoolVar> boolVars, List<IntVar> intVars){
 		Operation operation = sequence.getOperation();
 		operands.operandsIntoLists(boolVars, intVars, model, operation); //Update the lists boolVars and intVars with new operands from op.			
