@@ -1,4 +1,4 @@
-package parser.ProtocolValidationTest;
+package parser.ProtocolVerificationTest;
 
 import java.util.List;
 
