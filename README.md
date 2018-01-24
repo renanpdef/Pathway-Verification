@@ -31,4 +31,4 @@ The project use an Open-Source java library for constraint programming (Choco - 
 
 ## Built With
 
-* [Maven](https://maven.apache.org/) - Dependency Management
+* [Maven](https://maven.apache.org/) for Dependency Management
