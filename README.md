@@ -12,7 +12,7 @@ It is used a software development to Java (Eclipse - http://www.eclipse.org/).
 
 ### Installing
 
-First, you have to add a JDK:
+First, you need to add a JDK:
 
 1. Download the latest JDK version (http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html - Java)
 2. On Eclipse, click on Window tab > Preferences > Installed JREs > Add...
