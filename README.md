@@ -8,7 +8,7 @@ These instructions will help you to install and configure the project and run it
 
 ### Prerequisites
 
-It is used a development software to Java (Eclipse - http://www.eclipse.org/).
+It is used a software development to Java (Eclipse - http://www.eclipse.org/).
 
 ### Installing
 
