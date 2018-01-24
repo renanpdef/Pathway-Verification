@@ -1,6 +1,6 @@
 # Protocol Verification
 
-Perform a verification of protocols on XMI file. To right protocols, it is analysed if there are not deadlock or nondeterminism in the file.
+Perform a verification of protocols on XMI file. To right protocols, it is analysed if there are not deadlock or nondeterminism in the protocol.
 
 ## Getting Started
 
