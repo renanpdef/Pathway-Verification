@@ -20,9 +20,9 @@ public class SequenceParser {
 	private Operations operations = new Operations(); //Instantiates the class that handles operations between BoolBar variables.
 	private Operands operands = new Operands();  //Instantiates the class that handles operations between BoolVar variables.
 	private Protocol protocol; //The protocol to be analyzed.
-	private Map<Element, List<Sequence>> mapSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the protocol.
+	private Map<Element, List<Sequence>> mapElementOutputSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the protocol.
 	
-	// A constructor to initialize the protocol and the mapSequences.
+	// A constructor to initialize the protocol and the mapElementOutputSequences.
 	public SequenceParser(Protocol protocol) {
 		this.protocol = protocol;
 		getModelFragmentsForVerification();
@@ -33,15 +33,15 @@ public class SequenceParser {
 	//An element is in deadlock when all its output sequences are false.
 	public Map<Element, List<Solution>> findDeadLockSolutions(){
 		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
-		for(int i = 0; i < mapSequences.values().size(); i++){
-			Model model = new Model("Find DeadLock Solutions: " + i);//Create a model to verify deadlock of a element in the mapSequences with ChocoSolver.
-			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapSequences.values().toArray()[i]); //Get a list of BoolVar from a list of sequence of the mapSequences.
+		for(int i = 0; i < mapElementOutputSequences.values().size(); i++){
+			Model model = new Model("Find DeadLock Solutions: " + i);//Create a model to verify deadlock of a element in the mapElementOutputSequences with ChocoSolver.
+			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapElementOutputSequences.values().toArray()[i]); //Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
 			if (sequences!=null && !sequences.isEmpty()) {
 				//Go through all the BoolVars in the list sequences.
 				for(int k = 0; k < sequences.size(); k++) {
 					model.arithm(sequences.get(k), "=", 0).post();//Post the constraint "the sequence i have to be false" to the model.
 				}
-				mapSolutions.put((Element) mapSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
+				mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
 			}
 		}
 		return mapSolutions;
@@ -52,17 +52,17 @@ public class SequenceParser {
 	//An element has a Non Determinism problem when at least two of its output sequences are true.
 	public Map<Element, List<Solution>> findNonDeterminismSolutions(){
 		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
-		for(int k = 0; k < mapSequences.values().size(); k++){
-			Model model = new Model("Find Non Determinism Solution: " + k);//Create a model to verify non determinism of a element in the mapSequences with ChocoSolver.
-			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapSequences.values().toArray()[k]);//Get a list of BoolVar from a list of sequence of the mapSequences.
+		for(int k = 0; k < mapElementOutputSequences.values().size(); k++){
+			Model model = new Model("Find Non Determinism Solution: " + k);//Create a model to verify non determinism of a element in the mapElementOutputSequences with ChocoSolver.
+			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapElementOutputSequences.values().toArray()[k]);//Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
 			if (sequences!=null && !sequences.isEmpty() && sequences.size()>1) {
 				//Go through all the BoolVars in the list "sequences" to find the first list of solution that there are non determinism problem.
 				for (int i = 0; i < sequences.size(); i++) {
 					for(int j = i+1; j < sequences.size(); j++) {
 						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
-						mapSolutions.put((Element) mapSequences.keySet().toArray()[k], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
+						mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[k], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
 						//If mapSolutions has already a list of solutions for the Element, then it returns the list.
-						if(!mapSolutions.get((Element) mapSequences.keySet().toArray()[k]).isEmpty()) {
+						if(!mapSolutions.get((Element) mapElementOutputSequences.keySet().toArray()[k]).isEmpty()) {
 							return mapSolutions;
 						}
 						model.getSolver().reset();
@@ -78,14 +78,14 @@ public class SequenceParser {
 	//An element has no problem when one, and only one, of its output sequences are true.
 	public Map<Element, List<Solution>> findAllValidSolutions() {
 		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
-		for(int i = 0; i < mapSequences.values().size(); i++){
-			Model model = new Model("Find All Solutions: " + i); //Create a model to verify the valid solutions of a element in the mapSequences with ChocoSolver.
-			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapSequences.values().toArray()[i]);//Get a list of BoolVar from a list of sequence of the mapSequences.
+		for(int i = 0; i < mapElementOutputSequences.values().size(); i++){
+			Model model = new Model("Find All Solutions: " + i); //Create a model to verify the valid solutions of a element in the mapElementOutputSequences with ChocoSolver.
+			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapElementOutputSequences.values().toArray()[i]);//Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
 			if (sequences!=null && !sequences.isEmpty()) {
 				//Verify if there is only one boolvar in the list.
 				if(sequences.size()==1) {
 					model.arithm(sequences.get(0), "=", 1).post();//Post the constraint "the sequence have to be true" to the model.
-					mapSolutions.put((Element) mapSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());
+					mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());
 				}
 				else {
 					List<BoolVar> auxSeq = new ArrayList<BoolVar>();//Auxiliary list of boolvar to store the new boolvar variables.
@@ -103,23 +103,23 @@ public class SequenceParser {
 							model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 1).post();//Post the constraint "the last boolvar in the auxSeq xor sequence k" to the model.
 						}
 					}
-					mapSolutions.put((Element) mapSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
+					mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
 				}
 			}
 		}
 		return mapSolutions;
 	}
 
-	//get all the sequences from the protocol and put it into a map "mapSequences".
-	//mapSequences associate sequences with their respective output steps.
+	//get all the sequences from the protocol and put it into a map "mapElementOutputSequences".
+	//mapElementOutputSequences associate sequences with their respective output steps.
 	private void getModelFragmentsForVerification(){
 		for (int i = 0; i < protocol.getSequence().size(); i++) {
-			if(!mapSequences.containsKey(protocol.getSequence().get(i).getOutputStep())) {
+			if(!mapElementOutputSequences.containsKey(protocol.getSequence().get(i).getOutputStep())) {
 				List<Sequence> sequences = new ArrayList<Sequence>();
-				mapSequences.put(protocol.getSequence().get(i).getOutputStep(), sequences);
-				mapSequences.get(protocol.getSequence().get(i).getOutputStep()).add(protocol.getSequence().get(i));
+				mapElementOutputSequences.put(protocol.getSequence().get(i).getOutputStep(), sequences);
+				mapElementOutputSequences.get(protocol.getSequence().get(i).getOutputStep()).add(protocol.getSequence().get(i));
 			}else {
-				mapSequences.get(protocol.getSequence().get(i).getOutputStep()).add(protocol.getSequence().get(i));
+				mapElementOutputSequences.get(protocol.getSequence().get(i).getOutputStep()).add(protocol.getSequence().get(i));
 			}
 		}
 	}
