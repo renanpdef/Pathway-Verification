@@ -22,9 +22,6 @@ public class Elements {
 	
 	public BoolVar elementToBoolVar(Element element, List<BoolVar> boolSequences, Model model) {
 		BoolVar boolElement = model.boolVar(element.getClass().getSimpleName() +"::"+ element.getName());
-//		for(int i = 0; i < boolSequences.size(); i++) {
-//			model.arithm(boolSequences.get(i), "=", 0).reifyWith(boolElement);
-//		}
 		return boolElement;
 	}
 }

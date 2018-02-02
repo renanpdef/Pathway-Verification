@@ -65,8 +65,8 @@ public class SequenceParser {
 						if(!mapSolutions.get((Element) mapElementOutputSequences.keySet().toArray()[k]).isEmpty()) {
 							return mapSolutions;
 						}
-						model.getSolver().reset();
-						model.unpost(model.getCstrs()[model.getCstrs().length-1]);
+						model.getSolver().reset();//reset the solver for a new interaction
+						model.unpost(model.getCstrs()[model.getCstrs().length-1]);//unpost the last constraint.
 					}
 				}
 			}
