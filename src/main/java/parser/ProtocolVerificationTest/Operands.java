@@ -28,13 +28,23 @@ public class Operands {
 				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
 					String name = operation.getOperator().getName() + index++;		
 					operation.getOperand().get(i).setName(name);
-					intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
+					double operandValue = getOperandValue(operation.getOperand().get(i).toString());
+					if(operandValue != 0) {
+						intVars.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
+					}else {
+						intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
+					}
 				}
 				else {
 					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), 1, 3);
 					//if intVars list still doesn't contain the new intVar.
 					if(!containsIntVar(intVars, intVar)) {
-						intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
+						double operandValue = getOperandValue(operation.getOperand().get(i).toString());
+						if(operandValue != 0) {
+							intVars.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
+						}else {
+							intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
+						}
 					}
 				}
 			}
@@ -104,5 +114,21 @@ public class Operands {
 				}
 			}
 			return -1;
+		}
+		
+		private double getOperandValue(String str) {
+			int pos1 = str.lastIndexOf("(")+1;
+			int pos2 = str.lastIndexOf(")");
+			char[] charValue = new char[pos2-pos1];
+			str.getChars(pos1, pos2, charValue, 0);
+			String strValue = String.copyValueOf(charValue);
+			strValue = strValue.split(",")[2];
+			strValue = strValue.toString().replaceFirst(" value: ", "");
+			double doubleValue = 0;
+			try {
+				doubleValue = Double.parseDouble(strValue);
+			}catch(NumberFormatException e){
+			}
+			return doubleValue;
 		}
 }

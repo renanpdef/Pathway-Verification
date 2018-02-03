@@ -9,7 +9,7 @@ import protocolosv2.Element;
 
 public class Solutions {
     public static void main( String[] args )    {
-        String file1 = "XMIs_Test\\Test_01.xmi";
+        String file1 = "XMIs_Test\\Test_08.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
         SequenceParser sequenceParser = new SequenceParser(protocolReader.createProtocol());
