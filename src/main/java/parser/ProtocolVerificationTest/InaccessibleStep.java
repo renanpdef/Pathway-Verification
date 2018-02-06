@@ -18,12 +18,12 @@ import protocolosv2.Protocol;
 import protocolosv2.Sequence;
 
 public class InaccessibleStep {
-	private Operations operations = new Operations(); //Instantiates the class that handles operations between BoolBar variables.
-	private Operands operands = new Operands();  //Instantiates the class that handles operations between BoolVar variables.
+	private OperationParser operations = new OperationParser(); //Instantiates the class that handles operations between BoolBar variables.
+	private OperandParser operands = new OperandParser();  //Instantiates the class that handles operations between BoolVar variables.
 	private Protocol protocol; //The protocol to be analyzed.
 	private List<BoolVar>  boolVars = new ArrayList<BoolVar>();//boolVars is a list that will contain the operands as a boolvar variables.
 	private List<IntVar>  intVars = new ArrayList<IntVar>();//intVars is a list that will contain the operands as a intVar variables.
-	private Elements opElements = new Elements();
+	private ElementParser opElements = new ElementParser();
 	private Model model = new Model("Inaccessible Step");
 	private Map<Element, List<Sequence>> mapElementInputSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the protocol.
 	

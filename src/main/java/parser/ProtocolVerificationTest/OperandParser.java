@@ -9,7 +9,7 @@ import org.chocosolver.solver.variables.IntVar;
 import protocolosv2.Operand;
 import protocolosv2.Operation;
 
-public class Operands {
+public class OperandParser {
 	int index = 0;
 	
 	//get the operands from operation and put it in boolVars list or intVars list.

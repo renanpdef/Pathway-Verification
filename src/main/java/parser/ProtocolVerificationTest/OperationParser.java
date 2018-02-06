@@ -9,8 +9,8 @@ import org.chocosolver.solver.variables.IntVar;
 
 import protocolosv2.Operation;
 
-public class Operations { 
-	Operands operands = new Operands();  //Instantiates the class that handles operations between BoolVar variables.
+public class OperationParser { 
+	OperandParser operands = new OperandParser();  //Instantiates the class that handles operations between BoolVar variables.
 	int index = 0;
 	
 	//return a sequence representation as a BoolVar.

@@ -8,7 +8,7 @@ import org.chocosolver.solver.variables.BoolVar;
 
 import protocolosv2.Element;
 
-public class Elements {
+public class ElementParser {
 
 	//elements and boolSequencesList have same size.
 	public List<BoolVar> elementsToBoolvarList(List<Element> elements, List<List<BoolVar>>boolSequencesList, Model model) {
