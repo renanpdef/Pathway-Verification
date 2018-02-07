@@ -96,8 +96,12 @@ public class SequenceParser {
 	//boolVars is a list that will contain the operands as a boolvar variables.
 	//intVars is a list that will contain the operands as a intVar variables.
 	private BoolVar sequenceToBoolVar(Model model, Sequence sequence, List<BoolVar> boolVars, List<IntVar> intVars){
-		Operation operation = sequence.getOperation();
-		operands.operandsIntoLists(boolVars, intVars, model, operation); //Update the lists boolVars and intVars with new operands from op.			
-		return operations.createBoolVarSequence(operation, boolVars, intVars); //return the sequence as a BoolVar variable.	
+		if(sequence.getOperation() != null) {
+			Operation operation = sequence.getOperation();
+			operands.operandsIntoLists(boolVars, intVars, model, operation); //Update the lists boolVars and intVars with new operands from op.			
+			return operations.createBoolVarSequence(operation, boolVars, intVars); //return the sequence as a BoolVar variable.	
+		}else {
+			return model.boolVar();
+		}
 	}	
 }

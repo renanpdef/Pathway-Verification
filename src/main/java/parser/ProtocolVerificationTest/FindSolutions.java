@@ -80,18 +80,24 @@ public class FindSolutions extends SequenceParser{
 				}
 				else {
 					List<BoolVar> auxSeq = new ArrayList<BoolVar>();//Auxiliary list of boolvar to store the new boolvar variables.
-					for(int k = 1; k < sequences.size(); k++) {
-						if (auxSeq.isEmpty()) {
-							model.arithm(sequences.get(k-1), "+", sequences.get(k), "<", 2).post();//Post the constraint "sequence k-1 and sequence k can't be both true" to the model.
-							BoolVar aux = model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 1).reify();//Create a boolvar with the constraint "sequences.get(k-1) xor sequences.get(k)".
-							auxSeq.add(aux);
-						}else if(k < sequences.size()-1){
-							model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "<", 2).post();//Post the constraint "the last boolvar in the auxSeq and sequence k can't be both true" to the model.
-							BoolVar aux = model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 1).reify();//Create a boolvar with the constraint "the last boolvar in the auxSeq xor sequences.get(k)".
-							auxSeq.add(aux);
-						//in the last sequence of the list
-						}else {
-							model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 1).post();//Post the constraint "the last boolvar in the auxSeq xor sequence k" to the model.
+					if(sequences.size() == 1) {
+						model.arithm(sequences.get(0), "=", 1).post();
+					}else if(sequences.size() == 2) {
+						model.arithm(sequences.get(0), "+", sequences.get(1), "=", 1).post();
+					}else {
+						for(int k = 1; k < sequences.size(); k++) {
+							if (auxSeq.isEmpty()) {
+								model.arithm(sequences.get(k-1), "+", sequences.get(k), "<", 2).post();//Post the constraint "sequence k-1 and sequence k can't be both true" to the model.
+								BoolVar aux = model.arithm(sequences.get(k-1), "+", sequences.get(k), "=", 1).reify();//Create a boolvar with the constraint "sequences.get(k-1) xor sequences.get(k)".
+								auxSeq.add(aux);
+							}else if(k < sequences.size()-1){
+								model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "<", 2).post();//Post the constraint "the last boolvar in the auxSeq and sequence k can't be both true" to the model.
+								BoolVar aux = model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 1).reify();//Create a boolvar with the constraint "the last boolvar in the auxSeq xor sequences.get(k)".
+								auxSeq.add(aux);
+							//in the last sequence of the list
+							}else {
+								model.arithm(auxSeq.get(auxSeq.size()-1), "+", sequences.get(k), "=", 1).post();//Post the constraint "the last boolvar in the auxSeq xor sequence k" to the model.
+							}
 						}
 					}
 					mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.

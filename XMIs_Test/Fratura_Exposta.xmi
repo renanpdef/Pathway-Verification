@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocolosv2:Protocol
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:protocolosv2="http://www.example.org/protocolosv2"
+    xsi:schemaLocation="http://www.example.org/protocolosv2 protocolosv2.ecore">
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="Verificar Grau da Fratura"
+      outputSequences="//@sequence.0 //@sequence.1">
+    <questions
+        text="Fratura exposta Grau I / II">
+      <answers
+          xsi:type="protocolosv2:YesOrNo"
+          name="frat-grau12"
+          weight="1"
+          value="false"/>
+    </questions>
+    <questions
+        text="Fratura exposta Grau III / IV">
+      <answers
+          xsi:type="protocolosv2:YesOrNo"
+          name="frat-grau34"
+          weight="1"
+          value="false"/>
+    </questions>
+  </elemento>
+  <elemento
+      xsi:type="protocolosv2:Treatment"
+      name="Tratamento Fratura de Grau I/II"
+      description="Orientação de antibioticoterapia e tratamento cirurgico pré-definidos com equipe de ccih e ortopedia para fratura grau I/II"
+      inputSequences="//@sequence.0"
+      outputSequences="//@sequence.2">
+    <medication
+        name="GENTAMICINA 80 MG AMPL 2 ML"
+        brand="BIOCHIMICO"
+        unit="MG"
+        access="6"
+        daily_dosage="240"/>
+    <medication
+        name="KEFLIN 1 GR FRAP 1 UD"
+        brand="LILLY"
+        daily_dosage="2"/>
+  </elemento>
+  <elemento
+      xsi:type="protocolosv2:Treatment"
+      name="Tratamento Fratura de Grau III/IV"
+      description="Orientação de antibioticoterapia e tratamento cirurgico pré-definidos com equipe de ccih e ortopedia para fratura grau III/IV"
+      inputSequences="//@sequence.1"
+      outputSequences="//@sequence.3">
+    <medication
+        name="UNASYN 3GR FRAP 1 UD"
+        brand="PFIZER"
+        unit="GR"
+        access="6"
+        daily_dosage="3"/>
+  </elemento>
+  <elemento
+      xsi:type="protocolosv2:Information"
+      name="Informativo"
+      description="Se necessário exames de imagem, solicitar no PEP/SAM, bem como a internação cirúrgica/procedimentos. Realizar profilaxia antitetânica."
+      inputSequences="//@sequence.2 //@sequence.3"/>
+  <sequence
+      inputStep="//@elemento.1"
+      outputStep="//@elemento.0"
+      name="s1">
+    <operation
+        name="s1-guarda"
+        Operator="affirmation">
+      <operand
+          xsi:type="protocolosv2:YesOrNo"
+          name="frat-grau12"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.2"
+      outputStep="//@elemento.0"
+      name="s2">
+    <operation
+        name="s2-guarda"
+        Operator="affirmation">
+      <operand
+          xsi:type="protocolosv2:YesOrNo"
+          name="frat-grau34"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.3"
+      outputStep="//@elemento.1"
+      name="s3"
+      description=""/>
+  <sequence
+      inputStep="//@elemento.3"
+      outputStep="//@elemento.2"
+      name="s4"/>
+</protocolosv2:Protocol>

@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocolosv2:Protocol
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:protocolosv2="http://www.example.org/protocolosv2"
+    xsi:schemaLocation="http://www.example.org/protocolosv2 protocolosv2.ecore">
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="Verificar Idade do Paciente"
+      description="Verifique a idade do paciente"
+      outputSequences="//@sequence.0 //@sequence.1"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="Verificar Comorbidades"
+      description="Verifique se o paciente possui alguma comorbidade."
+      inputSequences="//@sequence.0"
+      outputSequences="//@sequence.2 //@sequence.3"/>
+  <elemento
+      xsi:type="protocolosv2:Treatment"
+      name="Raio X de Tórax"
+      description="Solicite o raio X de tórax para verificar presença de infiltrados no paciente."
+      inputSequences="//@sequence.3"
+      outputSequences="//@sequence.4"/>
+  <elemento
+      xsi:type="protocolosv2:Treatment"
+      name="Raio X + Pacote de Exames Laboratoriais"
+      description="Paciente apresenta fatores complicadores para o tratamento, idade avançada ou presença de comorbidades, recomenda-se solicitar além do raio X do tórax o pacote de exames laboratoriais a seguir:"
+      inputSequences="//@sequence.1 //@sequence.2"
+      outputSequences="//@sequence.14"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="Avaliar Resultados"
+      description="Avalie o resultado do exame do paciente. Verifique a presença de infiltrados no resultado do exame."
+      inputSequences="//@sequence.4"
+      outputSequences="//@sequence.5 //@sequence.6"/>
+  <elemento
+      xsi:type="protocolosv2:Information"
+      name="Aviso: Investigar Causas e Sintomas"
+      description="Investigar causas de pacientes com sinais e sintomas de pneumonia mas que não apresentam alterações radiológicas. Sugere-se discutir com líder local para tratamento individualizado do caso."
+      inputSequences="//@sequence.5"/>
+  <elemento
+      xsi:type="protocolosv2:Information"
+      name="Aviso: Alterações Importantes"
+      description="Aviso: Quaisquer outras alterações importantes como derrame pleural, abscesso, nódulos, massas, devem ser individualizadas. Sugere-se discutir com o líder local para definição do procedimento mais adequado."
+      inputSequences="//@sequence.6"
+      outputSequences="//@sequence.7"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 2] Avaliar Fatores de Risco Para Influenza"
+      description="Avalie se o paciente apresenta fatores que indicam risco de Influenza."
+      inputSequences="//@sequence.7 //@sequence.15"
+      outputSequences="//@sequence.8 //@sequence.9"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 2] Avaliar Fatores Agravantes para Influenza"
+      description="Avalie se o paciente apresenta algum dos fatores que podem ser indicadores agravantes no caso de Influenza"
+      inputSequences="//@sequence.8"
+      outputSequences="//@sequence.10 //@sequence.11"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 2] Avaliar Complicações para Influenza"
+      description="Verifique se o paciente possui alguma comorbidade ou fator agravante para o quadro de Influenza."
+      inputSequences="//@sequence.10"
+      outputSequences="//@sequence.12 //@sequence.13"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="Cálculo do Port"
+      description="Verifique os exames do paciente e preencha a tabela a seguir para calcular o PORT e seguir com o tratamento mais adequado."
+      inputSequences="//@sequence.14"
+      outputSequences="//@sequence.15 //@sequence.16 //@sequence.17"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 3] Avaliar Fatores de Risco Para Influenza"
+      description="Avalie se o paciente apresenta fatores que indicam risco de Influenza."
+      inputSequences="//@sequence.16"
+      outputSequences="//@sequence.18 //@sequence.19"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 3] Avaliar Fatores Agravantes para Influenza"
+      description="Avalie se o paciente apresenta algum dos fatores que podem ser indicadores agravantes no caso de Influenza."
+      inputSequences="//@sequence.18"
+      outputSequences="//@sequence.20 //@sequence.21"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 3] Avaliar Complicações para Influenza"
+      description="Verifique se o paciente possui alguma comorbidade ou fator agravante para o quadro de Influenza."
+      inputSequences="//@sequence.20"
+      outputSequences="//@sequence.22 //@sequence.23"/>
+  <elemento
+      xsi:type="protocolosv2:Treatment"
+      name="[Port 3] Tratamento Padrão Pneumonia"
+      description="Tratamento padrão para para pacientes com pneumonia port 3 que não apresentam riscos ou complicações de influenza. Solicitar no PEP/SAM internamento breve do paciente, iniciar antibioticoterapia preconizada ainda na emergência/observação, e reavaliar o paciente após 12 hrs para alta ou internamento definitivo."
+      inputSequences="//@sequence.19 //@sequence.21 //@sequence.23"
+      outputSequences="//@sequence.24"/>
+  <elemento
+      xsi:type="protocolosv2:Treatment"
+      name="[Port 3] Tratamento Pneumonia + Influenza"
+      description="Tratamento para para pacientes com pneumonia port 3 que apresentam indícios de Influenza. Solicitar no PEP/SAM internamento breve do paciente, iniciar antibioticoterapia preconizada ainda na emergência/observação com adição de TAMIFLU, e reavaliar o paciente após 12 hrs para alta ou internamento definitivo."
+      inputSequences="//@sequence.22"
+      outputSequences="//@sequence.25"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 3] Reavaliar Paciente"
+      description="Reavaliar condições do paciente após medicação realizada por 12hs na enfermaria."
+      inputSequences="//@sequence.24 //@sequence.25"
+      outputSequences="//@sequence.26 //@sequence.27"/>
+  <elemento
+      xsi:type="protocolosv2:Prescription"
+      name="[Port 3] Receita"
+      description="Atenção! Caso apresente alguns dos sintomas a seguir retornar imediatamente a emergência. Sintomas: Falta de ar; Dor no peito; Febre por mais de 3 dias após início das medicações; Desorientação; Sonolência excessiva; Sangramentos; Desmaio; Palpitação (Coração acelerado); Diminuição ou ausência de urina. Medicação: Azitromicina 500mg 5cp 1 cp 1x ao dia por 5 dias. Alternativas - Amox c\ Clavulanato 875\125 1 cp 12/12h de 5 a 7 dias."
+      inputSequences="//@sequence.26"/>
+  <elemento
+      xsi:type="protocolosv2:Treatment"
+      name="[Port 4] Tratamento Padrão Pneumonia"
+      description="Paciente apresenta alto grau de complicação. Iniciar o tratamento imediatamente e seguir com protocolo para avaliar possibilidade de internação em UTI."
+      inputSequences="//@sequence.31 //@sequence.33 //@sequence.35"
+      outputSequences="//@sequence.28"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 4] Avaliar Critérios para Internação em UTI - Smart-COP"
+      description="Avalie se o paciente apresenta algum dos critérios a seguir (segundo o calculo Smart-COP) para internamento em UTI."
+      inputSequences="//@sequence.28 //@sequence.37"
+      outputSequences="//@sequence.29 //@sequence.30"/>
+  <elemento
+      xsi:type="protocolosv2:Information"
+      name="Aviso: Internação em UTI"
+      description="Recomenda-se internar o paciente em UTI. Realizar a solicitação via PEP/SAM indicando o procedimento correto para internação. ATENÇÃO: Informar ao líder da enfermaria sobre a gravidade do quadro do paciente."
+      inputSequences="//@sequence.29"/>
+  <elemento
+      xsi:type="protocolosv2:Prescription"
+      name="[Port 2] Receita Padrão para Pneumonia"
+      description="Atenção! Caso apresente alguns dos sintomas a seguir retornar imediatamente a emergência. Sintomas: - Falta de ar; - Dor no peito; - Febre por mais de 3 dias após início das medicações; - Desorientação; - Sonolência excessiva; - Sangramentos; Desmaio; - Palpitação (Coração acelerado); - Diminuição ou ausência de urina. MEDICAMENTOS: - Azitromicina........................... 500mg 5cp 1 cp 1x ao dia por 5 dias. - Alternativas............................ Amox c\ Clavulanato 875\125 1 cp 12/12h de 5 a 7 dias."
+      inputSequences="//@sequence.9 //@sequence.11 //@sequence.13"/>
+  <elemento
+      xsi:type="protocolosv2:Prescription"
+      name="[Port 2] Receita Para Pneumonia + Influenza"
+      description="Atenção! Caso apresente alguns dos sintomas a seguir retornar imediatamente a emergência. Sintomas: Falta de ar; Dor no peito; Febre por mais de 3 dias após início das medicações; Desorientação; Sonolência excessiva; Sangramentos; Desmaio; Palpitação (Coração acelerado); Diminuição ou ausência de urina. Medicação: Azitromicina 500mg 5cp 1 cp 1x ao dia por 5 dias. Alternativas - Amox c\ Clavulanato 875\125 1 cp 12/12h de 5 a 7 dias."
+      inputSequences="//@sequence.12"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 4] Avaliar Fatores de Risco Para Influenza"
+      description="Avalie se o paciente apresenta fatores que indicam risco de Influenza."
+      inputSequences="//@sequence.17"
+      outputSequences="//@sequence.31 //@sequence.32"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 4] Avaliar Fatores Agravantes para Influenza"
+      description="Avalie se o paciente apresenta algum dos fatores que podem ser indicadores agravantes no caso de Influenza"
+      inputSequences="//@sequence.32"
+      outputSequences="//@sequence.33 //@sequence.34"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 4] Avaliar Complicações para Influenza"
+      description="Verifique se o paciente possui alguma comorbidade ou fator agravante para o quadro de Influenza"
+      inputSequences="//@sequence.34"
+      outputSequences="//@sequence.35 //@sequence.36"/>
+  <elemento
+      xsi:type="protocolosv2:Treatment"
+      name="[Port 4] Tratamento Pneumonia + Influenza"
+      description="Paciente apresenta alto grau de complicação. Iniciar o tratamento imediatamente (adicionando TAMIFLU para tratamento de Influenza) e seguir com protocolo para avaliar possibilidade de internação em UTI."
+      inputSequences="//@sequence.36"
+      outputSequences="//@sequence.37"/>
+  <elemento
+      xsi:type="protocolosv2:Information"
+      name="Aviso: Internação Enfermaria"
+      description="Recomenda-se internar o paciente em enfermaria. Realizar a solicitação via PEP/SAM indicando o procedimento correto para internação."
+      inputSequences="//@sequence.27 //@sequence.30"/>
+  <sequence
+      inputStep="//@elemento.1"
+      outputStep="//@elemento.0"
+      name="S4 (idade &lt; 50)"
+      description="Idade &lt; 50">
+    <operation
+        name="Idade &lt; 50"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="idade"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="50.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.3"
+      outputStep="//@elemento.0"
+      type=""
+      name="S5 (idade >= 50)"
+      description="Idade >= 50">
+    <operation
+        name="idade>=50"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="idade"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="50.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.3"
+      outputStep="//@elemento.1"
+      name="S6 (1 ou mais comorbidades)"
+      description="1 ou mais comorbidades">
+    <operation
+        name="Total Comorbidades >= 1"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="Total Comorbidades"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.2"
+      outputStep="//@elemento.1"
+      name="S7 (sem comorbidades)"
+      description="comorbidades = 0">
+    <operation
+        name="Total Comorbidades &lt; 1"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="Total Comorbidades"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.4"
+      outputStep="//@elemento.2"
+      name="S8"
+      description="Sequencia incondicional"/>
+  <sequence
+      inputStep="//@elemento.5"
+      outputStep="//@elemento.4"
+      name="S9 (sem infiltrado)"
+      description="Sem infiltrado">
+    <operation
+        name="Sem infiltrado">
+      <operand
+          xsi:type="protocolosv2:YesOrNo"
+          name="ha_infiltrado"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.6"
+      outputStep="//@elemento.4"
+      name="S10 (com infiltrado)"
+      description="com infiltrado">
+    <operation
+        name="Com infiltrado"
+        Operator="affirmation">
+      <operand
+          xsi:type="protocolosv2:YesOrNo"
+          name="ha_infiltrado"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.7"
+      outputStep="//@elemento.6"
+      name="S12"
+      description="Incondicional"/>
+  <sequence
+      inputStep="//@elemento.8"
+      outputStep="//@elemento.7"
+      name="S13 (3 fatores de risco)"
+      description="3 fatores de risco">
+    <operation
+        name="[Port2] Fatores de Risco = 3"
+        Operator="equal">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 2] Fatores de Risco"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.21"
+      outputStep="//@elemento.7"
+      name="S14 (menos de 3 fatores de risco)"
+      description="menos de 3 fatores de risco">
+    <operation
+        name="Fatores de Risco &lt; 3"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 2] Fatores de Risco"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.9"
+      outputStep="//@elemento.8"
+      name="S15 (com agravantes)"
+      description="1 ou mais agravantes">
+    <operation
+        name="Agravantes >= 1"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 2] Agravantes"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.21"
+      outputStep="//@elemento.8"
+      name="S16 (sem agravantes)"
+      description="Sem agravantes">
+    <operation
+        name="Agravantes &lt; 1"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 2] Agravantes"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.22"
+      outputStep="//@elemento.9"
+      name="S17 (com complicações)"
+      description="1 ou mais complicacoes">
+    <operation
+        name="Complicacoes >= 1"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 2] Complicacoes"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.21"
+      outputStep="//@elemento.9"
+      name="S18 (sem complicacoes)"
+      description="Sem complicacoes">
+    <operation
+        name="Complicacoes &lt; 1"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 2] Complicacoes"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.10"
+      outputStep="//@elemento.3"
+      name="S29"
+      description="Incondicional"/>
+  <sequence
+      inputStep="//@elemento.7"
+      outputStep="//@elemento.10"
+      name="S30 (Port &lt; 70)"
+      description="Port 2 - menor que 70">
+    <operation
+        name="Port &lt; 70"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="Total PORT"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="70.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.11"
+      outputStep="//@elemento.10"
+      name="S31 (70 &lt;= Port &lt;= 90)"
+      description="Port 3">
+    <operation
+        name="70 &lt;= port &lt;= 90"
+        Operator="and">
+      <operand
+          xsi:type="protocolosv2:Operation"
+          name="Total PORT >= 70"
+          Operator="equalOrGreater">
+        <operand
+            xsi:type="protocolosv2:Numeric"
+            name="Total PORT"/>
+        <operand
+            xsi:type="protocolosv2:Numeric"
+            value="70.0"/>
+      </operand>
+      <operand
+          xsi:type="protocolosv2:Operation"
+          name="Total Port &lt;= 90"
+          Operator="equalOrSmaller">
+        <operand
+            xsi:type="protocolosv2:Numeric"
+            name="Total Port"/>
+        <operand
+            xsi:type="protocolosv2:Numeric"
+            value="90.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.23"
+      outputStep="//@elemento.10"
+      type=""
+      name="S32 (Port > 90)"
+      description="Port 4 ou 5 (port > 90)">
+    <operation
+        name="Total PORT > 90"
+        Operator="biggerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="Total PORT"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="90.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.12"
+      outputStep="//@elemento.11"
+      name="S35 (3 fatores de risco)"
+      description="3 fatores de risco">
+    <operation
+        name="[Port 3] Fatores de risco == 3"
+        Operator="equal">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 3] Fatores de risco"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.14"
+      outputStep="//@elemento.11"
+      name="S36 (menos de 3 fatores de risco)"
+      description="Menos de 3 fatores de risco">
+    <operation
+        name="[Port 3] Fatores de Risco &lt; 3"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 3] Fatores de risco"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.13"
+      outputStep="//@elemento.12"
+      name="S37 (com agravantes)"
+      description="Com agravantes">
+    <operation
+        name="Agravantes >= 1"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 3] Agravantes"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.14"
+      outputStep="//@elemento.12"
+      name="S38 (sem agravantes)"
+      description="Sem agravantes">
+    <operation
+        name="Agravantes &lt; 2"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 3] Agravantes"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.15"
+      outputStep="//@elemento.13"
+      name="S39 (com complicacoes)"
+      description="Com complicacoes">
+    <operation
+        name="Complicacoes >= 1"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 3] Complicacoes"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.14"
+      outputStep="//@elemento.13"
+      name="S40 (sem complicacoes)"
+      description="Sem complicacoes">
+    <operation
+        name="Complicacoes &lt; 1"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 3] Complicacoes"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.16"
+      outputStep="//@elemento.14"
+      name="S41"
+      description="Incondicional"/>
+  <sequence
+      inputStep="//@elemento.16"
+      outputStep="//@elemento.15"
+      name="S42"
+      description="Incondicional"/>
+  <sequence
+      inputStep="//@elemento.17"
+      outputStep="//@elemento.16"
+      name="S43 (houve melhora)"
+      description="Houve melhora">
+    <operation
+        name="Houve melhora"
+        Operator="affirmation">
+      <operand
+          xsi:type="protocolosv2:YesOrNo"
+          name="port3_melhora"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.27"
+      outputStep="//@elemento.16"
+      name="S44 (não houve melhora)"
+      description="não houve melhora">
+    <operation
+        name="Não houve melhora">
+      <operand
+          xsi:type="protocolosv2:YesOrNo"
+          name="port3_melhora"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.19"
+      outputStep="//@elemento.18"
+      name="S46"
+      description="Incondicional"/>
+  <sequence
+      inputStep="//@elemento.20"
+      outputStep="//@elemento.19"
+      name="S47 (3 ou mais criterios para UTI)"
+      description="3 ou mais criterios para UTI">
+    <operation
+        name="Criterios UTI >= 3"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="Total Criterios UTI"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.27"
+      outputStep="//@elemento.19"
+      name="S48 (menos de 3 criterios de UTI)"
+      description="Menos de 3 criterios de UTI">
+    <operation
+        name="Criterios UTI &lt; 3"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="Total Criterios UTI"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.18"
+      outputStep="//@elemento.23"
+      name="s50"
+      description="negação da avaliação dos fatores de risco para o tratamento padrão">
+    <operation
+        name="fatores-risco-port4-menor-3"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 4] Fatores Risco Influenza"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.24"
+      outputStep="//@elemento.23"
+      name="s51"
+      description="s51">
+    <operation
+        name="fatores-risco-port4-maior-igual-3"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 4] Fatores Risco Influenza"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.18"
+      outputStep="//@elemento.24"
+      name="s52"
+      description="s52">
+    <operation
+        name="nenhum-fator-complicacao"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 4] Agravantes Influenza"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.25"
+      outputStep="//@elemento.24"
+      name="s53"
+      description="s53">
+    <operation
+        name="com-agravantes-port4"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 4] Agravantes Influenza"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.18"
+      outputStep="//@elemento.25"
+      name="s54"
+      description="s54">
+    <operation
+        name="sem-complicacoes-influenza-port4"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 4] Complicacoes Influenza"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.26"
+      outputStep="//@elemento.25"
+      name="s55"
+      description="s55">
+    <operation
+        name="com-complicacoes-influenza-port4"
+        Operator="equalOrGreater">
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="[Port 4] Complicacoes Influenza"/>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.19"
+      outputStep="//@elemento.26"
+      name="s56"
+      description="s56"/>
+</protocolosv2:Protocol>

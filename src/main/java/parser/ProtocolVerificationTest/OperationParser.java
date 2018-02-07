@@ -172,7 +172,16 @@ public class OperationParser {
 				else {
 					boolSequence = auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0))), "<", intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(1)))).reify();
 				}
-				return boolSequence; 
+				return boolSequence;
+			
+			case AFFIRMATION:
+				if(varA.contains("Operation")) {
+					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars), "=", 1).reify();
+				}
+				else {
+					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))), "=", 1).reify();
+				}		
+				return boolSequence;
 			
 			//This is the NOT operator.
 			default:

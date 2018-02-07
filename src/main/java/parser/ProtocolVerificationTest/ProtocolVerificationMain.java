@@ -8,29 +8,29 @@ import org.chocosolver.solver.Solution;
 import protocolosv2.Element;
 import protocolosv2.Sequence;
 
-public class Solutions {
+public class ProtocolVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Test\\Test_07.xmi";
+        String file1 = "XMIs_Test\\Pneumonia_Influenza.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
         FindSolutions findSolutions = new FindSolutions(protocolReader.createProtocol());
         InaccessibleStep inaccessibleStep = new InaccessibleStep(protocolReader.createProtocol());
         
-        //print all valid solutions for variables in protocol
-        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
+//        //print all valid solutions for variables in protocol
+//        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
         
-        //print some solutions that occur non determinism problem
-        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
-        
-        //print all solutions that occur deadlock
-        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
-        
-        //print logically equivalent sequences
-        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
-        
-        //Verify if there are Inaccessible Step
-        printInaccessibleStep(inaccessibleStep.inaccessibleStepsSolutions());
+//        //print some solutions that occur non determinism problem
+//        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
+//        
+//        //print all solutions that occur deadlock
+//        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
+//        
+//        //print logically equivalent sequences
+//        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+//        
+//        //Verify if there are Inaccessible Step
+//        printInaccessibleStep(inaccessibleStep.inaccessibleStepsSolutions());
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {
@@ -57,7 +57,7 @@ public class Solutions {
     }
     
     public static void printEquivalentSequences(Map<Element, List<Sequence>> mapEquivalentSequences) {
-    	System.out.println("\nLogically Equivalent Sequences");
+    	System.out.println("\nLOGICALLY EQUIVALENT SEQUENCES");
     	//Go through all lists of solutions from mapDeadLockSolutions.
         for (int k = 0; k < mapEquivalentSequences.size(); k++) {
         	List<Sequence> sequenceList = (List<Sequence>) mapEquivalentSequences.values().toArray()[k];
@@ -71,7 +71,7 @@ public class Solutions {
     }
     
     public static void printInaccessibleStep(List<String> inaccessibleStepList) {
-    	System.out.println("\nInaccessible Steps");
+    	System.out.println("\nINACCESSIBLE STEPS");
     	for(int k = 0; k < inaccessibleStepList.size(); k++) {
         	System.out.println("\n"+inaccessibleStepList.get(k));
         }

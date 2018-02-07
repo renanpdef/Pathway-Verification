@@ -32,18 +32,18 @@ public class OperandParser {
 					if(operandValue != 0) {
 						intVars.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
 					}else {
-						intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
+						intVars.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,25,50,75,100}));
 					}
 				}
 				else {
-					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), 1, 3);
+					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,25,50,75,100});
 					//if intVars list still doesn't contain the new intVar.
 					if(!containsIntVar(intVars, intVar)) {
 						double operandValue = getOperandValue(operation.getOperand().get(i).toString());
 						if(operandValue != 0) {
 							intVars.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
 						}else {
-							intVars.add(model.intVar(operation.getOperand().get(i).getName(), 1, 3));
+							intVars.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,25,50,75,100}));
 						}
 					}
 				}
@@ -72,7 +72,7 @@ public class OperandParser {
 		String name = boolVar.getName();
 		for(int i = 0; i < boolVars.size(); i++) {
 			String bName = boolVars.get(i).getName();
-			if(bName.equals(name)) {
+			if(bName.equalsIgnoreCase(name)) {
 				return true;
 			}
 		}
@@ -85,7 +85,7 @@ public class OperandParser {
 			for(int i = 0; i < intVars.size(); i++) {
 				String bName = intVars.get(i).getName();
 				
-				if(bName.equals(name)) {
+				if(bName.equalsIgnoreCase(name)) {
 					return true;
 				}			
 			}
@@ -97,7 +97,7 @@ public class OperandParser {
 		String name = operand.getName();
 		for(int i = 0; i < boolVars.size(); i++) {
 			String bName = boolVars.get(i).getName();
-			if(bName.equals(name)) {
+			if(bName.equalsIgnoreCase(name)) {
 				return i;
 			}
 		}
@@ -109,7 +109,7 @@ public class OperandParser {
 			String name = operand.getName();
 			for(int i = 0; i < intVars.size(); i++) {
 				String bName = intVars.get(i).getName();
-				if(bName.equals(name)) {
+				if(bName.equalsIgnoreCase(name)) {
 					return i;
 				}
 			}
