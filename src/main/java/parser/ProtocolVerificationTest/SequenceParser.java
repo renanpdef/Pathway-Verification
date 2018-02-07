@@ -101,7 +101,7 @@ public class SequenceParser {
 			operands.operandsIntoLists(boolVars, intVars, model, operation); //Update the lists boolVars and intVars with new operands from op.			
 			return operations.createBoolVarSequence(operation, boolVars, intVars); //return the sequence as a BoolVar variable.	
 		}else {
-			return model.boolVar();
+			return model.boolVar(sequence.getName());
 		}
 	}	
 }

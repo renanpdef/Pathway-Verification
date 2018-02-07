@@ -11,7 +11,7 @@ import protocolosv2.Sequence;
 public class ProtocolVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Test\\Pneumonia_Influenza.xmi";
+        String file1 = "XMIs_Test\\Verifica_Sepse.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
         FindSolutions findSolutions = new FindSolutions(protocolReader.createProtocol());
@@ -19,7 +19,7 @@ public class ProtocolVerificationMain {
         
 //        //print all valid solutions for variables in protocol
 //        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
-        
+//        
 //        //print some solutions that occur non determinism problem
 //        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
 //        
@@ -30,7 +30,7 @@ public class ProtocolVerificationMain {
 //        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
 //        
 //        //Verify if there are Inaccessible Step
-//        printInaccessibleStep(inaccessibleStep.inaccessibleStepsSolutions());
+        printInaccessibleStep(inaccessibleStep.inaccessibleStepsSolutions());
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {
@@ -40,6 +40,7 @@ public class ProtocolVerificationMain {
         	List<Solution> solutionsList = (List<Solution>) mapSolutions.values().toArray()[k];
         	Element step = (Element) mapSolutions.keySet().toArray()[k];//get the output step of the sequences which was analyzed.
         	System.out.println("\n" + step.getClass().getSimpleName() +": "+ step.getName());//print the name of the output step.
+        	printSequencesOperations(step);
         	//Go through the list of solutions
         	for (int i = 0; i < solutionsList.size(); i++) {
 	        	String str[] = solutionsList.get(i).toString().split(",");
@@ -64,7 +65,7 @@ public class ProtocolVerificationMain {
         	Element step = (Element) mapEquivalentSequences.keySet().toArray()[k];//get the output step of the sequences which was analyzed.
         	System.out.println("\n" + step.getClass().getSimpleName() +": "+ step.getName());//print the name of the output step.
         	for(int i = 0; i < sequenceList.size(); i++) {
-        		System.out.println(sequenceList.get(i).getName());
+        		System.out.println(sequenceList.get(i).getName() + ": " + sequenceList.get(i).getOperation().getName());
         	}
         	System.out.println();
         }
@@ -75,5 +76,13 @@ public class ProtocolVerificationMain {
     	for(int k = 0; k < inaccessibleStepList.size(); k++) {
         	System.out.println("\n"+inaccessibleStepList.get(k));
         }
+    }
+    
+    public static void printSequencesOperations(Element element) {
+    	for(int i = 0; i < element.getOutputSequences().size(); i ++) {
+    		if(element.getOutputSequences().get(i).getOperation() != null) {
+    			System.out.println(element.getOutputSequences().get(i).getName()+ ": " + element.getOutputSequences().get(i).getOperation().getName());
+    		}
+    	}
     }
 }

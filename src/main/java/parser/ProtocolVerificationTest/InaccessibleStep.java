@@ -24,7 +24,6 @@ public class InaccessibleStep {
 	private List<BoolVar>  boolVars = new ArrayList<BoolVar>();//boolVars is a list that will contain the operands as a boolvar variables.
 	private List<IntVar>  intVars = new ArrayList<IntVar>();//intVars is a list that will contain the operands as a intVar variables.
 	private ElementParser opElements = new ElementParser();
-	private Model model = new Model("Inaccessible Step");
 	private Map<Element, List<Sequence>> mapElementInputSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the protocol.
 	
 	// A constructor to initialize the protocol and the mapElementInputSequences.
@@ -52,6 +51,9 @@ public class InaccessibleStep {
 	//If a input sequence of the element is true but the output step from sequence is false, then the element is false too.
 	//If all output step from all imput squences from a element are false, then this element is false too.
 	public  List<String> inaccessibleStepsSolutions(){
+		Model model = new Model("Inaccessible Step");
+		//model.getCstrs();
+		//System.out.println(model.getCstrs());
 		List<String> inaccessibleStep = new ArrayList<String>();
 		Map<String, List<Solution>> mapSolutions = new HashMap<String, List<Solution>>();//map that will be return.
 		List<List<BoolVar>>boolSequencesList = new ArrayList<List<BoolVar>>();//A list of a set of all imput sequences of a element as a BoolVar.
@@ -96,7 +98,7 @@ public class InaccessibleStep {
 		for(int k = 0; k < boolElements.size(); k++) {
 			model.arithm(boolElements.get(k), "=", 1).post(); // post the constraint: the element k is true, that is, it's not a inaccessible step.
 			//mapSolutions.put(boolElements.get(k).getName(), model.getSolver().findAllSolutions());
-			if(model.getSolver().findAllSolutions().isEmpty()) {
+			if(model.getSolver().findSolution() == null) {
 				inaccessibleStep.add(boolElements.get(k).getName());
 			}
 			model.getSolver().reset(); //reset the solver for a new interaction
@@ -131,7 +133,7 @@ public class InaccessibleStep {
 			operands.operandsIntoLists(boolVars, intVars, model, operation); //Update the lists boolVars and intVars with new operands from op.			
 			return operations.createBoolVarSequence(operation, boolVars, intVars); //return the sequence as a BoolVar variable.	
 		}else {
-			return model.boolVar();
+			return model.boolVar(sequence.getName());
 		}
 	}
 	
