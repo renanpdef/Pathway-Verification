@@ -11,26 +11,26 @@ import protocolosv2.Sequence;
 public class ProtocolVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Test\\Verifica_Sepse.xmi";
+        String file1 = "XMIs_Test\\Test_09.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
         FindSolutions findSolutions = new FindSolutions(protocolReader.createProtocol());
         InaccessibleStep inaccessibleStep = new InaccessibleStep(protocolReader.createProtocol());
         
-//        //print all valid solutions for variables in protocol
-//        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
-//        
-//        //print some solutions that occur non determinism problem
-//        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
-//        
-//        //print all solutions that occur deadlock
-//        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
-//        
-//        //print logically equivalent sequences
-//        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+        //print all valid solutions for variables in protocol
+        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
+        
+        //print some solutions that occur non determinism problem
+        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
+        
+        //print all solutions that occur deadlock
+        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
+        
+        //print logically equivalent sequences
+        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
 //        
 //        //Verify if there are Inaccessible Step
-        printInaccessibleStep(inaccessibleStep.inaccessibleStepsSolutions());
+//        printInaccessibleStep(inaccessibleStep.inaccessibleStepsSolutions());
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {

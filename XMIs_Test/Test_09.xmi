@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocolosv2:Protocol
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:protocolosv2="http://www.example.org/protocolosv2"
+    xsi:schemaLocation="http://www.example.org/protocolosv2 protocolosv2.ecore">
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 3] Avaliar Fatores de Risco Para Influenza"
+      outputSequences="//@sequence.0 //@sequence.1"/>
+  <elemento
+      xsi:type="protocolosv2:AuxiliaryConduct"
+      name="[Port 3] Avaliar Fatores Agravantes para Influenza"
+      inputSequences="//@sequence.0"
+      outputSequences="//@sequence.2"/>
+  <elemento
+      xsi:type="protocolosv2:Treatment"
+      name="[Port 3] Tratamento Padrão Pneumonia"
+      inputSequences="//@sequence.1"
+      outputSequences="//@sequence.3"/>
+  <elemento
+      xsi:type="protocolosv2:Information"
+      name="Aviso Final"
+      inputSequences="//@sequence.2 //@sequence.3"/>
+  <sequence
+      inputStep="//@elemento.1"
+      outputStep="//@elemento.0"
+      name="S35 (3 fatores de risco)">
+    <operation
+        name="[Port 3] Fatores de risco == 3"
+        Operator="equal">
+      <operand
+          xsi:type="protocolosv2:Operation"
+          name="[Port 3] Fatores de risco"
+          Operator="sum">
+        <operand
+            xsi:type="protocolosv2:YesOrNo"
+            name="port3_fatores_risco_tosse"
+            weight="1"
+            value="false"/>
+        <operand
+            xsi:type="protocolosv2:YesOrNo"
+            name="port3_fatores_risco_dor"
+            weight="1"
+            value="false"/>
+        <operand
+            xsi:type="protocolosv2:YesOrNo"
+            name="port3_fatores_risco_febre"
+            weight="2"
+            value="false"/>
+      </operand>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="3"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.2"
+      outputStep="//@elemento.0"
+      name="S36 (menos de 3 fatores de risco)">
+    <operation
+        name="[Port 3] Fatores de Risco &lt; 3"
+        Operator="smallerThan">
+      <operand
+          xsi:type="protocolosv2:Operation"
+          name="[Port 3] Fatores de risco"
+          Operator="sum">
+        <operand
+            xsi:type="protocolosv2:YesOrNo"
+            name="port3_fatores_risco_tosse"
+            weight="1"
+            value="false"/>
+        <operand
+            xsi:type="protocolosv2:YesOrNo"
+            name="port3_fatores_risco_dor"
+            weight="1"
+            value="false"/>
+        <operand
+            xsi:type="protocolosv2:YesOrNo"
+            name="port3_fatores_risco_febre"
+            weight="2"
+            value="false"/>
+      </operand>
+      <operand
+          xsi:type="protocolosv2:Numeric"
+          name="3"
+          value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence
+      inputStep="//@elemento.3"
+      outputStep="//@elemento.1"
+      name="S35-2"/>
+  <sequence
+      inputStep="//@elemento.3"
+      outputStep="//@elemento.2"
+      name="S36-2"/>
+</protocolosv2:Protocol>

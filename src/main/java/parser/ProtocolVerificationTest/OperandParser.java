@@ -6,6 +6,7 @@ import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 
+import protocolosv2.Operador;
 import protocolosv2.Operand;
 import protocolosv2.Operation;
 
@@ -28,6 +29,10 @@ public class OperandParser {
 				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
 					String name = operation.getOperator().getName() + index++;		
 					operation.getOperand().get(i).setName(name);
+				}
+				IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,25,50,75,100});
+				//if intVars list still doesn't contain the new intVar.
+				if(!containsIntVar(intVars, intVar)) {
 					double operandValue = getOperandValue(operation.getOperand().get(i).toString());
 					if(operandValue != 0) {
 						intVars.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
@@ -35,18 +40,7 @@ public class OperandParser {
 						intVars.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,25,50,75,100}));
 					}
 				}
-				else {
-					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,25,50,75,100});
-					//if intVars list still doesn't contain the new intVar.
-					if(!containsIntVar(intVars, intVar)) {
-						double operandValue = getOperandValue(operation.getOperand().get(i).toString());
-						if(operandValue != 0) {
-							intVars.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
-						}else {
-							intVars.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,25,50,75,100}));
-						}
-					}
-				}
+				
 			}
 			//if operand is a YesOrNo (boolean) operand.
 			else {
@@ -54,9 +48,16 @@ public class OperandParser {
 				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
 					String name = operation.getOperator().getName() + index++;		
 					operation.getOperand().get(i).setName(name);
-					boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
 				}
-				else {
+				
+				if(operation.getOperator() == Operador.SUM || operation.getOperator() == Operador.MINUS || operation.getOperator() == Operador.MULTIPLICATION || operation.getOperator() == Operador.DIVISION) {
+					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1});
+					//if intVars list still doesn't contain the new intVar.
+					if(!containsIntVar(intVars, intVar)) {
+						double operandWeight = getOperandWeight(operation.getOperand().get(i).toString());
+						intVars.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0, (int)operandWeight}));
+					}
+				}else {
 					BoolVar boolVar = auxModel.boolVar(operation.getOperand().get(i).getName());
 					//if boolVars list don't already contain the new boolVar.
 					if(!containsBoolVar(boolVars, boolVar)) {
@@ -127,6 +128,22 @@ public class OperandParser {
 			double doubleValue = 0;
 			try {
 				doubleValue = Double.parseDouble(strValue);
+			}catch(NumberFormatException e){
+			}
+			return doubleValue;
+		}
+		
+		private double getOperandWeight(String str) {
+			int pos1 = str.lastIndexOf("(")+1;
+			int pos2 = str.lastIndexOf(")");
+			char[] charWeight = new char[pos2-pos1];
+			str.getChars(pos1, pos2, charWeight, 0);
+			String strWeight = String.copyValueOf(charWeight);
+			strWeight = strWeight.split(",")[1];
+			strWeight = strWeight.toString().replaceFirst(" weight: ", "");
+			double doubleValue = 0;
+			try {
+				doubleValue = Double.parseDouble(strWeight);
 			}catch(NumberFormatException e){
 			}
 			return doubleValue;

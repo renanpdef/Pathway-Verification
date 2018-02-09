@@ -200,77 +200,60 @@ public class OperationParser {
 	//intVars is a list of the numeric operands that makes up all operations in the protocol.
 	public IntVar calculate(Operation operation, List<IntVar> intVars) {
 		IntVar result;
-		
-		//operation.getOperand() is a list of operands from operation whose size can be 1 or 2;
-		//varA and varB are strings to verify if the operand is a operation or not.
-		String varA = operation.getOperand().get(0).getClass().toString();
-		String varB = operation.getOperand().get(1).getClass().toString(); 
-		
-		//For each case, verify if the operands of operation are other operation or not.
-		//When the operand is a operation, this method is called recursively with operand as a parameter.
-		switch(operation.getOperator()) {
-			case SUM:
-				if(varA.contains("Operation") && varB.contains("Operation")) {
-					result = calculate((Operation) operation.getOperand().get(0), intVars).add(calculate((Operation) operation.getOperand().get(1), intVars)).intVar();
-				}
-				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					result = calculate((Operation) operation.getOperand().get(0), intVars).add(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(1)))).intVar();
-				}
-				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					result = intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0))).add(calculate((Operation) operation.getOperand().get(1), intVars)).intVar();
-				}
-				else {
-					result = intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0))).add(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(1)))).intVar();
-				}
-				return result;
-				
-			case MINUS:
-				if(varA.contains("Operation") && varB.contains("Operation")) {
-					result = calculate((Operation) operation.getOperand().get(0), intVars).sub(calculate((Operation) operation.getOperand().get(1), intVars)).intVar();
-				}
-				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					result = calculate((Operation) operation.getOperand().get(0), intVars).sub(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(1)))).intVar();
-				}
-				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					result = intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0))).sub(calculate((Operation) operation.getOperand().get(1), intVars)).intVar();
-				}
-				else {
-					result = intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0))).sub(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(1)))).intVar();
-				}
-				return result;
-				
-			case MULTIPLICATION:
-				if(varA.contains("Operation") && varB.contains("Operation")) {
-					result = calculate((Operation) operation.getOperand().get(0), intVars).mul(calculate((Operation) operation.getOperand().get(1), intVars)).intVar();
-				}
-				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					result = calculate((Operation) operation.getOperand().get(0), intVars).mul(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(1)))).intVar();
-				}
-				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					result = intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0))).mul(calculate((Operation) operation.getOperand().get(1), intVars)).intVar();
-				}
-				else {
-					result = intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0))).mul(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(1)))).intVar();
-				}
-				return result;
-				
-			case DIVISION:
-				if(varA.contains("Operation") && varB.contains("Operation")) {
-					result = calculate((Operation) operation.getOperand().get(0), intVars).div(calculate((Operation) operation.getOperand().get(1), intVars)).intVar();
-				}
-				else if(varA.contains("Operation") && !varB.contains("Operation")) {
-					result = calculate((Operation) operation.getOperand().get(0), intVars).div(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(1)))).intVar();
-				}
-				else if(!varA.contains("Operation") && varB.contains("Operation")) {
-					result = intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0))).div(calculate((Operation) operation.getOperand().get(1), intVars)).intVar();
-				}
-				else {
-					result = intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0))).div(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(1)))).intVar();
-				}
-				return result;
-				
-			default:
-				return null;
+		if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
+			result = calculate((Operation) operation.getOperand().get(0), intVars);
+		}else {
+			result = intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(0)));
 		}
+		
+		for(int i=1; i < operation.getOperand().size(); i++) {
+			String strOperand = operation.getOperand().get(i).getClass().toString(); //strOperand is a string to verify if the operand is a operation or not.
+			
+			//For each case, verify if the operands of operation are other operation or not.
+			//When the operand is a operation, this method is called recursively with operand as a parameter.
+			switch(operation.getOperator()) {
+				case SUM:
+					if(strOperand.contains("Operation")) {
+						result = result.add(calculate((Operation) operation.getOperand().get(i), intVars)).intVar();
+					}
+					else {
+						result = result.add(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(i)))).intVar();
+					}
+					break;
+					
+				case MINUS:
+					if(strOperand.contains("Operation")) {
+						result = result.sub(calculate((Operation) operation.getOperand().get(i), intVars)).intVar();
+					}
+					else {
+						result = result.sub(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(i)))).intVar();
+					}
+					break;
+					
+				case MULTIPLICATION:
+					if(strOperand.contains("Operation")) {
+						result = result.mul(calculate((Operation) operation.getOperand().get(i), intVars)).intVar();
+					}
+					else {
+						result = result.mul(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(i)))).intVar();
+					}
+					break;
+					
+				case DIVISION:
+					if(strOperand.contains("Operation")) {
+						result = result.div(calculate((Operation) operation.getOperand().get(i), intVars)).intVar();
+					}
+					else {
+						result = result.div(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(i)))).intVar();
+					}
+					break;
+					
+				default:
+					result = null;
+					break;
+					
+			}
+		}
+		return result;
 	}
 }
