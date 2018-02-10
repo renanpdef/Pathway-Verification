@@ -1,14 +1,12 @@
 package parser.ProtocolVerificationTest;
 
 import java.util.List;
-
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
-
-import protocolosv2.Operador;
 import protocolosv2.Operand;
 import protocolosv2.Operation;
+import protocolosv2.Operator;
 
 public class OperandParser {
 	int index = 0;
@@ -50,7 +48,7 @@ public class OperandParser {
 					operation.getOperand().get(i).setName(name);
 				}
 				
-				if(operation.getOperator() == Operador.SUM || operation.getOperator() == Operador.MINUS || operation.getOperator() == Operador.MULTIPLICATION || operation.getOperator() == Operador.DIVISION) {
+				if(operation.getOperator() == Operator.SUM || operation.getOperator() == Operator.MINUS || operation.getOperator() == Operator.MULTIPLICATION || operation.getOperator() == Operator.DIVISION) {
 					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1});
 					//if intVars list still doesn't contain the new intVar.
 					if(!containsIntVar(intVars, intVar)) {

@@ -1,16 +1,12 @@
 package parser.ProtocolVerificationTest;
 
 import java.util.ArrayList;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.chocosolver.solver.Model;
-import org.chocosolver.solver.Solution;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
-
 import protocolosv2.Element;
 import protocolosv2.Operation;
 import protocolosv2.Protocol;

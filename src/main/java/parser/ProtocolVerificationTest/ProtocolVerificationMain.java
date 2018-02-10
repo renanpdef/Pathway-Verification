@@ -2,9 +2,7 @@ package parser.ProtocolVerificationTest;
 
 import java.util.List;
 import java.util.Map;
-
 import org.chocosolver.solver.Solution;
-
 import protocolosv2.Element;
 import protocolosv2.Sequence;
 

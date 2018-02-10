@@ -2,10 +2,8 @@ package parser.ProtocolVerificationTest;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
-
 import protocolosv2.Element;
 
 public class ElementParser {

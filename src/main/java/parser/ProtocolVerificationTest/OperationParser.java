@@ -1,12 +1,9 @@
 package parser.ProtocolVerificationTest;
 
 import java.util.List;
-
-
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
-
 import protocolosv2.Operation;
 
 public class OperationParser { 
