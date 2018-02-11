@@ -15,11 +15,7 @@ public class OperationParser {
 	//operation is the operation of a sequence from the protocol.
 	//boolVars is a list of the logical operands that makes up all operations in the protocol.
 	//intVars is a list of the numeric operands that makes up all operations in the protocol.
-	public BoolVar createBoolVarSequence(Operation operation, List<BoolVar> boolVars, List<IntVar> intVars){
-		Model auxModel = new Model("Auxiliary Model");
-		BoolVar boolSequence = null;	
-		List<BoolVar> boolOperation = new ArrayList<BoolVar>();
-		
+	public BoolVar createBoolVarSequence(Operation operation, List<BoolVar> boolVars, List<IntVar> intVars){			
 		//Create a Boolvar with a constraint corresponding to the operator from operation and return it.
 		//For each case, verify if the operands from operation are other operation or not.
 		//When the operand is a operation:
@@ -29,68 +25,16 @@ public class OperationParser {
 				//the function calculate is called.
 		switch(operation.getOperator()) {
 			case AND:
-				if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
-					boolOperation.add(createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars));
-				}else {
-					boolOperation.add(boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))));
-				}
-				for(int i = 1; i < operation.getOperand().size(); i++) {
-					String strOperand = operation.getOperand().get(i).getClass().toString();
-					if(strOperand.contains("Operation")) {
-						boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), "+", createBoolVarSequence((Operation) operation.getOperand().get(i), boolVars, intVars), "=", 2).reify());
-					}else {
-						boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), "+", boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(i))), "=", 2).reify());
-					}		
-				}
-				return boolOperation.get(boolOperation.size()-1);
+				return boolLogicalOperations(operation, boolVars, intVars, "+", "=", 2);
 				
 			case OR:
-				if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
-					boolOperation.add(createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars));
-				}else {
-					boolOperation.add(boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))));
-				}
-				for(int i = 1; i < operation.getOperand().size(); i++) {
-					String strOperand = operation.getOperand().get(i).getClass().toString();
-					if(strOperand.contains("Operation")) {
-						boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), "+", createBoolVarSequence((Operation) operation.getOperand().get(i), boolVars, intVars), "!=", 0).reify());
-					}else {
-						boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), "+", boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(i))), "!=", 0).reify());
-					}
-				}
-				return boolOperation.get(boolOperation.size()-1);
+				return boolLogicalOperations(operation, boolVars, intVars, "+", "!=", 0);
 				
 			case IMPLIES:
-				if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
-					boolOperation.add(createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars));
-				}else {
-					boolOperation.add(boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))));
-				}
-				for(int i = 1; i < operation.getOperand().size(); i++) {
-					String strOperand = operation.getOperand().get(i).getClass().toString();
-					if(strOperand.contains("Operation")) {
-						boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), "-", createBoolVarSequence((Operation) operation.getOperand().get(i), boolVars, intVars), "!=", 1).reify());
-					}else {
-						boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), "-", boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(i))), "!=", 1).reify());
-					}		
-				}
-				return boolOperation.get(boolOperation.size()-1);
+				return boolLogicalOperations(operation, boolVars, intVars, "-", "!=", 1);
 				
 			case XOR:
-				if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
-					boolOperation.add(createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars));
-				}else {
-					boolOperation.add(boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))));
-				}
-				for(int i = 1; i < operation.getOperand().size(); i++) {
-					String strOperand = operation.getOperand().get(i).getClass().toString();
-					if(strOperand.contains("Operation")) {
-						boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), "+", createBoolVarSequence((Operation) operation.getOperand().get(i), boolVars, intVars), "=", 1).reify());
-					}else {
-						boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), "+", boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(i))), "=", 1).reify());
-					}	
-				}
-				return boolOperation.get(boolOperation.size()-1);
+				return boolLogicalOperations(operation, boolVars, intVars, "+", "=", 1);
 				
 			case EQUAL:
 				return boolRelacionalOperations(operation, intVars, "="); 
@@ -108,6 +52,8 @@ public class OperationParser {
 				return boolRelacionalOperations(operation, intVars, "<");
 			
 			case AFFIRMATION:
+				Model auxModel = new Model("Auxiliary Model");
+				BoolVar boolSequence = null;
 				if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
 					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars), "=", 1).reify();
 				}
@@ -118,20 +64,22 @@ public class OperationParser {
 			
 			//This is the NOT operator.
 			default:
+				Model auxModel1 = new Model("Auxiliary Model");
+				BoolVar boolSequence1 = null;
 				if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
-					boolSequence = auxModel.arithm(createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars), "+", createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars), "=", 0).reify();
+					boolSequence1 = auxModel1.arithm(createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars), "+", createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars), "=", 0).reify();
 				}
 				else {
-					boolSequence = auxModel.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))), "+", boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))), "=", 0).reify();
+					boolSequence1 = auxModel1.arithm(boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))), "+", boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))), "=", 0).reify();
 				}		
-				return boolSequence;
+				return boolSequence1;
 		}
 	}
 	
 	//Return an IntVar as a result of a possible sums.
 	//operation is the operation of a sequence from the protocol.
 	//intVars is a list of the numeric operands that makes up all operations in the protocol.
-	public IntVar calculate(Operation operation, List<IntVar> intVars) {
+	private IntVar calculate(Operation operation, List<IntVar> intVars) {
 		IntVar result;
 		if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
 			result = calculate((Operation) operation.getOperand().get(0), intVars);
@@ -190,10 +138,15 @@ public class OperationParser {
 		return result;
 	}
 	
+	//Function used for EQUAL, EQUAL_OR_GREATER, EQUAL_OR_SMALLER, BIGGER_THAN, SMALLER_THAN operators:
+	//return the operation as a boolVar with some constraints.
 	private BoolVar boolRelacionalOperations(Operation operation, List<IntVar> intVars, String operator) {
 		Model auxModel = new Model("Auxiliary Model");
-		BoolVar boolSequence = null;	
-		List<BoolVar> boolOperation = new ArrayList<BoolVar>();
+		BoolVar boolSequence = null; //stores a sequence representation as BoolVar with some constraints.	
+		List<BoolVar> boolOperation = new ArrayList<BoolVar>();//stores the operation as BoolVar.
+		
+		//Verify if the operands from operation are other operation or not.
+		//When the operand is a operation the function calculate is called.
 		for(int i = 1; i < operation.getOperand().size(); i++) {
 			String strOperand1 = operation.getOperand().get(i-1).getClass().toString();
 			String strOperand2 = operation.getOperand().get(i).getClass().toString();
@@ -209,7 +162,6 @@ public class OperationParser {
 			else {
 				boolOperation.add(auxModel.arithm(intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(i-1))), operator, intVars.get(operands.indexOfIntVar(intVars, operation.getOperand().get(i)))).reify());
 			}
-			
 			if(boolOperation.size() > 1) {
 				auxModel.arithm(boolOperation.get(boolOperation.size()-1), "+",boolOperation.get(boolOperation.size()-2), "=", 2).reifyWith(boolSequence);
 			}else {
@@ -217,5 +169,31 @@ public class OperationParser {
 			}
 		}
 		return boolSequence;
+	}
+	
+	//Function used for AND, OR, IMPLIES, XOR operators:
+	//Return the operation as a boolVar with some constraints.
+	private BoolVar boolLogicalOperations(Operation operation, List<BoolVar> boolVars, List<IntVar> intVars, String operator1, String operator2, int n) {
+		Model auxModel = new Model("Auxiliary Model");
+		List<BoolVar> boolOperation = new ArrayList<BoolVar>(); //stores the operation as BoolVar.
+		
+		//Verify if the first operand from operation are other operation or not.
+		//When the operand is a operation the function createBoolVarSequence is called.
+		if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
+			boolOperation.add(createBoolVarSequence((Operation) operation.getOperand().get(0), boolVars, intVars));
+		}else {
+			boolOperation.add(boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(0))));
+		}
+		//Verify if the operands from operation are other operation or not.
+		//When the operand is a operation the function createBoolVarSequence is called.
+		for(int i = 1; i < operation.getOperand().size(); i++) {
+			String strOperand = operation.getOperand().get(i).getClass().toString();
+			if(strOperand.contains("Operation")) {
+				boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), operator1, createBoolVarSequence((Operation) operation.getOperand().get(i), boolVars, intVars), operator2, n).reify());
+			}else {
+				boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), operator1, boolVars.get(operands.indexOfBoolVar(boolVars, operation.getOperand().get(i))), operator2, n).reify());
+			}		
+		}
+		return boolOperation.get(boolOperation.size()-1);
 	}
 }

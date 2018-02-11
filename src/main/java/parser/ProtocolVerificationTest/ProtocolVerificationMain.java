@@ -9,7 +9,7 @@ import protocolosv2.Sequence;
 public class ProtocolVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Test\\Test_09.xmi";
+        String file1 = "XMIs_Test\\Test_03.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
         FindSolutions findSolutions = new FindSolutions(protocolReader.createProtocol());
