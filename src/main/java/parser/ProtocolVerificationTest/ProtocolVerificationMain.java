@@ -4,31 +4,33 @@ import java.util.List;
 import java.util.Map;
 import org.chocosolver.solver.Solution;
 import protocolosv2.Element;
+import protocolosv2.Protocol;
 import protocolosv2.Sequence;
 
 public class ProtocolVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Test\\Test_03.xmi";
+        String file1 = "XMIs_Test\\Test_01.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
-        FindSolutions findSolutions = new FindSolutions(protocolReader.createProtocol());
-        InaccessibleStep inaccessibleStep = new InaccessibleStep(protocolReader.createProtocol());
+        Protocol protocol = protocolReader.createProtocol();
+        FindSolutions findSolutions = new FindSolutions(protocol);
+        FindInaccessibleStep inaccessibleStep = new FindInaccessibleStep(protocol);
         
-        //print all valid solutions for variables in protocol
-        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
-        
-        //print some solutions that occur non determinism problem
-        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
-        
-        //print all solutions that occur deadlock
-        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
-        
-        //print logically equivalent sequences
-        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+//        //print all valid solutions for variables in protocol
+//        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
 //        
-//        //Verify if there are Inaccessible Step
-//        printInaccessibleStep(inaccessibleStep.inaccessibleStepsSolutions());
+//        //print some solutions that occur non determinism problem
+//        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
+//        
+//        //print all solutions that occur deadlock
+//        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
+//        
+//        //print logically equivalent sequences
+//        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+        
+        //Verify if there are Inaccessible Step
+        printInaccessibleStep(inaccessibleStep.FindInaccessibleSteps());
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {
@@ -69,10 +71,10 @@ public class ProtocolVerificationMain {
         }
     }
     
-    public static void printInaccessibleStep(List<String> inaccessibleStepList) {
+    public static void printInaccessibleStep(List<Element> elements) {
     	System.out.println("\nINACCESSIBLE STEPS");
-    	for(int k = 0; k < inaccessibleStepList.size(); k++) {
-        	System.out.println("\n"+inaccessibleStepList.get(k));
+    	for(int k = 0; k < elements.size(); k++) {
+    		System.out.println("\n" + elements.get(k).getClass().getSimpleName() +": "+ elements.get(k).getName());//print the name of the Element.
         }
     }
     

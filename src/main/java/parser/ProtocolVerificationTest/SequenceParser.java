@@ -15,7 +15,7 @@ import protocolosv2.Sequence;
 public class SequenceParser {
 	private OperationParser operations = new OperationParser(); //Instantiates the class that handles operations between BoolBar variables.
 	private OperandParser operands = new OperandParser();  //Instantiates the class that handles operations between BoolVar variables.
-	private Protocol protocol; //The protocol to be analyzed.
+	protected Protocol protocol; //The protocol to be analyzed.
 	protected Map<Element, List<Sequence>> mapElementOutputSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the protocol.
 	
 	// A constructor to initialize the protocol and the mapElementOutputSequences.
