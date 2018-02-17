@@ -22,7 +22,7 @@ public class FindInaccessibleStep extends SequenceParser {
 
 	//Return a map with Elements as a key and a list of all valid solutions in the element as a value of the key.
 	//An element has no problem when one, and only one, of its output boolSequences are true.
-	public List<Element> FindInaccessibleSteps() {
+	public List<Element> findInaccessibleSteps() {
 		List<Element> accessibleElements = new ArrayList<Element>();
 		for(int i = 0; i < mapElementOutputSequences.values().size(); i++){
 			Model model = new Model("Find All Solutions: " + i); //Create a model to verify the valid solutions of a element in the mapElementOutputSequences with ChocoSolver.

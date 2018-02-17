@@ -73,12 +73,12 @@ public class SequenceParser {
 	//Tranform a list of sequences in a list of boolvar.
 	//This boolvar are constrained with some operations.
 	protected List<BoolVar> sequenceListToBoolVarList(Model model, List<Sequence> sequences) {
-		List<BoolVar>  boolVars = new ArrayList<BoolVar>();//boolVars is a list that will contain the operands as a boolvar variables.
-		List<IntVar>  intVars = new ArrayList<IntVar>();//intVars is a list that will contain the operands as a intVar variables.
+		List<BoolVar>  booleanOperands = new ArrayList<BoolVar>();//booleanOperands is a list that will contain the operands as a boolvar variables.
+		List<IntVar>  numericOperands = new ArrayList<IntVar>();//numericOperands is a list that will contain the operands as a intVar variables.
 		List<BoolVar> boolSequences = new ArrayList<BoolVar>();//boolSequences is a list that will contain a sequence structure as a boolvar.
 		//Go through all sequences in the list.
 		for (int i = 0; i < sequences.size(); i++) {
-			BoolVar boolSequence = sequenceToBoolVar(model, sequences.get(i), boolVars, intVars);
+			BoolVar boolSequence = sequenceToBoolVar(model, sequences.get(i), booleanOperands, numericOperands);
 			if(boolSequence != null) {
 				boolSequences.add(boolSequence);
 			}			
@@ -89,13 +89,13 @@ public class SequenceParser {
 	//function to convert a sequence in a boolvar.
 	//model is a chocosolver model where the constraints will be post.
 	//Sequence is the sequence that will be transform.
-	//boolVars is a list that will contain the operands as a boolvar variables.
-	//intVars is a list that will contain the operands as a intVar variables.
-	private BoolVar sequenceToBoolVar(Model model, Sequence sequence, List<BoolVar> boolVars, List<IntVar> intVars){
+	//booleanOperands is a list that will contain the operands as a boolvar variables.
+	//numericOperands is a list that will contain the operands as a intVar variables.
+	private BoolVar sequenceToBoolVar(Model model, Sequence sequence, List<BoolVar> booleanOperands, List<IntVar> numericOperands){
 		if(sequence.getOperation() != null) {
 			Operation operation = sequence.getOperation();
-			operands.operandsIntoLists(boolVars, intVars, model, operation); //Update the lists boolVars and intVars with new operands from op.			
-			return operations.createBoolVarSequence(operation, boolVars, intVars); //return the sequence as a BoolVar variable.	
+			operands.operandsIntoLists(booleanOperands, numericOperands, model, operation); //Update the lists booleanOperands and numericOperands with new operands from op.			
+			return operations.createBoolVarSequence(operation, booleanOperands, numericOperands); //return the sequence as a BoolVar variable.	
 		}else {
 			return model.boolVar(sequence.getName());
 		}

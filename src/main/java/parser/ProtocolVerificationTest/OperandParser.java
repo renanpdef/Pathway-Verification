@@ -11,15 +11,15 @@ import protocolosv2.Operator;
 public class OperandParser {
 	int index = 0;
 	
-	//get the operands from operation and put it in boolVars list or intVars list.
+	//get the operands from operation and put it in booleanOperands list or numericOperands list.
 	//Create the variable for model.
-	public void operandsIntoLists(List<BoolVar> boolVars, List<IntVar> intVars, Model model, Operation operation) {
+	public void operandsIntoLists(List<BoolVar> booleanOperands, List<IntVar> numericOperands, Model model, Operation operation) {
 		//Go through all operands in operation.
 		for(int i = 0; i < operation.getOperand().size(); i++) {
 			Model auxModel = new Model("Auxiliary Model");
 			//If operand is a operation.
 			if(operation.getOperand().get(i).getClass().toString().contains("Operation")) {
-				operandsIntoLists(boolVars, intVars, model, (Operation) operation.getOperand().get(i));
+				operandsIntoLists(booleanOperands, numericOperands, model, (Operation) operation.getOperand().get(i));
 			}
 			//if operand is a Numeric operand.
 			else if(operation.getOperand().get(i).getClass().toString().contains("Numeric")) {
@@ -28,14 +28,14 @@ public class OperandParser {
 					String name = operation.getOperator().getName() + index++;		
 					operation.getOperand().get(i).setName(name);
 				}
-				IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {1,2,3});
-				//if intVars list still doesn't contain the new intVar.
-				if(!containsIntVar(intVars, intVar)) {
+				IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3});
+				//if numericOperands list still doesn't contain the new intVar.
+				if(!containsIntVar(numericOperands, intVar)) {
 					double operandValue = getOperandValue(operation.getOperand().get(i).toString());
 					if(operandValue != 0) {
-						intVars.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
+						numericOperands.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
 					}else {
-						intVars.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {1,2,3}));
+						numericOperands.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3}));
 					}
 				}
 				
@@ -50,27 +50,27 @@ public class OperandParser {
 				
 				if(operation.getOperator() == Operator.SUM || operation.getOperator() == Operator.MINUS || operation.getOperator() == Operator.MULTIPLICATION || operation.getOperator() == Operator.DIVISION) {
 					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1});
-					//if intVars list still doesn't contain the new intVar.
-					if(!containsIntVar(intVars, intVar)) {
+					//if numericOperands list still doesn't contain the new intVar.
+					if(!containsIntVar(numericOperands, intVar)) {
 						double operandWeight = getOperandWeight(operation.getOperand().get(i).toString());
-						intVars.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0, (int)operandWeight}));
+						numericOperands.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0, (int)operandWeight}));
 					}
 				}else {
 					BoolVar boolVar = auxModel.boolVar(operation.getOperand().get(i).getName());
-					//if boolVars list don't already contain the new boolVar.
-					if(!containsBoolVar(boolVars, boolVar)) {
-						boolVars.add(model.boolVar(operation.getOperand().get(i).getName()));
+					//if booleanOperands list don't already contain the new boolVar.
+					if(!containsBoolVar(booleanOperands, boolVar)) {
+						booleanOperands.add(model.boolVar(operation.getOperand().get(i).getName()));
 					}
 				}
 			}	
 		}
 	}
 		
-	//Verify whether list boolVars already has the boolvar
-	public boolean containsBoolVar(List<BoolVar> boolVars, BoolVar boolVar) {
+	//Verify whether list booleanOperands already has the boolvar
+	public boolean containsBoolVar(List<BoolVar> booleanOperands, BoolVar boolVar) {
 		String name = boolVar.getName();
-		for(int i = 0; i < boolVars.size(); i++) {
-			String bName = boolVars.get(i).getName();
+		for(int i = 0; i < booleanOperands.size(); i++) {
+			String bName = booleanOperands.get(i).getName();
 			if(bName.equalsIgnoreCase(name)) {
 				return true;
 			}
@@ -78,41 +78,17 @@ public class OperandParser {
 		return false;
 	}
 	
-	//Verify whether list intVars already has the intVar
-		public boolean containsIntVar(List<IntVar> intVars, IntVar intVar) {
+	//Verify whether list numericOperands already has the intVar
+		public boolean containsIntVar(List<IntVar> numericOperands, IntVar intVar) {
 			String name = intVar.getName();
-			for(int i = 0; i < intVars.size(); i++) {
-				String bName = intVars.get(i).getName();
+			for(int i = 0; i < numericOperands.size(); i++) {
+				String bName = numericOperands.get(i).getName();
 				
 				if(bName.equalsIgnoreCase(name)) {
 					return true;
 				}			
 			}
 			return false;
-		}
-	
-	//retun the index of a operand from the list boolVars. 
-	public int indexOfBoolVar(List<BoolVar> boolVars, Operand operand) {
-		String name = operand.getName();
-		for(int i = 0; i < boolVars.size(); i++) {
-			String bName = boolVars.get(i).getName();
-			if(bName.equalsIgnoreCase(name)) {
-				return i;
-			}
-		}
-		return -1;
-	}
-	
-	//retun the index of a operand from the list intVars.
-		public int indexOfIntVar(List<IntVar> intVars, Operand operand) {
-			String name = operand.getName();
-			for(int i = 0; i < intVars.size(); i++) {
-				String bName = intVars.get(i).getName();
-				if(bName.equalsIgnoreCase(name)) {
-					return i;
-				}
-			}
-			return -1;
 		}
 		
 		private double getOperandValue(String str) {
