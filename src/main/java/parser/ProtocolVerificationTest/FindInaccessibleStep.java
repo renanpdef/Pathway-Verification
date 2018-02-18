@@ -20,8 +20,8 @@ public class FindInaccessibleStep extends SequenceParser {
 		super(protocol);
 	}
 
-	//Return a map with Elements as a key and a list of all valid solutions in the element as a value of the key.
-	//An element has no problem when one, and only one, of its output boolSequences are true.
+	//Return a set of Elements that is a inaccessible step.
+	//An element is a inaccessible step if there are no valid path to get to the element.
 	public List<Element> findInaccessibleSteps() {
 		List<Element> accessibleElements = new ArrayList<Element>();
 		for(int i = 0; i < mapElementOutputSequences.values().size(); i++){
@@ -73,20 +73,25 @@ public class FindInaccessibleStep extends SequenceParser {
 		List<Element> inaccessibleElements = getInaccessibleElements(accessibleElements, protocol.getElemento());
 		return inaccessibleElements;
 	}
-
+	
+	//Function to pruning a set of possible accessible steps and return all inaccessible elements
 	private List<Element> getInaccessibleElements(List<Element> accessibleElements, List<Element> elements) {
 		List<Element> inaccessibleElements = new ArrayList<Element>();
 		for(int i = 0; i < elements.size(); i++) {
+			//verify if the element is not in the list accessibleElements.
 			if(!accessibleElements.contains(elements.get(i))) {
 				inaccessibleElements.add(elements.get(i));
 			}
 			else {
 				int count = 0;
+				//go through the set of input sequence of element
 				for(int j = 0; j < elements.get(i).getInputSequences().size(); j++) {
+					//check if the output step of the sequence is not in the list accessibleElements and increase the count. 
 					if(!accessibleElements.contains(elements.get(i).getInputSequences().get(j).getOutputStep())) {
 						count++;
 					}
 				}
+				//if all output step of this sequences are inaccessible step then this element is a inaccessible step too.
 				if(count == elements.get(i).getInputSequences().size() && count != 0) {
 					inaccessibleElements.add(elements.get(i));
 					accessibleElements.remove(elements.get(i));

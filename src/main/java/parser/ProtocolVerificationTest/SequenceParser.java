@@ -24,8 +24,8 @@ public class SequenceParser {
 		getModelFragmentsForVerification();
 	}
 	
-	//Return a map with Elements as a key and a list of all valid solutions in the element as a value of the key.
-	//An element has no problem when one, and only one, of its output sequences are true.
+	//Return a map with Elements as a key and a set of sequences logically equivalent as a value of the key.
+	//This function verify if the operations two or more sequences with the same output step are Logically Equivalent.
 	public Map<Element, List<Sequence>> findLogicallyEquivalentSequence() {
 		Map<Element, List<Sequence>> mapLogicallyEquivalentSequence = new HashMap<Element, List<Sequence>>();
 		for(int i = 0; i < mapElementOutputSequences.values().size(); i++){
