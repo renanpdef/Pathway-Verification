@@ -91,6 +91,8 @@ public class OperandParser {
 			return false;
 		}
 		
+		//Get the value of a numeric operand and return it as Double.
+		//str is a string representation of operand that contains the value.
 		private double getOperandValue(String str) {
 			int pos1 = str.lastIndexOf("(")+1;
 			int pos2 = str.lastIndexOf(")");
@@ -107,6 +109,8 @@ public class OperandParser {
 			return doubleValue;
 		}
 		
+		//Get the weight of a Boolean operand and return it as Double.
+		//str is a string representation of operand that contains the weight.
 		private double getOperandWeight(String str) {
 			int pos1 = str.lastIndexOf("(")+1;
 			int pos2 = str.lastIndexOf(")");

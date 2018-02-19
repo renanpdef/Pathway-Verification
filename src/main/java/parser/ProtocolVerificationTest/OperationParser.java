@@ -78,7 +78,7 @@ public class OperationParser {
 	}
 	
 	//Return an IntVar as a result of a possible sums.
-	//operation is the operation of a sequence from the protocol.
+	//operation is the operation of a sequence from the protocol whose operator is sum, minus, multiplication or division.
 	//numericOperands is a list of the numeric operands that makes up all operations in the protocol.
 	private IntVar calculate(Operation operation, List<IntVar> numericOperands) {
 		IntVar result;
