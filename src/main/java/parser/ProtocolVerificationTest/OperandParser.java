@@ -28,14 +28,14 @@ public class OperandParser {
 					String name = operation.getOperator().getName() + index++;		
 					operation.getOperand().get(i).setName(name);
 				}
-				IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3});
+				IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,5,25,50,75,100});
 				//if numericOperands list still doesn't contain the new intVar.
 				if(!containsIntVar(numericOperands, intVar)) {
 					double operandValue = getOperandValue(operation.getOperand().get(i).toString());
 					if(operandValue != 0) {
 						numericOperands.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
 					}else {
-						numericOperands.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3}));
+						numericOperands.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,5,25,50,75,100}));
 					}
 				}
 				

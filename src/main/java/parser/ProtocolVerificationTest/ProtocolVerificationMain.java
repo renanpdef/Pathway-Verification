@@ -10,7 +10,7 @@ import protocolosv2.Sequence;
 public class ProtocolVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Test\\Test_10.xmi";
+        String file1 = "XMIs_Real_Test\\meningite.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
         Protocol protocol = protocolReader.createProtocol();
@@ -19,18 +19,23 @@ public class ProtocolVerificationMain {
         
         //print all valid solutions for variables in protocol
         printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
+        System.out.println("-------------------------------------------------------------------------");
         
         //print some solutions that occur non determinism problem
         printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
+        System.out.println("-------------------------------------------------------------------------");
         
         //print all solutions that occur deadlock
         printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
+        System.out.println("-------------------------------------------------------------------------");
         
         //print logically equivalent sequences
         printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+        System.out.println("-------------------------------------------------------------------------");
         
         //Verify if there are Inaccessible Step
         printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
+        System.out.println("-------------------------------------------------------------------------");
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {
