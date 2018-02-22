@@ -4,9 +4,11 @@ import java.util.List;
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
-import protocolosv2.Operand;
+
+import protocolosv2.Numeric;
 import protocolosv2.Operation;
 import protocolosv2.Operator;
+import protocolosv2.YesOrNo;
 
 public class OperandParser {
 	int index = 0;
@@ -23,43 +25,50 @@ public class OperandParser {
 			}
 			//if operand is a Numeric operand.
 			else if(operation.getOperand().get(i).getClass().toString().contains("Numeric")) {
+				Numeric operand = (Numeric) operation.getOperand().get(i);
 				//if the name of operand is null or "".
-				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
+				if(operand.getName() == null || operand.getName() == "") {
 					String name = operation.getOperator().getName() + index++;		
-					operation.getOperand().get(i).setName(name);
+					operand.setName(name);
 				}
-				IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,5,25,50,75,100});
+				IntVar intVar = auxModel.intVar(operand.getName(), new int[] {0,1,2,3,4,5,25,50,75,100});
 				//if numericOperands list still doesn't contain the new intVar.
 				if(!containsIntVar(numericOperands, intVar)) {
-					double operandValue = getOperandValue(operation.getOperand().get(i).toString());
+					//double operandValue = getOperandValue(operation.getOperand().get(i).toString());
+					double operandValue = 0;
+					if(operand.getValue() != null) {
+						operandValue = operand.getValue();
+					}
 					if(operandValue != 0) {
-						numericOperands.add(model.intVar(operation.getOperand().get(i).getName(), (int)operandValue));
+						numericOperands.add(model.intVar(operand.getName(), (int)operandValue));
 					}else {
-						numericOperands.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0,1,2,3,4,5,25,50,75,100}));
+						numericOperands.add(model.intVar(operand.getName(), new int[] {0,1,2,3,4,5,25,50,75,100}));
 					}
 				}
 				
 			}
 			//if operand is a YesOrNo (boolean) operand.
 			else {
+				YesOrNo operand = (YesOrNo) operation.getOperand().get(i);
 				//if the name of operand is null or "".
-				if(operation.getOperand().get(i).getName() == null || operation.getOperand().get(i).getName() == "") {
+				if(operand.getName() == null || operand.getName() == "") {
 					String name = operation.getOperator().getName() + index++;		
-					operation.getOperand().get(i).setName(name);
+					operand.setName(name);
 				}
 				
 				if(operation.getOperator() == Operator.SUM || operation.getOperator() == Operator.MINUS || operation.getOperator() == Operator.MULTIPLICATION || operation.getOperator() == Operator.DIVISION) {
-					IntVar intVar = auxModel.intVar(operation.getOperand().get(i).getName(), new int[] {0,1});
+					IntVar intVar = auxModel.intVar(operand.getName(), new int[] {0,1});
 					//if numericOperands list still doesn't contain the new intVar.
 					if(!containsIntVar(numericOperands, intVar)) {
-						double operandWeight = getOperandWeight(operation.getOperand().get(i).toString());
-						numericOperands.add(model.intVar(operation.getOperand().get(i).getName(), new int[] {0, (int)operandWeight}));
+						//double operandWeight = getOperandWeight(operation.getOperand().get(i).toString());
+						double operandWeight = operand.getWeight();
+						numericOperands.add(model.intVar(operand.getName(), new int[] {0, (int)operandWeight}));
 					}
 				}else {
-					BoolVar boolVar = auxModel.boolVar(operation.getOperand().get(i).getName());
+					BoolVar boolVar = auxModel.boolVar(operand.getName());
 					//if booleanOperands list don't already contain the new boolVar.
 					if(!containsBoolVar(booleanOperands, boolVar)) {
-						booleanOperands.add(model.boolVar(operation.getOperand().get(i).getName()));
+						booleanOperands.add(model.boolVar(operand.getName()));
 					}
 				}
 			}	
@@ -79,51 +88,15 @@ public class OperandParser {
 	}
 	
 	//Verify whether list numericOperands already has the intVar
-		public boolean containsIntVar(List<IntVar> numericOperands, IntVar intVar) {
-			String name = intVar.getName();
-			for(int i = 0; i < numericOperands.size(); i++) {
-				String bName = numericOperands.get(i).getName();
-				
-				if(bName.equalsIgnoreCase(name)) {
-					return true;
-				}			
-			}
-			return false;
+	public boolean containsIntVar(List<IntVar> numericOperands, IntVar intVar) {
+		String name = intVar.getName();
+		for(int i = 0; i < numericOperands.size(); i++) {
+			String bName = numericOperands.get(i).getName();
+			
+			if(bName.equalsIgnoreCase(name)) {
+				return true;
+			}			
 		}
-		
-		//Get the value of a numeric operand and return it as Double.
-		//str is a string representation of operand that contains the value.
-		private double getOperandValue(String str) {
-			int pos1 = str.lastIndexOf("(")+1;
-			int pos2 = str.lastIndexOf(")");
-			char[] charValue = new char[pos2-pos1];
-			str.getChars(pos1, pos2, charValue, 0);
-			String strValue = String.copyValueOf(charValue);
-			strValue = strValue.split(",")[2];
-			strValue = strValue.toString().replaceFirst(" value: ", "");
-			double doubleValue = 0;
-			try {
-				doubleValue = Double.parseDouble(strValue);
-			}catch(NumberFormatException e){
-			}
-			return doubleValue;
-		}
-		
-		//Get the weight of a Boolean operand and return it as Double.
-		//str is a string representation of operand that contains the weight.
-		private double getOperandWeight(String str) {
-			int pos1 = str.lastIndexOf("(")+1;
-			int pos2 = str.lastIndexOf(")");
-			char[] charWeight = new char[pos2-pos1];
-			str.getChars(pos1, pos2, charWeight, 0);
-			String strWeight = String.copyValueOf(charWeight);
-			strWeight = strWeight.split(",")[1];
-			strWeight = strWeight.toString().replaceFirst(" weight: ", "");
-			double doubleValue = 0;
-			try {
-				doubleValue = Double.parseDouble(strWeight);
-			}catch(NumberFormatException e){
-			}
-			return doubleValue;
-		}
+		return false;
+	}	
 }

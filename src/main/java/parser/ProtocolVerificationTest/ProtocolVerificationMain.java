@@ -10,7 +10,8 @@ import protocolosv2.Sequence;
 public class ProtocolVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Real_Test\\meningite.xmi";
+        //String file1 = "XMIs_Real_Test\\meningite.xmi";
+		String file1 = "XMIs_Test\\Test_08.xmi";
         
         ProtocolReader protocolReader = new ProtocolReader(file1);
         Protocol protocol = protocolReader.createProtocol();
