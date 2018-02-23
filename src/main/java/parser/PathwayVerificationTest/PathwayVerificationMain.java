@@ -1,24 +1,24 @@
-package parser.ProtocolVerificationTest;
+package parser.PathwayVerificationTest;
 
 import java.util.List;
 import java.util.Map;
 import org.chocosolver.solver.Solution;
-import protocolosv2.Element;
-import protocolosv2.Protocol;
-import protocolosv2.Sequence;
+import pathwayMetamodel.Element;
+import pathwayMetamodel.Pathway;
+import pathwayMetamodel.Sequence;
 
-public class ProtocolVerificationMain {
+public class PathwayVerificationMain {
     
 	public static void main( String[] args )    {
         //String file1 = "XMIs_Real_Test\\meningite.xmi";
-		String file1 = "XMIs_Test\\Test_08.xmi";
+		String file1 = "XMIs_Test\\Test01.xmi";
         
-        ProtocolReader protocolReader = new ProtocolReader(file1);
-        Protocol protocol = protocolReader.createProtocol();
-        FindSolutions findSolutions = new FindSolutions(protocol);
-        FindInaccessibleStep inaccessibleStep = new FindInaccessibleStep(protocol);
+        PathwayReader pathwayReader = new PathwayReader(file1);
+        Pathway pathway = pathwayReader.createPathway();
+        FindSolutions findSolutions = new FindSolutions(pathway);
+        FindInaccessibleStep inaccessibleStep = new FindInaccessibleStep(pathway);
         
-        //print all valid solutions for variables in protocol
+        //print all valid solutions for variables in pathway
         printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
         System.out.println("-------------------------------------------------------------------------");
         

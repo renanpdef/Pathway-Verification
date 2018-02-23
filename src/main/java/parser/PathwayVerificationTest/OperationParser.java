@@ -1,4 +1,4 @@
-package parser.ProtocolVerificationTest;
+package parser.PathwayVerificationTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,16 +6,16 @@ import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 
-import protocolosv2.Operand;
-import protocolosv2.Operation;
+import pathwayMetamodel.Operand;
+import pathwayMetamodel.Operation;
 
 public class OperationParser { 
 	int index = 0;
 	
 	//return a sequence representation as a BoolVar.
-	//operation is the operation of a sequence from the protocol.
-	//booleanOperands is a list of the logical operands that makes up all operations in the protocol.
-	//numericOperands is a list of the numeric operands that makes up all operations in the protocol.
+	//operation is the operation of a sequence from the pathway.
+	//booleanOperands is a list of the logical operands that makes up all operations in the pathway.
+	//numericOperands is a list of the numeric operands that makes up all operations in the pathway.
 	public BoolVar createBoolVarSequence(Operation operation, List<BoolVar> booleanOperands, List<IntVar> numericOperands){			
 		//Create a Boolvar with a constraint corresponding to the operator from operation and return it.
 		//For each case, verify if the operands from operation are other operation or not.
@@ -40,16 +40,16 @@ public class OperationParser {
 			case EQUAL:
 				return boolRelacionalOperations(operation, numericOperands, "="); 
 				
-			case EQUAL_OR_GREATER:
+			case GREATER_OR_EQUAL:
 				return boolRelacionalOperations(operation, numericOperands, ">="); 
 		
-			case EQUAL_OR_SMALLER:
+			case LESS_OR_EQUAL:
 				return boolRelacionalOperations(operation, numericOperands, "<="); 
 				 
-			case BIGGER_THAN:
+			case GREATER_THAN:
 				return boolRelacionalOperations(operation, numericOperands, ">"); 
 				
-			case SMALLER_THAN:
+			case LESS_THAN:
 				return boolRelacionalOperations(operation, numericOperands, "<");
 			
 			case AFFIRMATION:
@@ -78,8 +78,8 @@ public class OperationParser {
 	}
 	
 	//Return an IntVar as a result of a possible sums.
-	//operation is the operation of a sequence from the protocol whose operator is sum, minus, multiplication or division.
-	//numericOperands is a list of the numeric operands that makes up all operations in the protocol.
+	//operation is the operation of a sequence from the pathway whose operator is sum, minus, multiplication or division.
+	//numericOperands is a list of the numeric operands that makes up all operations in the pathway.
 	private IntVar calculate(Operation operation, List<IntVar> numericOperands) {
 		IntVar result;
 		if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
@@ -94,7 +94,7 @@ public class OperationParser {
 			//For each case, verify if the operands of operation are other operation or not.
 			//When the operand is a operation, this method is called recursively with operand as a parameter.
 			switch(operation.getOperator()) {
-				case SUM:
+				case ADDITION:
 					if(strOperand.contains("Operation")) {
 						result = result.add(calculate((Operation) operation.getOperand().get(i), numericOperands)).intVar();
 					}
@@ -103,7 +103,7 @@ public class OperationParser {
 					}
 					break;
 					
-				case MINUS:
+				case SUBTRACTION:
 					if(strOperand.contains("Operation")) {
 						result = result.sub(calculate((Operation) operation.getOperand().get(i), numericOperands)).intVar();
 					}

@@ -1,4 +1,4 @@
-package parser.ProtocolVerificationTest;
+package parser.PathwayVerificationTest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,14 +10,14 @@ import org.chocosolver.solver.Solution;
 import org.chocosolver.solver.variables.BoolVar;
 import org.eclipse.emf.common.util.EList;
 
-import protocolosv2.Element;
-import protocolosv2.Protocol;
-import protocolosv2.Sequence;
+import pathwayMetamodel.Element;
+import pathwayMetamodel.Pathway;
+import pathwayMetamodel.Sequence;
 
 public class FindInaccessibleStep extends SequenceParser {
 	
-	public FindInaccessibleStep(Protocol protocol) {
-		super(protocol);
+	public FindInaccessibleStep(Pathway pathway) {
+		super(pathway);
 	}
 
 	//Return a set of Elements that is a inaccessible step.
@@ -70,7 +70,7 @@ public class FindInaccessibleStep extends SequenceParser {
 				}
 			}
 		}
-		List<Element> inaccessibleElements = getInaccessibleElements(accessibleElements, protocol.getElemento());
+		List<Element> inaccessibleElements = getInaccessibleElements(accessibleElements, pathway.getElement());
 		return inaccessibleElements;
 	}
 	

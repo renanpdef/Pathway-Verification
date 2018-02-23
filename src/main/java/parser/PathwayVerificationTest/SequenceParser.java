@@ -1,4 +1,4 @@
-package parser.ProtocolVerificationTest;
+package parser.PathwayVerificationTest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,20 +7,21 @@ import java.util.Map;
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
-import protocolosv2.Element;
-import protocolosv2.Operation;
-import protocolosv2.Protocol;
-import protocolosv2.Sequence;
+
+import pathwayMetamodel.Element;
+import pathwayMetamodel.Operation;
+import pathwayMetamodel.Pathway;
+import pathwayMetamodel.Sequence;
 
 public class SequenceParser {
 	private OperationParser operations = new OperationParser(); //Instantiates the class that handles operations between BoolBar variables.
 	private OperandParser operands = new OperandParser();  //Instantiates the class that handles operations between BoolVar variables.
-	protected Protocol protocol; //The protocol to be analyzed.
-	protected Map<Element, List<Sequence>> mapElementOutputSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the protocol.
+	protected Pathway pathway; //The pathway to be analyzed.
+	protected Map<Element, List<Sequence>> mapElementOutputSequences = new HashMap<Element, List<Sequence>>(); //A map that stores all the elements and their respective output sequences from the pathway.
 	
-	// A constructor to initialize the protocol and the mapElementOutputSequences.
-	public SequenceParser(Protocol protocol) {
-		this.protocol = protocol;
+	// A constructor to initialize the pathway and the mapElementOutputSequences.
+	public SequenceParser(Pathway pathway) {
+		this.pathway = pathway;
 		getModelFragmentsForVerification();
 	}
 	
@@ -56,16 +57,16 @@ public class SequenceParser {
 		return mapLogicallyEquivalentSequence;
 	}
 
-	//get all the sequences from the protocol and put it into a map "mapElementOutputSequences".
+	//get all the sequences from the pathway and put it into a map "mapElementOutputSequences".
 	//mapElementOutputSequences associate sequences with their respective output steps.
 	private void getModelFragmentsForVerification(){
-		for (int i = 0; i < protocol.getSequence().size(); i++) {
-			if(!mapElementOutputSequences.containsKey(protocol.getSequence().get(i).getOutputStep())) {
+		for (int i = 0; i < pathway.getSequence().size(); i++) {
+			if(!mapElementOutputSequences.containsKey(pathway.getSequence().get(i).getOutputStep())) {
 				List<Sequence> sequences = new ArrayList<Sequence>();
-				mapElementOutputSequences.put(protocol.getSequence().get(i).getOutputStep(), sequences);
-				mapElementOutputSequences.get(protocol.getSequence().get(i).getOutputStep()).add(protocol.getSequence().get(i));
+				mapElementOutputSequences.put(pathway.getSequence().get(i).getOutputStep(), sequences);
+				mapElementOutputSequences.get(pathway.getSequence().get(i).getOutputStep()).add(pathway.getSequence().get(i));
 			}else {
-				mapElementOutputSequences.get(protocol.getSequence().get(i).getOutputStep()).add(protocol.getSequence().get(i));
+				mapElementOutputSequences.get(pathway.getSequence().get(i).getOutputStep()).add(pathway.getSequence().get(i));
 			}
 		}
 	}

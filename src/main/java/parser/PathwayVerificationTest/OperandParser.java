@@ -1,14 +1,14 @@
-package parser.ProtocolVerificationTest;
+package parser.PathwayVerificationTest;
 
 import java.util.List;
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 
-import protocolosv2.Numeric;
-import protocolosv2.Operation;
-import protocolosv2.Operator;
-import protocolosv2.YesOrNo;
+import pathwayMetamodel.Numeric;
+import pathwayMetamodel.Operation;
+import pathwayMetamodel.Operator;
+import pathwayMetamodel.YesOrNo;
 
 public class OperandParser {
 	int index = 0;
@@ -56,7 +56,7 @@ public class OperandParser {
 					operand.setName(name);
 				}
 				
-				if(operation.getOperator() == Operator.SUM || operation.getOperator() == Operator.MINUS || operation.getOperator() == Operator.MULTIPLICATION || operation.getOperator() == Operator.DIVISION) {
+				if(operation.getOperator() == Operator.ADDITION || operation.getOperator() == Operator.SUBTRACTION || operation.getOperator() == Operator.MULTIPLICATION || operation.getOperator() == Operator.DIVISION) {
 					IntVar intVar = auxModel.intVar(operand.getName(), new int[] {0,1});
 					//if numericOperands list still doesn't contain the new intVar.
 					if(!containsIntVar(numericOperands, intVar)) {

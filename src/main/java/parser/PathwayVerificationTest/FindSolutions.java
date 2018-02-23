@@ -1,4 +1,4 @@
-package parser.ProtocolVerificationTest;
+package parser.PathwayVerificationTest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,14 +7,15 @@ import java.util.Map;
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.Solution;
 import org.chocosolver.solver.variables.BoolVar;
-import protocolosv2.Element;
-import protocolosv2.Protocol;
-import protocolosv2.Sequence;
+
+import pathwayMetamodel.Element;
+import pathwayMetamodel.Pathway;
+import pathwayMetamodel.Sequence;
 
 public class FindSolutions extends SequenceParser{
 
-	public FindSolutions(Protocol protocol) {
-		super(protocol);
+	public FindSolutions(Pathway pathway) {
+		super(pathway);
 	}
 
 	//Return a map with Elements as a key and a list of all solutions that occurs deadlock in the element as a value of the key.
