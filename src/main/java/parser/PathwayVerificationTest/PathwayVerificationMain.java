@@ -10,7 +10,7 @@ import pathwayMetamodel.Sequence;
 public class PathwayVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Real_Test\\fratura_exposta.xmi";
+        String file1 = "XMIs_Real_Test\\tratamento_de_sepse.xmi";
 		//String file1 = "XMIs_Test\\Test01.xmi";
         
         PathwayReader pathwayReader = new PathwayReader(file1);
