@@ -23,7 +23,7 @@ public class OperationParser {
 			//For AND, OR, IMPLIES, XOR or Default (NOT) operators:
 				//this function is called recursively with operand as a parameter.
 			//For EQUAL, EQUAL_OR_GREATER, EQUAL_OR_SMALLER, BIGGER_THAN, SMALLER_THAN operators:
-				//the function calculate is called.
+				//the function intArithmeticOperations is called.
 		switch(operation.getOperator()) {
 			case AND:
 				return boolLogicalOperations(operation, booleanOperands, numericOperands, "+", "=", 2);
@@ -80,10 +80,10 @@ public class OperationParser {
 	//Return an IntVar as a result of a possible sums.
 	//operation is the operation of a sequence from the pathway whose operator is sum, minus, multiplication or division.
 	//numericOperands is a list of the numeric operands that makes up all operations in the pathway.
-	private IntVar calculate(Operation operation, List<IntVar> numericOperands) {
+	private IntVar intArithmeticOperations(Operation operation, List<IntVar> numericOperands) {
 		IntVar result;
 		if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
-			result = calculate((Operation) operation.getOperand().get(0), numericOperands);
+			result = intArithmeticOperations((Operation) operation.getOperand().get(0), numericOperands);
 		}else {
 			result = numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(0)));
 		}
@@ -96,7 +96,7 @@ public class OperationParser {
 			switch(operation.getOperator()) {
 				case ADDITION:
 					if(strOperand.contains("Operation")) {
-						result = result.add(calculate((Operation) operation.getOperand().get(i), numericOperands)).intVar();
+						result = result.add(intArithmeticOperations((Operation) operation.getOperand().get(i), numericOperands)).intVar();
 					}
 					else {
 						result = result.add(numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i)))).intVar();
@@ -105,7 +105,7 @@ public class OperationParser {
 					
 				case SUBTRACTION:
 					if(strOperand.contains("Operation")) {
-						result = result.sub(calculate((Operation) operation.getOperand().get(i), numericOperands)).intVar();
+						result = result.sub(intArithmeticOperations((Operation) operation.getOperand().get(i), numericOperands)).intVar();
 					}
 					else {
 						result = result.sub(numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i)))).intVar();
@@ -114,7 +114,7 @@ public class OperationParser {
 					
 				case MULTIPLICATION:
 					if(strOperand.contains("Operation")) {
-						result = result.mul(calculate((Operation) operation.getOperand().get(i), numericOperands)).intVar();
+						result = result.mul(intArithmeticOperations((Operation) operation.getOperand().get(i), numericOperands)).intVar();
 					}
 					else {
 						result = result.mul(numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i)))).intVar();
@@ -123,7 +123,7 @@ public class OperationParser {
 					
 				case DIVISION:
 					if(strOperand.contains("Operation")) {
-						result = result.div(calculate((Operation) operation.getOperand().get(i), numericOperands)).intVar();
+						result = result.div(intArithmeticOperations((Operation) operation.getOperand().get(i), numericOperands)).intVar();
 					}
 					else {
 						result = result.div(numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i)))).intVar();
@@ -147,18 +147,18 @@ public class OperationParser {
 		List<BoolVar> boolOperation = new ArrayList<BoolVar>();//stores the operation as BoolVar.
 		
 		//Verify if the operands from operation are other operation or not.
-		//When the operand is a operation the function calculate is called.
+		//When the operand is a operation the function intArithmeticOperations is called.
 		for(int i = 1; i < operation.getOperand().size(); i++) {
 			String strOperand1 = operation.getOperand().get(i-1).getClass().toString();
 			String strOperand2 = operation.getOperand().get(i).getClass().toString();
 			if(strOperand1.contains("Operation") && strOperand2.contains("Operation")) {
-				boolOperation.add(auxModel.arithm(calculate((Operation) operation.getOperand().get(i-1), numericOperands), operator, calculate((Operation) operation.getOperand().get(i), numericOperands)).reify());
+				boolOperation.add(auxModel.arithm(intArithmeticOperations((Operation) operation.getOperand().get(i-1), numericOperands), operator, intArithmeticOperations((Operation) operation.getOperand().get(i), numericOperands)).reify());
 			}
 			else if(strOperand1.contains("Operation") && !strOperand2.contains("Operation")) {
-				boolOperation.add(auxModel.arithm(calculate((Operation) operation.getOperand().get(i-1), numericOperands), operator, numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i)))).reify());
+				boolOperation.add(auxModel.arithm(intArithmeticOperations((Operation) operation.getOperand().get(i-1), numericOperands), operator, numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i)))).reify());
 			}
 			else if(!strOperand1.contains("Operation") && strOperand2.contains("Operation")) {
-				boolOperation.add(auxModel.arithm(numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i-1))), operator,calculate((Operation) operation.getOperand().get(i), numericOperands)).reify());
+				boolOperation.add(auxModel.arithm(numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i-1))), operator,intArithmeticOperations((Operation) operation.getOperand().get(i), numericOperands)).reify());
 			}
 			else {
 				boolOperation.add(auxModel.arithm(numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i-1))), operator, numericOperands.get(indexOfIntVar(numericOperands, operation.getOperand().get(i)))).reify());
