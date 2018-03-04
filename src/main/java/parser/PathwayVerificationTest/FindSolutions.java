@@ -51,12 +51,12 @@ public class FindSolutions extends SequenceParser{
 					for(int j = i+1; j < sequences.size(); j++) {
 						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
 						mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[k], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
-						//If mapSolutions has already a list of solutions for the Element, then it returns the list.
-						if(!mapSolutions.get((Element) mapElementOutputSequences.keySet().toArray()[k]).isEmpty()) {
-							return mapSolutions;
-						}
 						model.getSolver().reset();//reset the solver for a new interaction
 						model.unpost(model.getCstrs()[model.getCstrs().length-1]);//unpost the last constraint.
+					}
+					//If mapSolutions has already a list of solutions for the Element, then it returns the list.
+					if(!mapSolutions.get((Element) mapElementOutputSequences.keySet().toArray()[k]).isEmpty()) {
+						break;
 					}
 				}
 			}

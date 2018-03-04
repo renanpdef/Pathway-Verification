@@ -41,7 +41,7 @@ public class PathwayVerificationMain {
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {
     	System.out.println("\n" + solutionsName);
-    	//Go through all lists of solutions from mapDeadLockSolutions.
+    	//Go through all lists of solutions from mapSolutions.
         for (int k = 0; k < mapSolutions.size(); k++) {
         	List<Solution> solutionsList = (List<Solution>) mapSolutions.values().toArray()[k];
         	Element step = (Element) mapSolutions.keySet().toArray()[k];//get the output step of the sequences which was analyzed.
