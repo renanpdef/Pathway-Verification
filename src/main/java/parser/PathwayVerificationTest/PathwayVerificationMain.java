@@ -10,7 +10,7 @@ import pathwayMetamodel.Sequence;
 public class PathwayVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Real_Test\\tratamento_de_sepse.xmi";
+        String file1 = "XMIs_Real_Test\\itu__cistite.xmi";
 		//String file1 = "XMIs_Test\\Test01.xmi";
         
         PathwayReader pathwayReader = new PathwayReader(file1);
@@ -19,24 +19,24 @@ public class PathwayVerificationMain {
         FindInaccessibleStep inaccessibleStep = new FindInaccessibleStep(pathway);
         
         //print all valid solutions for variables in pathway
-        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
-        
-        //print some solutions that occur non determinism problem
-        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
+//        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
+//        System.out.println("-------------------------------------------------------------------------");
+//        
+//        //print some solutions that occur non determinism problem
+//        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
+//        System.out.println("-------------------------------------------------------------------------");
         
         //print all solutions that occur deadlock
         printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
         System.out.println("-------------------------------------------------------------------------");
         
-        //print logically equivalent sequences
-        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
-        System.out.println("-------------------------------------------------------------------------");
-        
-        //Verify if there are Inaccessible Step
-        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
-        System.out.println("-------------------------------------------------------------------------");
+//        //print logically equivalent sequences
+//        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+//        System.out.println("-------------------------------------------------------------------------");
+//        
+//        //Verify if there are Inaccessible Step
+//        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
+//        System.out.println("-------------------------------------------------------------------------");
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {

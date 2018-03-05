@@ -27,11 +27,16 @@ public class FindSolutions extends SequenceParser{
 			Model model = new Model("Find DeadLock Solutions: " + i);//Create a model to verify deadlock of a element in the mapElementOutputSequences with ChocoSolver.
 			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapElementOutputSequences.values().toArray()[i]); //Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
 			if (sequences!=null && !sequences.isEmpty()) {
-				//Go through all the BoolVars in the list sequences.
-				for(int k = 0; k < sequences.size(); k++) {
-					model.arithm(sequences.get(k), "=", 0).post();//Post the constraint "the sequence i have to be false" to the model.
+				if(model.getCstrs().length != 0 || sequences.size() > 1){
+					//Go through all the BoolVars in the list sequences.
+					for(int k = 0; k < sequences.size(); k++) {
+						model.arithm(sequences.get(k), "=", 0).post();//Post the constraint "the sequence i have to be false" to the model.
+					}
+					List<Solution> solutions = model.getSolver().findAllSolutions();
+					if(!solutions.isEmpty()) {
+						mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[i], solutions);//Put the Element and the solutions get from model in the mapSolutions.
+					}
 				}
-				mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
 			}
 		}
 		return mapSolutions;
@@ -50,12 +55,15 @@ public class FindSolutions extends SequenceParser{
 				for (int i = 0; i < sequences.size(); i++) {
 					for(int j = i+1; j < sequences.size(); j++) {
 						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
-						mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[k], model.getSolver().findAllSolutions());//Put the Element and the solutions get from model in the mapSolutions.
+						List<Solution> solutions = model.getSolver().findAllSolutions();
+						if(!solutions.isEmpty()) {
+							mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[k], solutions);//Put the Element and the solutions get from model in the mapSolutions.
+						}
 						model.getSolver().reset();//reset the solver for a new interaction
 						model.unpost(model.getCstrs()[model.getCstrs().length-1]);//unpost the last constraint.
 					}
 					//If mapSolutions has already a list of solutions for the Element, then it returns the list.
-					if(!mapSolutions.get((Element) mapElementOutputSequences.keySet().toArray()[k]).isEmpty()) {
+					if(mapSolutions.get((Element) mapElementOutputSequences.keySet().toArray()[k]) != null && !mapSolutions.get((Element) mapElementOutputSequences.keySet().toArray()[k]).isEmpty()) {
 						break;
 					}
 				}
@@ -74,8 +82,10 @@ public class FindSolutions extends SequenceParser{
 			if (sequences!=null && !sequences.isEmpty()) {
 				//Verify if there is only one boolvar in the list.
 				if(sequences.size()==1) {
-					model.arithm(sequences.get(0), "=", 1).post();//Post the constraint "the sequence have to be true" to the model.
-					mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());
+					if(model.getCstrs().length != 0){
+						model.arithm(sequences.get(0), "=", 1).post();//Post the constraint "the sequence have to be true" to the model.
+						mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[i], model.getSolver().findAllSolutions());
+					}
 				}
 				else {
 					List<BoolVar> auxSeq = new ArrayList<BoolVar>();//Auxiliary list of boolvar to store the new boolvar variables.
