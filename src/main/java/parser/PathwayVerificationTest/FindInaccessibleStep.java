@@ -27,6 +27,7 @@ public class FindInaccessibleStep extends SequenceParser {
 		for(int i = 0; i < mapElementOutputSequences.values().size(); i++){
 			Model model = new Model("Find All Solutions: " + i); //Create a model to verify the valid solutions of a element in the mapElementOutputSequences with ChocoSolver.
 			Element element = (Element) mapElementOutputSequences.keySet().toArray()[i];
+			//The root element has no input sequence
 			if(element.getInputSequences().isEmpty()) {
 				accessibleElements.add(element);
 			}
@@ -69,6 +70,7 @@ public class FindInaccessibleStep extends SequenceParser {
 					model.unpost(model.getCstrs()[model.getCstrs().length-1]);//unpost the last constraint.
 				}
 			}
+			
 		}
 		List<Element> inaccessibleElements = getInaccessibleElements(accessibleElements, pathway.getElement());
 		return inaccessibleElements;
