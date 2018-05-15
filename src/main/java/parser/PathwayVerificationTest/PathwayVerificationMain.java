@@ -10,26 +10,27 @@ import pathwayMetamodel.Sequence;
 public class PathwayVerificationMain {
     
 	public static void main( String[] args )    {
-        String file1 = "XMIs_Real_Test\\itu__cistite.xmi";
-		//String file1 = "XMIs_Test\\Test01.xmi";
+        //String file1 = "XMIs_Real_Test\\fratura_exposta.xmi";
+		String file1 = "XMIs_Test\\Test02.xmi";
         
         PathwayReader pathwayReader = new PathwayReader(file1);
         Pathway pathway = pathwayReader.createPathway();
         FindSolutions findSolutions = new FindSolutions(pathway);
         FindInaccessibleStep inaccessibleStep = new FindInaccessibleStep(pathway);
+        FindInaccessibleStep2 inaccessibleStep2 = new FindInaccessibleStep2(pathway);
         
-        //print all valid solutions for variables in pathway
+//        //print all valid solutions for variables in pathway
 //        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
 //        System.out.println("-------------------------------------------------------------------------");
 //        
 //        //print some solutions that occur non determinism problem
 //        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
 //        System.out.println("-------------------------------------------------------------------------");
-        
-        //print all solutions that occur deadlock
-        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
-        
+//        
+//        //print all solutions that occur deadlock
+//        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
+//        System.out.println("-------------------------------------------------------------------------");
+//        
 //        //print logically equivalent sequences
 //        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
 //        System.out.println("-------------------------------------------------------------------------");
@@ -37,6 +38,8 @@ public class PathwayVerificationMain {
 //        //Verify if there are Inaccessible Step
 //        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
 //        System.out.println("-------------------------------------------------------------------------");
+        
+        inaccessibleStep2.findInaccessibleSteps();
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {
@@ -46,7 +49,7 @@ public class PathwayVerificationMain {
         	List<Solution> solutionsList = (List<Solution>) mapSolutions.values().toArray()[k];
         	Element step = (Element) mapSolutions.keySet().toArray()[k];//get the output step of the sequences which was analyzed.
         	System.out.println("\n" + step.getClass().getSimpleName() +": "+ step.getName());//print the name of the output step.
-        	printSequencesOperations(step);
+        	//printSequencesOperations(step);
         	//Go through the list of solutions
         	for (int i = 0; i < solutionsList.size(); i++) {
 	        	String str[] = solutionsList.get(i).toString().split(",");
