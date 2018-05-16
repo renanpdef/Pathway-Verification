@@ -92,7 +92,7 @@ public class SequenceParser {
 	//Sequence is the sequence that will be transform.
 	//booleanOperands is a list that will contain the operands as a boolvar variables.
 	//numericOperands is a list that will contain the operands as a intVar variables.
-	private BoolVar sequenceToBoolVar(Model model, Sequence sequence, List<BoolVar> booleanOperands, List<IntVar> numericOperands){
+	protected BoolVar sequenceToBoolVar(Model model, Sequence sequence, List<BoolVar> booleanOperands, List<IntVar> numericOperands){
 		if(sequence.getOperation() != null) {
 			Operation operation = sequence.getOperation();
 			operands.operandsIntoLists(booleanOperands, numericOperands, model, operation); //Update the lists booleanOperands and numericOperands with new operands from op.			
