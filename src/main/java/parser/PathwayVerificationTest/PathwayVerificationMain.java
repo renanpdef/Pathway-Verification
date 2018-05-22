@@ -10,8 +10,8 @@ import pathwayMetamodel.Sequence;
 public class PathwayVerificationMain {
     
 	public static void main( String[] args )    {
-        //String file1 = "XMIs_Real_Test\\fratura_exposta.xmi";
-		String file1 = "XMIs_Test\\Test02.xmi";
+        String file1 = "XMIs_Real_Test\\tratamento_de_sepse.xmi";
+		//String file1 = "XMIs_Test\\Test05.xmi";
         
         PathwayReader pathwayReader = new PathwayReader(file1);
         Pathway pathway = pathwayReader.createPathway();
@@ -39,7 +39,8 @@ public class PathwayVerificationMain {
 //        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
 //        System.out.println("-------------------------------------------------------------------------");
         
-        inaccessibleStep2.findInaccessibleSteps();
+        printInaccessibleStep(inaccessibleStep2.findInaccessibleSteps());
+        System.out.println("-------------------------------------------------------------------------");        
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {

@@ -29,7 +29,7 @@ public class FindInaccessibleStep2 extends SequenceParser {
 		Stack<Element> elementsStack = new Stack<Element>();
 		List<Sequence> sequenceList = new ArrayList<Sequence>();
 
-		Element initialElement = pathway.getElement().get(0);
+		Element initialElement = getInitialStep(pathway.getElement());
 		accessibleElements.add(initialElement);
 		visitedElements.add(initialElement);
 		elementsStack.push(initialElement);
@@ -83,6 +83,15 @@ public class FindInaccessibleStep2 extends SequenceParser {
 			}
 		}
 		return inaccessibleElements;
+	}
+	
+	private Element getInitialStep(List<Element> elementList) {
+		for (int i = 0; i < elementList.size(); i++) {
+			if(elementList.get(i).getInputSequences().size() == 0 && elementList.get(i).getOutputSequences().size() > 0) {
+				return elementList.get(i);
+			}
+		}
+		return null;
 	}
 
 }
