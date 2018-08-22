@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="1162" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/?format=json" name="Pneumonia &amp; Influenza" code="H002">
+  <element xsi:type="pathwayMetamodel:Information" id="4849" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/informacoes/4849/" name="[Port 3] Aviso Influenza" description="Paciente em grupo de risco para influenza, sugere-se tratamento espec&#xed;fico com Tamiflu." inputSequences="//@sequence.23" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Information" id="4850" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/informacoes/4850/" name="[Port 2] Aviso Influenza" description="Paciente em grupo de risco para influenza, sugere-se tratamento espec&#xed;fico com Tamiflu." inputSequences="//@sequence.13" outputSequences="//@sequence.29"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4851" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4851/" name="Verificar Idade do Paciente" description="Verifique a idade do paciente" inputSequences="//@sequence.28" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Idade:" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4851/perguntas/3363/" id="3363">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="idade" id="5805" weight="1" value="0.0"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4852" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4852/" name="Verificar Comorbidades" description="Verifique se o paciente possui alguma comorbidade." inputSequences="//@sequence.1" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="DPOC?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4852/perguntas/3364/" id="3364">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dpoc" id="5806" weight="1" value="false"/>
+    </questions>
+    <questions text="ICC?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4852/perguntas/3365/" id="3365">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_ICC" id="5807" weight="1" value="false"/>
+    </questions>
+    <questions text="IRC?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4852/perguntas/3366/" id="3366">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_IRC" id="5808" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a Hep&#xe1;tica Cr&#xf4;nica?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4852/perguntas/3367/" id="3367">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_hepatica" id="5809" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;as Neurodegenerativas?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4852/perguntas/3368/" id="3368">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neurodegen" id="5810" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a Neopl&#xe1;sica?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4852/perguntas/3369/" id="3369">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neoplasica" id="5811" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4852/perguntas/3370/" id="3370">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_imunossupressao" id="5812" weight="1" value="false"/>
+    </questions>
+    <questions text="Internamento Recente (&#xfa;timos 30 dias)?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4852/perguntas/3371/" id="3371">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_internamento" id="5813" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4853" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4853/" name="Raio X de T&#xf3;rax" description="Solicite o raio X de t&#xf3;rax para verificar presen&#xe7;a de infiltrados no paciente." inputSequences="//@sequence.4" outputSequences="//@sequence.5">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4853/exames/2861/" exam_id="32050054" limb_side="" quantity="1" reason="Protocolo de pneumonia" clinical_indication="Protocolo de pneumonia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4854" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/" name="Raio X + Pacote de Exames Laboratoriais" description="Paciente apresenta fatores complicadores para o tratamento, idade avan&#xe7;ada ou presen&#xe7;a de comorbidades, recomenda-se solicitar al&#xe9;m do raio X do t&#xf3;rax o pacote de exames laboratoriais a seguir:" inputSequences="//@sequence.2 //@sequence.3" outputSequences="//@sequence.15">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2862/" exam_id="28040481" limb_side="" quantity="1" reason="Suspeita de Influenza" clinical_indication="Nenhuma"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2863/" exam_id="28090209" limb_side="" quantity="1" reason="protocolo de pneumonia" clinical_indication="tratamento de pneumonia"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2864/" exam_id="28011279" limb_side="" quantity="1" reason="protocolo de pneumonia" clinical_indication="tratamento de pneumonia"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2865/" exam_id="28011210" limb_side="" quantity="1" reason="protocolo de pneumonia" clinical_indication="tratamento de pneumonia"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2866/" exam_id="28010973" limb_side="" quantity="1" reason="protocolo pneumonia" clinical_indication="tratamento de pneumonia"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2867/" exam_id="28011414" limb_side="" quantity="1" reason="protocolo pneumonia" clinical_indication="tratamento de pneumonia"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2868/" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de Pneumonia" clinical_indication="Protocolo de Pneumonia"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2869/" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Pneumonia" clinical_indication="Protocolo de Pneumonia"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2870/" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de Pneumonia" clinical_indication="Protocolo de Pneumonia"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/tratamentos/4854/exames/2871/" exam_id="32050054" limb_side="" quantity="1" reason="Protocolo de Pneumonia" clinical_indication="Protocolo de Pneumonia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4855" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4855/" name="Avaliar Resultados" description="Avalie o resultado do exame do paciente. Verifique a presen&#xe7;a de infiltrados no resultado do exame." inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="H&#xe1; infiltrado?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4855/perguntas/3372/" id="3372">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ha_infiltrado" id="5814" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4856" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/informacoes/4856/" name="Aviso: Investigar Causas e Sintomas" description="Investigar causas de pacientes com sinais e sintomas de pneumonia mas que n&#xe3;o apresentam altera&#xe7;&#xf5;es radiol&#xf3;gicas. Sugere-se discutir com l&#xed;der local para tratamento individualizado do caso." isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Information" id="4857" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/informacoes/4857/" name="Aviso: Altera&#xe7;&#xf5;es Importantes" description="Aviso: Quaisquer outras altera&#xe7;&#xf5;es importantes como derrame pleural, abscesso, n&#xf3;dulos, massas, devem ser individualizadas. Sugere-se discutir com  o l&#xed;der local para defini&#xe7;&#xe3;o do procedimento mais adequado." inputSequences="//@sequence.7" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4858" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4858/" name="[Port 2] Avaliar Fatores de Risco Para Influenza" description="Avalie se o paciente apresenta fatores que indicam risco de Influenza." inputSequences="//@sequence.8 //@sequence.16" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Tosse?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4858/perguntas/3373/" id="3373">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_tosse" id="5815" weight="1" value="false"/>
+    </questions>
+    <questions text="Febre?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4858/perguntas/3374/" id="3374">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_febre" id="5816" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor de garganta?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4858/perguntas/3375/" id="3375">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_dor" id="5817" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4859" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4859/" name="[Port 2] Avaliar Fatores Agravantes para Influenza" description="Avalie se o paciente apresenta algum dos fatores que podem ser indicadores agravantes no caso de Influenza" inputSequences="//@sequence.9" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Mialgia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4859/perguntas/3376/" id="3376">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_mialgia" id="5818" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefal&#xe9;ia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4859/perguntas/3377/" id="3377">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_cefaleia" id="5819" weight="1" value="false"/>
+    </questions>
+    <questions text="Artralgia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4859/perguntas/3378/" id="3378">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_artralgia" id="5820" weight="1" value="false"/>
+    </questions>
+    <questions text="Diarr&#xe9;ia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4859/perguntas/3379/" id="3379">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_diarreia" id="5821" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4860" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/" name="[Port 2] Avaliar Complica&#xe7;&#xf5;es para Influenza" description="Verifique se o paciente possui alguma comorbidade ou fator agravante para o quadro de Influenza." inputSequences="//@sequence.11" outputSequences="//@sequence.13 //@sequence.14">
+    <questions text="Gestante/Puerperas?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3380/" id="3380">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_gestante" id="5822" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade > 60?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3381/" id="3381">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_idade" id="5823" weight="1" value="false"/>
+    </questions>
+    <questions text="Pneumopatias?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3382/" id="3382">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_pneumopatias" id="5824" weight="1" value="false"/>
+    </questions>
+    <questions text="ICC?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3383/" id="3383">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_ICC" id="5825" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a Renal Cr&#xf4;nica?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3384/" id="3384">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doenca_renal" id="5826" weight="1" value="false"/>
+    </questions>
+    <questions text="Cirrose Hep&#xe1;tica?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3385/" id="3385">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_cirrose" id="5827" weight="1" value="false"/>
+    </questions>
+    <questions text="Neoplasias?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3386/" id="3386">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_neoplasias" id="5828" weight="1" value="false"/>
+    </questions>
+    <questions text="Diabetes?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3387/" id="3387">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_diabetes" id="5829" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;as Neurodegenerativas?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3388/" id="3388">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doencas_neurodegen" id="5830" weight="1" value="false"/>
+    </questions>
+    <questions text="Obesidade M&#xf3;rbida (IMC > 40)?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3389/" id="3389">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_obesidade" id="5831" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4860/perguntas/3390/" id="3390">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_imunossupressao" id="5832" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4861" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/" name="C&#xe1;lculo do Port" description="Verifique os exames do paciente e preencha a tabela a seguir para calcular o PORT e seguir com o tratamento mais adequado." inputSequences="//@sequence.30" outputSequences="//@sequence.16 //@sequence.17 //@sequence.18">
+    <questions text="Paciente mulher?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3391/" id="3391" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+    </questions>
+    <questions text="Procedente de Asilo?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3392/" id="3392" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+    </questions>
+    <questions text="Neoplasia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3393/" id="3393" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_neoplasia" id="5835" weight="30" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a Hep&#xe1;tica?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3394/" id="3394" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_hepatica" id="5836" weight="10" value="false"/>
+    </questions>
+    <questions text="ICC?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3395/" id="3395" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_icc" id="5837" weight="10" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a Cerebrovascular?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3396/" id="3396" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_cerebrovasc" id="5838" weight="10" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a Renal?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3397/" id="3397" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_renal" id="5839" weight="10" value="false"/>
+    </questions>
+    <questions text="ph &lt; 7,35?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3398/" id="3398" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_ph" id="5840" weight="30" value="false"/>
+    </questions>
+    <questions text="Ureia > 65 mg/dl?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3399/" id="3399" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_ureia" id="5841" weight="20" value="false"/>
+    </questions>
+    <questions text="S&#xf3;dio &lt; 130 meq/dl?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3400/" id="3400" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_sodio" id="5842" weight="20" value="false"/>
+    </questions>
+    <questions text="Glicose > 250 mg/dl?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3401/" id="3401" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_glicose" id="5843" weight="10" value="false"/>
+    </questions>
+    <questions text="Hemat&#xf3;critos &lt; 30%?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3402/" id="3402" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_hematocrito" id="5844" weight="10" value="false"/>
+    </questions>
+    <questions text="PO2 &lt; 60 mmhg?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3403/" id="3403" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_po2" id="5845" weight="10" value="false"/>
+    </questions>
+    <questions text="Derrame pleural?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3404/" id="3404" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_derrame_pleural" id="5846" weight="10" value="false"/>
+    </questions>
+    <questions text="Altera&#xe7;&#xe3;o do estado mental?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3405/" id="3405" category="//@category.3">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_alteracao_mental" id="5847" weight="20" value="false"/>
+    </questions>
+    <questions text="F. Respirat&#xf3;ria > 30 ciclos?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3406/" id="3406" category="//@category.3">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_freq_esp" id="5848" weight="20" value="false"/>
+    </questions>
+    <questions text="PA sist&#xf3;lica &lt; 90 mmHg?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3407/" id="3407" category="//@category.3">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_pa_sistolica" id="5849" weight="20" value="false"/>
+    </questions>
+    <questions text="Temperatura &lt; 35 ou > 40?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3408/" id="3408" category="//@category.3">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_temperatura" id="5850" weight="15" value="false"/>
+    </questions>
+    <questions text="Pulso >= 125 bvm?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3409/" id="3409" category="//@category.3">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port_pulso" id="5851" weight="10" value="false"/>
+    </questions>
+    <questions text="Idade:" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4861/perguntas/3410/" id="3410" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4862" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4862/" name="[Port 3] Avaliar Fatores de Risco Para Influenza" description="Avalie se o paciente apresenta fatores que indicam risco de Influenza." inputSequences="//@sequence.17" outputSequences="//@sequence.19 //@sequence.20">
+    <questions text="Tosse?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4862/perguntas/3411/" id="3411">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_tosse" id="5853" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor de garganta?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4862/perguntas/3412/" id="3412">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_dor" id="5854" weight="1" value="false"/>
+    </questions>
+    <questions text="Febre?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4862/perguntas/3413/" id="3413">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_febre" id="5855" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4863" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4863/" name="[Port 3] Avaliar Fatores Agravantes para Influenza" description="Avalie se o paciente apresenta algum dos fatores que podem ser indicadores agravantes no caso de Influenza." inputSequences="//@sequence.19" outputSequences="//@sequence.21 //@sequence.22">
+    <questions text="Cefal&#xe9;ia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4863/perguntas/3414/" id="3414">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_cefaleia" id="5856" weight="1" value="false"/>
+    </questions>
+    <questions text="Mialgia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4863/perguntas/3415/" id="3415">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_mialgia" id="5857" weight="1" value="false"/>
+    </questions>
+    <questions text="Diarr&#xe9;ia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4863/perguntas/3416/" id="3416">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_diarreia" id="5858" weight="1" value="false"/>
+    </questions>
+    <questions text="Artralgia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4863/perguntas/3417/" id="3417">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_artralgia" id="5859" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4864" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/" name="[Port 3] Avaliar Complica&#xe7;&#xf5;es para Influenza" description="Verifique se o paciente possui alguma comorbidade ou fator agravante para o quadro de Influenza." inputSequences="//@sequence.21" outputSequences="//@sequence.23 //@sequence.24">
+    <questions text="Gravidez/Puerperas?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3418/" id="3418">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_gravidez" id="5860" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade > 60?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3419/" id="3419">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_idade" id="5861" weight="1" value="false"/>
+    </questions>
+    <questions text="Pneumopatias?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3420/" id="3420">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_pneumopatias" id="5862" weight="1" value="false"/>
+    </questions>
+    <questions text="ICC?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3421/" id="3421">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_icc" id="5863" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a Renal Cr&#xf4;nica?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3422/" id="3422">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doenca_renal" id="5864" weight="1" value="false"/>
+    </questions>
+    <questions text="Cirrose Hepatica?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3423/" id="3423">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_cirrose" id="5865" weight="1" value="false"/>
+    </questions>
+    <questions text="Neoplasias Hematologicas?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3424/" id="3424">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_neoplasias" id="5866" weight="1" value="false"/>
+    </questions>
+    <questions text="Diabetes?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3425/" id="3425">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_diabetes" id="5867" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe1;s Neurodegenerativas?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3426/" id="3426">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doencas_neurodegen" id="5868" weight="1" value="false"/>
+    </questions>
+    <questions text="Obesidade M&#xf3;rbida (IMC > 40)?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3427/" id="3427">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_obesidade" id="5869" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4864/perguntas/3428/" id="3428">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_imunossupressao" id="5870" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4865" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/" name="[Port 2/3] Receita Padr&#xe3;o - Escolha um antibi&#xf3;tico e as op&#xe7;&#xf5;es de medicamentos sintom&#xe1;ticos" description="Aten&#xe7;&#xe3;o! Caso apresente alguns dos sintomas a seguir retornar imediatamente a emerg&#xea;ncia. &#xA;Sintomas: Falta de ar; Dor no peito; Febre por mais de 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es;  Desorienta&#xe7;&#xe3;o; Sonol&#xea;ncia excessiva; Sangramentos; Desmaio; Palpita&#xe7;&#xe3;o (Cora&#xe7;&#xe3;o acelerado); Diminui&#xe7;&#xe3;o ou aus&#xea;ncia de urina." isTerminal="true" inputSequences="//@sequence.10 //@sequence.12 //@sequence.14 //@sequence.20 //@sequence.22 //@sequence.24">
+    <item id="581" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/itens-receita/581/" name="Azitromicina 500Mg ...... 7cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="582" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/itens-receita/582/" name="Levofloxacino 500Mg ...... 7cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="583" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/itens-receita/583/" name="Koide D Xarope ...... 1fr" med_code="-1" presentation="-" access="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar 10ml de 8/8h"/>
+    <item id="584" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/itens-receita/584/" name="Amoxicilina/Clavulanato 875/125 ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="585" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/itens-receita/585/" name="Prednisona 20Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2 comprimidos pela manh&#xe3;"/>
+    <item id="586" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/itens-receita/586/" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="587" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/itens-receita/587/" name="Paracetamol 750Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="588" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/itens-receita/588/" name="Alenia 6/200mcg ...... 1cx" med_code="-1" presentation="CAPS" access="20" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Aplicar uma capsula via inalador"/>
+    <item id="589" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4865/itens-receita/589/" name="Aerolin Nebules 2,5mg ...... 1cx" med_code="-1" presentation="FLC" access="20" quantity="1" period="3" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Nebulizar um flaconete de 6/6h"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4866" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/" name="[Port 2/3] Receita + Influenza - Considerar tratamento com Tamiflu. Escolha um antibi&#xf3;tico e as op&#xe7;&#xf5;es de medicamentos sintom&#xe1;ticos." description="Aten&#xe7;&#xe3;o! Caso apresente alguns dos sintomas a seguir retornar imediatamente a emerg&#xea;ncia. &#xA;Sintomas: Falta de ar; Dor no peito; Febre por mais de 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es;  Desorienta&#xe7;&#xe3;o; Sonol&#xea;ncia excessiva; Sangramentos; Desmaio; Palpita&#xe7;&#xe3;o (Cora&#xe7;&#xe3;o acelerado); Diminui&#xe7;&#xe3;o ou aus&#xea;ncia de urina." isTerminal="true" inputSequences="//@sequence.0 //@sequence.29">
+    <item id="590" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/590/" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="591" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/591/" name="Paracetamol 750Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="592" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/592/" name="Azitromicina 500Mg ...... 7cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="593" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/593/" name="Levofloxacino 500Mg ...... 7cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="594" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/594/" name="Koide D Xarope ...... 1fr" med_code="-1" presentation="-" access="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar 10ml de 8/8h"/>
+    <item id="595" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/595/" name="Amoxicilina/Clavulanato 875/125 ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="596" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/596/" name="Tamiflu 75mg ...... 10cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="597" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/597/" name="Prednisona 20Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2 comprimidos pela manh&#xe3;"/>
+    <item id="598" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/598/" name="Alenia 6/200mcg ...... 1cx" med_code="-1" presentation="CAPS" access="20" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Aplicar uma capsula via inalador"/>
+    <item id="599" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/receitas/4866/itens-receita/599/" name="Aerolin Nebules 2,5mg ...... 1cx" med_code="-1" presentation="FLC" access="20" quantity="1" period="3" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Nebulizar um flaconete de 6/6 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4867" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4867/" name="Verificar Crit&#xe9;rios para SEPSE" description="Verifique os crit&#xe9;rios para SIRS" isInitial="true" outputSequences="//@sequence.25 //@sequence.26">
+    <questions text="TAX > 37.8&#xba;c ou &lt; 35&#xba;c?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4867/perguntas/3429/" id="3429">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_tax" id="5871" weight="1" value="false"/>
+    </questions>
+    <questions text="FC > 90 bpm?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4867/perguntas/3430/" id="3430">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fc" id="5872" weight="1" value="false"/>
+    </questions>
+    <questions text="FR > 20 irpm?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4867/perguntas/3431/" id="3431">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fr" id="5873" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4868" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4868/" name="Verificar Fatores Agravantes Para SEPSE" description="Verifique se o paciente apresenta algum dos fatores a seguir." inputSequences="//@sequence.26" outputSequences="//@sequence.27 //@sequence.28">
+    <questions text="Olig&#xfa;ria / An&#xfa;ria?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4868/perguntas/3432/" id="3432">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_oliguria" id="5874" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt; 100 mmHg?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4868/perguntas/3433/" id="3433">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_pas" id="5875" weight="1" value="false"/>
+    </questions>
+    <questions text="Agita&#xe7;&#xe3;o / Sonol&#xea;ncia / Altera&#xe7;&#xe3;o N&#xed;vel de Consci&#xea;ncia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4868/perguntas/3434/" id="3434">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_agita_sono_cons" id="5876" weight="1" value="false"/>
+    </questions>
+    <questions text="Dispneia ou SatO2 &lt; 93%?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4868/perguntas/3435/" id="3435">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fat_risc_disp_sat" id="5877" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4869" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/informacoes/4869/" name="Encaminhar Paciente ao Eixo Vermelho" description="Encaminhar o paciente ao eixo vermelho para condu&#xe7;&#xe3;o junto ao l&#xed;der local." isTerminal="true" inputSequences="//@sequence.25 //@sequence.27"/>
+  <element xsi:type="pathwayMetamodel:Information" id="4870" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/informacoes/4870/" name="[Port 4/5] Alerta de Altera&#xe7;&#xf5;es Importantes" description="Paciente com importante potencial de complica&#xe7;&#xe3;o, esse caso deve ser discutido imediatamente com o l&#xed;der local.&#xA;&#xA;Aventar possibilidade de influenza se fatores de risco para tal condi&#xe7;&#xe3;o (Gestante/Puerperas; Idade > 60; Pneumopatias; ICC; Doen&#xe7;a Renal Cr&#xf4;nica; Cirrose Hep&#xe1;tica; Neoplasias; Diabetes; Doen&#xe7;as Neurodegenerativas;  Obesidade M&#xf3;rbida (IMC > 40); Imunossupress&#xe3;o) Hist&#xf3;ria da doen&#xe7;a menor que 3 dias de evolu&#xe7;&#xe3;o e sintomas gripais.&#xA;&#xA;Sugere-se reavaliar crit&#xe9;rios de SEPSE, incluindo os resultados obtidos nos exames laboratoriais do &quot;ESCORE SOFA&quot;&#xA;&#xA;Como antibioticoterapia, sugere-se Unasyn + Azitromicina. Se o paciente tiver comorbidades, aventar cobertura adicional para pseudomonas e/ou enterobacterias.&#xA;&#xA;Avaliar necessidade de interna&#xe7;&#xe3;o." isTerminal="true" inputSequences="//@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4871" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4871/" name="Verificar Resultados Exames Laboratoriais" description="Avalie o resultado dos exames para seguir com o tratamento adequado." inputSequences="//@sequence.15" outputSequences="//@sequence.30 //@sequence.31">
+    <questions text="Raio-x  e exames laboratoriais sugerem quadro de pneumonia?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/auxilios-conduta/4871/perguntas/3436/" id="3436">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="result_exames_lab" id="5878" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4872" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/informacoes/4872/" name="Aviso: Discutir caso com l&#xed;der local" description="Se n&#xe3;o h&#xe1; pneumonia, avaliar outras possibilidades diagn&#xf3;sticas, se necess&#xe1;rio discutir caso com lider local." isTerminal="true" inputSequences="//@sequence.31"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.0" id="4873" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4873/" name="s57" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="4874" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4874/" name="S4 (idade &lt; 50)" description="Idade &lt; 50">
+    <operation name="Idade &lt; 50" Operator="lessThan" id="5907">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="idade" id="5805" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="50" id="5879" weight="1" value="50.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="4875" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4875/" name="S5 (idade >= 50)" description="Idade >= 50">
+    <operation name="idade>=50" Operator="greaterOrEqual" id="5908">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="idade" id="5805" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="50" id="5879" weight="1" value="50.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="4876" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4876/" name="S6 (1 ou mais comorbidades)" description="1 ou mais comorbidades">
+    <operation name="Total Comorbidades >= 1" Operator="greaterOrEqual" id="5909">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total Comorbidades" Operator="addition" id="5889">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dpoc" id="5806" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_ICC" id="5807" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_IRC" id="5808" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_hepatica" id="5809" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neurodegen" id="5810" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neoplasica" id="5811" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_imunossupressao" id="5812" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_internamento" id="5813" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="4877" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4877/" name="S7 (sem comorbidades)" description="comorbidades = 0">
+    <operation name="Total Comorbidades &lt; 1" Operator="lessThan" id="5910">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total Comorbidades" Operator="addition" id="5889">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dpoc" id="5806" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_ICC" id="5807" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_IRC" id="5808" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_hepatica" id="5809" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neurodegen" id="5810" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neoplasica" id="5811" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_imunossupressao" id="5812" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_internamento" id="5813" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="4878" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4878/" name="S8" description="Sequencia incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="4879" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4879/" name="S9 (sem infiltrado)" description="Sem infiltrado">
+    <operation name="Sem infiltrado" id="5911">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ha_infiltrado" id="5814" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="4880" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4880/" name="S10 (com infiltrado)" description="com infiltrado">
+    <operation name="Com infiltrado" Operator="affirmation" id="5912">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ha_infiltrado" id="5814" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="4881" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4881/" name="S12" description="Incondicional"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="4882" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4882/" name="S13 (3 fatores de risco)" description="3 fatores de risco">
+    <operation name="[Port2] Fatores de Risco = 3" Operator="equal" id="5913">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 2] Fatores de Risco" Operator="addition" id="5890">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_tosse" id="5815" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_febre" id="5816" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_dor" id="5817" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="5882" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.9" id="4883" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4883/" name="S14 (menos de 3 fatores de risco)" description="menos de 3 fatores de risco">
+    <operation name="Fatores de Risco &lt; 3" Operator="lessThan" id="5914">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 2] Fatores de Risco" Operator="addition" id="5890">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_tosse" id="5815" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_febre" id="5816" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_dor" id="5817" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="5882" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="4884" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4884/" name="S15 (com agravantes)" description="1 ou mais agravantes">
+    <operation name="Agravantes >= 1" Operator="greaterOrEqual" id="5915">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 2] Agravantes" Operator="addition" id="5891">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_mialgia" id="5818" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_cefaleia" id="5819" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_artralgia" id="5820" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_diarreia" id="5821" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.10" id="4885" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4885/" name="S16 (sem agravantes)" description="Sem agravantes">
+    <operation name="Agravantes &lt; 1" Operator="lessThan" id="5916">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 2] Agravantes" Operator="addition" id="5891">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_mialgia" id="5818" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_cefaleia" id="5819" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_artralgia" id="5820" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_diarreia" id="5821" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.11" id="4886" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4886/" name="S17 (com complica&#xe7;&#xf5;es)" description="1 ou mais complicacoes">
+    <operation name="Complicacoes >= 1" Operator="greaterOrEqual" id="5917">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 2] Complicacoes" Operator="addition" id="5892">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_gestante" id="5822" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_idade" id="5823" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_pneumopatias" id="5824" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_ICC" id="5825" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doenca_renal" id="5826" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_cirrose" id="5827" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_neoplasias" id="5828" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_diabetes" id="5829" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doencas_neurodegen" id="5830" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_obesidade" id="5831" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_imunossupressao" id="5832" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.11" id="4887" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4887/" name="S18 (sem complicacoes)" description="Sem complicacoes">
+    <operation name="Complicacoes &lt; 1" Operator="lessThan" id="5918">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 2] Complicacoes" Operator="addition" id="5892">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_gestante" id="5822" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_idade" id="5823" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_pneumopatias" id="5824" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_ICC" id="5825" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doenca_renal" id="5826" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_cirrose" id="5827" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_neoplasias" id="5828" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_diabetes" id="5829" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doencas_neurodegen" id="5830" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_obesidade" id="5831" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_imunossupressao" id="5832" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.5" id="4888" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4888/" name="S29" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.12" id="4889" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4889/" name="S30 (Port &lt; 70)" description="Port 2 - menor que 70">
+    <operation name="Port &lt; 70" Operator="lessThan" id="5919">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total PORT" Operator="addition" id="5895">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_neoplasia" id="5835" weight="30" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_hepatica" id="5836" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_icc" id="5837" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_cerebrovasc" id="5838" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_renal" id="5839" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ph" id="5840" weight="30" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ureia" id="5841" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_sodio" id="5842" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_glicose" id="5843" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_hematocrito" id="5844" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_po2" id="5845" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_derrame_pleural" id="5846" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_alteracao_mental" id="5847" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_freq_esp" id="5848" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pa_sistolica" id="5849" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_temperatura" id="5850" weight="15" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pulso" id="5851" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:Operation" name="Port Demografico" Operator="addition" id="5894">
+          <operand xsi:type="pathwayMetamodel:Operation" name="Port Genero" Operator="subtraction" id="5893">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="70" id="5883" weight="1" value="70.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="4890" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4890/" name="S31 (70 &lt;= Port &lt;= 90)" description="Port 3">
+    <operation name="70 &lt;= port &lt;= 90" Operator="and" id="5920">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total PORT >= 70" Operator="greaterOrEqual" id="5896">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total PORT" Operator="addition" id="5895">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_neoplasia" id="5835" weight="30" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_hepatica" id="5836" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_icc" id="5837" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_cerebrovasc" id="5838" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_renal" id="5839" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ph" id="5840" weight="30" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ureia" id="5841" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_sodio" id="5842" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_glicose" id="5843" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_hematocrito" id="5844" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_po2" id="5845" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_derrame_pleural" id="5846" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_alteracao_mental" id="5847" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_freq_esp" id="5848" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pa_sistolica" id="5849" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_temperatura" id="5850" weight="15" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pulso" id="5851" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:Operation" name="Port Demografico" Operator="addition" id="5894">
+            <operand xsi:type="pathwayMetamodel:Operation" name="Port Genero" Operator="subtraction" id="5893">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="70" id="5883" weight="1" value="70.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total Port &lt;= 90" Operator="lessOrEqual" id="5897">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total PORT" Operator="addition" id="5895">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_neoplasia" id="5835" weight="30" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_hepatica" id="5836" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_icc" id="5837" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_cerebrovasc" id="5838" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_renal" id="5839" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ph" id="5840" weight="30" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ureia" id="5841" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_sodio" id="5842" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_glicose" id="5843" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_hematocrito" id="5844" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_po2" id="5845" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_derrame_pleural" id="5846" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_alteracao_mental" id="5847" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_freq_esp" id="5848" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pa_sistolica" id="5849" weight="20" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_temperatura" id="5850" weight="15" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pulso" id="5851" weight="10" value="false"/>
+          <operand xsi:type="pathwayMetamodel:Operation" name="Port Demografico" Operator="addition" id="5894">
+            <operand xsi:type="pathwayMetamodel:Operation" name="Port Genero" Operator="subtraction" id="5893">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="90" id="5884" weight="1" value="90.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.12" id="4891" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4891/" name="S32 (Port > 90)" description="Port 4 ou 5 (port > 90)">
+    <operation name="Total PORT > 90" Operator="greaterThan" id="5921">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total PORT" Operator="addition" id="5895">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_neoplasia" id="5835" weight="30" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_hepatica" id="5836" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_icc" id="5837" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_cerebrovasc" id="5838" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_renal" id="5839" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ph" id="5840" weight="30" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ureia" id="5841" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_sodio" id="5842" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_glicose" id="5843" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_hematocrito" id="5844" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_po2" id="5845" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_derrame_pleural" id="5846" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_alteracao_mental" id="5847" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_freq_esp" id="5848" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pa_sistolica" id="5849" weight="20" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_temperatura" id="5850" weight="15" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pulso" id="5851" weight="10" value="false"/>
+        <operand xsi:type="pathwayMetamodel:Operation" name="Port Demografico" Operator="addition" id="5894">
+          <operand xsi:type="pathwayMetamodel:Operation" name="Port Genero" Operator="subtraction" id="5893">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="90" id="5884" weight="1" value="90.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="4892" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4892/" name="S35 (3 fatores de risco)" description="3 fatores de risco">
+    <operation name="[Port 3] Fatores de risco == 3" Operator="equal" id="5922">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 3] Fatores de risco" Operator="addition" id="5898">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_tosse" id="5853" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_dor" id="5854" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_febre" id="5855" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="5882" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.13" id="4893" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4893/" name="S36 (menos de 3 fatores de risco)" description="Menos de 3 fatores de risco">
+    <operation name="[Port 3] Fatores de Risco &lt; 3" Operator="lessThan" id="5923">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 3] Fatores de risco" Operator="addition" id="5898">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_tosse" id="5853" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_dor" id="5854" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_febre" id="5855" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="5882" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="4894" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4894/" name="S37 (com agravantes)" description="Com agravantes">
+    <operation name="Agravantes >= 1" Operator="greaterOrEqual" id="5924">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 3] Agravantes" Operator="addition" id="5899">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_cefaleia" id="5856" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_mialgia" id="5857" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_diarreia" id="5858" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_artralgia" id="5859" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="4895" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4895/" name="S38 (sem agravantes)" description="Sem agravantes">
+    <operation name="Agravantes &lt; 2" Operator="lessThan" id="5925">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 3] Agravantes" Operator="addition" id="5899">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_cefaleia" id="5856" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_mialgia" id="5857" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_diarreia" id="5858" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_artralgia" id="5859" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.15" id="4896" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4896/" name="S39 (com complicacoes)" description="Com complicacoes">
+    <operation name="Complicacoes >= 1" Operator="greaterOrEqual" id="5926">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 3] Complicacoes" Operator="addition" id="5900">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_gravidez" id="5860" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_idade" id="5861" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_pneumopatias" id="5862" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_icc" id="5863" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doenca_renal" id="5864" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_cirrose" id="5865" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_neoplasias" id="5866" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_diabetes" id="5867" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doencas_neurodegen" id="5868" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_obesidade" id="5869" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_imunossupressao" id="5870" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.15" id="4897" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4897/" name="S40 (sem complicacoes)" description="Sem complicacoes">
+    <operation name="Complicacoes &lt; 1" Operator="lessThan" id="5927">
+      <operand xsi:type="pathwayMetamodel:Operation" name="[Port 3] Complicacoes" Operator="addition" id="5900">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_gravidez" id="5860" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_idade" id="5861" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_pneumopatias" id="5862" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_icc" id="5863" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doenca_renal" id="5864" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_cirrose" id="5865" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_neoplasias" id="5866" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_diabetes" id="5867" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doencas_neurodegen" id="5868" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_obesidade" id="5869" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_imunossupressao" id="5870" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.18" id="4898" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4898/" name="s57" description="s57">
+    <operation name="s57_guarda" Operator="greaterOrEqual" id="5928">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sepse" Operator="addition" id="5905">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_tax" id="5871" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fc" id="5872" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fr" id="5873" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5881" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="4899" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4899/" name="s58" description="s58">
+    <operation name="s58_guarda" Operator="lessThan" id="5929">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sepse" Operator="addition" id="5905">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_tax" id="5871" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fc" id="5872" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fr" id="5873" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5881" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="4900" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4900/" name="s59" description="s59">
+    <operation name="s59" Operator="greaterOrEqual" id="5930">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_agravantes" Operator="addition" id="5906">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_oliguria" id="5874" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_pas" id="5875" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_agita_sono_cons" id="5876" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_risc_disp_sat" id="5877" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.19" id="4901" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4901/" name="s60" description="s60">
+    <operation name="s60_guarda" Operator="lessThan" id="5931">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_agravantes" Operator="addition" id="5906">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_oliguria" id="5874" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_pas" id="5875" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_agita_sono_cons" id="5876" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_risc_disp_sat" id="5877" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.1" id="4902" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4902/" name="s61" description=""/>
+  <sequence inputStep="//@element.12" outputStep="//@element.22" id="4903" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4903/" name="s62" description="">
+    <operation name="exames_com_indicacao_pneumonia" Operator="affirmation" id="5932">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="result_exames_lab" id="5878" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.22" id="4904" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1162/sequencias/4904/" name="s63" description="">
+    <operation name="exames_sem_indicacao_pneumonia" id="5933">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="result_exames_lab" id="5878" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <category name="Fatores Demogr&#xe1;ficos" question="//@element.12/@questions.0 //@element.12/@questions.1 //@element.12/@questions.19"/>
+  <category name="Comorbidades" question="//@element.12/@questions.2 //@element.12/@questions.3 //@element.12/@questions.4 //@element.12/@questions.5 //@element.12/@questions.6"/>
+  <category name="Achados Laboratoriais" question="//@element.12/@questions.7 //@element.12/@questions.8 //@element.12/@questions.9 //@element.12/@questions.10 //@element.12/@questions.11 //@element.12/@questions.12 //@element.12/@questions.13"/>
+  <category name="Exame F&#xed;sico" question="//@element.12/@questions.14 //@element.12/@questions.15 //@element.12/@questions.16 //@element.12/@questions.17 //@element.12/@questions.18"/>
+  <operation name="Total SEPSE" Operator="addition" id="5885"/>
+  <operation name="[Eixo Vermelho] Fatores de Risco" Operator="addition" id="5886"/>
+  <operation name="[Eixo Vermelho] Agravantes" Operator="addition" id="5887"/>
+  <operation name="[Eixo Vermelho] Complica&#xe7;&#xf5;es" Operator="addition" id="5888"/>
+  <operation name="Total Comorbidades" Operator="addition" id="5889">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dpoc" id="5806" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_ICC" id="5807" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_IRC" id="5808" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_hepatica" id="5809" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neurodegen" id="5810" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neoplasica" id="5811" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_imunossupressao" id="5812" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_internamento" id="5813" weight="1" value="false"/>
+  </operation>
+  <operation name="[Port 2] Fatores de Risco" Operator="addition" id="5890">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_tosse" id="5815" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_febre" id="5816" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_dor" id="5817" weight="1" value="false"/>
+  </operation>
+  <operation name="[Port 2] Agravantes" Operator="addition" id="5891">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_mialgia" id="5818" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_cefaleia" id="5819" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_artralgia" id="5820" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_diarreia" id="5821" weight="1" value="false"/>
+  </operation>
+  <operation name="[Port 2] Complicacoes" Operator="addition" id="5892">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_gestante" id="5822" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_idade" id="5823" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_pneumopatias" id="5824" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_ICC" id="5825" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doenca_renal" id="5826" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_cirrose" id="5827" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_neoplasias" id="5828" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_diabetes" id="5829" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doencas_neurodegen" id="5830" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_obesidade" id="5831" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_imunossupressao" id="5832" weight="1" value="false"/>
+  </operation>
+  <operation name="Port Genero" Operator="subtraction" id="5893">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+  </operation>
+  <operation name="Port Demografico" Operator="addition" id="5894">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Port Genero" Operator="subtraction" id="5893">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+  </operation>
+  <operation name="Total PORT" Operator="addition" id="5895">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_neoplasia" id="5835" weight="30" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_hepatica" id="5836" weight="10" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_icc" id="5837" weight="10" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_cerebrovasc" id="5838" weight="10" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_renal" id="5839" weight="10" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ph" id="5840" weight="30" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ureia" id="5841" weight="20" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_sodio" id="5842" weight="20" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_glicose" id="5843" weight="10" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_hematocrito" id="5844" weight="10" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_po2" id="5845" weight="10" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_derrame_pleural" id="5846" weight="10" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_alteracao_mental" id="5847" weight="20" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_freq_esp" id="5848" weight="20" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pa_sistolica" id="5849" weight="20" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_temperatura" id="5850" weight="15" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pulso" id="5851" weight="10" value="false"/>
+    <operand xsi:type="pathwayMetamodel:Operation" name="Port Demografico" Operator="addition" id="5894">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Port Genero" Operator="subtraction" id="5893">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+    </operand>
+  </operation>
+  <operation name="Total PORT >= 70" Operator="greaterOrEqual" id="5896">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total PORT" Operator="addition" id="5895">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_neoplasia" id="5835" weight="30" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_hepatica" id="5836" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_icc" id="5837" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_cerebrovasc" id="5838" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_renal" id="5839" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ph" id="5840" weight="30" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ureia" id="5841" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_sodio" id="5842" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_glicose" id="5843" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_hematocrito" id="5844" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_po2" id="5845" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_derrame_pleural" id="5846" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_alteracao_mental" id="5847" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_freq_esp" id="5848" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pa_sistolica" id="5849" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_temperatura" id="5850" weight="15" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pulso" id="5851" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Port Demografico" Operator="addition" id="5894">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Port Genero" Operator="subtraction" id="5893">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="70" id="5883" weight="1" value="70.0"/>
+  </operation>
+  <operation name="Total Port &lt;= 90" Operator="lessOrEqual" id="5897">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total PORT" Operator="addition" id="5895">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_neoplasia" id="5835" weight="30" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_hepatica" id="5836" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_icc" id="5837" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_cerebrovasc" id="5838" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_renal" id="5839" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ph" id="5840" weight="30" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_ureia" id="5841" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_sodio" id="5842" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_glicose" id="5843" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_hematocrito" id="5844" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_po2" id="5845" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_derrame_pleural" id="5846" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_alteracao_mental" id="5847" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_freq_esp" id="5848" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pa_sistolica" id="5849" weight="20" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_temperatura" id="5850" weight="15" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_pulso" id="5851" weight="10" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Port Demografico" Operator="addition" id="5894">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Port Genero" Operator="subtraction" id="5893">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="90" id="5884" weight="1" value="90.0"/>
+  </operation>
+  <operation name="[Port 3] Fatores de risco" Operator="addition" id="5898">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_tosse" id="5853" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_dor" id="5854" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_febre" id="5855" weight="1" value="false"/>
+  </operation>
+  <operation name="[Port 3] Agravantes" Operator="addition" id="5899">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_cefaleia" id="5856" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_mialgia" id="5857" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_diarreia" id="5858" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_artralgia" id="5859" weight="1" value="false"/>
+  </operation>
+  <operation name="[Port 3] Complicacoes" Operator="addition" id="5900">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_gravidez" id="5860" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_idade" id="5861" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_pneumopatias" id="5862" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_icc" id="5863" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doenca_renal" id="5864" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_cirrose" id="5865" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_neoplasias" id="5866" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_diabetes" id="5867" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doencas_neurodegen" id="5868" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_obesidade" id="5869" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_imunossupressao" id="5870" weight="1" value="false"/>
+  </operation>
+  <operation name="Total Criterios UTI" Operator="addition" id="5901"/>
+  <operation name="[Port 4] Fatores Risco Influenza" Operator="addition" id="5902"/>
+  <operation name="[Port 4] Agravantes Influenza" Operator="addition" id="5903"/>
+  <operation name="[Port 4] Complicacoes Influenza" Operator="addition" id="5904"/>
+  <operation name="soma_sepse" Operator="addition" id="5905">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_tax" id="5871" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fc" id="5872" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fr" id="5873" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_agravantes" Operator="addition" id="5906">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_oliguria" id="5874" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_pas" id="5875" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_agita_sono_cons" id="5876" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="fat_risc_disp_sat" id="5877" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="idade" id="5805" weight="1" value="0.0"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dpoc" id="5806" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_ICC" id="5807" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_IRC" id="5808" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_hepatica" id="5809" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neurodegen" id="5810" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_doenca_neoplasica" id="5811" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_imunossupressao" id="5812" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_internamento" id="5813" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ha_infiltrado" id="5814" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_tosse" id="5815" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_febre" id="5816" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_fatores_risco_dor" id="5817" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_mialgia" id="5818" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_cefaleia" id="5819" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_artralgia" id="5820" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_agravantes_diarreia" id="5821" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_gestante" id="5822" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_idade" id="5823" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_pneumopatias" id="5824" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_ICC" id="5825" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doenca_renal" id="5826" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_cirrose" id="5827" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_neoplasias" id="5828" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_diabetes" id="5829" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_doencas_neurodegen" id="5830" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_obesidade" id="5831" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port2_complicacoes_imunossupressao" id="5832" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_mulher" id="5833" weight="10" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_asilo" id="5834" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_neoplasia" id="5835" weight="30" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_hepatica" id="5836" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_icc" id="5837" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_cerebrovasc" id="5838" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_doenca_renal" id="5839" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_ph" id="5840" weight="30" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_ureia" id="5841" weight="20" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_sodio" id="5842" weight="20" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_glicose" id="5843" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_hematocrito" id="5844" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_po2" id="5845" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_derrame_pleural" id="5846" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_alteracao_mental" id="5847" weight="20" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_freq_esp" id="5848" weight="20" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_pa_sistolica" id="5849" weight="20" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_temperatura" id="5850" weight="15" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port_pulso" id="5851" weight="10" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="port_idade" id="5852" weight="1" value="0.0"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_tosse" id="5853" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_dor" id="5854" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_fatores_risco_febre" id="5855" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_cefaleia" id="5856" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_mialgia" id="5857" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_diarreia" id="5858" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_agravantes_artralgia" id="5859" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_gravidez" id="5860" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_idade" id="5861" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_pneumopatias" id="5862" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_icc" id="5863" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doenca_renal" id="5864" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_cirrose" id="5865" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_neoplasias" id="5866" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_diabetes" id="5867" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_doencas_neurodegen" id="5868" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_obesidade" id="5869" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="port3_complicacoes_imunossupressao" id="5870" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_tax" id="5871" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fc" id="5872" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ver_sep_fr" id="5873" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_oliguria" id="5874" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_pas" id="5875" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fat_agra_agita_sono_cons" id="5876" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fat_risc_disp_sat" id="5877" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="result_exames_lab" id="5878" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="50" id="5879" weight="1" value="50.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="5880" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="5881" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="5882" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="70" id="5883" weight="1" value="70.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="90" id="5884" weight="1" value="90.0"/>
+</pathwayMetamodel:Pathway>

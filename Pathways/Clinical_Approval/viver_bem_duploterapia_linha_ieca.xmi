@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="827" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/?format=json" name="[Viver Bem] Duploterapia Linha IECA" code="VB_DUPLO_IECA">
+  <element xsi:type="pathwayMetamodel:Prescription" id="5957" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/receitas/5957/" name="Tratamento com Enalapril + Clortalidona" description="Tratamento com Enalapril 20mg 2x/dia + Clortalidona 12,5mg/dia com PS 160 - 179 e PD 100 - 109" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="5958" type="Pausa" type_verbose="Pausa" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/pausas/5958/" name="Retorno Quinzenal" description="Agendar retorno quinzenal do Paciente ap&#xf3;s tratamento com Enalapril + Clortalidona" inputSequences="//@sequence.0" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5959" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/auxilios-conduta/5959/" name="Avaliar Meta Press&#xf3;rica" description="Avalia&#xe7;&#xe3;o ap&#xf3;s retorno quinzenal do Tratamento com Enalapril + Clortalidona" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Atingiu meta press&#xf3;rica?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/auxilios-conduta/5959/perguntas/2300/" id="2300">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ieca_duplo_meta_pressorica" id="4358" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="5960" type="Pausa" type_verbose="Pausa" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/pausas/5960/" name="Retorno Semestral" description="Agendar retorno semestral do Paciente ap&#xf3;s avalia&#xe7;&#xe3;o de meta press&#xf3;rica" inputSequences="//@sequence.2 //@sequence.5" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5961" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/auxilios-conduta/5961/" name="Avaliar Se Manteve Meta press&#xf3;rica" description="Avaliar se manteve meta press&#xf3;rica ap&#xf3;s retorno semestral" inputSequences="//@sequence.7" outputSequences="//@sequence.4 //@sequence.6">
+    <questions text="Manteve meta press&#xf3;rica?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/auxilios-conduta/5961/perguntas/2301/" id="2301">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ieca_duplo_manteve_meta_pressorica" id="4359" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5962" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/receitas/5962/" name="Prescrever &#xfa;ltima medica&#xe7;&#xe3;o" description="Continuar tomando a &#xfa;ltima medica&#xe7;&#xe3;o prescrita" inputSequences="//@sequence.4" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="5963" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/encaminhamentos/5963/" name="Prescrever Triploterapia" description="Encaminhar paciente para Triploterapia" isTerminal="true" inputSequences="//@sequence.3 //@sequence.6">
+    <pathways>VB_BAR_TRIPLO</pathways>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="5964" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/sequencias/5964/" name="S1" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="5965" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/sequencias/5965/" name="S2" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="5966" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/sequencias/5966/" name="S3 (Avaliar Meta Press&#xf3;rica - Retorno Semestral)" description="">
+    <operation name="atingiu_meta_pressorica" Operator="affirmation" id="4360">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_duplo_meta_pressorica" id="4358" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="5967" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/sequencias/5967/" name="S4 (Avaliar Meta Press&#xf3;rica - Prescrever Triploterapia)" description="">
+    <operation name="nao_atingiu_meta_pressorica" id="4361">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_duplo_meta_pressorica" id="4358" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="5968" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/sequencias/5968/" name="S5 (Avaliar Se Manteve Meta - Prescrever &#xfa;ltimo medicamento)" description="">
+    <operation name="manteve_meta_pressorica" Operator="affirmation" id="4362">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_duplo_manteve_meta_pressorica" id="4359" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.5" id="5969" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/sequencias/5969/" name="S6 (Prescrever &#xfa;ltima medica&#xe7;&#xe3;o - Retorno Semestral)" description=""/>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="5970" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/sequencias/5970/" name="S6 (Avaliar Se Manteve Meta - Prescrever Triploterapia)" description="">
+    <operation name="nao_manteve_meta_pressorica" id="4363">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_duplo_manteve_meta_pressorica" id="4359" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="5971" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/827/sequencias/5971/" name="S8" description=""/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ieca_duplo_meta_pressorica" id="4358" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ieca_duplo_manteve_meta_pressorica" id="4359" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

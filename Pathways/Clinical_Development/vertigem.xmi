@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="791" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/?format=json" name="Vertigem" code="MF_VERT">
+  <element xsi:type="pathwayMetamodel:Information" id="4393" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/informacoes/4393/" name="Exame F&#xed;sico" description="&lt;p>Itens necess&amp;aacute;rios ao exame f&amp;iacute;sico:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Otoscopia&lt;/li>&#xA;&#x9;&lt;li>Avalia&amp;ccedil;&amp;atilde;o de Nistagmo&lt;/li>&#xA;&#x9;&lt;li>Realiza&amp;ccedil;&amp;atilde;o da Manobra de Epley&lt;/li>&#xA;&#x9;&lt;li>Realiza&amp;ccedil;&amp;atilde;o da Manobra de Dix-Hallpike&lt;/li>&#xA;&lt;/ul>" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4394" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4394/" name="Classificar Vertigem" description="Classificar tipo de vertigem" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Vertigem Intensa" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4394/perguntas/1876/" id="1876" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_intensa" id="3283" weight="1" value="false"/>
+    </questions>
+    <questions text="Nistagmo Horizontal" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4394/perguntas/1877/" id="1877" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_horizontal" id="3284" weight="1" value="false"/>
+    </questions>
+    <questions text="Nistagmo Fatig&#xe1;vel Esgot&#xe1;vel" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4394/perguntas/1878/" id="1878" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_fatigavel" id="3285" weight="1" value="false"/>
+    </questions>
+    <questions text="Pode haver tinitus e/ou Hipocacusia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4394/perguntas/1879/" id="1879" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tinitus_ou_hipocacusia" id="3286" weight="1" value="false"/>
+    </questions>
+    <questions text="Vertigem Branda" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4394/perguntas/1880/" id="1880" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_branda" id="3287" weight="1" value="false"/>
+    </questions>
+    <questions text="Nistagmo Ataxico (n&#xe3;o horizontal)" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4394/perguntas/1881/" id="1881" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_ataxico" id="3288" weight="1" value="false"/>
+    </questions>
+    <questions text="Nistagmo n&#xe3;o fatig&#xe1;vel esgot&#xe1;vel" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4394/perguntas/1882/" id="1882" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_nao_fatigavel" id="3289" weight="1" value="false"/>
+    </questions>
+    <questions text="Outros sintomas Neurol&#xf3;gicos presentes" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4394/perguntas/1883/" id="1883" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outros_sintomas_neurologicos" id="3290" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4395" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/informacoes/4395/" name="Reabilita&#xe7;&#xe3;o Labir&#xed;ntica" description="Prescrever Reabilita&#xe7;&#xe3;o Labir&#xed;ntica" inputSequences="//@sequence.7" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4396" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/receitas/4396/" name="[Doen&#xe7;a de M&#xe9;ni&#xe8;re] Tratamento" description="Prescri&#xe7;&#xe3;o do tratamento para doen&#xe7;a de m&#xe9;ni&#xe8;re" inputSequences="//@sequence.6" outputSequences="//@sequence.4">
+    <item id="1078" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/receitas/4396/itens-receita/1078/" name="" med_code="1146371978" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Cinarizina 12,5  - 25 mg 8/8 dia  ( 7  dias )"/>
+    <item id="1079" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/receitas/4396/itens-receita/1079/" name="" med_code="1462556058" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1080" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/receitas/4396/itens-receita/1080/" name="" med_code="-413889895" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar de 3 a 5 dias"/>
+    <item id="1081" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/receitas/4396/itens-receita/1081/" name="" med_code="-1786844614" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar de 3 a 5 dias"/>
+    <item id="1082" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/receitas/4396/itens-receita/1082/" name="" med_code="-1803049810" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar por 3 a 5 dias"/>
+    <item id="1083" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/receitas/4396/itens-receita/1083/" name="" med_code="1462546309" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar por 3 a 5 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="4397" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/processos/4397/" name="Encaminhamento ao Neurologista" description="A. Altera&#xe7;&#xe3;o s&#xfa;bitas de  fala -encaminhar a  urgencias&#xA;&#xA;B. A&#xe7;&#xf5;es  s&#xfa;bita de  marcha - encaminhar a urgencias&#xA;&#xA;C. Altera&#xe7;&#xf5;es  Subitas de n&#xed;vel de consci&#xea;ncia -   encaminhar a urg&#xea;ncias&#xA;&#xA;D. Vomito incohersivel &#xbf; encaminahar a urg&#xea;ncias&#xA;&#xA;E. Manifesta&#xe7;&#xf5;es vertiginosa  grave -  encaminhar a urgencia&#xA;&#xA;F. Vertigo  Central - encaminhar  neurologisto&#xA;&#xA;G. Se  n&#xe3;o  h&#xe1; melhoria  com tratamento inicial de medico da fam&#xed;lia &#xbf; encaminhar a Neurologista" isTerminal="true" inputSequences="//@sequence.2 //@sequence.12">
+    <action id="98" process_id="4397" service="encaminhar_especialidade" description="Encaminhar para Neurologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4398" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4398/" name="Considerar Encaminhamentos" description="&lt;p>Considerar encaminhamento em caso de:&lt;/p>" inputSequences="//@sequence.4 //@sequence.5" outputSequences="//@sequence.3 //@sequence.8">
+    <questions text="Encaminhar para Urg&#xea;ncia: Altera&#xe7;&#xe3;o s&#xfa;bita de fala, altera&#xe7;&#xe3;o s&#xfa;bita de marcha, altera&#xe7;&#xe3;o s&#xfa;bita de n&#xed;vel de consci&#xea;ncia, v&#xf4;mitos incoerc&#xed;veis ou manifesta&#xe7;&#xf5;es vertiginosas graves" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4398/perguntas/1884/" id="1884">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_urgencia" id="3291" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4399" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/informacoes/4399/" name="Encaminhar &#xe0; Urg&#xea;ncia" description="Encaminhar paciente &#xe0; urg&#xea;ncia" isTerminal="true" inputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4400" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4400/" name="Classificar Vertigem Posicional" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Vertigem de Posicionamento Parox&#xed;stica Benigna (VPPB) - Vertigem rotat&#xf3;ria de curta dura&#xe7;&#xe3;o desencadeada por movimentos r&#xe1;pidos de cabe&#xe7;a. Ao exame f&#xed;sico: Nistagmo de posicionamento vertical para da cima, rotat&#xf3;rio para o lado comprometido." url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4400/perguntas/1885/" id="1885">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_vppb" id="3292" weight="1" value="false"/>
+    </questions>
+    <questions text="M&#xe9;ni&#xe8;re - Tr&#xed;ade de ataques recorrentes de vertigem, d&#xe9;ficit auditivo flutuante, zumbidos, press&#xe3;o no ouvido do lado comprometido. Ao exame f&#xed;sico: nistagmo horizonto-rotat&#xf3;rio para o lado lesado ou para o lado saud&#xe1;vel, desequil&#xed;brio e hipoacusia." url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4400/perguntas/1886/" id="1886">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_meniere" id="3293" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4401" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/informacoes/4401/" name="Retorno em 72h" description="Orientar paciente a retornar em 72h" inputSequences="//@sequence.8" outputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4402" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4402/" name="Avaliar Melhora" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Houve melhora?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/auxilios-conduta/4402/perguntas/1887/" id="1887">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="3294" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4403" type="Pausa" type_verbose="Pausa" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/pausas/4403/" name="Aguardar Retorno" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Information" id="4404" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/informacoes/4404/" name="Finalizar Protocolo" description="Liberar paciente e finalizar protocolo" isTerminal="true" inputSequences="//@sequence.11"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4405" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4405/" name="S1" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.1" id="4406" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4406/" name="S3 (Vertigem Posicional)" description="Vertigem Posicional">
+    <operation name="Vertigem Posicional" Operator="greaterOrEqual" id="3298">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas Vertigem Periferica" Operator="addition" id="3296">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_intensa" id="3283" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_horizontal" id="3284" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_fatigavel" id="3285" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="tinitus_ou_hipocacusia" id="3286" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="3295" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="4407" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4407/" name="S4 (Vertigem Central)" description="Paciente apresenta sinais de Vertigem Central">
+    <operation name="Vertigem Central" Operator="greaterOrEqual" id="3299">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas Vertigem Central" Operator="addition" id="3297">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_branda" id="3287" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_ataxico" id="3288" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_nao_fatigavel" id="3289" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="outros_sintomas_neurologicos" id="3290" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="3295" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="4408" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4408/" name="S5 (sintomas para urgencia)" description="sintomas para urgencia">
+    <operation name="sintomas para urgencia" Operator="affirmation" id="3300">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_urgencia" id="3291" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="4409" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4409/" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="4410" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4410/" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.7" id="4411" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4411/" name="S2 (M&#xe9;ni&#xe8;re)" description="M&#xe9;ni&#xe8;re">
+    <operation name="M&#xe9;ni&#xe8;re" Operator="affirmation" id="3301">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_meniere" id="3293" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.7" id="4412" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4412/" name="S8 (VPPB)" description="VPPB">
+    <operation name="VPPB" Operator="affirmation" id="3302">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_vppb" id="3292" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.5" id="4413" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4413/" name="S9 (sem encaminhamentos)" description="sem encaminhamentos">
+    <operation name="sem sintomas de urgencia" id="3303">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_urgencia" id="3291" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="4414" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4414/" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.10" id="4415" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4415/" name="S11" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="4416" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4416/" name="S12 (houve melhora)" description="houve melhora">
+    <operation name="houve melhor" Operator="affirmation" id="3304">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="3294" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.9" id="4417" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/791/sequencias/4417/" name="S13 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhor" id="3305">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="3294" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <category name="Vertigem  Perif&#xe9;rico" question="//@element.1/@questions.0 //@element.1/@questions.1 //@element.1/@questions.2 //@element.1/@questions.3"/>
+  <category name="Vertigem  central" question="//@element.1/@questions.4 //@element.1/@questions.5 //@element.1/@questions.6 //@element.1/@questions.7"/>
+  <operation name="Sintomas Vertigem Periferica" Operator="addition" id="3296">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_intensa" id="3283" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_horizontal" id="3284" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_fatigavel" id="3285" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="tinitus_ou_hipocacusia" id="3286" weight="1" value="false"/>
+  </operation>
+  <operation name="Sintomas Vertigem Central" Operator="addition" id="3297">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_branda" id="3287" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_ataxico" id="3288" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_nao_fatigavel" id="3289" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="outros_sintomas_neurologicos" id="3290" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_intensa" id="3283" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_horizontal" id="3284" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_fatigavel" id="3285" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tinitus_ou_hipocacusia" id="3286" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_branda" id="3287" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_ataxico" id="3288" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_nao_fatigavel" id="3289" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outros_sintomas_neurologicos" id="3290" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_urgencia" id="3291" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_vppb" id="3292" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_meniere" id="3293" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="3294" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="3295" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

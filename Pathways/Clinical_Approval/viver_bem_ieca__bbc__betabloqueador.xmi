@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="829" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/?format=json" name="[Viver Bem] IECA + BBC + Betabloqueador" code="VB_DIA_IECA">
+  <element xsi:type="pathwayMetamodel:Referral" id="5987" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/encaminhamentos/5987/" name="Monoterapia Linha IECA" description="Encaminhar Paciente para tratamento Monoterapia Linha IECA" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>VB_MONO_IECA</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5988" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/encaminhamentos/5988/" name="Duploterapia Linha IECA" description="Encaminhar paciente para tratamento Duploterapia Linha IECA" isTerminal="true" inputSequences="//@sequence.1">
+    <pathways>VB_DUPLO_IECA</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5989" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/encaminhamentos/5989/" name="Triploterapia Linha IECA" description="Encaminhar paciente para tratamento Triploterapia Linha IECA" isTerminal="true" inputSequences="//@sequence.2">
+    <pathways>VB_TRIPLO_IECA</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5990" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/auxilios-conduta/5990/" name="Valores PS e PD" description="Indique os valores de PS e PD" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2">
+    <questions text="Valor PS" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/auxilios-conduta/5990/perguntas/2304/" id="2304">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+    </questions>
+    <questions text="Valor PD" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/auxilios-conduta/5990/perguntas/2305/" id="2305">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.0" outputStep="//@element.3" id="5991" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/sequencias/5991/" name="S1 (PS 130 -159 PD80 - 99)" description="">
+    <operation name="130&lt;=PS&lt;=159_ou_80&lt;=PD&lt;=99" Operator="and" id="4400">
+      <operand xsi:type="pathwayMetamodel:Operation" name="A" Operator="or" id="4394">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130_&amp;_PS&lt;=159" Operator="and" id="4390">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130" Operator="greaterOrEqual" id="4380">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="130" id="4372" weight="1" value="130.0"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=159" Operator="lessOrEqual" id="4381">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="159" id="4373" weight="1" value="159.0"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80_&amp;_PD&lt;=99" Operator="and" id="4391">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80" Operator="greaterOrEqual" id="4385">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="80" id="4374" weight="1" value="80.0"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=99" Operator="lessOrEqual" id="4386">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="99" id="4375" weight="1" value="99.0"/>
+          </operand>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="~B" id="4398">
+        <operand xsi:type="pathwayMetamodel:Operation" name="B" Operator="or" id="4395">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160_&amp;_PS&lt;=179" Operator="and" id="4392">
+            <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160" Operator="greaterOrEqual" id="4382">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="160" id="4376" weight="1" value="160.0"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=179" Operator="lessOrEqual" id="4383">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+            </operand>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100_&amp;_PD&lt;=109" Operator="and" id="4393">
+            <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100" Operator="greaterOrEqual" id="4387">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="100" id="4378" weight="1" value="100.0"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=109" Operator="lessOrEqual" id="4388">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+            </operand>
+          </operand>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="~C" id="4399">
+        <operand xsi:type="pathwayMetamodel:Operation" name="C" Operator="or" id="4396">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS>179" Operator="greaterThan" id="4384">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD>109" Operator="greaterThan" id="4389">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+          </operand>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.3" id="5992" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/sequencias/5992/" name="S2 (PS 160-179 PD 100 -109)" description="">
+    <operation name="160&lt;=PS&lt;=179_ou_100&lt;=PD&lt;=109" Operator="and" id="4401">
+      <operand xsi:type="pathwayMetamodel:Operation" name="~A" id="4397">
+        <operand xsi:type="pathwayMetamodel:Operation" name="A" Operator="or" id="4394">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130_&amp;_PS&lt;=159" Operator="and" id="4390">
+            <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130" Operator="greaterOrEqual" id="4380">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="130" id="4372" weight="1" value="130.0"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=159" Operator="lessOrEqual" id="4381">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="159" id="4373" weight="1" value="159.0"/>
+            </operand>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80_&amp;_PD&lt;=99" Operator="and" id="4391">
+            <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80" Operator="greaterOrEqual" id="4385">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="80" id="4374" weight="1" value="80.0"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=99" Operator="lessOrEqual" id="4386">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="99" id="4375" weight="1" value="99.0"/>
+            </operand>
+          </operand>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="B" Operator="or" id="4395">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160_&amp;_PS&lt;=179" Operator="and" id="4392">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160" Operator="greaterOrEqual" id="4382">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="160" id="4376" weight="1" value="160.0"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=179" Operator="lessOrEqual" id="4383">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100_&amp;_PD&lt;=109" Operator="and" id="4393">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100" Operator="greaterOrEqual" id="4387">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="100" id="4378" weight="1" value="100.0"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=109" Operator="lessOrEqual" id="4388">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+          </operand>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="~C" id="4399">
+        <operand xsi:type="pathwayMetamodel:Operation" name="C" Operator="or" id="4396">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS>179" Operator="greaterThan" id="4384">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD>109" Operator="greaterThan" id="4389">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+          </operand>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.3" id="5993" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/829/sequencias/5993/" name="S3 (PS >180 PD >110)" description="">
+    <operation name="PS>180_ou_PD>110" Operator="and" id="4402">
+      <operand xsi:type="pathwayMetamodel:Operation" name="~A" id="4397">
+        <operand xsi:type="pathwayMetamodel:Operation" name="A" Operator="or" id="4394">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130_&amp;_PS&lt;=159" Operator="and" id="4390">
+            <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130" Operator="greaterOrEqual" id="4380">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="130" id="4372" weight="1" value="130.0"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=159" Operator="lessOrEqual" id="4381">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="159" id="4373" weight="1" value="159.0"/>
+            </operand>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80_&amp;_PD&lt;=99" Operator="and" id="4391">
+            <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80" Operator="greaterOrEqual" id="4385">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="80" id="4374" weight="1" value="80.0"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=99" Operator="lessOrEqual" id="4386">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="99" id="4375" weight="1" value="99.0"/>
+            </operand>
+          </operand>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="~B" id="4398">
+        <operand xsi:type="pathwayMetamodel:Operation" name="B" Operator="or" id="4395">
+          <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160_&amp;_PS&lt;=179" Operator="and" id="4392">
+            <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160" Operator="greaterOrEqual" id="4382">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="160" id="4376" weight="1" value="160.0"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=179" Operator="lessOrEqual" id="4383">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+            </operand>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100_&amp;_PD&lt;=109" Operator="and" id="4393">
+            <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100" Operator="greaterOrEqual" id="4387">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="100" id="4378" weight="1" value="100.0"/>
+            </operand>
+            <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=109" Operator="lessOrEqual" id="4388">
+              <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+              <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+            </operand>
+          </operand>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="C" Operator="or" id="4396">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PS>179" Operator="greaterThan" id="4384">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="PD>109" Operator="greaterThan" id="4389">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <operation name="PS>=130" Operator="greaterOrEqual" id="4380">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="130" id="4372" weight="1" value="130.0"/>
+  </operation>
+  <operation name="PS&lt;=159" Operator="lessOrEqual" id="4381">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="159" id="4373" weight="1" value="159.0"/>
+  </operation>
+  <operation name="PS>=160" Operator="greaterOrEqual" id="4382">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="160" id="4376" weight="1" value="160.0"/>
+  </operation>
+  <operation name="PS&lt;=179" Operator="lessOrEqual" id="4383">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+  </operation>
+  <operation name="PS>179" Operator="greaterThan" id="4384">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+  </operation>
+  <operation name="PD>=80" Operator="greaterOrEqual" id="4385">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="80" id="4374" weight="1" value="80.0"/>
+  </operation>
+  <operation name="PD&lt;=99" Operator="lessOrEqual" id="4386">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="99" id="4375" weight="1" value="99.0"/>
+  </operation>
+  <operation name="PD>=100" Operator="greaterOrEqual" id="4387">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="100" id="4378" weight="1" value="100.0"/>
+  </operation>
+  <operation name="PD&lt;=109" Operator="lessOrEqual" id="4388">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+  </operation>
+  <operation name="PD>109" Operator="greaterThan" id="4389">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+  </operation>
+  <operation name="PS>=130_&amp;_PS&lt;=159" Operator="and" id="4390">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130" Operator="greaterOrEqual" id="4380">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="130" id="4372" weight="1" value="130.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=159" Operator="lessOrEqual" id="4381">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="159" id="4373" weight="1" value="159.0"/>
+    </operand>
+  </operation>
+  <operation name="PD>=80_&amp;_PD&lt;=99" Operator="and" id="4391">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80" Operator="greaterOrEqual" id="4385">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="80" id="4374" weight="1" value="80.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=99" Operator="lessOrEqual" id="4386">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="99" id="4375" weight="1" value="99.0"/>
+    </operand>
+  </operation>
+  <operation name="PS>=160_&amp;_PS&lt;=179" Operator="and" id="4392">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160" Operator="greaterOrEqual" id="4382">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="160" id="4376" weight="1" value="160.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=179" Operator="lessOrEqual" id="4383">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+    </operand>
+  </operation>
+  <operation name="PD>=100_&amp;_PD&lt;=109" Operator="and" id="4393">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100" Operator="greaterOrEqual" id="4387">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="100" id="4378" weight="1" value="100.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=109" Operator="lessOrEqual" id="4388">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+    </operand>
+  </operation>
+  <operation name="A" Operator="or" id="4394">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130_&amp;_PS&lt;=159" Operator="and" id="4390">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130" Operator="greaterOrEqual" id="4380">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="130" id="4372" weight="1" value="130.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=159" Operator="lessOrEqual" id="4381">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="159" id="4373" weight="1" value="159.0"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80_&amp;_PD&lt;=99" Operator="and" id="4391">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80" Operator="greaterOrEqual" id="4385">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="80" id="4374" weight="1" value="80.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=99" Operator="lessOrEqual" id="4386">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="99" id="4375" weight="1" value="99.0"/>
+      </operand>
+    </operand>
+  </operation>
+  <operation name="B" Operator="or" id="4395">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160_&amp;_PS&lt;=179" Operator="and" id="4392">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160" Operator="greaterOrEqual" id="4382">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="160" id="4376" weight="1" value="160.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=179" Operator="lessOrEqual" id="4383">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100_&amp;_PD&lt;=109" Operator="and" id="4393">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100" Operator="greaterOrEqual" id="4387">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="100" id="4378" weight="1" value="100.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=109" Operator="lessOrEqual" id="4388">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+      </operand>
+    </operand>
+  </operation>
+  <operation name="C" Operator="or" id="4396">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PS>179" Operator="greaterThan" id="4384">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="PD>109" Operator="greaterThan" id="4389">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+    </operand>
+  </operation>
+  <operation name="~A" id="4397">
+    <operand xsi:type="pathwayMetamodel:Operation" name="A" Operator="or" id="4394">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130_&amp;_PS&lt;=159" Operator="and" id="4390">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PS>=130" Operator="greaterOrEqual" id="4380">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="130" id="4372" weight="1" value="130.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=159" Operator="lessOrEqual" id="4381">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="159" id="4373" weight="1" value="159.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80_&amp;_PD&lt;=99" Operator="and" id="4391">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PD>=80" Operator="greaterOrEqual" id="4385">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="80" id="4374" weight="1" value="80.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=99" Operator="lessOrEqual" id="4386">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="99" id="4375" weight="1" value="99.0"/>
+        </operand>
+      </operand>
+    </operand>
+  </operation>
+  <operation name="~B" id="4398">
+    <operand xsi:type="pathwayMetamodel:Operation" name="B" Operator="or" id="4395">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160_&amp;_PS&lt;=179" Operator="and" id="4392">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PS>=160" Operator="greaterOrEqual" id="4382">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="160" id="4376" weight="1" value="160.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="PS&lt;=179" Operator="lessOrEqual" id="4383">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100_&amp;_PD&lt;=109" Operator="and" id="4393">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PD>=100" Operator="greaterOrEqual" id="4387">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="100" id="4378" weight="1" value="100.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="PD&lt;=109" Operator="lessOrEqual" id="4388">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+        </operand>
+      </operand>
+    </operand>
+  </operation>
+  <operation name="~C" id="4399">
+    <operand xsi:type="pathwayMetamodel:Operation" name="C" Operator="or" id="4396">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PS>179" Operator="greaterThan" id="4384">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PD>109" Operator="greaterThan" id="4389">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+      </operand>
+    </operand>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="valor_ps" id="4370" weight="1" value="0.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="valor_pd" id="4371" weight="1" value="0.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="130" id="4372" weight="1" value="130.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="159" id="4373" weight="1" value="159.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="80" id="4374" weight="1" value="80.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="99" id="4375" weight="1" value="99.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="160" id="4376" weight="1" value="160.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="179" id="4377" weight="1" value="179.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="100" id="4378" weight="1" value="100.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="109" id="4379" weight="1" value="109.0"/>
+</pathwayMetamodel:Pathway>

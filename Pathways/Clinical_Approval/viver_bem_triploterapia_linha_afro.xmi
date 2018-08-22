@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="858" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/?format=json" name="[Viver Bem] Triploterapia Linha Afro" code="VB_TRIPLO_AFRO">
+  <element xsi:type="pathwayMetamodel:Prescription" id="7030" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/receitas/7030/" name="Receita I - Enalapril" description="&lt;p>Prescrever Enalapril 20mg 2x/dia&amp;nbsp;+ Anlodipino 5mg/dia + Clortalidona 12,5mg/dia&lt;/p>" inputSequences="//@sequence.10" outputSequences="//@sequence.0">
+    <item id="1407" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/receitas/7030/itens-receita/1407/" name="" med_code="766252963" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="1409" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/receitas/7030/itens-receita/1409/" name="" med_code="2032016114" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1410" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/receitas/7030/itens-receita/1410/" name="" med_code="1854816327" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7031" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/auxilios-conduta/7031/" name="Reavaliar press&#xe3;o (1)" description="Atingiu meta press&#xf3;rica?" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Atingiu meta press&#xf3;rica?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/auxilios-conduta/7031/perguntas/2656/" id="2656">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="5257" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7032" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/auxilios-conduta/7032/" name="Reavaliar press&#xe3;o (2)" description="Manteve meta press&#xf3;rica?" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Manteve meta press&#xf3;rica?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/auxilios-conduta/7032/perguntas/2657/" id="2657">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="5258" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7033" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/receitas/7033/" name="Manter Tratamento" description="&lt;p>Manter Tratamento anterior, segue medicamentos prescritos na Receita anterior:&lt;/p>" inputSequences="//@sequence.5" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:Process" id="7034" type="Processo" type_verbose="Processo" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/processos/7034/" name="Agendar Retorno Semanal" description="" inputSequences="//@sequence.0 //@sequence.12" outputSequences="//@sequence.8">
+    <action id="287" process_id="7034" service="aprazamento" description="Retorno Semanal"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="7035" type="Pausa" type_verbose="Pausa" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/pausas/7035/" name="Aguardar Retorno Semanal" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:Process" id="7036" type="Processo" type_verbose="Processo" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/processos/7036/" name="Agendar Retorno Semestral" description="" inputSequences="//@sequence.2 //@sequence.7" outputSequences="//@sequence.9">
+    <action id="288" process_id="7036" service="aprazamento" description="Retorno Semestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="7037" type="Pausa" type_verbose="Pausa" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/pausas/7037/" name="Aguardar Retorno Semestral" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="7038" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/encaminhamentos/7038/" name="Encaminhamento Tetraterapia" description="Encaminhar ao protocolo de Tetraterapia" isTerminal="true" inputSequences="//@sequence.3 //@sequence.6">
+    <pathways>VB_TETRA_AFRO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7049" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/receitas/7049/" name="Receita II - Losartana" description="&lt;p>Prescrever Losartan 50mg 2x/dia + Anlodipino 5mg/d + Clortalidona 12,5mg/dia&lt;/p>" inputSequences="//@sequence.11" outputSequences="//@sequence.12">
+    <item id="1411" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/receitas/7049/itens-receita/1411/" name="" med_code="1462504790" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="1412" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/receitas/7049/itens-receita/1412/" name="" med_code="-2022351572" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1413" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/receitas/7049/itens-receita/1413/" name="" med_code="1854816327" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7050" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/auxilios-conduta/7050/" name="Verifica&#xe7;&#xe3;o de Medica&#xe7;&#xe3;o" description="" isInitial="true" outputSequences="//@sequence.10 //@sequence.11">
+    <questions text="Selecionar Op&#xe7;&#xe3;o:" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/auxilios-conduta/7050/perguntas/2658/" id="2658">
+      <answers xsi:type="pathwayMetamodel:Choice" name="medicacao_linha_triplo_afro" id="5263" weight="1" value="0.0">
+        <option description="Enalapril 20mg" weight="1"/>
+        <option description="Losartana 50mg" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.4" outputStep="//@element.0" id="7039" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7039/" name="S1" description=""/>
+  <sequence inputStep="//@element.1" outputStep="//@element.5" id="7040" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7040/" name="S2" description=""/>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="7041" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7041/" name="S3 (atingiu meta pressorica)" description="">
+    <operation name="atingiu meta pressorica" Operator="affirmation" id="5259">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="5257" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.1" id="7042" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7042/" name="S4 (n&#xe3;o atingiu meta pressorica)" description="">
+    <operation name="n&#xe3;o atingiu meta pressorica" id="5260">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="5257" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.7" id="7043" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7043/" name="S5" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="7044" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7044/" name="S6 (manteve meta pressorica)" description="">
+    <operation name="manteve meta pressorica" Operator="affirmation" id="5261">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="5258" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="7045" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7045/" name="S7 (n&#xe3;o manteve meta pressorica)" description="">
+    <operation name="n&#xe3;o manteve meta pressorica" id="5262">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="5258" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="7046" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7046/" name="S8" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="7047" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7047/" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="7048" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7048/" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.10" id="7051" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7051/" name="S11" description="-">
+    <operation name="enalapril" Operator="equal" id="5266">
+      <operand xsi:type="pathwayMetamodel:Choice" name="medicacao_linha_triplo_afro" id="5263" weight="1" value="0.0">
+        <option description="Enalapril 20mg" weight="1"/>
+        <option description="Losartana 50mg" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="UM" id="5264" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.10" id="7052" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7052/" name="S12" description="-">
+    <operation name="losartana" Operator="equal" id="5267">
+      <operand xsi:type="pathwayMetamodel:Choice" name="medicacao_linha_triplo_afro" id="5263" weight="1" value="0.0">
+        <option description="Enalapril 20mg" weight="1"/>
+        <option description="Losartana 50mg" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="DOIS" id="5265" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.9" id="7053" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/858/sequencias/7053/" name="S13" description="-"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="5257" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="5258" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="medicacao_linha_triplo_afro" id="5263" weight="1" value="0.0">
+    <option description="Enalapril 20mg" weight="1"/>
+    <option description="Losartana 50mg" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="UM" id="5264" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="DOIS" id="5265" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

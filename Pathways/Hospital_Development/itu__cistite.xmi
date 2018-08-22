@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="1164" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/?format=json" name="ITU - Cistite" code="H008">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4914" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4914/" name="Informar Sexo do paciente" description="Informe o sexo do paciente para seguir com o tratamento adequado." isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Masculino" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4914/perguntas/3439/" id="3439">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sexo_masculino" id="5940" weight="1" value="false"/>
+    </questions>
+    <questions text="Feminino" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4914/perguntas/3440/" id="3440">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sexo_feminino" id="5941" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4915" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4915/" name="[Masculino] Avaliar Sintomas" description="Informe os sintomas apresentados pelo paciente." inputSequences="//@sequence.0" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Sintomas por mais de 7 dias" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4915/perguntas/3441/" id="3441">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="5942" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4915/perguntas/3442/" id="3442">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="5943" weight="1" value="false"/>
+    </questions>
+    <questions text="DM" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4915/perguntas/3443/" id="3443">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="5944" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade > 65 anos" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4915/perguntas/3444/" id="3444">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="5945" weight="1" value="false"/>
+    </questions>
+    <questions text="Altera&#xe7;&#xf5;es Urol&#xf3;gicas ou DRC?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4915/perguntas/3445/" id="3445">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="5946" weight="1" value="false"/>
+    </questions>
+    <questions text="Recorr&#xea;ncia dos sintomas por mais de 14 dias" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4915/perguntas/3446/" id="3446">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="5947" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente em uso de antibi&#xf3;tico recente (h&#xe1; 48-72H), sem melhora dos sintomas?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4915/perguntas/3447/" id="3447">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="5948" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4916" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4916/" name="[Feminino] Avaliar Sintomas" description="Informe os sintomas apresentados pelo paciente." inputSequences="//@sequence.1" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Sintomas por mais de 7 dias" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4916/perguntas/3448/" id="3448">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="5949" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4916/perguntas/3449/" id="3449">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="5950" weight="1" value="false"/>
+    </questions>
+    <questions text="Diabetes Melitus" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4916/perguntas/3450/" id="3450">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="5951" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade > 65 anos" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4916/perguntas/3451/" id="3451">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="5952" weight="1" value="false"/>
+    </questions>
+    <questions text="Altera&#xe7;&#xf5;es Urol&#xf3;gicas ou DRC" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4916/perguntas/3452/" id="3452">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="5953" weight="1" value="false"/>
+    </questions>
+    <questions text="Recorr&#xea;ncia dos sintomas por mais de 14 dias" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4916/perguntas/3453/" id="3453">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="5954" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente em uso de antibi&#xf3;tico recente (h&#xe1; 48-72H), sem melhora dos sintomas?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4916/perguntas/3454/" id="3454">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="5955" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4917" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4917/" name="[Masculino] Solicitar Exames + Hemograma" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.2">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4917/exames/2880/" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com suspeita de Cistite" clinical_indication="N/A"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4917/exames/2881/" exam_id="28100549" limb_side="" quantity="1" reason="Paciente com suspeita de cistite" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4917/exames/2882/" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com suspeita de cistite" clinical_indication="SUMARIO DE URINA  (TIPO I)"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4917/exames/2883/" exam_id="28100034" limb_side="" quantity="1" reason="Protocolo de ITU - Cistite" clinical_indication="Protocolo de ITU - Cistite"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4918" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4918/" name="[Masculino] Solicitar Exames" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.3">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4918/exames/2884/" exam_id="28100549" limb_side="" quantity="1" reason="Paciente com suspeita de cistite" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4918/exames/2885/" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com suspeita de cistite" clinical_indication="Protocolo de Cistite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4918/exames/2886/" exam_id="28100034" limb_side="" quantity="1" reason="Protocolo de Cistite" clinical_indication="Protocolo de Cistite"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4919" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/informacoes/4919/" name="Aviso: Discutir tratamento espec&#xed;fico com l&#xed;der local" description="Paciente apresenta potencial de gravidade, sugere-se discutir o caso com o l&#xed;der local para defini&#xe7;&#xe3;o do tratamento mais adequado." isTerminal="true" inputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4920" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4920/" name="[Marculino] Tratamento com antibi&#xf3;tico" description="Aten&#xe7;&#xe3;o! Caso n&#xe3;o apresente melhora dos sintomas, 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es a seguir, retornar imediatamente a emerg&#xea;ncia." inputSequences="//@sequence.3" outputSequences="//@sequence.4">
+    <item id="600" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4920/itens-receita/600/" name="Norfloxacino 400Mg ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h"/>
+    <item id="601" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4920/itens-receita/601/" name="Ciprofloxacino 500Mg ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="602" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4920/itens-receita/602/" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir em um copo de agua e tomar em dose unica"/>
+    <item id="603" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4920/itens-receita/603/" name="Nitrofurantoina 100Mg ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h"/>
+    <item id="604" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4920/itens-receita/604/" name="Pyridium 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h"/>
+    <item id="605" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4920/itens-receita/605/" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido 6/6h se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4921" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/informacoes/4921/" name="Aviso: Encaminhar paciente para urologista" description="Recomende ao paciente a que procure uma consulta eletiva com o urologista para avalia&#xe7;&#xe3;o do caso." isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4922" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4922/" name="[Feminino] Solicitar Exames + Hemograma" description="Exames com hemograma" inputSequences="//@sequence.12" outputSequences="//@sequence.5">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4922/exames/2887/" exam_id="28040481" limb_side="" quantity="1" reason="Suspeita de cistite" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4922/exames/2888/" exam_id="28100549" limb_side="" quantity="1" reason="Suspeita de cistite" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4922/exames/2889/" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com suspeita de cistite" clinical_indication="Protocolo de Cistite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/tratamentos/4922/exames/2890/" exam_id="28100034" limb_side="" quantity="1" reason="Protocolo de ITU - Cistite" clinical_indication="Protocolo de ITU - Cistite"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4923" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4923/" name="[Feminino] Tratamento com antibi&#xf3;tico" description="Aten&#xe7;&#xe3;o! Caso n&#xe3;o apresente melhora dos sintomas, 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es a seguir, retornar imediatamente a emerg&#xea;ncia." isTerminal="true" inputSequences="//@sequence.5">
+    <item id="606" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4923/itens-receita/606/" name="Ciprofloxacino 500Mg ...... 10cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="607" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4923/itens-receita/607/" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir sache em um copo de agua, tomar em dose unica"/>
+    <item id="608" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4923/itens-receita/608/" name="Pyridium 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h"/>
+    <item id="609" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4923/itens-receita/609/" name="Norfloxacino 400Mg ...... 10cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="610" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4923/itens-receita/610/" name="Amoxicilina/Clavulanato 875/125 ...... 10cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="611" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4923/itens-receita/611/" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4924" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4924/" name="[Feminino] Verificar Gesta&#xe7;&#xe3;o" description="Verificar se paciente est&#xe1; gestante." inputSequences="//@sequence.13" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Paciente gestante?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4924/perguntas/3455/" id="3455">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="gravidez" id="5956" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4925" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4925/" name="[Feminino] Tratamento paciente gestante" description="Aten&#xe7;&#xe3;o! Caso n&#xe3;o apresente melhora dos sintomas, 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es a seguir, retornar imediatamente a emerg&#xea;ncia.&#xA;Aumente a ingest&#xe3;o h&#xed;drica para auxiliar no tratamento." isTerminal="true" inputSequences="//@sequence.6">
+    <item id="612" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4925/itens-receita/612/" name="Cefalexina 500Mg ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h"/>
+    <item id="613" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4925/itens-receita/613/" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir sache em um copo de agua e tomar em dose unica"/>
+    <item id="614" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4925/itens-receita/614/" name="Paracetamol 500Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="615" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4925/itens-receita/615/" name="Nitrofurantoina 100Mg ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4926" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4926/" name="[Feminino] Verificar Fatores Agravantes" description="Verificar se a paciente apresenta presen&#xe7;a de leucorr&#xe9;ia ou irrita&#xe7;&#xe3;o vaginal." inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.11">
+    <questions text="Paciente apresenta leucorr&#xe9;ia ou irrita&#xe7;&#xe3;o vaginal?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/auxilios-conduta/4926/perguntas/3456/" id="3456">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="leucorreia_irritacao" id="5957" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4927" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4927/" name="[Feminino] Tratamento de fatores agravantes com antibi&#xf3;tico" description="Aten&#xe7;&#xe3;o! Caso n&#xe3;o apresente melhora dos sintomas, 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es a seguir, retornar imediatamente a emerg&#xea;ncia. &#xA;Aumente a ingest&#xe3;o h&#xed;drica para auxiliar no tratamento." isTerminal="true" inputSequences="//@sequence.8">
+    <item id="616" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4927/itens-receita/616/" name="Norfloxacino 400Mg ...... 10cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="617" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4927/itens-receita/617/" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir sache em um copo de agua e tomar em dose unica"/>
+    <item id="618" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4927/itens-receita/618/" name="Pyridium 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h"/>
+    <item id="619" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4927/itens-receita/619/" name="Nitrofurantoina 100Mg ...... 20cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h"/>
+    <item id="620" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4927/itens-receita/620/" name="Amoxicilina/Clavulanato 875/125 ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido 12/12h"/>
+    <item id="621" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/receitas/4927/itens-receita/621/" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4928" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/informacoes/4928/" name="Aviso: Encaminhar paciente para ginecologista" description="Recomende a paciente a que procure uma consulta eletiva com o ginecologista para avalia&#xe7;&#xe3;o do caso." isTerminal="true" inputSequences="//@sequence.11"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4929" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4929/" name="S1 (Paciente homem)" description="">
+    <operation name="Paciente homem" Operator="affirmation" id="5963">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sexo_masculino" id="5940" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="4930" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4930/" name="S2 (Paciente mulher)" description="">
+    <operation name="Paciente mulher" Operator="affirmation" id="5964">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sexo_feminino" id="5941" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="4931" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4931/" name="S5" description=""/>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="4932" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4932/" name="S6" description=""/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="4933" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4933/" name="S7" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="4934" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4934/" name="S9" description=""/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="4935" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4935/" name="S12 (paciente gravida)" description="">
+    <operation name="Paciente Gravida" Operator="affirmation" id="5965">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gravidez" id="5956" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="4936" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4936/" name="S13 (paciente n&#xe3;o est&#xe1; gr&#xe1;vida)" description="">
+    <operation name="Paciente n&#xe3;o est&#xe1; gr&#xe1;vida" id="5966">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gravidez" id="5956" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="4937" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4937/" name="S15 (N&#xe3;o apresenta leucorreia/irritacao)" description="Paciente n&#xe3;o apresenta leucorreia/irritacao">
+    <operation name="Sem Leucorreia" id="5967">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="leucorreia_irritacao" id="5957" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="4938" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4938/" name="s9" description="">
+    <operation name="um_ou_mais_sintomas" Operator="greaterOrEqual" id="5968">
+      <operand xsi:type="pathwayMetamodel:Operation" name="somatorio_sintomas_masc" Operator="addition" id="5961">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="5942" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="5943" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="5944" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="5945" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="5946" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="5947" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="5948" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5958" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="4939" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4939/" name="s10" description="">
+    <operation name="sem_sintomas_masculino" Operator="lessThan" id="5969">
+      <operand xsi:type="pathwayMetamodel:Operation" name="somatorio_sintomas_masc" Operator="addition" id="5961">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="5942" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="5943" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="5944" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="5945" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="5946" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="5947" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="5948" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5958" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.12" id="4940" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4940/" name="s12" description="">
+    <operation name="com_fatores_agravantes" Operator="affirmation" id="5970">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="leucorreia_irritacao" id="5957" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="4941" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4941/" name="s13" description="">
+    <operation name="um_ou_mais_sintomas_feminino" Operator="greaterOrEqual" id="5971">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_fem" Operator="addition" id="5962">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="5949" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="5950" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="5951" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="5952" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="5952" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="5953" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="5954" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="5955" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5958" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.2" id="4942" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/1164/sequencias/4942/" name="s14" description="">
+    <operation name="sem_sintomas_feminino" Operator="lessThan" id="5972">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_fem" Operator="addition" id="5962">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="5949" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="5950" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="5951" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="5952" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="5952" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="5953" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="5954" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="5955" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5958" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <operation name="Total Sintomas Homem" Operator="addition" id="5959">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="5942" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="5943" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="5944" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="5945" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="5946" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="5947" weight="1" value="false"/>
+  </operation>
+  <operation name="Total Sintomas Mulher" Operator="addition" id="5960">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="5949" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="5950" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="5951" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="5952" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="5953" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="5954" weight="1" value="false"/>
+  </operation>
+  <operation name="somatorio_sintomas_masc" Operator="addition" id="5961">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="5942" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="5943" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="5944" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="5945" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="5946" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="5947" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="5948" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_sintomas_fem" Operator="addition" id="5962">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="5949" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="5950" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="5951" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="5952" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="5952" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="5953" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="5954" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="5955" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sexo_masculino" id="5940" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sexo_feminino" id="5941" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="5942" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="5943" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="5944" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="5945" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="5946" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="5947" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="5948" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="5949" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="5950" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="5951" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="5952" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="5953" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="5954" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="5955" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="gravidez" id="5956" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="leucorreia_irritacao" id="5957" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="5958" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

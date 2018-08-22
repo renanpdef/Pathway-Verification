@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="750" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/?format=json" name="ITU" code="MF_ITU">
+  <element xsi:type="pathwayMetamodel:Treatment" id="3912" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/tratamentos/3912/" name="Solicitar urocultura com antibiograma" description="Solicitar exame ap&#xf3;s identifica&#xe7;&#xe3;o de Sintomas" isInitial="true" outputSequences="//@sequence.0">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/tratamentos/3912/exames/240/" exam_id="28100549" limb_side="" quantity="1" reason="urocultura com antibiograma" clinical_indication="urocultura com antibiograma"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3913" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/receitas/3913/" name="Tratamento Emp&#xed;rico" description="&lt;p>&amp;nbsp;Ap&amp;oacute;s 72h retornar com resultados dos exames ou caso piora dos sintomas.&lt;br />&#xA;&amp;nbsp;&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.1">
+    <item id="884" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/receitas/3913/itens-receita/884/" name="" med_code="1854811216" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="885" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/receitas/3913/itens-receita/885/" name="" med_code="1854811223" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="886" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/receitas/3913/itens-receita/886/" name="" med_code="1462526348" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="3914" type="Pausa" type_verbose="Pausa" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/pausas/3914/" name="Reavaliar paciente ap&#xf3;s 72h" description="Ap&#xf3;s retorno, observar se houve melhoras dos sintomas ap&#xf3;s tratamento" inputSequences="//@sequence.1" outputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3915" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/auxilios-conduta/3915/" name="Verificar estado do paciente" description="Reavalia&#xe7;&#xe3;o ap&#xf3;s 72h" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Paciente Obteve Melhora?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/auxilios-conduta/3915/perguntas/1745/" id="1745">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="estado_paciente" id="2915" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3916" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/informacoes/3916/" name="Substituir antibi&#xf3;tico" description="&lt;p>Substituir antibi&amp;oacute;tico com base no antibiograma ou substitui&amp;ccedil;&amp;atilde;o por falha terap&amp;ecirc;utica.&amp;nbsp;&lt;br />&#xA;&amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3917" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/receitas/3917/" name="Manter Conduta M&#xe9;dica" description="&lt;p>Manter &amp;uacute;ltima conduta m&amp;eacute;dica do tratamento.&lt;/p>" isTerminal="true" inputSequences="//@sequence.3"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="3918" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/sequencias/3918/" name="S1" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="3919" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/sequencias/3919/" name="S2" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="3920" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/sequencias/3920/" name="S3" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="3921" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/sequencias/3921/" name="S4 (Obteve Melhora)" description="">
+    <operation name="paciente_obteve_melhora" Operator="affirmation" id="2916">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="estado_paciente" id="2915" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="3922" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/750/sequencias/3922/" name="S5 (N&#xe3;o Obteve Melhora)" description="">
+    <operation name="paciente_nao_obteve_melhora" id="2917">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="estado_paciente" id="2915" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="estado_paciente" id="2915" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="881" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/?format=json" name="[Viver Bem] Hipertens&#xe3;o" code="MF_HAS">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7281" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/auxilios-conduta/7281/" name="J&#xe1; est&#xe1; em tratamento?" description="Verificar se paciente j&#xe1; est&#xe1; em tratamento" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="J&#xe1; est&#xe1; em tratamento?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/auxilios-conduta/7281/perguntas/2741/" id="2741">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ja_esta_em_tratamento" id="5441" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7282" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/auxilios-conduta/7282/" name="Verificar Etnia" description="Verificar se paciente &#xe9; afroamericano" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Paciente &#xe9; afroamericano?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/auxilios-conduta/7282/perguntas/2742/" id="2742">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_afroamericano" id="5442" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7283" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/auxilios-conduta/7283/" name="Alergia a IECA?" description="Verificar se paciente possui alergia a IECA" inputSequences="//@sequence.3" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Paciente al&#xe9;rgico a IECA?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/auxilios-conduta/7283/perguntas/2743/" id="2743">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_IECA" id="5443" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7284" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/auxilios-conduta/7284/" name="Tratamento Alternativo?" description="Paciente Al&#xe9;rgico a IECA, em caso de n&#xe3;o realizar tratamento alternativo, paciente ir&#xe1; ser encaminhado para tratamento BAR + BBC + BETABLOQUEADOR" inputSequences="//@sequence.6" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Tratamento alternativo?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/auxilios-conduta/7284/perguntas/2744/" id="2744">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_alternativo" id="5444" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7285" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/informacoes/7285/" name="Tratamento Alternativo" description="Prescrever e Justificar tratamento alternativo" isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="7286" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/encaminhamentos/7286/" name="Avaliar continuidade do tratamento" description="Selecionar tratamento adequado para o Paciente" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>VB_PROT_FARM_AFRO</pathways>
+    <pathways>VB_DIA_IECA</pathways>
+    <pathways>VB_BAR</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="7287" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/encaminhamentos/7287/" name="Protocolo Farmacol&#xf3;gico Afroamericano" description="- Encaminhar para Protocolo Farmacol&#xf3;gico Afroamericano" isTerminal="true" inputSequences="//@sequence.2">
+    <pathways>VB_PROT_FARM_AFRO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="7288" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/encaminhamentos/7288/" name="BAR + BBC + BETABLOQUEADOR" description="Encaminhar para tratamento BAR + BBC + BETABLOQUEADOR" isTerminal="true" inputSequences="//@sequence.5">
+    <pathways>VB_BAR</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="7289" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/encaminhamentos/7289/" name="IECA + BBC + BETABLOQUEADOR" description="Encaminhar para tratamento IECA + BBC + BETABLOQUEADOR" isTerminal="true" inputSequences="//@sequence.7">
+    <pathways>VB_DIA_IECA</pathways>
+  </element>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="7290" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/sequencias/7290/" name="S1 (com tratamento previo)" description="">
+    <operation name="com tratamento previo" Operator="affirmation" id="5445">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ja_esta_em_tratamento" id="5441" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="7291" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/sequencias/7291/" name="S2 (sem tratamento previo)" description="">
+    <operation name="sem tratamento previo" id="5446">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ja_esta_em_tratamento" id="5441" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="7292" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/sequencias/7292/" name="S3 (paciente afroamericano)" description="">
+    <operation name="paciente afroamericano" Operator="affirmation" id="5447">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_afroamericano" id="5442" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="7293" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/sequencias/7293/" name="S4 (paciente nao afroamericano)" description="">
+    <operation name="paciente nao afroamericano" id="5448">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_afroamericano" id="5442" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="7294" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/sequencias/7294/" name="S5 (tratamento alternativo)" description="">
+    <operation name="com tratamento alternativo" Operator="affirmation" id="5449">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_alternativo" id="5444" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.3" id="7295" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/sequencias/7295/" name="S6 (sem tratamento alternativo)" description="">
+    <operation name="sem tratamento alternativo" id="5450">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_alternativo" id="5444" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="7296" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/sequencias/7296/" name="S7 (alergico a IECA)" description="">
+    <operation name="alergico a IECA" Operator="affirmation" id="5451">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_IECA" id="5443" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="7297" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/881/sequencias/7297/" name="S8 (nao alergico a IECA)" description="">
+    <operation name="nao alergico a IECA" id="5452">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_IECA" id="5443" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ja_esta_em_tratamento" id="5441" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_afroamericano" id="5442" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_IECA" id="5443" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_alternativo" id="5444" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

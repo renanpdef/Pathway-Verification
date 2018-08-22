@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="387" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/?format=json" name="Meningite" code="H003">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="1509" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/auxilios-conduta/1509/" name="Verifique as condi&#xe7;&#xf5;es do paciente" description="Avalie as condi&#xe7;&#xf5;es do paciente para dar seguimento ao tratamento adequado." isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2 //@sequence.3">
+    <questions text="Idade > 50 anos?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/auxilios-conduta/1509/perguntas/1272/" id="1272">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+    </questions>
+    <questions text="Hist&#xf3;rico de etilismo?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/auxilios-conduta/1509/perguntas/1273/" id="1273">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o (HIV, Uso cr&#xf4;nico de corticoide, transplantado), Diabetes, gestante, portadores de doen&#xe7;a renal ou hep&#xe1;ticas cr&#xf4;nicas?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/auxilios-conduta/1509/perguntas/1274/" id="1274">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+    </questions>
+    <questions text="Procedimento neurocir&#xfa;rgico pr&#xe9;vio ou trauma penetrante)?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/auxilios-conduta/1509/perguntas/1275/" id="1275">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="1510" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/" name="Tratamento Padr&#xe3;o" description="Tratamento para pacientes que n&#xe3;o possuem nenhum dos crit&#xe9;rios agravantes." inputSequences="//@sequence.2" outputSequences="//@sequence.4">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/exames/1204/" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/exames/1205/" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/exames/1206/" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/exames/1207/" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/exames/1208/" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/exames/1209/" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/exames/1210/" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/exames/1211/" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/medicamentos/1068/" med_id="146890" id="1068" name="DEXAMETAZONA 2 MG AMPL 1 ML" brand="EMS" unit="MG" access="6" daily_dosage="4" cycles="1" treatement_time="1068" frequency="6" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1510/medicamentos/1069/" med_id="169219" id="1069" name="ROCEFIN 1G IM/IV FRAS 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1069" frequency="12" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="1511" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/" name="Tratamento indicado para idade elevada, etilismo ou imunossupress&#xe3;o" description="Para os casos em que o paciente apresente alguns dos crit&#xe9;rios a seguir:  Idade maior que 50 anos ou hist&#xf3;rico de Etilismo ou Imunossupress&#xe3;o, complementar o tratamento com Ampicilina." inputSequences="//@sequence.3" outputSequences="//@sequence.5">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/exames/1212/" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo Meningite" clinical_indication="Protocolo Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/exames/1213/" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/exames/1214/" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/exames/1215/" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/exames/1216/" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/exames/1217/" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/exames/1218/" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/exames/1219/" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/exames/1220/" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/medicamentos/1070/" med_id="146890" id="1070" name="DEXAMETAZONA 2 MG AMPL 1 ML" brand="EMS" unit="MG" access="6" daily_dosage="4" cycles="1" treatement_time="1070" frequency="6" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/medicamentos/1071/" med_id="169219" id="1071" name="ROCEFIN 1G IM/IV FRAS 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1071" frequency="12" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1511/medicamentos/1072/" med_id="75116" id="1072" name="AMPICILINA 1 GR AMPL 1 UD" brand="BIOCHIMICO/BAYER" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1072" frequency="4" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="1512" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/" name="Tratamento indicado quando procedimentos neurocir&#xfa;rgicos" description="Para os casos em que o paciente passou por algum procedimento cir&#xfa;rgico recente complementar o tratamento com Vancomicina e substituir  Ceftriaxona  por  Cefepime." inputSequences="//@sequence.0" outputSequences="//@sequence.6">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/exames/1221/" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo Meningite" clinical_indication="Protocolo Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/exames/1222/" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/exames/1223/" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/exames/1224/" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/exames/1225/" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/exames/1226/" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/exames/1227/" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/exames/1228/" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/medicamentos/1073/" med_id="146890" id="1073" name="DEXAMETAZONA 2 MG AMPL 1 ML" brand="EMS" unit="MG" access="6" daily_dosage="4" cycles="1" treatement_time="1073" frequency="6" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/medicamentos/1074/" med_id="109134" id="1074" name="VANCOCINA 1GR FRAP 1 UD" brand="ELI LILLY" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1074" frequency="12" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1512/medicamentos/1075/" med_id="111473" id="1075" name="MAXCEF 2GR FRAP 1 UD" brand="BRISTOL" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1075" frequency="8" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="1513" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/" name="Tratamento Completo" description="Paciente que apresenta m&#xfa;ltiplos fatores agravantes(  neurocirurgia, idade avan&#xe7;ada,  etilismo imunossupress&#xe3;o, cultura espec&#xed;fica ), Devem ser individualizados ,  o tratamento sugerido  dispon&#xed;vel a seguir." inputSequences="//@sequence.1" outputSequences="//@sequence.7">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/exames/1229/" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo Meningite" clinical_indication="Protocolo Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/exames/1230/" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/exames/1231/" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/exames/1232/" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/exames/1233/" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/exames/1234/" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/exames/1235/" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/exames/1236/" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/exames/1237/" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/medicamentos/1076/" med_id="146890" id="1076" name="DEXAMETAZONA 2 MG AMPL 1 ML" brand="EMS" unit="MG" access="6" daily_dosage="4" cycles="1" treatement_time="1076" frequency="6" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/medicamentos/1077/" med_id="75116" id="1077" name="AMPICILINA 1 GR AMPL 1 UD" brand="BIOCHIMICO/BAYER" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1077" frequency="4" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml SF 0,9%&quot;,&quot;id&quot;:63,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:198}"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/medicamentos/1078/" med_id="109134" id="1078" name="VANCOCINA 1GR FRAP 1 UD" brand="ELI LILLY" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1078" frequency="12" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1513/medicamentos/1079/" med_id="111473" id="1079" name="MAXCEF 2GR FRAP 1 UD" brand="BRISTOL" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1079" frequency="8" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="1514" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/auxilios-conduta/1514/" name="Avaliar resultado dos exames" description="Avalie o resultado dos exames do paciente." inputSequences="//@sequence.4 //@sequence.5 //@sequence.6 //@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Paciente apresenta hipertens&#xe3;o craniana?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/auxilios-conduta/1514/perguntas/1276/" id="1276">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper-craniana" id="2096" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="1515" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1515/" name="Tratamento LCR" description="Realize a coleta do LCR e mantenha o tratamento emp&#xed;rico do paciente." inputSequences="//@sequence.8" outputSequences="//@sequence.10">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1515/exames/1239/" exam_id="28090098" limb_side="" quantity="1" reason="MENINGITE" clinical_indication="MENINGITE"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1515/exames/1240/" exam_id="28100581" limb_side="" quantity="1" reason="MENINGITE" clinical_indication="MENINGITE"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1515/exames/1242/" exam_id="28100034" limb_side="" quantity="1" reason="MENINGITE" clinical_indication="MENINGITE"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/tratamentos/1515/exames/1254/" exam_id="28080050" limb_side="" quantity="1" reason="PUNCAO LIQUORICA RAQUIANA OU CISTERNAL - MENINGITE" clinical_indication="PUNCAO LIQUORICA RAQUIANA OU CISTERNAL - MENINGITE"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="1516" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/informacoes/1516/" name="Aviso: Sugest&#xe3;o de conduta" description="Para pacientes que apresentem evid&#xea;ncias de  Hipertens&#xe3;o Intracraniana ( cl&#xed;nica ou radiol&#xf3;gica ),   n&#xe3;o  sugerimos a realiza&#xe7;&#xe3;o  de pun&#xe7;&#xe3;o lombar,  manter tratamento emp&#xed;rico.&#xA;&#xA;Aguardar resultado dos exames.&#xA;Se houver suspeita de  encefalite  ou meningite viral,  acrescentar  aos exame  j&#xe1; solicitados  os seguintes itens .:&#xA;&#xA;* Isolamento viral para dengue e CKG do l&#xed;quor e do sangue ( avaliar  disponibilidade  do teste no laborat&#xf3;rio )  &#xA;* Sorologia para Herpes do l&#xed;quor&#xA;* PCR s&#xe9;rico para Herpes &#xA;&#xA;Sugerimos ap&#xf3;s Bacterioscopia do LCR.:&#xA;&#xA;* COCO GRAM +: PNEUMOCOCO -- CEFTRIAXONA 2G 12/12H + DEXAMETASONA 4MG EV 6/6H&#xA;* COCOBACILOS GRAM +: LISTERIA -- CEFTRIAXONA 2G 12/12H + AMPICILINA 2G 4/4H&#xA;* DIPLOCOCO GRAM - : MENINGOCOCO -- CEFTRIAXONA 2G 12/12H&#xA;* COCOBACILO GRAM - : HEM&#xd3;FILO -- CEFTRIAXONA 2G 12/12H + DEXAMETASONA&#xA;&#xA;Se n&#xe3;o for evidenciado microorganismo cor&#xe1;vel pelo GRAM, manter o tratamento emp&#xed;rico." isTerminal="true" inputSequences="//@sequence.9 //@sequence.10"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="1517" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1517/" name="s3" description="s3">
+    <operation name="s3-agravante-vancomicina" Operator="affirmation" id="2107">
+      <operand xsi:type="pathwayMetamodel:Operation" name="condicoes-agravantes-vancomicina" Operator="and" id="2100">
+        <operand xsi:type="pathwayMetamodel:Operation" name="neg_ampicilina" id="2099">
+          <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="2097">
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.0" id="1518" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1518/" name="s4" description="s4">
+    <operation name="s4-todos-os-criterios" Operator="and" id="2108">
+      <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="2097">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="1519" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1519/" name="s1" description="s1">
+    <operation name="s1-sem-criterios-agravantes" Operator="affirmation" id="2109">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem-criterios" Operator="and" id="2105">
+        <operand xsi:type="pathwayMetamodel:Operation" name="idade-menor-50" id="2101">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sem-etilismo" id="2102">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sem-imuno" id="2103">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sem-neurocirurgia" id="2104">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="1520" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1520/" name="s2" description="s2">
+    <operation name="s2-criterios-ampicilina-sem-neuro" Operator="affirmation" id="2110">
+      <operand xsi:type="pathwayMetamodel:Operation" name="condicoes-ampicilina-neg-neuro" Operator="and" id="2106">
+        <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="2097">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sem-neurocirurgia" id="2104">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="1521" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1521/" name="s5" description="s5"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="1522" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1522/" name="s6" description="s6"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="1523" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1523/" name="s7" description="s7"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="1524" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1524/" name="s8" description="s8"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="1525" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1525/" name="s9" description="s9">
+    <operation name="sem-hipertensao-craniana" id="2111">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper-craniana" id="2096" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="1526" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1526/" name="s10" description="s10">
+    <operation name="com-hiper-craniana" Operator="affirmation" id="2112">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper-craniana" id="2096" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="1527" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/387/sequencias/1527/" name="s11" description=""/>
+  <operation name="condicoes_agravantes_ampicilina" Operator="or" id="2097">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+  </operation>
+  <operation name="condicoes_agravantes_e_procedimento_neurocirurgico" Operator="and" id="2098">
+    <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="2097">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+  </operation>
+  <operation name="neg_ampicilina" id="2099">
+    <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="2097">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+    </operand>
+  </operation>
+  <operation name="condicoes-agravantes-vancomicina" Operator="and" id="2100">
+    <operand xsi:type="pathwayMetamodel:Operation" name="neg_ampicilina" id="2099">
+      <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="2097">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+  </operation>
+  <operation name="idade-menor-50" id="2101">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-etilismo" id="2102">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-imuno" id="2103">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-neurocirurgia" id="2104">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-criterios" Operator="and" id="2105">
+    <operand xsi:type="pathwayMetamodel:Operation" name="idade-menor-50" id="2101">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sem-etilismo" id="2102">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sem-imuno" id="2103">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sem-neurocirurgia" id="2104">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+    </operand>
+  </operation>
+  <operation name="condicoes-ampicilina-neg-neuro" Operator="and" id="2106">
+    <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="2097">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sem-neurocirurgia" id="2104">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+    </operand>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="2092" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="2093" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="2094" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="2095" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper-craniana" id="2096" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

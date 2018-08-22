@@ -5,6 +5,7 @@ import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 
+import pathwayMetamodel.Choice;
 import pathwayMetamodel.Numeric;
 import pathwayMetamodel.Operation;
 import pathwayMetamodel.Operator;
@@ -47,6 +48,41 @@ public class OperandParser {
 				}
 				
 			}
+			//if operand is a Choice operand.
+			else if(operation.getOperand().get(i).getClass().toString().contains("Choice")) {
+				Choice operand = (Choice) operation.getOperand().get(i);
+				//if the name of operand is null or "".
+				if(operand.getName() == null || operand.getName() == "") {
+					String name = operation.getOperator().getName() + index++;		
+					operand.setName(name);
+				}
+				IntVar intVar = auxModel.intVar(operand.getName(), new int[] {0,1});
+				//if numericOperands list still doesn't contain the new intVar.
+				if(!containsIntVar(numericOperands, intVar)) {
+					double operandValue = 0;
+					if(operand.getValue() != null) {
+						operandValue = operand.getValue();
+					}
+					if(operandValue != 0) {
+						numericOperands.add(model.intVar(operand.getName(), (int)operandValue));
+					}else {
+						numericOperands.add(model.intVar(operand.getName(), new int[] {0,1,2,3,4,5,25,50,75,100}));
+					}
+					if(operand.getOption().size() > 0){
+						int[] optionsArray = new int[(int) Math.pow(2,operand.getOption().size())];
+						int indexArray = 0;
+//						optionsArray[indexArray] = (int) operandValue;
+//						indexArray++;
+						for(int option = 1; option < operand.getOption().size(); option++) {
+							optionsArray[indexArray] = operand.getOption().get(option).getWeight();
+							indexArray++;
+						}
+						//double operandWeight = getOperandWeight(operation.getOperand().get(i).toString());
+						double operandWeight = operand.getWeight();
+						numericOperands.add(model.intVar(operand.getName(), new int[] {0, (int)operandWeight}));
+					}
+				}
+			}
 			//if operand is a YesOrNo (boolean) operand.
 			else {
 				YesOrNo operand = (YesOrNo) operation.getOperand().get(i);
@@ -55,7 +91,6 @@ public class OperandParser {
 					String name = operation.getOperator().getName() + index++;		
 					operand.setName(name);
 				}
-				
 				if(operation.getOperator() == Operator.ADDITION || operation.getOperator() == Operator.SUBTRACTION || operation.getOperator() == Operator.MULTIPLICATION || operation.getOperator() == Operator.DIVISION) {
 					IntVar intVar = auxModel.intVar(operand.getName(), new int[] {0,1});
 					//if numericOperands list still doesn't contain the new intVar.

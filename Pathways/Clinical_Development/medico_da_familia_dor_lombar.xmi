@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="1081" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/?format=json" name="[M&#xe9;dico da Fam&#xed;lia] Dor Lombar" code="MF_LOBAL">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5905" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/" name="StartBack Screening" description="Pensando nas duas &#xfa;ltimas semanas, assinale sua resposta para as seguintes perguntas:" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.15 //@sequence.16">
+    <questions text="1. A minha dor nas costas se espalhou pelas pernas nas duas &#xfa;ltimas semanas." url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/perguntas/2581/" id="2581">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4702" weight="1" value="false"/>
+    </questions>
+    <questions text="2. Eu tive dor no ombro e/ou na nuca pelo menos uma vez nas &#xfa;ltimas duas semanas" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/perguntas/2582/" id="2582">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4703" weight="1" value="false"/>
+    </questions>
+    <questions text="3. Eu evito andar longas dist&#xe2;ncias por causa da minha dor nas costas" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/perguntas/2583/" id="2583">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4704" weight="1" value="false"/>
+    </questions>
+    <questions text="4. Nas duas &#xfa;ltimas semanas, tenho me vestido mais devagar por causa da minha dor nas costas" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/perguntas/2584/" id="2584">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4705" weight="1" value="false"/>
+    </questions>
+    <questions text="5. A atividade f&#xed;sica n&#xe3;o &#xe9; realmente segura para uma pessoa com um problema como o meu" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/perguntas/2585/" id="2585">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+    </questions>
+    <questions text="6. Tenho ficado preocupado por muito tempo por causa da minha dor nas costas" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/perguntas/2586/" id="2586">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+    </questions>
+    <questions text="7. Eu sinto que minha dor nas costas &#xe9; terr&#xed;vel e que nunca vai melhorar" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/perguntas/2587/" id="2587">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+    </questions>
+    <questions text="8. Em geral, eu n&#xe3;o tenho gostado de todas as coisas como eu costumava gostar" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/perguntas/2588/" id="2588">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+    </questions>
+    <questions text="9. Em geral, quanto a sua dor nas costas o incomodou [muito] ou [extremamente] nas duas &#xfa;ltimas semanas" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5905/perguntas/2589/" id="2589">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="5906" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/informacoes/5906/" name="Exame F&#xed;sico" description="&lt;p>Exame &amp;nbsp;F&amp;iacute;sico Dor &amp;nbsp;Lombar&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Inspe&amp;ccedil;&amp;atilde;o&amp;nbsp;Columna&lt;/li>&#xA;&#x9;&lt;li>Descrever Irradia&amp;ccedil;&amp;atilde;o&lt;/li>&#xA;&#x9;&lt;li>Fatores Ocupacionais: descrever posi&amp;ccedil;&amp;atilde;o habitual durante trabalho, atividade laboral, ergonomia&lt;/li>&#xA;&#x9;&lt;li>Avalia&amp;ccedil;&amp;atilde;o da For&amp;ccedil;a muscular&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Grada&amp;ccedil;&amp;atilde;o da for&amp;ccedil;a muscular do Medical Research council: A for&amp;ccedil;a do paciente &amp;eacute; classificada em uma escala de grau 0-5&lt;/p>&#xA;&#xA;&lt;p>Grau 5: For&amp;ccedil;a normal contra a resist&amp;ecirc;ncia total.&lt;br />&#xA;Grau 4: A for&amp;ccedil;a muscular &amp;eacute; reduzida, mas h&amp;aacute; contra&amp;ccedil;&amp;atilde;o muscular contra a resist&amp;ecirc;ncia do examinardor&lt;br />&#xA;Grau 3: A articula&amp;ccedil;&amp;atilde;o pode ser movimentada apenas contra gravidade e sem resist&amp;ecirc;ncia do examinador.&lt;br />&#xA;Grau 2: H&amp;aacute; for&amp;ccedil;a muscular e movimenta&amp;ccedil;&amp;atilde;o articular somente se a resist&amp;ecirc;ncia da gravidade &amp;eacute; removida.&lt;br />&#xA;Grau 1: Apenas um esbo&amp;ccedil;o de movimento &amp;eacute; visto ou sentido&amp;nbsp;ou fascicula&amp;ccedil;&amp;otilde;es s&amp;atilde;o &amp;nbsp;observadas no m&amp;uacute;sculo.&lt;br />&#xA;Grau 0: Nenhum movimento &amp;eacute; observado.&lt;/p>&#xA;&#xA;&lt;p>Medical Research Council. Aids to the examination of the peripheral nervous system, Her Majesty&amp;#39;s Stationery Office, London, 1981.&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Avaliar Maniobra de Las&amp;egrave;gue:&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>Se a dor aparece no primeiro 35&amp;deg; de flex&amp;atilde;o do quadril, n&amp;oacute;s&amp;nbsp;suspeitaremos de extradural les&amp;atilde;o do nervo ci&amp;aacute;tico (pelo movimento neural ainda n&amp;atilde;o existente) e vai estar causando a articula&amp;ccedil;&amp;atilde;o&amp;nbsp;sacroil&amp;iacute;aca ou do m&amp;uacute;sculo piriforme. Sinal de BONNET.&lt;/li>&#xA;&#x9;&#x9;&lt;li>Se dor aparece acima a 70 na regi&amp;atilde;o lombar, suspeita-se de uma patologia articular lombar.&lt;/li>&#xA;&#x9;&#x9;&lt;li>Se a dor aparece entre os 35 e 70 graus de flex&amp;atilde;o, pode haver uma altera&amp;ccedil;&amp;atilde;o das ra&amp;iacute;zes nervosas ou o disco intervertebral. SINAL DE BRAGARD&lt;/li>&#xA;&#x9;&#x9;&lt;li>Avaliar Maniabra Las&amp;eacute;gue Cruzado:&#xA;&#x9;&#x9;&lt;ul>&#xA;&#x9;&#x9;&#x9;&lt;li>Positivo: confirma h&amp;eacute;rnia L4 &amp;ndash; L5 ou L5 &amp;ndash; Li&lt;/li>&#xA;&#x9;&#x9;&#x9;&lt;li>Negativo:&amp;nbsp;n&amp;atilde;o confirma&amp;nbsp;suspeita diagnostica de maniobra de las&amp;eacute;gue.&lt;/li>&#xA;&#x9;&#x9;&lt;/ul>&#xA;&#x9;&#x9;&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>Reflexos :&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>Patelar diminuido - les&amp;atilde;o a raiz espinhal &amp;eacute; L3- L4.&lt;/li>&#xA;&#x9;&#x9;&lt;li>Aquileu disminuido - les&amp;atilde;o a raiz espinhal &amp;eacute; L5-S1.&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Marcha&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>Marcha na ponta dos p&amp;eacute;s com dor les&amp;otilde;es&amp;nbsp;S1&lt;/li>&#xA;&#x9;&#x9;&lt;li>Marcha na ponta dos p&amp;eacute;s e nos calcanhares com dor les&amp;atilde;o L5&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.17 //@sequence.20 //@sequence.21" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="5907" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/tratamentos/5907/" name="Apoio Diagn&#xf3;stico (Falta RX da coluna - n&#xe3;o encontrado)" description="&lt;p>Selecionar exame de acordo com o quadro do paciente.&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dor Aguda, Leve e Moderada, sem sinais neurol&amp;oacute;gicos&lt;/strong>&lt;/u>&#xA;&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>N&amp;atilde;o precisa&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dor&amp;nbsp;Aguda&amp;nbsp;leve e Moderada&amp;nbsp;com sinais neurol&amp;oacute;gicos&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX da coluna lombar antero-posterior com o paciente em posi&amp;ccedil;&amp;atilde;o ereta e a proje&amp;ccedil;&amp;atilde;o lateral&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dolor sub ajudo e cr&amp;ocirc;nica&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX da coluna&amp;nbsp;lombar antero-posterior com o paciente em posi&amp;ccedil;&amp;atilde;o ereta e a proje&amp;ccedil;&amp;atilde;o lateral &lt;u>&lt;strong>OU&lt;/strong>&lt;/u>&lt;/li>&#xA;&#x9;&#x9;&lt;li>Resson&amp;acirc;ncia Nuclear magn&amp;eacute;tica da Coluna&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/tratamentos/5907/exames/561/" exam_id="16020200" limb_side="" quantity="1" reason="Apoio diagn&#xf3;stico de dor lombar" clinical_indication="Resson&#xe2;ncia Nuclear Magn&#xe9;tica da Coluna"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/tratamentos/5907/exames/562/" exam_id="32020040" limb_side="" quantity="1" reason="Apoio diagn&#xf3;stico de Dor Lombar" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/tratamentos/5907/exames/563/" exam_id="32020066" limb_side="" quantity="1" reason="Apoio diagn&#xf3;stico de Dor Lombar" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5908" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5908/" name="Necessita Apoio Diagn&#xf3;stico?" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dor Aguda, Leve e Moderada, sem sinais neurol&amp;oacute;gicos&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>N&amp;atilde;o precisa&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dor&amp;nbsp;Aguda&amp;nbsp;leve e Moderada&amp;nbsp;com sinais neurol&amp;oacute;gicos&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX da coluna lombar antero-posterior com o paciente em posi&amp;ccedil;&amp;atilde;o ereta e a proje&amp;ccedil;&amp;atilde;o lateral&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dolor sub ajudo e cr&amp;ocirc;nica&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX da coluna&amp;nbsp;lombar antero-posterior com o paciente em posi&amp;ccedil;&amp;atilde;o ereta e a proje&amp;ccedil;&amp;atilde;o lateral &lt;u>&lt;strong>OU&lt;/strong>&lt;/u>&lt;/li>&#xA;&#x9;&#x9;&lt;li>Resson&amp;acirc;ncia Nuclear magn&amp;eacute;tica da Coluna&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.3">
+    <questions text="Paciente necessita de apoio diagn&#xf3;stico? (avaliar nas instru&#xe7;&#xf5;es acima a necessidade de acordo com quadro observado)" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5908/perguntas/2590/" id="2590">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="necessita_apoio_diagnostico" id="4711" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5909" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5909/" name="Classificar quadro do paciente" description="" inputSequences="//@sequence.2 //@sequence.3" outputSequences="//@sequence.4 //@sequence.5 //@sequence.6">
+    <questions text="Dor leve/moderada" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5909/perguntas/2591/" id="2591">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_leve_moderada" id="4712" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor severa" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5909/perguntas/2592/" id="2592">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_severa" id="4713" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor aguda com espasmos musculares" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5909/perguntas/2593/" id="2593">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_aguda_com_espasmos" id="4714" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5910" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5910/" name="[Dor leve/moderada] Receita" description="&lt;p>Sugerir Fisioterapia - 5 sess&amp;otilde;es, para fortalecimento muscular&lt;/p>" inputSequences="//@sequence.4" outputSequences="//@sequence.7">
+    <item id="1361" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5910/itens-receita/1361/" name="" med_code="766252250" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="1362" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5910/itens-receita/1362/" name="" med_code="-2022326792" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="1363" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5910/itens-receita/1363/" name="" med_code="-298033283" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5911" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5911/" name="[Dor severa] Receita" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.8">
+    <item id="1364" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5911/itens-receita/1364/" name="" med_code="766251502" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="1365" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5911/itens-receita/1365/" name="" med_code="-298033283" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="1366" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5911/itens-receita/1366/" name="" med_code="1462510890" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Usar enquanto sentir dor"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5912" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5912/" name="[Dor aguda com espasmos] Receita" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.9">
+    <item id="1367" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5912/itens-receita/1367/" name="" med_code="-2022352433" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="1368" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5912/itens-receita/1368/" name="" med_code="-1730646069" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="1369" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5912/itens-receita/1369/" name="" med_code="-298033283" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5913" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/processos/5913/" name="Agendar Retorno" description="Retorno a crit&#xe9;rio m&#xe9;dico" inputSequences="//@sequence.7 //@sequence.8 //@sequence.9" outputSequences="//@sequence.10">
+    <action id="481" process_id="5913" service="aprazamento" description="Semanal"/>
+    <action id="482" process_id="5913" service="aprazamento" description="Quinzenal"/>
+    <action id="483" process_id="5913" service="aprazamento" description="Mensal"/>
+    <action id="484" process_id="5913" service="aprazamento" description="Bimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="5914" type="Pausa" type_verbose="Pausa" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/pausas/5914/" name="Aguardar Retorno" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5915" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5915/" name="Avaliar Bandeiras Vermelhas" description="" isInitial="true" inputSequences="//@sequence.23" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Bandeiras Vermelhas" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5915/perguntas/2594/" id="2594">
+      <answers xsi:type="pathwayMetamodel:Choice" name="bandeiras_vermelhas" id="4715" weight="1" value="0.0">
+        <option description="Abuso de &#xe1;lcool e/ou drogas por via venosa" weight="1"/>
+        <option description="Perda de peso n&#xe3;o explicada (mais de 10% do peso costumeiro)" weight="1"/>
+        <option description="Febre n&#xe3;o explicada por mais de 48h" weight="1"/>
+        <option description="Imunossupress&#xe3;o" weight="1"/>
+        <option description="D&#xe9;ficit neurol&#xf3;gico progressivo ou grave" weight="1"/>
+        <option description="Dor com dura&#xe7;&#xe3;o maior de 6 semanas" weight="1"/>
+        <option description="Idade maior que 70 anos" weight="1"/>
+        <option description="Trauma Severo recente ou leve em maiores de 50 anos" weight="1"/>
+        <option description="Hist&#xf3;rico de les&#xf5;es ou tumor" weight="1"/>
+        <option description="Tratamento com ester&#xf3;ides prolongado" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5916" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/processos/5916/" name="Encaminhar a Especialista de Coluna" description="" isTerminal="true" inputSequences="//@sequence.12">
+    <action id="485" process_id="5916" service="encaminhar_especialidade" description="Ortopedista"/>
+    <action id="486" process_id="5916" service="encaminhar_especialidade" description="Reumatologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5917" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/receitas/5917/" name="Manter Medica&#xe7;&#xe3;o" description="" isTerminal="true" inputSequences="//@sequence.22"/>
+  <element xsi:type="pathwayMetamodel:Information" id="5918" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/informacoes/5918/" name="[StartScreen] Baixo Risco" description="Educa&#xe7;&#xe3;o, medica&#xe7;&#xe3;o, confirma&#xe7;&#xe3;o de historia natural favor&#xe1;vel e aconselhamento para manter-se ativo (apenas uma consulta)." inputSequences="//@sequence.14" outputSequences="//@sequence.17"/>
+  <element xsi:type="pathwayMetamodel:Information" id="5919" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/informacoes/5919/" name="[StartScreen] M&#xe9;dio Risco" description="&lt;p>Educa&amp;ccedil;&amp;atilde;o, medica&amp;ccedil;&amp;atilde;o, confirma&amp;ccedil;&amp;atilde;o de historia natural favor&amp;aacute;vel e aconselhamento para manter-se ativo (apenas uma consulta).&lt;/p>" inputSequences="//@sequence.15" outputSequences="//@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:Information" id="5920" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/informacoes/5920/" name="[StartScreen] Alto Risco" description="Educa&#xe7;&#xe3;o, medica&#xe7;&#xe3;o, confirma&#xe7;&#xe3;o de historia natural favor&#xe1;vel e aconselhamento para manter-se ativo (apenas uma consulta)." inputSequences="//@sequence.16" outputSequences="//@sequence.19"/>
+  <element xsi:type="pathwayMetamodel:Process" id="5921" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/processos/5921/" name="Encaminhamento &#xe0; Fisioterapia" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.20">
+    <action id="487" process_id="5921" service="encaminhar_especialidade" description="Fisioterapia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5922" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/processos/5922/" name="Encaminhamento ao Psic&#xf3;logo e Fisioterapia" description="Encaminhar paciente &#xe0; fisioterapia e adicionar tratamento com psic&#xf3;logo (mudar cren&#xe7;as e atitudes em rela&#xe7;&#xe3;o &#xe0; lombalgia, com &#xea;nfase nos fatores detectados pelo teste, como depress&#xe3;o, ansiedade, medo da dor ou catastrofiza&#xe7;&#xe3;o)." inputSequences="//@sequence.19" outputSequences="//@sequence.21">
+    <action id="488" process_id="5922" service="encaminhar_especialidade" description="Fisioterapia"/>
+    <action id="489" process_id="5922" service="encaminhar_especialidade" description="Psic&#xf3;logo"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5923" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5923/" name="Avaliar Melhora" description="Avaliar se paciente apresenta melhora no retorno" inputSequences="//@sequence.11" outputSequences="//@sequence.22 //@sequence.23">
+    <questions text="Houve melhora do paciente?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/auxilios-conduta/5923/perguntas/2595/" id="2595">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="4716" weight="1" value="false"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="5924" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5924/" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.3" id="5925" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5925/" name="S4 (necessita apoio diagn&#xf3;stico)" description="necessita apoio diagn&#xf3;stico">
+    <operation name="necessita apoio diagn&#xf3;stico" Operator="affirmation" id="4725">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_apoio_diagnostico" id="4711" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="5926" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5926/" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="5927" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5927/" name="S6 (n&#xe3;o necessita de apoio diagn&#xf3;stico)" description="n&#xe3;o necessita de apoio diagn&#xf3;stico">
+    <operation name="n&#xe3;o necessita de apoio diagn&#xf3;stico" id="4726">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_apoio_diagnostico" id="4711" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="5928" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5928/" name="S7 (dor leve/moderada)" description="dor leve/moderada">
+    <operation name="dor leve/moderada" Operator="affirmation" id="4727">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_leve_moderada" id="4712" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="5929" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5929/" name="S8 (dor severa)" description="dor severa">
+    <operation name="dor severa" Operator="affirmation" id="4728">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_severa" id="4713" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.4" id="5930" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5930/" name="S9 (dor aguda com espasmos)" description="dor aguda com espasmos">
+    <operation name="dor aguda com espasmos" Operator="affirmation" id="4729">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_aguda_com_espasmos" id="4714" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.5" id="5931" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5931/" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="5932" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5932/" name="S11" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="5933" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5933/" name="S12" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="5934" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5934/" name="S13" description="Incondicional"/>
+  <sequence inputStep="//@element.18" outputStep="//@element.9" id="5935" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5935/" name="S14" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="5936" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5936/" name="S15 (1 ou mais bandeiras vermelhas)" description="1 ou mais bandeiras vermelhas">
+    <operation name="bandeiras vermelhas >= 1" Operator="greaterOrEqual" id="4730">
+      <operand xsi:type="pathwayMetamodel:Choice" name="bandeiras_vermelhas" id="4715" weight="1" value="0.0">
+        <option description="Abuso de &#xe1;lcool e/ou drogas por via venosa" weight="1"/>
+        <option description="Perda de peso n&#xe3;o explicada (mais de 10% do peso costumeiro)" weight="1"/>
+        <option description="Febre n&#xe3;o explicada por mais de 48h" weight="1"/>
+        <option description="Imunossupress&#xe3;o" weight="1"/>
+        <option description="D&#xe9;ficit neurol&#xf3;gico progressivo ou grave" weight="1"/>
+        <option description="Dor com dura&#xe7;&#xe3;o maior de 6 semanas" weight="1"/>
+        <option description="Idade maior que 70 anos" weight="1"/>
+        <option description="Trauma Severo recente ou leve em maiores de 50 anos" weight="1"/>
+        <option description="Hist&#xf3;rico de les&#xf5;es ou tumor" weight="1"/>
+        <option description="Tratamento com ester&#xf3;ides prolongado" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="4717" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.10" id="5937" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5937/" name="S16 (sem bandeiras vermelhas)" description="sem bandeiras vermelhas">
+    <operation name="bandeiras vermelhas &lt; 1" Operator="lessThan" id="4731">
+      <operand xsi:type="pathwayMetamodel:Choice" name="bandeiras_vermelhas" id="4715" weight="1" value="0.0">
+        <option description="Abuso de &#xe1;lcool e/ou drogas por via venosa" weight="1"/>
+        <option description="Perda de peso n&#xe3;o explicada (mais de 10% do peso costumeiro)" weight="1"/>
+        <option description="Febre n&#xe3;o explicada por mais de 48h" weight="1"/>
+        <option description="Imunossupress&#xe3;o" weight="1"/>
+        <option description="D&#xe9;ficit neurol&#xf3;gico progressivo ou grave" weight="1"/>
+        <option description="Dor com dura&#xe7;&#xe3;o maior de 6 semanas" weight="1"/>
+        <option description="Idade maior que 70 anos" weight="1"/>
+        <option description="Trauma Severo recente ou leve em maiores de 50 anos" weight="1"/>
+        <option description="Hist&#xf3;rico de les&#xf5;es ou tumor" weight="1"/>
+        <option description="Tratamento com ester&#xf3;ides prolongado" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="4717" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.0" id="5938" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5938/" name="S17 (baixo risco)" description="baixo risco">
+    <operation name="StartScreen &lt;= 3" Operator="affirmation" id="4732">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack &lt;= 3" Operator="lessOrEqual" id="4724">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4719">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4702" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4703" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4704" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4705" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.0" id="5939" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5939/" name="S18 (m&#xe9;dio risco)" description="startback >= 3 &amp; Fatores 5 a 9 &lt; 3">
+    <operation name="Total StartScreen > 3 &amp; Total (5 a 9) &lt;= 3" Operator="and" id="4733">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack > 3" Operator="greaterThan" id="4723">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4719">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4702" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4703" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4704" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4705" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="StartBack 5 a 9 &lt;= 3" Operator="lessOrEqual" id="4721">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack (5 a 9)" Operator="addition" id="4720">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.0" id="5940" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5940/" name="S19 (alto risco)" description="Total StartScreen > 3 &amp; Total (5 a 9) > 3">
+    <operation name="Total StartScreen > 3 &amp; Total (5 a 9) > 3" Operator="and" id="4734">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack > 3" Operator="greaterThan" id="4723">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4719">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4702" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4703" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4704" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4705" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="StartBack 5 a 9 > 3" Operator="greaterThan" id="4722">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack (5 a 9)" Operator="addition" id="4720">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.13" id="5941" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5941/" name="S20" description="Incondicional"/>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="5942" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5942/" name="S21" description="Incondicional"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.15" id="5943" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5943/" name="S22" description="Incondicional"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.16" id="5944" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5944/" name="S23" description="Incondicional"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.17" id="5945" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5945/" name="S24" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.18" id="5946" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5946/" name="S25 (houve melhora)" description="houve melhora">
+    <operation name="houve melhora" Operator="affirmation" id="4735">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="4716" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.18" id="5947" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1081/sequencias/5947/" name="S26 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhora" id="4736">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="4716" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="Total StartBack" Operator="addition" id="4719">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4702" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4703" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4704" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4705" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+  </operation>
+  <operation name="Total StartBack (5 a 9)" Operator="addition" id="4720">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+  </operation>
+  <operation name="StartBack 5 a 9 &lt;= 3" Operator="lessOrEqual" id="4721">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack (5 a 9)" Operator="addition" id="4720">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+  </operation>
+  <operation name="StartBack 5 a 9 > 3" Operator="greaterThan" id="4722">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack (5 a 9)" Operator="addition" id="4720">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+  </operation>
+  <operation name="Total StartBack > 3" Operator="greaterThan" id="4723">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4719">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4702" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4703" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4704" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4705" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+  </operation>
+  <operation name="Total StartBack &lt;= 3" Operator="lessOrEqual" id="4724">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4719">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4702" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4703" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4704" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4705" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4702" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4703" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4704" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4705" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4706" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4707" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4708" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4709" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4710" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="necessita_apoio_diagnostico" id="4711" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_leve_moderada" id="4712" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_severa" id="4713" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_aguda_com_espasmos" id="4714" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="bandeiras_vermelhas" id="4715" weight="1" value="0.0">
+    <option description="Abuso de &#xe1;lcool e/ou drogas por via venosa" weight="1"/>
+    <option description="Perda de peso n&#xe3;o explicada (mais de 10% do peso costumeiro)" weight="1"/>
+    <option description="Febre n&#xe3;o explicada por mais de 48h" weight="1"/>
+    <option description="Imunossupress&#xe3;o" weight="1"/>
+    <option description="D&#xe9;ficit neurol&#xf3;gico progressivo ou grave" weight="1"/>
+    <option description="Dor com dura&#xe7;&#xe3;o maior de 6 semanas" weight="1"/>
+    <option description="Idade maior que 70 anos" weight="1"/>
+    <option description="Trauma Severo recente ou leve em maiores de 50 anos" weight="1"/>
+    <option description="Hist&#xf3;rico de les&#xf5;es ou tumor" weight="1"/>
+    <option description="Tratamento com ester&#xf3;ides prolongado" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="4716" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="4717" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="4718" weight="1" value="3.0"/>
+</pathwayMetamodel:Pathway>

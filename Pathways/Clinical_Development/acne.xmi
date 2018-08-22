@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="792" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/?format=json" name="Acne" code="MF_ACNE">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4418" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4418/" name="Classifica&#xe7;&#xe3;o do Grau de Severidade" description="&lt;p>Classifica&amp;ccedil;&amp;atilde;o do grau de acne conforme sintomas apresentados:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Grau 1 ou Acne Leve: acne n&amp;atilde;o inflamat&amp;oacute;ria com predomin&amp;acirc;ncia de comed&amp;otilde;es. (p&amp;aacute;pulas e p&amp;uacute;stulas ocasionais)&lt;/li>&#xA;&#x9;&lt;li>Grau 2 ou Acne Moderada: acne inflamat&amp;oacute;ria com predomin&amp;acirc;ncia de m&amp;uacute;ltiplas p&amp;aacute;pulas e p&amp;uacute;stulas. N&amp;oacute;dulos ocasionais&lt;/li>&#xA;&#x9;&lt;li>Grau 3 ou Acne Grave: acne inflamat&amp;oacute;ria com in&amp;uacute;meras p&amp;aacute;pulas, al&amp;eacute;m de m&amp;uacute;ltiplos cistos ou n&amp;oacute;dulos&lt;/li>&#xA;&lt;/ul>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2">
+    <questions text="Grau 1 ou Acne Leve: acne n&#xe3;o inflamat&#xf3;ria com predomin&#xe2;ncia de comed&#xf5;es. (p&#xe1;pulas e p&#xfa;stulas ocasionais)" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4418/perguntas/1888/" id="1888">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grau_i" id="3306" weight="1" value="false"/>
+    </questions>
+    <questions text="Grau 2 ou Acne Moderada: acne inflamat&#xf3;ria com predomin&#xe2;ncia de m&#xfa;ltiplas p&#xe1;pulas e p&#xfa;stulas. N&#xf3;dulos ocasionais" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4418/perguntas/1889/" id="1889">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grau_ii" id="3307" weight="1" value="false"/>
+    </questions>
+    <questions text="Grau 3 ou Acne Grave: acne inflamat&#xf3;ria com in&#xfa;meras p&#xe1;pulas, al&#xe9;m de m&#xfa;ltiplos cistos ou n&#xf3;dulos." url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4418/perguntas/1890/" id="1890">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grau_iii" id="3308" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4419" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4419/" name="[Grau I - Predom&#xed;nio Comed&#xf4;nico] Medica&#xe7;&#xe3;o" description="Receita para acne grau I" inputSequences="//@sequence.13" outputSequences="//@sequence.3">
+    <item id="1084" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4419/itens-receita/1084/" name="" med_code="2101911250" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1085" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4419/itens-receita/1085/" name="" med_code="2101911813" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1086" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4419/itens-receita/1086/" name="" med_code="50742911" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1087" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4419/itens-receita/1087/" name="" med_code="-596355053" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1088" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4419/itens-receita/1088/" name="" med_code="-1921649062" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4420" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/" name="[Grau II] Medica&#xe7;&#xe3;o" description="Receita para acne grau II" inputSequences="//@sequence.1 //@sequence.11" outputSequences="//@sequence.5">
+    <item id="1089" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/itens-receita/1089/" name="" med_code="1102648420" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="1090" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/itens-receita/1090/" name="" med_code="2101911250" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1091" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/itens-receita/1091/" name="" med_code="2101911813" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1092" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/itens-receita/1092/" name="" med_code="50742911" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1093" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/itens-receita/1093/" name="" med_code="-596355053" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1094" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/itens-receita/1094/" name="" med_code="-1921649062" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1095" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/itens-receita/1095/" name="" med_code="1854829364" presentation="COMP" access="1" quantity="1" period="12" period_unit="SS" frequency="1" frequency_unit="DD" orientations="Usar de 4 a 12 semanas"/>
+    <item id="1096" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/itens-receita/1096/" name="" med_code="-1581939287" presentation="COMP" access="1" quantity="1" period="12" period_unit="SS" frequency="1" frequency_unit="DD" orientations="Usar de 4 a 12 semanas"/>
+    <item id="1097" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4420/itens-receita/1097/" name="" med_code="1854825909" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Observa&#xe7;&#xf5;es: Pausar Azitromicina ap&#xf3;s os 3 dias, esperar 7 dias e repetir por mais 2 ciclos."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="4421" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/processos/4421/" name="[Grau I] Retorno" description="Retorno a crit&#xe9;rio do m&#xe9;dico" inputSequences="//@sequence.3 //@sequence.15 //@sequence.16" outputSequences="//@sequence.4">
+    <action id="99" process_id="4421" service="aprazamento" description="Retorno Semanal"/>
+    <action id="100" process_id="4421" service="aprazamento" description="Retorno Quinzenal"/>
+    <action id="101" process_id="4421" service="aprazamento" description="Retorno Mensal"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4422" type="Pausa" type_verbose="Pausa" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/pausas/4422/" name="[Grau I]  Aguardar Retorno" description="Aguardar retorno do paciente" inputSequences="//@sequence.4" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4423" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4423/" name="[Grau I]  Houve Melhora?" description="Averiguar se medica&#xe7;&#xe3;o trouxe melhora ao quadro de Acne Grau I" inputSequences="//@sequence.7" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Houve melhora?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4423/perguntas/1891/" id="1891">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_i" id="3309" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="4424" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/processos/4424/" name="[Grau II] Retorno" description="Retorno conforme indica&#xe7;&#xe3;o m&#xe9;dica" inputSequences="//@sequence.5" outputSequences="//@sequence.6">
+    <action id="102" process_id="4424" service="aprazamento" description="Retorno Semanal"/>
+    <action id="103" process_id="4424" service="aprazamento" description="Retorno Quinzenal"/>
+    <action id="104" process_id="4424" service="aprazamento" description="Retorno Mensal"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4425" type="Pausa" type_verbose="Pausa" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/pausas/4425/" name="[Grau II] Aguardar Retorno" description="Aguardar retorno do paciente" inputSequences="//@sequence.6" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4426" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4426/" name="[Grau II] Houve melhora?" description="Averiguar se medica&#xe7;&#xe3;o trouxe melhora ao quadro de Acne Grau II" inputSequences="//@sequence.8" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Houve melhora?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4426/perguntas/1892/" id="1892">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_ii" id="3310" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="4427" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/processos/4427/" name="Encaminhar ao Dermatologista" description="Encaminhamento a dermatologista para tratamento" isTerminal="true" inputSequences="//@sequence.2 //@sequence.10 //@sequence.12">
+    <action id="105" process_id="4427" service="encaminhar_especialidade" description="Encaminhar ao Dermato"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4428" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4428/" name="Classificar Acne Grau I" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.13 //@sequence.14">
+    <questions text="Predom&#xed;nio Comed&#xf4;nico" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4428/perguntas/1893/" id="1893">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="predominio_comedonico" id="3311" weight="1" value="false"/>
+    </questions>
+    <questions text="Papulo pustuloso" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/auxilios-conduta/4428/perguntas/1894/" id="1894">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="papulo_pustuloso" id="3312" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4429" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/" name="[Grau I - Papulo Pustuloso] Medica&#xe7;&#xe3;o" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.15">
+    <item id="1098" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/itens-receita/1098/" name="" med_code="2101912055" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1099" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/itens-receita/1099/" name="" med_code="2101912598" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1100" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/itens-receita/1100/" name="" med_code="2101911250" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1101" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/itens-receita/1101/" name="" med_code="2101911813" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1102" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/itens-receita/1102/" name="" med_code="50742911" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1103" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/itens-receita/1103/" name="" med_code="-596355053" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1104" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/itens-receita/1104/" name="" med_code="-1921649062" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1105" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/itens-receita/1105/" name="" med_code="2101911943" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1106" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4429/itens-receita/1106/" name="" med_code="2101910297" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4430" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/receitas/4430/" name="Manter Prescri&#xe7;&#xe3;o" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.16"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.0" id="4431" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4431/" name="S1 (Grau I)" description="Grau I">
+    <operation name="Grau I" Operator="affirmation" id="3313">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grau_i" id="3306" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="4432" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4432/" name="S2 (Grau II)" description="Grau II">
+    <operation name="Grau II" Operator="affirmation" id="3314">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grau_ii" id="3307" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.0" id="4433" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4433/" name="S3 (Grau III)" description="Grau III">
+    <operation name="Grau III" Operator="affirmation" id="3315">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grau_iii" id="3308" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="4434" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4434/" name="S4" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="4435" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4435/" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="4436" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4436/" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="4437" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4437/" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="4438" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4438/" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="4439" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4439/" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.5" id="4440" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4440/" name="S10 (Melhora - Grau I)" description="Melhora - Grau I">
+    <operation name="houve melhora" Operator="affirmation" id="3316">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_i" id="3309" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.5" id="4441" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4441/" name="S11 (Sem Melhora - Grau I)" description="Sem Melhora - Grau I">
+    <operation name="n&#xe3;o houve melhora" id="3317">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_i" id="3309" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.8" id="4442" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4442/" name="S12 (Melhora - Grau II)" description="Melhora - Grau II">
+    <operation name="houve melhora" Operator="affirmation" id="3318">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_ii" id="3310" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="4443" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4443/" name="S13 (Sem Melhora - Grau II)" description="Sem Melhora - Grau II">
+    <operation name="n&#xe3;o houve melhora" id="3319">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_ii" id="3310" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.10" id="4444" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4444/" name="S14 (Predom&#xed;nio Comed&#xf4;nico)" description="Predom&#xed;nio Comed&#xf4;nico">
+    <operation name="Predom&#xed;nio Comed&#xf4;nico" Operator="affirmation" id="3320">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="predominio_comedonico" id="3311" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="4445" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4445/" name="S15 (Papulo Pustuloso)" description="Papulo Pustuloso">
+    <operation name="Papulo Pustuloso" Operator="affirmation" id="3321">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="papulo_pustuloso" id="3312" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.11" id="4446" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4446/" name="S16" description="Incondicional"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.12" id="4447" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/792/sequencias/4447/" name="S17" description="Incondicional"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grau_i" id="3306" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grau_ii" id="3307" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grau_iii" id="3308" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_i" id="3309" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_ii" id="3310" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="predominio_comedonico" id="3311" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="papulo_pustuloso" id="3312" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

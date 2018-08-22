@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="778" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/?format=json" name="[Viver Bem] Tratamento Dislipidemia - Risco Muito Alto [*]" code="VB_DISLIP_RISCO_MT_ALTO">
+  <element xsi:type="pathwayMetamodel:Information" id="4780" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/informacoes/4780/" name="Encaminhar para Nutricionista" description="Encaminhar paciente para nutricionista" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4781" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/receitas/4781/" name="Prescrever Atrovastatina 40mg [*]" description="Atrovastatina 40mg/dia" inputSequences="//@sequence.0" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4782" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/auxilios-conduta/4782/" name="Prescrever Medica&#xe7;&#xe3;o Avulsa?" description="Prescrever medica&#xe7;&#xe3;o n&#xe3;o contida neste protocolo" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Prescrever Medica&#xe7;&#xe3;o Avulsa?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/auxilios-conduta/4782/perguntas/2001/" id="2001">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="3583" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4783" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/informacoes/4783/" name="Medica&#xe7;&#xe3;o Avulsa: Prescrever e Justificar" description="Esta medica&#xe7;&#xe3;o n&#xe3;o est&#xe1; contida no protocolo previamente definido, e &#xe9; de responsabilidade do m&#xe9;dico em atendimento." inputSequences="//@sequence.2" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4784" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/auxilios-conduta/4784/" name="Reavalia&#xe7;&#xe3;o" description="Atingiu meta? LDL&lt;50mg/dl" inputSequences="//@sequence.8" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Atingiu meta de LDL&lt;50mg/dl?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/auxilios-conduta/4784/perguntas/2002/" id="2002">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ldl_menor_que_50" id="3584" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4785" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/receitas/4785/" name="Prescrever Atrovastatina 80mg [*]" description="Prescrever Atrovastatina 80mg [*]" isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4787" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/receitas/4787/" name="Manter Prescri&#xe7;&#xe3;o" description="Manter Prescri&#xe7;&#xe3;o de Atrovastatina 40mg/dia, em caso de medica&#xe7;&#xe3;o avulsa continuar com essa prescri&#xe7;&#xe3;o." isTerminal="true" inputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Process" id="4797" type="Processo" type_verbose="Processo" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/processos/4797/" name="Agendar Retorno Trimestral" description="Retorno Trimestral" inputSequences="//@sequence.3 //@sequence.4" outputSequences="//@sequence.7">
+    <action id="98" process_id="4797" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4798" type="Pausa" type_verbose="Pausa" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/pausas/4798/" name="Aguardar Retorno" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4789" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/sequencias/4789/" name="S1" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="4790" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/sequencias/4790/" name="S2" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="4791" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/sequencias/4791/" name="S3 (com medicacao avulsa)" description="">
+    <operation name="com medicacao avulsa" Operator="affirmation" id="3585">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="3583" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.2" id="4792" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/sequencias/4792/" name="S4 (sem medicacao avulsa)" description="">
+    <operation name="sem medicacao avulsa" id="3586">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="3583" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.3" id="4794" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/sequencias/4794/" name="S6" description=""/>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="4795" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/sequencias/4795/" name="S7 (LDL &lt; 50)" description="">
+    <operation name="LDL &lt; 50" Operator="affirmation" id="3587">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ldl_menor_que_50" id="3584" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="4796" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/sequencias/4796/" name="S8 (LDL >= 50)" description="">
+    <operation name="LDL >= 50" id="3588">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ldl_menor_que_50" id="3584" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="4799" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/sequencias/4799/" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.8" id="4800" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/778/sequencias/4800/" name="S10" description="Incondicional"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="3583" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ldl_menor_que_50" id="3584" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

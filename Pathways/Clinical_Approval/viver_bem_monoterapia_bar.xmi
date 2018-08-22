@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="855" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/?format=json" name="[Viver Bem] Monoterapia BAR" code="VB_BAR_MONO">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6963" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/auxilios-conduta/6963/" name="Avaliar tempo de exames (6 meses)" description="Avaliar se exames foram feitos h&#xe1; mais de 6 meses" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Exames feitos h&#xe1; mais de 6 meses?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/auxilios-conduta/6963/perguntas/2648/" id="2648">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exames_mais_de_6_meses" id="5229" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="6964" type="Tratamento" type_verbose="Tratamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/" name="Refazer Exames" description="ECG para identificar HVE  (S em V1 + R em V5/V6 > 35 mmHg)&#xA;Hemoglobina Glicada > 6,5&#xA;Hemograma completo (Hb  &lt;  13g/dl homens, Hb &lt; 12 mulher)&#xA;Creatinina s&#xe9;rica &#xbf; f&#xf3;rmula MDRD  &lt; 59 ml/min/1,73m2&#xA;Pot&#xe1;ssio s&#xe9;rico ( &lt; 3,5 mEq/L: hipocalemia / /  > 5,5mEq/L: Hipercalemia)&#xA;Colesterol > 200 mg/dl&#xA;Triglicerideos  ->149mg&#xA;LDL ->115 mg/dl&#xA;HLDc  - mulher  &lt;50mg/dl e home  &lt;40 mg/dl&#xA;Sumario de urina &#xbf; (protein&#xfa;ria, glicos&#xfa;ria)" inputSequences="//@sequence.0" outputSequences="//@sequence.3">
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/435/" exam_id="40101029" limb_side="" quantity="1" reason="Identificar HVE (S em V1 + R em V5/V6 > 35 mmHg)" clinical_indication="n/a"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/436/" exam_id="40302733" limb_side="" quantity="1" reason="refazendo exames de monoterapia BAR" clinical_indication="n/a"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/437/" exam_id="28040481" limb_side="" quantity="1" reason="refazendo exames de monoterapia BAR" clinical_indication="n/a"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/438/" exam_id="40301630" limb_side="" quantity="1" reason="refazendo exames de monoterapia BAR" clinical_indication="n/a"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/439/" exam_id="28011210" limb_side="" quantity="1" reason="refazendo exames de monoterapia BAR" clinical_indication="n/a"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/440/" exam_id="40301605" limb_side="" quantity="1" reason="refazendo exames de monoterapia BAR" clinical_indication="n/a"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/441/" exam_id="28011392" limb_side="" quantity="1" reason="refazendo exames de monoterapia BAR" clinical_indication="n/a"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/442/" exam_id="40301591" limb_side="" quantity="1" reason="refazendo exames de monoterapia BAR" clinical_indication="n/a"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/443/" exam_id="28130588" limb_side="" quantity="1" reason="refazendo exames de monoterapia BAR" clinical_indication="n/a"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/tratamentos/6964/exames/444/" exam_id="28130596" limb_side="" quantity="1" reason="refazendo exames de monoterapia BAR" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6965" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/receitas/6965/" name="Receita (Losartana)" description="&lt;p>Losartana 50mg 2x ao dia&lt;/p>" inputSequences="//@sequence.1 //@sequence.3" outputSequences="//@sequence.2">
+    <item id="1399" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/receitas/6965/itens-receita/1399/" name="" med_code="766256971" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Losartana 50mg 2x ao dia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="6967" type="Pausa" type_verbose="Pausa" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/pausas/6967/" name="Retorno Mensal" description="30 dias" inputSequences="//@sequence.2" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6968" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/auxilios-conduta/6968/" name="Reavaliar Press&#xe3;o (1)" description="Avaliar se atingiu meta press&#xf3;rca" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Atingiu meta press&#xf3;rca?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/auxilios-conduta/6968/perguntas/2649/" id="2649">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="5230" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="6969" type="Pausa" type_verbose="Pausa" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/pausas/6969/" name="Retorno Semestral" description="Retorno em 6 meses" inputSequences="//@sequence.5 //@sequence.10" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6970" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/auxilios-conduta/6970/" name="Reavaliar Press&#xe3;o (2)" description="Manteve meta press&#xf3;rica?" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Manteve meta press&#xf3;rica?" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/auxilios-conduta/6970/perguntas/2650/" id="2650">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="5231" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6971" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/receitas/6971/" name="Prescrever Ultima Medica&#xe7;&#xe3;o (Losartana)" description="Losartan 50mg 2x ao dia" inputSequences="//@sequence.8" outputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="6972" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/encaminhamentos/6972/" name="[Encaminhamento] Duploterapia" description="" isTerminal="true" inputSequences="//@sequence.6 //@sequence.9">
+    <pathways>VB_BAR_DUPLO</pathways>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="6973" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6973/" name="S1 (mais de 6 meses)" description="">
+    <operation name="mais de 6 meses" Operator="affirmation" id="5232">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_mais_de_6_meses" id="5229" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="6974" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6974/" name="S2 (menos de 6 meses)" description="">
+    <operation name="menos de 6 meses" id="5233">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_mais_de_6_meses" id="5229" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="6975" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6975/" name="S3" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="6977" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6977/" name="S5" description=""/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="6978" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6978/" name="S6" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="6979" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6979/" name="S7 (atingiu meta pressorica)" description="">
+    <operation name="atingiu meta pressorica" Operator="affirmation" id="5234">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="5230" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.4" id="6980" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6980/" name="S8 (n&#xe3;o atingiu meta pressorica)" description="">
+    <operation name="n&#xe3;o atingiu meta pressorica" id="5235">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="5230" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="6981" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6981/" name="S9" description=""/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="6982" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6982/" name="S10 (manteve meta pressorica)" description="">
+    <operation name="manteve meta pressorica" Operator="affirmation" id="5236">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="5231" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="6983" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6983/" name="S11 (n&#xe3;o manteve meta pressorica)" description="">
+    <operation name="n&#xe3;o manteve meta pressorica" id="5237">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="5231" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.7" id="6984" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/855/sequencias/6984/" name="S12" description=""/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exames_mais_de_6_meses" id="5229" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="5230" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="5231" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

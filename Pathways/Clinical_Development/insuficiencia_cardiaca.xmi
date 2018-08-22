@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="789" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/?format=json" name="Insufici&#xea;ncia Card&#xed;aca" code="MF_ICC">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4306" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4306/" name="Necessita Apoio Diagn&#xf3;stico?" description="Avaliar se paciente necessita de apoio diagn&#xf3;stico" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Necessita de apoio diagn&#xf3;stico?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4306/perguntas/1850/" id="1850">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="apoio_diagnostico" id="3220" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4307" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/tratamentos/4307/" name="Apoio Diagn&#xf3;stico" description="Exames para apoio diagn&#xf3;stico" inputSequences="//@sequence.0" outputSequences="//@sequence.2">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/tratamentos/4307/exames/298/" exam_id="99010054" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/tratamentos/4307/exames/299/" exam_id="20010010" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/tratamentos/4307/exames/300/" exam_id="28011414" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/tratamentos/4307/exames/301/" exam_id="28010540" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/tratamentos/4307/exames/302/" exam_id="31120377" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/tratamentos/4307/exames/303/" exam_id="20010133" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4308" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4308/" name="Classificar Est&#xe1;gio e Classe da Insufici&#xea;ncia Card&#xed;aca" description="&lt;p>Classifica&amp;ccedil;&amp;atilde;o do est&amp;aacute;gio e classe (NYHA) da Insufici&amp;ecirc;ncia Card&amp;iacute;aca do paciente&lt;/p>" inputSequences="//@sequence.19" outputSequences="//@sequence.20 //@sequence.21 //@sequence.22 //@sequence.23">
+    <questions text="Est&#xe1;gio A  :Aus&#xea;ncia de sintomas, sem altera&#xe7;&#xf5;es funcionais ou estruturais identific&#xe1;veis, por&#xe9;m com risco elevado de desenvolver insufici&#xea;ncia card&#xed;aca" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4308/perguntas/1851/" id="1851" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="estagio_a" id="3221" weight="1" value="false"/>
+    </questions>
+    <questions text="Est&#xe1;gio B:  Doen&#xe7;a estrutural do cora&#xe7;&#xe3;o associada a insufici&#xea;ncia card&#xed;aca sem a presen&#xe7;a de sintomas." url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4308/perguntas/1852/" id="1852" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="estagio_b" id="3222" weight="1" value="false"/>
+    </questions>
+    <questions text="Est&#xe1;gio C:   Sintomas atuais ou passados associados a cardiopatia subjacente" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4308/perguntas/1853/" id="1853" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="estagio_c" id="3223" weight="1" value="false"/>
+    </questions>
+    <questions text="Est&#xe1;gio D:  Doen&#xe7;a avan&#xe7;ada e sintomas em repouso na vig&#xea;ncia de tratamento cl&#xed;nico adequado, havendo necessidade de interven&#xe7;&#xf5;es especializadas" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4308/perguntas/1854/" id="1854" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="estagio_d" id="3224" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente consegue, sem ter que parar por cansa&#xe7;o ou falta de ar, subir um lance de escadas de 8 degraus carregando peso (2 sacolas = 10kg) OU Caminhar r&#xe1;pido no plano OU Subir ladeiras?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4308/perguntas/1855/" id="1855" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classe_1" id="3225" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente consegue, sem ter que parar por cansa&#xe7;o ou falta de ar, caminhar devagar em terreno plano OU arrumar a casa OU dan&#xe7;ar socialmente?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4308/perguntas/1856/" id="1856" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classe_2" id="3226" weight="1" value="false"/>
+    </questions>
+    <questions text="(Se negativo para as duas primeiras perguntas) Paciente n&#xe3;o sente cansa&#xe7;o quando comendo, sentado ou deitado" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4308/perguntas/1857/" id="1857" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classe_3" id="3227" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente tem cansa&#xe7;o ou falta de ar quando est&#xe1; comendo OU sentado OU deitado?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4308/perguntas/1858/" id="1858" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classe_4" id="3228" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4309" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4309/" name="Orienta&#xe7;&#xf5;es Comuns e Conduta" description="* Estimular o N&#xe3;o tabagismo&#xA;* Estimular atividade f&#xed;sica&#xA;* Ingest&#xe3;o de s&#xf3;dio n&#xe3;o superior a 4 gramas/dia" inputSequences="//@sequence.1 //@sequence.2" outputSequences="//@sequence.3 //@sequence.4 //@sequence.5 //@sequence.19">
+    <questions text="PS acima de 140 ou PD acima de 90?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4309/perguntas/1859/" id="1859">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ps_maior_140_ou_pd_maior_90" id="3229" weight="1" value="false"/>
+    </questions>
+    <questions text="Dislipidemias?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4309/perguntas/1860/" id="1860">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dislipidemia" id="3230" weight="1" value="false"/>
+    </questions>
+    <questions text="Diagn&#xf3;stico de Diabetes?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4309/perguntas/1861/" id="1861">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diabetes" id="3231" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="4310" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/encaminhamentos/4310/" name="Encaminhamento Hipertens&#xe3;o" description="Hipertensao" isTerminal="true" inputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="4311" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/encaminhamentos/4311/" name="Encaminhamento Dislipidemia" description="Dislipidemia" isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="4312" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/encaminhamentos/4312/" name="Encaminhamento Diabetes" description="Diabetes" isTerminal="true" inputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4313" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4313/" name="[Estagio B: Classes 1 ou 2] Tratamento" description="Receita para Classe 1 Estagio B" inputSequences="//@sequence.20" outputSequences="//@sequence.6">
+    <item id="1025" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4313/itens-receita/1025/" name="" med_code="766252956" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1026" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4313/itens-receita/1026/" name="" med_code="1854820310" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1027" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4313/itens-receita/1027/" name="" med_code="1854814278" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1028" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4313/itens-receita/1028/" name="" med_code="766251099" presentation="COMP" access="1" quantity="2" period="1" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1029" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4313/itens-receita/1029/" name="" med_code="1462504790" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1030" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4313/itens-receita/1030/" name="" med_code="1462504790" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4314" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4314/" name="[Estagio C] Defini&#xe7;&#xe3;o de tratamento" description="" outputSequences="//@sequence.7 //@sequence.8 //@sequence.9 //@sequence.10 //@sequence.11 //@sequence.12">
+    <questions text="Insuficiencia  card&#xed;aca com FEVI reducida ((&lt;50%)" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4314/perguntas/1862/" id="1862">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="IC_red_menor_50" id="3232" weight="1" value="false"/>
+    </questions>
+    <questions text="Insuficiencia  card&#xed;aca com FEVI reducida ((&lt;50%) com intoler&#xe2;ncia a IECA" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4314/perguntas/1863/" id="1863">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="IC_reduzida_menor_50_intolerante_IECA" id="3233" weight="1" value="false"/>
+    </questions>
+    <questions text="Sintomas presentes e fra&#xe7;&#xe3;o de ejec&#xe7;&#xe3;o reduzida" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4314/perguntas/1864/" id="1864">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fracao_ejecao_reduzida" id="3234" weight="1" value="false"/>
+    </questions>
+    <questions text="Clase Funcional II a IV e FEVI menor de 40%" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4314/perguntas/1865/" id="1865">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="FEVI_menor_40" id="3235" weight="1" value="false"/>
+    </questions>
+    <questions text="Sinais de reten&#xe7;&#xe3;o h&#xed;drica, FEVI  maior de 35%" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4314/perguntas/1866/" id="1866">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="retencao_hidrica_maior_35" id="3236" weight="1" value="false"/>
+    </questions>
+    <questions text="Sinais de reten&#xe7;&#xe3;o h&#xed;drica, com FEVi &lt; de 35% e Insuficencia card&#xed;aca (Clase II &#xbf; IV) com dosis  m&#xe1;ximas de IECA (ou ARA) e BB ou Insuficiencia card&#xed;aca p&#xf3;s infarto de FE menor de 40%" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4314/perguntas/1867/" id="1867">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="receita_vi" id="3237" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4315" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4315/" name="Insuficiencia  card&#xed;aca com FEVI reduzida" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.13">
+    <item id="1031" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4315/itens-receita/1031/" name="" med_code="766252963" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="1032" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4315/itens-receita/1032/" name="" med_code="766251082" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Pode ser 8/8h ou 6/6h. Seguir orienta&#xe7;&#xe3;o do m&#xe9;dico"/>
+    <item id="1033" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4315/itens-receita/1033/" name="" med_code="-1367948701" presentation="COMP" access="1" quantity="2" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="1034" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4315/itens-receita/1034/" name="" med_code="1854817218" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="2,5 a 35mg"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4316" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4316/" name="Insuficiencia  card&#xed;aca com FEVI reducida (Intolerante a IECA)" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.14">
+    <item id="1035" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4316/itens-receita/1035/" name="" med_code="766256729" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="1036" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4316/itens-receita/1036/" name="" med_code="766257733" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4317" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4317/" name="Fra&#xe7;&#xe3;o de ejec&#xe7;&#xe3;o reduzida" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.15">
+    <item id="1037" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4317/itens-receita/1037/" name="" med_code="766256347" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="1038" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4317/itens-receita/1038/" name="" med_code="1854849540" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uma ou duas doses por dia. Observar orienta&#xe7;&#xe3;o m&#xe9;dica"/>
+    <item id="1039" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4317/itens-receita/1039/" name="METROPOLOL SUCCINATO 100 - 200mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uma ou duas doses por dia. Observar orienta&#xe7;&#xe3;o m&#xe9;dica"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4318" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4318/" name="Clase Funcional II a  IV e FEVI menor de 40%" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.16">
+    <item id="1040" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4318/itens-receita/1040/" name="" med_code="766256729" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="1041" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4318/itens-receita/1041/" name="" med_code="766257733" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="8 a 32 mg/dia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4319" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4319/" name="Sinais de reten&#xe7;&#xe3;o  h&#xed;drica, FEVI  maior de 35%" description="" inputSequences="//@sequence.11" outputSequences="//@sequence.17">
+    <item id="1042" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4319/itens-receita/1042/" name="" med_code="2032016534" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="20 a 160mg/dia. Observar orienta&#xe7;&#xe3;o m&#xe9;dica"/>
+    <item id="1043" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4319/itens-receita/1043/" name="" med_code="1203079905" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="25 a 75 mg/dia. Observar orienta&#xe7;&#xe3;o m&#xe9;dica"/>
+    <item id="1044" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4319/itens-receita/1044/" name="" med_code="1854838779" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="2.5mg/dia. Observar orienta&#xe7;&#xe3;o m&#xe9;dica"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4320" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4320/" name="Reten&#xe7;&#xe3;o hidrica, FEVi &lt; 35 e Insufici&#xea;ncia Card&#xed;aca" description="Sinais de reten&#xe7;&#xe3;o h&#xed;drica com FEVi &lt; de 35% e insufici&#xea;ncia card&#xed;aca (Clase II &#xbf; IV) com doses  m&#xe1;ximas de IECA (ou ARA) e BB, ou Insufici&#xea;ncia  card&#xed;aca p&#xf3;s infarto de FE menor de 40%" inputSequences="//@sequence.12" outputSequences="//@sequence.18">
+    <item id="1045" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4320/itens-receita/1045/" name="" med_code="1462508582" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="12.5 a 50mg/dia. Observar orienta&#xe7;&#xf5;es m&#xe9;dicas"/>
+    <item id="1046" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4320/itens-receita/1046/" name="Epleronona 25 a 50mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="25 a 50 mg/dia. Observar orienta&#xe7;&#xe3;o m&#xe9;dica"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="4321" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/processos/4321/" name="Prescrever Retorno" description="" isTerminal="true" inputSequences="//@sequence.6 //@sequence.27">
+    <action id="93" process_id="4321" service="aprazamento" description="Retorno Mensal (Clase funcional I, II ou III)"/>
+    <action id="94" process_id="4321" service="aprazamento" description="Retorno Semanal (Classe IV)"/>
+    <action id="95" process_id="4321" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4322" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/" name="[Estagio C: Classes 1 ou 2] Tratamento" description="&lt;p>Selecionar Medica&amp;ccedil;&amp;otilde;es conforme quadro do paciente:&lt;/p>&#xA;&#xA;&lt;p>i. Insuficiencia &amp;nbsp;card&amp;iacute;aca com FEVI reduzida ((&amp;lt;50%)&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;a. Enalapril 2,5 - 20mg de 12/12h&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;b. Captopril 12,5 &amp;ndash; 50mg de 8/8h ou 6/6h&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;c. Perindopril 2 &amp;ndash; 8mg de 12/12h&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;d. Lisinopril 2,5 -35mg uma vez ao dia&lt;/p>&#xA;&#xA;&lt;p>ii. Insuficiencia &amp;nbsp;card&amp;iacute;aca com FEVI reduzida ((&amp;lt;50%) com intolerencia a IECA)&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;a. Valsartana 80mg de 12/12h uma vez ao dia&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;b. Candesartan 8 &amp;ndash; 32mg por dia dia&lt;/p>&#xA;&#xA;&lt;p>iii. Sintomas presentes e &amp;nbsp;fra&amp;ccedil;&amp;atilde;o &amp;nbsp;de ejec&amp;ccedil;&amp;atilde;o &amp;nbsp;reducida &amp;nbsp;&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;a. Carvedilol 6.25 -25 mg de 12/12h&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;b. Bisoprolol 5 &amp;ndash; 15mg uma ou duas doses&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;c. Metropolol Succinato: &amp;nbsp;100 - 200 mg de 12/12h ou uma dose por dia&lt;/p>&#xA;&#xA;&lt;p>iv. Clase &amp;nbsp;Funcional II a &amp;nbsp;IV e &amp;nbsp;FEVI menor de 40% &amp;nbsp;(Creatinina &amp;nbsp;n&amp;atilde;o &amp;nbsp;maior &amp;nbsp;de &amp;nbsp;de 2,5 mg, Potacio Inferior a 5 mequ?l, Taxa de filtra&amp;ccedil;&amp;atilde;o glamerurlar maior que 30 mi/min/1.73 m2)&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;a. Valsartana 80mg de 12/12h uma vez ao dia&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;b. Candesartan 8 &amp;ndash; 32 mg por dia&lt;/p>&#xA;&#xA;&lt;p>v. Qualquer Classe com sinais de reten&amp;ccedil;&amp;atilde;o h&amp;iacute;drica, FEVI &amp;nbsp;maior de 35%&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;a. Furosemida 20 - 160 mg por dia&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;b. Hidroclorotiazida 25 -75 mg por dia&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;c. Indapamida 2.5 mg por dia&lt;/p>&#xA;&#xA;&lt;p>vi. Pacientescon sinais de reten&amp;ccedil;&amp;atilde;o h&amp;iacute;drica, com FEVi &amp;lt; de 35% e insuficencia card&amp;iacute;aca (Clase II &amp;ndash; IV) com doses m&amp;aacute;ximas de IECA (ou ARA) e BB, ou Insuficiencia card&amp;iacute;aca p&amp;oacute;s infarto de FE menor de 40%&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;1. Espironolactona 12,5 a 50 mg por dia&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;2. Epleronona 25 - 50 mg por dia&lt;/p>" inputSequences="//@sequence.21" outputSequences="//@sequence.27">
+    <item id="1047" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1047/" name="" med_code="766252956" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1048" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1048/" name="" med_code="1854820310" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1049" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1049/" name="" med_code="-2022353635" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1050" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1050/" name="" med_code="1854814278" presentation="COMP" access="1" quantity="2" period="1" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1051" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1051/" name="" med_code="1462504790" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1052" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1052/" name="" med_code="1462504790" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1053" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1053/" name="" med_code="766256347" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1054" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1054/" name="" med_code="766256370" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1055" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1055/" name="" med_code="1962258985" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1056" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1056/" name="" med_code="2056512812" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1057" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1057/" name="" med_code="2056512805" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1058" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1058/" name="" med_code="1203079905" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1059" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1059/" name="" med_code="1462508606" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+    <item id="1060" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/receitas/4322/itens-receita/1060/" name="" med_code="1462508582" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4323" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/informacoes/4323/" name="Placeholder" description="Placeholder" inputSequences="//@sequence.13 //@sequence.14 //@sequence.15 //@sequence.16 //@sequence.17 //@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:Process" id="4324" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/processos/4324/" name="Encaminhar ao Cardiologista" description="Encaminhar paciente ao cardiologista." isTerminal="true" inputSequences="//@sequence.22 //@sequence.26">
+    <action id="96" process_id="4324" service="encaminhar_especialidade" description="Cardiologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4325" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/tratamentos/4325/" name="Tratamento Geral" description="Tratamento Geral para pacientes classe A" inputSequences="//@sequence.23" outputSequences="//@sequence.24"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4326" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4326/" name="Encaminhamentos" description="" inputSequences="//@sequence.24" outputSequences="//@sequence.25 //@sequence.26">
+    <questions text="Encaminhar ao cardiologista" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4326/perguntas/1868/" id="1868">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_cardio" id="3238" weight="1" value="false"/>
+    </questions>
+    <questions text="N&#xe3;o necessita de encaminhamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/auxilios-conduta/4326/perguntas/1869/" id="1869">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sem_encaminhamento" id="3239" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4327" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/informacoes/4327/" name="Finalizar atendimento" description="Finalizar protocolo e liberar paciente" isTerminal="true" inputSequences="//@sequence.25"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4328" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4328/" name="S1 (necessita diagnostico de apoio)" description="necessita diagnostico de apoio">
+    <operation name="necessita diagnostico de apoio" Operator="affirmation" id="3245">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="apoio_diagnostico" id="3220" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="4329" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4329/" name="S2 (n&#xe3;o necessita diagnostico de apoio)" description="n&#xe3;o necessita diagnostico de apoio">
+    <operation name="n&#xe3;o necessita diagnostico de apoio" id="3246">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="apoio_diagnostico" id="3220" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="4330" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4330/" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="4331" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4331/" name="S4 (hipertensao)" description="hipertensao">
+    <operation name="hipertensao" Operator="affirmation" id="3247">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_maior_140_ou_pd_maior_90" id="3229" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="4332" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4332/" name="S5 (dislipidemia)" description="dislipidemia">
+    <operation name="com dislipidemia" Operator="affirmation" id="3248">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dislipidemia" id="3230" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="4333" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4333/" name="S6 (diabetes)" description="diabetes">
+    <operation name="com diabetes" Operator="affirmation" id="3249">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diabetes" id="3231" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.7" id="4334" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4334/" name="S11" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="4335" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4335/" name="S12 (FEVI &lt; 50)" description="FEVI &lt; 50">
+    <operation name="FEVI &lt; 50" Operator="affirmation" id="3250">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="IC_red_menor_50" id="3232" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="4336" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4336/" name="S13 (FEVI &lt; 50 intolerante IECA)" description="FEVI &lt; 50 intolerante IECA">
+    <operation name="FEVI &lt; 50 intolerante IECA" Operator="affirmation" id="3251">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="IC_reduzida_menor_50_intolerante_IECA" id="3233" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.8" id="4337" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4337/" name="S14 (Fracao de ejeccao reduzida)" description="Fracao de ejeccao reduzida">
+    <operation name="Fracao de ejeccao reduzida" Operator="affirmation" id="3252">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="fracao_ejecao_reduzida" id="3234" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.8" id="4338" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4338/" name="S15 (classe 2-4 e fevi &lt; 40)" description="classe 2-4 e fevi &lt; 40">
+    <operation name="classe 2-4 e fevi &lt; 40" Operator="and" id="3253">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Classe II a IV" Operator="or" id="3240"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="FEVI_menor_40" id="3235" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.8" id="4339" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4339/" name="S16 (retencao hidrica e FEVI > 35)" description="retencao hidrica > 35">
+    <operation name="retencao hidrica e FEVI > 35" Operator="affirmation" id="3254">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="retencao_hidrica_maior_35" id="3236" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.8" id="4340" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4340/" name="S17 (classe II-IV e receita VI)" description="classe II-IV e receita VI">
+    <operation name="classe II-IV e receita VI" Operator="and" id="3255">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Classe II a IV" Operator="or" id="3240"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="receita_vi" id="3237" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.9" id="4341" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4341/" name="S18" description="Incondicional"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.10" id="4342" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4342/" name="S19" description="Incondicional"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.11" id="4343" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4343/" name="S20" description="Incondicional"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.12" id="4344" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4344/" name="S21" description="Incondicional"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.13" id="4345" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4345/" name="S22" description="Incondicional"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.14" id="4346" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4346/" name="S23" description="Incondicional"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.3" id="4347" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4347/" name="S7 (sem hipertens&#xe3;o, dislipidemia ou diabetes)" description="sem hipertens&#xe3;o, dislipidemia ou diabetes">
+    <operation name="sem hipertens&#xe3;o, dislipidemia ou diabetes" Operator="and" id="3256">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem hipertensao" id="3241">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_maior_140_ou_pd_maior_90" id="3229" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem dislipidemia" id="3242">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="dislipidemia" id="3230" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem diabetes" id="3243">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="diabetes" id="3231" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.2" id="4348" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4348/" name="S8 (estagio B classes 1 ou 2)" description="estagio B classes 1 ou 2">
+    <operation name="estagio B classes 1 ou 2" Operator="and" id="3257">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="estagio_b" id="3222" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="classes 1 ou 2" Operator="or" id="3244">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="classe_1" id="3225" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="classe_2" id="3226" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.2" id="4349" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4349/" name="S9 (estagio C classes 1 ou 2)" description="estagio C classes 1 ou 2">
+    <operation name="estagio C classes 1 ou 2" Operator="and" id="3258">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="estagio_c" id="3223" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="classes 1 ou 2" Operator="or" id="3244">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="classe_1" id="3225" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="classe_2" id="3226" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.2" id="4350" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4350/" name="S10 (classes 3 ou 4)" description="classes 3 ou 4">
+    <operation name="classes 3 ou 4" Operator="or" id="3259">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="classe_3" id="3227" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="classe_4" id="3228" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.2" id="4351" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4351/" name="S24 (Estagio A)" description="Estagio A">
+    <operation name="Estagio A" Operator="affirmation" id="3260">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="estagio_a" id="3221" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="4352" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4352/" name="S25" description="Incondicional"/>
+  <sequence inputStep="//@element.21" outputStep="//@element.20" id="4353" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4353/" name="S26 (sem encaminhamento)" description="sem encaminhamento">
+    <operation name="sem encaminhamento" Operator="affirmation" id="3261">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sem_encaminhamento" id="3239" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.20" id="4354" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4354/" name="S27 (encaminhamento cardio)" description="encaminhamento cardio">
+    <operation name="encaminhamento cardio" Operator="affirmation" id="3262">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_cardio" id="3238" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.16" id="4355" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/789/sequencias/4355/" name="S28" description="Incondicional"/>
+  <category name="Est&#xe1;gio" question="//@element.2/@questions.0 //@element.2/@questions.1 //@element.2/@questions.2 //@element.2/@questions.3"/>
+  <category name="Classe" question="//@element.2/@questions.4 //@element.2/@questions.5 //@element.2/@questions.6 //@element.2/@questions.7"/>
+  <operation name="Classe II a IV" Operator="or" id="3240"/>
+  <operation name="sem hipertensao" id="3241">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_maior_140_ou_pd_maior_90" id="3229" weight="1" value="false"/>
+  </operation>
+  <operation name="sem dislipidemia" id="3242">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="dislipidemia" id="3230" weight="1" value="false"/>
+  </operation>
+  <operation name="sem diabetes" id="3243">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="diabetes" id="3231" weight="1" value="false"/>
+  </operation>
+  <operation name="classes 1 ou 2" Operator="or" id="3244">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="classe_1" id="3225" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="classe_2" id="3226" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="apoio_diagnostico" id="3220" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="estagio_a" id="3221" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="estagio_b" id="3222" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="estagio_c" id="3223" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="estagio_d" id="3224" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classe_1" id="3225" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classe_2" id="3226" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classe_3" id="3227" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classe_4" id="3228" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ps_maior_140_ou_pd_maior_90" id="3229" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dislipidemia" id="3230" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diabetes" id="3231" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="IC_red_menor_50" id="3232" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="IC_reduzida_menor_50_intolerante_IECA" id="3233" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fracao_ejecao_reduzida" id="3234" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="FEVI_menor_40" id="3235" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="retencao_hidrica_maior_35" id="3236" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="receita_vi" id="3237" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_cardio" id="3238" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sem_encaminhamento" id="3239" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>
