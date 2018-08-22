@@ -1,5 +1,6 @@
 package parser.PathwayVerificationTest;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.variables.BoolVar;
@@ -63,23 +64,18 @@ public class OperandParser {
 					if(operand.getValue() != null) {
 						operandValue = operand.getValue();
 					}
-					if(operandValue != 0) {
-						numericOperands.add(model.intVar(operand.getName(), (int)operandValue));
-					}else {
-						numericOperands.add(model.intVar(operand.getName(), new int[] {0,1,2,3,4,5,25,50,75,100}));
-					}
+					//if the choice operand has options variables
+					//the weights of each option are joined in a single string "options" separated by semicolons
 					if(operand.getOption().size() > 0){
-						int[] optionsArray = new int[(int) Math.pow(2,operand.getOption().size())];
-						int indexArray = 0;
-//						optionsArray[indexArray] = (int) operandValue;
-//						indexArray++;
-						for(int option = 1; option < operand.getOption().size(); option++) {
-							optionsArray[indexArray] = operand.getOption().get(option).getWeight();
-							indexArray++;
+						String options = "";
+						for(int option = 0; option < operand.getOption().size(); option++) {
+							options += (int)operand.getOption().get(option).getWeight() + ";";
 						}
-						//double operandWeight = getOperandWeight(operation.getOperand().get(i).toString());
-						double operandWeight = operand.getWeight();
-						numericOperands.add(model.intVar(operand.getName(), new int[] {0, (int)operandWeight}));
+						//All existing subsets by combining the weights. 
+						//Also represented as a string separated by comma and semicolon.
+						String domainSTR = getsDomain("", options);
+						int[] domain = stringDomainToIntDomain((int)operandValue, domainSTR);
+						numericOperands.add(model.intVar(operand.getName(), domain));
 					}
 				}
 			}
@@ -110,6 +106,32 @@ public class OperandParser {
 		}
 	}
 		
+	private String getsDomain(String auxOptions, String options) {
+		if(options.equals("")) {
+			return auxOptions;
+		}
+		else {
+			String[] strArray = options.split(";");
+			String str = strArray[0];
+			return getsDomain(auxOptions + str + ",", options.substring(str.length()+1)) + ";" + getsDomain(auxOptions, options.substring(str.length()+1));
+		}
+	}
+	
+	private int[] stringDomainToIntDomain(int operandValue, String domainSTR) {
+		String[] domainArray = domainSTR.split(";");
+		int[] domain = new int[domainArray.length + 1];
+		domain[0] = operandValue;
+		for(int i = 0; i < domainArray.length; i++) {
+			String[] subDomain = domainArray[i].split(",");
+			int addition = operandValue;
+			for (int j = 0; j < subDomain.length; j++) {
+				addition += Integer.parseInt(subDomain[j]);
+			}
+			domain[i+1] = addition;
+		}
+		return domain;
+	}
+
 	//Verify whether list booleanOperands already has the boolvar
 	public boolean containsBoolVar(List<BoolVar> booleanOperands, BoolVar boolVar) {
 		String name = boolVar.getName();
