@@ -77,7 +77,7 @@ public class FindInaccessibleStep2 extends SequenceParser {
 						accessibleElements.add(sequence.getInputStep());
 						//Checks for a next step to add the element to the stack. 
 						//Otherwise, remove the last sequence from sequenceList
-						if(sequence.getInputStep().getOutputSequences() != null) {
+						if(sequence.getInputStep().getOutputSequences().size() != 0) {
 							elementsStack.push(sequence.getInputStep());
 						}else {
 							sequenceList.remove(sequenceList.size()-1);
