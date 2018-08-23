@@ -75,6 +75,8 @@ public class OperandParser {
 						//Also represented as a string separated by comma and semicolon.
 						String domainSTR = getsDomain("", options);
 						int[] domain = stringDomainToIntDomain((int)operandValue, domainSTR);
+						domain = removeRedundancy(domain);
+						sortArray(domain);
 						numericOperands.add(model.intVar(operand.getName(), domain));
 					}
 				}
@@ -130,6 +132,40 @@ public class OperandParser {
 			domain[i+1] = addition;
 		}
 		return domain;
+	}
+	
+	private int[] removeRedundancy(int[] domain) {
+		int cont = 0;
+        for(int i = 0; i < domain.length-1; i++){  
+            for(int j = i+1; j < domain.length; j++){  
+               if(domain[i] != -1 && domain[i] == domain[j]){  
+                    domain[j] = -1;
+                    cont++;
+               }  
+            }  
+        }
+        int[] newDomain = new int[domain.length-cont];
+        int index = 0;
+        for (int i = 0; i < domain.length; i++) {
+			if(domain[i] != -1) {
+				newDomain[index] = domain[i];
+				index++;
+			}
+		}
+        return newDomain;
+	}
+
+	private void sortArray(int[] domain) {
+		int aux;  
+        for(int i = 0; i < domain.length-1; i++){  
+            for(int j = i+1; j < domain.length; j++){  
+               if(domain[i] > domain[j]){  
+                    aux = domain[i];  
+                    domain[i] = domain[j];  
+                    domain[j] = aux;  
+                }  
+            }  
+        }
 	}
 
 	//Verify whether list booleanOperands already has the boolvar
