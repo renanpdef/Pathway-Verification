@@ -1,4 +1,4 @@
-package parser.PathwayVerificationTest;
+package parser.PathwayVerificationTableGeneration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,8 @@ import java.util.Stack;
 
 import org.chocosolver.solver.Solution;
 
+import parser.PathwayVerificationTest.FindInaccessibleStep2;
+import parser.PathwayVerificationTest.FindSolutions;
 import pathwayMetamodel.Element;
 import pathwayMetamodel.Pathway;
 import pathwayMetamodel.Sequence;
@@ -68,7 +70,7 @@ public class Information {
 			int index = 0;
 			//Check if the step has not already been visited
 			if(!visitedElements.contains(element)) {
-				if(element.getOutputSequences().size() == 0) {
+				if(element == null || element.getOutputSequences().size() == 0) {
 					pathNumber++;
 				}else {
 					//Loop to find the next step to be verified

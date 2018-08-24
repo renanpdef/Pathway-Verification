@@ -12,8 +12,8 @@ public class PathwayVerificationMain {
 	public static void main( String[] args )    {
         //String file1 = "XMIs_Real_Test\\sifilis.xmi";
 		//String file1 = "XMIs_Test\\Test05.xmi";
-        String file1 = "Pathways/Hospital_Development/aminiorrexe_prematura.xmi";
-        //String file1 = "Pathways\\Clinical_Development\\";
+        //String file1 = "Pathways/Hospital_Development/lombalgia.xmi";
+        String file1 = "Pathways/Clinical_Development/parasitose.xmi";
         //String file1 = "Pathways\\Clinical_Approval\\";
         
         
@@ -27,22 +27,19 @@ public class PathwayVerificationMain {
 //        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
 //        System.out.println("-------------------------------------------------------------------------");
 //        
-        //print some solutions that occur non determinism problem
-        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
+//        //print some solutions that occur non determinism problem
+//        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
+//        System.out.println("-------------------------------------------------------------------------");
 //        
         //print all solutions that occur deadlock
-        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
+//        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
+//        System.out.println("-------------------------------------------------------------------------");
 //        
         //print logically equivalent sequences
-        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
-        System.out.println("-------------------------------------------------------------------------");
+//        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+//        System.out.println("-------------------------------------------------------------------------");
 //        
 //        //Verify if there are Inaccessible Step
-//        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
-//        System.out.println("-------------------------------------------------------------------------");
-        
         printInaccessibleStep(inaccessibleStep2.findInaccessibleSteps());
         System.out.println("-------------------------------------------------------------------------");        
     }

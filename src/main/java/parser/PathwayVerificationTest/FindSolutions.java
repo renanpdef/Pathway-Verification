@@ -55,7 +55,9 @@ public class FindSolutions extends SequenceParser{
 				for (int i = 0; i < sequences.size(); i++) {
 					for(int j = i+1; j < sequences.size(); j++) {
 						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
-						List<Solution> solutions = model.getSolver().findAllSolutions();
+						Solution solution = model.getSolver().findSolution();
+						List<Solution> solutions = new ArrayList<Solution>();
+						solutions.add(solution);
 						if(!solutions.isEmpty()) {
 							mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[k], solutions);//Put the Element and the solutions get from model in the mapSolutions.
 						}

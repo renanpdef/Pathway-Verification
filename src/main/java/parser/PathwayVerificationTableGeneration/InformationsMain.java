@@ -1,25 +1,32 @@
-package parser.PathwayVerificationTest;
+package parser.PathwayVerificationTableGeneration;
+import java.io.IOException;
+
+import parser.PathwayVerificationTest.PathwayReader;
 import pathwayMetamodel.Pathway;
 
 
 public class InformationsMain {
 
-	public static void main(String[] args) {
-		String file1 = "Pathways/Hospital_Development/aminiorrexe_prematura.xmi";
+	public static void main(String[] args) throws IOException {
+		
+		TableGeneration tableGeneration = new TableGeneration();
+		tableGeneration.createTable();
+		
+		//String file1 = "Pathways/Hospital_Development/aminiorrexe_prematura.xmi";
         //String file1 = "Pathways\\Clinical_Development\\";
         //String file1 = "Pathways\\Clinical_Approval\\";
 		
-		PathwayReader pathwayReader = new PathwayReader(file1);
-        Pathway pathway = pathwayReader.createPathway();
-        Information info = new Information(pathway);
-        
-        System.out.println("Deadlock: "+ info.getDeadlockNumber());
-        System.out.println("Non-Determinism: "+ info.getNonDeterminismNumber());
-        System.out.println("Inaccessible: "+ info.getInaccessibleStepNumber());
-        System.out.println("Equivalent Transition: "+ info.getEquivalentTransitionsNumber());
-        System.out.println("States: "+ info.getStatesNumber());
-        System.out.println("Transitions: "+ info.getTransitionsNumber());
-        System.out.println("Path: "+ info.pathNumber());
+//		PathwayReader pathwayReader = new PathwayReader(file1);
+//        Pathway pathway = pathwayReader.createPathway();
+//        Information info = new Information(pathway);
+//        
+//        System.out.println("Deadlock: "+ info.getDeadlockNumber());
+//        System.out.println("Non-Determinism: "+ info.getNonDeterminismNumber());
+//        System.out.println("Inaccessible: "+ info.getInaccessibleStepNumber());
+//        System.out.println("Equivalent Transition: "+ info.getEquivalentTransitionsNumber());
+//        System.out.println("States: "+ info.getStatesNumber());
+//        System.out.println("Transitions: "+ info.getTransitionsNumber());
+//        System.out.println("Path: "+ info.pathNumber());
 
 //		int n = 0;
 //		String str = getsDomain("", "1;1;7;7;");

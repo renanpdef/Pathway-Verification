@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.chocosolver.solver.Model;
+import org.chocosolver.solver.Solution;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 
@@ -33,24 +34,22 @@ public class SequenceParser {
 			Model model = new Model("Find All Solutions: " + i); //Create a model to verify the valid solutions of a element in the mapElementOutputSequences with ChocoSolver.
 			List<Sequence> sequences = (List<Sequence>) mapElementOutputSequences.values().toArray()[i];
 			List<BoolVar> boolSequences = sequenceListToBoolVarList(model, sequences);//Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
-			if (boolSequences!=null && !boolSequences.isEmpty()) {
-				//Verify if there is only one boolvar in the list.
-				if(boolSequences.size() > 1) {
-					List<Sequence> LogicallyEquivalentSequences = new ArrayList<Sequence>();
-					for(int k1 = 0; k1 < boolSequences.size()-1; k1++) {
-						for(int k2 = k1+1; k2< boolSequences.size(); k2++) {
-							model.arithm(boolSequences.get(k1), "+", boolSequences.get(k2),"=", 1).post();
-							if(model.getSolver().findAllSolutions().isEmpty()) {
-								LogicallyEquivalentSequences.add(sequences.get(k1));
-								LogicallyEquivalentSequences.add(sequences.get(k2));
-							}
-							model.getSolver().reset();//reset the solver for a new interaction
-							model.unpost(model.getCstrs()[model.getCstrs().length-1]);//unpost the last constraint.
+			if (boolSequences!=null && !boolSequences.isEmpty() && boolSequences.size() > 1) {
+				List<Sequence> LogicallyEquivalentSequences = new ArrayList<Sequence>();
+				for(int k1 = 0; k1 < boolSequences.size()-1; k1++) {
+					for(int k2 = k1+1; k2< boolSequences.size(); k2++) {
+						model.arithm(boolSequences.get(k1), "+", boolSequences.get(k2),"=", 1).post();
+						Solution solution = model.getSolver().findSolution();
+						if(solution == null) {
+							LogicallyEquivalentSequences.add(sequences.get(k1));
+							LogicallyEquivalentSequences.add(sequences.get(k2));
 						}
+						model.getSolver().reset();//reset the solver for a new interaction
+						model.unpost(model.getCstrs()[model.getCstrs().length-1]);//unpost the last constraint.
 					}
-					if(!LogicallyEquivalentSequences.isEmpty()) {
-						mapLogicallyEquivalentSequence.put((Element) mapElementOutputSequences.keySet().toArray()[i], LogicallyEquivalentSequences);
-					}
+				}
+				if(!LogicallyEquivalentSequences.isEmpty()) {
+					mapLogicallyEquivalentSequence.put((Element) mapElementOutputSequences.keySet().toArray()[i], LogicallyEquivalentSequences);
 				}
 			}
 		}
