@@ -66,6 +66,7 @@ public class TableGeneration {
 			"Pathways/Clinical_Approval/viver_bem_tratamento_dislipidemia__risco_muito_alto.xmi",
 			"Pathways/Clinical_Approval/viver_bem_triploterapia_bar.xmi",
 			"Pathways/Clinical_Approval/viver_bem_triploterapia_linha_afro.xmi"};
+//	};
 	
 	public void createTable() throws IOException {
 		FileWriter table = new FileWriter("pathwaysTable.txt");
@@ -78,7 +79,7 @@ public class TableGeneration {
 	        Information info = new Information(pathway);
 	   
 			String pathwayName = files[i].split("/")[2].replaceAll(".xmi", "");
-			ArrayList<Integer> problemas = new ArrayList<Integer>(){{add(24); add(26); add(27); add(30);}};
+			ArrayList<Integer> problemas = new ArrayList<Integer>(){{add(24); add(26);}};
 			if(!problemas.contains(i)) {
 				int deadlock = info.getDeadlockNumber();
 				int nonDeterminism = info.getNonDeterminismNumber();

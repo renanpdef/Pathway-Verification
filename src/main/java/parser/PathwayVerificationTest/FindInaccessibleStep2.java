@@ -107,10 +107,12 @@ public class FindInaccessibleStep2 extends SequenceParser {
 	//Method to get the initial step from the pathway
 	private Element getInitialStep(List<Element> elementList) {
 		for (int i = 0; i < elementList.size(); i++) {
-			//System.out.println(elementList.get(i).getInputSequences().size());
-			if(elementList.get(i).getInputSequences().size() == 0 && elementList.get(i).getOutputSequences().size() > 0) {
+			if(elementList.get(i).isIsInitial()) {
 				return elementList.get(i);
 			}
+//			if(elementList.get(i).getInputSequences().size() == 0 && elementList.get(i).getOutputSequences().size() > 0) {
+//				return elementList.get(i);
+//			}
 		}
 		return null;
 	}

@@ -72,38 +72,27 @@ public class Information {
 			if(!visitedElements.contains(element)) {
 				if(element == null || element.getOutputSequences().size() == 0) {
 					pathNumber++;
+					visitedElements.clear();
 				}else {
 					//Loop to find the next step to be verified
 					for(index = 0; index < element.getOutputSequences().size(); index++) {
-						Element inputStep = element.getOutputSequences().get(index).getInputStep();
-						elementsStack.push(inputStep);
+						//if(element.getOutputSequences().get(index).getInputStep() != initialElement) {
+							Element inputStep = element.getOutputSequences().get(index).getInputStep();
+							elementsStack.push(inputStep);
+						//}
 					}
 					visitedElements.add(element);
 				}
 			}
-//			//Check if there are no more step to be verified from element
-//			//Remove the element from the stack
-//			if(index == element.getOutputSequences().size()) {
-//				elementsStack.pop();
-//			}else {
-//				//Get the output sequece from element an add to sequenceList
-//				Sequence sequence = element.getOutputSequences().get(index);
-//				//Checks for a next step to add the element to the stack. 
-//				if(sequence.getInputStep().getOutputSequences().size() != 0) {
-//					System.out.println(sequence.getInputStep().getName());
-//					elementsStack.push(sequence.getInputStep());
-//				}else {
-//					pathNumber++;
-//				}
-//			}
 		}
+		System.out.println(pathNumber);
 		return pathNumber;
 	}
 	
 	//Method to get the initial step from the pathway
 	private Element getInitialStep(List<Element> elementList) {
 		for (int i = 0; i < elementList.size(); i++) {
-			if(elementList.get(i).getInputSequences().size() == 0 && elementList.get(i).getOutputSequences().size() > 0) {
+			if(elementList.get(i).isIsInitial()) {
 				return elementList.get(i);
 			}
 		}
