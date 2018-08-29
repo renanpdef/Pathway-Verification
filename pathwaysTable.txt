@@ -1,2 +1,2 @@
 Pathway, States, Transitions, Path, Deadlock, Nondeterminism, Inaccessible States, Equivalent Transitions
-acne,=13,=17,=1,=2,=2,=0,=0
+acne,=13,=17,=4,=2,=2,=0,=0

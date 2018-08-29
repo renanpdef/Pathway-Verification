@@ -83,10 +83,10 @@ public class Information {
 //					//Loop to find the next step to be verified
 //					for(index = 0; index < element.getOutputSequences().size(); index++) {
 //						Element inputStep = element.getOutputSequences().get(index).getInputStep();
-//						//if(!visitedElements.contains(inputStep)){
+//						if(!visitedElements.contains(inputStep)){
 //							System.out.println("ADD: " + inputStep.getName());
 //							elementsStack.push(inputStep);
-//						//}
+//						}
 //					}
 //					visitedElements.add(element);
 //				}
@@ -97,48 +97,47 @@ public class Information {
 //	}
 	
 	public int pathNumber() {
-		List<Element> visitedElements = new ArrayList<Element>();
+		//Map<Element,Element> linkedStates = new HashMap<Element, Element>();
+		List<Sequence> transitions = new ArrayList<Sequence>();
 		Stack<Element> elementsStack = new Stack<Element>();
-		List<Sequence> sequenceList = new ArrayList<Sequence>();
-
+		Stack<Sequence> transitionsStack = new Stack<Sequence>();
+		int pathNumber = 0;
+		
 		//Get the initial step (root) of the pathway and put it in the stack, the lists of 
 		//visited elements  and accessible elements (The initial step is always accessible)
 		Element initialElement = getInitialStep(pathway.getElement());
-		visitedElements.add(initialElement);
 		elementsStack.push(initialElement);
-		int pathNumber = 0;
 		
 		//Loop to find all accessible elements
 		//It works as depth-first search
 		while(elementsStack.isEmpty() == false) {
-			Element element = elementsStack.lastElement(); //get the last element from the stack
-			int index = 0;
-			//Loop to find the next step to be verified
-			for(index = 0; index < element.getOutputSequences().size(); index++) {
-				Element inputStep = element.getOutputSequences().get(index).getInputStep();
-				//Check if the step has not already been visited
-				if(!visitedElements.contains(inputStep)) {
-					visitedElements.add(inputStep);
-					break;
-				}
+			Element element = elementsStack.pop(); //get the last element from the stack
+			if(!transitionsStack.isEmpty()) {
+				transitions.add(transitionsStack.pop());
 			}
-			//Check if there are no more step to be verified from element
-			//Remove the element from the stack and the last sequence from the sequenceList
-			if(index == element.getOutputSequences().size()) {
-				elementsStack.pop();
-				if(sequenceList.size() > 0) {
-					sequenceList.remove(sequenceList.size()-1);
-				}
+			//System.out.println(element.getName());
+			//Check if the step has not already been visited
+			if(element == null || element.getOutputSequences().size() == 0) {
+				pathNumber++;
+				//System.out.println("----------------");
+				removeTransitons(transitions, transitionsStack.lastElement());
+				//visitedElements.clear();
 			}else {
-				//Get the output sequece from element an add to sequenceList
-				Sequence sequence = element.getOutputSequences().get(index);
-				sequenceList.add(sequence);				
-				if (sequenceList!=null && !sequenceList.isEmpty()) {
-					if(sequence.getInputStep() != null && sequence.getInputStep().getOutputSequences() != null && sequence.getInputStep().getOutputSequences().size() != 0) {
-						elementsStack.push(sequence.getInputStep());
-					}else {
-						pathNumber++;
-						sequenceList.remove(sequenceList.size()-1);
+				//Loop to find the next step to be verified
+				boolean addTransition = false;
+				for(int index = 0; index < element.getOutputSequences().size(); index++) {
+					Sequence transition = element.getOutputSequences().get(index);
+					if(!transitions.contains(transition)) {
+						Element inputStep = element.getOutputSequences().get(index).getInputStep();
+						//System.out.println("ADD: " + inputStep.getName());
+						elementsStack.push(inputStep);
+						transitionsStack.push(transition);
+						addTransition = true;
+					}
+				}
+				if(addTransition == false) {
+					if(!transitionsStack.isEmpty()) {
+						removeTransitons(transitions, transitionsStack.lastElement());
 					}
 				}
 			}
@@ -146,8 +145,22 @@ public class Information {
 		System.out.println(pathNumber);
 		return pathNumber;
 	}
-
 	
+	private void removeTransitons(List<Sequence> transitions, Sequence transition) {
+		int j = transitions.size()-1;
+		for (int i = transitions.size()-1; i >= 0; i--) {
+			if(transitions.get(i) == transition) {
+				break;
+			}
+			else if(transitions.get(i).getOutputStep() == transition.getOutputStep()) {
+				transitions.remove(i);
+				break;
+			}else {
+				transitions.remove(i);
+			}
+		}
+}
+
 	//Method to get the initial step from the pathway
 	private Element getInitialStep(List<Element> elementList) {
 		for (int i = 0; i < elementList.size(); i++) {
