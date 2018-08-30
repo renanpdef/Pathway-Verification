@@ -120,7 +120,9 @@ public class Information {
 			if(element == null || element.getOutputSequences().size() == 0) {
 				pathNumber++;
 				//System.out.println("----------------");
-				removeTransitons(transitions, transitionsStack.lastElement());
+				if(!transitionsStack.isEmpty()) {
+					removeTransitons(transitions, transitionsStack.lastElement());
+				}
 				//visitedElements.clear();
 			}else {
 				//Loop to find the next step to be verified
@@ -142,7 +144,7 @@ public class Information {
 				}
 			}
 		}
-		System.out.println(pathNumber);
+		//System.out.println(pathNumber);
 		return pathNumber;
 	}
 	

@@ -13,8 +13,8 @@ public class PathwayVerificationMain {
         //String file1 = "XMIs_Real_Test\\sifilis.xmi";
 		//String file1 = "XMIs_Test\\Test05.xmi";
 //        String file1 = "Pathways/Hospital_Development/aminiorrexe_prematura.xmi";
-        String file1 = "Pathways/Clinical_Development/medico_da_familia_asma_infantil.xmi";
-        //String file1 = "Pathways\\Clinical_Approval\\";
+        //String file1 = "Pathways/Clinical_Development/medico_da_familia_asma_infantil.xmi";
+        String file1 = "Pathways/Clinical_Approval/viver_bem_ieca__bbc__betabloqueador.xmi";
         
         
         PathwayReader pathwayReader = new PathwayReader(file1);
@@ -28,7 +28,7 @@ public class PathwayVerificationMain {
 //        System.out.println("-------------------------------------------------------------------------");
 //        
 //        //print some solutions that occur non determinism problem
-//        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
+        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
         System.out.println("-------------------------------------------------------------------------");
 //        
         //print all solutions that occur deadlock
@@ -36,11 +36,11 @@ public class PathwayVerificationMain {
         System.out.println("-------------------------------------------------------------------------");
 //        
         //print logically equivalent sequences
-//        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
         System.out.println("-------------------------------------------------------------------------");
 //        
 //        //Verify if there are Inaccessible Step
-        printInaccessibleStep(inaccessibleStep2.findInaccessibleSteps());
+//        printInaccessibleStep(inaccessibleStep2.findInaccessibleSteps());
         System.out.println("-------------------------------------------------------------------------");        
     }
     
