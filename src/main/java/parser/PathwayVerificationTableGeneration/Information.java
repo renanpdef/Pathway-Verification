@@ -10,7 +10,7 @@ import org.chocosolver.solver.Model;
 import org.chocosolver.solver.Solution;
 import org.chocosolver.solver.variables.BoolVar;
 
-import parser.PathwayVerificationTest.FindInaccessibleStep2;
+import parser.PathwayVerificationTest.FindInaccessibleStep;
 import parser.PathwayVerificationTest.FindSolutions;
 import pathwayMetamodel.Element;
 import pathwayMetamodel.Pathway;
@@ -19,13 +19,13 @@ import pathwayMetamodel.Sequence;
 public class Information {
 	Pathway pathway;
 	FindSolutions findSolutions;
-	FindInaccessibleStep2 inaccessibleStep2;
+	FindInaccessibleStep inaccessibleStep;
 	
 	
 	public Information(Pathway pathway) {
 		this.pathway = pathway;
 		this.findSolutions = new FindSolutions(pathway);
-		this.inaccessibleStep2 = new FindInaccessibleStep2(pathway);
+		this.inaccessibleStep = new FindInaccessibleStep(pathway);
 	}
 	
 	public int getStatesNumber() {
@@ -52,7 +52,7 @@ public class Information {
 	}
 	
 	public int getInaccessibleStepNumber() {
-		List<Element> states = inaccessibleStep2.findInaccessibleSteps();
+		List<Element> states = inaccessibleStep.findInaccessibleSteps();
 		return states.size();
 	}
 	
