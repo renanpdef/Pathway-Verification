@@ -9,7 +9,7 @@ fratura_exposta,=4,=4,=2,=1,=1,=0,=0
 itu__cistite,=15,=14,=6,=1,=1,=0,=0
 itu__pielonefrite,=5,=4,=2,=1,=1,=0,=0
 ivas,=25,=30,=30,=2,=2,=0,=0
-lombalgia,=45,=56,=28,=8,=9,=0,=0
+lombalgia,=45,=56,=28,=7,=9,=0,=0
 meningite,=8,=11,=8,=0,=0,=0,=0
 nascer_bem_toxoplasmose,=22,=26,=10,=0,=0,=0,=0
 neutropenia_febril,=16,=20,=18,=1,=1,=0,=0

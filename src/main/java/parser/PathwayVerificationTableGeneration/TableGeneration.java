@@ -9,6 +9,7 @@ import parser.PathwayVerificationTest.PathwayReader;
 import pathwayMetamodel.Pathway;
 
 public class TableGeneration {
+	//Array with every xmi pathways to be verified
 	String[] files = {
 			"Pathways/Hospital_Development/aminiorrexe_prematura.xmi", 
 			"Pathways/Hospital_Development/cefaleia.xmi",
@@ -69,6 +70,7 @@ public class TableGeneration {
 			"Pathways/Clinical_Approval/viver_bem_triploterapia_linha_afro.xmi"
 			};
 	
+	//Method to create a table in a file txt with lots of information about the pathways
 	public void createTable() throws IOException {
 		FileWriter table = new FileWriter("pathwaysTable.txt");
 		PrintWriter recordTable = new PrintWriter(table);
@@ -77,11 +79,11 @@ public class TableGeneration {
 		for (int i = 0; i < files.length; i++) {
 			PathwayReader pathwayReader = new PathwayReader(files[i]);
 	        Pathway pathway = pathwayReader.createPathway();
-	        Information info = new Information(pathway);
+	        Information info = new Information(pathway); //object with functions to extract information about the pathways
 	   
 			String pathwayName = files[i].split("/")[2].replaceAll(".xmi", "");
-			ArrayList<Integer> problemas = new ArrayList<Integer>(){{add(24); add(26);}};
-			if(!problemas.contains(i)) {
+			ArrayList<Integer> problems = new ArrayList<Integer>(){{add(24); add(26);}}; //set with defective pathways
+			if(!problems.contains(i)) {
 				int deadlock = info.getDeadlockNumber();
 				int nonDeterminism = info.getNonDeterminismNumber();
 				int inaccessible = info.getInaccessibleStepNumber();

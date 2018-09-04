@@ -81,7 +81,8 @@ public class SequenceParser {
 			BoolVar boolSequence = sequenceToBoolVar(model, sequences.get(i), booleanOperands, numericOperands);
 			if(boolSequence != null) {
 				boolSequences.add(boolSequence);
-			}			
+			}
+			redundantOperandChecking(model, booleanOperands, numericOperands);
 		}
 		return boolSequences;
 	}		
@@ -100,4 +101,16 @@ public class SequenceParser {
 			return model.boolVar(sequence.getName());
 		}
 	}	
+	
+	//Method to ensure the same values from redundant operands
+	private void redundantOperandChecking( Model model, List<BoolVar> booleanOperands, List<IntVar> numericOperands){
+		for (int i = 0; i < numericOperands.size(); i++) {
+			for (int j = 0; j < booleanOperands.size(); j++) {
+				if(numericOperands.get(i).getName().equals(booleanOperands.get(j).getName())) {
+					model.arithm(numericOperands.get(i), "+", booleanOperands.get(j), "!=",numericOperands.get(i).getUB()).post();
+					model.arithm(numericOperands.get(i), "+", booleanOperands.get(j), "!=",1).post();
+				}
+			}
+		}
+	}
 }
