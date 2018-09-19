@@ -74,7 +74,7 @@ public class TableGeneration {
 	public void createTable() throws IOException {
 		FileWriter table = new FileWriter("pathwaysTable.txt");
 		PrintWriter recordTable = new PrintWriter(table);
-		String header = "Pathway, States, Transitions, Path, Deadlock, Nondeterminism, Inaccessible States, Equivalent Transitions";
+		String header = "Pathway, States, Transitions, Path, Deadlock, Nondeterminism, Inaccessible States, Equivalent Transitions, Time (ms)";
 		recordTable.println(header);
 		for (int i = 0; i < files.length; i++) {
 			PathwayReader pathwayReader = new PathwayReader(files[i]);
@@ -82,17 +82,19 @@ public class TableGeneration {
 	        Information info = new Information(pathway); //object with functions to extract information about the pathways
 	   
 			String pathwayName = files[i].split("/")[2].replaceAll(".xmi", "");
-			ArrayList<Integer> problems = new ArrayList<Integer>(){{add(24); add(26);}}; //set with defective pathways
+			ArrayList<Integer> problems = new ArrayList<Integer>(){{add(23); add(24); add(26); add(42); }}; //set with defective pathways
 			if(!problems.contains(i)) {
+				long beginTime = System.currentTimeMillis();
 				int deadlock = info.getDeadlockNumber();
 				int nonDeterminism = info.getNonDeterminismNumber();
 				int inaccessible = info.getInaccessibleStepNumber();
 		        int equivalentTransition = info.getEquivalentTransitionsNumber();
+		        long executionTime = System.currentTimeMillis() - beginTime;
 		        int states = info.getStatesNumber();
 		        int transitions = info.getTransitionsNumber();
 		        int path = info.pathNumber();
 		   
-		        String line = pathwayName + ",=" + states + ",=" + transitions + ",=" + path + ",=" + deadlock + ",=" + nonDeterminism + ",=" + inaccessible + ",=" + equivalentTransition;
+		        String line = pathwayName + ",=" + states + ",=" + transitions + ",=" + path + ",=" + deadlock + ",=" + nonDeterminism + ",=" + inaccessible + ",=" + equivalentTransition + ",=" + executionTime;
 		        
 		        recordTable.println(line);
 		        

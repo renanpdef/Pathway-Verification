@@ -107,7 +107,9 @@ public class OperandParser {
 			}	
 		}
 	}
-		
+	
+	//Creates a string with all possible combinations with the weights contained in the options string.
+	//Returns a string with subsets separated by semicolons and their elements separated by commas.
 	private String getsDomain(String auxOptions, String options) {
 		if(options.equals("")) {
 			return auxOptions;
@@ -119,13 +121,15 @@ public class OperandParser {
 		}
 	}
 	
+	//Transforms the domain represented as a string into an integer array
 	private int[] stringDomainToIntDomain(int operandValue, String domainSTR) {
-		String[] domainArray = domainSTR.split(";");
+		String[] domainArray = domainSTR.split(";"); //gets the subsets
 		int[] domain = new int[domainArray.length + 1];
 		domain[0] = operandValue;
 		for(int i = 0; i < domainArray.length; i++) {
-			String[] subDomain = domainArray[i].split(",");
+			String[] subDomain = domainArray[i].split(",");//separates the elements from the subset
 			int addition = operandValue;
+			//iteration to sum the elements of a subset
 			for (int j = 0; j < subDomain.length; j++) {
 				addition += Integer.parseInt(subDomain[j]);
 			}
@@ -134,6 +138,7 @@ public class OperandParser {
 		return domain;
 	}
 	
+	//Removes repeated values in the array
 	private int[] removeRedundancy(int[] domain) {
 		int cont = 0;
         for(int i = 0; i < domain.length-1; i++){  
@@ -155,6 +160,7 @@ public class OperandParser {
         return newDomain;
 	}
 
+	//Function to sort the array
 	private void sortArray(int[] domain) {
 		int aux;  
         for(int i = 0; i < domain.length-1; i++){  

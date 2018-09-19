@@ -70,7 +70,7 @@ public class PathwayVerificationMain {
 				"Pathways/Clinical_Approval/viver_bem_triploterapia_linha_afro.xmi"
 				};
 		
-        String file1 = files[10];
+        String file1 = files[28];
         
         
         PathwayReader pathwayReader = new PathwayReader(file1);
@@ -83,20 +83,20 @@ public class PathwayVerificationMain {
 //        System.out.println("-------------------------------------------------------------------------");
 //        
 //        //print some solutions that occur non determinism problem
-        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
+//        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
+//        System.out.println("-------------------------------------------------------------------------");
 //        
         //print all solutions that occur deadlock
-        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
+//        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
+//        System.out.println("-------------------------------------------------------------------------");
 //        
         //print logically equivalent sequences
-        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
-        System.out.println("-------------------------------------------------------------------------");
+//        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+//        System.out.println("-------------------------------------------------------------------------");
 //        
 //        //Verify if there are Inaccessible Step
-        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
-        System.out.println("-------------------------------------------------------------------------");        
+//        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
+//        System.out.println("-------------------------------------------------------------------------");        
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {
@@ -106,6 +106,7 @@ public class PathwayVerificationMain {
         	List<Solution> solutionsList = (List<Solution>) mapSolutions.values().toArray()[k];
         	Element step = (Element) mapSolutions.keySet().toArray()[k];//get the output step of the sequences which was analyzed.
         	System.out.println("\n" + step.getClass().getSimpleName() +": "+ step.getName());//print the name of the output step.
+        	printSequencesOperations(step);
         	//printSequencesOperations(step);
         	//Go through the list of solutions
         	for (int i = 0; i < solutionsList.size(); i++) {
