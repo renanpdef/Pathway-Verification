@@ -70,7 +70,7 @@ public class PathwayVerificationMain {
 				"Pathways/Clinical_Approval/viver_bem_triploterapia_linha_afro.xmi"
 				};
 		
-        String file1 = files[28];
+        String file1 = files[14];
         
         
         PathwayReader pathwayReader = new PathwayReader(file1);
@@ -81,7 +81,7 @@ public class PathwayVerificationMain {
 //        //print all valid solutions for variables in pathway
 //        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
 //        System.out.println("-------------------------------------------------------------------------");
-//        
+////        
 //        //print some solutions that occur non determinism problem
 //        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
 //        System.out.println("-------------------------------------------------------------------------");
