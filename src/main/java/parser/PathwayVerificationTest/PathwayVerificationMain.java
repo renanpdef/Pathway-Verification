@@ -70,7 +70,7 @@ public class PathwayVerificationMain {
 				"Pathways/Clinical_Approval/viver_bem_triploterapia_linha_afro.xmi"
 				};
 		
-        String file1 = files[28];
+        String file1 = files[18];
         
         
         PathwayReader pathwayReader = new PathwayReader(file1);
@@ -95,8 +95,8 @@ public class PathwayVerificationMain {
 //        System.out.println("-------------------------------------------------------------------------");
 //        
 //        //Verify if there are Inaccessible Step
-//        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
-//        System.out.println("-------------------------------------------------------------------------");        
+        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
+        System.out.println("-------------------------------------------------------------------------");        
     }
     
     public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {

@@ -28,43 +28,29 @@ public class FindInaccessibleStep extends SequenceParser {
 		List<Element> visitedElements = new ArrayList<Element>();
 		Stack<Element> elementsStack = new Stack<Element>();
 		List<Sequence> sequenceList = new ArrayList<Sequence>();
-
 		//Get the initial step (root) of the pathway and put it in the stack, the lists of 
 		//visited elements  and accessible elements (The initial step is always accessible)
 		Element initialElement = getInitialStep(pathway.getElement());
 		accessibleElements.add(initialElement);
 		visitedElements.add(initialElement);
 		elementsStack.push(initialElement);
-		
 		//Loop to find all accessible elements
 		//It works as depth-first search
 		while(elementsStack.isEmpty() == false) {
 			Model model = new Model("Find All Solutions: " + 1); //Create a model to verify a valid path with ChocoSolver.
 			Element element = elementsStack.lastElement(); //get the last element from the stack
-			int index = 0;
-			//Loop to find the next step to be verified
-			for(index = 0; index < element.getOutputSequences().size(); index++) {
-				Element inputStep = element.getOutputSequences().get(index).getInputStep();
-				//Check if the step has not already been visited
-				if(!visitedElements.contains(inputStep)) {
-					visitedElements.add(inputStep);
-					break;
-				}
-			}
+			Sequence outputSequence = getNextSequence(element, visitedElements);//get the next sequence to be verified
 			//Check if there are no more step to be verified from element
 			//Remove the element from the stack and the last sequence from the sequenceList
-			if(index == element.getOutputSequences().size()) {
+			if(outputSequence == null) {
 				elementsStack.pop();
 				if(sequenceList.size() > 0) {
 					sequenceList.remove(sequenceList.size()-1);
 				}
 			}else {
 				//Get the output sequece from element an add to sequenceList
-				Sequence sequence = element.getOutputSequences().get(index);
-				sequenceList.add(sequence);
-				
+				sequenceList.add(outputSequence);	
 				List<BoolVar> boolSequences = sequenceListToBoolVarList(model, sequenceList);//Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
-				
 				if (boolSequences!=null && !boolSequences.isEmpty()) {
 					//Creates the constraint that ensures that all operations on the list sequences must be true.
 					for(int j = 0; j < boolSequences.size(); j++) {
@@ -74,11 +60,11 @@ public class FindInaccessibleStep extends SequenceParser {
 					//if truth means that the element is accessible
 					//if false means that it does not matter to look at the next step, then remove the last sequence from the list.
 					if(model.getSolver().findSolution() != null) {
-						accessibleElements.add(sequence.getInputStep());
+						accessibleElements.add(outputSequence.getInputStep());
 						//Checks for a next step to add the element to the stack. 
 						//Otherwise, remove the last sequence from sequenceList
-						if(sequence.getInputStep() != null && sequence.getInputStep().getOutputSequences() != null && sequence.getInputStep().getOutputSequences().size() != 0) {
-							elementsStack.push(sequence.getInputStep());
+						if(outputSequence.getInputStep() != null && outputSequence.getInputStep().getOutputSequences() != null && outputSequence.getInputStep().getOutputSequences().size() != 0) {
+							elementsStack.push(outputSequence.getInputStep());
 						}else {
 							sequenceList.remove(sequenceList.size()-1);
 						}
@@ -93,6 +79,21 @@ public class FindInaccessibleStep extends SequenceParser {
 		return getInaccessibleElements(pathway.getElement(), accessibleElements);
 	}
 
+	//return the next sequence to be verified
+	private Sequence getNextSequence(Element element, List<Element> visitedElements) {
+		//Loop to find the next step and sequence to be verified
+		for(int index = 0; index < element.getOutputSequences().size(); index++) {
+			Sequence outputSequence = element.getOutputSequences().get(index);
+			Element inputStep = outputSequence.getInputStep();
+			//Check if the step has not already been visited
+			if(!visitedElements.contains(inputStep)) {
+				visitedElements.add(inputStep);
+				return outputSequence;
+			}
+		}
+		return null;
+	}
+	
 	//Method to remove all accessible steps from the set of pathway elements.
 	private List<Element> getInaccessibleElements(List<Element> elements, List<Element> accessibleElements) {
 		List<Element> inaccessibleElements = new ArrayList<Element>();
@@ -116,5 +117,4 @@ public class FindInaccessibleStep extends SequenceParser {
 		}
 		return null;
 	}
-
 }
