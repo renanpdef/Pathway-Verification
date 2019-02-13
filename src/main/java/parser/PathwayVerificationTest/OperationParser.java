@@ -177,13 +177,10 @@ public class OperationParser {
 	private BoolVar boolLogicalOperations(Operation operation, List<BoolVar> booleanOperands, List<IntVar> numericOperands, String operator1, String operator2, int n) {
 		Model auxModel = new Model("Auxiliary Model");
 		List<BoolVar> boolOperation = new ArrayList<BoolVar>(); //stores the operation as BoolVar.
-//		System.out.println(operation);
 		//Verify if the first operand from operation are other operation or not.
 		//When the operand is a operation the function createBoolVarSequence is called.
 		if(operation.getOperand().get(0).getClass().toString().contains("Operation")) {
 			boolOperation.add(createBoolVarSequence((Operation) operation.getOperand().get(0), booleanOperands, numericOperands));
-			Operation op = (Operation) operation.getOperand().get(0);
-//			System.out.println(op);
 		}else {
 			boolOperation.add(booleanOperands.get(indexOfBoolVar(booleanOperands, operation.getOperand().get(0))));
 		}
@@ -192,8 +189,6 @@ public class OperationParser {
 		for(int i = 1; i < operation.getOperand().size(); i++) {
 			String strOperand = operation.getOperand().get(i).getClass().toString();
 			if(strOperand.contains("Operation")) {
-//				System.out.println(operation.getOperand().get(i));
-//				System.out.println(boolOperation);
 				boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), operator1, createBoolVarSequence((Operation) operation.getOperand().get(i), booleanOperands, numericOperands), operator2, n).reify());
 			}else {
 				boolOperation.add(auxModel.arithm(boolOperation.get(boolOperation.size()-1), operator1, booleanOperands.get(indexOfBoolVar(booleanOperands, operation.getOperand().get(i))), operator2, n).reify());

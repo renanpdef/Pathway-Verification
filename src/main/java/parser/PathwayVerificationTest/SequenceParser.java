@@ -29,8 +29,6 @@ public class SequenceParser {
 	//Return a map with Elements as a key and a set of sequences logically equivalent as a value of the key.
 	//This function verify if the operations two or more sequences with the same output step are Logically Equivalent.
 	public Map<Element, List<Sequence>> findLogicallyEquivalentSequence() {
-		System.out.println(mapElementOutputSequences.size());
-		System.out.println(mapElementOutputSequences.values().size());
 		Map<Element, List<Sequence>> mapLogicallyEquivalentSequence = new HashMap<Element, List<Sequence>>();
 		for(int i = 0; i < mapElementOutputSequences.values().size(); i++){
 			Model model = new Model("Find All Solutions: " + i); //Create a model to verify the valid solutions of a element in the mapElementOutputSequences with ChocoSolver.

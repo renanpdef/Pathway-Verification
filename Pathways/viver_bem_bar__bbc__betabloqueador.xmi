@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="914" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/?format=json" name="[Viver Bem] BAR + BBC + BETABLOQUEADOR [*]" code="VB_BAR">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4476" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/auxilios-conduta/4476/" name="Avaliar PS/PD (1)" description="PS 130 -159 ou PD 80 - 99?" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="PS 130 -159 ou PD 80 - 99?" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/auxilios-conduta/4476/perguntas/1917/" id="1917">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_1" id="3261" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4477" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/auxilios-conduta/4477/" name="Avaliar PS/PD (2)" description="PS 160 - 179 ou PD 100 - 109?" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="PS 160-179 ou PD 100 -109?" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/auxilios-conduta/4477/perguntas/1918/" id="1918">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_2" id="3262" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="4478" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/encaminhamentos/4478/" name="[Encaminhamento] Monoterapia BAR" description="" isTerminal="true" inputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="4479" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/encaminhamentos/4479/" name="[Encaminhamento] Duploterapia BAR" description="" isTerminal="true" inputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="4480" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/encaminhamentos/4480/" name="[Encaminhamento] Triploterapia BAR" description="" isTerminal="true" inputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="4481" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/encaminhamentos/4481/" name="[Encaminhamento] Tetraterapia BAR" description="" isTerminal="true">
+    <pathways>VB_BAR_TETRA</pathways>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="4482" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/sequencias/4482/" name="S1 (PD/PS positivo(1))" description="">
+    <operation name="PD/PS positivo(1)" Operator="affirmation" id="3263">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_1" id="3261" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4483" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/sequencias/4483/" name="S2 (PD/PS negativo (1))" description="">
+    <operation name="PD/PS negativo (1)" id="3264">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_1" id="3261" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="4484" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/sequencias/4484/" name="S3 (PD/PS positivo (2))" description="">
+    <operation name="PD/PS positivo (2)" Operator="affirmation" id="3265">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_2" id="3262" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="4485" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/914/sequencias/4485/" name="S4 (PD/PS negativo (2))" description="">
+    <operation name="PD/PS negativo (2)" id="3266">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_2" id="3262" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_1" id="3261" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_2" id="3262" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3201" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/?format=json" name="Asma" code="H038">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18461" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18461/" name="Quick SOFA" description="" isInitial="true" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Confus&#xe3;o Mental" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18461/perguntas/9441/" id="9441">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18181" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt; 100" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18461/perguntas/9442/" id="9442">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="18182" weight="1" value="false"/>
+    </questions>
+    <questions text="FR > 22" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18461/perguntas/9443/" id="9443">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="18183" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="18462" type="Encaminhamento" type_verbose="Encaminhamento" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/encaminhamentos/18462/" name="Protocolo SEPSE" description="" isTerminal="true" inputSequences="//@sequence.7">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18463" type="Tratamento" type_verbose="Tratamento" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18463/" name="Anamnese + Exame F&#xed;sico" description="&lt;p>Avalia&amp;ccedil;&amp;atilde;o inicial&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Anamnese + exame f&amp;iacute;sico&lt;/li>&#xA;&#x9;&lt;li>Oximetria de pulso&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.8" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18464" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18464/" name="PCR Iminente?" description="&lt;p>PCR iminente se apresentar os seguintes crit&amp;eacute;rios:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Paciente visivelmente grave&lt;/li>&#xA;&#x9;&lt;li>FC &amp;gt; 120 e FR &amp;gt; 30&lt;/li>&#xA;&#x9;&lt;li>Rebaixamento do n&amp;iacute;vel de consci&amp;ecirc;ncia&lt;/li>&#xA;&#x9;&lt;li>Grave broncoespasmo com importante queda da satura&amp;ccedil;&amp;atilde;o.&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="PCR iminente?" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18464/perguntas/9444/" id="9444">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pcr_iminente" id="18184" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18465" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/informacoes/18465/" name="Encaminhar para Eixo Vermelho" description="&lt;p>Encaminhar para sala do eixo vermelho&lt;br />&#xA;&lt;br />&#xA;Preparar material para IOT&lt;br />&#xA;Monitor, oxig&amp;ecirc;nio e acesso venoso perif&amp;eacute;rico&lt;/p>" isTerminal="true" inputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18466" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18466/" name="Avaliar Intensidade da Crise" description="&lt;p>&lt;u>&lt;strong>Crise Leve/&lt;/strong>&lt;/u> &lt;u>&lt;strong> Moderada&lt;/strong>&lt;/u>: Dispneia ou tem sintomas leves, consegue completar frases ao falar, n&amp;atilde;o utiliza a musculatura acess&amp;oacute;ria para respirar ou a utiliza levemente, sibilos localizados ou difusos com murm&amp;uacute;rio vesicular normal, frequ&amp;ecirc;ncia respirat&amp;oacute;ria normal ou aumentada (sem utilizar musculatura acess&amp;oacute;ria), frequ&amp;ecirc;ncia card&amp;iacute;aca at&amp;eacute; 120, satura&amp;ccedil;&amp;atilde;o de oxig&amp;ecirc;nio em ar ambiente entre 90 a 95%.&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>Crise Grave&lt;/strong>&lt;/u>: Cianose, sudorese, exaust&amp;atilde;o, confus&amp;atilde;o mental, dispneia importante, dificuldade de fala, uso de musculatura acess&amp;oacute;ria, murm&amp;uacute;rio vesicular diminu&amp;iacute;do, frequ&amp;ecirc;ncia respirat&amp;oacute;ria aumentada (FR &amp;gt; 30/min), taquicardia ou bradicardia, satura&amp;ccedil;&amp;atilde;o de oxig&amp;ecirc;nio inferior a 90% em ar ambiente&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Crise Leve/Moderada" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18466/perguntas/9445/" id="9445">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="crise_leve" id="18185" weight="1" value="false"/>
+    </questions>
+    <questions text="Crise Grave" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18466/perguntas/9446/" id="9446">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="crise_moderada_ou_grave" id="18186" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18467" type="Receita" type_verbose="Receita" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18467/" name="Receita" description="&lt;p>&lt;u>&lt;strong>ORIENTA&amp;Ccedil;&amp;Atilde;O&lt;/strong>&lt;/u>:&lt;br />&#xA;&lt;br />&#xA;Alta e Acompanhamento ambulatorial com pneumologista&lt;/p>" isTerminal="true" inputSequences="//@sequence.9 //@sequence.10 //@sequence.14">
+    <item id="4901" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18467/itens-receita/4901/" name="" med_code="35742" presentation="COMP" access="1" quantity="2" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="4902" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18467/itens-receita/4902/" name="Aerolin 100mcg ..... 1 cx" med_code="-1" presentation="JATO" access="20" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se falta de ar."/>
+    <item id="4903" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18467/itens-receita/4903/" name="Clenil HFA 250 mcg .... 1 cx" med_code="-1" presentation="JATO" access="20" quantity="1" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="4904" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18467/itens-receita/4904/" name="Aviant 5mg .... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="4905" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18467/itens-receita/4905/" name="Loratadina 10mg .... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="4906" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18467/itens-receita/4906/" name="Koide D .... 1 frasco" med_code="-1" presentation="-" access="1" quantity="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 10ml de 6 em 6h."/>
+    <item id="4907" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18467/itens-receita/4907/" name="Lugano 12 mcg + 250mcg" med_code="-1" presentation="CAPS" access="20" quantity="1" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="4908" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18467/itens-receita/4908/" name="" med_code="182405" presentation="CAPS" access="20" quantity="1" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18468" type="Receita" type_verbose="Receita" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18468/" name="[Crise Moderada ou Grave] Receita" description="">
+    <item id="4909" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18468/itens-receita/4909/" name="Fenoterol" med_code="-1" presentation="GOTA" access="20" quantity="10" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Juntamente com ipratr&#xf3;pio (40 gotas) e 5ml de Soro Fisiol&#xf3;gico 0,9%"/>
+    <item id="4910" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18468/itens-receita/4910/" name="Ipratr&#xf3;pio" med_code="-1" presentation="GOTA" access="20" quantity="40" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Juntamente com Fenoterol (10 gotas) e 5ml de Soro Fisiol&#xf3;gico 0,9%"/>
+    <item id="4911" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/receitas/18468/itens-receita/4911/" name="Metilprednisolona 40-60mg" med_code="-1" presentation="FRAP" access="6" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18469" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18469/" name="[Crise Grave] Avaliar Melhora" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.10 //@sequence.11">
+    <questions text="Paciente apresenta melhora dos sintomas?" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18469/perguntas/9447/" id="9447">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="crise_grave_melhora" id="18187" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18470" type="Tratamento" type_verbose="Tratamento" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18470/" name="[Crise Grave] Tratamento" description="&lt;p>Recomenda&amp;ccedil;&amp;atilde;o ao m&amp;eacute;dico:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Fazer nebuliza&amp;ccedil;&amp;atilde;o com &lt;u>&lt;strong>3ml de Soro Fisiol&amp;oacute;gico 0,9% + 15 gotas de Berotec + 40 gotas de Atrovent.&lt;/strong>&lt;/u>&lt;br />&#xA;&#x9;&lt;u>&lt;strong>Fazer de 15 em 15 minutos, at&amp;eacute; no m&amp;aacute;ximo 3 vezes&lt;/strong>&lt;/u>.&lt;/li>&#xA;&#x9;&lt;li>Oxig&amp;ecirc;nio em cateter nasal: &lt;u>&lt;strong>3L/min.&lt;/strong>&lt;/u>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Reavaliar paciente ap&amp;oacute;s nebuliza&amp;ccedil;&amp;atilde;o.&lt;/p>" inputSequences="//@sequence.5 //@sequence.13" outputSequences="//@sequence.6">
+    <examination url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18470/exames/15405/" exam_id="32050054" limb_side="" quantity="1" reason="Crise grave de asma" clinical_indication="n/a"/>
+    <examination url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18470/exames/15406/" exam_id="28040481" limb_side="" quantity="1" reason="Crise grave de asma" clinical_indication="n/a"/>
+    <medication url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18470/medicamentos/9441/" med_id="36412" id="9441" name="" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9441" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml AD&quot;,&quot;id&quot;:3901,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:4,&quot;codigo_principio_ativo&quot;:1309}"/>
+    <medication url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18470/medicamentos/9442/" med_id="36390" id="9442" name="" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9442" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml AD&quot;,&quot;id&quot;:3902,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:4,&quot;codigo_principio_ativo&quot;:1309}"/>
+    <medication url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18470/medicamentos/9443/" med_id="36390" id="9443" name="" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9443" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml AD&quot;,&quot;id&quot;:3903,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:4,&quot;codigo_principio_ativo&quot;:1309}"/>
+    <medication url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18470/medicamentos/9444/" med_id="36390" id="9444" name="" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9444" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml AD&quot;,&quot;id&quot;:3904,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:4,&quot;codigo_principio_ativo&quot;:1309}"/>
+    <procedure url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18470/procedimentos/1461/" procedure="75010036" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18471" type="Tratamento" type_verbose="Tratamento" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18471/" name="[Crise Leve/Moderada] Aerossol" description="&lt;p>Recomenda&amp;ccedil;&amp;atilde;o ao m&amp;eacute;dico: Fazer nebuliza&amp;ccedil;&amp;atilde;o com &lt;u>&lt;strong>3ml de Soro Fisiol&amp;oacute;gico 0,9% + 10 a 12 gotas de Berotec + 40 gotas de Atrovent.&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>Fazer de 20 em 20 minutos, at&amp;eacute; no m&amp;aacute;ximo 3 vezes&lt;/strong>&lt;/u>.&lt;/p>&#xA;&#xA;&lt;p>Reavaliar paciente ap&amp;oacute;s nebuliza&amp;ccedil;&amp;atilde;o.&lt;/p>" inputSequences="//@sequence.4" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18472" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18472/" name="[Crise Leve] Avaliar Melhora" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.9 //@sequence.13">
+    <questions text="Paciente apresenta melhora dos sintomas?" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18472/perguntas/9448/" id="9448">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="crise_leve_melhora" id="18188" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18473" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18473/" name="[Crise Grave] Avaliar Melhora (2)" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Paciente apresenta melhora dos sintomas?" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/auxilios-conduta/18473/perguntas/9449/" id="9449">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="crise_grave_melhora_reavaliacao" id="18189" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18474" type="Tratamento" type_verbose="Tratamento" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18474/" name="[Crise Grave Sem Melhora] Discutir com Chefia" description="&lt;p>Sugere-se iniciar &lt;u>Adrenalina (1:1000) SC ou IM de 20/20 minutos&lt;/u> &lt;strong>at&amp;eacute; 3 doses &lt;/strong>(m&amp;aacute;ximo de 0,3mL/dose).&lt;/p>&#xA;&#xA;&lt;p>Discutir caso com chefe de equipa para dar prosseguimento.&lt;/p>" isTerminal="true" inputSequences="//@sequence.15"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18475" type="Tratamento" type_verbose="Tratamento" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18475/" name="[Crise Grave Sem Melhora] Tratamento" description="" inputSequences="//@sequence.11" outputSequences="//@sequence.12">
+    <examination url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18475/exames/15407/" exam_id="28010965" limb_side="" quantity="1" reason="Crise grave de asma sem melhora" clinical_indication="n/a"/>
+    <medication url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18475/medicamentos/9445/" med_id="43923" id="9445" name="" brand="" unit="AL" access="6" daily_dosage="2" cycles="1" treatement_time="9445" standard="null"/>
+    <medication url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/tratamentos/18475/medicamentos/9446/" med_id="143303" id="9446" name="" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9446" standard="null"/>
+  </element>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="18476" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18476/" name="S15" description="Incondicional"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="18477" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18477/" name="S1" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="18478" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18478/" name="S2 (pcr iminente)" description="pcr iminente">
+    <operation name="pcr iminente" Operator="affirmation" id="18192">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pcr_iminente" id="18184" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="18479" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18479/" name="S3 (sem pcr iminente)" description="sem pcr iminente">
+    <operation name="sem pcr iminente" id="18193">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pcr_iminente" id="18184" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.5" id="18480" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18480/" name="S4 (crise leve)" description="crise leve">
+    <operation name="crise leve" Operator="affirmation" id="18194">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="crise_leve" id="18185" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.5" id="18481" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18481/" name="S5 (crise moderada ou grave)" description="crise moderada ou grave">
+    <operation name="crise moderada ou grave" Operator="affirmation" id="18195">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="crise_moderada_ou_grave" id="18186" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.9" id="18482" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18482/" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="18483" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18483/" name="S14 (quick sofa >= 2)" description="quick sofa >= 2">
+    <operation name="quick sofa >= 2" Operator="greaterOrEqual" id="18196">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="18191">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="18182" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="18183" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18181" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="18190" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="18484" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18484/" name="S15 (quick sofa &lt; 2)" description="quick sofa &lt; 2">
+    <operation name="quick sofa &lt; 2" Operator="lessThan" id="18197">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="18191">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="18182" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="18183" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18181" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="18190" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.11" id="18485" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18485/" name="S16 (apresenta melhora)" description="apresenta melhora">
+    <operation name="apresenta melhora" Operator="affirmation" id="18198">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="crise_leve_melhora" id="18188" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.8" id="18486" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18486/" name="S18 (apresenta melhora)" description="apresenta melhora">
+    <operation name="apresenta melhora (crise grave)" Operator="affirmation" id="18199">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="crise_grave_melhora" id="18187" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.8" id="18487" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18487/" name="S19 (n&#xe3;o apresentou melhora)" description="n&#xe3;o apresentou melhora">
+    <operation name="n&#xe3;o apresent melhora (crise grave)" id="18200">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="crise_grave_melhora" id="18187" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.14" id="18488" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18488/" name="S20" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.11" id="18489" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18489/" name="S17 (n&#xe3;o apresenta melhora)" description="n&#xe3;o apresenta melhora">
+    <operation name="n&#xe3;o apresenta melhora" id="18201">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="crise_leve_melhora" id="18188" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.12" id="18490" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18490/" name="S21 (apresenta melhora - crise grave reavaliacao)" description="apresenta melhora - crise grave reavaliacao">
+    <operation name="apresenta melhora (crise grave reavaliacao)" Operator="affirmation" id="18202">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="crise_grave_melhora_reavaliacao" id="18189" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="18491" type="Sequencia" type_verbose="Sequencia" url="http://app.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/3201/sequencias/18491/" name="S22 (n&#xe3;o apresenta melhora - crise grave reavaliacao)" description="n&#xe3;o apresenta melhora - crise grave reavaliacao">
+    <operation name="n&#xe3;o apresenta melhora (crise grave reavaliacao)" id="18203">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="crise_grave_melhora_reavaliacao" id="18189" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <operation name="Quick SOFA" Operator="addition" id="18191">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="18182" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="18183" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18181" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18181" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="18182" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="18183" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pcr_iminente" id="18184" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="crise_leve" id="18185" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="crise_moderada_ou_grave" id="18186" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="crise_grave_melhora" id="18187" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="crise_leve_melhora" id="18188" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="crise_grave_melhora_reavaliacao" id="18189" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="18190" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

@@ -58,8 +58,9 @@ public class OperandParser {
 					operand.setName(name);
 				}
 				IntVar intVar = auxModel.intVar(operand.getName(), new int[] {0,1});
+				BoolVar boolVar = auxModel.boolVar(operand.getName());
 				//if numericOperands list still doesn't contain the new intVar.
-				if(!containsIntVar(numericOperands, intVar)) {
+				if(!containsIntVar(numericOperands, intVar) && !containsBoolVar(booleanOperands, boolVar)) {
 					double operandValue = 0;
 					if(operand.getValue() != null) {
 						operandValue = operand.getValue();
@@ -77,7 +78,12 @@ public class OperandParser {
 						int[] domain = stringDomainToIntDomain((int)operandValue, domainSTR);
 						domain = removeRedundancy(domain);
 						sortArray(domain);
-						numericOperands.add(model.intVar(operand.getName(), domain));
+						
+						if(domain.length == 2 && domain[0] == 0 && domain[1] == 1 && (operation.getOperator() == Operator.AND || operation.getOperator() == Operator.OR || operation.getOperator() == Operator.IMPLIES || operation.getOperator() == Operator.AFFIRMATION || operation.getOperator() == Operator.NOT)) {
+							booleanOperands.add(model.boolVar(operand.getName()));
+						}else {
+							numericOperands.add(model.intVar(operand.getName(), domain));
+						}
 					}
 				}
 			}
