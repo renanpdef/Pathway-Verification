@@ -1,4 +1,4 @@
-package parser.PathwayVerificationTest;
+package parser.PathwayVerification;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,8 +21,8 @@ public class FindSolutions extends SequenceParser{
 	//Return a map with Elements as a key and a list of all solutions that occurs deadlock in the element as a value of the key.
 	//If the operands have the same values in the solution, then deadlock occurs.
 	//An element is in deadlock when all its output sequences are false.
-	public Map<String, Double> findDeadLockSolutions(){
-		Map<String, Double> mapStatistics = new HashMap<String, Double>();
+	public Map<Element, List<Solution>> findDeadLockSolutions(){
+		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
 		for(int i = 0; i < mapElementOutputSequences.values().size(); i++){
 			Model model = new Model("Find DeadLock Solutions: " + i);//Create a model to verify deadlock of a element in the mapElementOutputSequences with ChocoSolver.
 			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapElementOutputSequences.values().toArray()[i]); //Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
@@ -33,34 +33,22 @@ public class FindSolutions extends SequenceParser{
 						model.arithm(sequences.get(k), "=", 0).post();//Post the constraint "the sequence i have to be false" to the model.
 					}
 					Solution solution = model.getSolver().findSolution();
-					Double nbVars = (double) model.getNbVars();
-					mapStatistics.put("Variables", mapStatistics.containsKey("Variables")?mapStatistics.get("Variables")+nbVars:nbVars);
-					Double nbCstrs = (double) model.getNbCstrs();
-					mapStatistics.put("Constraints", mapStatistics.containsKey("Constraints")?mapStatistics.get("Constraints")+nbCstrs:nbCstrs);
-					Double timeCount = (double) model.getSolver().getTimeCount();
-					mapStatistics.put("ResolutionTime", mapStatistics.containsKey("ResolutionTime")?mapStatistics.get("ResolutionTime")+timeCount:timeCount);
-					Double nodeCount = (double) model.getSolver().getNodeCount();
-					mapStatistics.put("Nodes", mapStatistics.containsKey("Nodes")?mapStatistics.get("Nodes")+nodeCount:nodeCount);
-					Double backTrackCount = (double) model.getSolver().getBackTrackCount();
-					mapStatistics.put("Backtracks", mapStatistics.containsKey("Backtracks")?mapStatistics.get("Backtracks")+backTrackCount:backTrackCount);
-					Double failCount = (double) model.getSolver().getFailCount();
-					mapStatistics.put("Fails", mapStatistics.containsKey("Fails")?mapStatistics.get("Fails")+failCount:failCount);
-					Double restartCount = (double) model.getSolver().getRestartCount();
-					mapStatistics.put("Restarts", mapStatistics.containsKey("Restarts")?mapStatistics.get("Restarts")+restartCount:restartCount);
-					Double nbSolutions = (double) model.getSolver().getSolutionCount();
-					mapStatistics.put("Solutions", mapStatistics.containsKey("Solutions")?mapStatistics.get("Solutions")+nbSolutions:nbSolutions);
+					if(solution != null) {
+						List<Solution> solutions = new ArrayList<Solution>();
+						solutions.add(solution);
+						mapSolutions.put((Element) mapElementOutputSequences.keySet().toArray()[i], solutions);//Put the Element and the solutions get from model in the mapSolutions.
+					}
 				}
 			}
 		}
-		return mapStatistics;
+		return mapSolutions;
 	}
 	
 	//Return a map with Elements as a key and a list of some solutions that occur Non Determinism in the element as a value of the key.
 	//If the operands have the same values presented in the solution, then Non Determinism occurs.
 	//An element has a Non Determinism problem when at least two of its output sequences are true.
-	public Map<String, Double> findNonDeterminismSolutions(){
+	public Map<Element, List<Solution>> findNonDeterminismSolutions(){
 		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
-		Map<String, Double> mapStatistics = new HashMap<String, Double>();
 		for(int k = 0; k < mapElementOutputSequences.values().size(); k++){
 			Model model = new Model("Find Non Determinism Solution: " + k);//Create a model to verify non determinism of a element in the mapElementOutputSequences with ChocoSolver.
 			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapElementOutputSequences.values().toArray()[k]);//Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
@@ -70,22 +58,6 @@ public class FindSolutions extends SequenceParser{
 					for(int j = i+1; j < sequences.size(); j++) {
 						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
 						Solution solution = model.getSolver().findSolution();
-						Double nbVars = (double) model.getNbVars();
-						mapStatistics.put("Variables", mapStatistics.containsKey("Variables")?mapStatistics.get("Variables")+nbVars:nbVars);
-						Double nbCstrs = (double) model.getNbCstrs();
-						mapStatistics.put("Constraints", mapStatistics.containsKey("Constraints")?mapStatistics.get("Constraints")+nbCstrs:nbCstrs);
-						Double timeCount = (double) model.getSolver().getTimeCount();
-						mapStatistics.put("ResolutionTime", mapStatistics.containsKey("ResolutionTime")?mapStatistics.get("ResolutionTime")+timeCount:timeCount);
-						Double nodeCount = (double) model.getSolver().getNodeCount();
-						mapStatistics.put("Nodes", mapStatistics.containsKey("Nodes")?mapStatistics.get("Nodes")+nodeCount:nodeCount);
-						Double backTrackCount = (double) model.getSolver().getBackTrackCount();
-						mapStatistics.put("Backtracks", mapStatistics.containsKey("Backtracks")?mapStatistics.get("Backtracks")+backTrackCount:backTrackCount);
-						Double failCount = (double) model.getSolver().getFailCount();
-						mapStatistics.put("Fails", mapStatistics.containsKey("Fails")?mapStatistics.get("Fails")+failCount:failCount);
-						Double restartCount = (double) model.getSolver().getRestartCount();
-						mapStatistics.put("Restarts", mapStatistics.containsKey("Restarts")?mapStatistics.get("Restarts")+restartCount:restartCount);
-						Double nbSolutions = (double) model.getSolver().getSolutionCount();
-						mapStatistics.put("Solutions", mapStatistics.containsKey("Solutions")?mapStatistics.get("Solutions")+nbSolutions:nbSolutions);
 						if(solution != null) {
 							List<Solution> solutions = new ArrayList<Solution>();
 							solutions.add(solution);
@@ -101,7 +73,7 @@ public class FindSolutions extends SequenceParser{
 				}
 			}
 		}
-		return mapStatistics;
+		return mapSolutions;
 	}
 	
 	//Return a map with Elements as a key and a list of all valid solutions in the element as a value of the key.

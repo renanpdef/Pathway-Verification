@@ -10,9 +10,11 @@ import org.chocosolver.solver.Model;
 import org.chocosolver.solver.Solution;
 import org.chocosolver.solver.variables.BoolVar;
 
-import parser.PathwayVerificationTest.FindInaccessibleStep;
-import parser.PathwayVerificationTest.FindSolutions;
+import parser.PathwayVerification.FindInaccessibleStep;
+import parser.PathwayVerification.FindSolutions;
 import pathwayMetamodel.Element;
+import pathwayMetamodel.Operand;
+import pathwayMetamodel.Operation;
 import pathwayMetamodel.Pathway;
 import pathwayMetamodel.Sequence;
 

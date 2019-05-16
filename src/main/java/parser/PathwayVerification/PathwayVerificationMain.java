@@ -1,4 +1,4 @@
-package parser.PathwayVerificationTest;
+package parser.PathwayVerification;
 
 import java.io.File;
 import java.util.List;
@@ -24,36 +24,47 @@ public class PathwayVerificationMain {
 //        //print all valid solutions for variables in pathway
 //        printFoundSolutions(findSolutions.findAllValidSolutions(), "FIND ALL VALID SOLUTIONS");
 //        System.out.println("-------------------------------------------------------------------------");
-////      
-        
+////        
+//        //print some solutions that occur non determinism problem
+//        printFoundSolutions(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
+//        System.out.println("-------------------------------------------------------------------------");
+//        
         //print all solutions that occur deadlock
-        printStatistics(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
-
-        //print some solutions that occur non determinism problem
-        printStatistics(findSolutions.findNonDeterminismSolutions(), "FIND NON DETERMINISM SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
-  
-        //print logically equivalent sequences
-        printStatistics(findSolutions.findLogicallyEquivalentSequence(), "LOGICALLY EQUIVALENT SEQUENCES");
+        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
         System.out.println("-------------------------------------------------------------------------");
 //        
-//        //Verify if there are Inaccessible Step
-        printStatistics(inaccessibleStep.findInaccessibleSteps(), "INACCESSIBLE STEPS");
-        System.out.println("-------------------------------------------------------------------------");        
+        //print logically equivalent sequences
+//        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
+//        System.out.println("-------------------------------------------------------------------------");
+////        
+////        //Verify if there are Inaccessible Step
+//        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
+//        System.out.println("-------------------------------------------------------------------------");        
     }
     
-    public static void printStatistics(Map<String, Double> mapStatistics, String solutionsName) {
+    public static void printFoundSolutions(Map<Element, List<Solution>> mapSolutions, String solutionsName) {
     	System.out.println("\n" + solutionsName);
     	//Go through all lists of solutions from mapSolutions.
-        System.out.println("Variables: " + mapStatistics.get("Variables"));
-        System.out.println("Constraints: " + mapStatistics.get("Constraints"));
-        System.out.println("ResolutionTime: " + mapStatistics.get("ResolutionTime"));
-        System.out.println("Nodes: " + mapStatistics.get("Nodes"));
-        System.out.println("Backtracks: " + mapStatistics.get("Backtracks"));
-        System.out.println("Fails: " + mapStatistics.get("Fails"));
-        System.out.println("Restarts: " + mapStatistics.get("Restarts"));
-        System.out.println("Solutions: " + mapStatistics.get("Solutions"));
+        for (int k = 0; k < mapSolutions.size(); k++) {
+        	List<Solution> solutionsList = (List<Solution>) mapSolutions.values().toArray()[k];
+        	Element step = (Element) mapSolutions.keySet().toArray()[k];//get the output step of the sequences which was analyzed.
+        	System.out.println("\n" + step.getClass().getSimpleName() +": "+ step.getName());//print the name of the output step.
+        	printSequencesOperations(step);
+        	//printSequencesOperations(step);
+        	//Go through the list of solutions
+        	for (int i = 0; i < solutionsList.size(); i++) {
+	        	String str[] = solutionsList.get(i).toString().split(",");
+	        	for(int j = 0; j < str.length; j++) {
+	        		//print just true operands from the vector str.
+	        		//REIF is a constraint that was reify to a BoolVar.
+	        		//exp is a result from a mathematical expression.
+	        		if(!str[j].contains("REIF") && !str[j].contains("exp")) {
+	        			System.out.print(str[j]);
+	        		}
+	        	}
+	        	System.out.println();
+	        }
+        }
     }
     
     public static void printEquivalentSequences(Map<Element, List<Sequence>> mapEquivalentSequences) {

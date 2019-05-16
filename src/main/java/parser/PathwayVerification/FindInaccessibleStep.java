@@ -1,4 +1,4 @@
-package parser.PathwayVerificationTest;
+package parser.PathwayVerification;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,8 +23,7 @@ public class FindInaccessibleStep extends SequenceParser {
 
 	//Return a set of Elements that are inaccessible steps.
 	//An element is a inaccessible step if there are no valid path to get to the element.
-	public Map<String, Double> findInaccessibleSteps() {
-		Map<String, Double> mapStatistics = new HashMap<String, Double>();
+	public List<Element> findInaccessibleSteps() {
 		List<Element> accessibleElements = new ArrayList<Element>();
 		List<Element> visitedElements = new ArrayList<Element>();
 		Stack<Element> elementsStack = new Stack<Element>();
@@ -72,28 +71,12 @@ public class FindInaccessibleStep extends SequenceParser {
 					}else {
 						sequenceList.remove(sequenceList.size()-1);
 					}
-					Double nbVars = (double) model.getNbVars();
-					mapStatistics.put("Variables", mapStatistics.containsKey("Variables")?mapStatistics.get("Variables")+nbVars:nbVars);
-					Double nbCstrs = (double) model.getNbCstrs();
-					mapStatistics.put("Constraints", mapStatistics.containsKey("Constraints")?mapStatistics.get("Constraints")+nbCstrs:nbCstrs);
-					Double timeCount = (double) model.getSolver().getTimeCount();
-					mapStatistics.put("ResolutionTime", mapStatistics.containsKey("ResolutionTime")?mapStatistics.get("ResolutionTime")+timeCount:timeCount);
-					Double nodeCount = (double) model.getSolver().getNodeCount();
-					mapStatistics.put("Nodes", mapStatistics.containsKey("Nodes")?mapStatistics.get("Nodes")+nodeCount:nodeCount);
-					Double backTrackCount = (double) model.getSolver().getBackTrackCount();
-					mapStatistics.put("Backtracks", mapStatistics.containsKey("Backtracks")?mapStatistics.get("Backtracks")+backTrackCount:backTrackCount);
-					Double failCount = (double) model.getSolver().getFailCount();
-					mapStatistics.put("Fails", mapStatistics.containsKey("Fails")?mapStatistics.get("Fails")+failCount:failCount);
-					Double restartCount = (double) model.getSolver().getRestartCount();
-					mapStatistics.put("Restarts", mapStatistics.containsKey("Restarts")?mapStatistics.get("Restarts")+restartCount:restartCount);
-					Double nbSolutions = (double) model.getSolver().getSolutionCount();
-					mapStatistics.put("Solutions", mapStatistics.containsKey("Solutions")?mapStatistics.get("Solutions")+nbSolutions:nbSolutions);
 				}
 			}
 		}
 		//With the set of all accessible steps from the pathway, we can prone the set of all elements
 		//and get just the inaccessible steps
-		return mapStatistics;
+		return getInaccessibleElements(pathway.getElement(), accessibleElements);
 	}
 
 	//return the next sequence to be verified
