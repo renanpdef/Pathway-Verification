@@ -22,9 +22,13 @@ public class InformationsMain {
 //		runTimeTableGaneration.createTable();
 		
 		StatisticsTableGeneration statisticsTableGeneration = new StatisticsTableGeneration();
+		System.out.println("DEADLOCK");
 		statisticsTableGeneration.createStatisticTable("dl");
+		System.out.println("NON DETERMINISM");
 		statisticsTableGeneration.createStatisticTable("nd");
+		System.out.println("EQUIVALENT TRANSITIONS");
 		statisticsTableGeneration.createStatisticTable("et");
+		System.out.println("INACCESSIBLE STEPS");
 		statisticsTableGeneration.createStatisticTable("is");
 	}
 }

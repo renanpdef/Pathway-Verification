@@ -14,7 +14,7 @@ public class PathwayVerificationMain {
 		String path = "Pathways/";
 		File file = new File(path);
 		String[] pathwayFiles =  file.list();
-		String pathwayFile = path + pathwayFiles[53];
+		String pathwayFile = path + pathwayFiles[0];
         
         PathwayReader pathwayReader = new PathwayReader(pathwayFile);
         Pathway pathway = pathwayReader.createPathway();
@@ -50,6 +50,7 @@ public class PathwayVerificationMain {
         System.out.println("Constraints: " + mapStatistics.get("Constraints"));
         System.out.println("ResolutionTime: " + mapStatistics.get("ResolutionTime"));
         System.out.println("Nodes: " + mapStatistics.get("Nodes"));
+        System.out.println("BinaryTrees: " + mapStatistics.get("BinaryTrees"));
         System.out.println("Backtracks: " + mapStatistics.get("Backtracks"));
         System.out.println("Fails: " + mapStatistics.get("Fails"));
         System.out.println("Restarts: " + mapStatistics.get("Restarts"));

@@ -24,7 +24,7 @@ public class StatisticsTableGeneration {
 	public void createStatisticTable(String function) throws IOException {
 		FileWriter table = new FileWriter(function + "StatisticTable.txt");
 		PrintWriter recordTable = new PrintWriter(table);
-		String header = "Pathway, Resolution Time, Variables, Constraints, Nodes, Backtracks, Fails, Restarts, Solutions";
+		String header = "Pathway, Resolution Time, Variables, Constraints, BinaryTrees, Nodes, Backtracks, Fails, Restarts, Solutions";
 		recordTable.println(header);
 		for (int i = 0; i < pathwayFiles.length; i++) {
 			PathwayReader pathwayReader = new PathwayReader(path + pathwayFiles[i]);
@@ -47,7 +47,7 @@ public class StatisticsTableGeneration {
 					mapStatistics = inaccessibleStep.findInaccessibleSteps();
 				}
 			
-		        String line = pathwayName + ",=" + mapStatistics.get("ResolutionTime") + ",=" + mapStatistics.get("Variables") + ",=" + mapStatistics.get("Constraints") + ",=" + mapStatistics.get("Nodes") + ",=" + mapStatistics.get("Backtracks") + ",=" + mapStatistics.get("Fails") + ",=" + mapStatistics.get("Restarts") + ",=" + mapStatistics.get("Solutions");
+		        String line = pathwayName + ",=" + mapStatistics.get("ResolutionTime") + ",=" + mapStatistics.get("Variables") + ",=" + mapStatistics.get("Constraints") + ",=" + mapStatistics.get("BinaryTrees") + ",=" + mapStatistics.get("Nodes") + ",=" + mapStatistics.get("Backtracks") + ",=" + mapStatistics.get("Fails") + ",=" + mapStatistics.get("Restarts") + ",=" + mapStatistics.get("Solutions");
 		        
 		        recordTable.println(line);
 		        

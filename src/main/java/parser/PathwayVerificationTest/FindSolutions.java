@@ -23,6 +23,7 @@ public class FindSolutions extends SequenceParser{
 	//An element is in deadlock when all its output sequences are false.
 	public Map<String, Double> findDeadLockSolutions(){
 		Map<String, Double> mapStatistics = new HashMap<String, Double>();
+		int binaryTree = 0;
 		for(int i = 0; i < mapElementOutputSequences.values().size(); i++){
 			Model model = new Model("Find DeadLock Solutions: " + i);//Create a model to verify deadlock of a element in the mapElementOutputSequences with ChocoSolver.
 			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapElementOutputSequences.values().toArray()[i]); //Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
@@ -33,25 +34,29 @@ public class FindSolutions extends SequenceParser{
 						model.arithm(sequences.get(k), "=", 0).post();//Post the constraint "the sequence i have to be false" to the model.
 					}
 					Solution solution = model.getSolver().findSolution();
-					Double nbVars = (double) model.getNbVars();
+					double nbVars = (double) model.getNbVars();
 					mapStatistics.put("Variables", mapStatistics.containsKey("Variables")?mapStatistics.get("Variables")+nbVars:nbVars);
-					Double nbCstrs = (double) model.getNbCstrs();
+					double nbCstrs = (double) model.getNbCstrs();
 					mapStatistics.put("Constraints", mapStatistics.containsKey("Constraints")?mapStatistics.get("Constraints")+nbCstrs:nbCstrs);
-					Double timeCount = (double) model.getSolver().getTimeCount();
+					double timeCount = (double) model.getSolver().getTimeCount();
 					mapStatistics.put("ResolutionTime", mapStatistics.containsKey("ResolutionTime")?mapStatistics.get("ResolutionTime")+timeCount:timeCount);
-					Double nodeCount = (double) model.getSolver().getNodeCount();
+					double nodeCount = (double) model.getSolver().getNodeCount();
 					mapStatistics.put("Nodes", mapStatistics.containsKey("Nodes")?mapStatistics.get("Nodes")+nodeCount:nodeCount);
-					Double backTrackCount = (double) model.getSolver().getBackTrackCount();
+					double backTrackCount = (double) model.getSolver().getBackTrackCount();
 					mapStatistics.put("Backtracks", mapStatistics.containsKey("Backtracks")?mapStatistics.get("Backtracks")+backTrackCount:backTrackCount);
-					Double failCount = (double) model.getSolver().getFailCount();
+					double failCount = (double) model.getSolver().getFailCount();
 					mapStatistics.put("Fails", mapStatistics.containsKey("Fails")?mapStatistics.get("Fails")+failCount:failCount);
-					Double restartCount = (double) model.getSolver().getRestartCount();
+					double restartCount = (double) model.getSolver().getRestartCount();
 					mapStatistics.put("Restarts", mapStatistics.containsKey("Restarts")?mapStatistics.get("Restarts")+restartCount:restartCount);
-					Double nbSolutions = (double) model.getSolver().getSolutionCount();
+					double nbSolutions = (double) model.getSolver().getSolutionCount();
 					mapStatistics.put("Solutions", mapStatistics.containsKey("Solutions")?mapStatistics.get("Solutions")+nbSolutions:nbSolutions);
+					if(nodeCount > 0) {
+						binaryTree++;
+					}
 				}
 			}
 		}
+		mapStatistics.put("BinaryTrees", (double) binaryTree);
 		return mapStatistics;
 	}
 	
@@ -61,6 +66,7 @@ public class FindSolutions extends SequenceParser{
 	public Map<String, Double> findNonDeterminismSolutions(){
 		Map<Element, List<Solution>> mapSolutions = new HashMap<Element, List<Solution>>();
 		Map<String, Double> mapStatistics = new HashMap<String, Double>();
+		int binaryTree = 0;
 		for(int k = 0; k < mapElementOutputSequences.values().size(); k++){
 			Model model = new Model("Find Non Determinism Solution: " + k);//Create a model to verify non determinism of a element in the mapElementOutputSequences with ChocoSolver.
 			List<BoolVar> sequences = sequenceListToBoolVarList(model,(List<Sequence>) mapElementOutputSequences.values().toArray()[k]);//Get a list of BoolVar from a list of sequence of the mapElementOutputSequences.
@@ -70,22 +76,29 @@ public class FindSolutions extends SequenceParser{
 					for(int j = i+1; j < sequences.size(); j++) {
 						model.arithm(sequences.get(i), "+", sequences.get(j), "=", 2 ).post(); //Post the constraint "sequence i and sequence j have to be true" to the model.
 						Solution solution = model.getSolver().findSolution();
-						Double nbVars = (double) model.getNbVars();
+						double nbVars = (double) model.getNbVars();
 						mapStatistics.put("Variables", mapStatistics.containsKey("Variables")?mapStatistics.get("Variables")+nbVars:nbVars);
-						Double nbCstrs = (double) model.getNbCstrs();
+						double nbCstrs = (double) model.getNbCstrs();
 						mapStatistics.put("Constraints", mapStatistics.containsKey("Constraints")?mapStatistics.get("Constraints")+nbCstrs:nbCstrs);
-						Double timeCount = (double) model.getSolver().getTimeCount();
+						double timeCount = (double) model.getSolver().getTimeCount();
 						mapStatistics.put("ResolutionTime", mapStatistics.containsKey("ResolutionTime")?mapStatistics.get("ResolutionTime")+timeCount:timeCount);
-						Double nodeCount = (double) model.getSolver().getNodeCount();
+						double nodeCount = (double) model.getSolver().getNodeCount();
 						mapStatistics.put("Nodes", mapStatistics.containsKey("Nodes")?mapStatistics.get("Nodes")+nodeCount:nodeCount);
-						Double backTrackCount = (double) model.getSolver().getBackTrackCount();
+						double backTrackCount = (double) model.getSolver().getBackTrackCount();
 						mapStatistics.put("Backtracks", mapStatistics.containsKey("Backtracks")?mapStatistics.get("Backtracks")+backTrackCount:backTrackCount);
-						Double failCount = (double) model.getSolver().getFailCount();
+						double failCount = (double) model.getSolver().getFailCount();
 						mapStatistics.put("Fails", mapStatistics.containsKey("Fails")?mapStatistics.get("Fails")+failCount:failCount);
-						Double restartCount = (double) model.getSolver().getRestartCount();
+						double restartCount = (double) model.getSolver().getRestartCount();
 						mapStatistics.put("Restarts", mapStatistics.containsKey("Restarts")?mapStatistics.get("Restarts")+restartCount:restartCount);
-						Double nbSolutions = (double) model.getSolver().getSolutionCount();
+						double nbSolutions = (double) model.getSolver().getSolutionCount();
 						mapStatistics.put("Solutions", mapStatistics.containsKey("Solutions")?mapStatistics.get("Solutions")+nbSolutions:nbSolutions);
+						System.out.println(nodeCount);
+						System.out.println(failCount);
+						System.out.println(backTrackCount);
+						System.out.println(mapElementOutputSequences.values().toArray()[k]);
+						if(nodeCount > 0) {
+							binaryTree++;
+						}
 						if(solution != null) {
 							List<Solution> solutions = new ArrayList<Solution>();
 							solutions.add(solution);
@@ -101,6 +114,7 @@ public class FindSolutions extends SequenceParser{
 				}
 			}
 		}
+		mapStatistics.put("BinaryTrees", (double) binaryTree);
 		return mapStatistics;
 	}
 	
