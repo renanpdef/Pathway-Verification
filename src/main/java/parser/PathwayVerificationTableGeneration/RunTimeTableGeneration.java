@@ -17,18 +17,19 @@ public class RunTimeTableGeneration {
 	String[] pathwayFiles =  file.list();
 	
 	//Method to create a table in a file txt with lots of information about the pathways
-	public void createTable() throws IOException {
-		FileWriter table = new FileWriter("pathwaysRunTimeTable.txt");
+	public void createTable(String function) throws IOException {
+		FileWriter table = new FileWriter(function + "PathwaysRunTimeTable.txt");
 		PrintWriter recordTable = new PrintWriter(table);
-		String header = "Pathways, Time (ns)";
+		String header = "Pathways, Time (ms)";
 		recordTable.println(header);
 		for (int i = 0; i < pathwayFiles.length; i++) {
-			if(i != 35) {
+			if(i != 28) {
 				String pathwayName = pathwayFiles[i].replaceAll(".xmi", "");
+				pathwayName = pathwayName.replaceAll(" - ", "_");
 				
-				long executionTime = runTimeMedia(i);
+				long executionTime = runTimeMedia(i, function);
 				
-		        String line = pathwayName + ",=" + executionTime;
+		        String line = pathwayName + ",=" + executionTime/1000000.0;
 		        
 		        recordTable.println(line);
 		        
@@ -38,10 +39,10 @@ public class RunTimeTableGeneration {
 		recordTable.close();
 	}
 	
-	private long runTimeMedia(int pathwayNumber) {
+	private long runTimeMedia(int pathwayNumber, String function) {
 		List<Long> runTimes = new ArrayList<Long>();
 		for(int i = 0; i < 12; i++) {
-			long executionTime = runTimeCalculate(pathwayNumber);
+			long executionTime = runTimeCalculate(pathwayNumber, function);
 			runTimes.add(executionTime);
 		}
 		runTimes.sort(null);
@@ -53,16 +54,21 @@ public class RunTimeTableGeneration {
 	}
 	
 	//Method to create a table in a file txt with lots of information about the pathways
-	private long runTimeCalculate(int pathwayNumber) {
+	private long runTimeCalculate(int pathwayNumber, String function) {
 		PathwayReader pathwayReader = new PathwayReader(path + pathwayFiles[pathwayNumber]);
         Pathway pathway = pathwayReader.createPathway();
         Information info = new Information(pathway);
         
 		long beginTime = System.nanoTime();
-		info.getDeadlockNumber();
-		info.getNonDeterminismNumber();
-		info.getInaccessibleStepNumber();
-        info.getEquivalentTransitionsNumber();
+		if(function.equalsIgnoreCase("dl")) {
+			info.getDeadlockNumber();
+		}else if(function.equalsIgnoreCase("nd")) {
+			info.getNonDeterminismNumber();
+		}else if(function.equalsIgnoreCase("is")) {
+			info.getInaccessibleStepNumber();
+		}else {
+			info.getEquivalentTransitionsNumber();
+		}
         long executionTime = System.nanoTime() - beginTime;
         return executionTime;
 	}

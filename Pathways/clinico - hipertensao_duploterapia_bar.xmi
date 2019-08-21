@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[Hipertens&#xe3;o] Duploterapia BAR" code="">
+  <element xsi:type="pathwayMetamodel:Prescription" id="5871" type="Receita" type_verbose="Receita" url="" name="Prescrever Medica&#xe7;&#xe3;o" description="&lt;p>Prescrever Losartana 50mg 2x/dia Clortalidona 12,5mg/dia&lt;/p>" isInitial="true" outputSequences="//@sequence.0">
+    <item id="13308" url="" name="LOSARTANA POTASSICA" med_code="1462504790" presentation="COMP" access="1" quantity="1" period="15" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="13309" url="" name="CLORTALIDONA" med_code="1854816327" presentation="COMP" access="1" quantity="1" period="15" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="5872" type="Pausa" type_verbose="Pausa" url="" name="Retorno Quinzenal" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Pause o Protocolo para&amp;nbsp;aguardar&amp;nbsp;o&amp;nbsp;Retorno do Paciente&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.8" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5873" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar Press&#xe3;o (1)" description="Verificar se paciente atingiu meta press&#xf3;rica" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Atingiu meta press&#xf3;rica?" url="" id="2543">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="4387" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="5874" type="Pausa" type_verbose="Pausa" url="" name="Retorno Semestral" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Pause o Protocolo para&amp;nbsp;aguardar&amp;nbsp;o&amp;nbsp;Retorno do Paciente&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.9" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5875" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar Press&#xe3;o (2)" description="Verificir se paciente manteve a meta press&#xf3;rica" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Manteve a meta press&#xf3;rica?" url="" id="2544">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="4388" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5876" type="Receita" type_verbose="Receita" url="" name="Prescrever &#xda;ltimo Medicamento" description="Prescrever Losartan 50mg 2x/dia + Clortalidona 12,5mg/d" inputSequences="//@sequence.5" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="5877" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Encaminhamento] Triploterapia BAR" description="" isTerminal="true" inputSequences="//@sequence.3 //@sequence.6">
+    <pathways>VB_BAR_TRIPLO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5878" type="Processo" type_verbose="Processo" url="" name="Agendar Retorno Quinzenal" description="&lt;p>Agendar consulta de retorno do Paciente em &lt;strong>15 dias&lt;/strong>.&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.8">
+    <action id="341" process_id="5878" service="aprazamento" description="Consulta de Retorno"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5879" type="Processo" type_verbose="Processo" url="" name="Agendar Retorno Semestral" description="&lt;p>Agendar consulta de retorno para &lt;strong>6 meses&lt;/strong>&lt;/p>" inputSequences="//@sequence.2 //@sequence.7" outputSequences="//@sequence.9">
+    <action id="342" process_id="5879" service="aprazamento" description="Consulta de Retorno"/>
+  </element>
+  <sequence inputStep="//@element.7" outputStep="//@element.0" id="5880" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="5901" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description=""/>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="5902" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (atingiu meta pressorica)" description="">
+    <operation name="atingiu meta pressorica" Operator="affirmation" id="4389">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="4387" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="5903" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (n&#xe3;o atingiu meta pressorica)" description="">
+    <operation name="n&#xe3;o atingiu meta pressorica" id="4390">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="4387" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="5904" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="5905" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (manteve meta pressorica)" description="">
+    <operation name="manteve meta pressorica" Operator="affirmation" id="4391">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="4388" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="5906" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (n&#xe3;o manteve meta pressorica)" description="">
+    <operation name="n&#xe3;o manteve meta pressorica" id="4392">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="4388" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.5" id="5907" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description=""/>
+  <sequence inputStep="//@element.1" outputStep="//@element.7" id="5908" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="-"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.8" id="5909" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="4387" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="4388" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

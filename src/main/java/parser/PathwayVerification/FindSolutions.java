@@ -32,6 +32,7 @@ public class FindSolutions extends SequenceParser{
 					for(int k = 0; k < sequences.size(); k++) {
 						model.arithm(sequences.get(k), "=", 0).post();//Post the constraint "the sequence i have to be false" to the model.
 					}
+//					System.out.println("Solucao " + i);
 					Solution solution = model.getSolver().findSolution();
 					if(solution != null) {
 						List<Solution> solutions = new ArrayList<Solution>();

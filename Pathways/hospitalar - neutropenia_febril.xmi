@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Neutropenia Febril" code="">
+  <element xsi:type="pathwayMetamodel:Treatment" id="26249" type="Tratamento" type_verbose="Tratamento" url="" name="Exames (Neutropenia Febril)" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;span style=&quot;color:#ffffff&quot;>&lt;strong>&lt;u>&lt;span style=&quot;background-color:#e74c3c&quot;>Encaminhar ao chefe de equipe. &lt;/span>&lt;/u>&lt;/strong>&lt;/span>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>&lt;strong>PROCURAR POSSIVEL FOCO DE INFEC&amp;Ccedil;&amp;Atilde;O: PELE, ABDOME E PER&amp;Iacute;NEO (N&amp;Atilde;O REALIZAR TOQUE RETAL), PICS, ACESSOS CENTRAIS, MUCOSITES, GASTROENTERITES AGUDAS, INFEC&amp;Ccedil;&amp;Otilde;ES DO TRATO RESPIRAT&amp;Oacute;RIO SUPERIOR E INFERIOR.&lt;/strong>&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;color:#3498db&quot;>Aviso: Solicitar hemocultura, cultura de outros s&amp;iacute;tios,&amp;nbsp;exames de imagem e pun&amp;ccedil;&amp;atilde;o (via conduta complementar) de acordo com sinais e sintomatologia. &lt;u>Hemocultura deve ser solicitada o quanto antes dentro do internamento hospitalar.&lt;/u>&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.10" outputSequences="//@sequence.0">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Neutropenia Febril" clinical_indication="Protocolo de Neutropenia Febril"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Neutropenia Febril" clinical_indication="Protocolo de Neutropenia Febril"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Neutropenia Febril" clinical_indication="Protocolo de Neutropenia Febril"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Neutropenia Febril" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com quadro de neutropenia febril" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA VENOSA" exam_id="28011759" limb_side="" quantity="1" reason="Paciente com quadro de neutropenia febril" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="26250" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="MASCC SCORE" description="C&#xe1;lculo do MASCC Score" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.6">
+    <questions text="Sintomas Leves ou Ausentes?" url="" id="12775">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_leves_neutropenia" id="25679" weight="5" value="true"/>
+    </questions>
+    <questions text="PaS > 100mmhg?" url="" id="12776">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_pas_neutropenia" id="25680" weight="5" value="true"/>
+    </questions>
+    <questions text="Aus&#xea;ncia de Doen&#xe7;a Pulmonar Obstrutiva Cr&#xf4;nica?" url="" id="12777">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_doenca_pulmonar_neutropenia" id="25681" weight="4" value="true"/>
+    </questions>
+    <questions text="Tumores s&#xf3;lidos ou neoplasia hematol&#xf3;gica sem infec&#xe7;&#xe3;o f&#xfa;ngica pr&#xe9;via?" url="" id="12778">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_tumores_solidos_neoplasia_neutropenia" id="25682" weight="4" value="true"/>
+    </questions>
+    <questions text="Aus&#xea;ncia de desidrata&#xe7;&#xe3;o com necessidade de reposi&#xe7;&#xe3;o parenteral?" url="" id="12779">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_desidratacao_neutropenia" id="25683" weight="3" value="true"/>
+    </questions>
+    <questions text="Sintomas moderados?" url="" id="12780">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_moderados_neutropenia" id="25684" weight="3" value="true"/>
+    </questions>
+    <questions text="Status ambulatorial?" url="" id="12781">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_status_ambulatorial_neutropenia" id="25685" weight="3" value="true"/>
+    </questions>
+    <questions text="Idade &lt; 60 anos?" url="" id="12782">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_idade_menor_60_neutropenia" id="25686" weight="2" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="26251" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Sintomas Adicionais" description="Avaliar presen&#xe7;a de sintomas espec&#xed;ficos adicionais para definir tratamento apropriado" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3 //@sequence.4 //@sequence.5">
+    <questions text="Paciente apresenta Diarr&#xe9;ia, Mucosite, Dor abdominal ou Sangramento retal?" url="" id="12783">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente apresenta hipotens&#xe3;o, infec&#xe7;&#xe3;o de cateteres, infec&#xe7;&#xe3;o de pele ou partes moles ou est&#xe1; em uso de profilaxia com quinolona para neutropenia febril?" url="" id="12784">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="26257" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Neutrofilos" description="Avaliar quantidade de neutrofilos" inputSequences="//@sequence.6" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Neutrofilos &lt; 100 ou quimioterapia recente?" url="" id="12785">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_menor_que_100" id="25689" weight="1" value="false"/>
+    </questions>
+    <questions text="Sintomas Neurol&#xf3;gicos (Desorienta&#xe7;&#xe3;o, convuls&#xe3;o, rigidez de nuca, rebaixamento do sens&#xf3;rio)" url="" id="12786">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_sintomas_neuro" id="25690" weight="1" value="false"/>
+    </questions>
+    <questions text="Infiltrado pulmonar novo" url="" id="12787">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infiltrado_novo" id="25691" weight="1" value="false"/>
+    </questions>
+    <questions text="Hipoxemia" url="" id="12788">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_hipoxemia" id="25692" weight="1" value="false"/>
+    </questions>
+    <questions text="Mucosite" url="" id="12789">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_mucosite" id="25693" weight="1" value="false"/>
+    </questions>
+    <questions text="Infec&#xe7;&#xe3;o de cateter" url="" id="12790">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infeccao_cateter" id="25694" weight="1" value="false"/>
+    </questions>
+    <questions text="Insuficiencia hep&#xe1;tica" url="" id="12791">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_hepactica" id="25695" weight="1" value="false"/>
+    </questions>
+    <questions text="Insuficiencia renal" url="" id="12792">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_renal" id="25696" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="26258" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Informa&#xe7;&#xe3;o de Interna&#xe7;&#xe3;o" description="Informa&#xe7;&#xe3;o de considera&#xe7;&#xe3;o para internar e enviar ao l&#xed;der local" isTerminal="true" inputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="26259" type="Receita" type_verbose="Receita" url="" name="Receita" description="Recomenda-se agendar consulta no eletivo para reavaliar o caso. &#xA;Aten&#xe7;&#xe3;o! Caso n&#xe3;o apresente melhora dos sintomas por mais de 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es, retornar imediatamente a emerg&#xea;ncia." isTerminal="true" inputSequences="//@sequence.8">
+    <item id="8299" url="" name="Amoxicilina + Clavulanato 500mg + 125mg .... 30 comprimidos" med_code="-1" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="8300" url="" name="Clindamicina 300mg .... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="2" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="26274" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quick SOFA" description="" isInitial="true" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Quick SOFA" url="" id="12793">
+      <answers xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="25713" weight="1" value="0.0">
+        <option description="FR > 22" weight="1"/>
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="PAS &lt; 90" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="26275" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo SEPSE" description="Encaminhar ao Eixo Vermelho." isTerminal="true" inputSequences="//@sequence.9">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="26279" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Recomenda&#xe7;&#xe3;o de Tratamento II] Com diarr&#xe9;ia, mucosite..." description="&lt;p>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;u>&lt;span style=&quot;background-color:#e74c3c&quot;>&amp;nbsp;Encaminhar paciente &amp;agrave; chefia de equipe.&lt;/span>&lt;/u>&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>Tratamento recomendado para pacientes com MASCC &amp;gt; 21, visa sempre uma cobertura anti-pseudomonas. Recomenda-se:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>CEFEPIME 2G IV de 8/8h (evitar em pacientes necropatas e neuropatas) ou PIPERACILINA + TAZOBACTAN 4,5G IV de 6/6h;&lt;/li>&#xA;&#x9;&lt;li>METRONIDAZOL 500mg EV de 8/8h;&lt;/li>&#xA;&#x9;&lt;li>Considerar o uso de FILGASTRIM (Granulokine).&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Information" id="26280" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Recomenda&#xe7;&#xe3;o de Tratamento III] Hipotens&#xe3;o, infec&#xe7;&#xe3;o..." description="&lt;p>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;u>&lt;span style=&quot;background-color:#e74c3c&quot;>&amp;nbsp;Encaminhar paciente &amp;agrave; chefia de equipe.&lt;/span>&lt;/u>&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>Tratamento recomendado para pacientes com MASCC &amp;gt; 21, visa sempre uma cobertura anti-pseudomonas. Recomenda-se:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>CEFEPIME 2G IV de 8/8h (evitar em pacientes necropatas e neuropatas) ou PIPERACILINA + TAZOBACTAN 4,5G IV de 6/6h;&lt;/li>&#xA;&#x9;&lt;li>METRONIDAZOL 500mg EV de 8/8h;&lt;/li>&#xA;&#x9;&lt;li>VANCOMICINA 1G EV de 12/12h;&lt;/li>&#xA;&#x9;&lt;li>Considerar o uso de FILGASTRIM (Granulokine)&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Information" id="26281" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Recomenda&#xe7;&#xe3;o de Tratamento I] Sem Sintomas Adicionais" description="&lt;p>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;u>&lt;span style=&quot;background-color:#e74c3c&quot;>&amp;nbsp;Encaminhar paciente &amp;agrave; chefia de equipe.&lt;/span>&lt;/u>&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>Tratamento recomendado para pacientes com MASCC &amp;gt; 21, visa sempre uma cobertura anti-pseudomonas. Recomenda-se:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>CEFEPIME 2G IV de 8/8h (evitar em pacientes necropatas e neuropatas) ou PIPERACILINA + TAZOBACTAN 4,5G IV de 6/6h;&lt;/li>&#xA;&#x9;&lt;li>Considerar o uso de FILGASTRIM (Granulokine).&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:Information" id="26282" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Recomenda&#xe7;&#xe3;o de Tratamento IV] Todos os sintomas." description="&lt;p>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;u>&lt;span style=&quot;background-color:#e74c3c&quot;>&amp;nbsp;Encaminhar paciente &amp;agrave; chefia de equipe.&lt;/span>&lt;/u>&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>Tratamento recomendado para pacientes com MASCC &amp;gt; 21, visa sempre uma cobertura anti-pseudomonas. Recomenda-se:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>CEFEPIME 2G IV de 8/8h (evitar em pacientes necropatas e neuropatas) ou PIPERACILINA + TAZOBACTAN 4,5G IV de 6/6h;&lt;/li>&#xA;&#x9;&lt;li>METRONIDAZOL 500mg EV de 8/8h;&lt;/li>&#xA;&#x9;&lt;li>VANCOMICINA 1G EV de 12/12h;&lt;/li>&#xA;&#x9;&lt;li>Considerar o uso de FILGASTRIM (Granulokine)&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.5"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="26261" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="26262" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (MASC &lt; 21)" description="">
+    <operation name="MASCC &lt; 21" Operator="lessThan" id="25704">
+      <operand xsi:type="pathwayMetamodel:Operation" name="MASCC SCORE" Operator="addition" id="25699">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_leves_neutropenia" id="25679" weight="5" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_pas_neutropenia" id="25680" weight="5" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_doenca_pulmonar_neutropenia" id="25681" weight="4" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_tumores_solidos_neoplasia_neutropenia" id="25682" weight="4" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_desidratacao_neutropenia" id="25683" weight="3" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_moderados_neutropenia" id="25684" weight="3" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_status_ambulatorial_neutropenia" id="25685" weight="3" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_idade_menor_60_neutropenia" id="25686" weight="2" value="true"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="21" id="25697" weight="1" value="21.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.2" id="26263" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (sem sintomas adicionais)" description="">
+    <operation name="Sem sintomas adicionais" id="25705">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sintoma I OR Sintoma II" Operator="or" id="25701">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="26264" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (diarreia sem hipotens&#xe3;o)" description="">
+    <operation name="Diarreia sem hipotensao" Operator="and" id="25706">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="N&#xc3;O (Sintomas I &amp; Sintomas II)" id="25702">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Sintoma I AND Sintona II" Operator="and" id="25700">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.2" id="26265" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (hipotens&#xe3;o sem diarreia)" description="">
+    <operation name="Hipotensao sem diarreia" Operator="and" id="25707">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="N&#xc3;O (Sintomas I &amp; Sintomas II)" id="25702">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Sintoma I AND Sintona II" Operator="and" id="25700">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.2" id="26266" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (todos os sintomas)" description="">
+    <operation name="Ambos os sintomas" Operator="affirmation" id="25708">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sintoma I AND Sintona II" Operator="and" id="25700">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="26267" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (MASCC >= 21)" description="">
+    <operation name="MASCC >= 21" Operator="greaterOrEqual" id="25709">
+      <operand xsi:type="pathwayMetamodel:Operation" name="MASCC SCORE" Operator="addition" id="25699">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_leves_neutropenia" id="25679" weight="5" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_pas_neutropenia" id="25680" weight="5" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_doenca_pulmonar_neutropenia" id="25681" weight="4" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_tumores_solidos_neoplasia_neutropenia" id="25682" weight="4" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_desidratacao_neutropenia" id="25683" weight="3" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_moderados_neutropenia" id="25684" weight="3" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_status_ambulatorial_neutropenia" id="25685" weight="3" value="true"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_idade_menor_60_neutropenia" id="25686" weight="2" value="true"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="21" id="25697" weight="1" value="21.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="26268" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (neutrofilos &lt; 100 ou quimio recente)" description="">
+    <operation name="neutro-com-fatores-agravantes" Operator="greaterOrEqual" id="25710">
+      <operand xsi:type="pathwayMetamodel:Operation" name="neutro-soma-fatores-agravantes" Operator="addition" id="25703">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_menor_que_100" id="25689" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_sintomas_neuro" id="25690" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infiltrado_novo" id="25691" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_hipoxemia" id="25692" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_mucosite" id="25693" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infeccao_cateter" id="25694" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_hepactica" id="25695" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_renal" id="25696" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="25698" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="26269" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (neutrofilos > 100 sem quimio recente)" description="">
+    <operation name="neutro-sem-fatores-agravantes" Operator="lessThan" id="25712">
+      <operand xsi:type="pathwayMetamodel:Operation" name="neutro-soma-fatores-agravantes" Operator="addition" id="25703">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_menor_que_100" id="25689" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_sintomas_neuro" id="25690" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infiltrado_novo" id="25691" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_hipoxemia" id="25692" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_mucosite" id="25693" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infeccao_cateter" id="25694" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_hepactica" id="25695" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_renal" id="25696" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="25698" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="26276" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (Quick SOFA >= 1)" description="Quick SOFA >= 1">
+    <operation name="Quick SOFA >= 1" Operator="greaterOrEqual" id="25714">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="25713" weight="1" value="0.0">
+        <option description="FR > 22" weight="1"/>
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="PAS &lt; 90" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="25698" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.6" id="26277" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (Quick SOFA &lt; 1)" description="Quick SOFA &lt; 1">
+    <operation name="Quick SOFA &lt; 1" Operator="lessThan" id="25715">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="25713" weight="1" value="0.0">
+        <option description="FR > 22" weight="1"/>
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="PAS &lt; 90" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="25698" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <operation name="MASCC SCORE" Operator="addition" id="25699">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_leves_neutropenia" id="25679" weight="5" value="true"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_pas_neutropenia" id="25680" weight="5" value="true"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_doenca_pulmonar_neutropenia" id="25681" weight="4" value="true"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_tumores_solidos_neoplasia_neutropenia" id="25682" weight="4" value="true"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_desidratacao_neutropenia" id="25683" weight="3" value="true"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_moderados_neutropenia" id="25684" weight="3" value="true"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_status_ambulatorial_neutropenia" id="25685" weight="3" value="true"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_idade_menor_60_neutropenia" id="25686" weight="2" value="true"/>
+  </operation>
+  <operation name="Sintoma I AND Sintona II" Operator="and" id="25700">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+  </operation>
+  <operation name="Sintoma I OR Sintoma II" Operator="or" id="25701">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+  </operation>
+  <operation name="N&#xc3;O (Sintomas I &amp; Sintomas II)" id="25702">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Sintoma I AND Sintona II" Operator="and" id="25700">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+    </operand>
+  </operation>
+  <operation name="neutro-soma-fatores-agravantes" Operator="addition" id="25703">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_menor_que_100" id="25689" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_sintomas_neuro" id="25690" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infiltrado_novo" id="25691" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_hipoxemia" id="25692" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_mucosite" id="25693" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infeccao_cateter" id="25694" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_hepactica" id="25695" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_renal" id="25696" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_leves_neutropenia" id="25679" weight="5" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_pas_neutropenia" id="25680" weight="5" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_doenca_pulmonar_neutropenia" id="25681" weight="4" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_tumores_solidos_neoplasia_neutropenia" id="25682" weight="4" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_desidratacao_neutropenia" id="25683" weight="3" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_moderados_neutropenia" id="25684" weight="3" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_status_ambulatorial_neutropenia" id="25685" weight="3" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_idade_menor_60_neutropenia" id="25686" weight="2" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="25687" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="25688" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_menor_que_100" id="25689" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_sintomas_neuro" id="25690" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infiltrado_novo" id="25691" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_hipoxemia" id="25692" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_mucosite" id="25693" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_infeccao_cateter" id="25694" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_hepactica" id="25695" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neutrofilos_insuficiencia_renal" id="25696" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="21" id="25697" weight="1" value="21.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="25698" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="25713" weight="1" value="0.0">
+    <option description="FR > 22" weight="1"/>
+    <option description="Confus&#xe3;o Mental" weight="1"/>
+    <option description="PAS &lt; 90" weight="1"/>
+  </variable>
+</pathwayMetamodel:Pathway>

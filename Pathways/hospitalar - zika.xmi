@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="ZIKA" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32140" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Paciente gestante?" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.4">
+    <questions text="Paciente gestante?" url="" id="15341">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_gestante" id="31056" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32221" type="Tratamento" type_verbose="Tratamento" url="" name="[Gestante] Conduta" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3">
+    <medication url="" med_id="108545" id="17297" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="750" cycles="1" treatement_time="17297" frequency="6" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32222" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Complica&#xe7;&#xf5;es Neurol&#xf3;gicas" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Paciente com complica&#xe7;&#xf5;es neurol&#xf3;gicas?" url="" id="15342">
+      <answers xsi:type="pathwayMetamodel:Choice" name="complicacoes_neurologicas" id="31057" weight="1" value="0.0">
+        <option description="Encefalite" weight="1"/>
+        <option description="Meningoencefalite" weight="1"/>
+        <option description="Meningite (n&#xe3;o bacteriana)" weight="1"/>
+        <option description="Aus&#xea;ncia de etiologia definida" weight="1"/>
+        <option description="ADEM (encefalomielite disseminada aguda)" weight="1"/>
+        <option description="S&#xed;ndrome de Guillain-Barr&#xe9;" weight="1"/>
+        <option description="S&#xed;ndrome de Miller-Fisher" weight="1"/>
+        <option description="Paralisias fl&#xe1;cidas agudas" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="32223" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Passar caso com l&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Passar caso para l&amp;iacute;der local.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32224" type="Receita" type_verbose="Receita" url="" name="Receita" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Paciente est&amp;aacute;vel clinicamente, sem comorbidade de base descompensada, sinais vitais est&amp;aacute;veis&lt;/strong>&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>N&amp;atilde;o h&amp;aacute; indica&amp;ccedil;&amp;atilde;o de coleta de exames laboratoriais e nem retorno agendado&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Hidrata&amp;ccedil;&amp;atilde;o via oral 60 ml/kg/dia com 1/3 desse valor de SORO DE REIDRATA&amp;Ccedil;&amp;Atilde;O ORAL (fazer pequenas doses em pacientes cardiopatas pelo risco de congest&amp;atilde;o)&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Tratamento sintom&amp;aacute;tico: dipirona 500mg, 01 comprimido, via oral de 6/6h se dor ou febre // ou Paracetamol 500mg, 01 comprimido, via oral de 6/6h se dor ou febre&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>N&amp;atilde;o fazer uso de aspirina ou AINEs&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Repouso&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Retornar apenas se aparecimento de algum sinal de alarme&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.5">
+    <item id="11310" url="" name="DIPIRONA 500MG _______ 1 CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se dor ou febre."/>
+    <item id="11311" url="" name="PARACETAMOL 500 MG _______ 1 CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se dor ou febre."/>
+    <item id="11312" url="" name="LORATADINA _______ 1 CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Se coceira."/>
+    <item id="11313" url="" name="EBASTINA 10 MG _______ 1 CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Se coceira."/>
+    <item id="11314" url="" name="DEXCLORFENIRAMINA 2 MG _______ 1 CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se coceira."/>
+    <item id="11315" url="" name="LEVOCETIRIZINA  _______ 1 CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Se coceira."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32225" type="Receita" type_verbose="Receita" url="" name="Receita gestante" description="&lt;ul>&#xA;&#x9;&lt;li>Encaminhar paciente para M&amp;eacute;dico Obstetra.&amp;nbsp;&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.3">
+    <item id="11316" url="" name="LORATADINA ________ 1 CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Se coceira"/>
+    <item id="11317" url="" name="PARACETAMOL 500 MG __________ 1 CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32226" type="Tratamento" type_verbose="Tratamento" url="" name="[N&#xe3;o gestante] Conduta" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.5">
+    <medication url="" med_id="108545" id="17298" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="750" cycles="1" treatement_time="17298" frequency="6" standard="null"/>
+    <medication url="" med_id="38008" id="17299" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="17299" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:8134,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="38008" id="17300" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="5" daily_dosage="1" cycles="1" treatement_time="17300" standard="null"/>
+    <medication url="" med_id="43800" id="17361" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17361" standard="null"/>
+  </element>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="32227" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (com complica&#xe7;&#xf5;es neurol&#xf3;gicas)" description="com complica&#xe7;&#xf5;es neurol&#xf3;gicas">
+    <operation name="com complica&#xe7;&#xf5;es neurol&#xf3;gicas" Operator="greaterOrEqual" id="31059">
+      <operand xsi:type="pathwayMetamodel:Choice" name="complicacoes_neurologicas" id="31057" weight="1" value="0.0">
+        <option description="Encefalite" weight="1"/>
+        <option description="Meningoencefalite" weight="1"/>
+        <option description="Meningite (n&#xe3;o bacteriana)" weight="1"/>
+        <option description="Aus&#xea;ncia de etiologia definida" weight="1"/>
+        <option description="ADEM (encefalomielite disseminada aguda)" weight="1"/>
+        <option description="S&#xed;ndrome de Guillain-Barr&#xe9;" weight="1"/>
+        <option description="S&#xed;ndrome de Miller-Fisher" weight="1"/>
+        <option description="Paralisias fl&#xe1;cidas agudas" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31058" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.2" id="32228" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem complica&#xe7;&#xf5;es neurol&#xf3;gicas)" description="sem complica&#xe7;&#xf5;es neurol&#xf3;gicas">
+    <operation name="sem complica&#xe7;&#xf5;es neurol&#xf3;gicas" Operator="lessThan" id="31060">
+      <operand xsi:type="pathwayMetamodel:Choice" name="complicacoes_neurologicas" id="31057" weight="1" value="0.0">
+        <option description="Encefalite" weight="1"/>
+        <option description="Meningoencefalite" weight="1"/>
+        <option description="Meningite (n&#xe3;o bacteriana)" weight="1"/>
+        <option description="Aus&#xea;ncia de etiologia definida" weight="1"/>
+        <option description="ADEM (encefalomielite disseminada aguda)" weight="1"/>
+        <option description="S&#xed;ndrome de Guillain-Barr&#xe9;" weight="1"/>
+        <option description="S&#xed;ndrome de Miller-Fisher" weight="1"/>
+        <option description="Paralisias fl&#xe1;cidas agudas" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31058" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="32229" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (gestante)" description="gestante">
+    <operation name="gestante" Operator="affirmation" id="31121">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_gestante" id="31056" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="32230" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="32231" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (n&#xe3;o gestante)" description="n&#xe3;o gestante">
+    <operation name="n&#xe3;o gestante" id="31122">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_gestante" id="31056" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.6" id="32232" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_gestante" id="31056" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="complicacoes_neurologicas" id="31057" weight="1" value="0.0">
+    <option description="Encefalite" weight="1"/>
+    <option description="Meningoencefalite" weight="1"/>
+    <option description="Meningite (n&#xe3;o bacteriana)" weight="1"/>
+    <option description="Aus&#xea;ncia de etiologia definida" weight="1"/>
+    <option description="ADEM (encefalomielite disseminada aguda)" weight="1"/>
+    <option description="S&#xed;ndrome de Guillain-Barr&#xe9;" weight="1"/>
+    <option description="S&#xed;ndrome de Miller-Fisher" weight="1"/>
+    <option description="Paralisias fl&#xe1;cidas agudas" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="31058" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

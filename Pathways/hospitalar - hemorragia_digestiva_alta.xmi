@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Hemorragia Digestiva Alta" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35161" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Marcador de Risco" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Calcular Glasgow-Blatchford Score:&lt;/span>&lt;/p>" inputSequences="//@sequence.1" outputSequences="//@sequence.0 //@sequence.2">
+    <questions text="Ureia" url="" id="16421">
+      <answers xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+        <option description="&lt;6,5"/>
+        <option description="6,5 - 8,0" weight="2"/>
+        <option description="8,0 - 10,0" weight="3"/>
+        <option description="10,0 - 25,0" weight="4"/>
+        <option description=">25,0" weight="6"/>
+      </answers>
+    </questions>
+    <questions text="Hemoglobina (homem)" url="" id="16422">
+      <answers xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_homem" id="33542" weight="1" value="0.0">
+        <option description=">12,9"/>
+        <option description="12,0 - 12,9" weight="1"/>
+        <option description="10,0 - 11,9" weight="3"/>
+        <option description="&lt;10,0" weight="6"/>
+      </answers>
+    </questions>
+    <questions text="Hemoglobina (mulher)" url="" id="16423">
+      <answers xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_mulher" id="33543" weight="1" value="0.0">
+        <option description=">11,9"/>
+        <option description="10,0 - 11,9" weight="1"/>
+        <option description="&lt;10,0" weight="6"/>
+      </answers>
+    </questions>
+    <questions text="Press&#xe3;o Arterial Sist&#xf3;lica" url="" id="16424">
+      <answers xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+        <option description=">109"/>
+        <option description="100 - 109" weight="1"/>
+        <option description="90 - 99" weight="2"/>
+        <option description="&lt; 90" weight="3"/>
+      </answers>
+    </questions>
+    <questions text="Pulso" url="" id="16425">
+      <answers xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+        <option description="&lt;100 por minuto"/>
+        <option description=">= 100 por minuto" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="Apresenta melena" url="" id="16426">
+      <answers xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="S&#xed;ncope" url="" id="16427">
+      <answers xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </answers>
+    </questions>
+    <questions text="Doen&#xe7;a Hep&#xe1;tica" url="" id="16428">
+      <answers xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </answers>
+    </questions>
+    <questions text="Insufici&#xea;ncia Card&#xed;aca" url="" id="16429">
+      <answers xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35162" type="Receita" type_verbose="Receita" url="" name="[Glasgow-Blatchford = 0] Receita" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;color:#ffffff&quot;>&lt;strong>&lt;span style=&quot;background-color:#e74c3c&quot;>&amp;nbsp;Encaminhamento ao gastroenterologista.&amp;nbsp; &lt;/span>&lt;br />&#xA;&lt;span style=&quot;background-color:#e74c3c&quot;>Solicita&amp;ccedil;&amp;atilde;o de EDA eletiva.&lt;/span>&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;color:null&quot;>&lt;u>Orientar o paciente a retornar imediaramente ao hospital a quaquer sinal de sangramento. &lt;/u>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.0">
+    <item id="12781" url="" name="OMEPRAZOL 20MG COMP 1 UD" med_code="142672" presentation="COMP" access="1" quantity="2" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar em jejum."/>
+    <item id="12782" url="" name="Domperidona 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="12783" url="" name="ANTAK 150MG COMP 1 UD" med_code="39152" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="12784" url="" name="BROMOPRIDA 10MG" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas e v&#xf4;mitos."/>
+    <item id="12785" url="" name="BUSCOPAN COMPOSTO COMP 1 UD" med_code="36080" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35163" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Glasgow-Blatchford >= 1] Passar com chefia local" description="&lt;p>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>&amp;nbsp;Discutir caso com l&amp;iacute;der de equipe (estabiliza&amp;ccedil;&amp;atilde;o hemodin&amp;acirc;mica). &lt;/span>&lt;br />&#xA;&lt;span style=&quot;background-color:#e74c3c&quot;>Encaminhar para servi&amp;ccedil;o de endoscopia.&lt;/span>&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35164" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Estado do Paciente" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Avaliar a estabilidade hemodin&amp;acirc;mica do paciente e estimar a perda vol&amp;ecirc;mica:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Paciente sem &lt;strong>hipotens&amp;atilde;o&lt;/strong> ou &lt;strong>taquicardia&lt;/strong> (perda vol&amp;ecirc;mica &amp;lt; 15 %);&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Paciente com &lt;strong>hipotens&amp;atilde;o postural&lt;/strong> ou &lt;strong>taquicardia &lt;/strong>em repouso (perda vol&amp;ecirc;mica entre 15 e 30 %);&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>&lt;u>Choque hipovol&amp;ecirc;mico&lt;/u>&lt;/strong>: &lt;span style=&quot;color:#2980b9&quot;>Hipotens&amp;atilde;o (PAS &amp;lt; 90 mmHg)&lt;/span> + Rebaixamento do N&amp;iacute;vel de Consci&amp;ecirc;ncia + Extremidades Frias (perda vol&amp;ecirc;mica estimada &amp;gt; 40 %).&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;u>&lt;strong>Presen&amp;ccedil;a de dor abdomina&lt;/strong>&lt;/u>&lt;strong>l&lt;/strong>: &lt;span style=&quot;color:#2980b9&quot;>Dor abdominal grave&lt;/span> com sinais de defesa deve levantar a suspeita de &lt;span style=&quot;color:#2980b9&quot;>perfura&amp;ccedil;&amp;atilde;o&lt;/span>, que deve ser exclu&amp;iacute;da antes da realiza&amp;ccedil;&amp;atilde;o de endoscopia digestiva alta.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Presen&amp;ccedil;a de confus&amp;atilde;o mental ou &lt;span style=&quot;color:#2980b9&quot;>rebaixamento sensorial&lt;/span>.&lt;/span>&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Presen&amp;ccedil;a de &lt;span style=&quot;color:#2980b9&quot;>taquidispneia&lt;/span>.&lt;/span>&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;u>&lt;strong>Presen&amp;ccedil;a de taquicardia com ou sem &lt;span style=&quot;color:#2980b9&quot;>hipotens&amp;atilde;o&lt;/span>&lt;/strong>&lt;/u>.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Todos os crit&amp;eacute;rios acima sugerem instabilidade.&lt;/span>&lt;/span>&lt;/span>&lt;/strong>&lt;/p>" isInitial="true" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Estado do paciente" url="" id="16430">
+      <answers xsi:type="pathwayMetamodel:Choice" name="estado_paciente" id="33550" weight="1" value="0.0">
+        <option description="Est&#xe1;vel"/>
+        <option description="Inst&#xe1;vel" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35165" type="Tratamento" type_verbose="Tratamento" url="" name="[Paciente Est&#xe1;vel] Tratamento" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.1">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="hemorragia digestiva alta" clinical_indication="n/a"/>
+    <examination url="COAGULOGRAMA COMPLETO" exam_id="28040139" limb_side="" quantity="1" reason="hemorragia digestiva alta" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="hemorragia digestiva alta" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="hemorragia digestiva alta" clinical_indication="n/a"/>
+    <medication url="" med_id="43800" id="19881" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="19881" standard="null"/>
+    <medication url="" med_id="43800" id="19882" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="19882" standard="null"/>
+    <medication url="" med_id="36064" id="19883" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="19883" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;DILUIDO EM &#xc1;GUA DESTILADA&quot;,&quot;id&quot;:9561,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Cont&#xed;nuo&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1717}"/>
+    <medication url="" med_id="36161" id="19884" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="ML" access="6" daily_dosage="1" cycles="1" treatement_time="19884" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:9562,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1325}"/>
+    <medication url="" med_id="39144" id="19885" name="ANTAK AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="19885" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2 ml + 18 ml AD&quot;,&quot;id&quot;:9563,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2047}"/>
+    <medication url="" med_id="49581" id="19886" name="PLASIL AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="19886" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:9564,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="126122" id="19887" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="19887" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:9565,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35166" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="L&#xed;der de Equipe" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Encaminhar paciente para eixo vermelho pois tais achados indicativos de gravidade podem sugerir perda de aproximadamente 20% do volume circulat&amp;oacute;rio com indica&amp;ccedil;&amp;atilde;o de ressuscita&amp;ccedil;&amp;atilde;o vol&amp;ecirc;mica urgente.&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Acesso venoso, monitor, oxig&amp;ecirc;nio&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>IOT, se necess&amp;aacute;rio, para proteger vias a&amp;eacute;reas&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Coleta de exames e tipagem sangu&amp;iacute;nea&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Reposi&amp;ccedil;&amp;atilde;o vol&amp;ecirc;mica&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Se suspeita de varizes, pense em &lt;span style=&quot;color:#2980b9&quot;>prescrever 0,05 mg IV de octreotide (sandostatin). Seguido de 0,05 mg EV/h em bomba de infus&amp;atilde;o cont&amp;iacute;nua.&lt;/span>&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Endoscopia assim que poss&amp;iacute;vel&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.3"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="35167" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Glasgow-Blatchford igual a 0)" description="Glasgow igual a 0">
+    <operation name="Glasgow-Blatchford igual a 0" Operator="or" id="33562">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Glasgow (homem)  = 0" Operator="equal" id="33558">
+        <operand xsi:type="pathwayMetamodel:Operation" name="GLASGOW (homem)" Operator="addition" id="33556">
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+            <option description="&lt;6,5"/>
+            <option description="6,5 - 8,0" weight="2"/>
+            <option description="8,0 - 10,0" weight="3"/>
+            <option description="10,0 - 25,0" weight="4"/>
+            <option description=">25,0" weight="6"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_homem" id="33542" weight="1" value="0.0">
+            <option description=">12,9"/>
+            <option description="12,0 - 12,9" weight="1"/>
+            <option description="10,0 - 11,9" weight="3"/>
+            <option description="&lt;10,0" weight="6"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+            <option description=">109"/>
+            <option description="100 - 109" weight="1"/>
+            <option description="90 - 99" weight="2"/>
+            <option description="&lt; 90" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+            <option description="&lt;100 por minuto"/>
+            <option description=">= 100 por minuto" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="zero" id="33552" weight="1" value="0.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Glasgow (mulher)  = 0" Operator="equal" id="33559">
+        <operand xsi:type="pathwayMetamodel:Operation" name="GLASGOW (mulher)" Operator="addition" id="33557">
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+            <option description="&lt;6,5"/>
+            <option description="6,5 - 8,0" weight="2"/>
+            <option description="8,0 - 10,0" weight="3"/>
+            <option description="10,0 - 25,0" weight="4"/>
+            <option description=">25,0" weight="6"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_mulher" id="33543" weight="1" value="0.0">
+            <option description=">11,9"/>
+            <option description="10,0 - 11,9" weight="1"/>
+            <option description="&lt;10,0" weight="6"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+            <option description=">109"/>
+            <option description="100 - 109" weight="1"/>
+            <option description="90 - 99" weight="2"/>
+            <option description="&lt; 90" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+            <option description="&lt;100 por minuto"/>
+            <option description=">= 100 por minuto" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="zero" id="33552" weight="1" value="0.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.4" id="35168" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="35169" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Glasgow-Blatchford >= 1)" description="Glasgow >= 1">
+    <operation name="Glasgow-Blatchford >= 1" Operator="or" id="33563">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Glasgow (homem) >= 1" Operator="greaterOrEqual" id="33560">
+        <operand xsi:type="pathwayMetamodel:Operation" name="GLASGOW (homem)" Operator="addition" id="33556">
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+            <option description="&lt;6,5"/>
+            <option description="6,5 - 8,0" weight="2"/>
+            <option description="8,0 - 10,0" weight="3"/>
+            <option description="10,0 - 25,0" weight="4"/>
+            <option description=">25,0" weight="6"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_homem" id="33542" weight="1" value="0.0">
+            <option description=">12,9"/>
+            <option description="12,0 - 12,9" weight="1"/>
+            <option description="10,0 - 11,9" weight="3"/>
+            <option description="&lt;10,0" weight="6"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+            <option description=">109"/>
+            <option description="100 - 109" weight="1"/>
+            <option description="90 - 99" weight="2"/>
+            <option description="&lt; 90" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+            <option description="&lt;100 por minuto"/>
+            <option description=">= 100 por minuto" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33551" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Glasgow (mulher) >= 1" Operator="greaterOrEqual" id="33561">
+        <operand xsi:type="pathwayMetamodel:Operation" name="GLASGOW (mulher)" Operator="addition" id="33557">
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+            <option description="&lt;6,5"/>
+            <option description="6,5 - 8,0" weight="2"/>
+            <option description="8,0 - 10,0" weight="3"/>
+            <option description="10,0 - 25,0" weight="4"/>
+            <option description=">25,0" weight="6"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_mulher" id="33543" weight="1" value="0.0">
+            <option description=">11,9"/>
+            <option description="10,0 - 11,9" weight="1"/>
+            <option description="&lt;10,0" weight="6"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+            <option description=">109"/>
+            <option description="100 - 109" weight="1"/>
+            <option description="90 - 99" weight="2"/>
+            <option description="&lt; 90" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+            <option description="&lt;100 por minuto"/>
+            <option description=">= 100 por minuto" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+            <option description="N&#xe3;o"/>
+            <option description="Sim" weight="2"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33551" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="35170" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Paciente inst&#xe1;vel)" description="Paciente inst&#xe1;vel">
+    <operation name="Paciente inst&#xe1;vel" Operator="equal" id="33564">
+      <operand xsi:type="pathwayMetamodel:Choice" name="estado_paciente" id="33550" weight="1" value="0.0">
+        <option description="Est&#xe1;vel"/>
+        <option description="Inst&#xe1;vel" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33551" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="35171" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Paciente est&#xe1;vel)" description="Paciente est&#xe1;vel">
+    <operation name="Paciente est&#xe1;vel" Operator="lessThan" id="33565">
+      <operand xsi:type="pathwayMetamodel:Choice" name="estado_paciente" id="33550" weight="1" value="0.0">
+        <option description="Est&#xe1;vel"/>
+        <option description="Inst&#xe1;vel" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33551" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <operation name="Hemat&#xea;mese ou Melena" Operator="or" id="33553"/>
+  <operation name="Sem hemat&#xea;mese ou melena" id="33554">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Hemat&#xea;mese ou Melena" Operator="or" id="33553"/>
+  </operation>
+  <operation name="paciente homem" id="33555"/>
+  <operation name="GLASGOW (homem)" Operator="addition" id="33556">
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+      <option description="&lt;6,5"/>
+      <option description="6,5 - 8,0" weight="2"/>
+      <option description="8,0 - 10,0" weight="3"/>
+      <option description="10,0 - 25,0" weight="4"/>
+      <option description=">25,0" weight="6"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_homem" id="33542" weight="1" value="0.0">
+      <option description=">12,9"/>
+      <option description="12,0 - 12,9" weight="1"/>
+      <option description="10,0 - 11,9" weight="3"/>
+      <option description="&lt;10,0" weight="6"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+      <option description=">109"/>
+      <option description="100 - 109" weight="1"/>
+      <option description="90 - 99" weight="2"/>
+      <option description="&lt; 90" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+      <option description="&lt;100 por minuto"/>
+      <option description=">= 100 por minuto" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+      <option description="N&#xe3;o"/>
+      <option description="Sim" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+      <option description="N&#xe3;o"/>
+      <option description="Sim" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+      <option description="N&#xe3;o"/>
+      <option description="Sim" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+      <option description="N&#xe3;o"/>
+      <option description="Sim" weight="2"/>
+    </operand>
+  </operation>
+  <operation name="GLASGOW (mulher)" Operator="addition" id="33557">
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+      <option description="&lt;6,5"/>
+      <option description="6,5 - 8,0" weight="2"/>
+      <option description="8,0 - 10,0" weight="3"/>
+      <option description="10,0 - 25,0" weight="4"/>
+      <option description=">25,0" weight="6"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_mulher" id="33543" weight="1" value="0.0">
+      <option description=">11,9"/>
+      <option description="10,0 - 11,9" weight="1"/>
+      <option description="&lt;10,0" weight="6"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+      <option description=">109"/>
+      <option description="100 - 109" weight="1"/>
+      <option description="90 - 99" weight="2"/>
+      <option description="&lt; 90" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+      <option description="&lt;100 por minuto"/>
+      <option description=">= 100 por minuto" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+      <option description="N&#xe3;o"/>
+      <option description="Sim" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+      <option description="N&#xe3;o"/>
+      <option description="Sim" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+      <option description="N&#xe3;o"/>
+      <option description="Sim" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+      <option description="N&#xe3;o"/>
+      <option description="Sim" weight="2"/>
+    </operand>
+  </operation>
+  <operation name="Glasgow (homem)  = 0" Operator="equal" id="33558">
+    <operand xsi:type="pathwayMetamodel:Operation" name="GLASGOW (homem)" Operator="addition" id="33556">
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+        <option description="&lt;6,5"/>
+        <option description="6,5 - 8,0" weight="2"/>
+        <option description="8,0 - 10,0" weight="3"/>
+        <option description="10,0 - 25,0" weight="4"/>
+        <option description=">25,0" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_homem" id="33542" weight="1" value="0.0">
+        <option description=">12,9"/>
+        <option description="12,0 - 12,9" weight="1"/>
+        <option description="10,0 - 11,9" weight="3"/>
+        <option description="&lt;10,0" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+        <option description=">109"/>
+        <option description="100 - 109" weight="1"/>
+        <option description="90 - 99" weight="2"/>
+        <option description="&lt; 90" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+        <option description="&lt;100 por minuto"/>
+        <option description=">= 100 por minuto" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="zero" id="33552" weight="1" value="0.0"/>
+  </operation>
+  <operation name="Glasgow (mulher)  = 0" Operator="equal" id="33559">
+    <operand xsi:type="pathwayMetamodel:Operation" name="GLASGOW (mulher)" Operator="addition" id="33557">
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+        <option description="&lt;6,5"/>
+        <option description="6,5 - 8,0" weight="2"/>
+        <option description="8,0 - 10,0" weight="3"/>
+        <option description="10,0 - 25,0" weight="4"/>
+        <option description=">25,0" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_mulher" id="33543" weight="1" value="0.0">
+        <option description=">11,9"/>
+        <option description="10,0 - 11,9" weight="1"/>
+        <option description="&lt;10,0" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+        <option description=">109"/>
+        <option description="100 - 109" weight="1"/>
+        <option description="90 - 99" weight="2"/>
+        <option description="&lt; 90" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+        <option description="&lt;100 por minuto"/>
+        <option description=">= 100 por minuto" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="zero" id="33552" weight="1" value="0.0"/>
+  </operation>
+  <operation name="Glasgow (homem) >= 1" Operator="greaterOrEqual" id="33560">
+    <operand xsi:type="pathwayMetamodel:Operation" name="GLASGOW (homem)" Operator="addition" id="33556">
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+        <option description="&lt;6,5"/>
+        <option description="6,5 - 8,0" weight="2"/>
+        <option description="8,0 - 10,0" weight="3"/>
+        <option description="10,0 - 25,0" weight="4"/>
+        <option description=">25,0" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_homem" id="33542" weight="1" value="0.0">
+        <option description=">12,9"/>
+        <option description="12,0 - 12,9" weight="1"/>
+        <option description="10,0 - 11,9" weight="3"/>
+        <option description="&lt;10,0" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+        <option description=">109"/>
+        <option description="100 - 109" weight="1"/>
+        <option description="90 - 99" weight="2"/>
+        <option description="&lt; 90" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+        <option description="&lt;100 por minuto"/>
+        <option description=">= 100 por minuto" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33551" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Glasgow (mulher) >= 1" Operator="greaterOrEqual" id="33561">
+    <operand xsi:type="pathwayMetamodel:Operation" name="GLASGOW (mulher)" Operator="addition" id="33557">
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+        <option description="&lt;6,5"/>
+        <option description="6,5 - 8,0" weight="2"/>
+        <option description="8,0 - 10,0" weight="3"/>
+        <option description="10,0 - 25,0" weight="4"/>
+        <option description=">25,0" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_mulher" id="33543" weight="1" value="0.0">
+        <option description=">11,9"/>
+        <option description="10,0 - 11,9" weight="1"/>
+        <option description="&lt;10,0" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+        <option description=">109"/>
+        <option description="100 - 109" weight="1"/>
+        <option description="90 - 99" weight="2"/>
+        <option description="&lt; 90" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+        <option description="&lt;100 por minuto"/>
+        <option description=">= 100 por minuto" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="2"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33551" weight="1" value="1.0"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="glasgow_ureia" id="33541" weight="1" value="0.0">
+    <option description="&lt;6,5"/>
+    <option description="6,5 - 8,0" weight="2"/>
+    <option description="8,0 - 10,0" weight="3"/>
+    <option description="10,0 - 25,0" weight="4"/>
+    <option description=">25,0" weight="6"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_homem" id="33542" weight="1" value="0.0">
+    <option description=">12,9"/>
+    <option description="12,0 - 12,9" weight="1"/>
+    <option description="10,0 - 11,9" weight="3"/>
+    <option description="&lt;10,0" weight="6"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="glasgow_hemoglobina_mulher" id="33543" weight="1" value="0.0">
+    <option description=">11,9"/>
+    <option description="10,0 - 11,9" weight="1"/>
+    <option description="&lt;10,0" weight="6"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="glasgow_pas" id="33544" weight="1" value="0.0">
+    <option description=">109"/>
+    <option description="100 - 109" weight="1"/>
+    <option description="90 - 99" weight="2"/>
+    <option description="&lt; 90" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="glasgow_pulso" id="33545" weight="1" value="0.0">
+    <option description="&lt;100 por minuto"/>
+    <option description=">= 100 por minuto" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="glasgow_melena" id="33546" weight="1" value="0.0">
+    <option description="N&#xe3;o"/>
+    <option description="Sim" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="glasgow_sincope" id="33547" weight="1" value="0.0">
+    <option description="N&#xe3;o"/>
+    <option description="Sim" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="glasgow_doenca_hepatica" id="33548" weight="1" value="0.0">
+    <option description="N&#xe3;o"/>
+    <option description="Sim" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="glasgow_insuficiencia_cardiaca" id="33549" weight="1" value="0.0">
+    <option description="N&#xe3;o"/>
+    <option description="Sim" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="estado_paciente" id="33550" weight="1" value="0.0">
+    <option description="Est&#xe1;vel"/>
+    <option description="Inst&#xe1;vel" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="33551" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="zero" id="33552" weight="1" value="0.0"/>
+</pathwayMetamodel:Pathway>

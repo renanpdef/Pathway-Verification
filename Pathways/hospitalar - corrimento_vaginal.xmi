@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Corrimento Vaginal" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="28482" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar gravidez" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.6">
+    <questions text="Verificar gravidez" url="" id="13782">
+      <answers xsi:type="pathwayMetamodel:Choice" name="gravidez" id="27645" weight="1" value="0.0">
+        <option description="Gestante" weight="1"/>
+        <option description="N&#xe3;o Gestante" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="28483" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar tipo do corrimento da gestante" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="O corrimento &#xe9;:" url="" id="13783">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tipo_corrimento_gestante" id="27646" weight="1" value="0.0">
+        <option description="Fisiol&#xf3;gico" weight="1"/>
+        <option description="Patol&#xf3;gico" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="28484" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Orienta&#xe7;&#xf5;es paciente" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Dar as orienta&amp;ccedil;&amp;otilde;es necess&amp;aacute;rias para a paciente.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.1 //@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="28485" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar aspectos do corrimento da gestante" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4 //@sequence.5 //@sequence.14">
+    <questions text="Classificar corrimento de acordo com seus aspectos:" url="" id="13784">
+      <answers xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_gestante" id="27647" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="28486" type="Receita" type_verbose="Receita" url="" name="Receita 01" description="" isTerminal="true" inputSequences="//@sequence.3">
+    <item id="9541" url="" name="METRONIDAZOL 0,75% CREME VAGINAL" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites."/>
+    <item id="9542" url="" name="METRONIDAZOL 400 MG" med_code="-1" presentation="COMP" access="1" quantity="5" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="DOSE &#xda;NICA"/>
+    <item id="9543" url="" name="METRONIDAZOL 250 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 2 comprimidos de 12/12h via oral durante 7 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="28487" type="Receita" type_verbose="Receita" url="" name="Receita 02" description="" isTerminal="true" inputSequences="//@sequence.4">
+    <item id="9544" url="" name="MICONAZOL 2%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites."/>
+    <item id="9545" url="" name="NISTATINA 100.000 UI" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 14 noites."/>
+    <item id="9546" url="" name="CLOTRIMAZOL 1%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="28488" type="Receita" type_verbose="Receita" url="" name="Receita 03" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Orientar paciente para necessidade de tratamento do parceiro.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.5">
+    <item id="9547" url="" name="METRONIDAZOL 400 MG" med_code="-1" presentation="COMP" access="1" quantity="5" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="DOSE &#xda;NICA"/>
+    <item id="9548" url="" name="METRONIDAZOL 250 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos via oral de 12/12h durante 7 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="28489" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar tipo do corrimento da n&#xe3;o gestante" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="O corrimento &#xe9;:" url="" id="13785">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tipo_corrimento_n_gestante" id="27648" weight="1" value="0.0">
+        <option description="Fisiol&#xf3;gico" weight="1"/>
+        <option description="Patol&#xf3;gico" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="28490" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar aspectos do corrimento da n&#xe3;o gestante" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10 //@sequence.13 //@sequence.15">
+    <questions text="Classificar corrimento de acordo com seus aspectos:" url="" id="13786">
+      <answers xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_n_gestante" id="27649" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="28491" type="Receita" type_verbose="Receita" url="" name="Receita 04" description="" isTerminal="true" inputSequences="//@sequence.9">
+    <item id="9549" url="" name="METRONIDAZOL 0,75% CREME VAGINAL" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites."/>
+    <item id="9550" url="" name="METRONIDAZOL 400 MG" med_code="-1" presentation="COMP" access="1" quantity="5" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="DOSE &#xda;NICA"/>
+    <item id="9551" url="" name="METRONIDAZOL 250 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos via oral de 12/12h durante 7 dias."/>
+    <item id="9552" url="" name="CLINDAMICINA 2%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="28492" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quantidade de epis&#xf3;dios" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Determinar a quantidade de epis&#xf3;dios:" url="" id="13787">
+      <answers xsi:type="pathwayMetamodel:Choice" name="qtd_episodios" id="27650" weight="1" value="0.0">
+        <option description="&lt; 4 epis&#xf3;dios" weight="1"/>
+        <option description=">= 4 epis&#xf3;dios" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="28493" type="Receita" type_verbose="Receita" url="" name="Receita 05" description="" isTerminal="true" inputSequences="//@sequence.11">
+    <item id="9553" url="" name="MICONAZOL 2%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites."/>
+    <item id="9554" url="" name="NISTATINA 100.000 UI" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 14 noites."/>
+    <item id="9555" url="" name="CLOTRIMAZOL 1%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites."/>
+    <item id="9556" url="" name="FLUCONAZOL 150MG COMP 150 MG" med_code="40630" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral no 1&#xba;, 4&#xba; e 7&#xba; dia. Ap&#xf3;s, tomar 01 comprimido por semana durante 06 meses."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="28494" type="Receita" type_verbose="Receita" url="" name="Receita 06" description="" isTerminal="true" inputSequences="//@sequence.12">
+    <item id="9557" url="" name="MICONAZOL 2%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites."/>
+    <item id="9558" url="" name="NISTATINA 100.000 UI" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 14 noites."/>
+    <item id="9559" url="" name="CLOTRIMAZOL 1%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites."/>
+    <item id="9560" url="" name="CLOTRIMAZOL 1%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 03 noites."/>
+    <item id="9561" url="" name="FLUCONAZOL 150MG COMP 150 MG" med_code="40630" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="DOSE &#xda;NICA"/>
+    <item id="9562" url="" name="FENTIZOL &#xd3;VULO 600 MG" med_code="-1" presentation="DOSE" access="4" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="DOSE &#xda;NICA"/>
+    <item id="9563" url="" name="BUTOCONAZOL CREME 2%" med_code="-1" presentation="DOSE" access="4" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="DOSE &#xda;NICA"/>
+    <item id="9564" url="" name="&#xc1;CIDO B&#xd3;RICO 600 MG" med_code="-1" presentation="CAPS" access="4" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="28495" type="Receita" type_verbose="Receita" url="" name="Receita 07" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Orientar paciente para necessidade de tratamento do parceiro.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.13">
+    <item id="9565" url="" name="METRONIDAZOL 400 MG" med_code="-1" presentation="COMP" access="1" quantity="5" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="DOSE &#xda;NICA"/>
+    <item id="9566" url="" name="METRONIDAZOL 250 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos via oral de 12/12h durante 07 dias."/>
+    <item id="9567" url="" name="TINIDAZOL 500 MG" med_code="-1" presentation="COMP" access="1" quantity="4" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="DOSE &#xda;NICA"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="28496" type="Receita" type_verbose="Receita" url="" name="Receita 08" description="" isTerminal="true" inputSequences="//@sequence.14">
+    <item id="9568" url="" name="METRONIDAZOL 62,5 mg/g + NISTATINA 25.000 UI/g + CLORETO DE BENZALC&#xd4;NIO 1,25 mg/g" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 7 noites."/>
+    <item id="9569" url="" name="METRONIDAZOL 750 mg + MICONAZOL 200 mg" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer 01 &#xf3;vulo via vaginal por noite durante 7 noites."/>
+    <item id="9570" url="" name="METRONIDAZOL 250 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos via oral de 12/12h durante 7 dias."/>
+    <item id="9571" url="" name="MICONAZOL 2%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 7 noites."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="28497" type="Receita" type_verbose="Receita" url="" name="Receita 09" description="" isTerminal="true" inputSequences="//@sequence.15">
+    <item id="9572" url="" name="METRONIDAZOL 62,5 mg/g + NISTATINA 25.000 UI/g + CLORETO DE BENZALC&#xd4;NIO 1,25 mg/g" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 7 noites."/>
+    <item id="9573" url="" name="METRONIDAZOL 750 mg + MICONAZOL 200 mg" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer 01 &#xf3;vulo via vaginal por noite durante 7 noites."/>
+    <item id="9574" url="" name="METRONIDAZOL 250 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos via oral de 12/12h durante 7 dias"/>
+    <item id="9575" url="" name="MICONAZOL 2%" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 7 noites"/>
+    <item id="9576" url="" name="TINIDAZOL 30 mg/mg + MICONAZOL 20 mg/mg" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites"/>
+    <item id="9577" url="" name="TIOCONAZOL 100 mg + TINIDAZOL 150 mg" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Utilizar 01 aplicador/noite via vaginal durante 07 noites"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="28498" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (gestante)" description="gestante">
+    <operation name="gestante" Operator="equal" id="27655">
+      <operand xsi:type="pathwayMetamodel:Choice" name="gravidez" id="27645" weight="1" value="0.0">
+        <option description="Gestante" weight="1"/>
+        <option description="N&#xe3;o Gestante" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="27651" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="28499" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (gestante fisiol&#xf3;gico)" description="gestante fisiol&#xf3;gico">
+    <operation name="gestante fisiol&#xf3;gico" Operator="equal" id="27656">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_corrimento_gestante" id="27646" weight="1" value="0.0">
+        <option description="Fisiol&#xf3;gico" weight="1"/>
+        <option description="Patol&#xf3;gico" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="27651" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="28500" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (gestante patol&#xf3;gico)" description="gestante patol&#xf3;gico">
+    <operation name="gestante patol&#xf3;gico" Operator="equal" id="27657">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_corrimento_gestante" id="27646" weight="1" value="0.0">
+        <option description="Fisiol&#xf3;gico" weight="1"/>
+        <option description="Patol&#xf3;gico" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="27652" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="28541" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Corrimento fluido)" description="Corrimento fluido">
+    <operation name="Corrimento fluido" Operator="equal" id="27658">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_gestante" id="27647" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="27651" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="28542" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Corrimento grumoso)" description="Corrimento grumoso">
+    <operation name="Corrimento grumoso" Operator="equal" id="27659">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_gestante" id="27647" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="27652" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="28543" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Corrimento bolhoso)" description="Corrimento bolhoso">
+    <operation name="Corrimento bolhoso" Operator="equal" id="27660">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_gestante" id="27647" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="27654" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.0" id="28544" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (n&#xe3;o gestante)" description="n&#xe3;o gestante">
+    <operation name="n&#xe3;o gestante" Operator="equal" id="27681">
+      <operand xsi:type="pathwayMetamodel:Choice" name="gravidez" id="27645" weight="1" value="0.0">
+        <option description="Gestante" weight="1"/>
+        <option description="N&#xe3;o Gestante" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="27652" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.7" id="28545" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (n&#xe3;o gestante fisiol&#xf3;gico)" description="n&#xe3;o gestante fisiol&#xf3;gico">
+    <operation name="n&#xe3;o gestante fisiol&#xf3;gico" Operator="equal" id="27682">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_corrimento_n_gestante" id="27648" weight="1" value="0.0">
+        <option description="Fisiol&#xf3;gico" weight="1"/>
+        <option description="Patol&#xf3;gico" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="27651" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="28546" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (n&#xe3;o gestante patol&#xf3;gico)" description="corrimento fluido">
+    <operation name="n&#xe3;o gestante patol&#xf3;gico" Operator="equal" id="27683">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_corrimento_n_gestante" id="27648" weight="1" value="0.0">
+        <option description="Fisiol&#xf3;gico" weight="1"/>
+        <option description="Patol&#xf3;gico" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="27652" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="28547" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (corrimento fluido)" description="corrimento fluido">
+    <operation name="corrimento fluido" Operator="equal" id="27684">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_n_gestante" id="27649" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="27651" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="28548" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (corrimento grumoso)" description="corrimento grumoso">
+    <operation name="corrimento grumoso" Operator="equal" id="27685">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_n_gestante" id="27649" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="27652" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="28549" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (>= 4 epis&#xf3;dios)" description=">= 4 epis&#xf3;dios">
+    <operation name=">= 4 epis&#xf3;dios" Operator="equal" id="27686">
+      <operand xsi:type="pathwayMetamodel:Choice" name="qtd_episodios" id="27650" weight="1" value="0.0">
+        <option description="&lt; 4 epis&#xf3;dios" weight="1"/>
+        <option description=">= 4 epis&#xf3;dios" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="27652" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="28550" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (&lt; 4 epis&#xf3;dios)" description="&lt; 4 epis&#xf3;dios">
+    <operation name="&lt; 4 epis&#xf3;dios" Operator="equal" id="27687">
+      <operand xsi:type="pathwayMetamodel:Choice" name="qtd_episodios" id="27650" weight="1" value="0.0">
+        <option description="&lt; 4 epis&#xf3;dios" weight="1"/>
+        <option description=">= 4 epis&#xf3;dios" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="27651" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.8" id="28551" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (corrimento bolhoso)" description="corrimento bolhoso">
+    <operation name="corrimento bolhoso" Operator="equal" id="27688">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_n_gestante" id="27649" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="27654" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.3" id="28552" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (Corrimento com mais de um aspecto)" description="Corrimento com mais de um aspecto">
+    <operation name="Corrimento com mais de um aspecto" Operator="equal" id="27689">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_gestante" id="27647" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="27653" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.8" id="28553" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (corrimento com mais de um aspecto)" description="corrimento com mais de um aspecto">
+    <operation name="corrimento com mais de um aspecto" Operator="equal" id="27690">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_n_gestante" id="27649" weight="1" value="0.0">
+        <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+        <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+        <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="27653" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:Choice" name="gravidez" id="27645" weight="1" value="0.0">
+    <option description="Gestante" weight="1"/>
+    <option description="N&#xe3;o Gestante" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tipo_corrimento_gestante" id="27646" weight="1" value="0.0">
+    <option description="Fisiol&#xf3;gico" weight="1"/>
+    <option description="Patol&#xf3;gico" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_gestante" id="27647" weight="1" value="0.0">
+    <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+    <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+    <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tipo_corrimento_n_gestante" id="27648" weight="1" value="0.0">
+    <option description="Fisiol&#xf3;gico" weight="1"/>
+    <option description="Patol&#xf3;gico" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="corrimento_patologico_n_gestante" id="27649" weight="1" value="0.0">
+    <option description="Corrimento flu&#xed;do, homog&#xea;neo, branco/acinzentado/amarelado, com odor f&#xe9;tido" weight="1"/>
+    <option description="Corrimento grumoso, aderido as paredes, branco, intenso prurido" weight="2"/>
+    <option description="Corrimento amarelado/esverdeado, bolhoso, odor f&#xe9;tido, abundante, hiperemia e ard&#xea;ncia vaginal/colpite" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="qtd_episodios" id="27650" weight="1" value="0.0">
+    <option description="&lt; 4 epis&#xf3;dios" weight="1"/>
+    <option description=">= 4 epis&#xf3;dios" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="27651" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="27652" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="27653" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="27654" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

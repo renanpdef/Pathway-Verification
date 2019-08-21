@@ -14,7 +14,7 @@ public class PathwayVerificationMain {
 		String path = "Pathways/";
 		File file = new File(path);
 		String[] pathwayFiles =  file.list();
-		String pathwayFile = path + pathwayFiles[53];
+		String pathwayFile = path + pathwayFiles[5];
         
         PathwayReader pathwayReader = new PathwayReader(pathwayFile);
         Pathway pathway = pathwayReader.createPathway();
@@ -30,14 +30,15 @@ public class PathwayVerificationMain {
 //        System.out.println("-------------------------------------------------------------------------");
 //        
         //print all solutions that occur deadlock
-        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
-        System.out.println("-------------------------------------------------------------------------");
+//        printFoundSolutions(findSolutions.findDeadLockSolutions(), "FIND DEADLOCK SOLUTIONS");
+//        System.out.println("-------------------------------------------------------------------------");
+//        System.out.println(findSolutions.findDeadLockSolutions());
 //        
-        //print logically equivalent sequences
+//        print logically equivalent sequences
 //        printEquivalentSequences(findSolutions.findLogicallyEquivalentSequence());
 //        System.out.println("-------------------------------------------------------------------------");
-////        
-////        //Verify if there are Inaccessible Step
+//        
+//        //Verify if there are Inaccessible Step
 //        printInaccessibleStep(inaccessibleStep.findInaccessibleSteps());
 //        System.out.println("-------------------------------------------------------------------------");        
     }
@@ -48,8 +49,12 @@ public class PathwayVerificationMain {
         for (int k = 0; k < mapSolutions.size(); k++) {
         	List<Solution> solutionsList = (List<Solution>) mapSolutions.values().toArray()[k];
         	Element step = (Element) mapSolutions.keySet().toArray()[k];//get the output step of the sequences which was analyzed.
-        	System.out.println("\n" + step.getClass().getSimpleName() +": "+ step.getName());//print the name of the output step.
-        	printSequencesOperations(step);
+        	if(step != null) {
+	        	System.out.println("\n" + step.getType() +": "+ step.getName());//print the name of the output step.
+	        	printSequencesOperations(step);
+        	}else {
+        		System.out.println(step);
+        	}
         	//printSequencesOperations(step);
         	//Go through the list of solutions
         	for (int i = 0; i < solutionsList.size(); i++) {
@@ -85,7 +90,10 @@ public class PathwayVerificationMain {
     	System.out.println("\nINACCESSIBLE STEPS");
     	for(int k = 0; k < elements.size(); k++) {
     		System.out.println("\n" + elements.get(k).getClass().getSimpleName() +": "+ elements.get(k).getName());//print the name of the Element.
-        }
+    		System.out.println("InputSequences: " + elements.get(k).getInputSequences());
+    		System.out.println("OutputSequences: " + elements.get(k).getOutputSequences());
+    	}
+    			
     }
     
     public static void printSequencesOperations(Element element) {

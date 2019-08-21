@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[Sinta-se Bem] Transplante Renal" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7722" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar exame de ClCr e idade" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Exame de ClCr &lt; 15 mL/min?" url="" id="3219">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exame" id="6081" weight="1" value="true"/>
+    </questions>
+    <questions text="Paciente com menos de 80 anos?" url="" id="3220">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_menor_80" id="6082" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="7723" type="Tratamento" type_verbose="Tratamento" url="" name="[Mulher] Solicitar Exames" description="&lt;p>Exames n&amp;atilde;o encontrados:&lt;br />&#xA;- Raio X Abdome (c&amp;oacute;digo?)&lt;br />&#xA;- Econstress ou cintilografia do mioc&amp;aacute;rdio --&amp;gt; Tem muitas. Qual delas?&lt;br />&#xA;-&amp;nbsp;Ultrassom Doppler de vasos il&amp;iacute;acos&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.5">
+    <examination url="" exam_id="28040481" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010973" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40302733" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011414" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010540" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011279" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011210" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010329" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010892" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010175" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011368" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40403858" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010957" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010850" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28012100" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011759" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010507" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011732" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011392" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010809" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010795" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28012186" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060873" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28012020" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="99010046" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28040139" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40712125" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060083" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060067" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40306950" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40306968" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307026" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307875" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307760" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="27040097" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28062078" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28062086" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307824" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307832" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307573" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307581" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40901122" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="20010010" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="32050208" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="N/A"/>
+    <examination url="" exam_id="40201120" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="32070039" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="N/A"/>
+    <examination url="" exam_id="32080050" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="N/A"/>
+    <examination url="" exam_id="33010137" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40701140" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40403998" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28040317" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/as"/>
+    <examination url="" exam_id="20010133" limb_side="" quantity="1" reason="Paciente para transplante renal" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7724" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar sexo do paciente" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Sexo do paciente:" url="" id="3241">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sexo_paciente" id="6083" weight="1" value="0.0">
+        <option description="Homem" weight="1"/>
+        <option description="Mulher" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7725" type="Processo" type_verbose="Processo" url="" name="[Homem] Encaminhamento" description="" isTerminal="true" inputSequences="//@sequence.4">
+    <action id="604" process_id="7725" service="encaminhar_especialidade" description="Encaminhar para Cardiologista"/>
+    <action id="605" process_id="7725" service="encaminhar_especialidade" description="Encaminhar para Dermatologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7726" type="Processo" type_verbose="Processo" url="" name="[Mulher] Encaminhamento" description="" isTerminal="true" inputSequences="//@sequence.5">
+    <action id="606" process_id="7726" service="encaminhar_especialidade" description="Encaminhar para Cardiologista"/>
+    <action id="607" process_id="7726" service="encaminhar_especialidade" description="Encaminhar para Dermatologista"/>
+    <action id="608" process_id="7726" service="encaminhar_especialidade" description="Encaminhar para Ginecologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7727" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Finalizar protocolo" description="Finalizar protocolo, exame de ClCr > 15 mL/min" isTerminal="true" inputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="7728" type="Tratamento" type_verbose="Tratamento" url="" name="[Homem] Solicitar Exames" description="&lt;p>Exames n&amp;atilde;o encontrados:&lt;br />&#xA;- Raio X Abdome (c&amp;oacute;digo?)&lt;br />&#xA;- Econstress ou cintilografia do mioc&amp;aacute;rdio --&amp;gt; Tem muitas. Qual delas?&lt;br />&#xA;-&amp;nbsp;Ultrassom Doppler de vasos il&amp;iacute;acos&lt;/p>" inputSequences="//@sequence.2" outputSequences="//@sequence.4">
+    <examination url="" exam_id="28040481" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010973" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40302733" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011414" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010540" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011279" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011210" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010329" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010892" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010175" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011368" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40403858" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010957" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010850" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28012100" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011759" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010507" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011732" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011392" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28061624" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010809" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28010795" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28012186" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060873" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28012020" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="99010046" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28040139" limb_side="" quantity="1" reason="Paciente prop&#xed;cio para Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40712125" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060083" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060067" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40306950" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40306968" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307026" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307875" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307760" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="27040097" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28062078" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28062086" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307824" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307832" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307573" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40307581" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40901122" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="20010010" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="32050208" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="N/A"/>
+    <examination url="" exam_id="40201120" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="32070039" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="N/A"/>
+    <examination url="" exam_id="40701140" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="40403998" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/a"/>
+    <examination url="" exam_id="28040317" limb_side="" quantity="1" reason="Transplante Renal" clinical_indication="n/as"/>
+    <examination url="" exam_id="20010133" limb_side="" quantity="1" reason="Paciente para transplante renal" clinical_indication="n/a"/>
+  </element>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="7729" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (ClCr >= 15 ou idade > 80)" description="ClCr >= 15">
+    <operation name="ClCr >= 15 ou idade > 80" Operator="or" id="6090">
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame >= 15" id="6088">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="exame" id="6081" weight="1" value="true"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="idade > 80" id="6089">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_menor_80" id="6082" weight="1" value="true"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="7730" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (ClCr &lt; 15 e idade &lt; 80)" description="ClCr &lt; 15">
+    <operation name="ClCr &lt; 15 e idade &lt; 80" Operator="and" id="6091">
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame &lt; 15" Operator="affirmation" id="6086">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="exame" id="6081" weight="1" value="true"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="idade &lt; 80" Operator="affirmation" id="6087">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_menor_80" id="6082" weight="1" value="true"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="7731" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Sexo Masculino)" description="Sexo Masculino">
+    <operation name="Sexo Masculino" Operator="equal" id="6092">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sexo_paciente" id="6083" weight="1" value="0.0">
+        <option description="Homem" weight="1"/>
+        <option description="Mulher" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="6084" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.2" id="7732" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Sexo Feminino)" description="Sexo Feminino">
+    <operation name="Sexo Feminino" Operator="equal" id="6093">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sexo_paciente" id="6083" weight="1" value="0.0">
+        <option description="Homem" weight="1"/>
+        <option description="Mulher" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="6085" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.6" id="7733" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="7734" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="-"/>
+  <operation name="exame &lt; 15" Operator="affirmation" id="6086">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="exame" id="6081" weight="1" value="true"/>
+  </operation>
+  <operation name="idade &lt; 80" Operator="affirmation" id="6087">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_menor_80" id="6082" weight="1" value="true"/>
+  </operation>
+  <operation name="exame >= 15" id="6088">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="exame" id="6081" weight="1" value="true"/>
+  </operation>
+  <operation name="idade > 80" id="6089">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_menor_80" id="6082" weight="1" value="true"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exame" id="6081" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_menor_80" id="6082" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sexo_paciente" id="6083" weight="1" value="0.0">
+    <option description="Homem" weight="1"/>
+    <option description="Mulher" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="6084" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="6085" weight="1"/>
+</pathwayMetamodel:Pathway>

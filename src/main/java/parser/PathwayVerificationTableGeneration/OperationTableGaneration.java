@@ -27,8 +27,9 @@ public class OperationTableGaneration {
 	        OperationInformation opInfo = new OperationInformation(pathway); //object with functions to extract information about the pathways
 	   
 			String pathwayName = pathwayFiles[i].replaceAll(".xmi", "");
-			System.out.println(i + pathwayName);
-			ArrayList<Integer> problems = new ArrayList<Integer>(){{add(35);}}; //set with defective pathways
+			pathwayName = pathwayName.replaceAll(" - ", "_");
+			System.out.println(i + ": " + pathwayName);
+			ArrayList<Integer> problems = new ArrayList<Integer>(){{}}; //set with defective pathways
 			if(!problems.contains(i)) {
 				int operation = opInfo.getOperationsNumber();
 				int realOperation = opInfo.getRealOperationNumber();

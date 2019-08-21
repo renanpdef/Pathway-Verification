@@ -1,0 +1,116 @@
+Pathways; Result
+clinico_acne;{AuxilioConduta: Classificar Acne Grau I=[predominio_comedonico=1,  papulo_pustuloso=1], AuxilioConduta: Classificação do Grau de Severidade=[grau_i=1,  grau_ii=1,  grau_iii=1]}
+clinico_bar__bbc__betabloqueador;{}
+clinico_cefaleia;{AuxilioConduta: Avaliar se houve melhora=[resposta_satisfatoria_tratamento=1,  piora_sintomas=1,  acometimento_neurologico=1], AuxilioConduta: Realizar Avaliação para Cefaléia Primária=[paciente_enxaqueca=1,  paciente_cefaleia_tensional=1,  paciente_outro_tipo_cefaleia=1], AuxilioConduta: Prescrever tratamento=[tratamento_crise_enxaqueca=1,  tratamento_cefaleia_tensional_cronica=1,  tratamento_outros_tipos_cefaleia=1]}
+clinico_diabetes_gestacional;{null=[s6=1,  s11=1,  s13=1,  s14=1,  s18=1,  s19=1,  s20=1,  s21=1,  s22=1,  s29=1,  s33=1,  s34=1,  s35=1,  s37=1,  s38=1,  s43=1,  s44=1,  s45=1]}
+clinico_diabetes__insulinoterapia;{}
+clinico_diabetes__tratamento_dm;{AuxilioConduta: Escolher Monoterapia=[monoterapia_opcao1=1,  monoterapia_opcao2=1], AuxilioConduta: Escolher Duploterapia=[duploterapia_opcao1=1,  duploterapia_opcao2=1], AuxilioConduta: Nível de HbA1c=[nivel_hba1c_menor_7_5=1,  nivel_hba1c_entre_7_e_9=1,  nivel_hba1c_maior_9=1]}
+clinico_dislipidemia;{AuxilioConduta: Idade/Sexo=[paciente_sexo_masculino=1,  paciente_idade=1,  40=1,  paciente_sexo_feminino=1,  50=0]}
+clinico_dispepsia;{}
+clinico_dispepsia_temp;{}
+clinico_dm_diabetes_mellitus;{AuxilioConduta: Escolher Monoterapia=[monoterapia_opcao1=1,  monoterapia_opcao2=1], AuxilioConduta: Escolher Duploterapia=[duploterapia_opcao1=1,  duploterapia_opcao2=1], AuxilioConduta: Nível de HbA1c=[nivel_hba1c_menor_7_5=1,  nivel_hba1c_entre_7_e_9=1,  nivel_hba1c_maior_9=1]}
+clinico_dor_articular;{AuxilioConduta: [Monoarticular Crônica] Suspeita de diagnóstico=[monoarticular_artrite_reativa=1,  monoarticular_psoriase=1], AuxilioConduta: [Poliarticular Aguda] Suspeita de Diagnóstico=[gonococcemia_poliarticular_aguda=1,  artrite_reativa_poliarticular_aguda=1], AuxilioConduta: [Inflamatória] Monoarticular ou Poliarticular?=[mono_ou_poliarticular=0,  1=0,  2=0], AuxilioConduta: [Poliarticular Crônica] Suspeita de Diagnóstico=[poliarticular_cronica_artrite_lupica=1,  poliarticular_cronica_artrite_reumatoide=1], AuxilioConduta: [Monoarticular] Aguda ou Crônica?=[monoarticular_dor_aguda_ou_cronica=0,  2=0,  1=0], AuxilioConduta: [Poliarticular] Aguda ou Crônica?=[dor_poliarticular=0,  2=0,  1=1,  3=0], AuxilioConduta: [Monoarticular Aguda] Suspeita de diagnóstico=[monoarticular_aguda_gota=1,  monoarticular_aguda_artrite_septica=1], AuxilioConduta: [Dor Inflamatória da Coluna] Suspeita de Diagnóstico=[dor_lombar_baixa=1,  espongilite_anquilosante=1]}
+clinico_dor_lombar;{AuxilioConduta: Classificação da Intensidade da Dor=[classificacao_leve_moderada=1,  classificacao_dor_severa=1,  classificacao_dor_aguda_com_espasmos=1]}
+clinico_duploterapia_linha_afro;{AuxilioConduta: Verificar Medicação=[medicacao_linha_duplo_afro=0,  UM=0,  DOIS=0]}
+clinico_duploterapia_linha_ieca;{}
+clinico_faringite;{AuxilioConduta: Definir Encaminhamentos=[imc_irregular=1,  7_ou_mais_episodios=1,  suspeita_difteria=1]}
+clinico_hipercalemia;{AuxilioConduta: Avaliar exame de Potássio=[exame_potassio_serico=1,  6=0,  5, 5=1,  paciente_sintomas=0]}
+clinico_hipertensao (2);{}
+clinico_hipertensao;{AuxilioConduta: Avaliar critérios para prescrição=[hiper_criterios_ep01_has_controlado=1,  hiper_criterios_ep02=0,  hiper_criterios_ep03=0,  hiper_criterios_ep04=0,  hiper_criterios_ep05_ou_superior=1], null=[s9=1,  s17=1,  s20=1,  s25=1,  s26=1,  s27=1,  s28=1]}
+clinico_hipertensao_duploterapia_bar;{}
+clinico_hipertensao_monoterapia_bar;{}
+clinico_hipertensao_triploterapia_bar;{}
+clinico_hipotireoidismo;{AuxilioConduta: Critérios de Encaminhamento=[encaminhamento_menor_18_anos=0,  encaminhamento_tratamento_sem_resposta=1,  encaminhamento_bocio_ou_nodulo=1,  encaminhamento_hipotireoidismo_secundario=1,  encaminhamento_hipertireoidismo=1,  encaminhamento_gestante=1,  encaminhamento_menor_18_anos=0,  encaminhamento_tratamento_sem_resposta=1,  encaminhamento_gestante=1,  encaminhamento_bocio_ou_nodulo=1,  encaminhamento_hipotireoidismo_secundario=1,  encaminhamento_hipertireoidismo=1,  1=6], AuxilioConduta: Avaliar TSH=[tsh=0,  0, 27=1,  4, 2=1,  10=0]}
+clinico_ieca__bbc__betabloqueador;{}
+clinico_infeccao_do_trato_urinario;{AuxilioConduta: [Retorno] Avaliar paciente=[avaliar_paciente=0,  1=0,  2=1,  3=0], AuxilioConduta: Avaliar idade=[faixa_etaria=0,  1=0,  2=0,  3=1,  4=0]}
+clinico_insuficiencia_cardiaca;{AuxilioConduta: Comorbidades (B ou C)=[comorbidades_encaminhamento_cardio=1,  comorbidades_reclassificação=1], AuxilioConduta: Classificar Estágio e Classe da Insuficiência Cardíaca=[estagio_b=1,  classe_1=1,  classe_2=1,  estagio_c=1,  classe_3=0,  classe_4=0,  estagio_a=1], AuxilioConduta: Condutas em Comum=[ps_maior_140_ou_pd_maior_90=1,  dislipidemia=0,  diabetes=1]}
+clinico_itu_episodio__ou_retorno;{}
+clinico_itu_verifica_episodio;{}
+clinico_medico_de_familia_diarreia;{AuxilioConduta: Reavaliar Sinais e Sintomas=[sinais_sintomas_paciente=0,  UM=0,  DOIS=1,  TRES=0]}
+clinico_medico_de_familia_itu;{}
+clinico_medico_de_familia_vertigem;{AuxilioConduta: Classificar Vertigem=[vertigem_intensa=1,  nistagmo_horizontal=1,  nistagmo_fatigavel=1,  tinitus_ou_hipocacusia=1,  2=0,  vertigem_branda=1,  nistagmo_ataxico=1,  nistagmo_nao_fatigavel=0,  outros_sintomas_neurologicos=1], AuxilioConduta: Classificar Vertigem Posicional=[vertigem_posicional_meniere=1,  vertigem_posicional_vppb=1]}
+clinico_monoterapia_linha_afro;{AuxilioConduta: Selecionar Medicação=[selecionar_medicacao_mono_linha_afro=0,  UM=0,  DOIS=0]}
+clinico_monoterapia_linha_ieca;{}
+clinico_nascer_bem_prematuridade;{}
+clinico_nascer_bem_toxoplasmose;{}
+clinico_otite_media_aguda;{AuxilioConduta: Escolher Tratamento: Adulto=[opcao_tratamento_adulto=0,  UM=0,  DOIS=0], AuxilioConduta: Escolher Tratamento: Pediátrico=[opcao_tratamento_pediatrico=0,  UM=0,  DOIS=0]}
+clinico_parasitose;{AuxilioConduta: Sinais e Sintomas=[paras_sinais_sintomas=0,  UM=0,  TRES=1,  DOIS=0,  OITO=1,  QUATRO=0,  SETE=1,  CINCO=0,  SEIS=0,  NOVE=0], AuxilioConduta: Condições de Encaminhamento (Urgência)=[condicoes_encaminhamento=2,  UM=0,  DOIS=3]}
+clinico_protocolo_farmacologico_afroamericano;{}
+clinico_rinite_alergica;{AuxilioConduta: [Rinite Persistente] Idade=[rin_pers_6_a_11_meses=1,  rin_pers_12_meses_a_2_anos=0,  rin_pers_2_a_5_anos=1,  rin_pers_6_a_11_anos=1,  rin_pers_12_anos_a_adulto=1], AuxilioConduta: [Rinite Persisntente] Peso=[rin_pers_2_a_5_anos=1,  rin_pers_peso=0,  2=0,  1=0,  rin_pers_6_a_11_anos=0,  rin_pers_12_anos_a_adulto=1], AuxilioConduta: Exame Físico=[obstrucao_unilateral_polipo_ou_tumor=1,  obstrucao_unilateral_desvio_septo=0,  obstrucao_unilateral_corpo_estranho=0,  obstrucao_unilateral_polipo_ou_tumor=1,  1=2], AuxilioConduta: Classificação da Rinite=[classificacao_rinite=0,  1=0,  3=1,  4=1,  2=0], AuxilioConduta: [Rinite Intermitente] Idade=[rin_interm_6_a_11_meses=1,  rin_interm_11_meses_a_2_anos=0,  rin_interm_2_a_5_anos=1,  rin_interm_6_a_11_anos=1,  rin_interm_12_anos_adulto=1], AuxilioConduta: [Rinite Leve, Persistente ou Grave] Peso=[rin_leve_2_a_5_anos=1,  rinite_leve_peso=0,  1=0,  2=0,  rin_leve_6_a_11_anos=0,  rin_leve_acima_de_12_anos=1], AuxilioConduta: [Rinite Intermitente] Peso=[rin_interm_2_a_5_anos=1,  rin_interm_peso=0,  2=0,  1=0,  rin_interm_6_a_11_anos=0,  rin_interm_12_anos_adulto=1], AuxilioConduta: [Rinite Leve, Moderada ou Grave] Idade=[rin_leve_6_a_11_meses=1,  rin_leve_12_meses_2_anos=0,  rin_leve_2_a_5_anos=1,  rin_leve_6_a_11_anos=1,  rin_leve_acima_de_12_anos=1]}
+clinico_sifilis;{}
+clinico_sinusite;{AuxilioConduta: Diagnóstico Diferencial=[corpos_estranhos_nasais=1,  atresia_de_coana_unilateral=1,  rinite_alergica=1,  adenoidite=1], AuxilioConduta: [Sinusite] Avaliação do Quadro=[sinusite_Aguda=1,  sinusite_complicada=0,  sinusite_cronica=1,  sinusite_recorrente=1,  outras_doencas=1], AuxilioConduta: [Sinusite Recorrente ou Crônica] Diagnósticos Diferenciais=[diagnosticos_diferenciais_rinite_alerGica=1,  diagnosticos_diferenciais_hipertrofia_adenoide=0,  diagnosticos_diferenciais_doencas_sistemicas=1,  diagnosticos_diferenciais_refluxo=1,  diagnosticos_diferenciais_variacoes_anatomicas_cavidade_nasal=1]}
+clinico_tetraterapia_bar;{}
+clinico_tetraterapia_linha_afro;{AuxilioConduta: Verificação de Medicação=[medicacao_linha_tetra_afro=0,  DOIS=0,  UM=0]}
+clinico_tetraterapia_linha_ieca;{}
+clinico_transplante_renal;{AuxilioConduta: Verificar sexo do paciente=[sexo_paciente=0,  1=0,  2=0]}
+clinico_tratamento_dislipidemia__risco_alto;{}
+clinico_tratamento_dislipidemia__risco_baixo;{AuxilioConduta: Selecionar Terapia=[terapia_medicação=1,  terapia_mudanca_estilo_vida=1,  terapia_medicacal_avulsa=1]}
+clinico_tratamento_dislipidemia__risco_intermediario;{}
+clinico_tratamento_dislipidemia__risco_muito_alto;{}
+clinico_triploterapia_linha_afro;{AuxilioConduta: Verificação de Medicação=[medicacao_linha_triplo_afro=0,  UM=0,  DOIS=0]}
+clinico_triploterapia_linha_ieca;{}
+clinico_vulvovaginite;{AuxilioConduta: Consulta de Retorno=[vulvovaginite_recorrente=1,  resolucao_do_quadro_clinico=1,  paciente_hiv_positiva=1], AuxilioConduta: Verificar Sinais e Sintomas=[candidiase=1,  vaginose_bacteriana=1,  tricomoniase=1]}
+hospitalar_acidente_vascular_cerebral_avc;{}
+hospitalar_afeccoes_dermatologicas;{AuxilioConduta: [Afecções das Unhas] Sintomas=[unha_encravada_sem_infeccao=1,  onicomicose=1,  unha_encravada_com_infeccao=1], AuxilioConduta: Avaliação do Quadro=[celulite=1,  urticaria=1,  impetigo=1,  pe_diabetico=1,  escabiose=0,  queimaduras=1,  afeccoes_das_unhas=1,  cispo_pilonidal=1,  abcesso_cutaneo=1], AuxilioConduta: Definir Grau da Queimadura=[queimadura_grau_i=1,  queimadura_grau_ii=1,  queimadura_grau_iii=1]}
+hospitalar_afeccoes_dermatologicas_pediatrico;{AuxilioConduta: [Afecções das Unhas] Sintomas=[unha_encravada_sem_infeccao=1,  onicomicose=1,  unha_encravada_com_infeccao=1], AuxilioConduta: Avaliação do Quadro=[celulite=1,  urticaria=1,  impetigo=1,  queimaduras=0,  afeccoes_das_unhas=1,  cispo_pilonidal=1,  abcesso_cutaneo=0,  dermatites=1,  micoses=1,  parasitoses=1], AuxilioConduta: Definir Grau da Queimadura=[queimadura_grau_i=1,  queimadura_grau_ii=1,  queimadura_grau_iii=1]}
+hospitalar_afeccoes_oftalmologicas;{}
+hospitalar_amniorrexe_prematura;{AuxilioConduta: Verificar Idade Gestacional=[ig-menor-24=1,  ig-entre-24-33=1,  ig-maior-igual-34=1], AuxilioConduta: Verificar Via de Parto=[opcao-parto-cesarea=1,  opcao-parto-normal=1]}
+hospitalar_arboviroses_pediatrico;{}
+hospitalar_artrite_septica_pediatrica;{}
+hospitalar_asma;{AuxilioConduta: Avaliar Intensidade da Crise=[crise_leve=1,  crise_moderada_ou_grave=1]}
+hospitalar_cefaleia;{AuxilioConduta: [Cefaleia Primaria] Classificar Cefaleia=[cefaleia_primaria_tensional=1,  cefaleia_primaira_em_salvas=0,  cefaleia_primaria_enxaqueca=0,  retorno=1]}
+hospitalar_celulite_pediatrico;{}
+hospitalar_chikungunya;{}
+hospitalar_conjuntivite_pediatrico;{}
+hospitalar_corrimento_vaginal;{}
+hospitalar_corrimento_vaginal_obstetrico;{}
+hospitalar_curativo;{}
+hospitalar_dengue;{}
+hospitalar_diabetes_mellitus;{}
+hospitalar_diarreia;{AuxilioConduta: [Grupo B] Reavaliar paciente=[semsinais_semdesidratacao=1,  comsinais_semdesidratacao=0,  semsinais_comdesidratacao=0,  comsinais_comdesidratacao=1], AuxilioConduta: [Grupo B com Diarreia Cronica] Avaliar exames e melhora=[semalteracoes_commelhora=1,  semalteracoes_semmelhora=1,  comalteracoes=1]}
+hospitalar_dispepsia;{}
+hospitalar_dor_abdominal;{AuxilioConduta: Classificar suspeita conforme dor=[obstucao_intestinal=1,  pancreatite_aguda=1,  nefrolitíase=1,  apendicite_aguda=1,  colecistite_aguda=1,  diverticulite_aguda=1,  doenca_inflamatoria_pelvica=1,  ulcera_gastrica=1,  dor_apos_trauma=1,  torcao_do_ovario=1,  colangite_aguda=0,  aneurisma_aorta_abdominal=0,  dispepsia_drge=0,  gravidez_ectopica=1,  infarto_mesenterico=0,  hernia_abdominal=0,  diagnostico_inconclusivo=1,  dor_abdominal_simples=1,  mais_de_duas_ocorrencias=1]}
+hospitalar_dor_abdominal_na_mulher;{AuxilioConduta: [Gestante] Classificar suspeita conforme dor=[obstrucao_intestinal=1,  dispepsia_drge=0,  dor_abdominal_simples=1,  suspeita_ITU=0,  dores_causa_nao_obstetrica=1,  gestante_complicacoes_obstetricas=1], AuxilioConduta: [Não Gestante] Classificar suspeita conforme dor=[ngestante_dor_abdominal_simples=1,  ngestante_suspeita_itu=0,  ngestante_dores_sangramento=1,  ngestante_dip=0,  ngestante_gravidez_ectopica=1,  ngestante_torcao_ovario=1,  ngestante_dores_nao_ginecologica=1]}
+hospitalar_dor_abdominal_pediatrico;{}
+hospitalar_dor_musculoesqueletica;{AuxilioConduta: Monoartrite Aguda=[artrite_septica=1,  artrite_gotosa=1,  artrite_pos_traumatica=1], AuxilioConduta: Classificar Dor=[monoartrite=1,  oligo_ou_poliartrite=1,  artrite_cronica=1,  artralgia_osteoartrose=0,  trauma_musculoesqueletico=1,  tendinite_tendossino_epicondi_bucite_dort=1,  trauma_com_fratura_ou_limitacao=1]}
+hospitalar_dor_toracica;{AuxilioConduta: Caracterização da Dor Torácica=[dor_tipo_A=1,  dor_tipo_B=1,  dor_tipo_C=1,  dor_tipo_D=1], AuxilioConduta: Procurar outras causas=[outras_causas_pneumonia=1,  outras_causas_tep_pneumotorax=1,  outras_causas_disseccao=1,  outras_causas_pericardite=0,  outras_causas_drge_espasmo_esofagiano=1,  outras_cauasas_dor_musculo_esqueletica=1,  outras_causas_dor_psicogenica=1]}
+hospitalar_dpoc;{}
+hospitalar_endometrite_puerperal;{}
+hospitalar_febre_sem_sinais_de_localizacao;{AuxilioConduta: Avaliar Idade=[idade_menor_28_ddv=1,  idade_1_a_3_meses=1,  idade_maior_3_meses=1]}
+hospitalar_fratura_exposta;{AuxilioConduta: Verificar Grau da Fratura=[frat-grau12=1,  frat-grau34=1]}
+hospitalar_geca_pediatrico;{AuxilioConduta: [Desidratação Leve] Idade do Paciente=[menor_dois_meses=1,  maior_dois_meses=1], AuxilioConduta: Grau de Desidratação=[grupo_A=1,  grupo_b=0,  grupo_c=0,  nauseas_vomitos=1]}
+hospitalar_gestacao_prolongada;{}
+hospitalar_hemorragia_digestiva_alta;{AuxilioConduta: Marcador de Risco=[glasgow_ureia=0,  glasgow_hemoglobina_homem=1,  glasgow_pas=0,  glasgow_pulso=0,  glasgow_melena=0,  glasgow_sincope=0,  glasgow_doenca_hepatica=0,  glasgow_insuficiencia_cardiaca=0,  zero=1,  glasgow_hemoglobina_mulher=0]}
+hospitalar_hemorragia_posparto;{AuxilioConduta: Avaliar Condição=[condicao_atonia_uterina=1,  condicao_resto_placentario=1]}
+hospitalar_hipertensao_arterial_sistemica;{AuxilioConduta: Classificar Hipertensão=[emergencia_hipertensiva=1,  urgencia_hipertensiva=1,  pseudocrise_hipertensiva=1]}
+hospitalar_ictericia_neonatal;{}
+hospitalar_infeccao_causada_pelo_herpes_virus;{AuxilioConduta: [Varicela] Avaliar Sintomas=[varicela_infeccao_secundaria=1,  varicela_imunossupressao_e_outros_sintomas=1], AuxilioConduta: Avaliação do Quadro=[herpes_genital=1,  herpes_labial=0,  herpes_zoster=0,  varicela=1]}
+hospitalar_infeccao_do_trato_urinario_em_gestante_itu;{}
+hospitalar_infeccao_do_trato_urinario_itu;{AuxilioConduta: Informar Sexo do paciente=[sexo_masculino=1,  sexo_feminino=1]}
+hospitalar_insuficiencia_cardiaca;{}
+hospitalar_ivas;{AuxilioConduta: Avaliar Sintomas Específicos=[sintomas_influenza=1,  sintomas_resfriado=0,  sintomas_amigdalite=0,  sintomas_rinite=0,  rinite=1], AuxilioConduta: Avaliar a Etiologia=[rino_etiologia_viral=1,  rino_etiologia_bacteriana=1,  rino_etiologia_alergica=1]}
+hospitalar_ivas_pediatrico;{AuxilioConduta: [Resfriado comum] Avaliar exames=[S37 (exames alterados)=1,  resfriado_alteracao_exames=0]}
+hospitalar_laringite_pediatrico;{}
+hospitalar_lombalgia;{AuxilioConduta: Analisar resultados exames=[suspeita_calculo=1,  calculo_presente=1,  suspeita_calculo=1,  calculo_presente=1]}
+hospitalar_meningite;{}
+hospitalar_nauseas_e_vomitos;{AuxilioConduta: Sintomas do Paciente=[emese_gravidica=1,  cefaleia_nauseas_vomitos=1,  dor_abdominal_nauseas_vomitos=1,  dor_toracico_nauseas_vomitos=0,  diarreia_nauseas_vomitos=1,  dor_lombar_nauseas_vomitos=1,  tontura_nauseas_vomitos=0,  tratamento_quimioterapico_nauseas_vomitos=1,  ingestao_alcool_nauseas_vomitos=1,  sem_causa_aparente_nauseas_vomitos=1]}
+hospitalar_nauseas_e_vomitos_obstetrico;{AuxilioConduta: Sintomas do Paciente=[emese_gravidica=1,  cefaleia_nauseas_vomitos=1,  dor_abdominal_nauseas_vomitos=1,  dor_toracico_nauseas_vomitos=0,  diarreia_nauseas_vomitos=1,  dor_lombar_nauseas_vomitos=1,  tontura_nauseas_vomitos=0,  tratamento_quimioterapico_nauseas_vomitos=1,  ingestao_alcool_nauseas_vomitos=1,  sem_causa_aparente_nauseas_vomitos=1]}
+hospitalar_neutropenia_febril;{}
+hospitalar_otalgia;{Tratamento: Medicação para dor=[acometimento_pavilhao_auricular=1,  otite_media=1,  otite_externa=1]}
+hospitalar_pneumonia_adquirida_na_comunidade;{}
+hospitalar_pneumonia__influenza;{}
+hospitalar_ramo;{AuxilioConduta: Confirmar infecção=[confirmar_infeccao_apos_exames=1,  confirmar_infeccao=2]}
+hospitalar_sepse_pediatrico;{AuxilioConduta: Identificar foco da SEPSE=[foco_pneumonia=0,  foco_pielonefrite=0,  foco_meningite=0,  foco_outro_foco=0,  foco_abdome_agudo=1,  foco_partes_moles=1,  foco_neutropenia_febril=1,  foco_infeccao_neonatal=1]}
+hospitalar_sibilancia_na_infancia;{}
+hospitalar_sindrome_hipertensiva;{AuxilioConduta: [IG >= 20] Avaliar Quadro=[maior20_pressao=1,  maior20_sinais_cronicos=2,  maior20_exames_laboratoriais=0,  maior20_usg=1]}
+hospitalar_tce_pediatrico;{AuxilioConduta: [TCE Leve ou Moderado] Idade do Paciente=[menor_tres_meses=1,  entre_tres_meses_dois_anos=1,  maior_dois_anos=1]}
+hospitalar_tontura_e_vertigem;{}
+hospitalar_trabalho_de_parto_prematuro;{}
+hospitalar_tratamento_de_sepse;{AuxilioConduta: Identificar Foco Infeccioso=[trat_sepse_pneumo_comunit=1,  trat_sepse_pneumo_hosp=1,  trat_sepse_cistite=1,  trat_sepse_pielonefrite=0,  trat_sepse_meningite=1,  trat_sepse_partes_moles=1,  trat_sepse_abdominal=0,  trat_sepse_neutropenia=1,  trat_sepse_infeccao_sanguinea=1,  trat_sepse_indeterminado=1]}
+hospitalar_tratamento_de_sirs;{AuxilioConduta: Identificar foco infeccioso=[trat_sirs_pneumo_comun=1,  trat_sirs_pneumo_hosp=0,  trat_sirs_cistite=1,  trat_sirs_pielonefrite=0,  trat_sirs_meningite=1,  trat_sirs_partes_moles=1,  trat_sirs_abdominal=1,  trat_sirs_neutropenia=1]}
+hospitalar_tromboembolismo_pulmonar_tep;{}
+hospitalar_trombose_venosa_profunda_tvp;{AuxilioConduta: Avaliar condições do paciente=[TVP_maciço=0,  embolia_pulmonar=0,  alto_risco_de_sangramento=0,  comorbidades=0,  gravidez=1], AuxilioConduta: Escore de Wells=[tep=1,  escore_wells=-2,  0=0]}
+hospitalar_urticaria_pediatrico;{}
+hospitalar_verificar_arbovirose;{}
+hospitalar_verifica_sepse;{}
+hospitalar_zika;{}

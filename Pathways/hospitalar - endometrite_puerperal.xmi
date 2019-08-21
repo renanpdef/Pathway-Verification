@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Endometrite Puerperal" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35265" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Crit&#xe9;rios de Sepse" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Escala de Glasgow (GCS) &lt; 15" url="" id="16448">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="33653" weight="1" value="false"/>
+    </questions>
+    <questions text="FR >= 22" url="" id="16449">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="33654" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt;= 100" url="" id="16450">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="33655" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="35266" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo SEPSE" description="" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35267" type="Tratamento" type_verbose="Tratamento" url="" name="Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;u>&lt;strong>Orienta&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/u>:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Curva T&amp;eacute;rmica e de pulso.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Individualizar a necessidade de Orastina.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.1">
+    <examination url="US PELVICA TRANSVAGINAL" exam_id="33010145" limb_side="" quantity="1" reason="Endometrite Puerperal" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA" exam_id="28100298" limb_side="" quantity="1" reason="Endometrite Puerperal" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Endometrite Puerperal" clinical_indication="n/a"/>
+    <medication url="" med_id="43788" id="19919" name="SORO FISIOLOGICO 0,9% 1000 ML TUBO 1000 ML" brand="" unit="ML" access="6" daily_dosage="2000" cycles="1" treatement_time="19919" standard="null"/>
+    <medication url="" med_id="121737" id="19920" name="ORASTINA 5UI / ML AMPL 1 ML" brand="" unit="UI" access="6" daily_dosage="20" cycles="1" treatement_time="19920" standard="null"/>
+    <medication url="" med_id="38822" id="19921" name="DALACIN 300 MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="900" cycles="1" treatement_time="19921" frequency="8" standard="null"/>
+    <medication url="" med_id="37400" id="19922" name="GENTAMICINA 80 MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="240" cycles="1" treatement_time="19922" standard="null"/>
+    <medication url="" med_id="59609" id="19923" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="MG" access="6" daily_dosage="100" cycles="1" treatement_time="19923" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:9591,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:5,&quot;codigo_principio_ativo&quot;:635}"/>
+    <medication url="" med_id="36064" id="19924" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="19924" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;DILUIDO EM &#xc1;GUA DESTILADA&quot;,&quot;id&quot;:9592,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Cont&#xed;nuo&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1717}"/>
+    <medication url="" med_id="126122" id="19925" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="19925" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:9593,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <admission url="ADMISSION" admission="01990004" reason="n/a" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="35268" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (com sepse crit&#xe9;rios de sepse)" description="com sepse crit&#xe9;rios de sepse">
+    <operation name="com sepse crit&#xe9;rios de sepse" Operator="greaterOrEqual" id="33658">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios SEPSE" Operator="addition" id="33657">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="33653" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="33654" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="33655" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33656" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="35269" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem sepse crit&#xe9;rios de sepse)" description="sem sepse crit&#xe9;rios de sepse">
+    <operation name="sem sepse crit&#xe9;rios de sepse" Operator="lessThan" id="33659">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios SEPSE" Operator="addition" id="33657">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="33653" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="33654" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="33655" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33656" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <operation name="Crit&#xe9;rios SEPSE" Operator="addition" id="33657">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="33653" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="33654" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="33655" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="33653" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="33654" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="33655" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="33656" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

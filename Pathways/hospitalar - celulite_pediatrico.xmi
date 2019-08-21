@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Celulite Pedi&#xe1;trico" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="27681" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar celulite" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.2 //@sequence.6">
+    <questions text="Quadro de celulite sugestivo de:" url="" id="13381">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tipo_celulite" id="26941" weight="1" value="0.0">
+        <option description="Celulite Partes Moles: infec&#xe7;&#xe3;o da derme e tecido subcut&#xe2;neo, caracterizado por calor, dor, edema e hiperemia sem margens definidas. Pode ocorrer sintomas sist&#xea;micos como febre, toxemia e mal estar. Por vezes, ocorre linfadenopatia sat&#xe9;lite." weight="1"/>
+        <option description="Celulite Periorbit&#xe1;ria (ou Pr&#xe9;-Septal): infec&#xe7;&#xe3;o que pode envolver fronte, face inferior e p&#xe1;lpebras, geralmente unilateral associado a eritema, edema, dor, aumento de temperatura local, sem entretanto altera&#xe7;&#xe3;o da acuidade visual e sem oftalmoplegia." weight="2"/>
+        <option description="Paciente com celulite, retorna para avaliar ap&#xf3;s 48h de ATB ambulatorial" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="27682" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Celulite partes moles] Verificar sintomas" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.4">
+    <questions text="Sintomas sist&#xea;micos e/ou les&#xe3;o extensa?" url="" id="13382">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_sistemicos" id="26942" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="27683" type="Receita" type_verbose="Receita" url="" name="[Celulite partes moles sem sintomas] Receita" description="&lt;p>Antibi&amp;oacute;ticos:&lt;/p>&#xA;&#xA;&lt;p>1&amp;ordm; linha: Cefalexina 50-100 mg/kg/dia 6/6h ou Cefaclor 20-30 mg/kg/dia 12/12h.&lt;/p>&#xA;&#xA;&lt;p>2&amp;ordm; linha: Amoxicilina + Clavulanato 50 mg/kg/dia&lt;/p>" isTerminal="true" inputSequences="//@sequence.1">
+    <item id="9021" url="" name="Cefalexina 250 mg/5 ml _______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 6/6h por 7 dias."/>
+    <item id="9022" url="" name="Cefaclor 375 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 12/12h por 7 dias."/>
+    <item id="9023" url="" name="Amoxicilina + Clavulanato 400+57 mg/5 ml ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 12/12h por 7 dias."/>
+    <item id="9024" url="" name="Profenid&#xae; gotas ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h por 3 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="27684" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Celulite partes moles sem sintomas] Reavaliar" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.5">
+    <questions text="Ap&#xf3;s 48h de uso do antibi&#xf3;tico, paciente sem regress&#xe3;o ou com piora da celulite?" url="" id="13383">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sem_piora" id="26943" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="27685" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Celulite partes moles com melhora] Manter ATB" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Manter antibi&amp;oacute;tico oral e liberar paciente.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.3 //@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="27686" type="Tratamento" type_verbose="Tratamento" url="" name="[Celulite partes moles com sintomas] Conduta" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.8">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Celulite partes moles" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Celulite partes moles" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA" exam_id="28100298" limb_side="" quantity="1" reason="Celulite partes moles" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="27687" type="Tratamento" type_verbose="Tratamento" url="" name="[Celulite Periorbit&#xe1;ria] Exames" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Discutir com chefia a possibilidade de interna&amp;ccedil;&amp;atilde;o.&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Celulite Periorbit&#xe1;ria" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Celulite Periorbit&#xe1;ria" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA" exam_id="28100298" limb_side="" quantity="1" reason="Celulite Periorbit&#xe1;ria" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="27688" type="Tratamento" type_verbose="Tratamento" url="" name="Interna&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Passar caso&amp;nbsp;para chefia devido&amp;nbsp;prov&amp;aacute;vel interna&amp;ccedil;&amp;atilde;o. Potencial risco de complica&amp;ccedil;&amp;atilde;o: meningite,&amp;nbsp;&amp;nbsp;abscesso em seio frontal e trombose de seio cavernoso.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Antibi&amp;oacute;ticos recomendados:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>&lt;u>&lt;strong>1&amp;ordf; linha&lt;/strong>&lt;/u>: Oxalacina 200mg/kg/dia + Ceftriaxona 50-75mg/kg/dia&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>&lt;u>&lt;strong>2&amp;ordf; linha&lt;/strong>&lt;/u>:&amp;nbsp; Clindamicina 25-40mg/kg/dia&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="27689" type="Tratamento" type_verbose="Tratamento" url="" name="[Celulite com piora ou sem regress&#xe3;o] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der de equipe sobre prov&amp;aacute;vel interna&amp;ccedil;&amp;atilde;o.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.5" outputSequences="//@sequence.9">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Celulite partes moles" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Celulite partes moles" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA" exam_id="28100298" limb_side="" quantity="1" reason="Celulite partes moles" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="27690" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Celulite partes moles com sintomas] Discutir com l&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der de equipe sobre prov&amp;aacute;vel interna&amp;ccedil;&amp;atilde;o.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.8 //@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="27691" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Celulite com piora ou sem regress&#xe3;o] Avaliar exames" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.10 //@sequence.11">
+    <questions text="Exames apresentam altera&#xe7;&#xe3;o?" url="" id="13384">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exames_alterados" id="26944" weight="1" value="false"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="27692" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (celulite partes moles)" description="celulite partes moles">
+    <operation name="celulite partes moles" Operator="equal" id="26948">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_celulite" id="26941" weight="1" value="0.0">
+        <option description="Celulite Partes Moles: infec&#xe7;&#xe3;o da derme e tecido subcut&#xe2;neo, caracterizado por calor, dor, edema e hiperemia sem margens definidas. Pode ocorrer sintomas sist&#xea;micos como febre, toxemia e mal estar. Por vezes, ocorre linfadenopatia sat&#xe9;lite." weight="1"/>
+        <option description="Celulite Periorbit&#xe1;ria (ou Pr&#xe9;-Septal): infec&#xe7;&#xe3;o que pode envolver fronte, face inferior e p&#xe1;lpebras, geralmente unilateral associado a eritema, edema, dor, aumento de temperatura local, sem entretanto altera&#xe7;&#xe3;o da acuidade visual e sem oftalmoplegia." weight="2"/>
+        <option description="Paciente com celulite, retorna para avaliar ap&#xf3;s 48h de ATB ambulatorial" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="26945" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="27693" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem sintomas)" description="sem sintomas">
+    <operation name="sem sintomas" id="26949">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_sistemicos" id="26942" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="27694" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (retorno)" description="-">
+    <operation name="retorno" Operator="equal" id="26950">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_celulite" id="26941" weight="1" value="0.0">
+        <option description="Celulite Partes Moles: infec&#xe7;&#xe3;o da derme e tecido subcut&#xe2;neo, caracterizado por calor, dor, edema e hiperemia sem margens definidas. Pode ocorrer sintomas sist&#xea;micos como febre, toxemia e mal estar. Por vezes, ocorre linfadenopatia sat&#xe9;lite." weight="1"/>
+        <option description="Celulite Periorbit&#xe1;ria (ou Pr&#xe9;-Septal): infec&#xe7;&#xe3;o que pode envolver fronte, face inferior e p&#xe1;lpebras, geralmente unilateral associado a eritema, edema, dor, aumento de temperatura local, sem entretanto altera&#xe7;&#xe3;o da acuidade visual e sem oftalmoplegia." weight="2"/>
+        <option description="Paciente com celulite, retorna para avaliar ap&#xf3;s 48h de ATB ambulatorial" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="26947" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="27695" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (com melhora)" description="com melhora">
+    <operation name="com melhora" Operator="affirmation" id="26951">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sem_piora" id="26943" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="27696" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (com sintomas)" description="com sintomas">
+    <operation name="com sintomas" Operator="affirmation" id="26952">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_sistemicos" id="26942" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.3" id="27697" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (com piora)" description="com piora">
+    <operation name="com piora" id="26953">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sem_piora" id="26943" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="27698" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (celulite periorbitaria)" description="celulite periorbitaria">
+    <operation name="celulite periorbitaria" Operator="equal" id="26954">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_celulite" id="26941" weight="1" value="0.0">
+        <option description="Celulite Partes Moles: infec&#xe7;&#xe3;o da derme e tecido subcut&#xe2;neo, caracterizado por calor, dor, edema e hiperemia sem margens definidas. Pode ocorrer sintomas sist&#xea;micos como febre, toxemia e mal estar. Por vezes, ocorre linfadenopatia sat&#xe9;lite." weight="1"/>
+        <option description="Celulite Periorbit&#xe1;ria (ou Pr&#xe9;-Septal): infec&#xe7;&#xe3;o que pode envolver fronte, face inferior e p&#xe1;lpebras, geralmente unilateral associado a eritema, edema, dor, aumento de temperatura local, sem entretanto altera&#xe7;&#xe3;o da acuidade visual e sem oftalmoplegia." weight="2"/>
+        <option description="Paciente com celulite, retorna para avaliar ap&#xf3;s 48h de ATB ambulatorial" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="26946" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="27699" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.5" id="27700" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="-"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="27701" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.10" id="27702" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (exames alterados)" description="exames alterados">
+    <operation name="exames alterados" Operator="affirmation" id="26955">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_alterados" id="26944" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.10" id="27703" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (exames normais)" description="exames normais">
+    <operation name="exames normais" id="26956">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_alterados" id="26944" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tipo_celulite" id="26941" weight="1" value="0.0">
+    <option description="Celulite Partes Moles: infec&#xe7;&#xe3;o da derme e tecido subcut&#xe2;neo, caracterizado por calor, dor, edema e hiperemia sem margens definidas. Pode ocorrer sintomas sist&#xea;micos como febre, toxemia e mal estar. Por vezes, ocorre linfadenopatia sat&#xe9;lite." weight="1"/>
+    <option description="Celulite Periorbit&#xe1;ria (ou Pr&#xe9;-Septal): infec&#xe7;&#xe3;o que pode envolver fronte, face inferior e p&#xe1;lpebras, geralmente unilateral associado a eritema, edema, dor, aumento de temperatura local, sem entretanto altera&#xe7;&#xe3;o da acuidade visual e sem oftalmoplegia." weight="2"/>
+    <option description="Paciente com celulite, retorna para avaliar ap&#xf3;s 48h de ATB ambulatorial" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_sistemicos" id="26942" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sem_piora" id="26943" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exames_alterados" id="26944" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="26945" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="26946" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="26947" weight="1" value="3.0"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Gesta&#xe7;&#xe3;o Prolongada" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31786" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Idade Gestacional e comorbidades" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Idade Gestacional" url="" id="15134">
+      <answers xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="30696" weight="1" value="0.0">
+        <option description=">= 41 semanas SEM comorbidades" weight="1"/>
+        <option description=">= 41 semanas COM comorbidades" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31787" type="Tratamento" type_verbose="Tratamento" url="" name="[>= 41 sem e sem comorbidades] Exames" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Internar para resolver gesta&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.2">
+    <examination url="US OBSTETRICA" exam_id="33010110" limb_side="" quantity="1" reason="IG >= 41 sem e sem comorbidades" clinical_indication="n/a"/>
+    <admission url="ADMISSION" admission="45990000" reason="Gesta&#xe7;&#xe3;o prolongada" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31788" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar condi&#xe7;&#xf5;es ideais de parto" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Condi&#xe7;&#xf5;es ideais para indu&#xe7;&#xe3;o do parto:" url="" id="15135">
+      <answers xsi:type="pathwayMetamodel:Choice" name="condicoes__parto" id="30697" weight="1" value="0.0">
+        <option description="Peso fetal &lt; 4.000 ,g" weight="1"/>
+        <option description="At&#xe9; 1 ces&#xe1;rea" weight="1"/>
+        <option description="Maior bols&#xe3;o > 20 mm" weight="1"/>
+        <option description="TCLE da paciente" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="31789" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Sem alguma condi&#xe7;&#xe3;o] Individualizar conduta" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:18px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Individualizar conduta junto ao l&amp;iacute;der.&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31790" type="Tratamento" type_verbose="Tratamento" url="" name="[Com todas as condi&#xe7;&#xf5;es] Indu&#xe7;&#xe3;o TP" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Avaliar indu&amp;ccedil;&amp;atilde;o de trabalho de parto e vitalidade fetal&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.3">
+    <procedure url="CARDIOTOCOGRAFIA INTRAPARTO (POR HORA) ATE 6 HORAS EXTERNA" procedure="20202024" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31791" type="Tratamento" type_verbose="Tratamento" url="" name="[IG>= 41 sem com comorbidades] Individualizar conduta" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:18px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Internar paciente e individualizar conduta.&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.1">
+    <admission url="ADMISSION" admission="45990000" reason="Paciente com idade gestacional maior que 41 semanas e com comorbidades" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="31792" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (41s e sem comorbidades)" description="at&#xe9; 40s e 6d">
+    <operation name="41s e sem comorbidades" Operator="equal" id="30704">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="30696" weight="1" value="0.0">
+        <option description=">= 41 semanas SEM comorbidades" weight="1"/>
+        <option description=">= 41 semanas COM comorbidades" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="30698" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="31793" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (41s e com comorbidades)" description="mais de 41s">
+    <operation name="41s e com comorbidades" Operator="equal" id="30705">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="30696" weight="1" value="0.0">
+        <option description=">= 41 semanas SEM comorbidades" weight="1"/>
+        <option description=">= 41 semanas COM comorbidades" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="30699" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="31794" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="31795" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (com todas as condi&#xe7;&#xf5;es)" description="com todas as condi&#xe7;&#xf5;es">
+    <operation name="com todas as condi&#xe7;&#xf5;es" Operator="equal" id="30706">
+      <operand xsi:type="pathwayMetamodel:Choice" name="condicoes__parto" id="30697" weight="1" value="0.0">
+        <option description="Peso fetal &lt; 4.000 ,g" weight="1"/>
+        <option description="At&#xe9; 1 ces&#xe1;rea" weight="1"/>
+        <option description="Maior bols&#xe3;o > 20 mm" weight="1"/>
+        <option description="TCLE da paciente" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="30702" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="31796" type="Sequencia" type_verbose="Sequencia" url="" name="S31 (sem alguma das condi&#xe7;&#xf5;es)" description="sem alguma das condi&#xe7;&#xf5;es">
+    <operation name="sem alguma das condi&#xe7;&#xf5;es" Operator="lessThan" id="30707">
+      <operand xsi:type="pathwayMetamodel:Choice" name="condicoes__parto" id="30697" weight="1" value="0.0">
+        <option description="Peso fetal &lt; 4.000 ,g" weight="1"/>
+        <option description="At&#xe9; 1 ces&#xe1;rea" weight="1"/>
+        <option description="Maior bols&#xe3;o > 20 mm" weight="1"/>
+        <option description="TCLE da paciente" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="30702" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <operation name="Comorbidades" Operator="addition" id="30703"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="30696" weight="1" value="0.0">
+    <option description=">= 41 semanas SEM comorbidades" weight="1"/>
+    <option description=">= 41 semanas COM comorbidades" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="condicoes__parto" id="30697" weight="1" value="0.0">
+    <option description="Peso fetal &lt; 4.000 ,g" weight="1"/>
+    <option description="At&#xe9; 1 ces&#xe1;rea" weight="1"/>
+    <option description="Maior bols&#xe3;o > 20 mm" weight="1"/>
+    <option description="TCLE da paciente" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="30698" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="30699" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="30700" weight="1" value="5.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="10" id="30701" weight="1" value="10.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="30702" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Chikungunya" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32219" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Definir fase" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.6">
+    <questions text="Definir fase da doen&#xe7;a no paciente:" url="" id="15329">
+      <answers xsi:type="pathwayMetamodel:Choice" name="fase_doenca" id="31116" weight="1" value="0.0">
+        <option description="FASE AGUDA (AT&#xc9; 14 DIAS)" weight="1"/>
+        <option description="FASE SUBAGUDA A CR&#xd4;NICA (> 14 DIAS)" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32220" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Sinais de gravidade" description="&lt;p>&lt;u>&lt;strong>Acometimento Neurol&amp;oacute;gico&lt;/strong>&lt;/u>:&amp;nbsp;irritabilidade, sonol&amp;ecirc;ncia, dor de cabe&amp;ccedil;a intensa e persistente, crises convulsivas e d&amp;eacute;ficit de for&amp;ccedil;a&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>Dispneia&lt;/strong>&lt;/u>: pode significar acometimento card&amp;iacute;aco ou pulmonar por pneumonite ou decorrente de embolia secund&amp;aacute;ria e trombose venosa profunda em pacientes com artralgia, edema e imobilidade significativa&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="H&#xe1; sinais de gravidade?" url="" id="15330">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_gravidade" id="31117" weight="1" value="0.0">
+        <option description="Acometimento neurol&#xf3;gico" weight="1"/>
+        <option description="Sinais de choque: extremidades frias, cianose, tontura, hipotens&#xe3;o, enchimento capilar lento ou instabilidade hemodin&#xe2;mica" weight="1"/>
+        <option description="Dispneia" weight="1"/>
+        <option description="Dor tor&#xe1;cica" weight="1"/>
+        <option description="V&#xf4;mitos persistentes" weight="1"/>
+        <option description="Descompensa&#xe7;&#xe3;o de doen&#xe7;a de base" weight="1"/>
+        <option description="Sangramentos de mucosas" weight="1"/>
+        <option description="Miocardite" weight="1"/>
+        <option description="Hepatite aguda" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32241" type="Tratamento" type_verbose="Tratamento" url="" name="[Sinais de Gravidade] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Hidratar o paciente:&lt;/strong> &lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>&lt;u>Fase de expans&amp;atilde;o&lt;/u>&lt;/strong>:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>SF 0,9% 20 ml/kg em 30 minutos (m&amp;aacute;ximo de 2000 mL por etapa), podendo ser repetida em at&amp;eacute; 3 vezes ou mais&amp;nbsp;(se paciente cardiopata, realizar al&amp;iacute;quotas 250 ml, reavaliando o paciente).&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>&lt;u>Fase de manuten&amp;ccedil;&amp;atilde;o&lt;/u>&lt;/strong>:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Soluc&amp;atilde;o 3:1 ou 2:1 de SG 5% e SF 0,9%. Volume de 25ml/Kg IV, em 6 horas, ou a crit&amp;eacute;rio cl&amp;iacute;nico de 8/8 ou 12/12 horas&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:18px&quot;>&lt;strong>&lt;span style=&quot;background-color:#e74c3c&quot;>&amp;nbsp;Passar caso com l&amp;iacute;der de equipe &lt;u>junto com os exames j&amp;aacute; solicitados&lt;/u>.&amp;nbsp;&lt;/span>&lt;/strong>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.1">
+    <examination url="GASOMETRIA VENOSA" exam_id="28011759" limb_side="" quantity="1" reason="Paciente com Chikungunya" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com suspeita de chikunguya e com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="TGP/ALT (ALANINA AMINOTRANSFERASE)" exam_id="28011376" limb_side="" quantity="1" reason="Paciente com suspeita de chikunguya e com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="Paciente com suspeita de chikunguya e com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Paciente com suspeita de chikunguya e com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com suspeita de chikunguya e com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="COAGULOGRAMA COMPLETO" exam_id="28040139" limb_side="" quantity="1" reason="Quadro de chikungunya" clinical_indication="n/a"/>
+    <medication url="" med_id="38008" id="17356" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="17356" frequency="6" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1 ml = 500 mg&quot;,&quot;id&quot;:8143,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:910}"/>
+    <medication url="" med_id="43800" id="17357" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17357" standard="null"/>
+    <medication url="" med_id="43800" id="17358" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17358" standard="null"/>
+    <medication url="" med_id="43800" id="17359" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17359" standard="null"/>
+    <medication url="" med_id="43800" id="17360" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17360" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32242" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Grupo de risco" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.5">
+    <questions text="Paciente em grupo de risco?" url="" id="15331">
+      <answers xsi:type="pathwayMetamodel:Choice" name="grupo_risco" id="31118" weight="1" value="0.0">
+        <option description="Gestantes" weight="1"/>
+        <option description="Maiores de 65 anos" weight="1"/>
+        <option description="Menores de 2 anos" weight="1"/>
+        <option description="Pacientes com comorbidades (HAS, DM, anemia falciforme, asma, alcoolismo)" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32243" type="Tratamento" type_verbose="Tratamento" url="" name="[Grupo de Risco] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Os pacientes de grupos de risco tamb&amp;eacute;m devem ser acompanhados ambulatorialmente; no entando, &lt;u>esses pacientes necessitam de observa&amp;ccedil;&amp;atilde;o diferenciada nas unidades&lt;/u> pelo risco de desenvolvimento das formas graves da doen&amp;ccedil;a, raz&amp;atilde;o pela qual devem ser acompanhados diariamente at&amp;eacute; o desaparecimento da febre e aus&amp;ecirc;ncia de sinais de gravidade.&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.4">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com suspeita de chikunguya no grupo de risco" clinical_indication="n/a"/>
+    <medication url="" med_id="38008" id="17381" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="17381" frequency="6" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1 ml = 500 mg&quot;,&quot;id&quot;:8144,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:910}"/>
+    <medication url="" med_id="38008" id="17382" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="17382" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1 ml = 500 mg&quot;,&quot;id&quot;:8145,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:910}"/>
+    <medication url="" med_id="108545" id="17383" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="750" cycles="1" treatement_time="17383" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32244" type="Receita" type_verbose="Receita" url="" name="[Grupo de Risco] Receita" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:18px&quot;>Checar hemograma completo para diagn&amp;oacute;stico diferencial com dengue.&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Sugerir avalia&amp;ccedil;&amp;atilde;o ambulatorial com reumatologista se paciente permanecer com dor ap&amp;oacute;s a melhora dos sintomas agudos.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.4">
+    <item id="11328" url="" name="DIPIRONA 500MG COMP 1 UD" med_code="38024" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h se dor ou febre"/>
+    <item id="11329" url="" name="PARACETAMOL 500 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h se dor ou febre"/>
+    <item id="11330" url="" name="CODE&#xcd;NA 30 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 12/12h nos casos de dor refrat&#xe1;ria. Pode ser utilizada em monoterapia ou associada &#xe0; dipirona e ao paracetamol."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32245" type="Receita" type_verbose="Receita" url="" name="[Fora do Grupo de Risco] Receita" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Sugerir avalia&amp;ccedil;&amp;atilde;o ambulatorial com reumatologista se paciente permanecer com dor ap&amp;oacute;s a melhora dos sintomas agudos.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.5">
+    <item id="11331" url="" name="DIPIRONA 500MG COMP 1 UD" med_code="38024" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h se dor ou febre"/>
+    <item id="11332" url="" name="PARACETAMOL 500 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h se dor ou febre"/>
+    <item id="11333" url="" name="CODE&#xcd;NA 30 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 12/12h nos casos de dor refrat&#xe1;ria. Pode ser utilizada em monoterapia ou associada &#xe0; dipirona e ao paracetamol."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32246" type="Receita" type_verbose="Receita" url="" name="[Fase subaguda a cr&#xf4;nica] Receita" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Sintom&amp;aacute;ticos:&lt;/strong> Dipirona 500 mg (01 comprimido VO de 6/6h) ou Paracetamol 500 mg&amp;nbsp;(01 comprimido VO de 6/6h).&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Nos casos refrat&amp;aacute;rios a analg&amp;eacute;sicos, avaliar uso de AINES (evitar em pacientes com &amp;uacute;lcera g&amp;aacute;strica, renais cr&amp;ocirc;nicos, diab&amp;eacute;ticos e idosos):&lt;/strong> Cetoprofeno 100 mg&amp;nbsp;(01 comprimido VO de 8/8h por 5 dias).&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Nos casos refrat&amp;aacute;rios a analg&amp;eacute;sicos e contraindicado o uso de AINES, avaliar uso de cortic&amp;oacute;ide (evitar em pacientes diab&amp;eacute;ticos, hipertensos de dif&amp;iacute;cil controle, osteoporose com fratura pr&amp;eacute;via, obesos, renal cr&amp;ocirc;nico dial&amp;iacute;tico):&lt;/strong> Prednisona 20 mg&amp;nbsp;(01 comprimido VO pela manh&amp;atilde; durante 05 dias, reduzir a dose gradativamente a cada 3 dias at&amp;eacute; a suspens&amp;atilde;o.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Encaminhar paciente para ambulat&amp;oacute;rio da reumatologia para diagn&amp;oacute;stico diferencial com doen&amp;ccedil;as autoimunes.&lt;/strong>&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.7">
+    <item id="11334" url="" name="DIPIRONA 500MG COMP 1 UD" med_code="38024" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h se dor ou febre"/>
+    <item id="11335" url="" name="PARACETAMOL 500 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h se dor ou febre"/>
+    <item id="11336" url="" name="CODE&#xcd;NA 30 MG" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 12/12h nos casos de dor refrat&#xe1;ria. Pode ser utilizada em monoterapia ou associada &#xe0; dipirona e ao paracetamol."/>
+    <item id="11337" url="" name="CETOPROFENO 100 MG" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="11338" url="" name="PREDNISONA 20 MG" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar pela manh&#xe3;."/>
+    <item id="11339" url="" name="Dorene 75mg ---------- 1CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1cmp 1x/dia pela manh&#xe3;"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32247" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento > 14 dias" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <medication url="" med_id="38008" id="17384" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="17384" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1 ml = 500 mg&quot;,&quot;id&quot;:8146,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:910}"/>
+    <medication url="" med_id="59609" id="17385" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="MG" access="6" daily_dosage="100" cycles="1" treatement_time="17385" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8147,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:635}"/>
+    <medication url="" med_id="36811" id="17386" name="DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML" brand="" unit="MG" access="6" daily_dosage="4" cycles="1" treatement_time="17386" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:17,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8148,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:8,&quot;codigo_principio_ativo&quot;:819}"/>
+    <medication url="" med_id="39594" id="17387" name="TRAMAL 50MG CAPS 1 UD" brand="" unit="MG" access="6" daily_dosage="50" cycles="1" treatement_time="17387" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8149,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:2346}"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="32248" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (fase aguda)" description="fase aguda">
+    <operation name="fase aguda" Operator="equal" id="31141">
+      <operand xsi:type="pathwayMetamodel:Choice" name="fase_doenca" id="31116" weight="1" value="0.0">
+        <option description="FASE AGUDA (AT&#xc9; 14 DIAS)" weight="1"/>
+        <option description="FASE SUBAGUDA A CR&#xd4;NICA (> 14 DIAS)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31119" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="32249" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (com sinais de gravidade)" description="com sinais de gravidade">
+    <operation name="com sinais de gravidade" Operator="greaterOrEqual" id="31142">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_gravidade" id="31117" weight="1" value="0.0">
+        <option description="Acometimento neurol&#xf3;gico" weight="1"/>
+        <option description="Sinais de choque: extremidades frias, cianose, tontura, hipotens&#xe3;o, enchimento capilar lento ou instabilidade hemodin&#xe2;mica" weight="1"/>
+        <option description="Dispneia" weight="1"/>
+        <option description="Dor tor&#xe1;cica" weight="1"/>
+        <option description="V&#xf4;mitos persistentes" weight="1"/>
+        <option description="Descompensa&#xe7;&#xe3;o de doen&#xe7;a de base" weight="1"/>
+        <option description="Sangramentos de mucosas" weight="1"/>
+        <option description="Miocardite" weight="1"/>
+        <option description="Hepatite aguda" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31119" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="32250" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (sem sinais de gravidade)" description="sem sinais de gravidade">
+    <operation name="sem sinais de gravidade" Operator="lessThan" id="31143">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_gravidade" id="31117" weight="1" value="0.0">
+        <option description="Acometimento neurol&#xf3;gico" weight="1"/>
+        <option description="Sinais de choque: extremidades frias, cianose, tontura, hipotens&#xe3;o, enchimento capilar lento ou instabilidade hemodin&#xe2;mica" weight="1"/>
+        <option description="Dispneia" weight="1"/>
+        <option description="Dor tor&#xe1;cica" weight="1"/>
+        <option description="V&#xf4;mitos persistentes" weight="1"/>
+        <option description="Descompensa&#xe7;&#xe3;o de doen&#xe7;a de base" weight="1"/>
+        <option description="Sangramentos de mucosas" weight="1"/>
+        <option description="Miocardite" weight="1"/>
+        <option description="Hepatite aguda" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31119" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="32251" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (grupo de risco)" description="grupo de risco">
+    <operation name="grupo de risco" Operator="greaterOrEqual" id="31144">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupo_risco" id="31118" weight="1" value="0.0">
+        <option description="Gestantes" weight="1"/>
+        <option description="Maiores de 65 anos" weight="1"/>
+        <option description="Menores de 2 anos" weight="1"/>
+        <option description="Pacientes com comorbidades (HAS, DM, anemia falciforme, asma, alcoolismo)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31119" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="32252" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="32253" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (fora do grupo de risco)" description="fora do grupo de risco">
+    <operation name="fora do grupo de risco" Operator="lessThan" id="31145">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupo_risco" id="31118" weight="1" value="0.0">
+        <option description="Gestantes" weight="1"/>
+        <option description="Maiores de 65 anos" weight="1"/>
+        <option description="Menores de 2 anos" weight="1"/>
+        <option description="Pacientes com comorbidades (HAS, DM, anemia falciforme, asma, alcoolismo)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31119" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.0" id="32254" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (fase subaguda a cronica)" description="fase subaguda a cronica">
+    <operation name="fase subaguda a cronica" Operator="equal" id="31146">
+      <operand xsi:type="pathwayMetamodel:Choice" name="fase_doenca" id="31116" weight="1" value="0.0">
+        <option description="FASE AGUDA (AT&#xc9; 14 DIAS)" weight="1"/>
+        <option description="FASE SUBAGUDA A CR&#xd4;NICA (> 14 DIAS)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31120" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.8" id="32255" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="fase_doenca" id="31116" weight="1" value="0.0">
+    <option description="FASE AGUDA (AT&#xc9; 14 DIAS)" weight="1"/>
+    <option description="FASE SUBAGUDA A CR&#xd4;NICA (> 14 DIAS)" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_gravidade" id="31117" weight="1" value="0.0">
+    <option description="Acometimento neurol&#xf3;gico" weight="1"/>
+    <option description="Sinais de choque: extremidades frias, cianose, tontura, hipotens&#xe3;o, enchimento capilar lento ou instabilidade hemodin&#xe2;mica" weight="1"/>
+    <option description="Dispneia" weight="1"/>
+    <option description="Dor tor&#xe1;cica" weight="1"/>
+    <option description="V&#xf4;mitos persistentes" weight="1"/>
+    <option description="Descompensa&#xe7;&#xe3;o de doen&#xe7;a de base" weight="1"/>
+    <option description="Sangramentos de mucosas" weight="1"/>
+    <option description="Miocardite" weight="1"/>
+    <option description="Hepatite aguda" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="grupo_risco" id="31118" weight="1" value="0.0">
+    <option description="Gestantes" weight="1"/>
+    <option description="Maiores de 65 anos" weight="1"/>
+    <option description="Menores de 2 anos" weight="1"/>
+    <option description="Pacientes com comorbidades (HAS, DM, anemia falciforme, asma, alcoolismo)" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="31119" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="31120" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

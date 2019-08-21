@@ -92,10 +92,10 @@ public class FindSolutions extends SequenceParser{
 						mapStatistics.put("Restarts", mapStatistics.containsKey("Restarts")?mapStatistics.get("Restarts")+restartCount:restartCount);
 						double nbSolutions = (double) model.getSolver().getSolutionCount();
 						mapStatistics.put("Solutions", mapStatistics.containsKey("Solutions")?mapStatistics.get("Solutions")+nbSolutions:nbSolutions);
-						System.out.println(nodeCount);
-						System.out.println(failCount);
-						System.out.println(backTrackCount);
-						System.out.println(mapElementOutputSequences.values().toArray()[k]);
+//						System.out.println(nodeCount);
+//						System.out.println(failCount);
+//						System.out.println(backTrackCount);
+//						System.out.println(mapElementOutputSequences.values().toArray()[k]);
 						if(nodeCount > 0) {
 							binaryTree++;
 						}

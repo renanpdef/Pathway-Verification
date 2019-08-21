@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="SEPSE Pedi&#xe1;trico" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31932" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Sinais de SIRS" description="&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;5&quot; rowspan=&quot;1&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp;&lt;strong> PACIENTE APRESENTA PELO MENOS DOIS (2) DOS SINAIS DE SIRS, SENDO UM DELES&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; FEBRE E/OU ALTERA&amp;Ccedil;&amp;Atilde;O DE LEUC&amp;Oacute;CITOS CONFORME A REFER&amp;Ecirc;NCIA DE FAIXA ET&amp;Aacute;RIA NA TABELA ABAIXO?&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Idade&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>FC (bpm)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Leuc&amp;oacute;citos (*10&amp;sup3;/mm&amp;sup3;)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>FR (ipm)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Temperatura&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>0 - 2 meses&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 180 ou &amp;lt; 100&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 25&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 60&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;5&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>&amp;gt; 37,8 ou &amp;lt; 36&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2 meses - 1 ano&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 160&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 18 ou &amp;lt; 5&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 50&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2 - 5 anos&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 140&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 15,5 ou &amp;lt; 6&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 40&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>6 - 10 anos&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 130&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 13,5 ou &amp;lt; 4,5&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 20&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>11 - 14 anos&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 110&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 11 ou &amp;lt; 4,5&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 14&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Apresenta 2 ou mais fatores conforme especificado na tabela?" url="" id="15208">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dois_ou_mais_fatores_sirs" id="30833" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31933" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Identificar foco da SEPSE" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.2 //@sequence.3 //@sequence.4 //@sequence.5">
+    <questions text="Pneumonia" url="" id="15209">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="foco_pneumonia" id="30834" weight="1" value="false"/>
+    </questions>
+    <questions text="ITU - Pielonefrite" url="" id="15210">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="foco_pielonefrite" id="30835" weight="1" value="false"/>
+    </questions>
+    <questions text="Meningite" url="" id="15211">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="foco_meningite" id="30836" weight="1" value="false"/>
+    </questions>
+    <questions text="Sem foco/outro foco" url="" id="15212">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="foco_outro_foco" id="30837" weight="1" value="false"/>
+    </questions>
+    <questions text="Abdome agudo" url="" id="15213">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="foco_abdome_agudo" id="30838" weight="1" value="false"/>
+    </questions>
+    <questions text="Partes moles/pele" url="" id="15214">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="foco_partes_moles" id="30839" weight="1" value="false"/>
+    </questions>
+    <questions text="&#xd3;ssea/articular" url="" id="15215">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="foco_ossea" id="30840" weight="1" value="false"/>
+    </questions>
+    <questions text="Neutropenia Febril" url="" id="15216">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="foco_neutropenia_febril" id="30841" weight="1" value="false"/>
+    </questions>
+    <questions text="Infec&#xe7;&#xe3;o Neonatal" url="" id="15217">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="foco_infeccao_neonatal" id="30842" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31934" type="Tratamento" type_verbose="Tratamento" url="" name="a) Medidas urgentes de 1&#xaa; hora" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&amp;Oacute;S A ABERTURA DO PROTOCOLO.&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>Iniciar O2, se necess&amp;aacute;rio;&lt;/li>&#xA;&#x9;&lt;li>Estabelecer 2 acessos Endovenosos;&lt;/li>&#xA;&#x9;&lt;li>Monitoriza&amp;ccedil;&amp;atilde;o e Controle de Sinais Vitais de 1/1h;&lt;/li>&#xA;&#x9;&lt;li>Realizar DX;&lt;/li>&#xA;&#x9;&lt;li>Controle de Diurese;&lt;/li>&#xA;&#x9;&lt;li>Iniciar expans&amp;atilde;o imediata 20ml/kg de cristal&amp;oacute;ide 3x ou mais at&amp;eacute; melhora da perfus&amp;atilde;o ou aparecimento de crepita&amp;ccedil;&amp;atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&amp;atilde;o com 10 ml/kg.&lt;/li>&#xA;&#x9;&lt;li>Coletar Exames (antes da antibi&amp;oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&amp;eacute;ia, S&amp;oacute;dio, Pot&amp;aacute;ssio, Cloro, Magn&amp;eacute;sio, C&amp;aacute;lcio, TGO, TGP,&amp;nbsp;Culturas&amp;nbsp;conforme o foco suspeito;&lt;/li>&#xA;&#x9;&lt;li>Iniciar &lt;u>&lt;strong>Ceftriaxona&lt;/strong>&lt;/u> (100mg/kg/dia)&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.2" outputSequences="//@sequence.6">
+    <examination url="HEMOCULTURA AUTOMATIZADA" exam_id="99100664" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CLORO  (SANGUE)" exam_id="28010469" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="MAGNESIO  (SANGUE)" exam_id="28011120" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CALCIO (SANGUE)" exam_id="28010329" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CULTURAS EM GERAL" exam_id="28100581" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TGP/ALT (ALANINA AMINOTRANSFERASE)" exam_id="28011376" limb_side="" quantity="1" reason="Paciente com sepse" clinical_indication="n/a"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="1" quantity="1"/>
+    <procedure url="CONTROLE DE DIURESE" procedure="75130022" quantity="1"/>
+    <procedure url="O2 C/MASCARA DE VENTURI/FACIAL" procedure="75010014" quantity="1"/>
+    <procedure url="PUNCAO C/ JELCO" procedure="76030002" quantity="1"/>
+    <procedure url="MONITOR CARDIACO" procedure="75130036" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="31935" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Febre Sem Sinais de Localiza&#xe7;&#xe3;o" description="" isTerminal="true" inputSequences="//@sequence.1">
+    <pathways>H036</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31936" type="Tratamento" type_verbose="Tratamento" url="" name="b) Medidas urgentes de 1&#xaa; hora" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&amp;Oacute;S A ABERTURA DO PROTOCOLO.&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>Iniciar O2, se necess&amp;aacute;rio;&lt;/li>&#xA;&#x9;&lt;li>Estabelecer 2 acessos Endovenosos;&lt;/li>&#xA;&#x9;&lt;li>Monitoriza&amp;ccedil;&amp;atilde;o e Controle de Sinais Vitais de 1/1h;&lt;/li>&#xA;&#x9;&lt;li>Realizar DX;&lt;/li>&#xA;&#x9;&lt;li>Controle de Diurese;&lt;/li>&#xA;&#x9;&lt;li>Iniciar expans&amp;atilde;o imediata 20ml/kg de cristal&amp;oacute;ide 3x ou mais at&amp;eacute; melhora da perfus&amp;atilde;o ou aparecimento de crepita&amp;ccedil;&amp;atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&amp;atilde;o com 10 ml/kg.&lt;/li>&#xA;&#x9;&lt;li>Coletar Exames (antes da antibi&amp;oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&amp;eacute;ia, S&amp;oacute;dio, Pot&amp;aacute;ssio, Cloro, Magn&amp;eacute;sio, C&amp;aacute;lcio, TGO, TGP,&amp;nbsp;Culturas&amp;nbsp;conforme o foco suspeito;&lt;/li>&#xA;&#x9;&lt;li>Iniciar &lt;strong>&lt;u>Oxacilina&amp;nbsp;&lt;/u>&lt;/strong>(200mg/kg/dia)&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.3" outputSequences="//@sequence.7">
+    <examination url="HEMOCULTURA AUTOMATIZADA" exam_id="99100664" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CLORO  (SANGUE)" exam_id="28010469" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="MAGNESIO  (SANGUE)" exam_id="28011120" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CALCIO (SANGUE)" exam_id="28010329" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TRANSAMINASE PIRUVICA-TGP ALT P/UD SANG" exam_id="27040380" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CULTURAS EM GERAL" exam_id="28100581" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="1" quantity="1"/>
+    <procedure url="CONTROLE DE DIURESE" procedure="75130022" quantity="1"/>
+    <procedure url="O2 C/MASCARA DE VENTURI/FACIAL" procedure="75010014" quantity="1"/>
+    <procedure url="PUNCAO C/ JELCO" procedure="76030002" quantity="1"/>
+    <procedure url="MONITOR CARDIACO" procedure="75130036" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31937" type="Tratamento" type_verbose="Tratamento" url="" name="c) Medidas urgentes de 1&#xaa; hora" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&amp;Oacute;S A ABERTURA DO PROTOCOLO.&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>Iniciar O2, se necess&amp;aacute;rio;&lt;/li>&#xA;&#x9;&lt;li>Estabelecer 2 acessos Endovenosos;&lt;/li>&#xA;&#x9;&lt;li>Monitoriza&amp;ccedil;&amp;atilde;o e Controle de Sinais Vitais de 1/1h;&lt;/li>&#xA;&#x9;&lt;li>Realizar DX;&lt;/li>&#xA;&#x9;&lt;li>Controle de Diurese;&lt;/li>&#xA;&#x9;&lt;li>Iniciar expans&amp;atilde;o imediata 20ml/kg de cristal&amp;oacute;ide 3x ou mais at&amp;eacute; melhora da perfus&amp;atilde;o ou aparecimento de crepita&amp;ccedil;&amp;atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&amp;atilde;o com 10 ml/kg.&lt;/li>&#xA;&#x9;&lt;li>Coletar Exames (antes da antibi&amp;oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&amp;eacute;ia, S&amp;oacute;dio, Pot&amp;aacute;ssio, Cloro, Magn&amp;eacute;sio, C&amp;aacute;lcio, TGO, TGP,&amp;nbsp;Culturas&amp;nbsp;conforme o foco suspeito;&lt;/li>&#xA;&#x9;&lt;li>Iniciar &lt;u>&lt;strong>Cefepime&lt;/strong>&lt;/u> (50mg/kg/dia)&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.4" outputSequences="//@sequence.8">
+    <examination url="HEMOCULTURA AUTOMATIZADA" exam_id="99100664" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CLORO  (SANGUE)" exam_id="28010469" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="MAGNESIO  (SANGUE)" exam_id="28011120" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CALCIO (SANGUE)" exam_id="28010329" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TRANSAMINASE PIRUVICA-TGP ALT P/UD SANG" exam_id="27040380" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CULTURAS EM GERAL" exam_id="28100581" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="1" quantity="1"/>
+    <procedure url="CONTROLE DE DIURESE" procedure="75130022" quantity="1"/>
+    <procedure url="O2 C/MASCARA DE VENTURI/FACIAL" procedure="75010014" quantity="1"/>
+    <procedure url="PUNCAO C/ JELCO" procedure="76030002" quantity="1"/>
+    <procedure url="MONITOR CARDIACO" procedure="75130036" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31938" type="Tratamento" type_verbose="Tratamento" url="" name="d) Medidas urgentes de 1&#xaa; hora" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&amp;Oacute;S A ABERTURA DO PROTOCOLO.&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>Iniciar O2, se necess&amp;aacute;rio;&lt;/li>&#xA;&#x9;&lt;li>Estabelecer 2 acessos Endovenosos;&lt;/li>&#xA;&#x9;&lt;li>Monitoriza&amp;ccedil;&amp;atilde;o e Controle de Sinais Vitais de 1/1h;&lt;/li>&#xA;&#x9;&lt;li>Realizar DX;&lt;/li>&#xA;&#x9;&lt;li>Controle de Diurese;&lt;/li>&#xA;&#x9;&lt;li>Iniciar expans&amp;atilde;o imediata 10ml/kg de cristal&amp;oacute;ide 3x ou mais at&amp;eacute; melhora da perfus&amp;atilde;o ou aparecimento de crepita&amp;ccedil;&amp;atilde;o pulmonar ou hepatomegalia;&lt;/li>&#xA;&#x9;&lt;li>Coletar Exames (antes da antibi&amp;oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&amp;eacute;ia, S&amp;oacute;dio, Pot&amp;aacute;ssio, Cloro, Magn&amp;eacute;sio, C&amp;aacute;lcio, TGO, TGP,&amp;nbsp;Culturas&amp;nbsp;conforme o foco suspeito;&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>PRESCREVER ANTIBI&amp;Oacute;TICO CONFORME ESQUEMA DEFINIDO NA TABELA A SEGUIR:&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>AMPICILINA&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>GENTAMICINA&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&amp;lt; 2 kg&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&amp;gt; 2 kg&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&amp;lt; 2 kg&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&amp;gt; 2 kg&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;lt; 7 dias&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; &amp;gt; 7 dias&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; &amp;lt; 7 dias&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 7 dias&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; &amp;lt; 7 dias&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; &amp;gt; 7 dias&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; &amp;lt; 7 dias&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;gt; 7 dias&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 300mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; de 12/12h&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&amp;nbsp; 300mg/kg/dia&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp;&amp;nbsp;de 8/8h&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 300mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp;&amp;nbsp;de 6/6h&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&amp;nbsp; 3mg/kg/dia&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp;&amp;nbsp;de 24/24h&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 4mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp;&amp;nbsp;de 24/24h&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" inputSequences="//@sequence.5" outputSequences="//@sequence.9">
+    <examination url="HEMOCULTURA AUTOMATIZADA" exam_id="99100664" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CLORO  (SANGUE)" exam_id="28010469" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="MAGNESIO  (SANGUE)" exam_id="28011120" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CALCIO (SANGUE)" exam_id="28010329" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="TRANSAMINASE PIRUVICA-TGP ALT P/UD SANG" exam_id="27040380" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <examination url="CULTURAS EM GERAL" exam_id="28100581" limb_side="" quantity="1" reason="SEPSE pedi&#xe1;trico" clinical_indication="n/a"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="1" quantity="1"/>
+    <procedure url="CONTROLE DE DIURESE" procedure="75130022" quantity="1"/>
+    <procedure url="O2 C/MASCARA DE VENTURI/FACIAL" procedure="75010014" quantity="1"/>
+    <procedure url="PUNCAO C/ JELCO" procedure="76030002" quantity="1"/>
+    <procedure url="MONITOR CARDIACO" procedure="75130036" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31939" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Resposta &#xe0; terapia?" description="" inputSequences="//@sequence.6 //@sequence.7 //@sequence.8 //@sequence.9" outputSequences="//@sequence.10 //@sequence.11">
+    <questions text="Resposta &#xe0; terapia vol&#xea;mica?" url="" id="15218">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="respondeu_a_terapia" id="30843" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31940" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Disfun&#xe7;&#xe3;o Org&#xe2;nica" description="Paciente apresenta algum dos crit&#xe9;rios de disfun&#xe7;&#xe3;o org&#xe2;nica abaixo?" inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Altera&#xe7;&#xe3;o da perfus&#xe3;o (em flush &lt; 2 seg ou lentificada - TEC > 3 seg)" url="" id="15219">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_alteracao_perfusao" id="30844" weight="1" value="false"/>
+    </questions>
+    <questions text="Olig&#xfa;ria (&lt;= 0,5mL/kg/h)" url="" id="15220">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_oliguria" id="30845" weight="1" value="false"/>
+    </questions>
+    <questions text="Hipossatura&#xe7;&#xe3;o (SpO2&lt;92%) em ar ambiente" url="" id="15221">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipossaturacao" id="30846" weight="1" value="false"/>
+    </questions>
+    <questions text="Hipotens&#xe3;o" url="" id="15222">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipotensao" id="30847" weight="1" value="false"/>
+    </questions>
+    <questions text="Mudan&#xe7;a aguda de estado neurol&#xf3;gico" url="" id="15223">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_mudanca_estado_neurologico" id="30848" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31941" type="Tratamento" type_verbose="Tratamento" url="" name="HV Manuten&#xe7;&#xe3;o + Interna&#xe7;&#xe3;o" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;strong>HV Manuten&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>&lt;strong>Solicitar Interna&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.13" outputSequences="//@sequence.14"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31942" type="Tratamento" type_verbose="Tratamento" url="" name="Choque S&#xe9;ptico Refrat&#xe1;rio a Volume" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;u>&lt;strong>Solicitar UTI&lt;/strong>&lt;/u>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Iniciar Inotr&amp;oacute;pico:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Acesso Venoso Perif&amp;eacute;rico ou Intra-&amp;Oacute;sseo&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Adrenalina - 0,05 - 0,3 mcg/Kg/min&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.12" outputSequences="//@sequence.15"/>
+  <element xsi:type="pathwayMetamodel:Information" id="31943" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Formul&#xe1;rio" description="&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot; style=&quot;text-align:center; width:800px&quot;>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>PROTOCOLO SEPSE&lt;/span>&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#aaaaaa; border-color:#aaaaaa; width:100px&quot;>&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center; width:300px&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#aaaaaa; border-color:#aaaaaa; width:100px&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center; width:300px&quot;>Enfermeiro: ______________________________&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot; style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;5&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>1&amp;ordf; HORA&lt;br />&#xA;&#x9;&#x9;&#x9;(0 - 15 MIN)&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Restaura&amp;ccedil;&amp;atilde;o vol&amp;ecirc;mica imediata:&lt;br />&#xA;&#x9;&#x9;&#x9;- 20 ml/kg de cristal&amp;oacute;ide ou col&amp;oacute;ide 3x ou mais, at&amp;eacute; melhora da perfus&amp;atilde;o ou aparecimento de crepita&amp;ccedil;&amp;atilde;o pulmonar ou hepatomegalia.&lt;br />&#xA;&#x9;&#x9;&#x9;Hor&amp;aacute;rio: 1&amp;ordf; expans&amp;atilde;o: _____ : _____&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 2&amp;ordf; expans&amp;atilde;o: _____ : _____&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 3&amp;ordf; expans&amp;atilde;o: _____ : _____&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;5&quot; style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&lt;img alt=&quot;&quot; src=&quot;https://www.google.com/url?sa=i&amp;amp;source=images&amp;amp;cd=&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=2ahUKEwi2wNLrn5HiAhVZHbkGHbbAD5EQjRx6BAgBEAU&amp;amp;url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fbr.freepik.com%252Ficones-gratis%252Fdireita-longo-seta-preta_732794.htm%26psig%3DAOvVaw3J_EEEdn0kmVuH7i5xhr8l%26ust%3D1557587496986945&amp;amp;psig=AOvVaw3J_EEEdn0kmVuH7i5xhr8l&amp;amp;ust=1557587496986945&quot; />&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; - Iniciar O2 em alto fluxo (SN) + estabelecer 2 acessos EV;&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; - Administrar expans&amp;otilde;es conforme prescri&amp;ccedil;&amp;atilde;o;&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; - Monitoriza&amp;ccedil;&amp;atilde;o e controle sinais vitais;&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; - Realizar DX: _____ mg/dl&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; - Controle diurese (&amp;gt;= 1 ml/kg/h)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>( ) Hemograma completo, culturas, TAP, TTPA, fun&amp;ccedil;&amp;atilde;o renal, eletr&amp;oacute;litos gaso arterial, TGO/TGP, BT, lactato&lt;br />&#xA;&#x9;&#x9;&#x9;( ) RX ( ) US ( ) TC&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Contactar laborat&amp;oacute;rio e imagem para realiza&amp;ccedil;&amp;atilde;o de exames (preferencialmente antes da administra&amp;ccedil;&amp;atilde;o do ATB)&lt;br />&#xA;&#x9;&#x9;&#x9;Hor&amp;aacute;rio da coleta: _____ : _____&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Antimicrobianos IV e dose:&lt;br />&#xA;&#x9;&#x9;&#x9;_______________________________________&lt;br />&#xA;&#x9;&#x9;&#x9;- ATB segue protocolo da CCIH:&lt;br />&#xA;&#x9;&#x9;&#x9;( ) Sim ( ) N&amp;atilde;o&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Preparar e administrar antibi&amp;oacute;tico prescrito&lt;br />&#xA;&#x9;&#x9;&#x9;Hor&amp;aacute;rio da administra&amp;ccedil;&amp;atilde;o: _____ : _____&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot; style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;3&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>1&amp;ordf; HORA&lt;br />&#xA;&#x9;&#x9;&#x9;(15 - 60 MIN)&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>Resposta a terapia vol&amp;ecirc;mica? (Ap&amp;oacute;s 40 - 60 ml/kg)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>N&amp;Atilde;O&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot; style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>SIM&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>CHOQUE S&amp;Eacute;PTICO REFRAT&amp;Aacute;RIO VOLUME&lt;br />&#xA;&#x9;&#x9;&#x9;SOLICITAR VAGA UTI PED&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>MANTER OBSERVA&amp;Ccedil;&amp;Atilde;O CL&amp;Iacute;NICA RIGOROSA&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot; style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;5&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>AP&amp;Oacute;S 1&amp;ordf; HORA&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Otimiza&amp;ccedil;&amp;atilde;o hemodin&amp;acirc;mica em choque refrat&amp;aacute;rio a volume:&lt;/strong>&lt;br />&#xA;&#x9;&#x9;&#x9;Choque frio: Iniciar inotr&amp;oacute;picos: Adrenalina 0,05 - 0,3 mcg/kg/min (AVP ou IO)&lt;br />&#xA;&#x9;&#x9;&#x9;Choque quente: Iniciar vasopressor: Noradrenalina 0,1 - 1 mcg/kg/min (AVC)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>Resposta a droga vasoativa?&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>N&amp;Atilde;O&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot; style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>SIM&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &amp;nbsp;&lt;strong>Choque resistente a catecolamina:&lt;/strong>&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Reavaliar perfil hemodin&amp;acirc;mico: titular volume e catecolaminas&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Iniciar hidrocortisona se risco de insufici&amp;ecirc;ncia adrenal&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Monitoriza&amp;ccedil;&amp;atilde;o invasiva - PAI&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Nova coleta de exames para reavalia&amp;ccedil;&amp;atilde;o&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Considerar transfus&amp;atilde;o se Hb &amp;lt; 10,0 g/dL&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>MANTER OBSERVA&amp;Ccedil;&amp;Atilde;O CL&amp;Iacute;NICA&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot; style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &amp;nbsp;Choque frio e PA normal:&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Titular volume e adrenalina.&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Considerar nipride e milrinone&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center; width:100px&quot;>&amp;nbsp;Choque frio e PA baixa:&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Titular volume e adrenalina.&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Considerar noradrenalina, dobutamina ou milrinone&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &amp;nbsp;Choque quente e PA baixa:&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Titular volume e noradrenalina.&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp;- Considerar vasopressina&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot; style=&quot;background-color:#aaaaaa; border-color:#aaaaaa&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot;>Se paciente permanecer hipoperfundido, investigar presen&amp;ccedil;a de: derrame peric&amp;aacute;rdico, pneumot&amp;oacute;rax, insufici&amp;ecirc;ncia adrenal, hipotireoidismo, hemorragia, eleva&amp;ccedil;&amp;atilde;o PIA, presen&amp;ccedil;a de tecido necr&amp;oacute;tico, aus&amp;ecirc;ncia de controle de foco, uso de imunossupressores ou comprometimento imunol&amp;oacute;gico = CHOQUE REFRAT&amp;Aacute;RIO&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.10 //@sequence.14 //@sequence.15"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="31944" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (2 ou mais sintomas de SIRS)" description="2 ou mais sintomas de SIRS">
+    <operation name="2 ou mais sintomas de SIRS" Operator="affirmation" id="30851">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dois_ou_mais_fatores_sirs" id="30833" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="31945" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (menos de 2 sintomas de SIRS)" description="menos de 2 sintomas de SIRS">
+    <operation name="menos de 2 sintomas de SIRS" id="30852">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dois_ou_mais_fatores_sirs" id="30833" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="31946" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Caso 1)" description="Caso 1 - Ceftriaxona">
+    <operation name="PNM ou Pielonef. Ou Meningite ou Absome Agudo ou sem foco" Operator="or" id="30853">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="foco_pneumonia" id="30834" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="foco_pielonefrite" id="30835" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="foco_meningite" id="30836" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="foco_outro_foco" id="30837" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="foco_abdome_agudo" id="30838" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="31947" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Caso 2)" description="Caso 2">
+    <operation name="Partes Moles/Pele ou &#xd3;ssea/Articular" Operator="or" id="30854">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="foco_partes_moles" id="30839" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="foco_partes_moles" id="30839" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="31948" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Caso 3)" description="Caso 3">
+    <operation name="Neutropenia Febril" Operator="affirmation" id="30855">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="foco_neutropenia_febril" id="30841" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="31949" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Caso 4)" description="Caso 4">
+    <operation name="Infec&#xe7;&#xe3;o Neonatal" Operator="affirmation" id="30856">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="foco_infeccao_neonatal" id="30842" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.2" id="31950" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.4" id="31951" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="31952" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="31953" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.7" id="31954" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (com resposta &#xe1; terapia vol&#xea;mica )" description="sem resposta">
+    <operation name="com resposta &#xe1; terapia vol&#xea;mica" Operator="affirmation" id="30857">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="respondeu_a_terapia" id="30843" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="31955" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (sem resposta &#xe0; terapia)" description="com resposta &#xe0; terapia">
+    <operation name="sem resposta &#xe1; terapia vol&#xea;mica" id="30858">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="respondeu_a_terapia" id="30843" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="31956" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (apresenta disfun&#xe7;&#xe3;o org&#xe2;nica)" description="apresenta disfun&#xe7;&#xe3;o org&#xe2;nica">
+    <operation name="apresenta disfun&#xe7;&#xe3;o org&#xe2;nica" Operator="greaterOrEqual" id="30859">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios de Disfun&#xe7;&#xe3;o Org&#xe2;nica" Operator="addition" id="30850">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_alteracao_perfusao" id="30844" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_oliguria" id="30845" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipossaturacao" id="30846" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipotensao" id="30847" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_mudanca_estado_neurologico" id="30848" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="30849" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="31957" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (n&#xe3;o apresenta disfun&#xe7;&#xe3;o org&#xe2;nica)" description="n&#xe3;o apresenta disfun&#xe7;&#xe3;o org&#xe2;nica">
+    <operation name="n&#xe3;o apresenta disfun&#xe7;&#xe3;o org&#xe2;nica" Operator="lessThan" id="30860">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios de Disfun&#xe7;&#xe3;o Org&#xe2;nica" Operator="addition" id="30850">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_alteracao_perfusao" id="30844" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_oliguria" id="30845" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipossaturacao" id="30846" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipotensao" id="30847" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_mudanca_estado_neurologico" id="30848" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="30849" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="31958" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="-"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="31959" type="Sequencia" type_verbose="Sequencia" url="" name="S17" description="-"/>
+  <operation name="Crit&#xe9;rios de Disfun&#xe7;&#xe3;o Org&#xe2;nica" Operator="addition" id="30850">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_alteracao_perfusao" id="30844" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_oliguria" id="30845" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipossaturacao" id="30846" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipotensao" id="30847" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_mudanca_estado_neurologico" id="30848" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dois_ou_mais_fatores_sirs" id="30833" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="foco_pneumonia" id="30834" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="foco_pielonefrite" id="30835" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="foco_meningite" id="30836" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="foco_outro_foco" id="30837" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="foco_abdome_agudo" id="30838" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="foco_partes_moles" id="30839" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="foco_ossea" id="30840" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="foco_neutropenia_febril" id="30841" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="foco_infeccao_neonatal" id="30842" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="respondeu_a_terapia" id="30843" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_alteracao_perfusao" id="30844" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_oliguria" id="30845" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipossaturacao" id="30846" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_hipotensao" id="30847" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="disf_org_mudanca_estado_neurologico" id="30848" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="30849" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Infec&#xe7;&#xe3;o do Trato Urin&#xe1;rio em Gestante (ITU)" code="">
+  <element xsi:type="pathwayMetamodel:Treatment" id="35521" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>ITU in&amp;eacute;dito : fazer KEFLIN&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>ITUs de repeti&amp;ccedil;&amp;atilde;o : fazer ROCEFIN&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Avaliar necessidade de Ultrassom das Vias Urin&amp;aacute;rias.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.7">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com ITU" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Paciente com ITU" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA" exam_id="99130367" limb_side="" quantity="1" reason="Paciente com ITU" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="Paciente com ITU" clinical_indication="n/a"/>
+    <medication url="" med_id="43290" id="20129" name="RINGER C/LACTATO 500ML TUBO 500 ML" brand="" unit="AL" access="6" daily_dosage="4" cycles="1" treatement_time="20129" standard="null"/>
+    <medication url="" med_id="42099" id="20130" name="KEFLIN 1 GR FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="20130" frequency="4" standard="{&quot;quantidade_dosagem&quot;:1,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;GR&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:9741,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:605}"/>
+    <medication url="" med_id="43400" id="20131" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="2" cycles="1" treatement_time="20131" frequency="1" standard="{&quot;quantidade_dosagem&quot;:1,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;GR&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:10,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1FA + 10ml AD (100mg/ml)&quot;,&quot;id&quot;:9742,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:4,&quot;codigo_principio_ativo&quot;:618}"/>
+    <medication url="" med_id="36064" id="20132" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="20132" frequency="6" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;DILUIDO EM &#xc1;GUA DESTILADA&quot;,&quot;id&quot;:9743,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Cont&#xed;nuo&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1717}"/>
+    <medication url="" med_id="36161" id="20133" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="20133" frequency="6" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:9744,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1325}"/>
+    <medication url="" med_id="108545" id="20134" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="20134" frequency="6" standard="null"/>
+    <medication url="" med_id="126122" id="20135" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="20135" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:9745,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="41564" id="20136" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="20136" frequency="8" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:9746,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="49581" id="20137" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="20137" frequency="8" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2ml=10mg&quot;,&quot;id&quot;:9747,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <admission url="ADMISSION" admission="01990004" reason="Paciente com ITU" clinical_indication="n/a" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" quantity="1"/>
+    <procedure url="CUIDADOS GERAIS" procedure="75130017" frequency="3" quantity="1"/>
+    <procedure url="CURVA TERMICA" procedure="75130076" frequency="4" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35522" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar sintomas" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.3 //@sequence.7">
+    <questions text="Quais os sintomas do paciente?" url="" id="16541">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sintomas" id="33886" weight="1" value="0.0">
+        <option description="Assintom&#xe1;tico" weight="1"/>
+        <option description="Dis&#xfa;ria" weight="2"/>
+        <option description="2 epis&#xf3;dios de febre e/ou Lombalgia e/ou N&#xe1;useas e mal estar geral" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35523" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar quantidade de epis&#xf3;dios" description="" inputSequences="//@sequence.0 //@sequence.5" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Verificar quantidade de ocorr&#xea;ncia dos epis&#xf3;dios" url="" id="16542">
+      <answers xsi:type="pathwayMetamodel:Choice" name="qtd_episodios" id="33887" weight="1" value="0.0">
+        <option description="Epis&#xf3;dio &#xda;nico" weight="1"/>
+        <option description=">= 2 epis&#xf3;dios" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35524" type="Receita" type_verbose="Receita" url="" name="Receita 01" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Prescrever antibi&amp;oacute;tico conforme necess&amp;aacute;rio.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Orientar Urocultura ap&amp;oacute;s 15 dias em m&amp;eacute;dico assistente.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.1">
+    <item id="12900" url="" name="CEFALEXINA 500 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h por 7 dias."/>
+    <item id="12901" url="" name="NITROFURANTO&#xcd;NA 100 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h por 7 dias."/>
+    <item id="12902" url="" name="AMOXICILINA 500 mg + CLAVULANATO 125 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 8/8h por 7 dias."/>
+    <item id="12903" url="" name="AMOXICILINA 750 mg + CLAVULANATO 125 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via horal de 12/12h por 7 dias."/>
+    <item id="12904" url="" name="FOSFOMICINA 3 g" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="DOSE &#xda;NICA. Dissolver o conte&#xfa;do do envelope em um copo d'&#xe1;gua (50 a 75 mL) e mexer com o aux&#xed;lio de uma colher. A solu&#xe7;&#xe3;o deve ser ingerida de est&#xf4;mago vazio imediatamente ap&#xf3;s o preparo e preferencialmente &#xe0; noite antes de deitar e depois de urinar."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35525" type="Receita" type_verbose="Receita" url="" name="Receita 02" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Prescrever antibi&amp;oacute;tico conforme necess&amp;aacute;rio.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;(OBS: Prescrever tratamento inicial de 07 dias e, ap&amp;oacute;s, prescrever tratamento de 01 comprimido por dia pelo per&amp;iacute;odo que for necess&amp;aacute;rio).&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Orientar Urocultura ap&amp;oacute;s 15 dias em m&amp;eacute;dico assistente.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.2">
+    <item id="12905" url="" name="CEFALEXINA 500 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h por 7 dias."/>
+    <item id="12906" url="" name="CEFALEXINA 500 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Ap&#xf3;s os 7 dias, tomar 01 comprimido por dia durante ______ dias."/>
+    <item id="12907" url="" name="NITROFURANTO&#xcd;NA 100 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h por 7 dias."/>
+    <item id="12908" url="" name="NITROFURANTO&#xcd;NA 100 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Ap&#xf3;s os 7 dias, tomar 01 comprimido por dia durante ______ dias."/>
+    <item id="12909" url="" name="AMOXICILINA 500 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 8/8h por 7 dias."/>
+    <item id="12910" url="" name="AMOXICILINA 500 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Ap&#xf3;s os 7 dias, tomar 01 comprimido por dia durante ______ dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35526" type="Tratamento" type_verbose="Tratamento" url="" name="[Dis&#xfa;ria] Conduta" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.4">
+    <examination url="SUMARIO DE URINA" exam_id="99130367" limb_side="" quantity="1" reason="ITU com Dis&#xfa;ria" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35527" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar resultado Sum&#xe1;rio de Urina" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Avaliar resultado do exame de sum&#xe1;rio de urina" url="" id="16543">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sumario_urina" id="33888" weight="1" value="0.0">
+        <option description="Blocos leucocit&#xe1;rios e/ou nitritos e/ou bacteriuria" weight="1"/>
+        <option description="Normal" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35528" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Buscar outro diagn&#xf3;stico" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Descartar ITU e buscar diagn&amp;oacute;stico alternativo para o paciente.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Information" id="35529" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Reavaliar paciente" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Reavaliar paciente ap&amp;oacute;s 24h&lt;/span>&lt;/p>" inputSequences="//@sequence.9" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35530" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Melhora" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Reavaliar paciente ap&amp;oacute;s 24h.&lt;/span>&lt;/p>" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Paciente melhorou?" url="" id="16544">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33889" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35531" type="Receita" type_verbose="Receita" url="" name="Receita 03" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Prescrever antibi&amp;oacute;tico conforme necess&amp;aacute;rio.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;(OBS: Prescrever tratamento inicial de 10&amp;nbsp;dias e, ap&amp;oacute;s, prescrever tratamento de 01 comprimido por dia pelo per&amp;iacute;odo que for necess&amp;aacute;rio).&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Orientar Urocultura ap&amp;oacute;s 15 dias em m&amp;eacute;dico assistente.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.10">
+    <item id="12911" url="" name="CEFALEXINA 500 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h durante 10 dias."/>
+    <item id="12912" url="" name="CEFALEXINA 500 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Ap&#xf3;s os 10 dias, tomar 01 comprimido por dia durante ______ dias."/>
+    <item id="12913" url="" name="NITROFURANTO&#xcd;NA 100 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 6/6h durante 10 dias."/>
+    <item id="12914" url="" name="NITROFURANTO&#xcd;NA 100 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Ap&#xf3;s os 10 dias, tomar 01 comprimido por dia durante ______ dias."/>
+    <item id="12915" url="" name="AMOXICILINA 500 mg + CLAVULANATO 125 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido via oral de 8/8h durante 10 dias."/>
+    <item id="12916" url="" name="AMOXICILINA 500 mg + CLAVULANATO 125 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Ap&#xf3;s os 10 dias, tomar 01 comprimido por dia durante ______ dias."/>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="35532" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (assintom&#xe1;tico)" description="assintom&#xe1;tico">
+    <operation name="assintom&#xe1;tico" Operator="equal" id="33896">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintomas" id="33886" weight="1" value="0.0">
+        <option description="Assintom&#xe1;tico" weight="1"/>
+        <option description="Dis&#xfa;ria" weight="2"/>
+        <option description="2 epis&#xf3;dios de febre e/ou Lombalgia e/ou N&#xe1;useas e mal estar geral" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33890" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="35533" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (epis&#xf3;dio &#xfa;nico)" description="epis&#xf3;dio &#xfa;nico">
+    <operation name="epis&#xf3;dio &#xfa;nico" Operator="equal" id="33897">
+      <operand xsi:type="pathwayMetamodel:Choice" name="qtd_episodios" id="33887" weight="1" value="0.0">
+        <option description="Epis&#xf3;dio &#xda;nico" weight="1"/>
+        <option description=">= 2 epis&#xf3;dios" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33890" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="35534" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (>= 2 epis&#xf3;dios)" description=">= 2 epis&#xf3;dios">
+    <operation name=">= 2 epis&#xf3;dios" Operator="equal" id="33898">
+      <operand xsi:type="pathwayMetamodel:Choice" name="qtd_episodios" id="33887" weight="1" value="0.0">
+        <option description="Epis&#xf3;dio &#xda;nico" weight="1"/>
+        <option description=">= 2 epis&#xf3;dios" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33891" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="35535" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Dis&#xfa;ria)" description="Dis&#xfa;ria">
+    <operation name="Dis&#xfa;ria" Operator="equal" id="33899">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintomas" id="33886" weight="1" value="0.0">
+        <option description="Assintom&#xe1;tico" weight="1"/>
+        <option description="Dis&#xfa;ria" weight="2"/>
+        <option description="2 epis&#xf3;dios de febre e/ou Lombalgia e/ou N&#xe1;useas e mal estar geral" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33891" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="35536" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.6" id="35537" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (exame alterado)" description="exame alterado">
+    <operation name="exame alterado" Operator="equal" id="33900">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sumario_urina" id="33888" weight="1" value="0.0">
+        <option description="Blocos leucocit&#xe1;rios e/ou nitritos e/ou bacteriuria" weight="1"/>
+        <option description="Normal" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33890" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="35538" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (exame normal)" description="exame normal">
+    <operation name="exame normal" Operator="equal" id="33901">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sumario_urina" id="33888" weight="1" value="0.0">
+        <option description="Blocos leucocit&#xe1;rios e/ou nitritos e/ou bacteriuria" weight="1"/>
+        <option description="Normal" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33891" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.1" id="35539" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (Todos sintomas)" description="Todos sintomas">
+    <operation name="Todos sintomas" Operator="or" id="33902">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sintomas = 3" Operator="equal" id="33894">
+        <operand xsi:type="pathwayMetamodel:Choice" name="sintomas" id="33886" weight="1" value="0.0">
+          <option description="Assintom&#xe1;tico" weight="1"/>
+          <option description="Dis&#xfa;ria" weight="2"/>
+          <option description="2 epis&#xf3;dios de febre e/ou Lombalgia e/ou N&#xe1;useas e mal estar geral" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33892" weight="1" value="3.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sintomas = 5" Operator="equal" id="33895">
+        <operand xsi:type="pathwayMetamodel:Choice" name="sintomas" id="33886" weight="1" value="0.0">
+          <option description="Assintom&#xe1;tico" weight="1"/>
+          <option description="Dis&#xfa;ria" weight="2"/>
+          <option description="2 epis&#xf3;dios de febre e/ou Lombalgia e/ou N&#xe1;useas e mal estar geral" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="5" id="33893" weight="1" value="5.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="35540" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.9" id="35541" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhora" id="33903">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33889" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="35542" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (houve melhora)" description="houve melhora">
+    <operation name="houve melhora" Operator="affirmation" id="33904">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33889" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <operation name="sintomas = 3" Operator="equal" id="33894">
+    <operand xsi:type="pathwayMetamodel:Choice" name="sintomas" id="33886" weight="1" value="0.0">
+      <option description="Assintom&#xe1;tico" weight="1"/>
+      <option description="Dis&#xfa;ria" weight="2"/>
+      <option description="2 epis&#xf3;dios de febre e/ou Lombalgia e/ou N&#xe1;useas e mal estar geral" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33892" weight="1" value="3.0"/>
+  </operation>
+  <operation name="sintomas = 5" Operator="equal" id="33895">
+    <operand xsi:type="pathwayMetamodel:Choice" name="sintomas" id="33886" weight="1" value="0.0">
+      <option description="Assintom&#xe1;tico" weight="1"/>
+      <option description="Dis&#xfa;ria" weight="2"/>
+      <option description="2 epis&#xf3;dios de febre e/ou Lombalgia e/ou N&#xe1;useas e mal estar geral" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="5" id="33893" weight="1" value="5.0"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sintomas" id="33886" weight="1" value="0.0">
+    <option description="Assintom&#xe1;tico" weight="1"/>
+    <option description="Dis&#xfa;ria" weight="2"/>
+    <option description="2 epis&#xf3;dios de febre e/ou Lombalgia e/ou N&#xe1;useas e mal estar geral" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="qtd_episodios" id="33887" weight="1" value="0.0">
+    <option description="Epis&#xf3;dio &#xda;nico" weight="1"/>
+    <option description=">= 2 epis&#xf3;dios" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sumario_urina" id="33888" weight="1" value="0.0">
+    <option description="Blocos leucocit&#xe1;rios e/ou nitritos e/ou bacteriuria" weight="1"/>
+    <option description="Normal" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33889" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="33890" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="33891" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="33892" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="33893" weight="1" value="5.0"/>
+</pathwayMetamodel:Pathway>

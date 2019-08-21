@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Afec&#xe7;&#xf5;es Dermatol&#xf3;gicas Pedi&#xe1;trico" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30181" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avalia&#xe7;&#xe3;o do Quadro" description="&lt;p>Anamnese, sinais vitais, avalia&amp;ccedil;&amp;atilde;o da &amp;aacute;rea acometida, poss&amp;iacute;vel porta de entrada, acometimento agudo ou cr&amp;ocirc;nico.&lt;/p>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2 //@sequence.4 //@sequence.10 //@sequence.12 //@sequence.15 //@sequence.18 //@sequence.19 //@sequence.20">
+    <questions text="IMPETIGO/FUR&#xda;NCULO:  Les&#xf5;es pustulares ou bolhosas ou n&#xf3;dulos inflamat&#xf3;rios mais profundos." url="" id="14601">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="impetigo" id="29341" weight="1" value="false"/>
+    </questions>
+    <questions text="ABSCESSO CUT&#xc2;NEO: cole&#xe7;&#xe3;o de material purulento que normalmente decorre de infec&#xe7;&#xf5;es bacterianas." url="" id="14602">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="abcesso_cutaneo" id="29342" weight="1" value="false"/>
+    </questions>
+    <questions text="CELULITE/ERISIPELA" url="" id="14603">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="celulite" id="29343" weight="1" value="false"/>
+    </questions>
+    <questions text="CISTO PILONIDAL: Cisto infectado localizado na regi&#xe3;o sacral." url="" id="14604">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cispo_pilonidal" id="29344" weight="1" value="false"/>
+    </questions>
+    <questions text="AFEC&#xc7;&#xd5;ES DAS UNHAS:&#xA;onicomicose ou unha encravada." url="" id="14605">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="afeccoes_das_unhas" id="29345" weight="1" value="false"/>
+    </questions>
+    <questions text="URTIC&#xc1;RIA: Les&#xf5;es cut&#xe2;neas eritematosas, edemaciadas e pruriginosas de aparecimento abrupto, que surgem ap&#xf3;s contato com al&#xe9;rgenos." url="" id="14606">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="urticaria" id="29346" weight="1" value="false"/>
+    </questions>
+    <questions text="QUEIMADURAS" url="" id="14607">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queimaduras" id="29347" weight="1" value="false"/>
+    </questions>
+    <questions text="DERMATITES" url="" id="14608">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dermatites" id="29348" weight="1" value="false"/>
+    </questions>
+    <questions text="MICOSES" url="" id="14609">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="micoses" id="29349" weight="1" value="false"/>
+    </questions>
+    <questions text="PARASITOSES" url="" id="14610">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="parasitoses" id="29350" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30182" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Afec&#xe7;&#xf5;es das Unhas] Sintomas" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.13 //@sequence.14">
+    <questions text="Onicomicose" url="" id="14611">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="onicomicose" id="29351" weight="1" value="false"/>
+    </questions>
+    <questions text="Unha encravada com sinais de infec&#xe7;&#xe3;o" url="" id="14612">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="unha_encravada_com_infeccao" id="29352" weight="1" value="false"/>
+    </questions>
+    <questions text="Unha encravada sem sinais de infec&#xe7;&#xe3;o" url="" id="14613">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="unha_encravada_sem_infeccao" id="29353" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30183" type="Receita" type_verbose="Receita" url="" name="[Unha encravada sem sinais de infec&#xe7;&#xe3;o] Receita" description="&lt;p>Avaliar necessidade de encaminhar paciente para pequenas cirurgias.&lt;/p>" isTerminal="true" inputSequences="//@sequence.11">
+    <item id="10321" url="" name="Profenid&#xae; gotas  _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 08/08h se dor."/>
+    <item id="10322" url="" name="Alivium&#xae; 100 mg gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30184" type="Receita" type_verbose="Receita" url="" name="[Impetigo/Fur&#xfa;nculo] Receita" description="" isTerminal="true" inputSequences="//@sequence.2">
+    <item id="10323" url="" name="Mupirocina 20mg/g _____ 1 Tubo" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar na les&#xe3;o 3 vezes ao dia por 7 dias."/>
+    <item id="10324" url="" name="&#xc1;cido Fus&#xed;dico 20mg/g _____ 1 Tubo" med_code="-1" presentation="-" access="18" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar na les&#xe3;o 3 vezes ao dia por 7 dias."/>
+    <item id="10325" url="" name="Cefalexina 250 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h por 7 dias."/>
+    <item id="10326" url="" name="Amoxicilina + Clavulanato 400 + 57 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por 7 dias. (Guardar medicamento na geladeira)"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30185" type="Receita" type_verbose="Receita" url="" name="[Escabiose] Receita" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&amp;lt; 2 meses: Prescrever Enxofre 8% + Vaselina.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&amp;lt; 15 kg e &amp;gt; 2 meses: Prescrever Permetrina.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&amp;gt; 15 kg: Prescrever&amp;nbsp;Ivermectina 6 mg, conforme:&lt;/span>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>15 - 30 kg -- 1/2 cp. Dose &amp;uacute;nica.&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>30 - 45 kg -- 1 cp.&amp;nbsp;Dose &amp;uacute;nica.&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>45 - 60 kg -- 1 e 1/2 cp.&amp;nbsp;Dose &amp;uacute;nica.&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&amp;gt; 60 kg -- 2 cp.&amp;nbsp;Dose &amp;uacute;nica.&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.3">
+    <item id="10327" url="" name="Enxofre 8% + Vaselina _____ 30 g" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Manipular f&#xf3;rmula para 30 gramas. Aplicar no corpo e deixar por 10-12h durante 7 dias."/>
+    <item id="10328" url="" name="Permetrina lo&#xe7;&#xe3;o 5% _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar &#xe0; noite no corpo e deixar por 10-12h. Aplica&#xe7;&#xe3;o &#xfa;nica. Repetir ap&#xf3;s 1 semana."/>
+    <item id="10329" url="" name="Ivermectina 6 mg _____ 1 cp." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ cp. dose &#xfa;nica, repetir ap&#xf3;s 1 semana. &#xA;Realizar retirada de L&#xca;NDEAS com pente fino."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30186" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Definir Grau da Queimadura" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6 //@sequence.7">
+    <questions text="1&#xba; Grau: hiperemia, edema e sensibilidade aumentada." url="" id="14614">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queimadura_grau_i" id="29354" weight="1" value="false"/>
+    </questions>
+    <questions text="2&#xba; Grau: bolhas de base r&#xf3;sea e &#xfa;mida, ardorosa e com edema importante." url="" id="14615">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queimadura_grau_ii" id="29355" weight="1" value="false"/>
+    </questions>
+    <questions text="3&#xba; Grau: secas, indolores, enegrecidas ou p&#xe1;lidas." url="" id="14616">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queimadura_grau_iii" id="29356" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30187" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Queimadura] &lt; 10% da superf&#xed;cie corporal?" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Queimaduras acometem mais de 10% da superf&#xed;cie corporal total? Ou h&#xe1; acometimento de &#xe1;reas nobres ou de risco?" url="" id="14617">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="menor_10_superficie_corporal" id="29357" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="30188" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Queimadura Extensa] Discutir com l&#xed;der e cirurgi&#xe3;o" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Paciente com potencial de gravidade elevado, discutir com l&amp;iacute;der local.&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.7 //@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30189" type="Receita" type_verbose="Receita" url="" name="[Queimadura] Receita" description="" isTerminal="true" inputSequences="//@sequence.5 //@sequence.8">
+    <item id="10330" url="" name="Dipirona gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor."/>
+    <item id="10331" url="" name="Dipirona solu&#xe7;&#xe3;o 50 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor."/>
+    <item id="10332" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor."/>
+    <item id="10333" url="" name="Profenid&#xae; gotas  _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 08/08h se dor."/>
+    <item id="10334" url="" name="Sulfadiazina de prata _____ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 1 vez ao dia por 7 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30190" type="Receita" type_verbose="Receita" url="" name="[Onicomicose] Receita" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>OBS: Esmalte Ciclopirox somente ap&amp;oacute;s 12 anos.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>OBS2: O Itraconazol &amp;eacute; 5 mg/kg/dia a partir de 20 kg. Dura&amp;ccedil;&amp;atilde;o: 2 meses para m&amp;atilde;os e 3 meses para p&amp;eacute;s.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>OBS3: at&amp;eacute; 3 unhas, usar esmalte. Mais de 3 unhas, usar tratamento oral.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.13">
+    <item id="10335" url="" name="Ciclopirox Olamina 8% esmalte" med_code="-1" presentation="-" access="18" quantity="3" period="0" period_unit="SS" frequency="3" frequency_unit="SS" orientations="Aplicar nas unhas de 1 a 3 vezes por semana. Recomenda-se remover o esmalte uma vez por semana, cortar e lixar as unhas."/>
+    <item id="10336" url="" name="Itraconazol 100mg ... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="8" period_unit="SS" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30191" type="Receita" type_verbose="Receita" url="" name="[Cisto Pilonidal] Receita" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Discutir o caso com l&amp;iacute;der local ou cirurgi&amp;atilde;o local se houver sinais de dreangem purulenta ou abscesso com sinais de complica&amp;ccedil;&amp;atilde;o.&amp;nbsp;&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.12">
+    <item id="10337" url="" name="Cefalexina 250 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h por 7 dias."/>
+    <item id="10338" url="" name="Amoxicilina + Clavulanato 400 + 57 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por 7 dias. (Guardar medicamento na geladeira)"/>
+    <item id="10339" url="" name="Dipirona gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor."/>
+    <item id="10340" url="" name="Dipirona solu&#xe7;&#xe3;o 50 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor."/>
+    <item id="10341" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30192" type="Receita" type_verbose="Receita" url="" name="[Unha encravada com sinais de infec&#xe7;&#xe3;o] Receita" description="&lt;p>Avaliar necessidade de encaminhar paciente para pequenas cirurgias.&lt;/p>" isTerminal="true" inputSequences="//@sequence.14">
+    <item id="10342" url="" name="Cefalexina 250 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h por 7 dias."/>
+    <item id="10343" url="" name="Profenid&#xae; gotas  _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 08/08h se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30193" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Abscesso Cut&#xe2;neo] Aux&#xed;lio Conduta" description="" inputSequences="//@sequence.15" outputSequences="//@sequence.16 //@sequence.17">
+    <questions text="A les&#xe3;o permite a drenagem (les&#xf5;es com di&#xe2;metro maior que 1.5 cm com sensa&#xe7;&#xe3;o de flutua&#xe7;&#xe3;o ao toque, sem drenagem espont&#xe2;nea)?" url="" id="14618">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="permite_drenagem_abscesso" id="29358" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30194" type="Receita" type_verbose="Receita" url="" name="[Abscesso Cut&#xe2;neo com drenagem] Receita" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Discutir caso com l&amp;iacute;der local para avaliar real necessidade de drenagem.&lt;/span>&lt;/span>&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.16">
+    <item id="10344" url="" name="Cefalexina 250 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h por 7 dias."/>
+    <item id="10345" url="" name="Amoxicilina + Clavulanato 400 + 57 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por 7 dias. (Guardar medicamento na geladeira)"/>
+    <item id="10346" url="" name="Dipirona gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor."/>
+    <item id="10347" url="" name="Dipirona solu&#xe7;&#xe3;o 50 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor."/>
+    <item id="10348" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor."/>
+    <item id="10349" url="" name="Profenid&#xae; gotas  _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 08/08h se dor."/>
+    <item id="10350" url="" name="Alivium&#xae; 100 mg gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30195" type="Receita" type_verbose="Receita" url="" name="[Abscesso Cut&#xe2;neo sem drenagem] Receita" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Alertar paciente sobre poss&amp;iacute;veis complica&amp;ccedil;&amp;otilde;es como celulite perilesional.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Indicar paciente retorno a emerg&amp;ecirc;ncia se abscesso n&amp;atilde;o drenar espontaneamente com 4 a 5 dias.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.17">
+    <item id="10351" url="" name="Cefalexina 250 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h por 7 dias."/>
+    <item id="10352" url="" name="Amoxicilina + Clavulanato 400 + 57 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por 7 dias. (Guardar medicamento na geladeira)"/>
+    <item id="10353" url="" name="Dipirona gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor."/>
+    <item id="10354" url="" name="Dipirona solu&#xe7;&#xe3;o 50 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor."/>
+    <item id="10355" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor."/>
+    <item id="10356" url="" name="Profenid&#xae; gotas  _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 08/08h se dor."/>
+    <item id="10357" url="" name="Alivium&#xae; 100 mg gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="30196" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Celulite] Encaminhar protocolo" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Encaminhar para protocolo de Celulite&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>H068</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="30197" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Urtic&#xe1;ria] Encaminhamento" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Encaminhar para Protocolo de Urtic&amp;aacute;ria&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.1">
+    <pathways>H040</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30198" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dermatites] Avaliar" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.21 //@sequence.22 //@sequence.23 //@sequence.33">
+    <questions text="Selecionar o tipo de dermatite:" url="" id="14619">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tipo_dermatite" id="29359" weight="1" value="0.0">
+        <option description="Contato" weight="1"/>
+        <option description="At&#xf3;pica" weight="2"/>
+        <option description="Seborreica" weight="3"/>
+        <option description="Seborreica do Rec&#xe9;m-nascido" weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30199" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Micoses] Avaliar" description="" inputSequences="//@sequence.19" outputSequences="//@sequence.24 //@sequence.29">
+    <questions text="Selecionar o tipo de micose:" url="" id="14620">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tipo_micose" id="29360" weight="1" value="0.0">
+        <option description="Candid&#xed;ase" weight="1"/>
+        <option description="Tineas" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30200" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Parasitoses] Avaliar" description="" inputSequences="//@sequence.20" outputSequences="//@sequence.3 //@sequence.25 //@sequence.26 //@sequence.27 //@sequence.28">
+    <questions text="Selecionar o tipo de parasitose:" url="" id="14621">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tipo_parasitose" id="29361" weight="1" value="0.0">
+        <option description="Pediculose" weight="1"/>
+        <option description="Escabiose" weight="2"/>
+        <option description="Larva Migrans" weight="3"/>
+        <option description="Tung&#xed;ase" weight="4"/>
+        <option description="Mi&#xed;ase" weight="5"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30201" type="Receita" type_verbose="Receita" url="" name="[Dermatite de Contato] Receita" description="" isTerminal="true" inputSequences="//@sequence.21">
+    <item id="10358" url="" name="Desonida pomada ______ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 2 vezes ao dia por 7 dias"/>
+    <item id="10359" url="" name="Mometasona pomada ______ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 2 vezes ao dia por 7 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30202" type="Receita" type_verbose="Receita" url="" name="[Dermatite at&#xf3;pica] Receita" description="" isTerminal="true" inputSequences="//@sequence.22">
+    <item id="10360" url="" name="Fisiogel&#xae; AI _______ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 2 vezes ao dia (ap&#xf3;s o banho) enquanto houver a les&#xe3;o."/>
+    <item id="10361" url="" name="Neutrogena&#xae; Norwegian _____ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 2 vezes ao dia (ap&#xf3;s o banho) enquanto houver a les&#xe3;o."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30203" type="Receita" type_verbose="Receita" url="" name="[Dermatite seborreica] Receita" description="" isTerminal="true" inputSequences="//@sequence.23">
+    <item id="10362" url="" name="Shampoo Cetoconazol _______ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar na parte afetada por 3 &#xe0; 5 min e enxaguar. Usar 2 vezes por semana por 4 semanas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30204" type="Receita" type_verbose="Receita" url="" name="[Tineas Capitis] Receita" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Para crian&amp;ccedil;as &amp;gt;&amp;nbsp;2 anos: dose - 15 mg/kg/dia.&amp;nbsp;&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.35">
+    <item id="10363" url="" name="Griseofulvina 250 mg ______ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Diluir 1 comprimido em 10 ml e dar ______ ml 2 vezes ao dia por 6 semanas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30205" type="Receita" type_verbose="Receita" url="" name="[Pediculose] Receita" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&amp;lt; 15 kg e &amp;gt; 2 meses: Prescrever Permetrina solu&amp;ccedil;&amp;atilde;o capilar 1%.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&amp;gt; 15 kg: Prescrever&amp;nbsp;Ivermectina 6 mg, conforme:&lt;/span>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>15 - 30 kg -- 1/2 cp. Dose &amp;uacute;nica.&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>30 - 45 kg -- 1 cp.&amp;nbsp;Dose &amp;uacute;nica.&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>45 - 60 kg -- 1 e 1/2 cp.&amp;nbsp;Dose &amp;uacute;nica.&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&amp;gt; 60 kg -- 2 cp.&amp;nbsp;Dose &amp;uacute;nica.&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.25">
+    <item id="10364" url="" name="Permetrina lo&#xe7;&#xe3;o capilar 1% _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar no cabelo por 15 min e enxaguar. Realizar retirada de L&#xca;NDEAS com pente fino. Dose &#xfa;nica, repetir com 1 semana."/>
+    <item id="10365" url="" name="Ivermectina 6 mg _____ 1 cp" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ cp. dose &#xfa;nica, repetir ap&#xf3;s 1 semana. &#xA;Realizar retirada de L&#xca;NDEAS com pente fino."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30206" type="Receita" type_verbose="Receita" url="" name="[Larva Migrans] Receita" description="" isTerminal="true" inputSequences="//@sequence.26">
+    <item id="10366" url="" name="Tiabendazol pomada ______ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 3 vezes ao dia por 7 dias."/>
+    <item id="10367" url="" name="Albendazol 40 mg/ml _____ 5 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 10 ml 1 vez ao dia por 5 dias."/>
+    <item id="10368" url="" name="Albendazol 400 mg ______ 5 cp." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 1 comprimido 1 vez ao dia por 5 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30207" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Candid&#xed;ase] Localiza&#xe7;&#xe3;o" description="" inputSequences="//@sequence.29" outputSequences="//@sequence.30 //@sequence.31 //@sequence.32">
+    <questions text="Localiza&#xe7;&#xe3;o:" url="" id="14622">
+      <answers xsi:type="pathwayMetamodel:Choice" name="localizacao_candidiase" id="29362" weight="1" value="0.0">
+        <option description="Fraldas" weight="1"/>
+        <option description="Intertrigeo" weight="2"/>
+        <option description="Oral" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="30208" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Candid&#xed;ase Oral] Encaminhamento" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Abrir protocolo de IVAS Pedi&amp;aacute;trico para tratar como Amigdalite por fungos.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.30">
+    <pathways>H026</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30209" type="Receita" type_verbose="Receita" url="" name="[Candid&#xed;ase Fraldas] Receita" description="" isTerminal="true" inputSequences="//@sequence.31">
+    <item id="10369" url="" name="Nistatina + &#xf3;xido de zinco _____ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar em cada troca de fraldas de 7-14 dias. Realizar limpeza com algod&#xe3;o e &#xe1;gua filtrada antes de aplicar pomada."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30210" type="Receita" type_verbose="Receita" url="" name="[Candid&#xed;ase Intertrigeo] Receita" description="" isTerminal="true" inputSequences="//@sequence.32">
+    <item id="10370" url="" name="Miconazol t&#xf3;pico _____ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar no local 3 vezes ao dia de 2 a 5 semanas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="30211" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar ao ambulat&#xf3;rio" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Encaminhar paciente ao ambulat&amp;oacute;rio da cirurgia pedi&amp;aacute;trica para extra&amp;ccedil;&amp;atilde;o&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.27 //@sequence.28"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30212" type="Receita" type_verbose="Receita" url="" name="[Dermatite seborreica no RN] Receita" description="" isTerminal="true" inputSequences="//@sequence.33">
+    <item id="10371" url="" name="&#xd3;leo Mineral" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 1 vez ao dia. Remover as crostas com pente."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="30213" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Tineas] Avaliar" description="" inputSequences="//@sequence.24" outputSequences="//@sequence.34 //@sequence.35">
+    <questions text="Avaliar Tineas:" url="" id="14623">
+      <answers xsi:type="pathwayMetamodel:Choice" name="avaliar_tineas" id="29363" weight="1" value="0.0">
+        <option description="Corporis, pedis, cruris, versicolor" weight="1"/>
+        <option description="Capitis" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="30214" type="Receita" type_verbose="Receita" url="" name="[Tineas Corporis, pedis, cruris, versicolor] Receita" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Les&amp;atilde;o &amp;uacute;nica: Miconazol.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Les&amp;atilde;o externa: Fluconazol (&amp;gt; 2 anos - 6 mg/kg/dose).&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.34">
+    <item id="10372" url="" name="Miconazol pomada ______ 1 TB" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar uma camada 2 vezes ao dia por de 2 &#xe0; 4 semanas. Lavar o local e secar ap&#xf3;s."/>
+    <item id="10373" url="" name="Fluconazol 150 mg _____ 1 cp." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 1 comprimido em dose &#xfa;nica."/>
+  </element>
+  <sequence inputStep="//@element.15" outputStep="//@element.0" id="30215" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (celulite)" description="erisipela">
+    <operation name="Celulite" Operator="affirmation" id="29373">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="celulite" id="29343" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.0" id="30216" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Urticaria)" description="-">
+    <operation name="Urticaria" Operator="affirmation" id="29374">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="urticaria" id="29346" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="30217" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (impetigo/fur&#xfa;nculo)" description="impetigo">
+    <operation name="impetigo/fur&#xfa;nculo" Operator="affirmation" id="29375">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="impetigo" id="29341" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.19" id="30218" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-">
+    <operation name="Escabiose" Operator="equal" id="29376">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_parasitose" id="29361" weight="1" value="0.0">
+        <option description="Pediculose" weight="1"/>
+        <option description="Escabiose" weight="2"/>
+        <option description="Larva Migrans" weight="3"/>
+        <option description="Tung&#xed;ase" weight="4"/>
+        <option description="Mi&#xed;ase" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="29364" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="30219" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Queimadura)" description="Queimadura">
+    <operation name="Queimadura" Operator="affirmation" id="29377">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="queimaduras" id="29347" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.5" id="30220" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (grau 1)" description="grau 1">
+    <operation name="grau 1" Operator="affirmation" id="29378">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="queimadura_grau_i" id="29354" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="30221" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (grau 2)" description="grau 2">
+    <operation name="grau 2" Operator="affirmation" id="29379">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="queimadura_grau_ii" id="29355" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="30222" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (grau 3)" description="grau 3">
+    <operation name="grau 3" Operator="affirmation" id="29380">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="queimadura_grau_iii" id="29356" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="30223" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (menos de 10%)" description="menos de 10%">
+    <operation name="menos de 10%" id="29381">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="menor_10_superficie_corporal" id="29357" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="30224" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (mais de 10%)" description="mais de 10%">
+    <operation name="mais de 10%" Operator="affirmation" id="29382">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="menor_10_superficie_corporal" id="29357" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="30225" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (afeccoes das unhas)" description="afeccoes das unhas">
+    <operation name="afeccoes das unhas" Operator="affirmation" id="29383">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="afeccoes_das_unhas" id="29345" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="30226" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (unha encravada sem infeccao)" description="unha encravada sem infeccao">
+    <operation name="unha encravada sem infeccao" Operator="affirmation" id="29384">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="unha_encravada_sem_infeccao" id="29353" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.0" id="30227" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (cisto pilonidal)" description="cisto pilonidal">
+    <operation name="cisto pilonidal" Operator="affirmation" id="29385">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cispo_pilonidal" id="29344" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.1" id="30228" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (onicomicose)" description="onicomicose">
+    <operation name="apresenta onicomicose" Operator="affirmation" id="29386">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="onicomicose" id="29351" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.1" id="30229" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (unha encravada com infeccao)" description="unha encravada com infeccao">
+    <operation name="unha encravada com infeccao" Operator="affirmation" id="29387">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="unha_encravada_com_infeccao" id="29352" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.0" id="30230" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (abscesso cut&#xe2;neo)" description="abscesso cut&#xe2;neo">
+    <operation name="abscesso cut&#xe2;neo" Operator="affirmation" id="29388">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="abcesso_cutaneo" id="29342" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="30231" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (com drenagem)" description="com drenagem">
+    <operation name="com drenagem" Operator="affirmation" id="29389">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="permite_drenagem_abscesso" id="29358" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.12" id="30232" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (sem drenagem)" description="sem drenagem">
+    <operation name="sem drenagem" id="29390">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="permite_drenagem_abscesso" id="29358" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.0" id="30233" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (dermatites)" description="dermatites">
+    <operation name="Dermatites" Operator="affirmation" id="29391">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dermatites" id="29348" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.0" id="30234" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (micoses)" description="micoses">
+    <operation name="Micoses" Operator="affirmation" id="29392">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="micoses" id="29349" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.0" id="30235" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (Parasitoses)" description="Parasitoses">
+    <operation name="Parasitoses" Operator="affirmation" id="29393">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="parasitoses" id="29350" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.17" id="30236" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (dermatite de contato)" description="dermatite de contato">
+    <operation name="dermatite de contato" Operator="equal" id="29394">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_dermatite" id="29359" weight="1" value="0.0">
+        <option description="Contato" weight="1"/>
+        <option description="At&#xf3;pica" weight="2"/>
+        <option description="Seborreica" weight="3"/>
+        <option description="Seborreica do Rec&#xe9;m-nascido" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="29365" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.17" id="30237" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (dermatite at&#xf3;pica)" description="dermatite at&#xf3;pica">
+    <operation name="dermatite at&#xf3;pica" Operator="equal" id="29395">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_dermatite" id="29359" weight="1" value="0.0">
+        <option description="Contato" weight="1"/>
+        <option description="At&#xf3;pica" weight="2"/>
+        <option description="Seborreica" weight="3"/>
+        <option description="Seborreica do Rec&#xe9;m-nascido" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="29364" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.17" id="30238" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (dermatite seborreica)" description="dermatite seborreica">
+    <operation name="dermatite seborreica" Operator="equal" id="29396">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_dermatite" id="29359" weight="1" value="0.0">
+        <option description="Contato" weight="1"/>
+        <option description="At&#xf3;pica" weight="2"/>
+        <option description="Seborreica" weight="3"/>
+        <option description="Seborreica do Rec&#xe9;m-nascido" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="29366" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.32" outputStep="//@element.18" id="30239" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (tineas)" description="tineas">
+    <operation name="tineas" Operator="equal" id="29397">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_micose" id="29360" weight="1" value="0.0">
+        <option description="Candid&#xed;ase" weight="1"/>
+        <option description="Tineas" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="29364" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.19" id="30240" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (pediculose)" description="pediculose">
+    <operation name="pediculose" Operator="equal" id="29398">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_parasitose" id="29361" weight="1" value="0.0">
+        <option description="Pediculose" weight="1"/>
+        <option description="Escabiose" weight="2"/>
+        <option description="Larva Migrans" weight="3"/>
+        <option description="Tung&#xed;ase" weight="4"/>
+        <option description="Mi&#xed;ase" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="29365" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.19" id="30241" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (larva migrans)" description="larva migrans">
+    <operation name="larva migrans" Operator="equal" id="29399">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_parasitose" id="29361" weight="1" value="0.0">
+        <option description="Pediculose" weight="1"/>
+        <option description="Escabiose" weight="2"/>
+        <option description="Larva Migrans" weight="3"/>
+        <option description="Tung&#xed;ase" weight="4"/>
+        <option description="Mi&#xed;ase" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="29366" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.19" id="30242" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (tung&#xed;ase)" description="tung&#xed;ase">
+    <operation name="tung&#xed;ase" Operator="equal" id="29400">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_parasitose" id="29361" weight="1" value="0.0">
+        <option description="Pediculose" weight="1"/>
+        <option description="Escabiose" weight="2"/>
+        <option description="Larva Migrans" weight="3"/>
+        <option description="Tung&#xed;ase" weight="4"/>
+        <option description="Mi&#xed;ase" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="29367" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.19" id="30243" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (mi&#xed;ase)" description="mi&#xed;ase">
+    <operation name="mi&#xed;ase" Operator="equal" id="29401">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_parasitose" id="29361" weight="1" value="0.0">
+        <option description="Pediculose" weight="1"/>
+        <option description="Escabiose" weight="2"/>
+        <option description="Larva Migrans" weight="3"/>
+        <option description="Tung&#xed;ase" weight="4"/>
+        <option description="Mi&#xed;ase" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="5" id="29368" weight="1" value="5.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.18" id="30244" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (candid&#xed;ase)" description="candid&#xed;ase">
+    <operation name="candid&#xed;ase" Operator="equal" id="29402">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_micose" id="29360" weight="1" value="0.0">
+        <option description="Candid&#xed;ase" weight="1"/>
+        <option description="Tineas" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="29365" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.26" id="30245" type="Sequencia" type_verbose="Sequencia" url="" name="S31 (candidiase oral)" description="candidiase oral">
+    <operation name="candidiase oral" Operator="equal" id="29403">
+      <operand xsi:type="pathwayMetamodel:Choice" name="localizacao_candidiase" id="29362" weight="1" value="0.0">
+        <option description="Fraldas" weight="1"/>
+        <option description="Intertrigeo" weight="2"/>
+        <option description="Oral" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="29366" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.26" id="30246" type="Sequencia" type_verbose="Sequencia" url="" name="S32 (candidiase fraldas)" description="candidiase fraldas">
+    <operation name="candidiase fraldas" Operator="equal" id="29404">
+      <operand xsi:type="pathwayMetamodel:Choice" name="localizacao_candidiase" id="29362" weight="1" value="0.0">
+        <option description="Fraldas" weight="1"/>
+        <option description="Intertrigeo" weight="2"/>
+        <option description="Oral" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="29365" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.29" outputStep="//@element.26" id="30247" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (candidiase intertigo)" description="candidiase intertigo">
+    <operation name="candidiase intertigo" Operator="equal" id="29405">
+      <operand xsi:type="pathwayMetamodel:Choice" name="localizacao_candidiase" id="29362" weight="1" value="0.0">
+        <option description="Fraldas" weight="1"/>
+        <option description="Intertrigeo" weight="2"/>
+        <option description="Oral" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="29364" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.31" outputStep="//@element.17" id="30248" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (dermatite seborreica RN)" description="dermatite seborreica RN">
+    <operation name="dermatite seborreica RN" Operator="equal" id="29406">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_dermatite" id="29359" weight="1" value="0.0">
+        <option description="Contato" weight="1"/>
+        <option description="At&#xf3;pica" weight="2"/>
+        <option description="Seborreica" weight="3"/>
+        <option description="Seborreica do Rec&#xe9;m-nascido" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="29367" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.33" outputStep="//@element.32" id="30249" type="Sequencia" type_verbose="Sequencia" url="" name="S35 (tineas corporis, pedis, cruris, versicolor)" description="tineas corporis, pedis, cruris, versicolor">
+    <operation name="tineas corporis, pedis, cruris, versicolor" Operator="equal" id="29407">
+      <operand xsi:type="pathwayMetamodel:Choice" name="avaliar_tineas" id="29363" weight="1" value="0.0">
+        <option description="Corporis, pedis, cruris, versicolor" weight="1"/>
+        <option description="Capitis" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="29365" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.32" id="30250" type="Sequencia" type_verbose="Sequencia" url="" name="S36 (tineas capitis)" description="tineas capitis">
+    <operation name="tineas capitis" Operator="equal" id="29408">
+      <operand xsi:type="pathwayMetamodel:Choice" name="avaliar_tineas" id="29363" weight="1" value="0.0">
+        <option description="Corporis, pedis, cruris, versicolor" weight="1"/>
+        <option description="Capitis" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="29364" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <operation name="Quick SOFA" Operator="addition" id="29369"/>
+  <operation name="Marcadores de Gravidade" Operator="addition" id="29370"/>
+  <operation name="Varicela sem imunodeficiencia" id="29371"/>
+  <operation name="Varicela sem infeccao secundaria" id="29372"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="impetigo" id="29341" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="abcesso_cutaneo" id="29342" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="celulite" id="29343" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cispo_pilonidal" id="29344" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="afeccoes_das_unhas" id="29345" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="urticaria" id="29346" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queimaduras" id="29347" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dermatites" id="29348" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="micoses" id="29349" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="parasitoses" id="29350" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="onicomicose" id="29351" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="unha_encravada_com_infeccao" id="29352" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="unha_encravada_sem_infeccao" id="29353" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queimadura_grau_i" id="29354" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queimadura_grau_ii" id="29355" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queimadura_grau_iii" id="29356" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="menor_10_superficie_corporal" id="29357" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="permite_drenagem_abscesso" id="29358" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tipo_dermatite" id="29359" weight="1" value="0.0">
+    <option description="Contato" weight="1"/>
+    <option description="At&#xf3;pica" weight="2"/>
+    <option description="Seborreica" weight="3"/>
+    <option description="Seborreica do Rec&#xe9;m-nascido" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tipo_micose" id="29360" weight="1" value="0.0">
+    <option description="Candid&#xed;ase" weight="1"/>
+    <option description="Tineas" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tipo_parasitose" id="29361" weight="1" value="0.0">
+    <option description="Pediculose" weight="1"/>
+    <option description="Escabiose" weight="2"/>
+    <option description="Larva Migrans" weight="3"/>
+    <option description="Tung&#xed;ase" weight="4"/>
+    <option description="Mi&#xed;ase" weight="5"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="localizacao_candidiase" id="29362" weight="1" value="0.0">
+    <option description="Fraldas" weight="1"/>
+    <option description="Intertrigeo" weight="2"/>
+    <option description="Oral" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="avaliar_tineas" id="29363" weight="1" value="0.0">
+    <option description="Corporis, pedis, cruris, versicolor" weight="1"/>
+    <option description="Capitis" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="29364" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="29365" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="29366" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="29367" weight="1" value="4.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="29368" weight="1" value="5.0"/>
+</pathwayMetamodel:Pathway>

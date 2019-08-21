@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="IVAS Pedi&#xe1;trico" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35001" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Comorbidades" description="" isInitial="true" outputSequences="//@sequence.0">
+    <questions text="Paciente apresenta comorbidades (neoplasia, imunossupress&#xe3;o, SD gen&#xe9;tica, cardiopatia, interna&#xe7;&#xe3;o em menos de 30 dias, idade menor que 2 meses, encefalopatia)?" url="" id="16361">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_comorbidades" id="33421" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35002" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Sinais de Alarme" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2 //@sequence.3">
+    <questions text="O Paciente apresenta sinais de alarme?" url="" id="16362">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="33422" weight="1" value="0.0">
+        <option description="Altera&#xe7;&#xe3;o na ausculta pulmonar" weight="1"/>
+        <option description="Taquicardia" weight="1"/>
+        <option description="Dispn&#xe9;ia" weight="1"/>
+        <option description="Toxemia" weight="1"/>
+        <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+        <option description="Taquipn&#xe9;ia" weight="1"/>
+        <option description="Queda do Estado Geral" weight="1"/>
+        <option description="Bradicardia" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35003" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Raio X do T&#xf3;rax" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.5">
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Suspeita de IVAS Ped&#xe1;trico" clinical_indication="Suspeita de IVAS Ped&#xe1;trico"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35004" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Retorno 48h" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Orientar retorno do paciente em 48h para reavalia&amp;ccedil;&amp;atilde;o devido a comorbidades.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35005" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Resultados" description="Avaliar Resultado do Raio X" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Exame apresenta altera&#xe7;&#xf5;es?" url="" id="16363">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alteracoes_raio_x" id="33423" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35006" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com chefia" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der local.&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35007" type="Tratamento" type_verbose="Tratamento" url="" name="Conduta" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>- Solicitar triagem infecciosa laboratorial.&lt;br />&#xA;- Medicar com sintom&amp;aacute;ticos conforme a queixa do paciente.&lt;/span>&lt;/p>" inputSequences="//@sequence.7" outputSequences="//@sequence.8">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="IVAS pediatrico" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="IVAS pediatrico" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="IVAS pediatrico" clinical_indication="N/A"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35008" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar necessidade de ATB" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Paciente necessita de Antibi&#xf3;ticoterapia?" url="" id="16364">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="necessita_atb" id="33424" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35009" type="Receita" type_verbose="Receita" url="" name="Alta com sintom&#xe1;ticos e Retorno em 48 horas" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.4">
+    <item id="12681" url="" name="Dipirona solu&#xe7;&#xe3;o 50mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 6/6h, se dor ou febre superior a 37,8&#xba;C"/>
+    <item id="12682" url="" name="Aerosol SF0,9% _____ 1 Fr." med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Inala&#xe7;&#xe3;o com 5ml de 6/6h por 5 dias."/>
+    <item id="12683" url="" name="Desloratadina solu&#xe7;&#xe3;o _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML 1 vez ao dia por 10 dias"/>
+    <item id="12684" url="" name="Fexofenadina 6mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 10 dias"/>
+    <item id="12685" url="" name="Aerosol com SF0,9% (5ml) + Pulmicort 0,25mg/ml" med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer _____ ampola de 12/12h por 5 dias"/>
+    <item id="12686" url="" name="Acebrofilina Xpe 25mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 5 dias"/>
+    <item id="12687" url="" name="Levodropropizina Xpe 30mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 5 dias"/>
+    <item id="12688" url="" name="Lavagem nasal SF0,9% 3ml" med_code="-1" presentation="-" access="2" quantity="1" period="5" period_unit="DD" frequency="6" frequency_unit="DD" orientations="Aplicar de 6 a 8 vezes/dia"/>
+    <item id="12689" url="" name="Hidroxizina Xpe _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+    <item id="12690" url="" name="Hedera Helix _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35010" type="Receita" type_verbose="Receita" url="" name="Alta com sintom&#xe1;ticos" description="" isTerminal="true" inputSequences="//@sequence.10">
+    <item id="12691" url="" name="Dipirona solu&#xe7;&#xe3;o 50mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 6/6h, se dor ou febre superior a 37,8&#xba;C"/>
+    <item id="12692" url="" name="Desloratadina solu&#xe7;&#xe3;o _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML 1 vez ao dia por 10 dias"/>
+    <item id="12693" url="" name="Fexofenadina 6mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 10 dias"/>
+    <item id="12694" url="" name="Hidroxizina Xpe _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+    <item id="12695" url="" name="Aerosol SF0,9% _____ Inala&#xe7;&#xe3;o de 5ml" med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="De 6/6h por 5 dias"/>
+    <item id="12696" url="" name="Aerosol com SF0,9% (5ml) + Pulmicort 0,25mg/ml" med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer _____ ampola de 12/12h por 5 dias"/>
+    <item id="12697" url="" name="Lavagem nasal SF0,9% 3ml" med_code="-1" presentation="-" access="2" quantity="1" period="5" period_unit="DD" frequency="6" frequency_unit="DD" orientations="Aplicar de 6 a 8 vezes/dia"/>
+    <item id="12698" url="" name="Acebrofilina Xpe 25mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 5 dias"/>
+    <item id="12699" url="" name="Levodropropizina Xpe 30mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 5 dias"/>
+    <item id="12700" url="" name="Hedera Helix _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35011" type="Receita" type_verbose="Receita" url="" name="Alta com sintom&#xe1;ticos e antibi&#xf3;ticos" description="" isTerminal="true" inputSequences="//@sequence.9">
+    <item id="12701" url="" name="Dipirona solu&#xe7;&#xe3;o 50mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 6/6h, se dor ou febre superior a 37,8&#xba;C"/>
+    <item id="12702" url="" name="Aerosol SF0,9% _____ Inala&#xe7;&#xe3;o de 5ml" med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="De 6/6h por 5 dias"/>
+    <item id="12703" url="" name="Desloratadina solu&#xe7;&#xe3;o _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML 1 vez ao dia por 10 dias"/>
+    <item id="12704" url="" name="Fexofenadina 6mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 10 dias"/>
+    <item id="12705" url="" name="Aerosol com SF0,9% (5ml) + Pulmicort 0,25mg/ml" med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer _____ ampola de 12/12h por 5 dias"/>
+    <item id="12706" url="" name="Acebrofilina Xpe 25mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 5 dias"/>
+    <item id="12707" url="" name="Levodropropizina Xpe 30mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 5 dias"/>
+    <item id="12708" url="" name="Lavagem nasal SF0,9% 3ml" med_code="-1" presentation="-" access="2" quantity="1" period="5" period_unit="DD" frequency="6" frequency_unit="DD" orientations="Aplicar de 6 a 8 vezes/dia"/>
+    <item id="12709" url="" name="Hidroxizina Xpe _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+    <item id="12710" url="" name="Hedera Helix _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+    <item id="12711" url="" name="Amoxicilina + Clavulanato 400+57 mg/5 ml ___________ FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ ml de 12/12h por 10 dias (conservar na geladeira)."/>
+    <item id="12712" url="" name="Ceftriaxona 1g ________________________fr" med_code="-1" presentation="-" access="5" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 1 ampola intramuscular, 1x por dia por 3 dias. Reavaliar ap&#xf3;s 48h."/>
+    <item id="12713" url="" name="Azitromicina 900mg ___ Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ ml 1x por dia por 5 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35012" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Amigdalite] Verificar tipo" description="" inputSequences="//@sequence.16" outputSequences="//@sequence.11 //@sequence.12 //@sequence.13">
+    <questions text="Amigdalite com sinais sugestivos de:" url="" id="16365">
+      <answers xsi:type="pathwayMetamodel:Choice" name="foco_amigdalite" id="33425" weight="1" value="0.0">
+        <option description="VIRAL (aus&#xea;ncia exsudato, hiperemia em palato com les&#xf5;es aftosas, sintomas gripais, febre baixa)" weight="1"/>
+        <option description="BACTERIANA (pet&#xe9;quias em palato, presen&#xe7;a de exsudato, febre alta)" weight="2"/>
+        <option description="Outros: Estomatite f&#xfa;ngica (les&#xf5;es aftoides difusas em cavidade oral)" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35013" type="Receita" type_verbose="Receita" url="" name="[Amigdalite] Receita sintom&#xe1;ticos" description="" isTerminal="true" inputSequences="//@sequence.38 //@sequence.54">
+    <item id="12714" url="" name="Dipirona gotas ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor ou febre."/>
+    <item id="12715" url="" name="Dipirona solu&#xe7;&#xe3;o 50 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 6/6h se dor ou febre."/>
+    <item id="12716" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor ou febre."/>
+    <item id="12717" url="" name="Alivium&#xae; 100 mg gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor ou febre."/>
+    <item id="12718" url="" name="Profenid&#xae; gotas  _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 08/08h por 3 dias."/>
+    <item id="12719" url="" name="Nistatina solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 06/06h por 7 dias."/>
+    <item id="12720" url="" name="Hexomedine&#xae; spray ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 2-3 jatos antes das refei&#xe7;&#xf5;es."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35014" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Amigdalite bacteriana] Avaliar sinais" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Sinais de abscesso periamigdaliano (desvio de &#xfa;vula, dificuldade de abertura oral, edema retrofar&#xed;ngeo unilateral, edema de palato)?" url="" id="16366">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinais_abscesso_periamigdaliano" id="33426" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35015" type="Tratamento" type_verbose="Tratamento" url="" name="[Amigdalite] Solicitar exames" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Solicitar: &lt;/strong>Hemograma + Hemocultura + TC Cervical.&amp;nbsp;&lt;/span>&lt;/p>" inputSequences="//@sequence.14" outputSequences="//@sequence.28">
+    <examination url="HEMOCULTURA" exam_id="28100298" limb_side="" quantity="1" reason="paciente com amigdalite bacteriana" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="paciente com amigdalite bacteriana" clinical_indication="n/a"/>
+    <examination url="TC DO PESCOCO PARTES MOLES LARINGE" exam_id="34010114" limb_side="" quantity="1" reason="Paciente com amigdalite" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35016" type="Receita" type_verbose="Receita" url="" name="[Amigdalite] Receita antibi&#xf3;tico" description="" isTerminal="true" inputSequences="//@sequence.29 //@sequence.41 //@sequence.56">
+    <item id="12721" url="" name="Dipirona gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor ou febre."/>
+    <item id="12722" url="" name="Dipirona solu&#xe7;&#xe3;o 50 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor ou febre."/>
+    <item id="12723" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor ou febre."/>
+    <item id="12724" url="" name="Alivium&#xae; 100 mg gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor ou febre."/>
+    <item id="12725" url="" name="Profenid&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h por 3 dias."/>
+    <item id="12726" url="" name="Hexomedine&#xae; spray ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 2-3 jatos antes das refei&#xe7;&#xf5;es."/>
+    <item id="12727" url="" name="Amoxicilina + Clavulanato 400+57 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por 7 dias. (Guardar medicamento na geladeira)."/>
+    <item id="12728" url="" name="Azitromicina _____ mg _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 1 vez ao dia por 5 dias."/>
+    <item id="12729" url="" name="Benzetacil&#xae; 1.200.000 UI ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar dose &#xfa;nica IM."/>
+    <item id="12730" url="" name="Amoxicilina 400 mg/5ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por 7 dias."/>
+    <item id="12731" url="" name="Ceftriaxona 1 G _____ 3 ampolas" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 1 ampola IM, 1 vez ao dia por 3 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35017" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar quadro de IVAS" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.16 //@sequence.17 //@sequence.25 //@sequence.26 //@sequence.27">
+    <questions text="Quadro de IVAS sugestivo de:" url="" id="16367">
+      <answers xsi:type="pathwayMetamodel:Choice" name="quadro_ivas" id="33427" weight="1" value="0.0">
+        <option description="Amigdalite" weight="1"/>
+        <option description="Otite" weight="2"/>
+        <option description="Sinusite (tosse cr&#xf4;nica, associada cefaleia, congest&#xe3;o + coriza nasal - secre&#xe7;&#xe3;o com aspecto purulento, gotejamento p&#xf3;s-nasal)" weight="3"/>
+        <option description="Resfriado comum" weight="4"/>
+        <option description="Rinite al&#xe9;rgica" weight="5"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35018" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite] Avaliar otite" description="" inputSequences="//@sequence.17" outputSequences="//@sequence.18 //@sequence.24">
+    <questions text="Avaliar otite:" url="" id="16368">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tipo_otite" id="33428" weight="1" value="0.0">
+        <option description="M&#xe9;dia (hist&#xf3;ria de IVAS recente, membrana timp&#xe2;nica abaulada, esbranqui&#xe7;ada, otorreia)" weight="1"/>
+        <option description="Externa (sem hist&#xf3;ria de IVAS recente, com hist&#xf3;ria de manipula&#xe7;&#xe3;o ou banhos de imers&#xe3;o. Dor manipula&#xe7;&#xe3;o pavilh&#xe3;o e conduto, al&#xe9;m de estenose e hiperemia)" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35019" type="Receita" type_verbose="Receita" url="" name="[Otite externa] Receita" description="" isTerminal="true" inputSequences="//@sequence.44 //@sequence.58">
+    <item id="12732" url="" name="Otociriax&#xae; ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 03 gotas de 8/8h por 7 dias."/>
+    <item id="12733" url="" name="Novalgina&#xae; solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor ou febre."/>
+    <item id="12734" url="" name="Dipirona gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor ou febre."/>
+    <item id="12735" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor ou febre."/>
+    <item id="12736" url="" name="Alivium&#xae; 100 mg gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor ou febre."/>
+    <item id="12737" url="" name="Profenid&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h por 3 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35020" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite m&#xe9;dia] Avaliar abaulamento" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.19 //@sequence.23">
+    <questions text="Otite associada a presen&#xe7;a de abaulamento de mastoide?" url="" id="16369">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="abaulamento_mastoide" id="33429" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35021" type="Receita" type_verbose="Receita" url="" name="[Otite m&#xe9;dia] Receita" description="&lt;p>Tempo de tratamento:&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>OMA severa ou &amp;lt; 2 anos: 10 dias.&lt;/li>&#xA;&#x9;&lt;li>Idade entre 2 e 5 anos: 7 dias.&lt;/li>&#xA;&#x9;&lt;li>Idade &amp;gt; 5 anos: 5 dias.&amp;nbsp;&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Op&amp;ccedil;&amp;otilde;es de Antibi&amp;oacute;ticos:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>1&amp;ordf; linha: Amoxicilina 45-90 mg/kg/dia (se paciente N&amp;Atilde;O tiver uso de antibi&amp;oacute;tico nos &amp;uacute;ltimos 30 dias ou conjutivite associada).&lt;/li>&#xA;&#x9;&lt;li>2&amp;ordf; linha: Amoxicilina + Clavulanato 90 mg/kg/dia (se paciente COM uso de antibi&amp;oacute;tico nos &amp;uacute;ltimos 30 dias ou conjutivite associada).&lt;/li>&#xA;&#x9;&lt;li>3&amp;ordf; linha: Cefuroxima 15-30 mg/kg/dia (se paciente al&amp;eacute;rgico a amoxicilina).&lt;/li>&#xA;&#x9;&lt;li>4&amp;ordf; linha: Ceftriaxona 50 mg/kg/dia (se falha terap&amp;ecirc;utica ou intoler&amp;acirc;ncia oral).&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>OBS: n&amp;atilde;o usar Sulfametoxazol, Azitromicina, Cefaclor.&lt;/p>" isTerminal="true" inputSequences="//@sequence.21 //@sequence.47 //@sequence.60">
+    <item id="12738" url="" name="Amoxicilina 400 mg/5 ml ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por ____ dias."/>
+    <item id="12739" url="" name="Amoxicilina + Clavulanato 400 + 57 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por ____ dias. (Guardar medicamento na geladeira)"/>
+    <item id="12740" url="" name="Cefuroxima 250 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por ____ dias."/>
+    <item id="12741" url="" name="Ceftriaxona 1 G _____ ______ ampolas" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 1 ampola IM 1 vez ao dia por ____ dias."/>
+    <item id="12742" url="" name="Profenid&#xae; gotas ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas de 8/8h por 3 dias."/>
+    <item id="12743" url="" name="Floratil&#xae; 200 _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 1 sach&#xea; de 12/12h por 5 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35022" type="Tratamento" type_verbose="Tratamento" url="" name="[Otite m&#xe9;dia] Discutir com chefia" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Discutir caso com l&amp;iacute;der local.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Solicitar TC mastoide.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.19" outputSequences="//@sequence.20">
+    <examination url="TC DAS MASTOIDES OU OUVIDOS" exam_id="34010092" limb_side="" quantity="1" reason="Paciente com otite m&#xe9;dia" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com otite" clinical_indication="n/a"/>
+    <examination url="PROTEINA C REATIVA" exam_id="28060873" limb_side="" quantity="1" reason="Paciente com otite" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA" exam_id="99100664" limb_side="" quantity="1" reason="Paciente com otite" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35023" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite m&#xe9;dia] Avaliar TC" description="" inputSequences="//@sequence.20" outputSequences="//@sequence.21 //@sequence.22">
+    <questions text="TC de mastoide alterada?" url="" id="16370">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tc_mastoide_alterada" id="33430" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35024" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Otite m&#xe9;dia] Interna&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Interna&amp;ccedil;&amp;atilde;o com chefia.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.22"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35025" type="Receita" type_verbose="Receita" url="" name="[Sinusite] Receita" description="" isTerminal="true" inputSequences="//@sequence.50 //@sequence.62">
+    <item id="12744" url="" name="Dipirona solu&#xe7;&#xe3;o 50 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor ou febre."/>
+    <item id="12745" url="" name="Dipirona gotas ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor ou febre."/>
+    <item id="12746" url="" name="Paracetamol gotas ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar  ____ gotas de 06/06h se dor ou febre."/>
+    <item id="12747" url="" name="Amoxicilina 400 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 12/12h por 14 dias."/>
+    <item id="12748" url="" name="Amoxicilina + Clavulanato 400 + 57 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por 14 dias. (Guardar medicamento na geladeira)."/>
+    <item id="12749" url="" name="Cefuroxima 250 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por 14 dias."/>
+    <item id="12750" url="" name="Ceftriaxona ____ mg ____ amp" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 1 ampola IM, 1 vez ao dia por ____ dias."/>
+    <item id="12751" url="" name="Lavagem nasal SF 0,9% 5ml/narina" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Lavar cada narina 06 vezes ao dia."/>
+    <item id="12752" url="" name="Avamys&#xae; ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar _____ jatos de 12/12h."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35026" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Amigdalite] Avaliar TC Cervical" description="" inputSequences="//@sequence.28" outputSequences="//@sequence.29 //@sequence.30">
+    <questions text="TC alterado?" url="" id="16371">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tc_alterado" id="33431" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35027" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Amigdalite] Discutir com l&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Discutir caso com l&amp;iacute;der local devido necessidade de interna&amp;ccedil;&amp;atilde;o.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.30"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35028" type="Receita" type_verbose="Receita" url="" name="[Resfriado comum] Receita" description="" isTerminal="true" inputSequences="//@sequence.35 //@sequence.36 //@sequence.37">
+    <item id="12753" url="" name="Dipirona gotas ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor ou febre."/>
+    <item id="12754" url="" name="Dipirona solu&#xe7;&#xe3;o 50 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor ou febre."/>
+    <item id="12755" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor ou febre."/>
+    <item id="12756" url="" name="Novalgina&#xae; solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor ou febre."/>
+    <item id="12757" url="" name="Alivium&#xae; 100 mg gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 06/06h se dor ou febre."/>
+    <item id="12758" url="" name="Profenid&#xae; gotas  _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 08/08h por 3 dias."/>
+    <item id="12759" url="" name="Desloratadina solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml 1 vez ao dia por 10 dias"/>
+    <item id="12760" url="" name="Fexofenadina 6 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 12/12h por 10 dias"/>
+    <item id="12761" url="" name="Hidroxizina Xpe _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 8/8h por 10 dias"/>
+    <item id="12762" url="" name="Aerosol SF0,9% _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Inala&#xe7;&#xe3;o com 5ml de 6/6h por 5 dias."/>
+    <item id="12763" url="" name="Aerosol com SF0,9% (5ml) + Pulmicort 0,25mg/ml" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer _____ ampola de 12/12h por 5 dias"/>
+    <item id="12764" url="" name="Lavagem nasal SF0,9% 3 ml" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer lavagem nasal de 6 a 8 vezes/dia."/>
+    <item id="12765" url="" name="Acebrofilina Xpe 25 mg/5 ml _____ 1 FE" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 12/12h por 5 dias"/>
+    <item id="12766" url="" name="Koide D&#xae;  xpe _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 8/8h por 5 dias."/>
+    <item id="12767" url="" name="Levodropropizina Xpe 30 mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 8/8h por 5 dias"/>
+    <item id="12768" url="" name="Hedera Helix _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 8/8h por 10 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35029" type="Receita" type_verbose="Receita" url="" name="[Rinite Al&#xe9;rgica] Receita" description="" isTerminal="true" inputSequences="//@sequence.27">
+    <item id="12769" url="" name="Aerosol SF0,9% (5 ml) + Pulmicort&#xae; 0,25 mg/ml" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer ____ ampola de 12/12h por 5 dias."/>
+    <item id="12770" url="" name="Lavagem nasal SF0,9% 5 ml/narina" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Lavar cada narina 06 vezes ao dia."/>
+    <item id="12771" url="" name="Pergo&#xae; xpe ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 8/8h por 10 dias."/>
+    <item id="12772" url="" name="Leg&#xae; solu&#xe7;&#xe3;o ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml 1 vez ao dia por 10 dias."/>
+    <item id="12773" url="" name="Fexofenadina 6 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ml de 12/12h por 10 dias."/>
+    <item id="12774" url="" name="Koide D&#xae; xpe _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 8/8h por 5 dias."/>
+    <item id="12775" url="" name="Prednisolona 3 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml 1 vez ao dia por 5 dias."/>
+    <item id="12776" url="" name="Prednisona 20 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ comprimido 1 vez ao dia por 5 dias."/>
+    <item id="12777" url="" name="Avamys&#xae; _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar ___ jatos em cada narina 2 vezes ao dia por 1 m&#xea;s."/>
+    <item id="12778" url="" name="Busonid&#xae; ____ mcg _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar ____ jatos 2 vezes ao dia por 1 m&#xea;s."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35030" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Resfriado comum] Avaliar tempo sintomas" description="" inputSequences="//@sequence.26" outputSequences="//@sequence.31 //@sequence.35">
+    <questions text="Paciente mantendo sintomas a mais de 48h?" url="" id="16372">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_sintomas_mais_48h" id="33432" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35031" type="Tratamento" type_verbose="Tratamento" url="" name="[Resfriado comum] Exames" description="" inputSequences="//@sequence.31" outputSequences="//@sequence.32">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com resfriado comum e sintomas a mais de 48h" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Paciente com resfriado comum e sintomas a mais de 48h" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35032" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Resfriado comum] Avaliar exames" description="" inputSequences="//@sequence.32" outputSequences="//@sequence.33 //@sequence.36">
+    <questions text="H&#xe1; altera&#xe7;&#xe3;o nos exames?" url="" id="16373">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_alteracao_exames" id="33433" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35033" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Resfriado Comum] Avaliar altera&#xe7;&#xe3;o importante" description="" inputSequences="//@sequence.33" outputSequences="//@sequence.34 //@sequence.37">
+    <questions text="Altera&#xe7;&#xe3;o leucocit&#xe1;ria importante? &#xA;- Leuc&#xf3;citos &lt; de 5 mil uL&#xA;- Leuc&#xf3;citos > de 20 mil uL&#xA;- Neutropenia &lt; de 1000 uL" url="" id="16374">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_altera&#xe7;&#xe3;o_importante" id="33434" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35034" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Discutir caso com l&amp;iacute;der local.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.34 //@sequence.53 //@sequence.55 //@sequence.57 //@sequence.59 //@sequence.61"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35035" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Amigdalite] Avaliar tempo de febre" description="" inputSequences="//@sequence.11 //@sequence.12" outputSequences="//@sequence.38 //@sequence.39">
+    <questions text="Paciente com febre que persiste a mais de 72h?" url="" id="16375">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_febre_mais_72h" id="33435" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35036" type="Tratamento" type_verbose="Tratamento" url="" name="[Amigdalite] Exames" description="" inputSequences="//@sequence.39" outputSequences="//@sequence.40">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com amigdalite e febre a mais de 72h" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35037" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Amigdalite bacteriana] Avaliar tempo de febre" description="" inputSequences="//@sequence.15" outputSequences="//@sequence.41 //@sequence.42">
+    <questions text="Paciente com febre que persiste a mais de 72h?" url="" id="16376">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_bacteriana_febre_mais_72h" id="33436" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35038" type="Tratamento" type_verbose="Tratamento" url="" name="[Amigdalite Bacteriana] Exames" description="" inputSequences="//@sequence.42" outputSequences="//@sequence.43">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com amigdalite e febre a mais de 72h" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35039" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite Externa] Avaliar tempo de febre" description="" inputSequences="//@sequence.24" outputSequences="//@sequence.44 //@sequence.45">
+    <questions text="Paciente com febre que persiste a mais de 72h?" url="" id="16377">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_febre_mais_72h" id="33437" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35040" type="Tratamento" type_verbose="Tratamento" url="" name="[Otite Externa] Exames" description="" inputSequences="//@sequence.45" outputSequences="//@sequence.46">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com amigdalite e febre a mais de 72h" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35041" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite m&#xe9;dia] Avaliar tempo de febre" description="" inputSequences="//@sequence.23" outputSequences="//@sequence.47 //@sequence.48">
+    <questions text="Paciente com febre que persiste a mais de 72h?" url="" id="16378">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_m&#xe9;dia_febre_mais_72h" id="33438" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35042" type="Tratamento" type_verbose="Tratamento" url="" name="[Otite M&#xe9;dia] Exames" description="" inputSequences="//@sequence.48" outputSequences="//@sequence.49">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com amigdalite e febre a mais de 72h" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35043" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sinusite] Avaliar tempo de febre" description="" inputSequences="//@sequence.25" outputSequences="//@sequence.50 //@sequence.51">
+    <questions text="Paciente com febre que persiste a mais de 72h?" url="" id="16379">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_febre_mais_72h" id="33439" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35044" type="Tratamento" type_verbose="Tratamento" url="" name="[Sinusite] Exames" description="" inputSequences="//@sequence.51" outputSequences="//@sequence.52">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com amigdalite e febre a mais de 72h" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35045" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Amigdalite] Avaliar altera&#xe7;&#xe3;o importante" description="" inputSequences="//@sequence.40" outputSequences="//@sequence.53 //@sequence.54">
+    <questions text="Altera&#xe7;&#xe3;o leucocit&#xe1;ria importante? &#xA;- Leuc&#xf3;citos &lt; de 5 mil uL&#xA;- Leuc&#xf3;citos > de 20 mil uL&#xA;- Neutropenia &lt; de 1000 uL" url="" id="16380">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_alteracao_importante" id="33440" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35046" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Amigdalite Bacteriana] Avaliar altera&#xe7;&#xe3;o importante" description="" inputSequences="//@sequence.43" outputSequences="//@sequence.55 //@sequence.56">
+    <questions text="Altera&#xe7;&#xe3;o leucocit&#xe1;ria importante? &#xA;- Leuc&#xf3;citos &lt; de 5 mil uL&#xA;- Leuc&#xf3;citos > de 20 mil uL&#xA;- Neutropenia &lt; de 1000 uL" url="" id="16381">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_bacteriana_alteracoes_importantes" id="33441" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35047" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite M&#xe9;dia] Avaliar altera&#xe7;&#xe3;o importante" description="" inputSequences="//@sequence.49" outputSequences="//@sequence.59 //@sequence.60">
+    <questions text="Altera&#xe7;&#xe3;o leucocit&#xe1;ria importante? &#xA;- Leuc&#xf3;citos &lt; de 5 mil uL&#xA;- Leuc&#xf3;citos > de 20 mil uL&#xA;- Neutropenia &lt; de 1000 uL" url="" id="16382">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_alteracoes_importantes" id="33442" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35048" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite Externa] Avaliar altera&#xe7;&#xe3;o importante" description="" inputSequences="//@sequence.46" outputSequences="//@sequence.57 //@sequence.58">
+    <questions text="Altera&#xe7;&#xe3;o Radiol&#xf3;gica importante, derrame pleural e/ou leuc&#xf3;citos > 20 mil?" url="" id="16383">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_alteracoes_importantes" id="33443" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35049" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sinusite] Avaliar altera&#xe7;&#xe3;o importante" description="" inputSequences="//@sequence.52" outputSequences="//@sequence.61 //@sequence.62">
+    <questions text="Altera&#xe7;&#xe3;o leucocit&#xe1;ria importante? &#xA;- Leuc&#xf3;citos &lt; de 5 mil uL&#xA;- Leuc&#xf3;citos > de 20 mil uL&#xA;- Neutropenia &lt; de 1000 uL" url="" id="16384">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_alteracoes_importantes" id="33444" weight="1" value="false"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="35050" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="-"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="35051" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sinais de alarme >= 1)" description="sinais de alarme >= 1">
+    <operation name="sinais de alarme >= 1.0" Operator="greaterOrEqual" id="33454">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="33422" weight="1" value="0.0">
+        <option description="Altera&#xe7;&#xe3;o na ausculta pulmonar" weight="1"/>
+        <option description="Taquicardia" weight="1"/>
+        <option description="Dispn&#xe9;ia" weight="1"/>
+        <option description="Toxemia" weight="1"/>
+        <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+        <option description="Taquipn&#xe9;ia" weight="1"/>
+        <option description="Queda do Estado Geral" weight="1"/>
+        <option description="Bradicardia" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33445" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.1" id="35052" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (sinais de alarme &lt; 1 &amp; sem comorbidades)" description="sinais de alarme &lt; 1 &amp; sem comorbidades">
+    <operation name="sinais de alarme &lt; 1 &amp; sem comorbidades" Operator="and" id="33455">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sinais de alarme &lt; 1" Operator="lessThan" id="33450">
+        <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="33422" weight="1" value="0.0">
+          <option description="Altera&#xe7;&#xe3;o na ausculta pulmonar" weight="1"/>
+          <option description="Taquicardia" weight="1"/>
+          <option description="Dispn&#xe9;ia" weight="1"/>
+          <option description="Toxemia" weight="1"/>
+          <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+          <option description="Taquipn&#xe9;ia" weight="1"/>
+          <option description="Queda do Estado Geral" weight="1"/>
+          <option description="Bradicardia" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33445" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem comorbidades" id="33453">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_comorbidades" id="33421" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.1" id="35053" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (sinais de alarme &lt; 1 &amp; com comorbidades)" description="sinais de alarme &lt; 1 &amp; com comorbidades">
+    <operation name="sinais de alarme &lt; 1 &amp; com comorbidades" Operator="and" id="33456">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sinais de alarme &lt; 1" Operator="lessThan" id="33450">
+        <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="33422" weight="1" value="0.0">
+          <option description="Altera&#xe7;&#xe3;o na ausculta pulmonar" weight="1"/>
+          <option description="Taquicardia" weight="1"/>
+          <option description="Dispn&#xe9;ia" weight="1"/>
+          <option description="Toxemia" weight="1"/>
+          <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+          <option description="Taquipn&#xe9;ia" weight="1"/>
+          <option description="Queda do Estado Geral" weight="1"/>
+          <option description="Bradicardia" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33445" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="com comorbidades" Operator="affirmation" id="33452">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_comorbidades" id="33421" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.8" id="35054" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="35055" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="35056" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (sem altera&#xe7;&#xf5;es)" description="sem altera&#xe7;&#xf5;es">
+    <operation name="sem altera&#xe7;&#xf5;es" id="33457">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracoes_raio_x" id="33423" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="35057" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (com altera&#xe7;&#xf5;es)" description="com altera&#xe7;&#xf5;es">
+    <operation name="com altera&#xe7;&#xf5;es" Operator="affirmation" id="33458">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracoes_raio_x" id="33423" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="35058" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="Incondicional"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.7" id="35059" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (necessita ATB)" description="necessita ATB">
+    <operation name="necessita ATB" Operator="affirmation" id="33459">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_atb" id="33424" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="35060" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (n&#xe3;o necessita ATB)" description="n&#xe3;o necessita ATB">
+    <operation name="n&#xe3;o necessita ATB" id="33460">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_atb" id="33424" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.34" outputStep="//@element.11" id="35061" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (amigdalite viral)" description="amigdalite viral">
+    <operation name="amigdalite viral" Operator="equal" id="33461">
+      <operand xsi:type="pathwayMetamodel:Choice" name="foco_amigdalite" id="33425" weight="1" value="0.0">
+        <option description="VIRAL (aus&#xea;ncia exsudato, hiperemia em palato com les&#xf5;es aftosas, sintomas gripais, febre baixa)" weight="1"/>
+        <option description="BACTERIANA (pet&#xe9;quias em palato, presen&#xe7;a de exsudato, febre alta)" weight="2"/>
+        <option description="Outros: Estomatite f&#xfa;ngica (les&#xf5;es aftoides difusas em cavidade oral)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33445" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.34" outputStep="//@element.11" id="35062" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (amigdalite fungica)" description="amigdalite fungica">
+    <operation name="amigdalite fungica" Operator="equal" id="33462">
+      <operand xsi:type="pathwayMetamodel:Choice" name="foco_amigdalite" id="33425" weight="1" value="0.0">
+        <option description="VIRAL (aus&#xea;ncia exsudato, hiperemia em palato com les&#xf5;es aftosas, sintomas gripais, febre baixa)" weight="1"/>
+        <option description="BACTERIANA (pet&#xe9;quias em palato, presen&#xe7;a de exsudato, febre alta)" weight="2"/>
+        <option description="Outros: Estomatite f&#xfa;ngica (les&#xf5;es aftoides difusas em cavidade oral)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33447" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.11" id="35063" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (amigdalite bacteriana)" description="amigdalite bacteriana">
+    <operation name="amigdalite bacteriana" Operator="equal" id="33463">
+      <operand xsi:type="pathwayMetamodel:Choice" name="foco_amigdalite" id="33425" weight="1" value="0.0">
+        <option description="VIRAL (aus&#xea;ncia exsudato, hiperemia em palato com les&#xf5;es aftosas, sintomas gripais, febre baixa)" weight="1"/>
+        <option description="BACTERIANA (pet&#xe9;quias em palato, presen&#xe7;a de exsudato, febre alta)" weight="2"/>
+        <option description="Outros: Estomatite f&#xfa;ngica (les&#xf5;es aftoides difusas em cavidade oral)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33446" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="35064" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (com sinais)" description="com sinais">
+    <operation name="com sinais" Operator="affirmation" id="33464">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_abscesso_periamigdaliano" id="33426" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.36" outputStep="//@element.13" id="35065" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (sem sinais)" description="sem sinais">
+    <operation name="sem sinais" id="33465">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_abscesso_periamigdaliano" id="33426" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.16" id="35066" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (amigdalite)" description="amigdalite">
+    <operation name="amigdalite" Operator="equal" id="33466">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quadro_ivas" id="33427" weight="1" value="0.0">
+        <option description="Amigdalite" weight="1"/>
+        <option description="Otite" weight="2"/>
+        <option description="Sinusite (tosse cr&#xf4;nica, associada cefaleia, congest&#xe3;o + coriza nasal - secre&#xe7;&#xe3;o com aspecto purulento, gotejamento p&#xf3;s-nasal)" weight="3"/>
+        <option description="Resfriado comum" weight="4"/>
+        <option description="Rinite al&#xe9;rgica" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33445" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.16" id="35067" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (otite)" description="otite">
+    <operation name="otite" Operator="equal" id="33467">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quadro_ivas" id="33427" weight="1" value="0.0">
+        <option description="Amigdalite" weight="1"/>
+        <option description="Otite" weight="2"/>
+        <option description="Sinusite (tosse cr&#xf4;nica, associada cefaleia, congest&#xe3;o + coriza nasal - secre&#xe7;&#xe3;o com aspecto purulento, gotejamento p&#xf3;s-nasal)" weight="3"/>
+        <option description="Resfriado comum" weight="4"/>
+        <option description="Rinite al&#xe9;rgica" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33446" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.17" id="35068" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (otite m&#xe9;dia)" description="otite m&#xe9;dia">
+    <operation name="otite m&#xe9;dia" Operator="equal" id="33468">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_otite" id="33428" weight="1" value="0.0">
+        <option description="M&#xe9;dia (hist&#xf3;ria de IVAS recente, membrana timp&#xe2;nica abaulada, esbranqui&#xe7;ada, otorreia)" weight="1"/>
+        <option description="Externa (sem hist&#xf3;ria de IVAS recente, com hist&#xf3;ria de manipula&#xe7;&#xe3;o ou banhos de imers&#xe3;o. Dor manipula&#xe7;&#xe3;o pavilh&#xe3;o e conduto, al&#xe9;m de estenose e hiperemia)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33445" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.19" id="35069" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (com abaulamento)" description="com abaulamento">
+    <operation name="com abaulamento" Operator="affirmation" id="33469">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="abaulamento_mastoide" id="33429" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.21" id="35070" type="Sequencia" type_verbose="Sequencia" url="" name="S24" description="-"/>
+  <sequence inputStep="//@element.20" outputStep="//@element.22" id="35071" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (TC normal)" description="TC normal">
+    <operation name="TC normal" id="33470">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tc_mastoide_alterada" id="33430" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.22" id="35072" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (TC alterada)" description="TC alterada">
+    <operation name="TC alterada" Operator="affirmation" id="33471">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tc_mastoide_alterada" id="33430" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.40" outputStep="//@element.19" id="35073" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (sem abaulamento)" description="sem abaulamento">
+    <operation name="sem abaulamento" id="33472">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="abaulamento_mastoide" id="33429" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.38" outputStep="//@element.17" id="35074" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (otite externa)" description="otite externa">
+    <operation name="otite externa" Operator="equal" id="33473">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_otite" id="33428" weight="1" value="0.0">
+        <option description="M&#xe9;dia (hist&#xf3;ria de IVAS recente, membrana timp&#xe2;nica abaulada, esbranqui&#xe7;ada, otorreia)" weight="1"/>
+        <option description="Externa (sem hist&#xf3;ria de IVAS recente, com hist&#xf3;ria de manipula&#xe7;&#xe3;o ou banhos de imers&#xe3;o. Dor manipula&#xe7;&#xe3;o pavilh&#xe3;o e conduto, al&#xe9;m de estenose e hiperemia)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33446" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.42" outputStep="//@element.16" id="35075" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (sinusite)" description="sinusite">
+    <operation name="sinusite" Operator="equal" id="33474">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quadro_ivas" id="33427" weight="1" value="0.0">
+        <option description="Amigdalite" weight="1"/>
+        <option description="Otite" weight="2"/>
+        <option description="Sinusite (tosse cr&#xf4;nica, associada cefaleia, congest&#xe3;o + coriza nasal - secre&#xe7;&#xe3;o com aspecto purulento, gotejamento p&#xf3;s-nasal)" weight="3"/>
+        <option description="Resfriado comum" weight="4"/>
+        <option description="Rinite al&#xe9;rgica" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33447" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.29" outputStep="//@element.16" id="35076" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (resfriado comum)" description="resfriado comum">
+    <operation name="resfriado comum" Operator="equal" id="33475">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quadro_ivas" id="33427" weight="1" value="0.0">
+        <option description="Amigdalite" weight="1"/>
+        <option description="Otite" weight="2"/>
+        <option description="Sinusite (tosse cr&#xf4;nica, associada cefaleia, congest&#xe3;o + coriza nasal - secre&#xe7;&#xe3;o com aspecto purulento, gotejamento p&#xf3;s-nasal)" weight="3"/>
+        <option description="Resfriado comum" weight="4"/>
+        <option description="Rinite al&#xe9;rgica" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="33448" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.16" id="35077" type="Sequencia" type_verbose="Sequencia" url="" name="S31 (rinite al&#xe9;rgica)" description="rinite al&#xe9;rgica">
+    <operation name="rinite al&#xe9;rgica" Operator="equal" id="33476">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quadro_ivas" id="33427" weight="1" value="0.0">
+        <option description="Amigdalite" weight="1"/>
+        <option description="Otite" weight="2"/>
+        <option description="Sinusite (tosse cr&#xf4;nica, associada cefaleia, congest&#xe3;o + coriza nasal - secre&#xe7;&#xe3;o com aspecto purulento, gotejamento p&#xf3;s-nasal)" weight="3"/>
+        <option description="Resfriado comum" weight="4"/>
+        <option description="Rinite al&#xe9;rgica" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="5" id="33449" weight="1" value="5.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.14" id="35078" type="Sequencia" type_verbose="Sequencia" url="" name="S32" description="-"/>
+  <sequence inputStep="//@element.15" outputStep="//@element.25" id="35079" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (TC normal)" description="TC normal">
+    <operation name="TC Normal" id="33477">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tc_alterado" id="33431" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.25" id="35080" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (TC alterado)" description="TC alterado">
+    <operation name="TC alterado" Operator="affirmation" id="33478">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tc_alterado" id="33431" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.29" id="35081" type="Sequencia" type_verbose="Sequencia" url="" name="S35 (sintomas a mais de 48h)" description="sintomas a mais de 48h">
+    <operation name="sintomas a mais de 48h" Operator="affirmation" id="33479">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_sintomas_mais_48h" id="33432" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.31" outputStep="//@element.30" id="35082" type="Sequencia" type_verbose="Sequencia" url="" name="S36" description="-"/>
+  <sequence inputStep="//@element.32" outputStep="//@element.31" id="35083" type="Sequencia" type_verbose="Sequencia" url="" name="S37 (exames alterados)" description="exames alterados"/>
+  <sequence inputStep="//@element.33" outputStep="//@element.32" id="35084" type="Sequencia" type_verbose="Sequencia" url="" name="S38 (com altera&#xe7;&#xe3;o importante)" description="com altera&#xe7;&#xe3;o importante">
+    <operation name="com altera&#xe7;&#xe3;o importante" Operator="affirmation" id="33480">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_altera&#xe7;&#xe3;o_importante" id="33434" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.29" id="35085" type="Sequencia" type_verbose="Sequencia" url="" name="S39 (sintomas a menos de 48h)" description="sintomas a menos de 48h">
+    <operation name="sintomas a menos de 48h" id="33481">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_sintomas_mais_48h" id="33432" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.31" id="35086" type="Sequencia" type_verbose="Sequencia" url="" name="S40 (exames normais)" description="exames normais">
+    <operation name="exames normais" id="33482">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_alteracao_exames" id="33433" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.32" id="35087" type="Sequencia" type_verbose="Sequencia" url="" name="S41 (sem altera&#xe7;&#xf5;es importantes)" description="sem altera&#xe7;&#xf5;es importantes">
+    <operation name="sem altera&#xe7;&#xf5;es importantes" id="33483">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_altera&#xe7;&#xe3;o_importante" id="33434" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.34" id="35088" type="Sequencia" type_verbose="Sequencia" url="" name="S42 (amigdalite sem febre > 72h)" description="amigdalite com febre &lt; 72h">
+    <operation name="amigdalite com febre &lt; 72h" id="33484">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_febre_mais_72h" id="33435" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.35" outputStep="//@element.34" id="35089" type="Sequencia" type_verbose="Sequencia" url="" name="S43 (amigdalite com febre > 72h)" description="amigdalite com febre > 72h">
+    <operation name="amigdalite com febre > 72h" Operator="affirmation" id="33485">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_febre_mais_72h" id="33435" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.44" outputStep="//@element.35" id="35090" type="Sequencia" type_verbose="Sequencia" url="" name="S44" description="-"/>
+  <sequence inputStep="//@element.15" outputStep="//@element.36" id="35091" type="Sequencia" type_verbose="Sequencia" url="" name="S45 (amigdalite bact sem febre > 72h)" description="amigdalite bact sem febre > 72h">
+    <operation name="amigdalite bact sem febre > 72h" id="33486">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_bacteriana_febre_mais_72h" id="33436" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.37" outputStep="//@element.36" id="35092" type="Sequencia" type_verbose="Sequencia" url="" name="S46 (amigdalite bact com febre > 72h)" description="amigdalite bact com febre > 72h">
+    <operation name="amigdalite bact com febre > 72h" Operator="affirmation" id="33487">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_bacteriana_febre_mais_72h" id="33436" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.45" outputStep="//@element.37" id="35093" type="Sequencia" type_verbose="Sequencia" url="" name="S47" description="-"/>
+  <sequence inputStep="//@element.18" outputStep="//@element.38" id="35094" type="Sequencia" type_verbose="Sequencia" url="" name="S48 (otite externa sem febre > 72h)" description="otite externa sem febre > 72h">
+    <operation name="otite externa sem febre > 72h" id="33488">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_febre_mais_72h" id="33437" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.39" outputStep="//@element.38" id="35095" type="Sequencia" type_verbose="Sequencia" url="" name="S49 (otite externa com febre > 72h)" description="otite externa com febre > 72h">
+    <operation name="otite externa com febre > 72h" Operator="affirmation" id="33489">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_febre_mais_72h" id="33437" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.47" outputStep="//@element.39" id="35096" type="Sequencia" type_verbose="Sequencia" url="" name="S50" description="-"/>
+  <sequence inputStep="//@element.20" outputStep="//@element.40" id="35097" type="Sequencia" type_verbose="Sequencia" url="" name="S51 (otite m&#xe9;dia sem febre > 72h)" description="otite m&#xe9;dia sem febre > 72h">
+    <operation name="otite m&#xe9;dia sem febre > 72h" id="33490">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_m&#xe9;dia_febre_mais_72h" id="33438" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.41" outputStep="//@element.40" id="35098" type="Sequencia" type_verbose="Sequencia" url="" name="S52 (otite m&#xe9;dia com febre > 72h)" description="otite m&#xe9;dia com febre > 72h">
+    <operation name="otite m&#xe9;dia com febre > 72h" Operator="affirmation" id="33491">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_m&#xe9;dia_febre_mais_72h" id="33438" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.46" outputStep="//@element.41" id="35099" type="Sequencia" type_verbose="Sequencia" url="" name="S53" description="-"/>
+  <sequence inputStep="//@element.24" outputStep="//@element.42" id="35100" type="Sequencia" type_verbose="Sequencia" url="" name="S54 (sinusite sem febre > 72h)" description="sinusite sem febre > 72h">
+    <operation name="sinusite sem febre > 72h" id="33492">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_febre_mais_72h" id="33439" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.43" outputStep="//@element.42" id="35101" type="Sequencia" type_verbose="Sequencia" url="" name="S55 (sinusite com febre > 72h)" description="sinusite com febre > 72h">
+    <operation name="sinusite com febre > 72h" Operator="affirmation" id="33493">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_febre_mais_72h" id="33439" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.48" outputStep="//@element.43" id="35102" type="Sequencia" type_verbose="Sequencia" url="" name="S56" description="-"/>
+  <sequence inputStep="//@element.33" outputStep="//@element.44" id="35103" type="Sequencia" type_verbose="Sequencia" url="" name="S57 (amigdalite com altera&#xe7;&#xe3;o importante)" description="amigdalite com altera&#xe7;&#xe3;o importante">
+    <operation name="amigdalite com altera&#xe7;&#xe3;o importante" Operator="affirmation" id="33494">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_alteracao_importante" id="33440" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.44" id="35104" type="Sequencia" type_verbose="Sequencia" url="" name="S58 (amigdalite sem altera&#xe7;&#xe3;o importante)" description="amigdalite sem altera&#xe7;&#xe3;o importante">
+    <operation name="amigdalite sem altera&#xe7;&#xe3;o importante" id="33495">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_alteracao_importante" id="33440" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.33" outputStep="//@element.45" id="35105" type="Sequencia" type_verbose="Sequencia" url="" name="S59 (amigdalite bact com altera&#xe7;&#xe3;o importante)" description="amigdalite bact com altera&#xe7;&#xe3;o importante">
+    <operation name="amigdalite bact com altera&#xe7;&#xe3;o importante" Operator="affirmation" id="33496">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_bacteriana_alteracoes_importantes" id="33441" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.45" id="35106" type="Sequencia" type_verbose="Sequencia" url="" name="S60 (amigdalite bact sem altera&#xe7;&#xe3;o importante)" description="amigdalite bact sem altera&#xe7;&#xe3;o importante">
+    <operation name="amigdalite bact sem altera&#xe7;&#xe3;o importante" id="33497">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_bacteriana_alteracoes_importantes" id="33441" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.33" outputStep="//@element.47" id="35107" type="Sequencia" type_verbose="Sequencia" url="" name="S61 (otite externa com altera&#xe7;&#xe3;o importante)" description="otite externa com altera&#xe7;&#xe3;o importante">
+    <operation name="otite externa com altera&#xe7;&#xe3;o importante" Operator="affirmation" id="33498">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_alteracoes_importantes" id="33443" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.47" id="35108" type="Sequencia" type_verbose="Sequencia" url="" name="S62 (otite externa sem altera&#xe7;&#xe3;o importante)" description="otite externa sem altera&#xe7;&#xe3;o importante">
+    <operation name="otite externa sem altera&#xe7;&#xe3;o importante" id="33499">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_alteracoes_importantes" id="33443" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.33" outputStep="//@element.46" id="35109" type="Sequencia" type_verbose="Sequencia" url="" name="S63 (otite m&#xe9;dia com altera&#xe7;&#xe3;o importante)" description="otite m&#xe9;dia com altera&#xe7;&#xe3;o importante">
+    <operation name="otite m&#xe9;dia com altera&#xe7;&#xe3;o importante" Operator="affirmation" id="33500">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_alteracoes_importantes" id="33442" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.46" id="35110" type="Sequencia" type_verbose="Sequencia" url="" name="S64 (otite m&#xe9;dia sem altera&#xe7;&#xe3;o importante)" description="otite m&#xe9;dia com altera&#xe7;&#xe3;o importante">
+    <operation name="otite m&#xe9;dia sem altera&#xe7;&#xe3;o importante" id="33501">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_alteracoes_importantes" id="33442" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.33" outputStep="//@element.48" id="35111" type="Sequencia" type_verbose="Sequencia" url="" name="S65 (sinusite com altera&#xe7;&#xe3;o importante)" description="sinusite com altera&#xe7;&#xe3;o importante">
+    <operation name="sinusite com altera&#xe7;&#xe3;o importante" Operator="affirmation" id="33502">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_alteracoes_importantes" id="33444" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.48" id="35112" type="Sequencia" type_verbose="Sequencia" url="" name="S66 (sinusite sem altera&#xe7;&#xe3;o importante)" description="sinusite sem altera&#xe7;&#xe3;o importante">
+    <operation name="sinusite sem altera&#xe7;&#xe3;o importante" id="33503">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_alteracoes_importantes" id="33444" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="sinais de alarme &lt; 1" Operator="lessThan" id="33450">
+    <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="33422" weight="1" value="0.0">
+      <option description="Altera&#xe7;&#xe3;o na ausculta pulmonar" weight="1"/>
+      <option description="Taquicardia" weight="1"/>
+      <option description="Dispn&#xe9;ia" weight="1"/>
+      <option description="Toxemia" weight="1"/>
+      <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+      <option description="Taquipn&#xe9;ia" weight="1"/>
+      <option description="Queda do Estado Geral" weight="1"/>
+      <option description="Bradicardia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33445" weight="1" value="1.0"/>
+  </operation>
+  <operation name="sinais de alarme >= UM" Operator="greaterOrEqual" id="33451">
+    <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="33422" weight="1" value="0.0">
+      <option description="Altera&#xe7;&#xe3;o na ausculta pulmonar" weight="1"/>
+      <option description="Taquicardia" weight="1"/>
+      <option description="Dispn&#xe9;ia" weight="1"/>
+      <option description="Toxemia" weight="1"/>
+      <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+      <option description="Taquipn&#xe9;ia" weight="1"/>
+      <option description="Queda do Estado Geral" weight="1"/>
+      <option description="Bradicardia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33445" weight="1" value="1.0"/>
+  </operation>
+  <operation name="com comorbidades" Operator="affirmation" id="33452">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_comorbidades" id="33421" weight="1" value="false"/>
+  </operation>
+  <operation name="sem comorbidades" id="33453">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_comorbidades" id="33421" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_comorbidades" id="33421" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="33422" weight="1" value="0.0">
+    <option description="Altera&#xe7;&#xe3;o na ausculta pulmonar" weight="1"/>
+    <option description="Taquicardia" weight="1"/>
+    <option description="Dispn&#xe9;ia" weight="1"/>
+    <option description="Toxemia" weight="1"/>
+    <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+    <option description="Taquipn&#xe9;ia" weight="1"/>
+    <option description="Queda do Estado Geral" weight="1"/>
+    <option description="Bradicardia" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alteracoes_raio_x" id="33423" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="necessita_atb" id="33424" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="foco_amigdalite" id="33425" weight="1" value="0.0">
+    <option description="VIRAL (aus&#xea;ncia exsudato, hiperemia em palato com les&#xf5;es aftosas, sintomas gripais, febre baixa)" weight="1"/>
+    <option description="BACTERIANA (pet&#xe9;quias em palato, presen&#xe7;a de exsudato, febre alta)" weight="2"/>
+    <option description="Outros: Estomatite f&#xfa;ngica (les&#xf5;es aftoides difusas em cavidade oral)" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinais_abscesso_periamigdaliano" id="33426" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="quadro_ivas" id="33427" weight="1" value="0.0">
+    <option description="Amigdalite" weight="1"/>
+    <option description="Otite" weight="2"/>
+    <option description="Sinusite (tosse cr&#xf4;nica, associada cefaleia, congest&#xe3;o + coriza nasal - secre&#xe7;&#xe3;o com aspecto purulento, gotejamento p&#xf3;s-nasal)" weight="3"/>
+    <option description="Resfriado comum" weight="4"/>
+    <option description="Rinite al&#xe9;rgica" weight="5"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tipo_otite" id="33428" weight="1" value="0.0">
+    <option description="M&#xe9;dia (hist&#xf3;ria de IVAS recente, membrana timp&#xe2;nica abaulada, esbranqui&#xe7;ada, otorreia)" weight="1"/>
+    <option description="Externa (sem hist&#xf3;ria de IVAS recente, com hist&#xf3;ria de manipula&#xe7;&#xe3;o ou banhos de imers&#xe3;o. Dor manipula&#xe7;&#xe3;o pavilh&#xe3;o e conduto, al&#xe9;m de estenose e hiperemia)" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="abaulamento_mastoide" id="33429" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tc_mastoide_alterada" id="33430" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tc_alterado" id="33431" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_sintomas_mais_48h" id="33432" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_alteracao_exames" id="33433" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="resfriado_altera&#xe7;&#xe3;o_importante" id="33434" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_febre_mais_72h" id="33435" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_bacteriana_febre_mais_72h" id="33436" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_febre_mais_72h" id="33437" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_m&#xe9;dia_febre_mais_72h" id="33438" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_febre_mais_72h" id="33439" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_alteracao_importante" id="33440" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="amigdalite_bacteriana_alteracoes_importantes" id="33441" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_alteracoes_importantes" id="33442" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_alteracoes_importantes" id="33443" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_alteracoes_importantes" id="33444" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="33445" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="33446" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="33447" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="33448" weight="1" value="4.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="33449" weight="1" value="5.0"/>
+</pathwayMetamodel:Pathway>

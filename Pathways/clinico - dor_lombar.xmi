@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[M&#xe9;dico da Fam&#xed;lia] Dor Lombar" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5936" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="StartBack Screening" description="Pensando nas duas &#xfa;ltimas semanas, assinale sua resposta para as seguintes perguntas:" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.15 //@sequence.16">
+    <questions text="1. A minha dor nas costas se espalhou pelas pernas nas duas &#xfa;ltimas semanas." url="" id="2583">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4427" weight="1" value="false"/>
+    </questions>
+    <questions text="2. Eu tive dor no ombro e/ou na nuca pelo menos uma vez nas &#xfa;ltimas duas semanas" url="" id="2584">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4428" weight="1" value="false"/>
+    </questions>
+    <questions text="3. Eu evito andar longas dist&#xe2;ncias por causa da minha dor nas costas" url="" id="2585">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4429" weight="1" value="false"/>
+    </questions>
+    <questions text="4. Nas duas &#xfa;ltimas semanas, tenho me vestido mais devagar por causa da minha dor nas costas" url="" id="2586">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4430" weight="1" value="false"/>
+    </questions>
+    <questions text="5. A atividade f&#xed;sica n&#xe3;o &#xe9; realmente segura para uma pessoa com um problema como o meu" url="" id="2587">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+    </questions>
+    <questions text="6. Tenho ficado preocupado por muito tempo por causa da minha dor nas costas" url="" id="2588">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+    </questions>
+    <questions text="7. Eu sinto que minha dor nas costas &#xe9; terr&#xed;vel e que nunca vai melhorar" url="" id="2589">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+    </questions>
+    <questions text="8. Em geral, eu n&#xe3;o tenho gostado de todas as coisas como eu costumava gostar" url="" id="2590">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+    </questions>
+    <questions text="9. Em geral, quanto a sua dor nas costas o incomodou [muito] ou [extremamente] nas duas &#xfa;ltimas semanas" url="" id="2591">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="5937" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Grada&#xe7;&#xe3;o da for&#xe7;a muscular" description="&lt;p>Grada&amp;ccedil;&amp;atilde;o da for&amp;ccedil;a muscular do Medical Research council: A for&amp;ccedil;a do paciente &amp;eacute; classificada em uma escala de grau 0-5&lt;/p>&#xA;&#xA;&lt;p>Grau 5: For&amp;ccedil;a normal contra a resist&amp;ecirc;ncia total.&lt;br />&#xA;Grau 4: A for&amp;ccedil;a muscular &amp;eacute; reduzida, mas h&amp;aacute; contra&amp;ccedil;&amp;atilde;o muscular contra a resist&amp;ecirc;ncia do examinardor&lt;br />&#xA;Grau 3: A articula&amp;ccedil;&amp;atilde;o pode ser movimentada apenas contra gravidade e sem resist&amp;ecirc;ncia do examinador.&lt;br />&#xA;Grau 2: H&amp;aacute; for&amp;ccedil;a muscular e movimenta&amp;ccedil;&amp;atilde;o articular somente se a resist&amp;ecirc;ncia da gravidade &amp;eacute; removida.&lt;br />&#xA;Grau 1: Apenas um esbo&amp;ccedil;o de movimento &amp;eacute; visto ou sentido&amp;nbsp;ou fascicula&amp;ccedil;&amp;otilde;es s&amp;atilde;o &amp;nbsp;observadas no m&amp;uacute;sculo.&lt;br />&#xA;Grau 0: Nenhum movimento &amp;eacute; observado.&lt;/p>" inputSequences="//@sequence.17 //@sequence.20 //@sequence.21" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="5938" type="Tratamento" type_verbose="Tratamento" url="" name="Apoio Diagn&#xf3;stico (Falta RX da coluna - n&#xe3;o encontrado)" description="&lt;p>Selecionar exame de acordo com o quadro do paciente.&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dor Aguda, Leve e Moderada, sem sinais neurol&amp;oacute;gicos&lt;/strong>&lt;/u>&#xA;&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>N&amp;atilde;o precisa&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dor&amp;nbsp;Aguda&amp;nbsp;leve e Moderada&amp;nbsp;com sinais neurol&amp;oacute;gicos&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX da coluna lombar antero-posterior com o paciente em posi&amp;ccedil;&amp;atilde;o ereta e a proje&amp;ccedil;&amp;atilde;o lateral&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dolor sub aguda&amp;nbsp;e cr&amp;ocirc;nica&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX da coluna&amp;nbsp;lombar antero-posterior com o paciente em posi&amp;ccedil;&amp;atilde;o ereta e a proje&amp;ccedil;&amp;atilde;o lateral &lt;u>&lt;strong>OU&lt;/strong>&lt;/u>&lt;/li>&#xA;&#x9;&#x9;&lt;li>Resson&amp;acirc;ncia Nuclear magn&amp;eacute;tica da Coluna&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="" exam_id="16020200" limb_side="" quantity="1" reason="Apoio diagn&#xf3;stico de dor lombar" clinical_indication="Resson&#xe2;ncia Nuclear Magn&#xe9;tica da Coluna"/>
+    <examination url="" exam_id="32020040" limb_side="" quantity="1" reason="Apoio diagn&#xf3;stico de Dor Lombar" clinical_indication="n/a"/>
+    <examination url="" exam_id="32020066" limb_side="" quantity="1" reason="Apoio diagn&#xf3;stico de Dor Lombar" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5939" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Necessita Apoio Diagn&#xf3;stico?" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dor Aguda, Leve e Moderada, sem sinais neurol&amp;oacute;gicos&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>N&amp;atilde;o precisa&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dor&amp;nbsp;Aguda&amp;nbsp;leve e Moderada&amp;nbsp;com sinais neurol&amp;oacute;gicos&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX da coluna lombar antero-posterior com o paciente em posi&amp;ccedil;&amp;atilde;o ereta e a proje&amp;ccedil;&amp;atilde;o lateral&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>Dolor sub ajudo e cr&amp;ocirc;nica&lt;/strong>&lt;/u>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX da coluna&amp;nbsp;lombar antero-posterior com o paciente em posi&amp;ccedil;&amp;atilde;o ereta e a proje&amp;ccedil;&amp;atilde;o lateral &lt;u>&lt;strong>OU&lt;/strong>&lt;/u>&lt;/li>&#xA;&#x9;&#x9;&lt;li>Resson&amp;acirc;ncia Nuclear magn&amp;eacute;tica da Coluna&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.3">
+    <questions text="Paciente necessita de apoio diagn&#xf3;stico? (avaliar nas instru&#xe7;&#xf5;es acima a necessidade de acordo com quadro observado)" url="" id="2592">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="necessita_apoio_diagnostico" id="4436" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5940" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classifica&#xe7;&#xe3;o da Intensidade da Dor" description="" inputSequences="//@sequence.2 //@sequence.3" outputSequences="//@sequence.4 //@sequence.5 //@sequence.6">
+    <questions text="Dor leve/moderada" url="" id="2593">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_leve_moderada" id="4437" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor severa" url="" id="2594">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_severa" id="4438" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor aguda com espasmos musculares" url="" id="2595">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_aguda_com_espasmos" id="4439" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5941" type="Receita" type_verbose="Receita" url="" name="[Dor leve/moderada] Receita" description="&lt;p>Sugerir Fisioterapia - 5 sess&amp;otilde;es, para fortalecimento muscular&lt;/p>" inputSequences="//@sequence.4" outputSequences="//@sequence.7">
+    <item id="13326" url="" name="PARACETAMOL" med_code="766252250" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13327" url="" name="IBUPROFENO" med_code="-2022326792" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13328" url="" name="PARACETAMOL+FOSFATO DE CODEINA" med_code="-298033283" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5942" type="Receita" type_verbose="Receita" url="" name="[Dor severa] Receita" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.8">
+    <item id="13329" url="" name="CLORIDRATO DE TRAMADOL" med_code="766251502" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="13330" url="" name="PARACETAMOL+FOSFATO DE CODEINA" med_code="-298033283" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13331" url="" name="CLORIDRATO DE CICLOBENZAPRINA" med_code="1462510890" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Usar enquanto sentir dor"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5943" type="Receita" type_verbose="Receita" url="" name="[Dor aguda com espasmos] Receita" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.9">
+    <item id="13332" url="" name="PARACETAMOL" med_code="-2022352433" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13333" url="" name="IBUPROFENO" med_code="-1730646069" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13334" url="" name="PARACETAMOL+FOSFATO DE CODEINA" med_code="-298033283" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5944" type="Processo" type_verbose="Processo" url="" name="Agendar Retorno" description="&lt;p>Retorno a crit&amp;eacute;rio m&amp;eacute;dico,&lt;br />&#xA;Marque &lt;u>&lt;strong>SOMENTE UMA OP&amp;Ccedil;&amp;Atilde;O&lt;/strong>&lt;/u> de retorno.&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" inputSequences="//@sequence.7 //@sequence.8 //@sequence.9" outputSequences="//@sequence.10">
+    <action id="361" process_id="5944" service="aprazamento" description="Semanal"/>
+    <action id="362" process_id="5944" service="aprazamento" description="Quinzenal"/>
+    <action id="363" process_id="5944" service="aprazamento" description="Mensal"/>
+    <action id="364" process_id="5944" service="aprazamento" description="Bimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="5945" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5946" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Bandeiras Vermelhas" description="" isInitial="true" inputSequences="//@sequence.23" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Bandeiras Vermelhas" url="" id="2596">
+      <answers xsi:type="pathwayMetamodel:Choice" name="bandeiras_vermelhas" id="4440" weight="1" value="0.0">
+        <option description="Abuso de &#xe1;lcool e/ou drogas por via venosa" weight="1"/>
+        <option description="Perda de peso n&#xe3;o explicada (mais de 10% do peso costumeiro)" weight="1"/>
+        <option description="Febre n&#xe3;o explicada por mais de 48h" weight="1"/>
+        <option description="Imunossupress&#xe3;o" weight="1"/>
+        <option description="Tratamento com ester&#xf3;ides prolongado" weight="1"/>
+        <option description="Dor com dura&#xe7;&#xe3;o maior de 6 semanas" weight="1"/>
+        <option description="Idade maior que 70 anos" weight="1"/>
+        <option description="Trauma Severo recente ou leve em maiores de 50 anos" weight="1"/>
+        <option description="Hist&#xf3;rico de les&#xf5;es ou tumor" weight="1"/>
+        <option description="D&#xe9;ficit neurol&#xf3;gico progressivo ou grave" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5947" type="Processo" type_verbose="Processo" url="" name="Encaminhar a Especialista de Coluna" description="" isTerminal="true" inputSequences="//@sequence.12">
+    <action id="343" process_id="5947" service="encaminhar_especialidade" description="Ortopedista"/>
+    <action id="344" process_id="5947" service="encaminhar_especialidade" description="Reumatologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5948" type="Receita" type_verbose="Receita" url="" name="Manter Medica&#xe7;&#xe3;o" description="" isTerminal="true" inputSequences="//@sequence.22"/>
+  <element xsi:type="pathwayMetamodel:Information" id="5949" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[StartScreen] Baixo Risco" description="Educa&#xe7;&#xe3;o, medica&#xe7;&#xe3;o, confirma&#xe7;&#xe3;o de historia natural favor&#xe1;vel e aconselhamento para manter-se ativo (apenas uma consulta)." inputSequences="//@sequence.14" outputSequences="//@sequence.17"/>
+  <element xsi:type="pathwayMetamodel:Information" id="5950" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[StartScreen] M&#xe9;dio Risco" description="&lt;p>Educa&amp;ccedil;&amp;atilde;o, medica&amp;ccedil;&amp;atilde;o, confirma&amp;ccedil;&amp;atilde;o de historia natural favor&amp;aacute;vel e aconselhamento para manter-se ativo (apenas uma consulta).&lt;/p>" inputSequences="//@sequence.15" outputSequences="//@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:Information" id="5951" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[StartScreen] Alto Risco" description="Educa&#xe7;&#xe3;o, medica&#xe7;&#xe3;o, confirma&#xe7;&#xe3;o de historia natural favor&#xe1;vel e aconselhamento para manter-se ativo (apenas uma consulta)." inputSequences="//@sequence.16" outputSequences="//@sequence.19"/>
+  <element xsi:type="pathwayMetamodel:Process" id="5952" type="Processo" type_verbose="Processo" url="" name="Encaminhamento &#xe0; Fisioterapia" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.20">
+    <action id="370" process_id="5952" service="encaminhar_especialidade" description="Fisioterapia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5953" type="Processo" type_verbose="Processo" url="" name="Encaminhamento ao Psic&#xf3;logo e Fisioterapia" description="Encaminhar paciente &#xe0; fisioterapia e adicionar tratamento com psic&#xf3;logo (mudar cren&#xe7;as e atitudes em rela&#xe7;&#xe3;o &#xe0; lombalgia, com &#xea;nfase nos fatores detectados pelo teste, como depress&#xe3;o, ansiedade, medo da dor ou catastrofiza&#xe7;&#xe3;o)." inputSequences="//@sequence.19" outputSequences="//@sequence.21">
+    <action id="381" process_id="5953" service="encaminhar_especialidade" description="Fisioterapia"/>
+    <action id="382" process_id="5953" service="encaminhar_especialidade" description="Psic&#xf3;logo"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5954" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Melhora" description="Avaliar se paciente apresenta melhora no retorno" inputSequences="//@sequence.11" outputSequences="//@sequence.22 //@sequence.23">
+    <questions text="Houve melhora do paciente?" url="" id="2597">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="4441" weight="1" value="false"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="5955" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.3" id="5956" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (necessita apoio diagn&#xf3;stico)" description="necessita apoio diagn&#xf3;stico">
+    <operation name="necessita apoio diagn&#xf3;stico" Operator="affirmation" id="4450">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_apoio_diagnostico" id="4436" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="5957" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="5958" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (n&#xe3;o necessita de apoio diagn&#xf3;stico)" description="n&#xe3;o necessita de apoio diagn&#xf3;stico">
+    <operation name="n&#xe3;o necessita de apoio diagn&#xf3;stico" id="4451">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_apoio_diagnostico" id="4436" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="5959" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (dor leve/moderada)" description="dor leve/moderada">
+    <operation name="dor leve/moderada" Operator="affirmation" id="4452">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_leve_moderada" id="4437" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="5960" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (dor severa)" description="dor severa">
+    <operation name="dor severa" Operator="affirmation" id="4453">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_severa" id="4438" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.4" id="5961" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (dor aguda com espasmos)" description="dor aguda com espasmos">
+    <operation name="dor aguda com espasmos" Operator="affirmation" id="4454">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_aguda_com_espasmos" id="4439" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.5" id="5962" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="5963" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="5964" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="5965" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="Incondicional"/>
+  <sequence inputStep="//@element.18" outputStep="//@element.9" id="5966" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="5967" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (1 ou mais bandeiras vermelhas)" description="1 ou mais bandeiras vermelhas">
+    <operation name="bandeiras vermelhas >= 1" Operator="greaterOrEqual" id="4455">
+      <operand xsi:type="pathwayMetamodel:Choice" name="bandeiras_vermelhas" id="4440" weight="1" value="0.0">
+        <option description="Abuso de &#xe1;lcool e/ou drogas por via venosa" weight="1"/>
+        <option description="Perda de peso n&#xe3;o explicada (mais de 10% do peso costumeiro)" weight="1"/>
+        <option description="Febre n&#xe3;o explicada por mais de 48h" weight="1"/>
+        <option description="Imunossupress&#xe3;o" weight="1"/>
+        <option description="Tratamento com ester&#xf3;ides prolongado" weight="1"/>
+        <option description="Dor com dura&#xe7;&#xe3;o maior de 6 semanas" weight="1"/>
+        <option description="Idade maior que 70 anos" weight="1"/>
+        <option description="Trauma Severo recente ou leve em maiores de 50 anos" weight="1"/>
+        <option description="Hist&#xf3;rico de les&#xf5;es ou tumor" weight="1"/>
+        <option description="D&#xe9;ficit neurol&#xf3;gico progressivo ou grave" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="4442" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.10" id="5968" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (sem bandeiras vermelhas)" description="sem bandeiras vermelhas">
+    <operation name="bandeiras vermelhas &lt; 1" Operator="lessThan" id="4456">
+      <operand xsi:type="pathwayMetamodel:Choice" name="bandeiras_vermelhas" id="4440" weight="1" value="0.0">
+        <option description="Abuso de &#xe1;lcool e/ou drogas por via venosa" weight="1"/>
+        <option description="Perda de peso n&#xe3;o explicada (mais de 10% do peso costumeiro)" weight="1"/>
+        <option description="Febre n&#xe3;o explicada por mais de 48h" weight="1"/>
+        <option description="Imunossupress&#xe3;o" weight="1"/>
+        <option description="Tratamento com ester&#xf3;ides prolongado" weight="1"/>
+        <option description="Dor com dura&#xe7;&#xe3;o maior de 6 semanas" weight="1"/>
+        <option description="Idade maior que 70 anos" weight="1"/>
+        <option description="Trauma Severo recente ou leve em maiores de 50 anos" weight="1"/>
+        <option description="Hist&#xf3;rico de les&#xf5;es ou tumor" weight="1"/>
+        <option description="D&#xe9;ficit neurol&#xf3;gico progressivo ou grave" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="4442" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.0" id="5969" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (baixo risco)" description="baixo risco">
+    <operation name="StartScreen &lt;= 3" Operator="affirmation" id="4457">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack &lt;= 3" Operator="lessOrEqual" id="4449">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4444">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4427" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4428" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4429" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4430" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.0" id="5970" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (m&#xe9;dio risco)" description="startback >= 3 &amp; Fatores 5 a 9 &lt; 3">
+    <operation name="Total StartScreen > 3 &amp; Total (5 a 9) &lt;= 3" Operator="and" id="4458">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack > 3" Operator="greaterThan" id="4448">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4444">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4427" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4428" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4429" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4430" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="StartBack 5 a 9 &lt;= 3" Operator="lessOrEqual" id="4446">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack (5 a 9)" Operator="addition" id="4445">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.0" id="5971" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (alto risco)" description="Total StartScreen > 3 &amp; Total (5 a 9) > 3">
+    <operation name="Total StartScreen > 3 &amp; Total (5 a 9) > 3" Operator="and" id="4459">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack > 3" Operator="greaterThan" id="4448">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4444">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4427" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4428" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4429" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4430" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="StartBack 5 a 9 > 3" Operator="greaterThan" id="4447">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack (5 a 9)" Operator="addition" id="4445">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.13" id="5972" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description="Incondicional"/>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="5973" type="Sequencia" type_verbose="Sequencia" url="" name="S21" description="Incondicional"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.15" id="5974" type="Sequencia" type_verbose="Sequencia" url="" name="S22" description="Incondicional"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.16" id="5975" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="Incondicional"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.17" id="5976" type="Sequencia" type_verbose="Sequencia" url="" name="S24" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.18" id="5977" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (houve melhora)" description="houve melhora">
+    <operation name="houve melhora" Operator="affirmation" id="4460">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="4441" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.18" id="5978" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhora" id="4461">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="4441" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="Total StartBack" Operator="addition" id="4444">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4427" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4428" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4429" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4430" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+  </operation>
+  <operation name="Total StartBack (5 a 9)" Operator="addition" id="4445">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+  </operation>
+  <operation name="StartBack 5 a 9 &lt;= 3" Operator="lessOrEqual" id="4446">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack (5 a 9)" Operator="addition" id="4445">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+  </operation>
+  <operation name="StartBack 5 a 9 > 3" Operator="greaterThan" id="4447">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack (5 a 9)" Operator="addition" id="4445">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+  </operation>
+  <operation name="Total StartBack > 3" Operator="greaterThan" id="4448">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4444">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4427" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4428" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4429" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4430" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+  </operation>
+  <operation name="Total StartBack &lt;= 3" Operator="lessOrEqual" id="4449">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Total StartBack" Operator="addition" id="4444">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4427" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4428" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4429" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4430" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_1" id="4427" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_2" id="4428" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_3" id="4429" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_4" id="4430" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_5" id="4431" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_6" id="4432" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_7" id="4433" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_8" id="4434" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="start_back_9" id="4435" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="necessita_apoio_diagnostico" id="4436" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_leve_moderada" id="4437" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_severa" id="4438" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="classificacao_dor_aguda_com_espasmos" id="4439" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="bandeiras_vermelhas" id="4440" weight="1" value="0.0">
+    <option description="Abuso de &#xe1;lcool e/ou drogas por via venosa" weight="1"/>
+    <option description="Perda de peso n&#xe3;o explicada (mais de 10% do peso costumeiro)" weight="1"/>
+    <option description="Febre n&#xe3;o explicada por mais de 48h" weight="1"/>
+    <option description="Imunossupress&#xe3;o" weight="1"/>
+    <option description="Tratamento com ester&#xf3;ides prolongado" weight="1"/>
+    <option description="Dor com dura&#xe7;&#xe3;o maior de 6 semanas" weight="1"/>
+    <option description="Idade maior que 70 anos" weight="1"/>
+    <option description="Trauma Severo recente ou leve em maiores de 50 anos" weight="1"/>
+    <option description="Hist&#xf3;rico de les&#xf5;es ou tumor" weight="1"/>
+    <option description="D&#xe9;ficit neurol&#xf3;gico progressivo ou grave" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="4441" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="4442" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="4443" weight="1"/>
+</pathwayMetamodel:Pathway>

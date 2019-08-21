@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Arboviroses Pedi&#xe1;trico" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32111" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar tipo de arbovirose" description="&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Sinais/Sintomas&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Dengue&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Zika&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Chikunguya&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Febre (dura&amp;ccedil;&amp;atilde;o)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; Acima de 38&amp;ordm;C (4 a 7 dias)&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; Sem febre ou subfebril 38&amp;ordm;C (1-2 dias subfebril)&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Febre alta &amp;gt; 38&amp;ordm; (2-3 dias)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Manchas na pele (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>A partir do 4&amp;ordm; dia&lt;br />&#xA;&#x9;&#x9;&#x9;(30-50% dos casos)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Surge no 1&amp;ordm; ou no 2&amp;ordm; dia (90-100% dos casos)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Surge 2-5 dia&lt;br />&#xA;&#x9;&#x9;&#x9;(50% dos casos)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Dor nos m&amp;uacute;sculos (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+++/+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>++/+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+/+++&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Dor na articula&amp;ccedil;&amp;atilde;o (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+/+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>++/+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+++/+++&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Intensidade da dor articular&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve/Moderada&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Moderada/Intensa&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Edema da articula&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Raro&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Frequente e leve intensidade&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; Frequente e de moderada a intensa&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Conjuntivite&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Raro&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>50-90% dos casos&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>30%&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>&amp;nbsp; Cefal&amp;eacute;ia (Frequ&amp;ecirc;ncia e Intensidade)&amp;nbsp;&amp;nbsp;&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>++&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Prurido&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Moderada/Intensa&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Hipertrofia ganglionar (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Intensa&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Moderada&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Discrasia hemorr&amp;aacute;gica (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Moderada&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Ausente&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Acometimento neurol&amp;oacute;gico&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Raro&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Mais frequente que Dengue e Chikunguya&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Raro (predominante em Neonatos)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isInitial="true" outputSequences="//@sequence.0 //@sequence.10 //@sequence.16">
+    <questions text="Escolha a arbovirose que se encaixa com o quadro do paciente:" url="" id="15288">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31019" weight="1" value="0.0">
+        <option description="Dengue" weight="1"/>
+        <option description="Zika" weight="2"/>
+        <option description="Chikunguya" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32112" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dengue] Verifica Sinais de Alarme" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.4">
+    <questions text="Paciente tem algum sinal de alarme abaixo?" url="" id="15289">
+      <answers xsi:type="pathwayMetamodel:Choice" name="dengue_sinais_alarme" id="31020" weight="1" value="0.0">
+        <option description="Dor abdominal intensa" weight="1"/>
+        <option description="V&#xf4;mitos persistentes" weight="1"/>
+        <option description="Ac&#xfa;mulo de l&#xed;quidos (ascite, derrame pleural, derrame peric&#xe1;rdico)" weight="1"/>
+        <option description="Hipotens&#xe3;o postural e/ou lipot&#xed;mia" weight="1"/>
+        <option description="Hepatomegalia > 2cm abaixo do rebordo costal" weight="1"/>
+        <option description="Letargia e/ou irritabilidade" weight="1"/>
+        <option description="Sangramento de mucosas" weight="1"/>
+        <option description="Aumento progressivo do hemat&#xf3;crito" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32113" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dengue] Verifica Sinais de Gravidade" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Paciente tem algum sinal de gravidade abaixo?" url="" id="15290">
+      <answers xsi:type="pathwayMetamodel:Choice" name="dengue_sinais_gravidade" id="31061" weight="1" value="0.0">
+        <option description="Comprometimento grave de &#xf3;rg&#xe3;os" weight="1"/>
+        <option description="Extravasamento grave de plasma, levando ao choque evidenciado por: taquicardia, extremidades distais frias, pulso fraco e filiforme, tempo enchimento capilar lento (>2seg), press&#xe3;o arterial convergente (&lt;20mmHg), taquipneia, olig&#xfa;ria, hipotens&#xe3;o, cianose" weight="1"/>
+        <option description="Sangramento grave" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32114" type="Tratamento" type_verbose="Tratamento" url="" name="[Dengue] Grupo D - Dengue Grave" description="&lt;p>&lt;strong>GRUPO D - DENGUE GRAVE&lt;br />&#xA;&lt;br />&#xA;Hidratar o paciente:&amp;nbsp;&lt;/strong>SF 0,9% 20ml/kg em 20 min(se paciente cardiopata, realizar SF 0,9% 10ml/kg). &lt;strong>Repetir at&amp;eacute; 3 vezes, se necess&amp;aacute;rio.&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Reavaliar o paciente a cada 15-30 min.&amp;nbsp;&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Controle rigoroso de SV (curva press&amp;oacute;rica). Monitoriza&amp;ccedil;&amp;atilde;o.&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Sintom&amp;aacute;ticos:&lt;/strong>&amp;nbsp;Dipirona gotas ou Paracetamol gotas.&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Solicitar:&amp;nbsp;&lt;/strong>hemograma completo, TGO, TGP, TAP, TTPA, PTF,&amp;nbsp;s&amp;oacute;dio, pot&amp;aacute;ssio, ureia, creatinina, gasometria arterial, USG abdome (se queixa de dor abdominal). Solicitar pesquisa antigeno NS1 (se tiver nas primeiras 72h do quadro), Raio X T&amp;oacute;rax.&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Passar caso com chefe de equipe e solicitar vaga de UTI&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.2">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TGP/ALT (ALANINA AMINOTRANSFERASE)" exam_id="28011376" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="ANTIGENO NS1 DO VIRUS DA DENGUE, PESQUISA" exam_id="28066065" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="PROTEINAS TOTAIS E FRACOES" exam_id="28011244" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32115" type="Tratamento" type_verbose="Tratamento" url="" name="[Dengue] Grupo C - Dengue com sinais de alarme" description="&lt;p>&lt;strong>GRUPO C - DENGUE COM SINAIS DE ALARME&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Hidratar o paciente:&amp;nbsp;&lt;/strong>SF 0,9% 20ml/kg em 20 min(se paciente cardiopata, realizar SF 0,9% 10ml/kg). &lt;strong>Repetir at&amp;eacute; 3 vezes, se necess&amp;aacute;rio.&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Reavaliar o paciente a cada 15-30 min.&amp;nbsp;&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Sintom&amp;aacute;ticos:&lt;/strong>&amp;nbsp;Dipirona gotas ou Paracetamol gotas.&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Solicitar:&amp;nbsp;&lt;/strong>hemograma completo, TGO, TGP, TAP, TTPA, PTF,&amp;nbsp;s&amp;oacute;dio, pot&amp;aacute;ssio, ureia, creatinina, gasometria arterial, USG abdome (se queixa de dor abdominal). Solicitar pesquisa antigeno NS1 (se tiver nas primeiras 72h do quadro), Raio X T&amp;oacute;rax.&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Passar caso com chefe de equipe e deixar paciente em leito de observa&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.3">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TGP/ALT (ALANINA AMINOTRANSFERASE)" exam_id="28011376" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="ANTIGENO NS1 DO VIRUS DA DENGUE, PESQUISA" exam_id="28066065" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="PROTEINAS TOTAIS E FRACOES" exam_id="28011244" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32116" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dengue] Avaliar comorbidades" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;u>&lt;strong>Condi&amp;ccedil;&amp;otilde;es cl&amp;iacute;nicas especiais e/ou risco social ou comorbidades&lt;/strong>&lt;/u>: lactentes (&amp;lt; 2 anos), gestantes, doen&amp;ccedil;as cardiovasculares,&amp;nbsp;&lt;em>diabetes mellitus&lt;/em>, doen&amp;ccedil;as hematol&amp;oacute;gicas cr&amp;ocirc;nicas (principalmente anemia falsiforme), doen&amp;ccedil;a renal cr&amp;ocirc;nica e doen&amp;ccedil;as autoimunes. Esses pacientes podem apresentar evolu&amp;ccedil;&amp;atilde;o desfavor&amp;aacute;vel e devem ter acompanhamento diferenciado.&lt;/span>&lt;/p>" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Presen&#xe7;a de sangramento espont&#xe2;neo e/ou prova do la&#xe7;o positiva e/ou condi&#xe7;&#xf5;es cl&#xed;nicas especiais e/ou risco social e/ou comorbidades*?" url="" id="15291">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_situa&#xe7;&#xe3;o de risco" id="31062" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32117" type="Receita" type_verbose="Receita" url="" name="[Dengue] Grupo A - Dengue sem sinais de alarme ou comorbidades" description="&lt;p>&lt;br />&#xA;&lt;strong>GRUPO A - DENGUE SEM SINAIS DE ALARME OU COMORBIDADES&lt;br />&#xA;&lt;br />&#xA;Tratamento Ambulatorial&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Orientar hidrata&amp;ccedil;&amp;atilde;o via oral 60 ml/kg/dia sendo 1/3 com SORO DE REIDRATA&amp;Ccedil;&amp;Atilde;O ORAL e 2/3 com l&amp;iacute;quidos caseiros (&amp;aacute;gua, suco, ch&amp;aacute;)&lt;/li>&#xA;&#x9;&lt;li>Manter hidrata&amp;ccedil;&amp;atilde;o durante todo o per&amp;iacute;odo febril e por at&amp;eacute; 24-48h ap&amp;oacute;s desaparecimento da febre&lt;/li>&#xA;&#x9;&lt;li>Necessidade de repouso&lt;/li>&#xA;&#x9;&lt;li>Liberar o paciente para domic&amp;iacute;lio com ORIENTA&amp;Ccedil;&amp;Atilde;O de retorno ao servi&amp;ccedil;o no primeiro dia ap&amp;oacute;s o desaparecimento da febre&amp;nbsp;&lt;/li>&#xA;&#x9;&lt;li>Evitar salicilatos e anti-inflamat&amp;oacute;rios n&amp;atilde;o hormonais&lt;/li>&#xA;&#x9;&lt;li>O paciente deve retornar imediatamente ao identificar SINAIS DE ALERTA&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.5">
+    <item id="11292" url="" name="DIPIRONA GOTAS FRAS 10 ML" med_code="37982" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11293" url="" name="PARACETAMOL GOTAS FRAS 10 ML" med_code="107964" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11294" url="" name="SORO DE REIDRATA&#xc7;&#xc3;O ORAL ____ 1 CX" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Oferecer livremente ao longo do dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32118" type="Tratamento" type_verbose="Tratamento" url="" name="[Dengue] Grupo B - Dengue sem sinais de alarme com comorbidades ou situa&#xe7;&#xe3;o de risco" description="&lt;p>&lt;strong>GRUPO B - DENGUE SEM SINAIS DE ALARME COM COMORBIDADES OU SITUA&amp;Ccedil;&amp;Atilde;O DE RISCO&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Hidratar o paciente:&amp;nbsp;&lt;/strong>SF 0,9% 20ml/kg em 20 min(se paciente cardiopata, realizar SF 0,9% 10ml/kg).&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Reavaliar o paciente ap&amp;oacute;s a expans&amp;atilde;o.&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Sintom&amp;aacute;ticos:&lt;/strong>&amp;nbsp;Dipirona gotas ou Paracetamol gotas.&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Solicitar:&amp;nbsp;&lt;/strong>hemograma completo, TGO, TGP.&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="Paciente com dengue" clinical_indication="n/a"/>
+    <examination url="TGP/ALT (ALANINA AMINOTRANSFERASE)" exam_id="28011376" limb_side="" quantity="1" reason="Paciente com dengue" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32119" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dengue] Grupo B - Avaliar Primeiros Exames" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Avaliar resultado dos exames:" url="" id="15292">
+      <answers xsi:type="pathwayMetamodel:Choice" name="dengue_grupob_hemograma01" id="31063" weight="1" value="0.0">
+        <option description="Exames Normais" weight="1"/>
+        <option description="Exames Alterados" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32120" type="Receita" type_verbose="Receita" url="" name="[Dengue] Grupo B - Exames Normais" description="&lt;p>&lt;strong>Tratamento Ambulatorial&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Orientar hidrata&amp;ccedil;&amp;atilde;o via oral 60 ml/kg/dia sendo 1/3 com SORO DE REIDRATA&amp;Ccedil;&amp;Atilde;O ORAL e 2/3 com l&amp;iacute;quidos caseiros (&amp;aacute;gua, suco, ch&amp;aacute;).&amp;nbsp;&lt;/li>&#xA;&#x9;&lt;li>Liberar o paciente para domic&amp;iacute;lio com ORIENTA&amp;Ccedil;&amp;Atilde;O de retorno no servi&amp;ccedil;o 48h ap&amp;oacute;s para reavalia&amp;ccedil;&amp;atilde;o.&lt;/li>&#xA;&#x9;&lt;li>Evitar salicilatos e anti-inflamat&amp;oacute;rios n&amp;atilde;o hormonais&lt;/li>&#xA;&#x9;&lt;li>O paciente deve retornar imediatamente ao identificar SINAIS DE ALERTA.&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.8">
+    <item id="11295" url="" name="DIPIRONA GOTAS FRAS 10 ML" med_code="37982" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11296" url="" name="PARACETAMOL GOTAS FRAS 10 ML" med_code="107964" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11297" url="" name="SORO DE REIDRATA&#xc7;&#xc3;O ORAL ____ 1 CX" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Oferecer livremente ao longo do dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32141" type="Tratamento" type_verbose="Tratamento" url="" name="[Dengue] Grupo B - Exames Alterados" description="&lt;p>&lt;strong>Repetir expans&amp;atilde;o, hidratar o paciente:&amp;nbsp;&lt;/strong>SF 0,9% 20ml/kg em 20 min(se paciente cardiopata, realizar SF 0,9% 10ml/kg).&amp;nbsp;&lt;/p>" inputSequences="//@sequence.9" outputSequences="//@sequence.24"/>
+  <element xsi:type="pathwayMetamodel:Information" id="32142" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Dengue] Grupo B - Exames Alterados" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Dar alta ao paciente com as seguintes orienta&amp;ccedil;&amp;otilde;es:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>Retorno em 24h para reavalia&amp;ccedil;&amp;atilde;o dos exames.&lt;/strong>&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Manter hidrata&amp;ccedil;&amp;atilde;o rigorosa e respouso domiciliar.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.24"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32143" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Zika] Avaliar estado do paciente" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Paciente com hipotens&#xe3;o ou desidrata&#xe7;&#xe3;o importante?" url="" id="15293">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="zika_hipotensao_ou_desidratacao" id="31064" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32144" type="Receita" type_verbose="Receita" url="" name="[Zika] Paciente est&#xe1;vel" description="&lt;p>&lt;strong>Paciente est&amp;aacute;vel clinicamente, sem comorbidade de base descompensada, sinais vitais est&amp;aacute;veis&lt;/strong>&lt;br />&#xA;&lt;br />&#xA;N&amp;atilde;o h&amp;aacute; indica&amp;ccedil;&amp;atilde;o de coleta de exames laboratoriais e nem retorno agendado&lt;br />&#xA;&lt;br />&#xA;&amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.11 //@sequence.14">
+    <item id="11298" url="" name="DIPIRONA GOTAS FRAS 10 ML" med_code="37982" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11299" url="" name="PARACETAMOL GOTAS FRAS 10 ML" med_code="107964" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11300" url="" name="SORO DE REIDRATA&#xc7;&#xc3;O ORAL ____ 1 CX" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Oferecer livremente ao longo do dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32145" type="Tratamento" type_verbose="Tratamento" url="" name="[Zika] Paciente desidratado" description="&lt;p>&lt;strong>Hidratar o paciente:&amp;nbsp;&lt;/strong>SF 0,9% 20ml/kg nas primeiras 2h (se paciente cardiopata, realizar SF 0,9% 10ml/kg). &lt;strong>Repetir at&amp;eacute; 3x, se necess&amp;aacute;rio.&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Sintom&amp;aacute;ticos:&lt;/strong>Dipirona gotas ou Paracetamol gotas, se dor ou febre.&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Solicitar:&amp;nbsp;&lt;/strong>hemograma completo.&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Deixar paciente em leito de observa&amp;ccedil;&amp;atilde;o.&lt;/strong>&lt;/p>" inputSequences="//@sequence.12" outputSequences="//@sequence.13">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com zika e desidratado." clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32146" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Zika] Avaliar exames" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Paciente com exames alterados ou com aus&#xea;ncia de melhora?" url="" id="15294">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="zika_exames_alterados" id="31065" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="32147" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Zika] Passar para l&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Passar caso para l&amp;iacute;der local.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.15"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32148" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Chikungunya] Avaliar fase" description="" inputSequences="//@sequence.16" outputSequences="//@sequence.17 //@sequence.23">
+    <questions text="Qual o est&#xe1;gio da Chikungunya:" url="" id="15295">
+      <answers xsi:type="pathwayMetamodel:Choice" name="ckya_fase" id="31066" weight="1" value="0.0">
+        <option description="Fase aguda (at&#xe9; 14 dias)" weight="1"/>
+        <option description="Fase subaguda a cr&#xf4;nica (> 14 dias)" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32149" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Chikungunya] Verifica Sinais de Gravidade" description="" inputSequences="//@sequence.17" outputSequences="//@sequence.18 //@sequence.19">
+    <questions text="H&#xe1; sinais de gravidade?" url="" id="15296">
+      <answers xsi:type="pathwayMetamodel:Choice" name="ckya_sinais_gravidade" id="31067" weight="1" value="0.0">
+        <option description="Acometimento neurol&#xf3;gico" weight="1"/>
+        <option description="Sinais de choque: extremidades frias, cianose, tontura, hipotens&#xe3;o, enchimento capilar lento ou instabilidade hemodin&#xe2;mica" weight="1"/>
+        <option description="Dispneia" weight="1"/>
+        <option description="Dor tor&#xe1;cica" weight="1"/>
+        <option description="V&#xf4;mitos persistentes" weight="1"/>
+        <option description="Descompensa&#xe7;&#xe3;o de doen&#xe7;a de base" weight="1"/>
+        <option description="Sangramentos de mucosas" weight="1"/>
+        <option description="Miocardite" weight="1"/>
+        <option description="Hepatite aguda" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32150" type="Tratamento" type_verbose="Tratamento" url="" name="[Chikungunya] Com Sinais de Gravidade" description="&lt;p>&lt;strong>Hidratar o paciente:&amp;nbsp;&lt;/strong>SF 0,9% 20ml/kg em 20 min(se paciente cardiopata, realizar SF 0,9% 10ml/kg). &lt;strong>Repetir at&amp;eacute; 3 vezes, se necess&amp;aacute;rio.&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Reavaliar o paciente a cada 15-30 min.&amp;nbsp;&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Sintom&amp;aacute;ticos:&lt;/strong>&amp;nbsp;Dipirona gotas ou Paracetamol gotas.&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Solicitar:&amp;nbsp;&lt;/strong>hemograma completo, TGO, TGP, s&amp;oacute;dio, pot&amp;aacute;ssio, ureia, creatinina.&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Passar caso com chefe de equipe e avaliar interna&amp;ccedil;&amp;atilde;o hospitalar.&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.18">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="TGP/ALT (ALANINA AMINOTRANSFERASE)" exam_id="28011376" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32151" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Chikungunya] Verifica grupo de risco" description="" inputSequences="//@sequence.19" outputSequences="//@sequence.20 //@sequence.21">
+    <questions text="Paciente em grupo de risco?" url="" id="15297">
+      <answers xsi:type="pathwayMetamodel:Choice" name="ckya_grupo_risco" id="31068" weight="1" value="0.0">
+        <option description="Menores de 2 anos" weight="1"/>
+        <option description="Paciente com comorbidades (DM, anemia falciforme, asma)" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32152" type="Receita" type_verbose="Receita" url="" name="[Chikungunya] Fase Aguda - Receita" description="" isTerminal="true" inputSequences="//@sequence.20 //@sequence.22">
+    <item id="11321" url="" name="DIPIRONA GOTAS FRAS 10 ML" med_code="37982" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11322" url="" name="PARACETAMOL GOTAS FRAS 10 ML" med_code="107964" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11323" url="" name="SORO DE REIDRATA&#xc7;&#xc3;O ORAL ____ 1 CX" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Oferecer livremente ao longo do dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32153" type="Tratamento" type_verbose="Tratamento" url="" name="[Chikungunya] Grupo de Risco" description="&lt;p>&lt;strong>Sintom&amp;aacute;ticos:&lt;/strong>&amp;nbsp;Dipirona gotas ou Paracetamol gotas.&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Solicitar:&amp;nbsp;&lt;/strong>hemograma completo.&lt;/p>" inputSequences="//@sequence.21" outputSequences="//@sequence.22">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com dengue grave" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32154" type="Receita" type_verbose="Receita" url="" name="[Chikungunya] Fase subaguda - Receita" description="&lt;ul>&#xA;&#x9;&lt;li>Dipirona gotas ou Paracetamol gotas via oral de 6/6h se dor ou febre.&lt;/li>&#xA;&#x9;&lt;li>Nos casos refrat&amp;aacute;rios a analg&amp;eacute;sicos, avaliar o uso de AINES: Cetoptofeno gotas via oral de 8/8h por 5 dias.&lt;/li>&#xA;&#x9;&lt;li>Nos casos refrat&amp;aacute;rios a analg&amp;eacute;sicos e contraindicado o uso de AINES, avaliar uso de cortic&amp;oacute;ide: Prednisolona 3 mg/ml (1mg/kg/dia) VO 1x ao dia por 5 dias.&amp;nbsp;&lt;/li>&#xA;&#x9;&lt;li>Encaminhar paciente para ambulat&amp;oacute;rio da reumatologia para diagn&amp;oacute;stico diferencial com doen&amp;ccedil;as autoimunes.&amp;nbsp;&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.23">
+    <item id="11324" url="" name="DIPIRONA GOTAS FRAS 10 ML" med_code="37982" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11325" url="" name="PARACETAMOL GOTAS FRAS 10 ML" med_code="107964" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas via oral de 6/6h se dor ou febre."/>
+    <item id="11326" url="" name="CETOPROFENO GOTAS _______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas via oral de 8/8h por 5 dias."/>
+    <item id="11327" url="" name="PREDNISOLONA 3 mg/ml _______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas via oral 01 vez ao dia por 5 dias."/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="32155" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Dengue)" description="Dengue">
+    <operation name="Dengue" Operator="equal" id="31072">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31019" weight="1" value="0.0">
+        <option description="Dengue" weight="1"/>
+        <option description="Zika" weight="2"/>
+        <option description="Chikunguya" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="32156" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (dengue com sinais de alarme)" description="dengue com sinais de alarme">
+    <operation name="dengue com sinais de alarme" Operator="greaterOrEqual" id="31073">
+      <operand xsi:type="pathwayMetamodel:Choice" name="dengue_sinais_alarme" id="31020" weight="1" value="0.0">
+        <option description="Dor abdominal intensa" weight="1"/>
+        <option description="V&#xf4;mitos persistentes" weight="1"/>
+        <option description="Ac&#xfa;mulo de l&#xed;quidos (ascite, derrame pleural, derrame peric&#xe1;rdico)" weight="1"/>
+        <option description="Hipotens&#xe3;o postural e/ou lipot&#xed;mia" weight="1"/>
+        <option description="Hepatomegalia > 2cm abaixo do rebordo costal" weight="1"/>
+        <option description="Letargia e/ou irritabilidade" weight="1"/>
+        <option description="Sangramento de mucosas" weight="1"/>
+        <option description="Aumento progressivo do hemat&#xf3;crito" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="32157" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (dengue com sinais de gravidade)" description="dengue com sinais de gravidade">
+    <operation name="dengue com sinais de gravidade" Operator="greaterOrEqual" id="31074">
+      <operand xsi:type="pathwayMetamodel:Choice" name="dengue_sinais_gravidade" id="31061" weight="1" value="0.0">
+        <option description="Comprometimento grave de &#xf3;rg&#xe3;os" weight="1"/>
+        <option description="Extravasamento grave de plasma, levando ao choque evidenciado por: taquicardia, extremidades distais frias, pulso fraco e filiforme, tempo enchimento capilar lento (>2seg), press&#xe3;o arterial convergente (&lt;20mmHg), taquipneia, olig&#xfa;ria, hipotens&#xe3;o, cianose" weight="1"/>
+        <option description="Sangramento grave" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="32158" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (dengue sem sinais de gravidade)" description="dengue sem sinais de gravidade">
+    <operation name="dengue sem sinais de gravidade" Operator="lessThan" id="31075">
+      <operand xsi:type="pathwayMetamodel:Choice" name="dengue_sinais_gravidade" id="31061" weight="1" value="0.0">
+        <option description="Comprometimento grave de &#xf3;rg&#xe3;os" weight="1"/>
+        <option description="Extravasamento grave de plasma, levando ao choque evidenciado por: taquicardia, extremidades distais frias, pulso fraco e filiforme, tempo enchimento capilar lento (>2seg), press&#xe3;o arterial convergente (&lt;20mmHg), taquipneia, olig&#xfa;ria, hipotens&#xe3;o, cianose" weight="1"/>
+        <option description="Sangramento grave" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="32159" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (dengue sem sinais de alarme)" description="dengue sem sinais de alarme">
+    <operation name="dengue sem sinais de alarme" Operator="lessThan" id="31076">
+      <operand xsi:type="pathwayMetamodel:Choice" name="dengue_sinais_alarme" id="31020" weight="1" value="0.0">
+        <option description="Dor abdominal intensa" weight="1"/>
+        <option description="V&#xf4;mitos persistentes" weight="1"/>
+        <option description="Ac&#xfa;mulo de l&#xed;quidos (ascite, derrame pleural, derrame peric&#xe1;rdico)" weight="1"/>
+        <option description="Hipotens&#xe3;o postural e/ou lipot&#xed;mia" weight="1"/>
+        <option description="Hepatomegalia > 2cm abaixo do rebordo costal" weight="1"/>
+        <option description="Letargia e/ou irritabilidade" weight="1"/>
+        <option description="Sangramento de mucosas" weight="1"/>
+        <option description="Aumento progressivo do hemat&#xf3;crito" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="32160" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (dengue sem comorbidades)" description="dengue sem comorbidades">
+    <operation name="dengue sem comorbidades" id="31077">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_situa&#xe7;&#xe3;o de risco" id="31062" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="32161" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (dengue com comorbidades)" description="dengue com comorbidades">
+    <operation name="dengue com comorbidades" Operator="affirmation" id="31078">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_situa&#xe7;&#xe3;o de risco" id="31062" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="32162" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="32163" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (grupo b - hemat&#xf3;crito normal)" description="grupo b - hemat&#xf3;crito normal">
+    <operation name="dengue grupo b - hemat&#xf3;crito normal" Operator="equal" id="31079">
+      <operand xsi:type="pathwayMetamodel:Choice" name="dengue_grupob_hemograma01" id="31063" weight="1" value="0.0">
+        <option description="Exames Normais" weight="1"/>
+        <option description="Exames Alterados" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="32164" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (grupo b - hemat&#xf3;crito alterado)" description="grupo b - hemat&#xf3;crito alterado">
+    <operation name="grupo b - hemat&#xf3;crito alterado" Operator="equal" id="31080">
+      <operand xsi:type="pathwayMetamodel:Choice" name="dengue_grupob_hemograma01" id="31063" weight="1" value="0.0">
+        <option description="Exames Normais" weight="1"/>
+        <option description="Exames Alterados" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31070" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.0" id="32165" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (Zika)" description="Zika">
+    <operation name="Zika" Operator="equal" id="31081">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31019" weight="1" value="0.0">
+        <option description="Dengue" weight="1"/>
+        <option description="Zika" weight="2"/>
+        <option description="Chikunguya" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31070" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="32166" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (zika est&#xe1;vel)" description="zika est&#xe1;vel">
+    <operation name="zika est&#xe1;vel" id="31082">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="zika_hipotensao_ou_desidratacao" id="31064" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.12" id="32167" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (zika desidratado)" description="zika desidratado">
+    <operation name="zika desidratado" Operator="affirmation" id="31083">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="zika_hipotensao_ou_desidratacao" id="31064" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="32168" type="Sequencia" type_verbose="Sequencia" url="" name="S17" description="-"/>
+  <sequence inputStep="//@element.13" outputStep="//@element.15" id="32169" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (exames normais)" description="exames normais">
+    <operation name="exames normais" id="31084">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="zika_exames_alterados" id="31065" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.15" id="32170" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (exames alterados)" description="exames alterados">
+    <operation name="exames alterados" Operator="affirmation" id="31085">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="zika_exames_alterados" id="31065" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.0" id="32171" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (chikungunya)" description="chikungunya">
+    <operation name="chikungunya" Operator="equal" id="31086">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31019" weight="1" value="0.0">
+        <option description="Dengue" weight="1"/>
+        <option description="Zika" weight="2"/>
+        <option description="Chikunguya" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="31071" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.17" id="32172" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (chikungunya fase aguda)" description="chikungunya fase aguda">
+    <operation name="chikungunya fase aguda" Operator="equal" id="31087">
+      <operand xsi:type="pathwayMetamodel:Choice" name="ckya_fase" id="31066" weight="1" value="0.0">
+        <option description="Fase aguda (at&#xe9; 14 dias)" weight="1"/>
+        <option description="Fase subaguda a cr&#xf4;nica (> 14 dias)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="32173" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (chikungunya com sinais de gravidade)" description="chikungunya com sinais de gravidade">
+    <operation name="chikungunya com sinais de gravidade" Operator="greaterOrEqual" id="31088">
+      <operand xsi:type="pathwayMetamodel:Choice" name="ckya_sinais_gravidade" id="31067" weight="1" value="0.0">
+        <option description="Acometimento neurol&#xf3;gico" weight="1"/>
+        <option description="Sinais de choque: extremidades frias, cianose, tontura, hipotens&#xe3;o, enchimento capilar lento ou instabilidade hemodin&#xe2;mica" weight="1"/>
+        <option description="Dispneia" weight="1"/>
+        <option description="Dor tor&#xe1;cica" weight="1"/>
+        <option description="V&#xf4;mitos persistentes" weight="1"/>
+        <option description="Descompensa&#xe7;&#xe3;o de doen&#xe7;a de base" weight="1"/>
+        <option description="Sangramentos de mucosas" weight="1"/>
+        <option description="Miocardite" weight="1"/>
+        <option description="Hepatite aguda" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.18" id="32174" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (chikungunya sem sinais de gravidade)" description="chikungunya sem sinais de gravidade">
+    <operation name="chikungunya sem sinais de gravidade" Operator="lessThan" id="31089">
+      <operand xsi:type="pathwayMetamodel:Choice" name="ckya_sinais_gravidade" id="31067" weight="1" value="0.0">
+        <option description="Acometimento neurol&#xf3;gico" weight="1"/>
+        <option description="Sinais de choque: extremidades frias, cianose, tontura, hipotens&#xe3;o, enchimento capilar lento ou instabilidade hemodin&#xe2;mica" weight="1"/>
+        <option description="Dispneia" weight="1"/>
+        <option description="Dor tor&#xe1;cica" weight="1"/>
+        <option description="V&#xf4;mitos persistentes" weight="1"/>
+        <option description="Descompensa&#xe7;&#xe3;o de doen&#xe7;a de base" weight="1"/>
+        <option description="Sangramentos de mucosas" weight="1"/>
+        <option description="Miocardite" weight="1"/>
+        <option description="Hepatite aguda" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.20" id="32175" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (chikungunya fora do grupo de risco)" description="chikungunya fora do grupo de risco">
+    <operation name="chikungunya fora do grupo de risco" Operator="lessThan" id="31090">
+      <operand xsi:type="pathwayMetamodel:Choice" name="ckya_grupo_risco" id="31068" weight="1" value="0.0">
+        <option description="Menores de 2 anos" weight="1"/>
+        <option description="Paciente com comorbidades (DM, anemia falciforme, asma)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.20" id="32176" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (chikungunya no grupo de risco)" description="chikungunya no grupo de risco">
+    <operation name="chikungunya no grupo de risco" Operator="greaterOrEqual" id="31091">
+      <operand xsi:type="pathwayMetamodel:Choice" name="ckya_grupo_risco" id="31068" weight="1" value="0.0">
+        <option description="Menores de 2 anos" weight="1"/>
+        <option description="Paciente com comorbidades (DM, anemia falciforme, asma)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.22" id="32177" type="Sequencia" type_verbose="Sequencia" url="" name="S26" description="-"/>
+  <sequence inputStep="//@element.23" outputStep="//@element.17" id="32178" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (chikungunya fase subaguda a cronica)" description="chikungunya fase subaguda a cronica">
+    <operation name="chikungunya fase subaguda a cronica" Operator="equal" id="31092">
+      <operand xsi:type="pathwayMetamodel:Choice" name="ckya_fase" id="31066" weight="1" value="0.0">
+        <option description="Fase aguda (at&#xe9; 14 dias)" weight="1"/>
+        <option description="Fase subaguda a cr&#xf4;nica (> 14 dias)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31070" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="32179" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31019" weight="1" value="0.0">
+    <option description="Dengue" weight="1"/>
+    <option description="Zika" weight="2"/>
+    <option description="Chikunguya" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="dengue_sinais_alarme" id="31020" weight="1" value="0.0">
+    <option description="Dor abdominal intensa" weight="1"/>
+    <option description="V&#xf4;mitos persistentes" weight="1"/>
+    <option description="Ac&#xfa;mulo de l&#xed;quidos (ascite, derrame pleural, derrame peric&#xe1;rdico)" weight="1"/>
+    <option description="Hipotens&#xe3;o postural e/ou lipot&#xed;mia" weight="1"/>
+    <option description="Hepatomegalia > 2cm abaixo do rebordo costal" weight="1"/>
+    <option description="Letargia e/ou irritabilidade" weight="1"/>
+    <option description="Sangramento de mucosas" weight="1"/>
+    <option description="Aumento progressivo do hemat&#xf3;crito" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="dengue_sinais_gravidade" id="31061" weight="1" value="0.0">
+    <option description="Comprometimento grave de &#xf3;rg&#xe3;os" weight="1"/>
+    <option description="Extravasamento grave de plasma, levando ao choque evidenciado por: taquicardia, extremidades distais frias, pulso fraco e filiforme, tempo enchimento capilar lento (>2seg), press&#xe3;o arterial convergente (&lt;20mmHg), taquipneia, olig&#xfa;ria, hipotens&#xe3;o, cianose" weight="1"/>
+    <option description="Sangramento grave" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_situa&#xe7;&#xe3;o de risco" id="31062" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="dengue_grupob_hemograma01" id="31063" weight="1" value="0.0">
+    <option description="Exames Normais" weight="1"/>
+    <option description="Exames Alterados" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="zika_hipotensao_ou_desidratacao" id="31064" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="zika_exames_alterados" id="31065" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="ckya_fase" id="31066" weight="1" value="0.0">
+    <option description="Fase aguda (at&#xe9; 14 dias)" weight="1"/>
+    <option description="Fase subaguda a cr&#xf4;nica (> 14 dias)" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="ckya_sinais_gravidade" id="31067" weight="1" value="0.0">
+    <option description="Acometimento neurol&#xf3;gico" weight="1"/>
+    <option description="Sinais de choque: extremidades frias, cianose, tontura, hipotens&#xe3;o, enchimento capilar lento ou instabilidade hemodin&#xe2;mica" weight="1"/>
+    <option description="Dispneia" weight="1"/>
+    <option description="Dor tor&#xe1;cica" weight="1"/>
+    <option description="V&#xf4;mitos persistentes" weight="1"/>
+    <option description="Descompensa&#xe7;&#xe3;o de doen&#xe7;a de base" weight="1"/>
+    <option description="Sangramentos de mucosas" weight="1"/>
+    <option description="Miocardite" weight="1"/>
+    <option description="Hepatite aguda" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="ckya_grupo_risco" id="31068" weight="1" value="0.0">
+    <option description="Menores de 2 anos" weight="1"/>
+    <option description="Paciente com comorbidades (DM, anemia falciforme, asma)" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="31069" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="31070" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="31071" weight="1" value="3.0"/>
+</pathwayMetamodel:Pathway>

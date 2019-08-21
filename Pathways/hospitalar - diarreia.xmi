@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Diarr&#xe9;ia" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33742" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Crit&#xe9;rios de SIRS" description="" inputSequences="//@sequence.11" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Avaliar sintomas:" url="" id="15872">
+      <answers xsi:type="pathwayMetamodel:Choice" name="criterios_SIRS" id="32425" weight="1" value="0.0">
+        <option description="Leuc&#xf3;citos > 12.000/mm&#xb3; ou Leuc&#xf3;citos &lt; 4.000/mm&#xb3; ou Bast&#xf5;es > 10%" weight="1"/>
+        <option description="T > 38,3 &#xba;C ou T &lt; 36&#xba;C" weight="1"/>
+        <option description="FC > 90 bpm" weight="1"/>
+        <option description="FR > 20 irpm" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="33743" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Encaminhar para Dor abdominal" description="" isTerminal="true" inputSequences="//@sequence.8 //@sequence.13">
+    <pathways>H022</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="33744" type="Tratamento" type_verbose="Tratamento" url="" name="[Grupo A sintom&#xe1;tico] Tratamento" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.16">
+    <medication url="" med_id="36064" id="18505" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="18505" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8679,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="36161" id="18506" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="ML" access="6" daily_dosage="1" cycles="1" treatement_time="18506" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8680,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="49581" id="18507" name="PLASIL AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18507" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8681,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="41564" id="18508" name="PLAMET 10MG AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18508" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8682,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="18509" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="18509" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:8683,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="38008" id="18510" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="18510" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:8,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8684,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:6,&quot;codigo_principio_ativo&quot;:909}"/>
+    <medication url="" med_id="108545" id="18511" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="750" cycles="1" treatement_time="18511" standard="null"/>
+    <medication url="" med_id="39144" id="18512" name="ANTAK AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18512" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2 ml + 18 ml AD&quot;,&quot;id&quot;:8685,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2047}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33745" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Grupo B] Sinais de Gravidade" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.17 //@sequence.24 //@sequence.34">
+    <questions text="Avaliar sinais do paciente:" url="" id="15873">
+      <answers xsi:type="pathwayMetamodel:Choice" name="grupoB_sinais_gravidade" id="32426" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos, ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa." weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33746" type="Receita" type_verbose="Receita" url="" name="[Grupo A] Receita Simples" description="" isTerminal="true" inputSequences="//@sequence.4 //@sequence.6 //@sequence.16 //@sequence.19">
+    <item id="11990" url="" name="Butilbrometo de Escopolamina + Dipirona ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se dor abdominal"/>
+    <item id="11991" url="" name="Bromoprida 10mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="se n&#xe1;usea ou v&#xf4;mitos"/>
+    <item id="12061" url="" name="Enterogermina ......... 1CX" med_code="-1" presentation="FLC" access="1" quantity="1" period="4" period_unit="DD" frequency="6" frequency_unit="DD" orientations=""/>
+    <item id="11992" url="" name="Floratil 200mg ...... 1cx" med_code="-1" presentation="CAPS" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="11993" url="" name="Solu&#xe7;&#xe3;o de Reidrata&#xe7;&#xe3;o Oral ...... 10pct" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Diluir 1 pacote em 1L de &#xe1;gua e tomar pelo menos 02 L dessa mistura por dia. N&#xe3;o abandonar a ingest&#xe3;o de outros l&#xed;quidos (suco, &#xe1;gua...)."/>
+    <item id="11994" url="" name="Racecadotrila 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="11995" url="" name="Ondansetrona 4Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas ou v&#xf4;mito"/>
+    <item id="11996" url="" name="Dramin B6 50 + 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se n&#xe1;useas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33747" type="Receita" type_verbose="Receita" url="" name="[Grupo A] Infec&#xe7;&#xe3;o bacteriana" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Diarreia sanguinolenta, sem febre e sem toxemia, aponta para &lt;strong>E. coli &amp;ecirc;ntero-hemorr&amp;aacute;gica&lt;/strong>. N&amp;atilde;o prescrever antibi&amp;oacute;tico nessa situa&amp;ccedil;&amp;atilde;o.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>A &lt;strong>colite pseudomembranosa&lt;/strong> deve ser aventada nos pacientes com uso recente de antibi&amp;oacute;ticos (at&amp;eacute; 04&amp;nbsp;semanas). Suspender antibi&amp;oacute;tico se ainda estiver usando e associar Metronidazol ao tratamento.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Pacientes com suspeita de ingesta de &amp;aacute;gua ou alimentos contaminados com forma desint&amp;eacute;rica (in&amp;iacute;cio abrupto de febre, dor abdominal, diarreia sangu&amp;iacute;nolenta), deve se aventar a possibilidade de infec&amp;ccedil;&amp;atilde;o por &lt;strong>entamoeba histolytica&lt;/strong>, deve se&amp;nbsp;associar Metronidazol ao tratamento.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.14 //@sequence.20">
+    <item id="11997" url="" name="Buscopam composto" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se dor abdominal"/>
+    <item id="11998" url="" name="Bromoprida 10mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;usea ou v&#xf4;mito"/>
+    <item id="11999" url="" name="Floratil 200mg ...... 1cx" med_code="-1" presentation="CAPS" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="12000" url="" name="Ciprofloxacino 500mg ...... 6cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="12041" url="" name="Solu&#xe7;&#xe3;o de Reidrata&#xe7;&#xe3;o Oral ...... 10pct" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Diluir 1 pacote em 1L de &#xe1;gua e tomar pelo menos 02 L dessa mistura por dia. N&#xe3;o abandonar a ingest&#xe3;o de outros l&#xed;quidos (suco, &#xe1;gua...)."/>
+    <item id="12042" url="" name="Racecadotrila 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="12043" url="" name="Ondansetrona 4Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas ou v&#xf4;mito"/>
+    <item id="12044" url="" name="Metronidazol 400 mg ..... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="12045" url="" name="Cefuroxima 250 mg .... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="12046" url="" name="Dramin B6 50 + 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se n&#xe1;useas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33748" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quick SOFA (Avaliar Sepse)" description="" isInitial="true" outputSequences="//@sequence.9 //@sequence.11">
+    <questions text="Confus&#xe3;o Mental" url="" id="15874">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32427" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt; 100" url="" id="15875">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="32428" weight="1" value="false"/>
+    </questions>
+    <questions text="FR > 22" url="" id="15876">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="32429" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="33749" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar ao Eixo Vermelho" description="Paciente com sinais de sepse. Encaminhar ao eixo vermelho." inputSequences="//@sequence.9" outputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="33750" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo SEPSE" description="Encaminhar paciente ao protocolo de tratamento de SEPSE." isTerminal="true" inputSequences="//@sequence.0 //@sequence.10">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33751" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar paciente" description="&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;background-color:#ecf0f1&quot;>Perfil&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#27ae60&quot;>A&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#f1c40f&quot;>B&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>C&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;background-color:#ecf0f1&quot;>Estado Geral&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#27ae60&quot;>Bem, alerta&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#f1c40f&quot;>Irritado, tranquilo&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Comatoso, hipot&amp;ocirc;nico*&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;background-color:#ecf0f1&quot;>Olhos&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#27ae60&quot;>Normais&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#f1c40f&quot;>Fundos&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Muito fundos e secos&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;background-color:#ecf0f1&quot;>L&amp;aacute;grimas&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#27ae60&quot;>Presentes&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#f1c40f&quot;>Ausentes&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Ausentes&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;background-color:#ecf0f1&quot;>Sede&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#27ae60&quot;>Bebe normal, sem sede&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#f1c40f&quot;>Sedento, bebe r&amp;aacute;pido e avidamente&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Bebe mal ou n&amp;atilde;o &amp;eacute; capaz de beber*&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;background-color:#ecf0f1&quot;>Sinal da prega&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#27ae60&quot;>Desaparcece rapidamente&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#f1c40f&quot;>Desaparece lentamente&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Desaparece muito lentamente (mais de 2 segundos)&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;background-color:#ecf0f1&quot;>Pulso&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#27ae60&quot;>Cheio&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#f1c40f&quot;>R&amp;aacute;pido, fraco&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Muito fraco ou ausente*&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#27ae60&quot;>SEM SINAIS DE DESIDRATA&amp;Ccedil;&amp;Atilde;O&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#f1c40f&quot;>Se apresentar dou ou mais sinais:&lt;/span>&lt;br />&#xA;&#x9;&#x9;&#x9;&lt;span style=&quot;background-color:#f1c40f&quot;>COM DESIDRATA&amp;Ccedil;&amp;Atilde;O&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Se apresentar dois ou mais sinais,&lt;/span>&lt;br />&#xA;&#x9;&#x9;&#x9;&lt;span style=&quot;background-color:#e74c3c&quot;>incluindo pelo menos um dos destacados com asterisco (*):&lt;/span>&lt;br />&#xA;&#x9;&#x9;&#x9;&lt;span style=&quot;background-color:#e74c3c&quot;>DESIDRATA&amp;Ccedil;&amp;Atilde;O GRAVE&lt;/span>&lt;/span>&lt;/strong>&lt;/span>&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" inputSequences="//@sequence.1" outputSequences="//@sequence.7 //@sequence.12 //@sequence.30">
+    <questions text="Escolher o grupo que o paciente se enquadra:" url="" id="15877">
+      <answers xsi:type="pathwayMetamodel:Choice" name="grupo_paciente" id="32430" weight="1" value="0.0">
+        <option description="Grupo A" weight="1"/>
+        <option description="Grupo B" weight="2"/>
+        <option description="Grupo C" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33752" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Grupo A] Sinais de Gravidade" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.2 //@sequence.13 //@sequence.15 //@sequence.29">
+    <questions text="Avaliar paciente:" url="" id="15878">
+      <answers xsi:type="pathwayMetamodel:Choice" name="grupoA_sinais_gravidade" id="32431" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa, uso de antibi&#xf3;tico recente (principalmente clindamicina e cefalosporinas)" weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="33753" type="Tratamento" type_verbose="Tratamento" url="" name="[Grupo A com sinais de gravidade] Exames" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Prescrever medica&amp;ccedil;&amp;atilde;o somente se paciente estiver sintom&amp;aacute;tico.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.2" outputSequences="//@sequence.3">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Grupo A com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Grupo A com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Grupo A com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Grupo A com sinais de gravidade" clinical_indication="n/a"/>
+    <medication url="" med_id="36064" id="18513" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="18513" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8686,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="36161" id="18514" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="ML" access="6" daily_dosage="1" cycles="1" treatement_time="18514" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8687,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="49581" id="18515" name="PLASIL AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18515" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8688,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="41564" id="18516" name="PLAMET 10MG AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18516" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8689,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="18517" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="18517" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:8690,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="38008" id="18518" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="18518" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:8,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8691,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:6,&quot;codigo_principio_ativo&quot;:909}"/>
+    <medication url="" med_id="108545" id="18519" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="750" cycles="1" treatement_time="18519" standard="null"/>
+    <medication url="" med_id="39144" id="18520" name="ANTAK AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18520" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2 ml + 18 ml AD&quot;,&quot;id&quot;:8692,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2047}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33754" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Grupo A] Avaliar infec&#xe7;&#xe3;o bacteriana" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.14">
+    <questions text="Exames sugerem infec&#xe7;&#xe3;o bacteriana?" url="" id="15879">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grupoA_infeccao_bacteriana" id="32432" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33755" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Grupo A] Verificar se paciente est&#xe1; sintom&#xe1;tico" description="-" inputSequences="//@sequence.15" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Paciente sintom&#xe1;tico apresentando c&#xf3;licas e/ou v&#xf4;mitos?" url="" id="15880">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grupoA_sintomatico" id="32433" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="33756" type="Tratamento" type_verbose="Tratamento" url="" name="[Grupo B com sinais de gravidade] Exames" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Prescrever medica&amp;ccedil;&amp;atilde;o somente se paciente estiver sintom&amp;aacute;tico.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Recomendar o paciente a ingesta de um copo de 250 ml de &amp;aacute;gua de 15 em 15 min ainda na unidade.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.17" outputSequences="//@sequence.18">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Grupo A com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Grupo A com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Grupo A com sinais de gravidade" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Grupo A com sinais de gravidade" clinical_indication="n/a"/>
+    <medication url="" med_id="36064" id="18521" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="18521" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8693,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="36161" id="18522" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="ML" access="6" daily_dosage="1" cycles="1" treatement_time="18522" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8694,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="49581" id="18523" name="PLASIL AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18523" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8695,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="41564" id="18524" name="PLAMET 10MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="10" cycles="1" treatement_time="18524" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8696,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="18525" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="18525" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:8697,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="38008" id="18526" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="18526" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:8,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8698,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:6,&quot;codigo_principio_ativo&quot;:909}"/>
+    <medication url="" med_id="108545" id="18527" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="750" cycles="1" treatement_time="18527" standard="null"/>
+    <medication url="" med_id="43800" id="18528" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="18528" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="33757" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Necess&amp;aacute;rio discutir caso com l&amp;iacute;der local para que se acompanhe o paciente em observa&amp;ccedil;&amp;atilde;o por mais tempo e que se avalie a necessidade de interna&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.22"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33758" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Grupo B] Reavaliar paciente" description="" inputSequences="//@sequence.18 //@sequence.23" outputSequences="//@sequence.19 //@sequence.20 //@sequence.21 //@sequence.22">
+    <questions text="Paciente SEM sinais de infec&#xe7;&#xe3;o e COM melhora ap&#xf3;s hidrata&#xe7;&#xe3;o?" url="" id="15921">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="semsinais_semdesidratacao" id="32434" weight="1" value="true"/>
+    </questions>
+    <questions text="Paciente COM sinais de infec&#xe7;&#xe3;o, mas SEM sinais de gravidade ou desidrata&#xe7;&#xe3;o?" url="" id="15922">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comsinais_semdesidratacao" id="32435" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente SEM sinais de infec&#xe7;&#xe3;o e SEM melhora ap&#xf3;s hidrata&#xe7;&#xe3;o?" url="" id="15923">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="semsinais_comdesidratacao" id="32436" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente COM sinais de infec&#xe7;&#xe3;o, mas COM sinais de gravidade ou desidrata&#xe7;&#xe3;o?" url="" id="15924">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comsinais_comdesidratacao" id="32437" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="33759" type="Tratamento" type_verbose="Tratamento" url="" name="[Grupo B sem melhora] conduta" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Recomendar o paciente a ingesta de um copo de 250 ml de &amp;aacute;gua de 15 em 15 min ainda na unidade.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.21" outputSequences="//@sequence.23">
+    <medication url="" med_id="43800" id="18529" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="18529" standard="null"/>
+    <medication url="" med_id="41564" id="18530" name="PLAMET 10MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="10" cycles="1" treatement_time="18530" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8699,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="49581" id="18531" name="PLASIL AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18531" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8700,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="33760" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Grupo B com diarreia cr&#xf4;nica] Discutir com l&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Paciente com persist&amp;ecirc;ncia da desidrata&amp;ccedil;&amp;atilde;o, deve ser acompanhado pelo l&amp;iacute;der local.&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.27"/>
+  <element xsi:type="pathwayMetamodel:Information" id="33841" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Grupo B com diarreia cr&#xf4;nica e altera&#xe7;&#xf5;es nos exames] Discutir com l&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Paciente com diarreia cr&amp;ocirc;nica mais altera&amp;ccedil;&amp;otilde;es laboratoriais&amp;nbsp;deve ser avaliado&amp;nbsp;pelo l&amp;iacute;der local para tomada de decis&amp;atilde;o.&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.33"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33842" type="Receita" type_verbose="Receita" url="" name="[Grupo A com Diarreia Cronica] Conduta" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Aventar possibilidade causas n&amp;atilde;o infecciosas para o quadro diarreico (doen&amp;ccedil;a inflamat&amp;oacute;ria intestinal, doen&amp;ccedil;a cel&amp;iacute;aca, intoler&amp;acirc;ncia alimentar, s&amp;iacute;ndrome do intestino irrit&amp;aacute;vel, dentre outras possibilidades).&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Encaminhar o paciente para GASTROENTEROLOGISTA ELETIVAMENTE.&lt;/strong>&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Orientar sobre poss&amp;iacute;veis complica&amp;ccedil;&amp;otilde;es e necessidade de retorno.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.29">
+    <item id="12047" url="" name="Butilbrometo de Escopolamina + Dipirona ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se dor abdominal"/>
+    <item id="12048" url="" name="Bromoprida 10mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="se n&#xe1;usea ou v&#xf4;mitos"/>
+    <item id="12049" url="" name="Floratil 200mg ...... 1cx" med_code="-1" presentation="CAPS" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="12050" url="" name="Solu&#xe7;&#xe3;o de Reidrata&#xe7;&#xe3;o Oral ...... 10pct" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Diluir 1 pacote em 1L de &#xe1;gua e tomar pelo menos 02 L dessa mistura por dia. N&#xe3;o abandonar a ingest&#xe3;o de outros l&#xed;quidos (suco, &#xe1;gua...)."/>
+    <item id="12051" url="" name="Racecadotrila 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="12052" url="" name="Ondansetrona 4Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas ou v&#xf4;mito"/>
+    <item id="12053" url="" name="Albendazol 400 mg ........ 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="33843" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Grupo C] Discutir com l&#xed;der" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:20px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Paciente com importante potencial de gravidade deve ser encaminhado imediatamente ao l&amp;iacute;der para condu&amp;ccedil;&amp;atilde;o adequada.&amp;nbsp;&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.30"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="33844" type="Tratamento" type_verbose="Tratamento" url="" name="[Grupo B com Diarreia cr&#xf4;nica] Conduta" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Paciente com quadro arrastado de diarreia, sem sinais de infec&amp;ccedil;&amp;atilde;o, por aproximadamente 10 dias ou mais.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Devem ser solicitados exames laboratoriais e buscar melhora com sintom&amp;aacute;ticos e hidrata&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Recomendar o paciente a ingesta de um copo de 250 ml de &amp;aacute;gua de 15 em 15 min ainda na unidade.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.24" outputSequences="//@sequence.31">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com diarreia cronica" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com diarreia cronica" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Paciente com diarreia cronica" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="diarreia cronica" clinical_indication="diarreia cronica"/>
+    <medication url="" med_id="43800" id="18532" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="18532" standard="null"/>
+    <medication url="" med_id="36064" id="18533" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="18533" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8701,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="108545" id="18534" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="750" cycles="1" treatement_time="18534" standard="null"/>
+    <medication url="" med_id="41564" id="18535" name="PLAMET 10MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="10" cycles="1" treatement_time="18535" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8702,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33845" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Grupo B com Diarreia Cronica] Avaliar exames e melhora" description="" inputSequences="//@sequence.31" outputSequences="//@sequence.25 //@sequence.26 //@sequence.33">
+    <questions text="Paciente SEM altera&#xe7;&#xf5;es de exames laboratoriais e COM melhora ap&#xf3;s hidrata&#xe7;&#xe3;o?" url="" id="15925">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="semalteracoes_commelhora" id="32438" weight="1" value="true"/>
+    </questions>
+    <questions text="Paciente SEM altera&#xe7;&#xf5;es de exames laboratoriais e SEM melhora ap&#xf3;s hidrata&#xe7;&#xe3;o?" url="" id="15926">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="semalteracoes_semmelhora" id="32439" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente COM altera&#xe7;&#xf5;es de exames laboratoriais?" url="" id="15927">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comalteracoes" id="32440" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33846" type="Receita" type_verbose="Receita" url="" name="[Grupo B com Diarreia Cronica] Com melhora" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Aventar possibilidade causas n&amp;atilde;o infecciosas para o quadro diarreico (doen&amp;ccedil;a inflamat&amp;oacute;ria intestinal, doen&amp;ccedil;a cel&amp;iacute;aca, intoler&amp;acirc;ncia alimentar, s&amp;iacute;ndrome do intestino irrit&amp;aacute;vel, dentre outras possibilidades).&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Encaminhar o paciente para GASTROENTEROLOGISTA ELETIVAMENTE.&lt;/strong>&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Orientar sobre poss&amp;iacute;veis complica&amp;ccedil;&amp;otilde;es e necessidade de retorno.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.25 //@sequence.28">
+    <item id="12054" url="" name="Butilbrometo de Escopolamina + Dipirona ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se dor abdominal"/>
+    <item id="12055" url="" name="Bromoprida 10mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="se n&#xe1;usea ou v&#xf4;mitos"/>
+    <item id="12056" url="" name="Floratil 200mg ...... 1cx" med_code="-1" presentation="CAPS" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="12057" url="" name="Solu&#xe7;&#xe3;o de Reidrata&#xe7;&#xe3;o Oral ...... 10pct" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Diluir 1 pacote em 1L de &#xe1;gua e tomar pelo menos 02 L dessa mistura por dia. N&#xe3;o abandonar a ingest&#xe3;o de outros l&#xed;quidos (suco, &#xe1;gua...)."/>
+    <item id="12058" url="" name="Racecadotrila 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="12059" url="" name="Ondansetrona 4Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas ou v&#xf4;mito"/>
+    <item id="12060" url="" name="Albendazol 400 mg ........ 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="33847" type="Tratamento" type_verbose="Tratamento" url="" name="[Grupo B com diarreia cronica sem melhora] conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Recomendar o paciente a ingesta de um copo de 250 ml de &amp;aacute;gua de 15 em 15 min ainda na unidade.&lt;/span>&lt;/p>" inputSequences="//@sequence.26 //@sequence.34" outputSequences="//@sequence.32">
+    <medication url="" med_id="43800" id="18536" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="18536" standard="null"/>
+    <medication url="" med_id="41564" id="18537" name="PLAMET 10MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="10" cycles="1" treatement_time="18537" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8703,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="49581" id="18538" name="PLASIL AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18538" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8704,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33848" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Grupo B com Diarreia Cronica] Avaliar hidrata&#xe7;&#xe3;o" description="" inputSequences="//@sequence.32" outputSequences="//@sequence.27 //@sequence.28">
+    <questions text="Paciente melhorou ap&#xf3;s hidrata&#xe7;&#xe3;o?" url="" id="15928">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="2hidra_melhora" id="32521" weight="1" value="true"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.8" outputStep="//@element.0" id="33849" type="Sequencia" type_verbose="Sequencia" url="" name="S54 (SIRS >= 2)" description="SIRS >= 2">
+    <operation name="SIRS >= 2" Operator="greaterOrEqual" id="32541">
+      <operand xsi:type="pathwayMetamodel:Choice" name="criterios_SIRS" id="32425" weight="1" value="0.0">
+        <option description="Leuc&#xf3;citos > 12.000/mm&#xb3; ou Leuc&#xf3;citos &lt; 4.000/mm&#xb3; ou Bast&#xf5;es > 10%" weight="1"/>
+        <option description="T > 38,3 &#xba;C ou T &lt; 36&#xba;C" weight="1"/>
+        <option description="FC > 90 bpm" weight="1"/>
+        <option description="FR > 20 irpm" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32522" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.0" id="33850" type="Sequencia" type_verbose="Sequencia" url="" name="S55 (SIRS &lt; 2)" description="SIRS &lt; 2">
+    <operation name="SIRS &lt; 2" Operator="lessThan" id="32542">
+      <operand xsi:type="pathwayMetamodel:Choice" name="criterios_SIRS" id="32425" weight="1" value="0.0">
+        <option description="Leuc&#xf3;citos > 12.000/mm&#xb3; ou Leuc&#xf3;citos &lt; 4.000/mm&#xb3; ou Bast&#xf5;es > 10%" weight="1"/>
+        <option description="T > 38,3 &#xba;C ou T &lt; 36&#xba;C" weight="1"/>
+        <option description="FC > 90 bpm" weight="1"/>
+        <option description="FR > 20 irpm" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32522" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="33851" type="Sequencia" type_verbose="Sequencia" url="" name="S58 (com complica&#xe7;&#xf5;es)" description="com complica&#xe7;&#xf5;es">
+    <operation name="com complica&#xe7;&#xf5;es" Operator="equal" id="32543">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupoA_sinais_gravidade" id="32431" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa, uso de antibi&#xf3;tico recente (principalmente clindamicina e cefalosporinas)" weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32522" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="33852" type="Sequencia" type_verbose="Sequencia" url="" name="S59" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.12" id="33853" type="Sequencia" type_verbose="Sequencia" url="" name="S61 (sem infec&#xe7;&#xe3;o bacteriana)" description="sem infec&#xe7;&#xe3;o bacteriana">
+    <operation name="sem infec&#xe7;&#xe3;o bacteriana" id="32544">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grupoA_infeccao_bacteriana" id="32432" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.13" id="33854" type="Sequencia" type_verbose="Sequencia" url="" name="S63 (Grupo A - Sintom&#xe1;tico)" description="Grupo A - Sintom&#xe1;tico">
+    <operation name="Grupo A - Sintom&#xe1;tico" Operator="affirmation" id="32545">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grupoA_sintomatico" id="32433" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.13" id="33855" type="Sequencia" type_verbose="Sequencia" url="" name="S64 (Grupo A - N&#xe3;o sintom&#xe1;tico)" description="Grupo A - N&#xe3;o sintom&#xe1;tico">
+    <operation name="Grupo A - N&#xe3;o sintom&#xe1;tico" id="32546">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grupoA_sintomatico" id="32433" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.9" id="33856" type="Sequencia" type_verbose="Sequencia" url="" name="S66 (Grupo B)" description="Grupo B">
+    <operation name="Grupo B" Operator="equal" id="32547">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupo_paciente" id="32430" weight="1" value="0.0">
+        <option description="Grupo A" weight="1"/>
+        <option description="Grupo B" weight="2"/>
+        <option description="Grupo C" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32522" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.3" id="33857" type="Sequencia" type_verbose="Sequencia" url="" name="S67 (Com irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa)" description="Com irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa">
+    <operation name="Com irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" Operator="equal" id="32548">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupoB_sinais_gravidade" id="32426" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos, ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa." weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="32525" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="33858" type="Sequencia" type_verbose="Sequencia" url="" name="S46 (Quick SOFA >= 1)" description="Quick SOFA >= 2">
+    <operation name="Quick SOFA >= 1" Operator="greaterOrEqual" id="32549">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="32540">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32427" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="32428" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="32429" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32523" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="33859" type="Sequencia" type_verbose="Sequencia" url="" name="S47" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.6" id="33860" type="Sequencia" type_verbose="Sequencia" url="" name="S48 (Quick SOFA &lt; 2)" description="Quick SOFA &lt; 1">
+    <operation name="Quick SOFA &lt; 1" Operator="lessThan" id="32550">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="32540">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32427" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="32428" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="32429" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32523" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="33861" type="Sequencia" type_verbose="Sequencia" url="" name="S56 (Grupo A)" description="Grupo A">
+    <operation name="Grupo A" Operator="equal" id="32551">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupo_paciente" id="32430" weight="1" value="0.0">
+        <option description="Grupo A" weight="1"/>
+        <option description="Grupo B" weight="2"/>
+        <option description="Grupo C" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32523" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.10" id="33862" type="Sequencia" type_verbose="Sequencia" url="" name="S57 (com irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa)" description="com irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa">
+    <operation name="com irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" Operator="equal" id="32552">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupoA_sinais_gravidade" id="32431" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa, uso de antibi&#xf3;tico recente (principalmente clindamicina e cefalosporinas)" weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="32525" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.12" id="33863" type="Sequencia" type_verbose="Sequencia" url="" name="S60 (com infec&#xe7;&#xe3;o bacteriana)" description="com infec&#xe7;&#xe3;o bacteriana">
+    <operation name="com infec&#xe7;&#xe3;o bacteriana" Operator="affirmation" id="32553">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grupoA_infeccao_bacteriana" id="32432" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.10" id="33864" type="Sequencia" type_verbose="Sequencia" url="" name="S62 (grupo A sem complica&#xe7;&#xf5;es)" description="grupo A sem complica&#xe7;&#xf5;es">
+    <operation name="grupo A sem complica&#xe7;&#xf5;es" Operator="equal" id="32554">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupoA_sinais_gravidade" id="32431" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa, uso de antibi&#xf3;tico recente (principalmente clindamicina e cefalosporinas)" weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32523" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="33865" type="Sequencia" type_verbose="Sequencia" url="" name="S65" description="-"/>
+  <sequence inputStep="//@element.14" outputStep="//@element.3" id="33866" type="Sequencia" type_verbose="Sequencia" url="" name="S68 (Grupo B com complica&#xe7;&#xf5;es)" description="Grupo B com complica&#xe7;&#xf5;es">
+    <operation name="Grupo B com complica&#xe7;&#xf5;es" Operator="equal" id="32555">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupoB_sinais_gravidade" id="32426" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos, ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa." weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32522" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="33867" type="Sequencia" type_verbose="Sequencia" url="" name="S69" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.16" id="33868" type="Sequencia" type_verbose="Sequencia" url="" name="S70 (sem sinais e com melhora)" description="sem sinais e com melhora">
+    <operation name="sem sinais e com melhora" Operator="affirmation" id="32556">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="semsinais_semdesidratacao" id="32434" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.16" id="33869" type="Sequencia" type_verbose="Sequencia" url="" name="S71 (com sinais e sem gravidade)" description="com sinais e sem gravidade">
+    <operation name="com sinais e sem gravidade" Operator="affirmation" id="32557">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="comsinais_semdesidratacao" id="32435" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.16" id="33870" type="Sequencia" type_verbose="Sequencia" url="" name="S72 (sem sinais e sem melhora)" description="sem sinais e sem melhora">
+    <operation name="sem sinais e sem melhora" Operator="affirmation" id="32558">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="semsinais_comdesidratacao" id="32436" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.16" id="33871" type="Sequencia" type_verbose="Sequencia" url="" name="S73 (com sinais e com gravidade)" description="com sinais e com gravidade">
+    <operation name="com sinais e com gravidade" Operator="affirmation" id="32559">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="comsinais_comdesidratacao" id="32437" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.17" id="33872" type="Sequencia" type_verbose="Sequencia" url="" name="S74" description="-"/>
+  <sequence inputStep="//@element.22" outputStep="//@element.3" id="33873" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (Grupo B com diarreia cronica)" description="Grupo B com diarreia cronica">
+    <operation name="Grupo B com diarreia cronica" Operator="equal" id="32560">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupoB_sinais_gravidade" id="32426" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos, ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa." weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="32524" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.23" id="33874" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (sem altera&#xe7;&#xf5;es com melhora)" description="sem altera&#xe7;&#xf5;es com melhora">
+    <operation name="sem altera&#xe7;&#xf5;es com melhora" Operator="affirmation" id="32561">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="semalteracoes_commelhora" id="32438" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.23" id="33875" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (sem altera&#xe7;&#xf5;es sem melhora)" description="sem altera&#xe7;&#xf5;es sem melhora">
+    <operation name="sem altera&#xe7;&#xf5;es sem melhora" Operator="affirmation" id="32562">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="semalteracoes_semmelhora" id="32439" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.26" id="33876" type="Sequencia" type_verbose="Sequencia" url="" name="S32 (sem melhora)" description="sem melhora">
+    <operation name="sem melhora" id="32563">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="2hidra_melhora" id="32521" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.26" id="33877" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (com melhora)" description="com melhora">
+    <operation name="com melhora" Operator="affirmation" id="32564">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="2hidra_melhora" id="32521" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.10" id="33878" type="Sequencia" type_verbose="Sequencia" url="" name="S35 (Grupo A com diarreia cr&#xf4;nica)" description="Grupo A com diarreia cronica">
+    <operation name="Grupo A com diarreia cronica" Operator="equal" id="32565">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupoA_sinais_gravidade" id="32431" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa, uso de antibi&#xf3;tico recente (principalmente clindamicina e cefalosporinas)" weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="32524" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.9" id="33879" type="Sequencia" type_verbose="Sequencia" url="" name="S75 (Grupo C)" description="Grupo C">
+    <operation name="Grupo C" Operator="equal" id="32566">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupo_paciente" id="32430" weight="1" value="0.0">
+        <option description="Grupo A" weight="1"/>
+        <option description="Grupo B" weight="2"/>
+        <option description="Grupo C" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="32524" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.22" id="33880" type="Sequencia" type_verbose="Sequencia" url="" name="S28" description="-"/>
+  <sequence inputStep="//@element.26" outputStep="//@element.25" id="33881" type="Sequencia" type_verbose="Sequencia" url="" name="S31" description="-"/>
+  <sequence inputStep="//@element.19" outputStep="//@element.23" id="33882" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (com altera&#xe7;&#xf5;es)" description="com altera&#xe7;&#xf5;es">
+    <operation name="com altera&#xe7;&#xf5;es" Operator="affirmation" id="32567">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="comalteracoes" id="32440" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.3" id="33883" type="Sequencia" type_verbose="Sequencia" url="" name="S36 (Grupo B sem complica&#xe7;&#xf5;es)" description="Grupo B sem complica&#xe7;&#xf5;es">
+    <operation name="Grupo B sem complica&#xe7;&#xf5;es" Operator="equal" id="32568">
+      <operand xsi:type="pathwayMetamodel:Choice" name="grupoB_sinais_gravidade" id="32426" weight="1" value="0.0">
+        <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+        <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos, ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa." weight="2"/>
+        <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+        <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32523" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <operation name="Sinais B >= 2" Operator="greaterOrEqual" id="32526">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32522" weight="1" value="2.0"/>
+  </operation>
+  <operation name="Sinais C &lt; 2" Operator="lessThan" id="32527">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32522" weight="1" value="2.0"/>
+  </operation>
+  <operation name="Crit&#xe9;rios Hipovolemia" Operator="addition" id="32528"/>
+  <operation name="Fatores de Severidade" Operator="addition" id="32529"/>
+  <operation name="Not Sintomas Final I a" id="32530"/>
+  <operation name="Not Sintomas Final II a" id="32531"/>
+  <operation name="Not Sintomas Final I b" id="32532"/>
+  <operation name="Not Sintomas Final II b" id="32533"/>
+  <operation name="not_pre_avaliacao_b_irritacao_peritoneal" id="32534"/>
+  <operation name="not_pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="32535"/>
+  <operation name="not_pre_avaliacao_b_idoso_ou_comorbidades" id="32536"/>
+  <operation name="not_pre_avaliacao_a_irritacao_peritoneal" id="32537"/>
+  <operation name="not_pre_avaliacao_a_constipacao_ou_fecaloma" id="32538"/>
+  <operation name="not_pre_avaliacao_a_idoso_ou_comorbidades" id="32539"/>
+  <operation name="Quick SOFA" Operator="addition" id="32540">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32427" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="32428" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="32429" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="criterios_SIRS" id="32425" weight="1" value="0.0">
+    <option description="Leuc&#xf3;citos > 12.000/mm&#xb3; ou Leuc&#xf3;citos &lt; 4.000/mm&#xb3; ou Bast&#xf5;es > 10%" weight="1"/>
+    <option description="T > 38,3 &#xba;C ou T &lt; 36&#xba;C" weight="1"/>
+    <option description="FC > 90 bpm" weight="1"/>
+    <option description="FR > 20 irpm" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="grupoB_sinais_gravidade" id="32426" weight="1" value="0.0">
+    <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+    <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos, ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa." weight="2"/>
+    <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+    <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32427" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="32428" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="32429" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="grupo_paciente" id="32430" weight="1" value="0.0">
+    <option description="Grupo A" weight="1"/>
+    <option description="Grupo B" weight="2"/>
+    <option description="Grupo C" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="grupoA_sinais_gravidade" id="32431" weight="1" value="0.0">
+    <option description="Paciente SEM sinais de gravidade ou comorbidades importantes" weight="1"/>
+    <option description="Paciente maior de 70 anos, cardiopatas, imunocomprometidos ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa, uso de antibi&#xf3;tico recente (principalmente clindamicina e cefalosporinas)" weight="2"/>
+    <option description="Paciente com suspeita de diarreia cr&#xf4;nica" weight="3"/>
+    <option description="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grupoA_infeccao_bacteriana" id="32432" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grupoA_sintomatico" id="32433" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="semsinais_semdesidratacao" id="32434" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comsinais_semdesidratacao" id="32435" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="semsinais_comdesidratacao" id="32436" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comsinais_comdesidratacao" id="32437" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="semalteracoes_commelhora" id="32438" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="semalteracoes_semmelhora" id="32439" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comalteracoes" id="32440" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="2hidra_melhora" id="32521" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="32522" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="32523" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="32524" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="32525" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

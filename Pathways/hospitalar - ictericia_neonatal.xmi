@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Icter&#xed;cia Neonatal" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="21002" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar tempo de vida" description="" isInitial="true" outputSequences="//@sequence.1 //@sequence.12">
+    <questions text="Tempo de vida do paciente:" url="" id="10560">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tempo_vida" id="20525" weight="1" value="0.0">
+        <option description="> 14 dias de vida" weight="1"/>
+        <option description="&lt; 14 dias de vida" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="21003" type="Tratamento" type_verbose="Tratamento" url="" name="[&lt;14 dias de vida] Conduta" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Comunicar a chefia local.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Solicitar Bilirrubina Total e Fra&amp;ccedil;&amp;otilde;es.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Realizar Fototerapia com prote&amp;ccedil;&amp;atilde;o ocular enquanto aguarda resultado (biliber&amp;ccedil;o e/ou bilitron).&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Realizar controle de sinais vitais de 3/3h.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Leite materno livre demanda.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Paciente com icter&#xed;cia neonatal e menor de 14 dias de vida" clinical_indication="n/a"/>
+    <procedure url="FOTOTERAPIA (BILIBERCO COM P. OCULAR)" procedure="75060008" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="3" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="21004" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar resultado" description="&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;10&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>INDICA&amp;Ccedil;&amp;Atilde;O DE FOTOTERAPIA/EXSANGU&amp;Iacute;NEOTRANSFUS&amp;Atilde;O&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;5&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>RN &amp;lt; 35 SEM&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;5&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>RN &amp;gt; 35 SEM&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;5&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>BILIRRUBINA TOTAL (mg/dL)&lt;br />&#xA;&#x9;&#x9;&#x9;N&amp;Iacute;VEL DE FOTOTERAPIA&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;3&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>IDADE&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;4&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>BILIRRUBINA TOTAL (mg/dL)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>PESO DE&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; NASCIMENTO&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>24 - 48H&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; DE VIDA&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>48 - 72H&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; DE VIDA&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>72 - 96H&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; DE VIDA&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>&amp;gt; 96H&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; DE VIDA&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>FOTOTERAPIA&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>EXSANGUINEO&lt;br />&#xA;&#x9;&#x9;&#x9;TRANSFUSAO&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 35 - 37 SEM&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; &amp;nbsp;&amp;gt; 38 SEM&amp;nbsp; &amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 35 - 37 SEM&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; &amp;nbsp;&amp;gt; 38 SEM&amp;nbsp; &amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>&amp;lt; 1500g&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>6&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>6&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>6&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>6&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>24h&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>8&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>15&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>18&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>36h&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>9,5&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>11,5&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>16&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>20&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>1501 - 2000g&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>8&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>10&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>10&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>10&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>48h&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>11&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>13&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>17&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>21&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>72h&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>13&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>15&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>18&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>22&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>2001-2500g&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>12&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>14&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>14&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>14&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>96h&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>14&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>16&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>20&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>23&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 5 a 7 dias&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>15&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>17&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>21&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>24&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4 //@sequence.11">
+    <questions text="Avaliar resultado conforme tabela:" url="" id="10561">
+      <answers xsi:type="pathwayMetamodel:Choice" name="fototerapia" id="20526" weight="1" value="0.0">
+        <option description="Icter&#xed;cia sem n&#xed;vel de foto" weight="1"/>
+        <option description="Em n&#xed;vel de foto" weight="2"/>
+        <option description="Em n&#xed;vel de exsangu&#xed;neotransfus&#xe3;o" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="21005" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Alta com orienta&#xe7;&#xf5;es" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Orienta&amp;ccedil;&amp;otilde;es para o paciente:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Realizar banho de sol 2x&amp;nbsp;ao dia&amp;nbsp;(antes das 8:30h e ap&amp;oacute;s &amp;agrave;s 16h). Sem roupa.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Agendar Puericultura em at&amp;eacute; 10 dias.&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.0 //@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="21006" type="Tratamento" type_verbose="Tratamento" url="" name="[Em n&#xed;vel de foto] Conduta" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Manter paciente em Fototerapia.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Repetir Bilirrubina Total e Fra&amp;ccedil;&amp;otilde;es ap&amp;oacute;s 12h.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.4" outputSequences="//@sequence.5">
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Paciente com icter&#xed;cia em n&#xed;vel de foto" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="21007" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar foto" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Paciente mant&#xe9;m n&#xed;vel de foto?" url="" id="10562">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nivel_foto" id="20527" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="21008" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Alta com orienta&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Orienta&amp;ccedil;&amp;otilde;es para o paciente:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Retorno em 24h para ver rebote.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Realizar banho de sol 2x&amp;nbsp;ao dia&amp;nbsp;(antes das 8:30h e ap&amp;oacute;s &amp;agrave;s 16h). Sem roupa.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Agendar Puericultura em at&amp;eacute; 10 dias.&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.6 //@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="21009" type="Tratamento" type_verbose="Tratamento" url="" name="[Mant&#xe9;m n&#xed;vel de foto] Conduta" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Manter paciente em Fototerapia por mais 12h.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Repetir Bilirrubina Total e Fra&amp;ccedil;&amp;otilde;es ap&amp;oacute;s 12h.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.7" outputSequences="//@sequence.10">
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Paciente com icter&#xed;cia em n&#xed;vel de foto" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="21010" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar n&#xed;vel de foto" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Paciente mant&#xe9;m n&#xed;vel de foto?" url="" id="10563">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nivel_foto_2" id="20528" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="21011" type="Tratamento" type_verbose="Tratamento" url="" name="Interna&#xe7;&#xe3;o" description="" isTerminal="true" inputSequences="//@sequence.9">
+    <admission url="ADMISSION" admission="10990011" reason="Paciente com icter&#xed;cia neonatal e n&#xed;vel de foto" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="21012" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Em n&#xed;vel de exsangu&#xed;neotransfus&#xe3;o] Conduta" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Internar paciente em UTI Neonatal.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="21013" type="Tratamento" type_verbose="Tratamento" url="" name="[>14 dias de vida] Conduta" description="&lt;p>- SEM NECESSIDADE DE AGUARDA EM FOTOTERAPIA&lt;/p>&#xA;&#xA;&lt;p>- SOLICITAR OS SEGUINTES EXAMES:&lt;/p>" inputSequences="//@sequence.12" outputSequences="//@sequence.13">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com icter&#xed;cia neonatal com mais de 14 dias de vida" clinical_indication="n/a"/>
+    <examination url="GRUPO SANGUINEO (ABO E Rh)" exam_id="27040151" limb_side="" quantity="1" reason="Paciente com icter&#xed;cia neonatal com mais de 14 dias de vida" clinical_indication="n/a"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Paciente com icter&#xed;cia neonatal com mais de 14 dias de vida" clinical_indication="n/a"/>
+    <examination url="CONTAGEM DE RETICULOCITOS" exam_id="28040660" limb_side="" quantity="1" reason="Paciente com icter&#xed;cia neonatal com mais de 14 dias de vida" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="21014" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar exames" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Avaliar eleva&amp;ccedil;&amp;atilde;o da Bilirrubina conforme a seguir:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>BD &amp;gt; 1 mg/dl SE N&amp;Iacute;VEL DE BT &amp;lt; 5mg/dl; ou&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>BD &amp;gt; 2&amp;nbsp;mg/dl OU 20% DO TOTAL,&amp;nbsp;SE&amp;nbsp;BT &amp;gt;&amp;nbsp;5mg/dl.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.13" outputSequences="//@sequence.0 //@sequence.14 //@sequence.15">
+    <questions text="Avaliar resultado dos exames:" url="" id="10564">
+      <answers xsi:type="pathwayMetamodel:Choice" name="resultado_exames" id="20529" weight="1" value="0.0">
+        <option description="Aumento de Bilirrubinas" weight="1"/>
+        <option description="Eleva&#xe7;&#xe3;o de Reticul&#xf3;citos ou Anemia" weight="2"/>
+        <option description="Exames normais" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="21015" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar hematologista" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Encaminhar paciente ao ambulat&amp;oacute;rio hematologista pedi&amp;aacute;trico.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.14"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="21016" type="Tratamento" type_verbose="Tratamento" url="" name="[Aumento bilirrubinas] Conduta" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Solicitar US de vias biliares.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.15" outputSequences="//@sequence.16">
+    <examination url="US ABDOMEN SUPER-FIGADO-VIAS BILIARES VESIC" exam_id="33010013" limb_side="" quantity="1" reason="Paciente com aumento de bilirrubinas" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="21017" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar ultrassom" description="" inputSequences="//@sequence.16" outputSequences="//@sequence.17 //@sequence.18">
+    <questions text="Avaliar resultado da US:" url="" id="10565">
+      <answers xsi:type="pathwayMetamodel:Choice" name="resultado_ultrassom" id="20530" weight="1" value="0.0">
+        <option description="Normal" weight="1"/>
+        <option description="Alterado" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="21018" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Comunicar l&amp;iacute;der local devido a hip&amp;oacute;tese de Colestase.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Avalia&amp;ccedil;&amp;atilde;o com Cirurgia Pedi&amp;aacute;trica.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.17"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="21019" type="Tratamento" type_verbose="Tratamento" url="" name="Repetir BTF" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Repetir BTF com 48h.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.18">
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Paciente com icter&#xed;cia" clinical_indication="n/a"/>
+  </element>
+  <sequence inputStep="//@element.3" outputStep="//@element.12" id="20996" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (exames normais)" description="exames normais">
+    <operation name="exames normais" Operator="equal" id="20659">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resultado_exames" id="20529" weight="1" value="0.0">
+        <option description="Aumento de Bilirrubinas" weight="1"/>
+        <option description="Eleva&#xe7;&#xe3;o de Reticul&#xf3;citos ou Anemia" weight="2"/>
+        <option description="Exames normais" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="20533" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="21020" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (&lt; 14 dias de vida)" description="&lt; 14 dias de vida">
+    <operation name="&lt; 14 dias de vida" Operator="equal" id="20534">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tempo_vida" id="20525" weight="1" value="0.0">
+        <option description="> 14 dias de vida" weight="1"/>
+        <option description="&lt; 14 dias de vida" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="20532" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="21021" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="-"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="21022" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (sem n&#xed;vel de foto)" description="sem n&#xed;vel de foto">
+    <operation name="sem n&#xed;vel de foto" Operator="equal" id="20535">
+      <operand xsi:type="pathwayMetamodel:Choice" name="fototerapia" id="20526" weight="1" value="0.0">
+        <option description="Icter&#xed;cia sem n&#xed;vel de foto" weight="1"/>
+        <option description="Em n&#xed;vel de foto" weight="2"/>
+        <option description="Em n&#xed;vel de exsangu&#xed;neotransfus&#xe3;o" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20531" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="21023" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (em n&#xed;vel de foto)" description="em n&#xed;vel de foto">
+    <operation name="em n&#xed;vel de foto" Operator="equal" id="20536">
+      <operand xsi:type="pathwayMetamodel:Choice" name="fototerapia" id="20526" weight="1" value="0.0">
+        <option description="Icter&#xed;cia sem n&#xed;vel de foto" weight="1"/>
+        <option description="Em n&#xed;vel de foto" weight="2"/>
+        <option description="Em n&#xed;vel de exsangu&#xed;neotransfus&#xe3;o" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="20532" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="21024" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="21025" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (n&#xe3;o mant&#xe9;m n&#xed;vel de foto)" description="n&#xe3;o mant&#xe9;m n&#xed;vel de foto">
+    <operation name="n&#xe3;o mant&#xe9;m n&#xed;vel de foto" id="20537">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nivel_foto" id="20527" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="21026" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (mant&#xe9;m n&#xed;vel de foto)" description="mant&#xe9;m n&#xed;vel de foto">
+    <operation name="mant&#xe9;m n&#xed;vel de foto" Operator="affirmation" id="20538">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nivel_foto" id="20527" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.8" id="21027" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (N&#xe3;o mant&#xe9;m n&#xed;vel de foto)" description="N&#xe3;o mant&#xe9;m n&#xed;vel de foto">
+    <operation name="N&#xe3;o mant&#xe9;m n&#xed;vel de foto" id="20539">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nivel_foto_2" id="20528" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="21028" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Mant&#xe9;m n&#xed;vel de foto)" description="Mant&#xe9;m n&#xed;vel de foto">
+    <operation name="Mant&#xe9;m n&#xed;vel de foto" Operator="affirmation" id="20540">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nivel_foto_2" id="20528" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="21029" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.2" id="21030" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (em n&#xed;vel de exsangu&#xed;neotransfus&#xe3;o)" description="em n&#xed;vel de exsangu&#xed;neotransfus&#xe3;o">
+    <operation name="em n&#xed;vel de exsangu&#xed;neotransfus&#xe3;o" Operator="equal" id="20541">
+      <operand xsi:type="pathwayMetamodel:Choice" name="fototerapia" id="20526" weight="1" value="0.0">
+        <option description="Icter&#xed;cia sem n&#xed;vel de foto" weight="1"/>
+        <option description="Em n&#xed;vel de foto" weight="2"/>
+        <option description="Em n&#xed;vel de exsangu&#xed;neotransfus&#xe3;o" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="20533" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.0" id="21031" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (> 14 dias de vida)" description="> 14 dias de vida">
+    <operation name="> 14 dias de vida" Operator="equal" id="20542">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tempo_vida" id="20525" weight="1" value="0.0">
+        <option description="> 14 dias de vida" weight="1"/>
+        <option description="&lt; 14 dias de vida" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20531" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="21032" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-"/>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="21033" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (eleva&#xe7;&#xe3;o de reticul&#xf3;citos)" description="eleva&#xe7;&#xe3;o de reticul&#xf3;citos">
+    <operation name="eleva&#xe7;&#xe3;o de reticul&#xf3;citos" Operator="equal" id="20543">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resultado_exames" id="20529" weight="1" value="0.0">
+        <option description="Aumento de Bilirrubinas" weight="1"/>
+        <option description="Eleva&#xe7;&#xe3;o de Reticul&#xf3;citos ou Anemia" weight="2"/>
+        <option description="Exames normais" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="20532" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.12" id="21034" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (aumento de bilirrubinas)" description="aumento de bilirrubinas">
+    <operation name="aumento de bilirrubinas" Operator="equal" id="20544">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resultado_exames" id="20529" weight="1" value="0.0">
+        <option description="Aumento de Bilirrubinas" weight="1"/>
+        <option description="Eleva&#xe7;&#xe3;o de Reticul&#xf3;citos ou Anemia" weight="2"/>
+        <option description="Exames normais" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20531" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="21035" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="-"/>
+  <sequence inputStep="//@element.16" outputStep="//@element.15" id="21036" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (US alterado)" description="US alterado">
+    <operation name="US alterado" Operator="equal" id="20545">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resultado_ultrassom" id="20530" weight="1" value="0.0">
+        <option description="Normal" weight="1"/>
+        <option description="Alterado" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="20532" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.15" id="21037" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (US normal)" description="US normal">
+    <operation name="US normal" Operator="equal" id="20546">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resultado_ultrassom" id="20530" weight="1" value="0.0">
+        <option description="Normal" weight="1"/>
+        <option description="Alterado" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20531" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tempo_vida" id="20525" weight="1" value="0.0">
+    <option description="> 14 dias de vida" weight="1"/>
+    <option description="&lt; 14 dias de vida" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="fototerapia" id="20526" weight="1" value="0.0">
+    <option description="Icter&#xed;cia sem n&#xed;vel de foto" weight="1"/>
+    <option description="Em n&#xed;vel de foto" weight="2"/>
+    <option description="Em n&#xed;vel de exsangu&#xed;neotransfus&#xe3;o" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nivel_foto" id="20527" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nivel_foto_2" id="20528" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="resultado_exames" id="20529" weight="1" value="0.0">
+    <option description="Aumento de Bilirrubinas" weight="1"/>
+    <option description="Eleva&#xe7;&#xe3;o de Reticul&#xf3;citos ou Anemia" weight="2"/>
+    <option description="Exames normais" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="resultado_ultrassom" id="20530" weight="1" value="0.0">
+    <option description="Normal" weight="1"/>
+    <option description="Alterado" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="20531" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="20532" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="20533" weight="1" value="3.0"/>
+</pathwayMetamodel:Pathway>

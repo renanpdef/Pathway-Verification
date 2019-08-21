@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[Sinta-se Bem] Hipercalemia" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7741" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar exame de Pot&#xe1;ssio" description="" isInitial="true" inputSequences="//@sequence.13" outputSequences="//@sequence.0 //@sequence.4 //@sequence.10">
+    <questions text="Resultado exame de Pot&#xe1;ssio S&#xe9;rico" url="" id="3221">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+    </questions>
+    <questions text="Paciente apresenta sintomas?" url="" id="3222">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomas" id="6042" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="7742" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar exames" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1">
+    <examination url="" exam_id="20010010" limb_side="" quantity="1" reason="Paciente com exame de pot&#xe1;ssio alterado" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011210" limb_side="" quantity="1" reason="Paciente com exame de pot&#xe1;ssio alterado" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7743" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar para emerg&#xea;ncia" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Encaminhar paciente para emer&amp;ecirc;ncia para realiza&amp;ccedil;&amp;atilde;o do tratamento e orient&amp;aacute;-lo para retornar em 07 dias.&lt;/span>&lt;/p>" inputSequences="//@sequence.1" outputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="7744" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar exames 2" description="" inputSequences="//@sequence.7 //@sequence.8" outputSequences="//@sequence.9">
+    <examination url="" exam_id="20010010" limb_side="" quantity="1" reason="Paciente com exame de pot&#xe1;ssio alterado" clinical_indication="n/a"/>
+    <examination url="" exam_id="28011210" limb_side="" quantity="1" reason="Paciente com exame de pot&#xe1;ssio alterado" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7745" type="Processo" type_verbose="Processo" url="" name="Retorno com 07 dias" description="" inputSequences="//@sequence.2 //@sequence.9" outputSequences="//@sequence.3">
+    <action id="621" process_id="7745" service="aprazamento" description="Retorno em 7 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="7746" type="Pausa" type_verbose="Pausa" url="" name="Pausa" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7747" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar paciente" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Paciente apresenta sinais de Hipervolemia?" url="" id="3223">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinais_hipervolemia" id="6043" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente &#xe9; portador de Hipertens&#xe3;o Arterial Sist&#xea;mica?" url="" id="3224">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="portados_has" id="6044" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7748" type="Receita" type_verbose="Receita" url="" name="Receita Furosemida" description="&lt;p>Prescrever Furosemida (80 a 160mg)&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>2 a 4 comprimidos por dia.&lt;/li>&#xA;&#x9;&lt;li>1 a 2 vezes ao dia.&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.5" outputSequences="//@sequence.7">
+    <item id="14728" url="" name="FUROSEMIDA" med_code="1962280262" presentation="COMP" access="1" quantity="2" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14729" url="" name="FUROSEMIDA" med_code="1962280262" presentation="COMP" access="1" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14730" url="" name="FUROSEMIDA" med_code="1962280262" presentation="COMP" access="1" quantity="3" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14731" url="" name="FUROSEMIDA" med_code="1962280262" presentation="COMP" access="1" quantity="3" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14732" url="" name="FUROSEMIDA" med_code="1962280262" presentation="COMP" access="1" quantity="4" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14733" url="" name="FUROSEMIDA" med_code="1962280262" presentation="COMP" access="1" quantity="4" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14734" url="" name="SORCAL" med_code="1190087060" presentation="ENV" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Diluir em um copo de &#xe1;gua."/>
+    <item id="14735" url="" name="SORCAL" med_code="1190087060" presentation="ENV" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Diluir em um copo de &#xe1;gua."/>
+    <item id="14736" url="" name="SORCAL" med_code="1190087060" presentation="ENV" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Diluir em um copo de &#xe1;gua."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7749" type="Receita" type_verbose="Receita" url="" name="Receita Livre" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Prescrever medica&amp;ccedil;&amp;atilde;o avulsa, caso necess&amp;aacute;rio.&amp;nbsp;&lt;/span>&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Information" id="7750" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Finalizar protocolo" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Liberar paciente e finalizar protocolo.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7751" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar ECG" description="" inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Exame de Eletrocardiograma alterado?" url="" id="3225">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="eletrocardiograma_alterado" id="6045" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7752" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar para emerg&#xea;ncia." description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Encaminhar paciente para emer&amp;ecirc;ncia para realiza&amp;ccedil;&amp;atilde;o do tratamento.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.12"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="7753" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (pot&#xe1;ssio s&#xe9;rio > 6 ou >5,5 e &lt;= 6 com sintomas)" description="pot&#xe1;ssio s&#xe9;rio > 6 ou >5,5 e &lt;= 6 com sintomas">
+    <operation name="pot&#xe1;ssio s&#xe9;rio > 6 ou >5,5 e &lt;= 6 com sintomas" Operator="or" id="6061">
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame > 6" Operator="greaterThan" id="6048">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="6046" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5 e &lt;= 6 com sintomas" Operator="and" id="6055">
+        <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5 e &lt;= 6" Operator="and" id="6054">
+          <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5" Operator="greaterThan" id="6049">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="5,5" id="6047" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="exame &lt;= 6" Operator="lessOrEqual" id="6050">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="6046" weight="1"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="com sintomas" Operator="affirmation" id="6052">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomas" id="6042" weight="1" value="false"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="7754" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="7755" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="7756" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="7757" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (pot&#xe1;ssio s&#xe9;rico >5,5 e &lt;=6 sem sintomas)" description="pot&#xe1;ssio s&#xe9;rico >5,5 e &lt;=6 sem sintomas">
+    <operation name="pot&#xe1;ssio s&#xe9;rico >5,5 e &lt;=6 sem sintomas" Operator="affirmation" id="6062">
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5 e &lt;= 6 sem sintomas" Operator="and" id="6056">
+        <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5 e &lt;= 6" Operator="and" id="6054">
+          <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5" Operator="greaterThan" id="6049">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="5,5" id="6047" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Operation" name="exame &lt;= 6" Operator="lessOrEqual" id="6050">
+            <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+            <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="6046" weight="1"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sem sintomas" id="6053">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomas" id="6042" weight="1" value="false"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="7758" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Com sinais de Hipervolemia e/ou Portador de HAS)" description="Com sinais de Hipervolemia">
+    <operation name="Com sinais de Hipervolemia e/ou Portador de HAS" Operator="or" id="6063">
+      <operand xsi:type="pathwayMetamodel:Operation" name="com sinais de hipervolemia" Operator="affirmation" id="6059">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_hipervolemia" id="6043" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="portador de has" Operator="affirmation" id="6060">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="portados_has" id="6044" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="7759" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (sem sinais e n&#xe3;o portador de HAS)" description="sem sinais e n&#xe3;o portador de HAS">
+    <operation name="sem sinais e n&#xe3;o portador de HAS" Operator="and" id="6064">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem sinais de hipervolemia" id="6057">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_hipervolemia" id="6043" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="n&#xe3;o portador de HAS" id="6058">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="portados_has" id="6044" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.7" id="7760" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.8" id="7761" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="7762" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="-"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.0" id="7763" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (pot&#xe1;ssio &lt;= 5,5)" description="pot&#xe1;ssio &lt;= 5,5">
+    <operation name="pot&#xe1;ssio &lt;= 5,5" Operator="affirmation" id="6065">
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame &lt;= 5,5" Operator="lessOrEqual" id="6051">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="5,5" id="6047" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.5" id="7764" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="-"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="7765" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (ECG alterado)" description="ECG alterado">
+    <operation name="ECG alterado" Operator="affirmation" id="6066">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="eletrocardiograma_alterado" id="6045" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.10" id="7766" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (ECG normal)" description="ECG normal">
+    <operation name="ECG normal" id="6067">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="eletrocardiograma_alterado" id="6045" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="exame > 6" Operator="greaterThan" id="6048">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="6046" weight="1"/>
+  </operation>
+  <operation name="exame > 5,5" Operator="greaterThan" id="6049">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="5,5" id="6047" weight="1"/>
+  </operation>
+  <operation name="exame &lt;= 6" Operator="lessOrEqual" id="6050">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="6046" weight="1"/>
+  </operation>
+  <operation name="exame &lt;= 5,5" Operator="lessOrEqual" id="6051">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="5,5" id="6047" weight="1"/>
+  </operation>
+  <operation name="com sintomas" Operator="affirmation" id="6052">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomas" id="6042" weight="1" value="false"/>
+  </operation>
+  <operation name="sem sintomas" id="6053">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomas" id="6042" weight="1" value="false"/>
+  </operation>
+  <operation name="exame > 5,5 e &lt;= 6" Operator="and" id="6054">
+    <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5" Operator="greaterThan" id="6049">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="5,5" id="6047" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="exame &lt;= 6" Operator="lessOrEqual" id="6050">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="6046" weight="1"/>
+    </operand>
+  </operation>
+  <operation name="exame > 5,5 e &lt;= 6 com sintomas" Operator="and" id="6055">
+    <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5 e &lt;= 6" Operator="and" id="6054">
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5" Operator="greaterThan" id="6049">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="5,5" id="6047" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame &lt;= 6" Operator="lessOrEqual" id="6050">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="6046" weight="1"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="com sintomas" Operator="affirmation" id="6052">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomas" id="6042" weight="1" value="false"/>
+    </operand>
+  </operation>
+  <operation name="exame > 5,5 e &lt;= 6 sem sintomas" Operator="and" id="6056">
+    <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5 e &lt;= 6" Operator="and" id="6054">
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame > 5,5" Operator="greaterThan" id="6049">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="5,5" id="6047" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="exame &lt;= 6" Operator="lessOrEqual" id="6050">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="6046" weight="1"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sem sintomas" id="6053">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomas" id="6042" weight="1" value="false"/>
+    </operand>
+  </operation>
+  <operation name="sem sinais de hipervolemia" id="6057">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_hipervolemia" id="6043" weight="1" value="false"/>
+  </operation>
+  <operation name="n&#xe3;o portador de HAS" id="6058">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="portados_has" id="6044" weight="1" value="false"/>
+  </operation>
+  <operation name="com sinais de hipervolemia" Operator="affirmation" id="6059">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_hipervolemia" id="6043" weight="1" value="false"/>
+  </operation>
+  <operation name="portador de has" Operator="affirmation" id="6060">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="portados_has" id="6044" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="exame_potassio_serico" id="6041" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomas" id="6042" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinais_hipervolemia" id="6043" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="portados_has" id="6044" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="eletrocardiograma_alterado" id="6045" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="6" id="6046" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5,5" id="6047" weight="1"/>
+</pathwayMetamodel:Pathway>

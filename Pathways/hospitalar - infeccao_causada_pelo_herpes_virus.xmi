@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Infec&#xe7;&#xe3;o causada pelo Herpes V&#xed;rus" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33404" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quick SOFA" description="" isInitial="true" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Paciente apresenta confus&#xe3;o mental" url="" id="15748">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32148" weight="1" value="false"/>
+    </questions>
+    <questions text="FR > 22" url="" id="15749">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_FR_maior_22" id="32149" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt; 100" url="" id="15750">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_PAS_menor_100" id="32150" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="33405" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Sepse] Eixo Vermelho" description="Encaminhar paciente ao Eixo Vermelho" inputSequences="//@sequence.4" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="33406" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo Sepse" description="Encaminhar paciente ao protocolo de tratamento para SEPSE." isTerminal="true" inputSequences="//@sequence.5 //@sequence.15">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33407" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avalia&#xe7;&#xe3;o do Quadro" description="&lt;p>Anamnese, sinais vitais, avalia&amp;ccedil;&amp;atilde;o da &amp;aacute;rea acometida, poss&amp;iacute;vel porta de entrada, acometimento agudo ou cr&amp;ocirc;nico.&lt;/p>" inputSequences="//@sequence.14" outputSequences="//@sequence.2 //@sequence.6 //@sequence.7 //@sequence.12">
+    <questions text="HERPES LABIAL: les&#xf5;es no in&#xed;cio vesiculares, coalescentes, que evoluem para crostas." url="" id="15751">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="herpes_labial" id="32151" weight="1" value="false"/>
+    </questions>
+    <questions text="HERPES ZOSTER: m&#xfa;ltiplas ves&#xed;culas, seguindo um derm&#xe1;tomo, com dor ou parestesia local." url="" id="15752">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="herpes_zoster" id="32152" weight="1" value="false"/>
+    </questions>
+    <questions text="VARICELA: infec&#xe7;&#xe3;o viral altamente contagiosa que causa uma irrita&#xe7;&#xe3;o cut&#xe2;nea com bolhas na pele." url="" id="15753">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="varicela" id="32153" weight="1" value="false"/>
+    </questions>
+    <questions text="HERPES GENITAL:&#xA;infec&#xe7;&#xe3;o comum sexualmente transmiss&#xed;vel, caracterizada por dores e feridas genitais." url="" id="15761">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="herpes_genital" id="32165" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33408" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Varicela] Avaliar Sintomas" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.0 //@sequence.1 //@sequence.13">
+    <questions text="Paciente sem sinais de infec&#xe7;&#xe3;o secund&#xe1;ria, comorbidades ou complica&#xe7;&#xf5;es" url="" id="15754">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="varicela_paciente_sem_sinais" id="32154" weight="1" value="true"/>
+    </questions>
+    <questions text="Paciente com sinais de infec&#xe7;&#xe3;o secund&#xe1;ria em locais de p&#xfa;stula" url="" id="15755">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="varicela_infeccao_secundaria" id="32155" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente com imunodefici&#xea;ncia, em uso de corticoides sist&#xea;micos cr&#xf4;nicos, sinais de encefalite, ataxia cerebelar aguda, penumonite" url="" id="15756">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="varicela_imunossupressao_e_outros_sintomas" id="32156" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33409" type="Receita" type_verbose="Receita" url="" name="[Varicela - Infec&#xe7;&#xe3;o Secund&#xe1;ria] Receita" description="" isTerminal="true" inputSequences="//@sequence.0">
+    <item id="11737" url="" name="Clindamicina 300mg .... 2 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="11738" url="" name="Aciclovir 400mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos &#xe0;s 06h, 10h, 14h, 20h, 24h durante 07 dias."/>
+    <item id="11739" url="" name="Dipirona 500mg .... 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 06/06h se dor ou febre."/>
+    <item id="11740" url="" name="Paracetamol 750mg ... 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 06/06h se dor ou febre."/>
+    <item id="11761" url="" name="Dexclorfeniramina 2mg ... 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 06/06h se coceira."/>
+    <item id="11762" url="" name="Loratadina 10mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido 01 vez ao dia se coceira."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33410" type="Receita" type_verbose="Receita" url="" name="[Herpes Labial] Receita" description="" isTerminal="true" inputSequences="//@sequence.6">
+    <item id="11763" url="" name="Aciclovir pomada _____ 1tb" med_code="-1" presentation="-" access="18" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 05 vezes ao dia por durante 07 dias."/>
+    <item id="11743" url="" name="Aciclovir 200mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="5" frequency_unit="DD" orientations=""/>
+    <item id="11774" url="" name="Fanciclovir 125mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="33411" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Herpes Zoster] Discutir com chefe de equipe" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Caso com maior potencial de gravidade, discutir com l&amp;iacute;der de equipe.&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33412" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Infec&#xe7;&#xe3;o Secund&#xe1;ria?" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.10 //@sequence.11">
+    <questions text="H&#xe1; infec&#xe7;&#xe3;o secund&#xe1;ria?" url="" id="15757">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="infeccao_secundaria" id="32157" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33413" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Acometimento Facial?" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="H&#xe1; acometimento facial?" url="" id="15758">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_facial" id="32158" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33414" type="Receita" type_verbose="Receita" url="" name="[Herpes Zoster] Sem infec&#xe7;&#xe3;o secund&#xe1;ria" description="" isTerminal="true" inputSequences="//@sequence.11">
+    <item id="11764" url="" name="Aciclovir 400mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos &#xe0;s 06h, 10h, 14h, 20h, 24h durante 07 dias."/>
+    <item id="11765" url="" name="Diclofenaco 50mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 08/08h se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33415" type="Receita" type_verbose="Receita" url="" name="[Herpes Zoster] Com infec&#xe7;&#xe3;o secund&#xe1;ria" description="" isTerminal="true" inputSequences="//@sequence.10">
+    <item id="11766" url="" name="Aciclovir 400 mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos &#xe0;s 06h, 10h, 14h, 20h, 24h durante 07 dias."/>
+    <item id="11767" url="" name="Diclofenaco 50mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 08/08h se dor"/>
+    <item id="11768" url="" name="Cefalexina 500mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="33416" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Varicela com Imunodefici&#xea;ncia] Discutir com Chefia" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Discutir caso do paciente com l&amp;iacute;der local.&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33417" type="Receita" type_verbose="Receita" url="" name="[Varicela - Sem sintomas especiais] Receita" description="" isTerminal="true" inputSequences="//@sequence.1">
+    <item id="11769" url="" name="Aciclovir 400mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos &#xe0;s 06h, 10h, 14h, 20h, 24h durante 07 dias."/>
+    <item id="11770" url="" name="Dipirona 500mg ... 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 06/06h se dor ou febre."/>
+    <item id="11771" url="" name="Paracetamol 750mg .... 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 06/06h se dor ou febre."/>
+    <item id="11772" url="" name="Dexclorfeniramina 2mg ... 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 06/06h se coceira."/>
+    <item id="11773" url="" name="Loratadina 10mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido 01 vez ao dia se coceira."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="33418" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verifica SIRS" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="SIRS:" url="" id="15759">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sirs" id="32159" weight="1" value="0.0">
+        <option description="T > 38.3&#xba;C ou T &lt; 36&#xba;C" weight="1"/>
+        <option description="FC > 90 bpm" weight="1"/>
+        <option description="FR > 20 ipm" weight="1"/>
+        <option description="Leuc&#xf3;citos > 12.000/mm&#xb3; ou Leuc&#xf3;citos &lt; 4.000/mm&#xb3; ou Bast&#xf5;es > 10%" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="33424" type="Receita" type_verbose="Receita" url="" name="[Herspes Genital] Receita" description="" isTerminal="true" inputSequences="//@sequence.2">
+    <item id="11775" url="" name="Aciclovir 200mg" med_code="-1" presentation="COMP" access="1" quantity="2" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="11744" url="" name="Aciclovir 200mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="5" frequency_unit="DD" orientations=""/>
+    <item id="11745" url="" name="Fanciclovir 125mg" med_code="-1" presentation="COMP" access="1" quantity="2" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="33419" type="Sequencia" type_verbose="Sequencia" url="" name="S36 (varicela com infeccao secundaria)" description="varicela com infeccao secundaria">
+    <operation name="varicela com infeccao secundaria" Operator="affirmation" id="32186">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="varicela_infeccao_secundaria" id="32155" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.4" id="33420" type="Sequencia" type_verbose="Sequencia" url="" name="S37 (varicela sem sintomas especiais)" description="varicela sem sintomas especiais">
+    <operation name="varicela sem sintomas especiais" Operator="and" id="32187">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Varicela sem imunodeficiencia" id="32184">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="varicela_imunossupressao_e_outros_sintomas" id="32156" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Varicela sem infeccao secundaria" id="32185">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="varicela_infeccao_secundaria" id="32155" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.3" id="33425" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (Herpes Genital)" description="Herpes Genital">
+    <operation name="Herpes Genital" Operator="affirmation" id="32200">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="herpes_genital" id="32165" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.0" id="33441" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Quick Sofa &lt; 1)" description="Quick Sofa &lt; 2">
+    <operation name="quick sofa &lt; 1" Operator="lessThan" id="32188">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="32182">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32148" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_FR_maior_22" id="32149" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_PAS_menor_100" id="32150" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32181" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="33442" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Quick Sofa >= 1)" description="Quick Sofa >= 2">
+    <operation name="quick sofa >= 1" Operator="greaterOrEqual" id="32189">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="32182">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32148" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_FR_maior_22" id="32149" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_PAS_menor_100" id="32150" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32181" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="33443" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="33444" type="Sequencia" type_verbose="Sequencia" url="" name="S19" description="-">
+    <operation name="Herpes_labial_" Operator="affirmation" id="32190">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="herpes_labial" id="32151" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.3" id="33445" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (Herpes Zoster)" description="Herpes Zoster">
+    <operation name="Herpes Zoster" Operator="affirmation" id="32191">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="herpes_zoster" id="32152" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.9" id="33446" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (n&#xe3;o h&#xe1; acometimento facial)" description="n&#xe3;o h&#xe1; acometimento facial">
+    <operation name="n&#xe3;o h&#xe1; acometimento facial" id="32192">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_facial" id="32158" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.9" id="33447" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (h&#xe1; acometimento facial)" description="h&#xe1; acometimento facial">
+    <operation name="h&#xe1; acometimento facial" Operator="affirmation" id="32193">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_facial" id="32158" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.8" id="33448" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (com infec&#xe7;&#xe3;o secund&#xe1;ria)" description="com infec&#xe7;&#xe3;o secund&#xe1;ria">
+    <operation name="com infec&#xe7;&#xe3;o secund&#xe1;ria" Operator="affirmation" id="32194">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="infeccao_secundaria" id="32157" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="33449" type="Sequencia" type_verbose="Sequencia" url="" name="S31 (sem infec&#xe7;&#xe3;o secund&#xe1;ria)" description="sem infec&#xe7;&#xe3;o secund&#xe1;ria">
+    <operation name="sem infec&#xe7;&#xe3;o secund&#xe1;ria" id="32195">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="infeccao_secundaria" id="32157" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="33450" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (Varicela)" description="Varicela">
+    <operation name="Varicela" Operator="affirmation" id="32196">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="varicela" id="32153" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.4" id="33451" type="Sequencia" type_verbose="Sequencia" url="" name="S35 (varicela com imunodeficiencia)" description="varicela com imunosupressao">
+    <operation name="varicela com imunodeficiencia" Operator="affirmation" id="32197">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="varicela_imunossupressao_e_outros_sintomas" id="32156" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.14" id="33452" type="Sequencia" type_verbose="Sequencia" url="" name="S46 (sirs &lt; 2)" description="sirs &lt; 2">
+    <operation name="sirs &lt; 2" Operator="lessThan" id="32198">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sirs" id="32159" weight="1" value="0.0">
+        <option description="T > 38.3&#xba;C ou T &lt; 36&#xba;C" weight="1"/>
+        <option description="FC > 90 bpm" weight="1"/>
+        <option description="FR > 20 ipm" weight="1"/>
+        <option description="Leuc&#xf3;citos > 12.000/mm&#xb3; ou Leuc&#xf3;citos &lt; 4.000/mm&#xb3; ou Bast&#xf5;es > 10%" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32160" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.14" id="33453" type="Sequencia" type_verbose="Sequencia" url="" name="S47 (sirs >=2)" description="sirs >=2">
+    <operation name="sirs >=2" Operator="greaterOrEqual" id="32199">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sirs" id="32159" weight="1" value="0.0">
+        <option description="T > 38.3&#xba;C ou T &lt; 36&#xba;C" weight="1"/>
+        <option description="FC > 90 bpm" weight="1"/>
+        <option description="FR > 20 ipm" weight="1"/>
+        <option description="Leuc&#xf3;citos > 12.000/mm&#xb3; ou Leuc&#xf3;citos &lt; 4.000/mm&#xb3; ou Bast&#xf5;es > 10%" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32160" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <operation name="Quick SOFA" Operator="addition" id="32182">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32148" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_FR_maior_22" id="32149" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_PAS_menor_100" id="32150" weight="1" value="false"/>
+  </operation>
+  <operation name="Marcadores de Gravidade" Operator="addition" id="32183"/>
+  <operation name="Varicela sem imunodeficiencia" id="32184">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="varicela_imunossupressao_e_outros_sintomas" id="32156" weight="1" value="false"/>
+  </operation>
+  <operation name="Varicela sem infeccao secundaria" id="32185">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="varicela_infeccao_secundaria" id="32155" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="32148" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_FR_maior_22" id="32149" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_PAS_menor_100" id="32150" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="herpes_labial" id="32151" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="herpes_zoster" id="32152" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="varicela" id="32153" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="varicela_paciente_sem_sinais" id="32154" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="varicela_infeccao_secundaria" id="32155" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="varicela_imunossupressao_e_outros_sintomas" id="32156" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="infeccao_secundaria" id="32157" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_facial" id="32158" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sirs" id="32159" weight="1" value="0.0">
+    <option description="T > 38.3&#xba;C ou T &lt; 36&#xba;C" weight="1"/>
+    <option description="FC > 90 bpm" weight="1"/>
+    <option description="FR > 20 ipm" weight="1"/>
+    <option description="Leuc&#xf3;citos > 12.000/mm&#xb3; ou Leuc&#xf3;citos &lt; 4.000/mm&#xb3; ou Bast&#xf5;es > 10%" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="32160" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="herpes_genital" id="32165" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="32181" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

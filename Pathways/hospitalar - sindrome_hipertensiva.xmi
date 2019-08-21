@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="S&#xed;ndrome Hipertensiva" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35329" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Idade Gestacional (Inicial)" description="Qual a idade gestacional da paciente?" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.19">
+    <questions text="Qual a idade gestacional:" url="" id="16489">
+      <answers xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="33708" weight="1" value="0.0">
+        <option description="&lt; 20 semanas" weight="1"/>
+        <option description=">= 20 semanas" weight="2"/>
+        <option description="Puerp&#xe9;rio (at&#xe9; 10 dias)" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35330" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[&lt;20 sem] Avaliar press&#xe3;o" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Qual a press&#xe3;o da paciente?" url="" id="16490">
+      <answers xsi:type="pathwayMetamodel:Choice" name="menor20_pressao" id="33709" weight="1" value="0.0">
+        <option description=">= 160 x 110 mmHg (dois picos pelo menos)" weight="1"/>
+        <option description="&lt; 160 x 110 mmHg" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35331" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="PN + MAPA" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Encaminhar paciente ao pr&amp;eacute;-natal de alto risco e orient&amp;aacute;-la&amp;nbsp;para realiza&amp;ccedil;&amp;atilde;o do MAPA (Medida Ambulatorial de Press&amp;atilde;o Arterial).&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35332" type="Tratamento" type_verbose="Tratamento" url="" name="[&lt; 20 sem e PA > 160] Tratamento" description="" inputSequences="//@sequence.27" outputSequences="//@sequence.4">
+    <medication url="" med_id="36072" id="19965" name="ADALAT 10MG CAPSULA CAPS 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="19965" standard="null"/>
+    <medication url="" med_id="115690" id="19966" name="HIDRALAZINA AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="19966" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35333" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[&lt; 20 sem e PA > 160] Reavaliar" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Reavaliar paciente ap&amp;oacute;s 1-2h.&lt;/span>&lt;/p>" inputSequences="//@sequence.4 //@sequence.7" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="PA controlada?" url="" id="16491">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="menor20_pa_controlada" id="33710" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35334" type="Receita" type_verbose="Receita" url="" name="MTD + PN" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Acompanhamento em Pr&amp;eacute;-Natal de Alto Risco.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Orientar MAPA.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Iniciar anti-hipertensivo ou ajust&amp;aacute;-lo.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.5 //@sequence.12">
+    <item id="12841" url="" name="Metildopa 250 mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar 01 comprimido de 08/08h. Uso cont&#xed;nuo."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35335" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[&lt; 20 sem e PA > 160] Reavaliar novamente" description="Reavaliar PA novamente dentro de 1-2h." inputSequences="//@sequence.6" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35336" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[IG >= 20] Avaliar Quadro" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.8 //@sequence.9 //@sequence.13 //@sequence.25 //@sequence.26">
+    <questions text="Press&#xe3;o arterial:" url="" id="16492">
+      <answers xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </answers>
+    </questions>
+    <questions text="Sintomas cl&#xed;nicos:" url="" id="16493">
+      <answers xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+        <option description="Idade gestacional >= 37 semanas" weight="1"/>
+        <option description="Diplopia" weight="2"/>
+        <option description="Dor epig&#xe1;strica" weight="2"/>
+        <option description="N&#xe1;useas (intensas)" weight="2"/>
+        <option description="V&#xf4;mitos" weight="2"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+        <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+        <option description="Eclampsia" weight="2"/>
+      </answers>
+    </questions>
+    <questions text="Exames laboratoriais:" url="" id="16494">
+      <answers xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+        <option description="PQT &lt; 100.000" weight="1"/>
+        <option description="LDH > 600" weight="1"/>
+        <option description="TGO > 70" weight="1"/>
+        <option description="Cr >= 1,2" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="USG:" url="" id="16495">
+      <answers xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+        <option description="Rest. crescimento fetal" weight="1"/>
+        <option description="Doppler alterado" weight="1"/>
+        <option description="Oligoidramnia" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35337" type="Tratamento" type_verbose="Tratamento" url="" name="[PA > 150 e &lt; 160] Solicitar exames" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Ausculta intermitente se IG &amp;lt; 28 semanas.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>CTG somente se IG &amp;gt; 28 semanas.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.9" outputSequences="//@sequence.10">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="LDH (DESIDROGENASE LATICA)" exam_id="28010655" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA CONVENCIONAL COM DOPPLER COLORI" exam_id="33020019" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="N/A"/>
+    <procedure url="CARDIOTOCOGRAFIA INTRAPARTO (POR HORA) ATE 6 HORAS EXTERNA" procedure="20202024" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35338" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[PA > 150 e &lt; 160] Avaliar exames" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Avaliar exames:" url="" id="16496">
+      <answers xsi:type="pathwayMetamodel:Choice" name="pa150_160_exames" id="33715" weight="1" value="0.0">
+        <option description="Normais" weight="1"/>
+        <option description="Rest. crescimento fetal" weight="2"/>
+        <option description="TGO > 70" weight="2"/>
+        <option description="Oligohidramnia" weight="2"/>
+        <option description="Cr >= 1,2" weight="2"/>
+        <option description="LDH > 600" weight="2"/>
+        <option description="Doppler alterado" weight="2"/>
+        <option description="PQT &lt; 100.000" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35339" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[PA = 140] Avaliar uso de medica&#xe7;&#xe3;o" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.18">
+    <questions text="Avaliar uso de medica&#xe7;&#xe3;o da paciente:" url="" id="16497">
+      <answers xsi:type="pathwayMetamodel:Choice" name="pa140_uso_medicacao" id="33716" weight="1" value="0.0">
+        <option description="N&#xe3;o usa medica&#xe7;&#xf5;es" weight="1"/>
+        <option description="Usa medica&#xe7;&#xf5;es" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35340" type="Tratamento" type_verbose="Tratamento" url="" name="[PA = 140] Solicitar exames" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>Ausculta intermitente se IG &amp;lt; 28 semanas.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:18px&quot;>CTG somente se IG &amp;gt; 28 semanas.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.14" outputSequences="//@sequence.15">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="LDH (DESIDROGENASE LATICA)" exam_id="28010655" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA CONVENCIONAL COM DOPPLER COLORI" exam_id="33020019" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <procedure url="CARDIOTOCOGRAFIA INTRAPARTO (POR HORA) ATE 6 HORAS EXTERNA" procedure="20202024" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35341" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[PA = 140 com uso de medica&#xe7;&#xe3;o] Liberar paciente" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Liberar paciente e orient&amp;aacute;-la a continuar o Pr&amp;eacute;-natal normalmente.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35342" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[PA =  140] Avaliar exames" description="" inputSequences="//@sequence.15" outputSequences="//@sequence.16 //@sequence.17">
+    <questions text="Avaliar exames:" url="" id="16498">
+      <answers xsi:type="pathwayMetamodel:Choice" name="pa140_exames" id="33717" weight="1" value="0.0">
+        <option description="Normais" weight="1"/>
+        <option description="Rest. crescimento fetal" weight="2"/>
+        <option description="LDH > 600" weight="2"/>
+        <option description="TGO > 70" weight="2"/>
+        <option description="Oligohidramnia" weight="2"/>
+        <option description="PQT &lt; 100.000" weight="2"/>
+        <option description="Cr >= 1,2" weight="2"/>
+        <option description="Doppler alterado" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35343" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Puerp&#xe9;rio] Avaliar quadro" description="" inputSequences="//@sequence.19" outputSequences="//@sequence.20 //@sequence.21">
+    <questions text="Avaliar press&#xe3;o:" url="" id="16499">
+      <answers xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+        <option description="PA = 140 x 90 mmHg" weight="1"/>
+        <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+        <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+      </answers>
+    </questions>
+    <questions text="Avaliar quadro:" url="" id="16500">
+      <answers xsi:type="pathwayMetamodel:Choice" name="avaliar_quadro_puerperio_novo" id="33719" weight="1" value="0.0">
+        <option description="Eclampsia" weight="1"/>
+        <option description="V&#xf4;mitos" weight="1"/>
+        <option description="Dor epig&#xe1;strica" weight="1"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="1"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="1"/>
+        <option description="N&#xe1;useas (intensas)" weight="1"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="1"/>
+        <option description="Dispneia + Dor tor&#xe1;cica (edema agudo pulm&#xe3;o)" weight="1"/>
+        <option description="Diplopia" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35344" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Puerp&#xe9;rio] Internar" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der local devido necessidade de interna&amp;ccedil;&amp;atilde;o.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.23"/>
+  <element xsi:type="pathwayMetamodel:Information" id="35345" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Puerp&#xe9;rio] Liberar paciente" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Liberar paciente e orient&amp;aacute;-la a retornar ao m&amp;eacute;dico do Pr&amp;eacute;-natal com MAPA.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.21"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35346" type="Tratamento" type_verbose="Tratamento" url="" name="[Puerp&#xe9;rio]  Solicitar exames" description="" outputSequences="//@sequence.22">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="teste" clinical_indication="teste"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="LDH (DESIDROGENASE LATICA)" exam_id="28010655" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35347" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Puerp&#xe9;rio] Avaliar exames" description="" inputSequences="//@sequence.22" outputSequences="//@sequence.23 //@sequence.24">
+    <questions text="Avaliar exames:" url="" id="16501">
+      <answers xsi:type="pathwayMetamodel:Choice" name="puerperio_exames" id="33720" weight="1" value="0.0">
+        <option description="Normais" weight="1"/>
+        <option description="PQT &lt; 100.000" weight="2"/>
+        <option description="CR >= 1,2" weight="2"/>
+        <option description="TGO > 70" weight="2"/>
+        <option description="LDH > 600" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35348" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Puerp&#xe9;rio] MAPA + PN" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Encaminhar paciente ao m&amp;eacute;dico do pr&amp;eacute;-natal de alto risco, orient&amp;aacute;-la&amp;nbsp;a realizar&amp;nbsp;MAPA (Medida Ambulatorial de Press&amp;atilde;o Arterial) e avaliar anti-hipertensivos.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.24"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35349" type="Tratamento" type_verbose="Tratamento" url="" name="[PA > 160 x 110] Interna&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Discutir com equipe sobre internamento ou observa&amp;ccedil;&amp;atilde;o por 24 hrs com reavalia&amp;ccedil;&amp;otilde;es&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Dieta zero at&amp;eacute; 2&amp;ordf; ordem;&amp;nbsp;&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.8">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="LDH (DESIDROGENASE LATICA)" exam_id="28010655" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA CONVENCIONAL COM DOPPLER COLORI" exam_id="33020019" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="N/A"/>
+    <medication url="" med_id="43931" id="19967" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="GR" access="6" daily_dosage="6" cycles="1" treatement_time="19967" standard="null"/>
+    <medication url="" med_id="43931" id="19968" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="GR" access="6" daily_dosage="12" cycles="1" treatement_time="19968" standard="null"/>
+    <medication url="" med_id="43290" id="19969" name="RINGER C/LACTATO 500ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="1000" cycles="1" treatement_time="19969" standard="null"/>
+    <medication url="" med_id="182122" id="19970" name="NIFEDIPINO RETARD 20 MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="20" cycles="1" treatement_time="19970" standard="null"/>
+    <medication url="" med_id="115690" id="19971" name="HIDRALAZINA AMPL 1 ML" brand="" unit="MG" access="6" daily_dosage="20" cycles="1" treatement_time="19971" standard="null"/>
+    <medication url="" med_id="37125" id="19972" name="CELESTONE 4MG AMPL 1 ML" brand="" unit="MG" access="5" daily_dosage="12" cycles="1" treatement_time="19972" frequency="24" standard="null"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente com s&#xed;ndrome hipertensiva e PA > 160x110" clinical_indication="n/a" quantity="1"/>
+    <procedure url="SONDAGEM VESICAL" procedure="80043828" quantity="1"/>
+    <procedure url="PRESSAO" procedure="75010005" frequency="1" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="6" quantity="1"/>
+    <procedure url="CUIDADOS GERAIS" procedure="75130017" frequency="6" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35350" type="Tratamento" type_verbose="Tratamento" url="" name="[>= 37 sem] Discutir" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Discutir com equipe local sobre internamento&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>Gestante com Hipertens&amp;atilde;o Cr&amp;ocirc;nica controladas, exames laboratoriais normais e Vitalidade fetal boa -&amp;gt; resolver entre 38 e 39 semanas.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.25">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="LDH (DESIDROGENASE LATICA)" exam_id="28010655" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA CONVENCIONAL COM DOPPLER COLORI" exam_id="33020019" limb_side="" quantity="1" reason="Paciente com s&#xed;ndrome hipertensiva" clinical_indication="N/A"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente com s&#xed;ndrome hipertensiva e PA > 160x110" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35351" type="Tratamento" type_verbose="Tratamento" url="" name="[Internar] Discutir" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Discutir com equipe sobre internamento ou observa&amp;ccedil;&amp;atilde;o por 24 hrs com reavalia&amp;ccedil;&amp;otilde;es&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.26">
+    <admission url="ADMISSION" admission="45990000" reason="Paciente com s&#xed;ndrome hipertensiva e PA > 160x110" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35352" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[&lt; 20 sem e PA > 160]" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Emerg&amp;ecirc;ncia hipertensiva:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Sudorese profunda.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Dor Precordial.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Altera&amp;ccedil;&amp;otilde;es no n&amp;iacute;vel de consci&amp;ecirc;ncia.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Cefaleia muito intensa.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Dispneia intensa.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>D&amp;eacute;ficit motor.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.3" outputSequences="//@sequence.27 //@sequence.28">
+    <questions text="Emerg&#xea;ncia hipertensiva?" url="" id="16502">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="emergencia_hipertensiva" id="33721" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35353" type="Tratamento" type_verbose="Tratamento" url="" name="Emerg&#xea;ncia Hipertensiva" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:20px&quot;>Discutir com equipe local sobre internamento.&amp;nbsp;&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:20px&quot;>Encaminhar paciente para sala de cuidados/observa&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Sudorese profunda.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Dor Precordial.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Altera&amp;ccedil;&amp;otilde;es no n&amp;iacute;vel de consci&amp;ecirc;ncia.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Cefaleia muito intensa.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Dispneia intensa.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>D&amp;eacute;ficit motor.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.28">
+    <medication url="" med_id="115690" id="19973" name="HIDRALAZINA AMPL 1 ML" brand="" unit="MG" access="6" daily_dosage="20" cycles="1" treatement_time="19973" standard="null"/>
+    <procedure url="PARECER DO ESPECIALISTA-CLINICA MEDICA" procedure="75130053" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35354" type="Tratamento" type_verbose="Tratamento" url="" name="[Puerp&#xe9;rio] Interna&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:28px&quot;>Discutir com equipe sobre internamento ou observa&amp;ccedil;&amp;atilde;o por 24 hrs com reavalia&amp;ccedil;&amp;otilde;es&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.20">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="teste" clinical_indication="teste"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="LDH (DESIDROGENASE LATICA)" exam_id="28010655" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <medication url="" med_id="43788" id="19974" name="SORO FISIOLOGICO 0,9% 1000 ML TUBO 1000 ML" brand="" unit="ML" access="6" daily_dosage="1000" cycles="1" treatement_time="19974" standard="null"/>
+    <medication url="" med_id="115690" id="19975" name="HIDRALAZINA AMPL 1 ML" brand="" unit="MG" access="6" daily_dosage="5" cycles="1" treatement_time="19975" standard="null"/>
+    <medication url="" med_id="182122" id="19976" name="NIFEDIPINO RETARD 20 MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="20" cycles="1" treatement_time="19976" standard="null"/>
+    <medication url="" med_id="36064" id="19977" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="19977" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;DILUIDO EM &#xc1;GUA DESTILADA&quot;,&quot;id&quot;:9614,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Cont&#xed;nuo&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1717}"/>
+    <medication url="" med_id="39586" id="19978" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="100" cycles="1" treatement_time="19978" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:200,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:9615,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+    <medication url="" med_id="43931" id="19979" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="GR" access="6" daily_dosage="6" cycles="1" treatement_time="19979" standard="null"/>
+    <medication url="" med_id="43931" id="19980" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="GR" access="6" daily_dosage="12" cycles="1" treatement_time="19980" standard="null"/>
+    <medication url="" med_id="126122" id="19981" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="19981" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:9616,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <admission url="ADMISSION" admission="01990004" reason="Paciente com sindrome hipertensiva" clinical_indication="n/a" quantity="1"/>
+    <procedure url="PRESSAO" procedure="75010005" frequency="2" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="1" quantity="1"/>
+    <procedure url="SONDAGEM VESICAL" procedure="80043828" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35355" type="Tratamento" type_verbose="Tratamento" url="" name="[>20 sem] Internar" description="&lt;p>&lt;span style=&quot;font-size:28px&quot;>Discutir com equipe sobre internamento ou observa&amp;ccedil;&amp;atilde;o por 24 horas com reavalia&amp;ccedil;&amp;otilde;es.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.11 //@sequence.17">
+    <admission url="ADMISSION" admission="45990000" reason="n/a" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35356" type="Receita" type_verbose="Receita" url="" name="[&lt;20 sem] MTD + PN" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Encaminhar paciente ao pr&amp;eacute;-natal de alto risco e orient&amp;aacute;-la&amp;nbsp;para realiza&amp;ccedil;&amp;atilde;o do MAPA (Medida Ambulatorial de Press&amp;atilde;o Arterial).&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.2">
+    <item id="12842" url="" name="Metildopa 250 mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar 01 comprimido de 08/08h. Uso cont&#xed;nuo."/>
+  </element>
+  <sequence inputStep="//@element.7" outputStep="//@element.0" id="35357" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (IG >= 20)" description="IG >= 20">
+    <operation name="IG >= 20" Operator="equal" id="33759">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="33708" weight="1" value="0.0">
+        <option description="&lt; 20 semanas" weight="1"/>
+        <option description=">= 20 semanas" weight="2"/>
+        <option description="Puerp&#xe9;rio (at&#xe9; 10 dias)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="35358" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (IG &lt; 20)" description="IG &lt; 20">
+    <operation name="IG &lt; 20" Operator="equal" id="33760">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="33708" weight="1" value="0.0">
+        <option description="&lt; 20 semanas" weight="1"/>
+        <option description=">= 20 semanas" weight="2"/>
+        <option description="Puerp&#xe9;rio (at&#xe9; 10 dias)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.1" id="35359" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (PA &lt; 160x110)" description="PA &lt; 160x110">
+    <operation name="PA &lt; 160x110" Operator="equal" id="33761">
+      <operand xsi:type="pathwayMetamodel:Choice" name="menor20_pressao" id="33709" weight="1" value="0.0">
+        <option description=">= 160 x 110 mmHg (dois picos pelo menos)" weight="1"/>
+        <option description="&lt; 160 x 110 mmHg" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.1" id="35360" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (PA > 160x110)" description="PA > 160x110">
+    <operation name="PA > 160x110" Operator="equal" id="33762">
+      <operand xsi:type="pathwayMetamodel:Choice" name="menor20_pressao" id="33709" weight="1" value="0.0">
+        <option description=">= 160 x 110 mmHg (dois picos pelo menos)" weight="1"/>
+        <option description="&lt; 160 x 110 mmHg" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="35361" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="35362" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (PA controlada)" description="PA controlada">
+    <operation name="PA controlada" Operator="affirmation" id="33763">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="menor20_pa_controlada" id="33710" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="35363" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (PA n&#xe3;o controlada)" description="PA n&#xe3;o controlada">
+    <operation name="PA n&#xe3;o controlada" id="33764">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="menor20_pa_controlada" id="33710" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.6" id="35364" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-"/>
+  <sequence inputStep="//@element.20" outputStep="//@element.7" id="35365" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (internar)" description="internar">
+    <operation name="internar" Operator="or" id="33765">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA > 160" Operator="equal" id="33728">
+        <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+          <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+          <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+          <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33724" weight="1" value="3.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140 e sinais >=2" Operator="and" id="33744">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+            <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+            <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+            <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sinais >=2" Operator="greaterOrEqual" id="33743">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+            <option description="Idade gestacional >= 37 semanas" weight="1"/>
+            <option description="Diplopia" weight="2"/>
+            <option description="Dor epig&#xe1;strica" weight="2"/>
+            <option description="N&#xe1;useas (intensas)" weight="2"/>
+            <option description="V&#xf4;mitos" weight="2"/>
+            <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+            <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+            <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+            <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+            <option description="Eclampsia" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160 e sinais >=2" Operator="and" id="33745">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+            <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+            <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+            <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sinais >=2" Operator="greaterOrEqual" id="33743">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+            <option description="Idade gestacional >= 37 semanas" weight="1"/>
+            <option description="Diplopia" weight="2"/>
+            <option description="Dor epig&#xe1;strica" weight="2"/>
+            <option description="N&#xe1;useas (intensas)" weight="2"/>
+            <option description="V&#xf4;mitos" weight="2"/>
+            <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+            <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+            <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+            <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+            <option description="Eclampsia" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="35366" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (PA > 150 e &lt; 160)" description="PA > 150 e &lt; 160">
+    <operation name="pa > 150 e &lt; 160" Operator="and" id="33766">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+        <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+          <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+          <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+          <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sinais &lt; 1" Operator="lessThan" id="33749">
+        <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+          <option description="Idade gestacional >= 37 semanas" weight="1"/>
+          <option description="Diplopia" weight="2"/>
+          <option description="Dor epig&#xe1;strica" weight="2"/>
+          <option description="N&#xe1;useas (intensas)" weight="2"/>
+          <option description="V&#xf4;mitos" weight="2"/>
+          <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+          <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+          <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+          <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+          <option description="Eclampsia" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="exames &lt; 1" Operator="lessThan" id="33750">
+        <operand xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+          <option description="PQT &lt; 100.000" weight="1"/>
+          <option description="LDH > 600" weight="1"/>
+          <option description="TGO > 70" weight="1"/>
+          <option description="Cr >= 1,2" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="usg &lt; 1" Operator="lessThan" id="33751">
+        <operand xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+          <option description="Rest. crescimento fetal" weight="1"/>
+          <option description="Doppler alterado" weight="1"/>
+          <option description="Oligoidramnia" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="35367" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-"/>
+  <sequence inputStep="//@element.26" outputStep="//@element.9" id="35368" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (exames alterados)" description="exames alterados">
+    <operation name="exames alterados" Operator="greaterOrEqual" id="33767">
+      <operand xsi:type="pathwayMetamodel:Choice" name="pa150_160_exames" id="33715" weight="1" value="0.0">
+        <option description="Normais" weight="1"/>
+        <option description="Rest. crescimento fetal" weight="2"/>
+        <option description="TGO > 70" weight="2"/>
+        <option description="Oligohidramnia" weight="2"/>
+        <option description="Cr >= 1,2" weight="2"/>
+        <option description="LDH > 600" weight="2"/>
+        <option description="Doppler alterado" weight="2"/>
+        <option description="PQT &lt; 100.000" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.9" id="35369" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (exames normais)" description="exames normais">
+    <operation name="exames normais" Operator="equal" id="33768">
+      <operand xsi:type="pathwayMetamodel:Choice" name="pa150_160_exames" id="33715" weight="1" value="0.0">
+        <option description="Normais" weight="1"/>
+        <option description="Rest. crescimento fetal" weight="2"/>
+        <option description="TGO > 70" weight="2"/>
+        <option description="Oligohidramnia" weight="2"/>
+        <option description="Cr >= 1,2" weight="2"/>
+        <option description="LDH > 600" weight="2"/>
+        <option description="Doppler alterado" weight="2"/>
+        <option description="PQT &lt; 100.000" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.7" id="35370" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (PA = 140)" description="PA = 140">
+    <operation name="pa=140" Operator="and" id="33769">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+        <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+          <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+          <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+          <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sinais &lt; 1" Operator="lessThan" id="33749">
+        <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+          <option description="Idade gestacional >= 37 semanas" weight="1"/>
+          <option description="Diplopia" weight="2"/>
+          <option description="Dor epig&#xe1;strica" weight="2"/>
+          <option description="N&#xe1;useas (intensas)" weight="2"/>
+          <option description="V&#xf4;mitos" weight="2"/>
+          <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+          <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+          <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+          <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+          <option description="Eclampsia" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="exames &lt; 1" Operator="lessThan" id="33750">
+        <operand xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+          <option description="PQT &lt; 100.000" weight="1"/>
+          <option description="LDH > 600" weight="1"/>
+          <option description="TGO > 70" weight="1"/>
+          <option description="Cr >= 1,2" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="usg &lt; 1" Operator="lessThan" id="33751">
+        <operand xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+          <option description="Rest. crescimento fetal" weight="1"/>
+          <option description="Doppler alterado" weight="1"/>
+          <option description="Oligoidramnia" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="35371" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (sem uso de medica&#xe7;&#xe3;o)" description="sem uso de medica&#xe7;&#xe3;o">
+    <operation name="sem uso de medica&#xe7;&#xe3;o" Operator="equal" id="33770">
+      <operand xsi:type="pathwayMetamodel:Choice" name="pa140_uso_medicacao" id="33716" weight="1" value="0.0">
+        <option description="N&#xe3;o usa medica&#xe7;&#xf5;es" weight="1"/>
+        <option description="Usa medica&#xe7;&#xf5;es" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.11" id="35372" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="-"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.13" id="35373" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (Exames normais)" description="Exames normais">
+    <operation name="Exames normais" Operator="equal" id="33771">
+      <operand xsi:type="pathwayMetamodel:Choice" name="pa140_exames" id="33717" weight="1" value="0.0">
+        <option description="Normais" weight="1"/>
+        <option description="Rest. crescimento fetal" weight="2"/>
+        <option description="LDH > 600" weight="2"/>
+        <option description="TGO > 70" weight="2"/>
+        <option description="Oligohidramnia" weight="2"/>
+        <option description="PQT &lt; 100.000" weight="2"/>
+        <option description="Cr >= 1,2" weight="2"/>
+        <option description="Doppler alterado" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.13" id="35374" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (Exames alterados)" description="Exames alterados">
+    <operation name="Exames alterados" Operator="greaterOrEqual" id="33772">
+      <operand xsi:type="pathwayMetamodel:Choice" name="pa140_exames" id="33717" weight="1" value="0.0">
+        <option description="Normais" weight="1"/>
+        <option description="Rest. crescimento fetal" weight="2"/>
+        <option description="LDH > 600" weight="2"/>
+        <option description="TGO > 70" weight="2"/>
+        <option description="Oligohidramnia" weight="2"/>
+        <option description="PQT &lt; 100.000" weight="2"/>
+        <option description="Cr >= 1,2" weight="2"/>
+        <option description="Doppler alterado" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="35375" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (com uso de medica&#xe7;&#xe3;o)" description="com uso de medica&#xe7;&#xe3;o">
+    <operation name="com uso de medica&#xe7;&#xe3;o" Operator="equal" id="33773">
+      <operand xsi:type="pathwayMetamodel:Choice" name="pa140_uso_medicacao" id="33716" weight="1" value="0.0">
+        <option description="N&#xe3;o usa medica&#xe7;&#xf5;es" weight="1"/>
+        <option description="Usa medica&#xe7;&#xf5;es" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.0" id="35376" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (puerp&#xe9;rio)" description="puerp&#xe9;rio">
+    <operation name="puerp&#xe9;rio" Operator="equal" id="33774">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="33708" weight="1" value="0.0">
+        <option description="&lt; 20 semanas" weight="1"/>
+        <option description=">= 20 semanas" weight="2"/>
+        <option description="Puerp&#xe9;rio (at&#xe9; 10 dias)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33724" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.14" id="35377" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (puerp&#xe9;rio - internar)" description="puerp&#xe9;rio - internar">
+    <operation name="puerp&#xe9;rio - internar" Operator="or" id="33775">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Puerperio PA = 160" Operator="equal" id="33754">
+        <operand xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+          <option description="PA = 140 x 90 mmHg" weight="1"/>
+          <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+          <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33724" weight="1" value="3.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="quadro >=1" Operator="greaterOrEqual" id="33756">
+        <operand xsi:type="pathwayMetamodel:Choice" name="avaliar_quadro_puerperio_novo" id="33719" weight="1" value="0.0">
+          <option description="Eclampsia" weight="1"/>
+          <option description="V&#xf4;mitos" weight="1"/>
+          <option description="Dor epig&#xe1;strica" weight="1"/>
+          <option description="Turva&#xe7;&#xe3;o visual" weight="1"/>
+          <option description="Dor hipoc&#xf4;ndrio direito" weight="1"/>
+          <option description="N&#xe1;useas (intensas)" weight="1"/>
+          <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="1"/>
+          <option description="Dispneia + Dor tor&#xe1;cica (edema agudo pulm&#xe3;o)" weight="1"/>
+          <option description="Diplopia" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="35378" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (PA 140 ou PA 150-160)" description="PA 140">
+    <operation name="pa 140 ou pa 150-160" Operator="or" id="33776">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Puerperio PA = 140 e quadro &lt; 1" Operator="and" id="33757">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Puerperio PA = 140" Operator="equal" id="33752">
+          <operand xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+            <option description="PA = 140 x 90 mmHg" weight="1"/>
+            <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+            <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="puerperio quadro &lt; 1" Operator="lessThan" id="33755">
+          <operand xsi:type="pathwayMetamodel:Choice" name="avaliar_quadro_puerperio_novo" id="33719" weight="1" value="0.0">
+            <option description="Eclampsia" weight="1"/>
+            <option description="V&#xf4;mitos" weight="1"/>
+            <option description="Dor epig&#xe1;strica" weight="1"/>
+            <option description="Turva&#xe7;&#xe3;o visual" weight="1"/>
+            <option description="Dor hipoc&#xf4;ndrio direito" weight="1"/>
+            <option description="N&#xe1;useas (intensas)" weight="1"/>
+            <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="1"/>
+            <option description="Dispneia + Dor tor&#xe1;cica (edema agudo pulm&#xe3;o)" weight="1"/>
+            <option description="Diplopia" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Puerperio PA 150 - 160 e quadro &lt; 1" Operator="and" id="33758">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Puerperio PA 150 - 160" Operator="equal" id="33753">
+          <operand xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+            <option description="PA = 140 x 90 mmHg" weight="1"/>
+            <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+            <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="puerperio quadro &lt; 1" Operator="lessThan" id="33755">
+          <operand xsi:type="pathwayMetamodel:Choice" name="avaliar_quadro_puerperio_novo" id="33719" weight="1" value="0.0">
+            <option description="Eclampsia" weight="1"/>
+            <option description="V&#xf4;mitos" weight="1"/>
+            <option description="Dor epig&#xe1;strica" weight="1"/>
+            <option description="Turva&#xe7;&#xe3;o visual" weight="1"/>
+            <option description="Dor hipoc&#xf4;ndrio direito" weight="1"/>
+            <option description="N&#xe1;useas (intensas)" weight="1"/>
+            <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="1"/>
+            <option description="Dispneia + Dor tor&#xe1;cica (edema agudo pulm&#xe3;o)" weight="1"/>
+            <option description="Diplopia" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.17" id="35379" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="-"/>
+  <sequence inputStep="//@element.15" outputStep="//@element.18" id="35380" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (alterados)" description="alterados">
+    <operation name="alterados" Operator="greaterOrEqual" id="33777">
+      <operand xsi:type="pathwayMetamodel:Choice" name="puerperio_exames" id="33720" weight="1" value="0.0">
+        <option description="Normais" weight="1"/>
+        <option description="PQT &lt; 100.000" weight="2"/>
+        <option description="CR >= 1,2" weight="2"/>
+        <option description="TGO > 70" weight="2"/>
+        <option description="LDH > 600" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="35381" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (normais)" description="normais">
+    <operation name="normais" Operator="equal" id="33778">
+      <operand xsi:type="pathwayMetamodel:Choice" name="puerperio_exames" id="33720" weight="1" value="0.0">
+        <option description="Normais" weight="1"/>
+        <option description="PQT &lt; 100.000" weight="2"/>
+        <option description="CR >= 1,2" weight="2"/>
+        <option description="TGO > 70" weight="2"/>
+        <option description="LDH > 600" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.7" id="35382" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (ig >= 37 semanas)" description="ig >= 37 semanas">
+    <operation name="ig >= 37 semanas" Operator="or" id="33779">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140 e sinais =1" Operator="and" id="33747">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+            <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+            <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+            <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sinais = 1" Operator="equal" id="33746">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+            <option description="Idade gestacional >= 37 semanas" weight="1"/>
+            <option description="Diplopia" weight="2"/>
+            <option description="Dor epig&#xe1;strica" weight="2"/>
+            <option description="N&#xe1;useas (intensas)" weight="2"/>
+            <option description="V&#xf4;mitos" weight="2"/>
+            <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+            <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+            <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+            <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+            <option description="Eclampsia" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160 e sinais =1" Operator="and" id="33748">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+            <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+            <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+            <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sinais = 1" Operator="equal" id="33746">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+            <option description="Idade gestacional >= 37 semanas" weight="1"/>
+            <option description="Diplopia" weight="2"/>
+            <option description="Dor epig&#xe1;strica" weight="2"/>
+            <option description="N&#xe1;useas (intensas)" weight="2"/>
+            <option description="V&#xf4;mitos" weight="2"/>
+            <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+            <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+            <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+            <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+            <option description="Eclampsia" weight="2"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.7" id="35383" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (internar/discutir)" description="internar/discutir">
+    <operation name="internar/discutir" Operator="or" id="33780">
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140 e exames >=1" Operator="and" id="33735">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+            <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+            <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+            <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="exames >= 1" Operator="greaterOrEqual" id="33732">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+            <option description="PQT &lt; 100.000" weight="1"/>
+            <option description="LDH > 600" weight="1"/>
+            <option description="TGO > 70" weight="1"/>
+            <option description="Cr >= 1,2" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140 e usg >=1" Operator="and" id="33736">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+            <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+            <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+            <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="usg >= 1" Operator="greaterOrEqual" id="33733">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+            <option description="Rest. crescimento fetal" weight="1"/>
+            <option description="Doppler alterado" weight="1"/>
+            <option description="Oligoidramnia" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160 e exames >=1" Operator="and" id="33738">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+            <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+            <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+            <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="exames >= 1" Operator="greaterOrEqual" id="33732">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+            <option description="PQT &lt; 100.000" weight="1"/>
+            <option description="LDH > 600" weight="1"/>
+            <option description="TGO > 70" weight="1"/>
+            <option description="Cr >= 1,2" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160 e usg >=1" Operator="and" id="33739">
+        <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+            <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+            <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+            <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="usg >= 1" Operator="greaterOrEqual" id="33733">
+          <operand xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+            <option description="Rest. crescimento fetal" weight="1"/>
+            <option description="Doppler alterado" weight="1"/>
+            <option description="Oligoidramnia" weight="1"/>
+          </operand>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.23" id="35384" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (sem emerg&#xea;ncia hipertensiva)" description="sem emerg&#xea;ncia hipertensiva">
+    <operation name="sem emerg&#xea;ncia hipertensiva" id="33781">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="emergencia_hipertensiva" id="33721" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.23" id="35385" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (com emerg&#xea;ncia hipertensiva)" description="com emerg&#xea;ncia hipertensiva">
+    <operation name="com emerg&#xea;ncia hipertensiva" Operator="affirmation" id="33782">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="emergencia_hipertensiva" id="33721" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="Sinais de Gravidade" Operator="addition" id="33727"/>
+  <operation name="PA > 160" Operator="equal" id="33728">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+      <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+      <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+      <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33724" weight="1" value="3.0"/>
+  </operation>
+  <operation name="PA = 140" Operator="equal" id="33729">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+      <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+      <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+      <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+      <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+      <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+      <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+  </operation>
+  <operation name="sinais >=1" Operator="greaterOrEqual" id="33731">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+      <option description="Idade gestacional >= 37 semanas" weight="1"/>
+      <option description="Diplopia" weight="2"/>
+      <option description="Dor epig&#xe1;strica" weight="2"/>
+      <option description="N&#xe1;useas (intensas)" weight="2"/>
+      <option description="V&#xf4;mitos" weight="2"/>
+      <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+      <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+      <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+      <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+      <option description="Eclampsia" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="exames >= 1" Operator="greaterOrEqual" id="33732">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+      <option description="PQT &lt; 100.000" weight="1"/>
+      <option description="LDH > 600" weight="1"/>
+      <option description="TGO > 70" weight="1"/>
+      <option description="Cr >= 1,2" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="usg >= 1" Operator="greaterOrEqual" id="33733">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+      <option description="Rest. crescimento fetal" weight="1"/>
+      <option description="Doppler alterado" weight="1"/>
+      <option description="Oligoidramnia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="PA = 140 e sinais >=1" Operator="and" id="33734">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sinais >=1" Operator="greaterOrEqual" id="33731">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+        <option description="Idade gestacional >= 37 semanas" weight="1"/>
+        <option description="Diplopia" weight="2"/>
+        <option description="Dor epig&#xe1;strica" weight="2"/>
+        <option description="N&#xe1;useas (intensas)" weight="2"/>
+        <option description="V&#xf4;mitos" weight="2"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+        <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+        <option description="Eclampsia" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="PA = 140 e exames >=1" Operator="and" id="33735">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="exames >= 1" Operator="greaterOrEqual" id="33732">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+        <option description="PQT &lt; 100.000" weight="1"/>
+        <option description="LDH > 600" weight="1"/>
+        <option description="TGO > 70" weight="1"/>
+        <option description="Cr >= 1,2" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="PA = 140 e usg >=1" Operator="and" id="33736">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="usg >= 1" Operator="greaterOrEqual" id="33733">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+        <option description="Rest. crescimento fetal" weight="1"/>
+        <option description="Doppler alterado" weight="1"/>
+        <option description="Oligoidramnia" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="PA > 150 e &lt; 160 e sinais >=1" Operator="and" id="33737">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sinais >=1" Operator="greaterOrEqual" id="33731">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+        <option description="Idade gestacional >= 37 semanas" weight="1"/>
+        <option description="Diplopia" weight="2"/>
+        <option description="Dor epig&#xe1;strica" weight="2"/>
+        <option description="N&#xe1;useas (intensas)" weight="2"/>
+        <option description="V&#xf4;mitos" weight="2"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+        <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+        <option description="Eclampsia" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="PA > 150 e &lt; 160 e exames >=1" Operator="and" id="33738">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="exames >= 1" Operator="greaterOrEqual" id="33732">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+        <option description="PQT &lt; 100.000" weight="1"/>
+        <option description="LDH > 600" weight="1"/>
+        <option description="TGO > 70" weight="1"/>
+        <option description="Cr >= 1,2" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="PA > 150 e &lt; 160 e usg >=1" Operator="and" id="33739">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="usg >= 1" Operator="greaterOrEqual" id="33733">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+        <option description="Rest. crescimento fetal" weight="1"/>
+        <option description="Doppler alterado" weight="1"/>
+        <option description="Oligoidramnia" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="Eclampsia" Operator="equal" id="33740">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="PA alta" Operator="equal" id="33741">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="33725" weight="1" value="4.0"/>
+  </operation>
+  <operation name="Sintomas" Operator="greaterOrEqual" id="33742">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="5" id="33726" weight="1" value="5.0"/>
+  </operation>
+  <operation name="sinais >=2" Operator="greaterOrEqual" id="33743">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+      <option description="Idade gestacional >= 37 semanas" weight="1"/>
+      <option description="Diplopia" weight="2"/>
+      <option description="Dor epig&#xe1;strica" weight="2"/>
+      <option description="N&#xe1;useas (intensas)" weight="2"/>
+      <option description="V&#xf4;mitos" weight="2"/>
+      <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+      <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+      <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+      <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+      <option description="Eclampsia" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+  </operation>
+  <operation name="PA = 140 e sinais >=2" Operator="and" id="33744">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sinais >=2" Operator="greaterOrEqual" id="33743">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+        <option description="Idade gestacional >= 37 semanas" weight="1"/>
+        <option description="Diplopia" weight="2"/>
+        <option description="Dor epig&#xe1;strica" weight="2"/>
+        <option description="N&#xe1;useas (intensas)" weight="2"/>
+        <option description="V&#xf4;mitos" weight="2"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+        <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+        <option description="Eclampsia" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operand>
+  </operation>
+  <operation name="PA > 150 e &lt; 160 e sinais >=2" Operator="and" id="33745">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sinais >=2" Operator="greaterOrEqual" id="33743">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+        <option description="Idade gestacional >= 37 semanas" weight="1"/>
+        <option description="Diplopia" weight="2"/>
+        <option description="Dor epig&#xe1;strica" weight="2"/>
+        <option description="N&#xe1;useas (intensas)" weight="2"/>
+        <option description="V&#xf4;mitos" weight="2"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+        <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+        <option description="Eclampsia" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operand>
+  </operation>
+  <operation name="sinais = 1" Operator="equal" id="33746">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+      <option description="Idade gestacional >= 37 semanas" weight="1"/>
+      <option description="Diplopia" weight="2"/>
+      <option description="Dor epig&#xe1;strica" weight="2"/>
+      <option description="N&#xe1;useas (intensas)" weight="2"/>
+      <option description="V&#xf4;mitos" weight="2"/>
+      <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+      <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+      <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+      <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+      <option description="Eclampsia" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="PA = 140 e sinais =1" Operator="and" id="33747">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA = 140" Operator="equal" id="33729">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sinais = 1" Operator="equal" id="33746">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+        <option description="Idade gestacional >= 37 semanas" weight="1"/>
+        <option description="Diplopia" weight="2"/>
+        <option description="Dor epig&#xe1;strica" weight="2"/>
+        <option description="N&#xe1;useas (intensas)" weight="2"/>
+        <option description="V&#xf4;mitos" weight="2"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+        <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+        <option description="Eclampsia" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="PA > 150 e &lt; 160 e sinais =1" Operator="and" id="33748">
+    <operand xsi:type="pathwayMetamodel:Operation" name="PA > 150 e &lt; 160" Operator="equal" id="33730">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+        <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+        <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+        <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sinais = 1" Operator="equal" id="33746">
+      <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+        <option description="Idade gestacional >= 37 semanas" weight="1"/>
+        <option description="Diplopia" weight="2"/>
+        <option description="Dor epig&#xe1;strica" weight="2"/>
+        <option description="N&#xe1;useas (intensas)" weight="2"/>
+        <option description="V&#xf4;mitos" weight="2"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+        <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+        <option description="Eclampsia" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="sinais &lt; 1" Operator="lessThan" id="33749">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+      <option description="Idade gestacional >= 37 semanas" weight="1"/>
+      <option description="Diplopia" weight="2"/>
+      <option description="Dor epig&#xe1;strica" weight="2"/>
+      <option description="N&#xe1;useas (intensas)" weight="2"/>
+      <option description="V&#xf4;mitos" weight="2"/>
+      <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+      <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+      <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+      <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+      <option description="Eclampsia" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="exames &lt; 1" Operator="lessThan" id="33750">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+      <option description="PQT &lt; 100.000" weight="1"/>
+      <option description="LDH > 600" weight="1"/>
+      <option description="TGO > 70" weight="1"/>
+      <option description="Cr >= 1,2" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="usg &lt; 1" Operator="lessThan" id="33751">
+    <operand xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+      <option description="Rest. crescimento fetal" weight="1"/>
+      <option description="Doppler alterado" weight="1"/>
+      <option description="Oligoidramnia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Puerperio PA = 140" Operator="equal" id="33752">
+    <operand xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+      <option description="PA = 140 x 90 mmHg" weight="1"/>
+      <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+      <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Puerperio PA 150 - 160" Operator="equal" id="33753">
+    <operand xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+      <option description="PA = 140 x 90 mmHg" weight="1"/>
+      <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+      <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+  </operation>
+  <operation name="Puerperio PA = 160" Operator="equal" id="33754">
+    <operand xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+      <option description="PA = 140 x 90 mmHg" weight="1"/>
+      <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+      <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33724" weight="1" value="3.0"/>
+  </operation>
+  <operation name="puerperio quadro &lt; 1" Operator="lessThan" id="33755">
+    <operand xsi:type="pathwayMetamodel:Choice" name="avaliar_quadro_puerperio_novo" id="33719" weight="1" value="0.0">
+      <option description="Eclampsia" weight="1"/>
+      <option description="V&#xf4;mitos" weight="1"/>
+      <option description="Dor epig&#xe1;strica" weight="1"/>
+      <option description="Turva&#xe7;&#xe3;o visual" weight="1"/>
+      <option description="Dor hipoc&#xf4;ndrio direito" weight="1"/>
+      <option description="N&#xe1;useas (intensas)" weight="1"/>
+      <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="1"/>
+      <option description="Dispneia + Dor tor&#xe1;cica (edema agudo pulm&#xe3;o)" weight="1"/>
+      <option description="Diplopia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="quadro >=1" Operator="greaterOrEqual" id="33756">
+    <operand xsi:type="pathwayMetamodel:Choice" name="avaliar_quadro_puerperio_novo" id="33719" weight="1" value="0.0">
+      <option description="Eclampsia" weight="1"/>
+      <option description="V&#xf4;mitos" weight="1"/>
+      <option description="Dor epig&#xe1;strica" weight="1"/>
+      <option description="Turva&#xe7;&#xe3;o visual" weight="1"/>
+      <option description="Dor hipoc&#xf4;ndrio direito" weight="1"/>
+      <option description="N&#xe1;useas (intensas)" weight="1"/>
+      <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="1"/>
+      <option description="Dispneia + Dor tor&#xe1;cica (edema agudo pulm&#xe3;o)" weight="1"/>
+      <option description="Diplopia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Puerperio PA = 140 e quadro &lt; 1" Operator="and" id="33757">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Puerperio PA = 140" Operator="equal" id="33752">
+      <operand xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+        <option description="PA = 140 x 90 mmHg" weight="1"/>
+        <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+        <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="puerperio quadro &lt; 1" Operator="lessThan" id="33755">
+      <operand xsi:type="pathwayMetamodel:Choice" name="avaliar_quadro_puerperio_novo" id="33719" weight="1" value="0.0">
+        <option description="Eclampsia" weight="1"/>
+        <option description="V&#xf4;mitos" weight="1"/>
+        <option description="Dor epig&#xe1;strica" weight="1"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="1"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="1"/>
+        <option description="N&#xe1;useas (intensas)" weight="1"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="1"/>
+        <option description="Dispneia + Dor tor&#xe1;cica (edema agudo pulm&#xe3;o)" weight="1"/>
+        <option description="Diplopia" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="Puerperio PA 150 - 160 e quadro &lt; 1" Operator="and" id="33758">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Puerperio PA 150 - 160" Operator="equal" id="33753">
+      <operand xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+        <option description="PA = 140 x 90 mmHg" weight="1"/>
+        <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+        <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="puerperio quadro &lt; 1" Operator="lessThan" id="33755">
+      <operand xsi:type="pathwayMetamodel:Choice" name="avaliar_quadro_puerperio_novo" id="33719" weight="1" value="0.0">
+        <option description="Eclampsia" weight="1"/>
+        <option description="V&#xf4;mitos" weight="1"/>
+        <option description="Dor epig&#xe1;strica" weight="1"/>
+        <option description="Turva&#xe7;&#xe3;o visual" weight="1"/>
+        <option description="Dor hipoc&#xf4;ndrio direito" weight="1"/>
+        <option description="N&#xe1;useas (intensas)" weight="1"/>
+        <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="1"/>
+        <option description="Dispneia + Dor tor&#xe1;cica (edema agudo pulm&#xe3;o)" weight="1"/>
+        <option description="Diplopia" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="33708" weight="1" value="0.0">
+    <option description="&lt; 20 semanas" weight="1"/>
+    <option description=">= 20 semanas" weight="2"/>
+    <option description="Puerp&#xe9;rio (at&#xe9; 10 dias)" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="menor20_pressao" id="33709" weight="1" value="0.0">
+    <option description=">= 160 x 110 mmHg (dois picos pelo menos)" weight="1"/>
+    <option description="&lt; 160 x 110 mmHg" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="menor20_pa_controlada" id="33710" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="maior20_pressao" id="33711" weight="1" value="0.0">
+    <option description="140 x 90 mmHg (duas medidas)" weight="1"/>
+    <option description=">= 150 x 100 mmHg e &lt; 160 x 110 mmHg (duas medidas)" weight="2"/>
+    <option description=">= 160 x 110 mmHg (duas medidas em repouso)" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="maior20_sinais_cronicos" id="33712" weight="1" value="0.0">
+    <option description="Idade gestacional >= 37 semanas" weight="1"/>
+    <option description="Diplopia" weight="2"/>
+    <option description="Dor epig&#xe1;strica" weight="2"/>
+    <option description="N&#xe1;useas (intensas)" weight="2"/>
+    <option description="V&#xf4;mitos" weight="2"/>
+    <option description="Dor hipoc&#xf4;ndrio direito" weight="2"/>
+    <option description="Dispneia + Dor t&#xf3;rax (edema agudo pulm&#xe3;o)" weight="2"/>
+    <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="2"/>
+    <option description="Turva&#xe7;&#xe3;o visual" weight="2"/>
+    <option description="Eclampsia" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="maior20_exames_laboratoriais" id="33713" weight="1" value="0.0">
+    <option description="PQT &lt; 100.000" weight="1"/>
+    <option description="LDH > 600" weight="1"/>
+    <option description="TGO > 70" weight="1"/>
+    <option description="Cr >= 1,2" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="maior20_usg" id="33714" weight="1" value="0.0">
+    <option description="Rest. crescimento fetal" weight="1"/>
+    <option description="Doppler alterado" weight="1"/>
+    <option description="Oligoidramnia" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="pa150_160_exames" id="33715" weight="1" value="0.0">
+    <option description="Normais" weight="1"/>
+    <option description="Rest. crescimento fetal" weight="2"/>
+    <option description="TGO > 70" weight="2"/>
+    <option description="Oligohidramnia" weight="2"/>
+    <option description="Cr >= 1,2" weight="2"/>
+    <option description="LDH > 600" weight="2"/>
+    <option description="Doppler alterado" weight="2"/>
+    <option description="PQT &lt; 100.000" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="pa140_uso_medicacao" id="33716" weight="1" value="0.0">
+    <option description="N&#xe3;o usa medica&#xe7;&#xf5;es" weight="1"/>
+    <option description="Usa medica&#xe7;&#xf5;es" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="pa140_exames" id="33717" weight="1" value="0.0">
+    <option description="Normais" weight="1"/>
+    <option description="Rest. crescimento fetal" weight="2"/>
+    <option description="LDH > 600" weight="2"/>
+    <option description="TGO > 70" weight="2"/>
+    <option description="Oligohidramnia" weight="2"/>
+    <option description="PQT &lt; 100.000" weight="2"/>
+    <option description="Cr >= 1,2" weight="2"/>
+    <option description="Doppler alterado" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="pressao_puerperio" id="33718" weight="1" value="0.0">
+    <option description="PA = 140 x 90 mmHg" weight="1"/>
+    <option description="PA >= 150 x 100 mmHg e &lt; 160 x 110 mmHg" weight="2"/>
+    <option description="PA >= 160 x 110 mmHg (ao menos 2 medidas)" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="avaliar_quadro_puerperio_novo" id="33719" weight="1" value="0.0">
+    <option description="Eclampsia" weight="1"/>
+    <option description="V&#xf4;mitos" weight="1"/>
+    <option description="Dor epig&#xe1;strica" weight="1"/>
+    <option description="Turva&#xe7;&#xe3;o visual" weight="1"/>
+    <option description="Dor hipoc&#xf4;ndrio direito" weight="1"/>
+    <option description="N&#xe1;useas (intensas)" weight="1"/>
+    <option description="Cefaleia refrat&#xe1;ria a medica&#xe7;&#xf5;es" weight="1"/>
+    <option description="Dispneia + Dor tor&#xe1;cica (edema agudo pulm&#xe3;o)" weight="1"/>
+    <option description="Diplopia" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="puerperio_exames" id="33720" weight="1" value="0.0">
+    <option description="Normais" weight="1"/>
+    <option description="PQT &lt; 100.000" weight="2"/>
+    <option description="CR >= 1,2" weight="2"/>
+    <option description="TGO > 70" weight="2"/>
+    <option description="LDH > 600" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="emergencia_hipertensiva" id="33721" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="33722" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="33723" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="33724" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="33725" weight="1" value="4.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="33726" weight="1" value="5.0"/>
+</pathwayMetamodel:Pathway>

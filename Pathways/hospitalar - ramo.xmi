@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="RAMO" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32817" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar idade gestacional" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Idade gestacional:" url="" id="15533">
+      <answers xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="31653" weight="1" value="0.0">
+        <option description=">= 20 semanas" weight="1"/>
+        <option description="&lt; 20 semanas" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="32818" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[&lt; 20 sem] Conduzir" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>&lt;strong>Conduzir caso como abortamento.&amp;nbsp;&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32819" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[>= 20 sem] Avaliar sinais" description="&lt;p>&lt;strong>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:20px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>O paciente ter&amp;aacute; que ser internado em algum momento&lt;/span>&lt;/span>&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.9 //@sequence.12 //@sequence.23">
+    <questions text="Avaliar sinais:" url="" id="15534">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais" id="31654" weight="1" value="0.0">
+        <option description="Trabalho de Parto" weight="1"/>
+        <option description="Sinais de SFA" weight="2"/>
+        <option description="Sinais de Infec&#xe7;&#xe3;o" weight="3"/>
+        <option description="Nenhuma das op&#xe7;&#xf5;es" weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32820" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sinais de infec&#xe7;&#xe3;o] Confirmar infec&#xe7;&#xe3;o" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.6">
+    <questions text="Infec&#xe7;&#xe3;o:" url="" id="15535">
+      <answers xsi:type="pathwayMetamodel:Choice" name="confirmar_infeccao" id="31655" weight="1" value="0.0">
+        <option description="Infec&#xe7;&#xe3;o confirmada" weight="1"/>
+        <option description="Investigar infec&#xe7;&#xe3;o" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32881" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Infec&#xe7;&#xe3;o confirmada] Sinais de SEPSE" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:20px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>RESOLU&amp;Ccedil;&amp;Atilde;O DA GESTA&amp;Ccedil;&amp;Atilde;O de imediato ANTES OU CONCOMINATE AO PROTOCOLO SEPSE&lt;/span>&lt;/span>&lt;/span>&lt;/p>" inputSequences="//@sequence.3 //@sequence.8" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Paciente apresenta sinais de SEPSE?" url="" id="15536">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinais_sepse" id="31656" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32882" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Encaminhar para SEPSE" description="" isTerminal="true" inputSequences="//@sequence.4">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32883" type="Tratamento" type_verbose="Tratamento" url="" name="[Infec&#xe7;&#xe3;o] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Prescri&amp;ccedil;&amp;atilde;o para resolu&amp;ccedil;&amp;atilde;o da gesta&amp;ccedil;&amp;atilde;o:&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Dieta zero.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.5">
+    <medication url="" med_id="43788" id="17690" name="SORO FISIOLOGICO 0,9% 1000 ML TUBO 1000 ML" brand="" unit="ML" access="6" daily_dosage="1000" cycles="1" treatement_time="17690" standard="null"/>
+    <medication url="" med_id="38849" id="17691" name="DALACIN 600 MG AMPL 4 ML" brand="" unit="MG" access="6" daily_dosage="600" cycles="1" treatement_time="17691" frequency="6" standard="{&quot;quantidade_dosagem&quot;:600,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:4,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8359,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:675}"/>
+    <medication url="" med_id="37400" id="17692" name="GENTAMICINA 80 MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="240" cycles="1" treatement_time="17692" frequency="24" standard="{&quot;quantidade_dosagem&quot;:80,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8360,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:1215}"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente com ramo e infec&#xe7;&#xe3;o confirmada, sem sinais de sepse" clinical_indication="n/a" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" quantity="1"/>
+    <procedure url="CUIDADOS GERAIS" procedure="75130017" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32884" type="Tratamento" type_verbose="Tratamento" url="" name="Investigar infec&#xe7;&#xe3;o" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com sinais de infec&#xe7;&#xe3;o, investigar." clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com sinais de infec&#xe7;&#xe3;o, investigar." clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA" exam_id="33010110" limb_side="" quantity="1" reason="Paciente com sinais de infec&#xe7;&#xe3;o, investigar." clinical_indication="n/a"/>
+    <procedure url="CARDIOTOCOGRAFIA INTRAPARTO (POR HORA) ATE 6 HORAS EXTERNA" procedure="20202024" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32885" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Confirmar infec&#xe7;&#xe3;o" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.16">
+    <questions text="A partir dos exames, confirmar infec&#xe7;&#xe3;o:" url="" id="15537">
+      <answers xsi:type="pathwayMetamodel:Choice" name="confirmar_infeccao_apos_exames" id="31657" weight="1" value="0.0">
+        <option description="Infec&#xe7;&#xe3;o confirmada" weight="1"/>
+        <option description="Infec&#xe7;&#xe3;o n&#xe3;o confirmada" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32886" type="Tratamento" type_verbose="Tratamento" url="" name="[Sinais de SFA] Investigar" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Solicitar CTG se &amp;gt;= 28 semanas.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Realizar Ausculta intermitente se 20s &amp;agrave; 27s6d.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.9" outputSequences="//@sequence.10">
+    <procedure url="CARDIOTOCOGRAFIA INTRAPARTO (POR HORA) ATE 6 HORAS EXTERNA" procedure="20202024" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32887" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sinais de SFA] Confirmar" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.17">
+    <questions text="Ap&#xf3;s exames, confirmar SFA:" url="" id="15538">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_sfa" id="31658" weight="1" value="0.0">
+        <option description="SFA confirmado" weight="1"/>
+        <option description="SFA n&#xe3;o confirmado" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32889" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[TP] Idade Gestacional" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.13 //@sequence.14 //@sequence.15">
+    <questions text="Idade gestacional:" url="" id="15539">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tp_idade_gestacional" id="31659" weight="1" value="0.0">
+        <option description=">= 37 semanas" weight="1"/>
+        <option description="24 &#xe0; 36 semanas e 6 dias" weight="2"/>
+        <option description="20 &#xe0; 23 semanas e 6 dias" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32890" type="Tratamento" type_verbose="Tratamento" url="" name="[>= 37 semanas] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Prestar assist&amp;ecirc;ncia para resolu&amp;ccedil;&amp;atilde;o ao parto:&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Dieta l&amp;iacute;quida.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Antibi&amp;oacute;tico somente se membrana rota &amp;gt;= 18h e SWAB positivo ou desconhecido.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.13">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente em trabalho de parto" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente em trabalho de parto" clinical_indication="n/a"/>
+    <medication url="" med_id="75116" id="17693" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="17693" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8361,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:197}"/>
+    <medication url="" med_id="75116" id="17694" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="17694" frequency="6" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8362,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:197}"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente em trabalho de parto com mais de 37 semanas" clinical_indication="n/a" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" quantity="1"/>
+    <procedure url="CUIDADOS GERAIS" procedure="75130017" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32891" type="Tratamento" type_verbose="Tratamento" url="" name="[24 - 36s6d] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Prestar assist&amp;ecirc;ncia para resolu&amp;ccedil;&amp;atilde;o ao parto:&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Dieta l&amp;iacute;quida.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Antibi&amp;oacute;tico somente se membrana rota &amp;gt;= 18h e SWAB positivo ou desconhecido.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>INIBIR &amp;Agrave;QUELAS EM QUE N&amp;Atilde;O TENHAM SUPORTE PARA O REC&amp;Eacute;M NASCIDO&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Sulfato Mg2+ se IG&amp;lt; 32 semanas&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.14">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente em trabalho de parto" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente em trabalho de parto" clinical_indication="n/a"/>
+    <medication url="" med_id="75116" id="17695" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="17695" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8363,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:197}"/>
+    <medication url="" med_id="75116" id="17696" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="17696" frequency="6" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8364,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:197}"/>
+    <medication url="" med_id="37125" id="17697" name="CELESTONE 4MG AMPL 1 ML" brand="" unit="MG" access="5" daily_dosage="12" cycles="1" treatement_time="17697" frequency="24" standard="null"/>
+    <medication url="" med_id="182122" id="17698" name="NIFEDIPINO RETARD 20 MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="20" cycles="1" treatement_time="17698" frequency="1" standard="null"/>
+    <medication url="" med_id="182122" id="17699" name="NIFEDIPINO RETARD 20 MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="20" cycles="1" treatement_time="17699" frequency="8" standard="null"/>
+    <medication url="" med_id="43931" id="17700" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="GR" access="6" daily_dosage="6" cycles="1" treatement_time="17700" standard="null"/>
+    <medication url="" med_id="43931" id="17701" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="GR" access="6" daily_dosage="12" cycles="1" treatement_time="17701" standard="null"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente em trabalho de parto" clinical_indication="n/a" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" quantity="1"/>
+    <procedure url="CUIDADOS GERAIS" procedure="75130017" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32892" type="Tratamento" type_verbose="Tratamento" url="" name="[20 - 23s6d] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>1. Prestar assist&amp;ecirc;ncia.&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>2. Explicar progn&amp;oacute;stico ruim.&amp;nbsp;&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Dieta l&amp;iacute;quida.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.15">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente em trabalho de parto" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente em trabalho de parto" clinical_indication="n/a"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente em trabalho de parto" clinical_indication="n/a" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" quantity="1"/>
+    <procedure url="CUIDADOS GERAIS" procedure="75130017" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32893" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar idade gestacional" description="" inputSequences="//@sequence.16 //@sequence.17 //@sequence.23" outputSequences="//@sequence.18 //@sequence.19">
+    <questions text="Idade gestacional:" url="" id="15540">
+      <answers xsi:type="pathwayMetamodel:Choice" name="idade_gestacional_pp" id="31660" weight="1" value="0.0">
+        <option description=">= 37 semanas" weight="1"/>
+        <option description="20 &#xe0; 36 semanas e 6 dias" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32894" type="Tratamento" type_verbose="Tratamento" url="" name="[20 - 36s6d] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>1. Se idade gestacional de 20 &amp;agrave; 23 semanas e 6 dias, explicar o p&amp;eacute;ssimo progn&amp;oacute;stico.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>2.&amp;nbsp;Se IG &amp;gt;= 24 semanas, realizar antibi&amp;oacute;tico e cortic&amp;oacute;ide.&amp;nbsp;&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Dieta geral.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.18">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com ramo" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com ramo" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="Paciente com ramo" clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA" exam_id="33010110" limb_side="" quantity="1" reason="Paciente com ramo" clinical_indication="n/a"/>
+    <medication url="" med_id="75116" id="17702" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="17702" frequency="6" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8365,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:197}"/>
+    <medication url="" med_id="37125" id="17703" name="CELESTONE 4MG AMPL 1 ML" brand="" unit="MG" access="5" daily_dosage="12" cycles="1" treatement_time="17703" frequency="24" standard="null"/>
+    <medication url="" med_id="143240" id="17704" name="ZITROMAX 1GR COMP 1 UD" brand="" unit="GR" access="1" daily_dosage="1" cycles="1" treatement_time="17704" standard="null"/>
+    <admission url="ADMISSION" admission="01990004" reason="n/a" clinical_indication="n/a" quantity="1"/>
+    <procedure url="CARDIOTOCOGRAFIA INTRAPARTO (POR HORA) ATE 6 HORAS EXTERNA" procedure="20202024" quantity="1"/>
+    <procedure url="SCALP SALINIZADO" procedure="75130064" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32895" type="Tratamento" type_verbose="Tratamento" url="" name="[>= 37 sem] Exames" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>Resolver gesta&amp;ccedil;&amp;atilde;o.&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.19" outputSequences="//@sequence.20">
+    <examination url="US OBSTETRICA" exam_id="33010110" limb_side="" quantity="1" reason="Paciente com mais de 37 semanas de gesta&#xe7;&#xe3;o" clinical_indication="n/a"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente com idade gestacional maior que 37 semanas" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32896" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar condi&#xe7;&#xf5;es parto" description="" inputSequences="//@sequence.20" outputSequences="//@sequence.21 //@sequence.22">
+    <questions text="Condi&#xe7;&#xf5;es ideais para indu&#xe7;&#xe3;o do parto:" url="" id="15581">
+      <answers xsi:type="pathwayMetamodel:Choice" name="condicoes_parto" id="31721" weight="1" value="0.0">
+        <option description="Peso &lt; 4.000 mg" weight="1"/>
+        <option description="At&#xe9; 2 ces&#xe1;reas" weight="1"/>
+        <option description="TCLE paciente" weight="1"/>
+        <option description="Maior bols&#xe3;o > 20 mm" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="32898" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Sem alguma condi&#xe7;&#xe3;o] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:20px&quot;>Individualizar conduta junto ao l&amp;iacute;der.&amp;nbsp;&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.22"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32899" type="Tratamento" type_verbose="Tratamento" url="" name="[SFA confirmado] Resolu&#xe7;&#xe3;o" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:20px&quot;>Resolu&amp;ccedil;&amp;atilde;o de imediato.&amp;nbsp;&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.11">
+    <admission url="ADMISSION" admission="45990000" reason="SFA confirmado" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32900" type="Tratamento" type_verbose="Tratamento" url="" name="[Com todas as condi&#xe7;&#xf5;es] Avaliar indu&#xe7;&#xe3;o" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:18px&quot;>Avaliar indu&amp;ccedil;&amp;atilde;o do parto.&amp;nbsp;&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.21">
+    <procedure url="CARDIOTOCOGRAFIA INTRAPARTO (POR HORA) ATE 6 HORAS EXTERNA" procedure="20202024" quantity="1"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="32901" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (&lt; 20 sem)" description="&lt; 20 sem">
+    <operation name="&lt; 20 sem" Operator="equal" id="31727">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="31653" weight="1" value="0.0">
+        <option description=">= 20 semanas" weight="1"/>
+        <option description="&lt; 20 semanas" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="32902" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (>= 20 sem)" description=">= 20 sem">
+    <operation name=">= 20 sem" Operator="equal" id="31728">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="31653" weight="1" value="0.0">
+        <option description=">= 20 semanas" weight="1"/>
+        <option description="&lt; 20 semanas" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="32903" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (sinais de infec&#xe7;&#xe3;o)" description="sinais de infec&#xe7;&#xe3;o">
+    <operation name="sinais de infec&#xe7;&#xe3;o" Operator="equal" id="31729">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais" id="31654" weight="1" value="0.0">
+        <option description="Trabalho de Parto" weight="1"/>
+        <option description="Sinais de SFA" weight="2"/>
+        <option description="Sinais de Infec&#xe7;&#xe3;o" weight="3"/>
+        <option description="Nenhuma das op&#xe7;&#xf5;es" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="31724" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="32904" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (infec&#xe7;&#xe3;o confirmada)" description="infec&#xe7;&#xe3;o confirmada">
+    <operation name="infec&#xe7;&#xe3;o confirmada" Operator="equal" id="31730">
+      <operand xsi:type="pathwayMetamodel:Choice" name="confirmar_infeccao" id="31655" weight="1" value="0.0">
+        <option description="Infec&#xe7;&#xe3;o confirmada" weight="1"/>
+        <option description="Investigar infec&#xe7;&#xe3;o" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="32905" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (com sinais de sepse)" description="com sinais de sepse">
+    <operation name="com sinais de sepse" Operator="affirmation" id="31731">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_sepse" id="31656" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="32906" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (sem sinais de sepse)" description="sem sinais de sepse">
+    <operation name="sem sinais de sepse" id="31732">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_sepse" id="31656" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.3" id="32907" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (investigar infec&#xe7;&#xe3;o)" description="infec&#xe7;&#xe3;o n&#xe3;o confirmada">
+    <operation name="investigar infec&#xe7;&#xe3;o" Operator="equal" id="31733">
+      <operand xsi:type="pathwayMetamodel:Choice" name="confirmar_infeccao" id="31655" weight="1" value="0.0">
+        <option description="Infec&#xe7;&#xe3;o confirmada" weight="1"/>
+        <option description="Investigar infec&#xe7;&#xe3;o" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="32908" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.8" id="32909" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Infec&#xe7;&#xe3;o confirmada)" description="Infec&#xe7;&#xe3;o confirmada">
+    <operation name="Infec&#xe7;&#xe3;o confirmada" Operator="equal" id="31734">
+      <operand xsi:type="pathwayMetamodel:Choice" name="confirmar_infeccao_apos_exames" id="31657" weight="1" value="0.0">
+        <option description="Infec&#xe7;&#xe3;o confirmada" weight="1"/>
+        <option description="Infec&#xe7;&#xe3;o n&#xe3;o confirmada" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.2" id="32910" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (sinais de SFA)" description="sinais de SFA">
+    <operation name="sinais de SFA" Operator="equal" id="31735">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais" id="31654" weight="1" value="0.0">
+        <option description="Trabalho de Parto" weight="1"/>
+        <option description="Sinais de SFA" weight="2"/>
+        <option description="Sinais de Infec&#xe7;&#xe3;o" weight="3"/>
+        <option description="Nenhuma das op&#xe7;&#xf5;es" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="32911" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-"/>
+  <sequence inputStep="//@element.20" outputStep="//@element.10" id="32912" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (SFA confirmado)" description="SFA confirmado">
+    <operation name="SFA confirmado" Operator="equal" id="31736">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_sfa" id="31658" weight="1" value="0.0">
+        <option description="SFA confirmado" weight="1"/>
+        <option description="SFA n&#xe3;o confirmado" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.2" id="32913" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (trabalho de parto)" description="trabalho de parto">
+    <operation name="trabalho de parto" Operator="equal" id="31737">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais" id="31654" weight="1" value="0.0">
+        <option description="Trabalho de Parto" weight="1"/>
+        <option description="Sinais de SFA" weight="2"/>
+        <option description="Sinais de Infec&#xe7;&#xe3;o" weight="3"/>
+        <option description="Nenhuma das op&#xe7;&#xf5;es" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="32914" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (>= 37 sem)" description=">= 37 sem">
+    <operation name=">= 37 sem" Operator="equal" id="31738">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tp_idade_gestacional" id="31659" weight="1" value="0.0">
+        <option description=">= 37 semanas" weight="1"/>
+        <option description="24 &#xe0; 36 semanas e 6 dias" weight="2"/>
+        <option description="20 &#xe0; 23 semanas e 6 dias" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.11" id="32915" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (24 - 36s6d)" description="24 - 36s6d">
+    <operation name="24 - 36s6d" Operator="equal" id="31739">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tp_idade_gestacional" id="31659" weight="1" value="0.0">
+        <option description=">= 37 semanas" weight="1"/>
+        <option description="24 &#xe0; 36 semanas e 6 dias" weight="2"/>
+        <option description="20 &#xe0; 23 semanas e 6 dias" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.11" id="32916" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (20-23s6d)" description="20-23s6d">
+    <operation name="20-23s6d" Operator="equal" id="31740">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tp_idade_gestacional" id="31659" weight="1" value="0.0">
+        <option description=">= 37 semanas" weight="1"/>
+        <option description="24 &#xe0; 36 semanas e 6 dias" weight="2"/>
+        <option description="20 &#xe0; 23 semanas e 6 dias" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="31724" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.8" id="32917" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (infec&#xe7;&#xe3;o n&#xe3;o confirmada)" description="infec&#xe7;&#xe3;o n&#xe3;o confirmada">
+    <operation name="infec&#xe7;&#xe3;o n&#xe3;o confirmada" Operator="equal" id="31741">
+      <operand xsi:type="pathwayMetamodel:Choice" name="confirmar_infeccao" id="31655" weight="1" value="0.0">
+        <option description="Infec&#xe7;&#xe3;o confirmada" weight="1"/>
+        <option description="Investigar infec&#xe7;&#xe3;o" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.10" id="32918" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (SFA n&#xe3;o confirmado)" description="SFA n&#xe3;o confirmado">
+    <operation name="SFA n&#xe3;o confirmado" Operator="equal" id="31742">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_sfa" id="31658" weight="1" value="0.0">
+        <option description="SFA confirmado" weight="1"/>
+        <option description="SFA n&#xe3;o confirmado" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.15" id="32919" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (20 - 36s6d)" description="20 - 36s6d">
+    <operation name="20 - 36s6d" Operator="equal" id="31743">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional_pp" id="31660" weight="1" value="0.0">
+        <option description=">= 37 semanas" weight="1"/>
+        <option description="20 &#xe0; 36 semanas e 6 dias" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31723" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.15" id="32920" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (>= 37 semanas)" description=">= 37 semanas">
+    <operation name=">= 37 semanas" Operator="equal" id="31744">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional_pp" id="31660" weight="1" value="0.0">
+        <option description=">= 37 semanas" weight="1"/>
+        <option description="20 &#xe0; 36 semanas e 6 dias" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31722" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.17" id="32921" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="-"/>
+  <sequence inputStep="//@element.21" outputStep="//@element.18" id="32922" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (com todas as condi&#xe7;&#xf5;es)" description="com todas as condi&#xe7;&#xf5;es">
+    <operation name="com todas as condi&#xe7;&#xf5;es" Operator="equal" id="31745">
+      <operand xsi:type="pathwayMetamodel:Choice" name="condicoes_parto" id="31721" weight="1" value="0.0">
+        <option description="Peso &lt; 4.000 mg" weight="1"/>
+        <option description="At&#xe9; 2 ces&#xe1;reas" weight="1"/>
+        <option description="TCLE paciente" weight="1"/>
+        <option description="Maior bols&#xe3;o > 20 mm" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="31726" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="32923" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (sem alguma condi&#xe7;&#xe3;o)" description="sem alguma condi&#xe7;&#xe3;o">
+    <operation name="sem alguma condi&#xe7;&#xe3;o" Operator="lessThan" id="31746">
+      <operand xsi:type="pathwayMetamodel:Choice" name="condicoes_parto" id="31721" weight="1" value="0.0">
+        <option description="Peso &lt; 4.000 mg" weight="1"/>
+        <option description="At&#xe9; 2 ces&#xe1;reas" weight="1"/>
+        <option description="TCLE paciente" weight="1"/>
+        <option description="Maior bols&#xe3;o > 20 mm" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="31726" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.2" id="32924" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (nenhuma das op&#xe7;&#xf5;es)" description="nenhuma das op&#xe7;&#xf5;es">
+    <operation name="nenhuma das op&#xe7;&#xf5;es" Operator="equal" id="31747">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais" id="31654" weight="1" value="0.0">
+        <option description="Trabalho de Parto" weight="1"/>
+        <option description="Sinais de SFA" weight="2"/>
+        <option description="Sinais de Infec&#xe7;&#xe3;o" weight="3"/>
+        <option description="Nenhuma das op&#xe7;&#xf5;es" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="31726" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="31653" weight="1" value="0.0">
+    <option description=">= 20 semanas" weight="1"/>
+    <option description="&lt; 20 semanas" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais" id="31654" weight="1" value="0.0">
+    <option description="Trabalho de Parto" weight="1"/>
+    <option description="Sinais de SFA" weight="2"/>
+    <option description="Sinais de Infec&#xe7;&#xe3;o" weight="3"/>
+    <option description="Nenhuma das op&#xe7;&#xf5;es" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="confirmar_infeccao" id="31655" weight="1" value="0.0">
+    <option description="Infec&#xe7;&#xe3;o confirmada" weight="1"/>
+    <option description="Investigar infec&#xe7;&#xe3;o" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinais_sepse" id="31656" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="confirmar_infeccao_apos_exames" id="31657" weight="1" value="0.0">
+    <option description="Infec&#xe7;&#xe3;o confirmada" weight="1"/>
+    <option description="Infec&#xe7;&#xe3;o n&#xe3;o confirmada" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_sfa" id="31658" weight="1" value="0.0">
+    <option description="SFA confirmado" weight="1"/>
+    <option description="SFA n&#xe3;o confirmado" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tp_idade_gestacional" id="31659" weight="1" value="0.0">
+    <option description=">= 37 semanas" weight="1"/>
+    <option description="24 &#xe0; 36 semanas e 6 dias" weight="2"/>
+    <option description="20 &#xe0; 23 semanas e 6 dias" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="idade_gestacional_pp" id="31660" weight="1" value="0.0">
+    <option description=">= 37 semanas" weight="1"/>
+    <option description="20 &#xe0; 36 semanas e 6 dias" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="condicoes_parto" id="31721" weight="1" value="0.0">
+    <option description="Peso &lt; 4.000 mg" weight="1"/>
+    <option description="At&#xe9; 2 ces&#xe1;reas" weight="1"/>
+    <option description="TCLE paciente" weight="1"/>
+    <option description="Maior bols&#xe3;o > 20 mm" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="31722" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="31723" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="31724" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="31725" weight="1" value="5.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="31726" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

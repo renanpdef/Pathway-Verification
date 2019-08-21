@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="N&#xe1;useas e V&#xf4;mitos Obst&#xe9;trico" code="">
+  <element xsi:type="pathwayMetamodel:Treatment" id="32399" type="Tratamento" type_verbose="Tratamento" url="" name="[Ingest&#xe3;o &#xc1;lcool] Conduta (com glicose)" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Checar sinais vitais, glicemia capilar. Se n&amp;atilde;o houver sinais de alarme, realizar medica&amp;ccedil;&amp;atilde;o endovenosa e alta hospitalar .&lt;/span>&lt;/p>" inputSequences="//@sequence.18 //@sequence.20" outputSequences="//@sequence.0">
+    <examination url="GLICEMIA P/ FITA" exam_id="99011973" limb_side="" quantity="1" reason="Para ingest&#xe3;o de &#xe1;lcool" clinical_indication="n/a"/>
+    <medication url="" med_id="48593" id="17372" name="GLICOSE 50% AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="17372" standard="null"/>
+    <medication url="" med_id="43826" id="17373" name="SORO GLICOFISIOLOGIC 1:1 500ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17373" standard="null"/>
+    <medication url="" med_id="41564" id="17374" name="PLAMET 10MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="10" cycles="1" treatement_time="17374" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8176,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="17375" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="17375" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:10,&quot;administracao_diluicao&quot;:&quot;Lento&quot;,&quot;id&quot;:8177,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="39144" id="17376" name="ANTAK AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="17376" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2 ml + 18 ml AD&quot;,&quot;id&quot;:8178,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2048}"/>
+    <procedure url="GLICEMIA PELA FITA ( DX ) / HGT" procedure="75130013" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32400" type="Receita" type_verbose="Receita" url="" name="[&#xca;mese Gravidica] Receita" description="" isTerminal="true" inputSequences="//@sequence.19">
+    <item id="11356" url="" name="Vonau Flash 4mg ... 1cx" med_code="-1" presentation="COMP" access="1" quantity="2" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Se n&#xe1;usea ou v&#xf4;mitos."/>
+    <item id="11357" url="" name="Meclin 25mg ..... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se n&#xe1;usea ou v&#xf4;mitos."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32501" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Sintomas do Paciente" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Realizar anamnese completa, identificando os sintomas associados ao quadro de n&amp;aacute;useas/v&amp;ocirc;mitos.&lt;/span>&lt;/p>" isInitial="true" outputSequences="//@sequence.4 //@sequence.6 //@sequence.7 //@sequence.8 //@sequence.9 //@sequence.10 //@sequence.11 //@sequence.12 //@sequence.15 //@sequence.16">
+    <questions text="N&#xe1;useas ou v&#xf4;mitos SEM CAUSA APARENTE ou POR SUSPEITA SIMPLES como causas alimentares, efeitos adversos de medica&#xe7;&#xf5;es, v&#xf4;mito em epis&#xf3;dio &#xfa;nico e isolado." url="" id="15413">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sem_causa_aparente_nauseas_vomitos" id="31330" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefaleia + n&#xe1;useas ou v&#xf4;mitos" url="" id="15414">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_nauseas_vomitos" id="31331" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor abdominal + n&#xe1;useas ou v&#xf4;mitos" url="" id="15415">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_abdominal_nauseas_vomitos" id="31332" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor ou desconforto tor&#xe1;cico + n&#xe1;useas ou v&#xf4;mitos" url="" id="15416">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_toracico_nauseas_vomitos" id="31333" weight="1" value="false"/>
+    </questions>
+    <questions text="Diarreia + n&#xe1;useas ou v&#xf4;mitos" url="" id="15417">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diarreia_nauseas_vomitos" id="31334" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor lombar + n&#xe1;useas ou v&#xf4;mitos" url="" id="15418">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_lombar_nauseas_vomitos" id="31335" weight="1" value="false"/>
+    </questions>
+    <questions text="Tontura + n&#xe1;useas ou v&#xf4;mitos" url="" id="15419">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tontura_nauseas_vomitos" id="31336" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente em tratamento quimioter&#xe1;pico + n&#xe1;useas ou v&#xf4;mitos" url="" id="15420">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_quimioterapico_nauseas_vomitos" id="31337" weight="1" value="false"/>
+    </questions>
+    <questions text="Ingest&#xe3;o &#xe1;lcool + n&#xe1;useas ou v&#xf4;mitos" url="" id="15461">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ingestao_alcool_nauseas_vomitos" id="31338" weight="1" value="false"/>
+    </questions>
+    <questions text="&#xca;mese grav&#xed;dica" url="" id="15462">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="emese_gravidica" id="31339" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32502" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Iniciar Protocolo de Cefal&#xe9;ia" description="&lt;h3>&lt;span style=&quot;font-size:16px&quot;>Iniciar Protocolo de Cefal&amp;eacute;ia&lt;/span>&lt;/h3>" isTerminal="true" inputSequences="//@sequence.6">
+    <pathways>H018</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32503" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Iniciar Protocolo de Dor Abdominal" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Iniciar Protocolo de Dor Abdominal&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.7">
+    <pathways>H022</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32504" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Iniciar Protocolo de Dor Tor&#xe1;cica" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Iniciar Protocolo de Dor Tor&amp;aacute;cica&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.8">
+    <pathways>H020</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32505" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Iniciar Protocolo de Diarr&#xe9;ia" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Iniciar Protocolo de Diarr&amp;eacute;ia&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.9">
+    <pathways>H017</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32506" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Iniciar Protocolo de Dor Lombar" description="&lt;h3>&lt;span style=&quot;font-size:16px&quot;>Iniciar Protocolo de Dor Lombar&lt;/span>&lt;/h3>" isTerminal="true" inputSequences="//@sequence.10">
+    <pathways>H019</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32507" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Iniciar Protocolo de Tontura" description="&lt;h3>&lt;span style=&quot;font-size:16px&quot;>Iniciar Protocolo de Tontura&lt;/span>&lt;/h3>" isTerminal="true" inputSequences="//@sequence.11">
+    <pathways>H025</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="32508" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Atentar para sinais de alarme" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Atentar para sinais de alarme, como desidrata&amp;ccedil;&amp;atilde;o, hipoperfus&amp;atilde;o e excluir diagn&amp;oacute;sticos diferenciais como obstru&amp;ccedil;&amp;atilde;o intestinal maligna, met&amp;aacute;stase em SNC, gastroenterite.&lt;/span>&lt;/p>" inputSequences="//@sequence.12" outputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32509" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Exames" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.14">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="N&#xe1;useas / V&#xf4;mitos" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="N&#xe1;useas / V&#xf4;mitos" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="N&#xe1;useas / V&#xf4;mitos" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="N&#xe1;useas / V&#xf4;mitos" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="N&#xe1;useas / V&#xf4;mitos" clinical_indication="n/a"/>
+    <medication url="" med_id="41564" id="17377" name="PLAMET 10MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="10" cycles="1" treatement_time="17377" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8179,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="17378" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="17378" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:10,&quot;administracao_diluicao&quot;:&quot;Lento&quot;,&quot;id&quot;:8180,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="32510" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com L&#xed;der Local" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Discutir com l&amp;iacute;der local, ap&amp;oacute;s resultado de exames, necessidade de internamento hospitalar .&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.14"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32511" type="Tratamento" type_verbose="Tratamento" url="" name="[Ingest&#xe3;o &#xc1;lcool] Glicemia" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Checar sinais vitais, glicemia capilar. Se n&amp;atilde;o houver sinais de alarme, realizar medica&amp;ccedil;&amp;atilde;o endovenosa e alta hospitalar .&lt;/span>&lt;/p>" inputSequences="//@sequence.15" outputSequences="//@sequence.17">
+    <examination url="GLICEMIA P/ FITA" exam_id="99011973" limb_side="" quantity="1" reason="N&#xe1;useas e v&#xf4;mitos em paciente obst&#xe9;trica" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32512" type="Receita" type_verbose="Receita" url="" name="[Ingest&#xe3;o &#xc1;lcool] Receita" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Oferecer ao paciente encaminhamento para psiquiatria em &lt;u>caso de etilismo cr&amp;ocirc;nico ou patol&amp;oacute;gico&lt;/u>.&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.21 //@sequence.22">
+    <item id="11358" url="" name="Omeprazol 20mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar em jejum"/>
+    <item id="11359" url="" name="Omeprazol 40mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar em jejum"/>
+    <item id="11360" url="" name="Domperidona 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="11401" url="" name="Digeplus" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="11402" url="" name="Ondansetrona 4mg" med_code="-1" presentation="COMP" access="1" quantity="2" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas."/>
+    <item id="11403" url="" name="Bromoprida 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32513" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar Glicemia" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.20 //@sequence.21">
+    <questions text="Glicemia > 70?" url="" id="15463">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_glicemia_maior_70" id="31340" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="32514" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Hiper&#xea;mese Grav&#xed;dica] Conduta" description="Discutir exames juntamente com l&#xed;der de equipe." isTerminal="true" inputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="32515" type="Receita" type_verbose="Receita" url="" name="[Sem causa aparente] Receita" description="" isTerminal="true" inputSequences="//@sequence.23">
+    <item id="11404" url="" name="Ondansetrona 4mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 02 comprimidos de 08/08h se n&#xe1;useas."/>
+    <item id="11405" url="" name="Bromoprida 10mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 08/08h se n&#xe1;useas."/>
+    <item id="11406" url="" name="Buscopan Composto" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 08/08h se n&#xe1;useas ou v&#xf4;mitos."/>
+    <item id="11407" url="" name="Ranitidina 150mg" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 12/12h por 07 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32516" type="Tratamento" type_verbose="Tratamento" url="" name="[N&#xe1;useas e V&#xf4;mitos sem causa aparente] Conduta" description="&lt;p>Realizar medica&amp;ccedil;&amp;otilde;es e observar quadro cl&amp;iacute;nico do paciente. Se n&amp;atilde;o houver melhora, indica-se discutir causas com l&amp;iacute;der local e reavaliar se h&amp;aacute; necessidade de maior avalia&amp;ccedil;&amp;atilde;o.&lt;/p>" inputSequences="//@sequence.16" outputSequences="//@sequence.23">
+    <medication url="" med_id="41564" id="17379" name="PLAMET 10MG AMPL 2 ML" brand="" unit="MG" access="5" daily_dosage="10" cycles="1" treatement_time="17379" standard="null"/>
+    <medication url="" med_id="40088" id="17380" name="DRAMIN B6  IM AMPL 1 ML" brand="" unit="ML" access="5" daily_dosage="1" cycles="1" treatement_time="17380" standard="null"/>
+    <medication url="" med_id="49581" id="17481" name="PLASIL AMPL 2 ML" brand="" unit="ML" access="5" daily_dosage="2" cycles="1" treatement_time="17481" standard="null"/>
+    <medication url="" med_id="126122" id="17482" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="17482" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:8201,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="41564" id="17483" name="PLAMET 10MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="10" cycles="1" treatement_time="17483" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8202,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="49581" id="17484" name="PLASIL AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="17484" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8203,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32517" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Glicemia" description="" inputSequences="//@sequence.17" outputSequences="//@sequence.5 //@sequence.18">
+    <questions text="Glicemia &lt; 70?" url="" id="15464">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_abaixo_de_70" id="31401" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32518" type="Tratamento" type_verbose="Tratamento" url="" name="[Ingest&#xe3;o &#xc1;lcool] Conduta (sem glicose)" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Checar sinais vitais, glicemia capilar. Se n&amp;atilde;o houver sinais de alarme, realizar medica&amp;ccedil;&amp;atilde;o endovenosa e alta hospitalar .&lt;/span>&lt;/p>" inputSequences="//@sequence.5" outputSequences="//@sequence.22">
+    <medication url="" med_id="43826" id="17485" name="SORO GLICOFISIOLOGIC 1:1 500ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17485" standard="null"/>
+    <medication url="" med_id="41564" id="17486" name="PLAMET 10MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="10" cycles="1" treatement_time="17486" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8204,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="17487" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="17487" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:10,&quot;administracao_diluicao&quot;:&quot;Lento&quot;,&quot;id&quot;:8205,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="39144" id="17488" name="ANTAK AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="17488" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2 ml + 18 ml AD&quot;,&quot;id&quot;:8206,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2048}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32519" type="Tratamento" type_verbose="Tratamento" url="" name="[&#xca;mese Gravidica] Tratamento" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.19">
+    <medication url="" med_id="126122" id="17489" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="17489" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:8207,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="40088" id="17490" name="DRAMIN B6  IM AMPL 1 ML" brand="" unit="ML" access="5" daily_dosage="1" cycles="1" treatement_time="17490" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32520" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Hiper&#xea;mese Grav&#xed;dica" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Presen&#xe7;a de n&#xe1;useas e v&#xf4;mitos persistentes e incoerc&#xed;veis que levam &#xe0; desidrata&#xe7;&#xe3;o, altera&#xe7;&#xf5;es eletrol&#xed;ticas, cetonuria e perda maior que 5% do peso corporal, quanto exclu&#xed;dos outros diagn&#xf3;sticos diferenciais?" url="" id="15465">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiperemese_gravitica" id="31402" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32521" type="Tratamento" type_verbose="Tratamento" url="" name="[Hiper&#xea;mese Grav&#xed;dica] Tratamento" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.3">
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Hiper&#xea;mese Grav&#xed;dica" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Hiper&#xea;mese Grav&#xed;dica" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Hiper&#xea;mese Grav&#xed;dica" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Hiper&#xea;mese Grav&#xed;dica" clinical_indication="n/a"/>
+    <examination url="GLICEMIA P/ FITA" exam_id="99011973" limb_side="" quantity="1" reason="N&#xe1;useas e v&#xf4;mitos em paciente obst&#xe9;trica" clinical_indication="n/a"/>
+    <medication url="" med_id="43800" id="17491" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17491" standard="null"/>
+    <medication url="" med_id="43800" id="17492" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17492" standard="null"/>
+    <medication url="" med_id="126122" id="17493" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="17493" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:8208,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+  </element>
+  <sequence inputStep="//@element.14" outputStep="//@element.0" id="32522" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description="Incondicional"/>
+  <sequence inputStep="//@element.22" outputStep="//@element.21" id="32523" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (Com hiper&#xea;mese grav&#xed;dica)" description="Com hiper&#xea;mese grav&#xed;dica">
+    <operation name="Com hiper&#xea;mese grav&#xed;dica" Operator="affirmation" id="31404">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiperemese_gravitica" id="31402" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.21" id="32524" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (Sem hiper&#xea;mese grav&#xed;dica)" description="Sem hiper&#xea;mese grav&#xed;dica">
+    <operation name="Sem hiper&#xea;mese grav&#xed;dica" id="31405">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiperemese_gravitica" id="31402" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.22" id="32525" type="Sequencia" type_verbose="Sequencia" url="" name="S26" description="Incondicional"/>
+  <sequence inputStep="//@element.21" outputStep="//@element.2" id="32526" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (&#xca;mese Grav&#xed;dica)" description="Hiper&#xea;mese Grav&#xed;dica">
+    <operation name="&#xca;mese Grav&#xed;dica" Operator="affirmation" id="31406">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="emese_gravidica" id="31339" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="32527" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (glicemia >= 70)" description="glicemia >= 70">
+    <operation name="glicemia >= 70" id="31407">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_abaixo_de_70" id="31401" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="32528" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="-">
+    <operation name="Cefaleia" Operator="affirmation" id="31408">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_nauseas_vomitos" id="31331" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="32529" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-">
+    <operation name="Dor_abdominal" Operator="affirmation" id="31409">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_abdominal_nauseas_vomitos" id="31332" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="32530" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-">
+    <operation name="Dor_toracica" Operator="affirmation" id="31410">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_toracico_nauseas_vomitos" id="31333" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="32531" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-">
+    <operation name="Diarreia" Operator="affirmation" id="31411">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diarreia_nauseas_vomitos" id="31334" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.2" id="32532" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-">
+    <operation name="Dor_lombar" Operator="affirmation" id="31412">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_lombar_nauseas_vomitos" id="31335" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="32533" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="-">
+    <operation name="Tontura" Operator="affirmation" id="31413">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tontura_nauseas_vomitos" id="31336" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.2" id="32534" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-">
+    <operation name="Tratamento_quimioterapico" Operator="affirmation" id="31414">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_quimioterapico_nauseas_vomitos" id="31337" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="32535" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="-"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="32536" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.2" id="32537" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-">
+    <operation name="Ingest&#xe3;o_Alcool" Operator="affirmation" id="31415">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ingestao_alcool_nauseas_vomitos" id="31338" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.2" id="32538" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="-">
+    <operation name="Sem_causas_aparentes" Operator="affirmation" id="31416">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sem_causa_aparente_nauseas_vomitos" id="31330" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.12" id="32539" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.18" id="32540" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (glicemia &lt; 70)" description="glicemia &lt; 70">
+    <operation name="glicemia &lt; 70" Operator="affirmation" id="31417">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_abaixo_de_70" id="31401" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.20" id="32541" type="Sequencia" type_verbose="Sequencia" url="" name="S19" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.14" id="32542" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (Glicemia &lt; 70)" description="Glicemia &lt; 70">
+    <operation name="Glicemia &lt; 70" id="31418">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_glicemia_maior_70" id="31340" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.14" id="32543" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (Glicemia >= 70)" description="Glicemia >= 70">
+    <operation name="Glicemia >= 70" Operator="affirmation" id="31419">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_glicemia_maior_70" id="31340" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.19" id="32544" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="Incondicional"/>
+  <sequence inputStep="//@element.16" outputStep="//@element.17" id="32545" type="Sequencia" type_verbose="Sequencia" url="" name="S27" description="Incondicional"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sem_causa_aparente_nauseas_vomitos" id="31330" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_nauseas_vomitos" id="31331" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_abdominal_nauseas_vomitos" id="31332" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_toracico_nauseas_vomitos" id="31333" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diarreia_nauseas_vomitos" id="31334" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_lombar_nauseas_vomitos" id="31335" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tontura_nauseas_vomitos" id="31336" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_quimioterapico_nauseas_vomitos" id="31337" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ingestao_alcool_nauseas_vomitos" id="31338" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="emese_gravidica" id="31339" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_glicemia_maior_70" id="31340" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_abaixo_de_70" id="31401" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiperemese_gravitica" id="31402" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="70" id="31403" weight="1" value="70.0"/>
+</pathwayMetamodel:Pathway>

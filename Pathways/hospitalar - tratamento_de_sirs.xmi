@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Tratamento de SIRS" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32375" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Identificar foco infeccioso" description="Defina o foco infeccioso do paciente para uma melhor condu&#xe7;&#xe3;o do tratamento" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2 //@sequence.3 //@sequence.4 //@sequence.5 //@sequence.6 //@sequence.7">
+    <questions text="Pneumonia Comunit&#xe1;ria" url="" id="15397">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_comun" id="31284" weight="1" value="false"/>
+    </questions>
+    <questions text="Pneumonia Hospitalar" url="" id="15398">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_hosp" id="31285" weight="1" value="false"/>
+    </questions>
+    <questions text="Cistite Complicada" url="" id="15399">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_cistite" id="31286" weight="1" value="false"/>
+    </questions>
+    <questions text="Pielonefrite" url="" id="15400">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pielonefrite" id="31287" weight="1" value="false"/>
+    </questions>
+    <questions text="Meningite" url="" id="15421">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_meningite" id="31288" weight="1" value="false"/>
+    </questions>
+    <questions text="Partes Moles / Pele" url="" id="15422">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_partes_moles" id="31289" weight="1" value="false"/>
+    </questions>
+    <questions text="Foco Abdominal" url="" id="15423">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_abdominal" id="31290" weight="1" value="false"/>
+    </questions>
+    <questions text="Neutropenia Febril" url="" id="15424">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_neutropenia" id="31291" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32376" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Foco Pneumonia Comunit&#xe1;ria" description="Exames Foco Pneumonia Comunit&#xe1;ria" inputSequences="//@sequence.0" outputSequences="//@sequence.8">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32377" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Foco Pneumonia Hospitalar" description="Exames Foco Pneumonia Hospitalar" inputSequences="//@sequence.1" outputSequences="//@sequence.10">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32378" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Foco Cistite Complicada" description="Exames Foco Cistite Complicada" inputSequences="//@sequence.2" outputSequences="//@sequence.16">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SUMARIO DE URINA" exam_id="99130367" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32379" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Foco Pielonefrite" description="Exames Foco Pielonefrite" inputSequences="//@sequence.3" outputSequences="//@sequence.20">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SUMARIO DE URINA" exam_id="99130367" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32380" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Foco Meningite" description="Exames Foco Meningite" inputSequences="//@sequence.4" outputSequences="//@sequence.24">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32401" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Foco Partes Moles / Pele" description="Exames Foco Partes Moles / Pele" inputSequences="//@sequence.5" outputSequences="//@sequence.28">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32402" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Foco Abdominal" description="Exames Foco Abdominal" inputSequences="//@sequence.6" outputSequences="//@sequence.32">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="FOSFATASE ALCALINA" exam_id="28010850" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="PROVAS D/FUNC HEPATICA INCL BILIRRUBINAS" exam_id="28140079" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="AMILASE  (SANGUE)" exam_id="28010256" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="LIPASE" exam_id="28011082" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32403" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Foco Neutropenia Febril" description="Exames Foco Neutropenia Febril" inputSequences="//@sequence.7" outputSequences="//@sequence.36">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32404" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Pneumonia Comunit&#xe1;ria] Calcular SOFA" description="realize o c&#xe1;culo do indice sofa para seguir com o tratamento adequado para o paciente" inputSequences="//@sequence.8" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Escore SOFA >= 2?" url="" id="15425">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_comun_sofa" id="31292" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32405" type="Tratamento" type_verbose="Tratamento" url="" name="[Pneumonia Comunit&#xe1;ria] Iniciar Tratamento" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala SOFA. Inicie o tratamento do paciente e discuta o caso com l&#xed;der local." inputSequences="//@sequence.14" outputSequences="//@sequence.9">
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <medication url="" med_id="85561" id="17402" name="UNASYN 3GR FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="3" cycles="1" treatement_time="17402" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml SF 0,9%&quot;,&quot;id&quot;:8167,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:198}"/>
+    <medication url="" med_id="111473" id="17403" name="MAXCEF 2GR FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="17403" standard="{&quot;quantidade_dosagem&quot;:2,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;GR&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8155,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:607}"/>
+    <medication url="" med_id="43800" id="17404" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17404" standard="null"/>
+    <medication url="" med_id="43800" id="17405" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17405" standard="null"/>
+    <medication url="" med_id="43800" id="17406" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17406" standard="null"/>
+    <medication url="" med_id="43800" id="17407" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17407" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="32406" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Aviso: Encaminhar paciente ao l&#xed;der local" description="* ATEN&#xc7;&#xc3;O:&#xA;Dar seguimento ao tratamento junto ao l&#xed;der local:&#xA;&#xA;- MONITORIZA&#xc7;&#xc3;O PA + OXIMETRIA DE PULSO (SE PAM&lt; 65 OU LACTATO > 18MG/DL)&#xA;- PASSAR SVD E ACOMPANHAR D&#xc9;BITO URIN&#xc1;RIO (ALVO 0,5ML/KG/H)" isTerminal="true" inputSequences="//@sequence.9 //@sequence.13 //@sequence.19 //@sequence.23 //@sequence.27 //@sequence.31 //@sequence.35 //@sequence.39"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32407" type="Tratamento" type_verbose="Tratamento" url="" name="[Pneumonia Hospitalar] Iniciar Tratamento" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala SOFA. Inicie o tratamento do paciente e discuta o caso com l&#xed;der local." inputSequences="//@sequence.11" outputSequences="//@sequence.13">
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo tratamento de SIRS" clinical_indication="Protocolo tratamento de SIRS"/>
+    <medication url="" med_id="111473" id="17408" name="MAXCEF 2GR FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="17408" standard="{&quot;quantidade_dosagem&quot;:2,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;GR&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8168,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:607}"/>
+    <medication url="" med_id="118759" id="17409" name="TAZOCIN 4,5GR FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="17409" standard="{&quot;quantidade_dosagem&quot;:4,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;GR&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 100 ml SF 0,9%&quot;,&quot;id&quot;:8169,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:2694}"/>
+    <medication url="" med_id="43800" id="17410" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17410" standard="null"/>
+    <medication url="" med_id="43800" id="17411" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17411" standard="null"/>
+    <medication url="" med_id="43800" id="17412" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17412" standard="null"/>
+    <medication url="" med_id="43800" id="17413" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17413" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32408" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Pneumonia Hospitalar] Calcular SOFA" description="Realize o c&#xe1;culo do indice sofa para seguir com o tratamento adequado para o paciente" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Escore SOFA >= 2?" url="" id="15426">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_hosp_sofa" id="31293" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32409" type="Tratamento" type_verbose="Tratamento" url="" name="[Cistite Complicada] Iniciar Tratamento" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala SOFA. Inicie o tratamento do paciente e discuta o caso com l&#xed;der local." inputSequences="//@sequence.17" outputSequences="//@sequence.19">
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <medication url="" med_id="118917" id="17414" name="CIPRO 400MG AMPL 1 UD" brand="" unit="MG" access="6" daily_dosage="400" cycles="1" treatement_time="17414" standard="{&quot;quantidade_dosagem&quot;:400,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:200,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 ml = 2 mg&quot;,&quot;id&quot;:8156,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:658}"/>
+    <medication url="" med_id="43800" id="17415" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17415" standard="null"/>
+    <medication url="" med_id="43800" id="17416" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17416" standard="null"/>
+    <medication url="" med_id="43800" id="17417" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17417" standard="null"/>
+    <medication url="" med_id="43800" id="17418" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17418" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32410" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Cistite Complicada] Calcular SOFA" description="Realize o c&#xe1;culo do indice sofa para seguir com o tratamento adequado para o paciente" inputSequences="//@sequence.16" outputSequences="//@sequence.17 //@sequence.18">
+    <questions text="Escore SOFA >= 2?" url="" id="15427">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_cistite_sofa" id="31294" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32411" type="Tratamento" type_verbose="Tratamento" url="" name="[Pielonefrite] Iniciar Tratamento" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala SOFA. Inicie o tratamento do paciente e discuta o caso com l&#xed;der local." inputSequences="//@sequence.21" outputSequences="//@sequence.23">
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <medication url="" med_id="85561" id="17419" name="UNASYN 3GR FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="3" cycles="1" treatement_time="17419" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml SF 0,9%&quot;,&quot;id&quot;:8157,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:198}"/>
+    <medication url="" med_id="43800" id="17420" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17420" standard="null"/>
+    <medication url="" med_id="43800" id="17421" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17421" standard="null"/>
+    <medication url="" med_id="43800" id="17422" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17422" standard="null"/>
+    <medication url="" med_id="43800" id="17423" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17423" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32412" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Pielonefrite] Calcular SOFA" description="Realize o c&#xe1;culo do indice sofa para seguir com o tratamento adequado para o paciente" inputSequences="//@sequence.20" outputSequences="//@sequence.21 //@sequence.22">
+    <questions text="Escore SOFA >= 2?" url="" id="15428">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pielonefrite_sofa" id="31295" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32413" type="Tratamento" type_verbose="Tratamento" url="" name="[Meningite] Iniciar Tratamento" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala SOFA. Inicie o tratamento do paciente e discuta o caso com l&#xed;der local." inputSequences="//@sequence.25" outputSequences="//@sequence.27">
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="1" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <medication url="" med_id="43400" id="17424" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="17424" standard="{&quot;quantidade_dosagem&quot;:1,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;GR&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:50,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8158,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:6,&quot;codigo_principio_ativo&quot;:618}"/>
+    <medication url="" med_id="75116" id="17425" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="17425" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml SF 0,9%&quot;,&quot;id&quot;:8170,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:198}"/>
+    <medication url="" med_id="43800" id="17426" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17426" standard="null"/>
+    <medication url="" med_id="43800" id="17427" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17427" standard="null"/>
+    <medication url="" med_id="43800" id="17428" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17428" standard="null"/>
+    <medication url="" med_id="43800" id="17429" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17429" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32414" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Meningite] Calcular SOFA" description="Realize o c&#xe1;culo do indice sofa para seguir com o tratamento adequado para o paciente" inputSequences="//@sequence.24" outputSequences="//@sequence.25 //@sequence.26">
+    <questions text="Escore SOFA >= 2?" url="" id="15429">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_meningite_sofa" id="31296" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32415" type="Tratamento" type_verbose="Tratamento" url="" name="[Partes Moles / Pele] Iniciar Tratamento" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala SOFA. Inicie o tratamento do paciente e discuta o caso com l&#xed;der local." inputSequences="//@sequence.29" outputSequences="//@sequence.31">
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <medication url="" med_id="75264" id="17430" name="OXACILINA 500 MG FRAP 1 UD" brand="" unit="MG" access="6" daily_dosage="2000" cycles="1" treatement_time="17430" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8171,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1818}"/>
+    <medication url="" med_id="37400" id="17431" name="GENTAMICINA 80 MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="240" cycles="1" treatement_time="17431" standard="{&quot;quantidade_dosagem&quot;:80,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8159,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:1215}"/>
+    <medication url="" med_id="38849" id="17432" name="DALACIN 600 MG AMPL 4 ML" brand="" unit="MG" access="6" daily_dosage="600" cycles="1" treatement_time="17432" standard="{&quot;quantidade_dosagem&quot;:600,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:4,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8160,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:675}"/>
+    <medication url="" med_id="118917" id="17433" name="CIPRO 400MG AMPL 1 UD" brand="" unit="MG" access="6" daily_dosage="400" cycles="1" treatement_time="17433" standard="{&quot;quantidade_dosagem&quot;:400,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:200,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 ml = 2 mg&quot;,&quot;id&quot;:8172,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:658}"/>
+    <medication url="" med_id="43800" id="17434" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17434" standard="null"/>
+    <medication url="" med_id="43800" id="17435" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17435" standard="null"/>
+    <medication url="" med_id="43800" id="17436" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17436" standard="null"/>
+    <medication url="" med_id="43800" id="17437" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17437" standard="null"/>
+    <medication url="" med_id="140749" id="17438" name="PENICILINA CRISTALINA POTASSICA 1MM FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="2" cycles="1" treatement_time="17438" standard="{&quot;quantidade_dosagem&quot;:5000000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;UI&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 8ML AD&quot;,&quot;id&quot;:8181,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1873}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32416" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Partes Moles / Pele] Calcular SOFA" description="Realize o c&#xe1;culo do indice sofa para seguir com o tratamento adequado para o paciente." inputSequences="//@sequence.28" outputSequences="//@sequence.29 //@sequence.30">
+    <questions text="Escore SOFA >= 2?" url="" id="15430">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_partes_moles_sofa" id="31297" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32417" type="Tratamento" type_verbose="Tratamento" url="" name="[Abdominal] Iniciar Tratamento" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala SOFA. Inicie o tratamento do paciente e discuta o caso com l&#xed;der local." inputSequences="//@sequence.33" outputSequences="//@sequence.35">
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <medication url="" med_id="85561" id="17439" name="UNASYN 3GR FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="3" cycles="1" treatement_time="17439" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml SF 0,9%&quot;,&quot;id&quot;:8173,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:198}"/>
+    <medication url="" med_id="118917" id="17440" name="CIPRO 400MG AMPL 1 UD" brand="" unit="MG" access="6" daily_dosage="400" cycles="1" treatement_time="17440" standard="{&quot;quantidade_dosagem&quot;:400,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:200,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 ml = 2 mg&quot;,&quot;id&quot;:8174,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:658}"/>
+    <medication url="" med_id="108324" id="17441" name="METRONIDAZOL 500 MG AMP TUBO 100 ML" brand="" unit="MG" access="6" daily_dosage="500" cycles="1" treatement_time="17441" standard="null"/>
+    <medication url="" med_id="43800" id="17442" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17442" standard="null"/>
+    <medication url="" med_id="43800" id="17443" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17443" standard="null"/>
+    <medication url="" med_id="43800" id="17444" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17444" standard="null"/>
+    <medication url="" med_id="43800" id="17445" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17445" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32418" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Abdominal] Calcular SOFA" description="Realize o c&#xe1;culo do indice sofa para seguir com o tratamento adequado para o paciente." inputSequences="//@sequence.32" outputSequences="//@sequence.33 //@sequence.34">
+    <questions text="Escore SOFA >= 2?" url="" id="15431">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_abdominal_sofa" id="31298" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="32419" type="Tratamento" type_verbose="Tratamento" url="" name="[Neutropenia Febril] Iniciar Tratamento" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala SOFA. Inicie o tratamento do paciente e discuta o caso com l&#xed;der local." inputSequences="//@sequence.37" outputSequences="//@sequence.39">
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SIRS" clinical_indication="Protocolo de tratamento de SIRS"/>
+    <medication url="" med_id="111473" id="17446" name="MAXCEF 2GR FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="17446" standard="{&quot;quantidade_dosagem&quot;:2,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;GR&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8182,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:607}"/>
+    <medication url="" med_id="118759" id="17447" name="TAZOCIN 4,5GR FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="17447" standard="{&quot;quantidade_dosagem&quot;:4,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;GR&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 100 ml SF 0,9%&quot;,&quot;id&quot;:8175,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:2694}"/>
+    <medication url="" med_id="43800" id="17448" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17448" standard="null"/>
+    <medication url="" med_id="43800" id="17449" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17449" standard="null"/>
+    <medication url="" med_id="43800" id="17450" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17450" standard="null"/>
+    <medication url="" med_id="43800" id="17451" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="17451" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32420" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Neutropenia Febril] Calcular SOFA" description="Realize o c&#xe1;culo do indice sofa para seguir com o tratamento adequado para o paciente." inputSequences="//@sequence.36" outputSequences="//@sequence.37 //@sequence.38">
+    <questions text="Escore SOFA >= 2?" url="" id="15432">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_neutropenia_sofa" id="31299" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32421" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Seguir para tratamento de Pneumonia" description="Paciente n&#xe3;o apresentou &#xed;ndice de gravidade segundo crit&#xe9;rios estudados neste momento. Dar continuidade ao protocolo vigente." isTerminal="true" inputSequences="//@sequence.12 //@sequence.15"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="32422" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Seguir para tratamento de ITU Cistite" description="Paciente n&#xe3;o apresentou &#xed;ndice de gravidade segundo crit&#xe9;rios estudados neste momento. Dar continuidade ao protocolo vigente." isTerminal="true" inputSequences="//@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="32423" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Seguir para tratamento de ITU Pielonefrite" description="Paciente n&#xe3;o apresentou &#xed;ndice de gravidade segundo crit&#xe9;rios estudados neste momento. Dar continuidade ao protocolo vigente." isTerminal="true" inputSequences="//@sequence.22"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="32424" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Seguir para tratamento de Neutropenia Febril" description="Paciente n&#xe3;o apresentou &#xed;ndice de gravidade segundo crit&#xe9;rios estudados neste momento. Dar continuidade ao protocolo vigente." isTerminal="true" inputSequences="//@sequence.38"/>
+  <element xsi:type="pathwayMetamodel:Information" id="32425" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Aviso: Sugest&#xe3;o de tratamento para meningite" description="Para pacientes que apresentem evid&#xea;ncias de  Hipertens&#xe3;o Intracraniana ( cl&#xed;nica ou radiol&#xf3;gica ),   n&#xe3;o  sugerimos a realiza&#xe7;&#xe3;o  de pun&#xe7;&#xe3;o lombar,  manter tratamento emp&#xed;rico.&#xA;&#xA;Aguardar resultado dos exames.&#xA;Se houver suspeita de  encefalite  ou meningite viral,  acrescentar  aos exame  j&#xe1; solicitados  os seguintes itens .:&#xA;&#xA;* Isolamento viral para dengue e CKG do l&#xed;quor e do sangue ( avaliar  disponibilidade  do teste no laborat&#xf3;rio )  &#xA;* Sorologia para Herpes do l&#xed;quor&#xA;* PCR s&#xe9;rico para Herpes &#xA;&#xA;Sugerimos ap&#xf3;s Bacterioscopia do LCR.:&#xA;&#xA;* COCO GRAM +: PNEUMOCOCO -- CEFTRIAXONA 2G 12/12H + DEXAMETASONA 4MG EV 6/6H&#xA;* COCOBACILOS GRAM +: LISTERIA -- CEFTRIAXONA 2G 12/12H + AMPICILINA 2G 4/4H&#xA;* DIPLOCOCO GRAM - : MENINGOCOCO -- CEFTRIAXONA 2G 12/12H&#xA;* COCOBACILO GRAM - : HEM&#xd3;FILO -- CEFTRIAXONA 2G 12/12H + DEXAMETASONA&#xA;&#xA;Se n&#xe3;o for evidenciado microorganismo cor&#xe1;vel pelo GRAM, manter o tratamento emp&#xed;rico." isTerminal="true" inputSequences="//@sequence.26"/>
+  <element xsi:type="pathwayMetamodel:Information" id="32426" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Aviso: Sem protocolo definido" description="Sem protocolo definido para o foco em tratamento. Sugere-se discutir o caso com l&#xed;der local para melhor condu&#xe7;&#xe3;o." isTerminal="true" inputSequences="//@sequence.30 //@sequence.34"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="32427" type="Sequencia" type_verbose="Sequencia" url="" name="s2" description="">
+    <operation name="foco_sirs_pneumo_comunitaria" Operator="affirmation" id="31341">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_comun" id="31284" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="32428" type="Sequencia" type_verbose="Sequencia" url="" name="s3" description="">
+    <operation name="foco_sirs_penumo_hospitalar" Operator="affirmation" id="31342">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_hosp" id="31285" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="32429" type="Sequencia" type_verbose="Sequencia" url="" name="s4" description="">
+    <operation name="foco_sirs_cistite" Operator="affirmation" id="31343">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_cistite" id="31286" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.0" id="32430" type="Sequencia" type_verbose="Sequencia" url="" name="s5" description="">
+    <operation name="foco_sirs_pielonefrite" Operator="affirmation" id="31344">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pielonefrite" id="31287" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="32431" type="Sequencia" type_verbose="Sequencia" url="" name="s6" description="">
+    <operation name="foco_sirs_meningite" Operator="affirmation" id="31345">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_meningite" id="31288" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="32432" type="Sequencia" type_verbose="Sequencia" url="" name="s7" description="">
+    <operation name="foco_sirs_partes_moles" Operator="affirmation" id="31346">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_partes_moles" id="31289" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.0" id="32433" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="">
+    <operation name="foco_sirs_abdominal" Operator="affirmation" id="31347">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_abdominal" id="31290" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.0" id="32434" type="Sequencia" type_verbose="Sequencia" url="" name="s10" description="">
+    <operation name="foco_sirs_neutropenia" Operator="affirmation" id="31348">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_neutropenia" id="31291" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.1" id="32435" type="Sequencia" type_verbose="Sequencia" url="" name="s11" description=""/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="32436" type="Sequencia" type_verbose="Sequencia" url="" name="s14" description=""/>
+  <sequence inputStep="//@element.13" outputStep="//@element.2" id="32437" type="Sequencia" type_verbose="Sequencia" url="" name="s15" description=""/>
+  <sequence inputStep="//@element.12" outputStep="//@element.13" id="32438" type="Sequencia" type_verbose="Sequencia" url="" name="s16" description="">
+    <operation name="pneumo_hosp_escore_sofa_maior_igual_dois" Operator="affirmation" id="31349">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_hosp_sofa" id="31293" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.13" id="32439" type="Sequencia" type_verbose="Sequencia" url="" name="s17" description="">
+    <operation name="pneumo_hosp_escore_sofa_menor_dois" id="31350">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_hosp_sofa" id="31293" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.12" id="32440" type="Sequencia" type_verbose="Sequencia" url="" name="s18" description=""/>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="32441" type="Sequencia" type_verbose="Sequencia" url="" name="s19" description="">
+    <operation name="pneumo_comun_escore_sofa_maior_igual_dois" Operator="affirmation" id="31351">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_comun_sofa" id="31292" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.9" id="32442" type="Sequencia" type_verbose="Sequencia" url="" name="s20" description="">
+    <operation name="pneumo_comun_escore_sofa_menor_dois" id="31352">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_comun_sofa" id="31292" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.3" id="32443" type="Sequencia" type_verbose="Sequencia" url="" name="s21" description=""/>
+  <sequence inputStep="//@element.14" outputStep="//@element.15" id="32444" type="Sequencia" type_verbose="Sequencia" url="" name="s22" description="">
+    <operation name="pneumo_cistite_escore_sofa_maior_igual_dois" Operator="affirmation" id="31353">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_cistite_sofa" id="31294" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.15" id="32445" type="Sequencia" type_verbose="Sequencia" url="" name="s23" description="">
+    <operation name="cistite_escore_sofa_menor_dois" id="31354">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_cistite_sofa" id="31294" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.14" id="32446" type="Sequencia" type_verbose="Sequencia" url="" name="s24" description=""/>
+  <sequence inputStep="//@element.17" outputStep="//@element.4" id="32447" type="Sequencia" type_verbose="Sequencia" url="" name="s25" description=""/>
+  <sequence inputStep="//@element.16" outputStep="//@element.17" id="32448" type="Sequencia" type_verbose="Sequencia" url="" name="s26" description="">
+    <operation name="pielonefrite_escore_sofa_maior_igual_dois" Operator="affirmation" id="31355">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pielonefrite_sofa" id="31295" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.17" id="32449" type="Sequencia" type_verbose="Sequencia" url="" name="s27" description="">
+    <operation name="pielonefrite_escore_sofa_menor_dois" id="31356">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pielonefrite_sofa" id="31295" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.16" id="32450" type="Sequencia" type_verbose="Sequencia" url="" name="s28" description=""/>
+  <sequence inputStep="//@element.19" outputStep="//@element.5" id="32451" type="Sequencia" type_verbose="Sequencia" url="" name="s29" description=""/>
+  <sequence inputStep="//@element.18" outputStep="//@element.19" id="32452" type="Sequencia" type_verbose="Sequencia" url="" name="s30" description="">
+    <operation name="meningite_escore_sofa_maior_igual_dois" Operator="affirmation" id="31357">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_meningite_sofa" id="31296" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.19" id="32453" type="Sequencia" type_verbose="Sequencia" url="" name="s31" description="">
+    <operation name="meningite_escore_sofa_menor_dois" id="31358">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_meningite_sofa" id="31296" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.18" id="32454" type="Sequencia" type_verbose="Sequencia" url="" name="s32" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.6" id="32455" type="Sequencia" type_verbose="Sequencia" url="" name="s33" description=""/>
+  <sequence inputStep="//@element.20" outputStep="//@element.21" id="32456" type="Sequencia" type_verbose="Sequencia" url="" name="s34" description="">
+    <operation name="partes_moles_escore_sofa_maior_igual_dois" Operator="affirmation" id="31359">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_partes_moles_sofa" id="31297" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.31" outputStep="//@element.21" id="32457" type="Sequencia" type_verbose="Sequencia" url="" name="s35" description="">
+    <operation name="partes_moles_escore_sofa_menor_dois" id="31360">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_partes_moles_sofa" id="31297" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.20" id="32458" type="Sequencia" type_verbose="Sequencia" url="" name="s36" description=""/>
+  <sequence inputStep="//@element.23" outputStep="//@element.7" id="32459" type="Sequencia" type_verbose="Sequencia" url="" name="s37" description=""/>
+  <sequence inputStep="//@element.22" outputStep="//@element.23" id="32460" type="Sequencia" type_verbose="Sequencia" url="" name="s38" description="">
+    <operation name="abdominal_escore_sofa_maior_igual_dois" Operator="affirmation" id="31361">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_abdominal_sofa" id="31298" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.31" outputStep="//@element.23" id="32461" type="Sequencia" type_verbose="Sequencia" url="" name="s39" description="">
+    <operation name="abdominal_escore_sofa_menor_dois" id="31362">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_abdominal_sofa" id="31298" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.22" id="32462" type="Sequencia" type_verbose="Sequencia" url="" name="s40" description=""/>
+  <sequence inputStep="//@element.25" outputStep="//@element.8" id="32463" type="Sequencia" type_verbose="Sequencia" url="" name="s41" description=""/>
+  <sequence inputStep="//@element.24" outputStep="//@element.25" id="32464" type="Sequencia" type_verbose="Sequencia" url="" name="s42" description="">
+    <operation name="neutropenia_escore_sofa_maior_igual_dois" Operator="affirmation" id="31363">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_neutropenia_sofa" id="31299" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.29" outputStep="//@element.25" id="32465" type="Sequencia" type_verbose="Sequencia" url="" name="s43" description="">
+    <operation name="neutropenia_escore_sofa_menor_dois" id="31364">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_neutropenia_sofa" id="31299" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.24" id="32466" type="Sequencia" type_verbose="Sequencia" url="" name="s44" description=""/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_comun" id="31284" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_hosp" id="31285" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_cistite" id="31286" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pielonefrite" id="31287" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_meningite" id="31288" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_partes_moles" id="31289" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_abdominal" id="31290" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_neutropenia" id="31291" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_comun_sofa" id="31292" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pneumo_hosp_sofa" id="31293" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_cistite_sofa" id="31294" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_pielonefrite_sofa" id="31295" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_meningite_sofa" id="31296" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_partes_moles_sofa" id="31297" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_abdominal_sofa" id="31298" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sirs_neutropenia_sofa" id="31299" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="31300" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

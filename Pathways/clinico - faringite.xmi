@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[M&#xe9;dico da Fam&#xed;lia] Faringite" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7312" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Centor Score" description="&lt;p>Calcular centor score (caso o paciente apresente sintomas de urg&amp;ecirc;ncia, encaminhar&amp;aacute; diretamente)&lt;/p>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.21">
+    <questions text="Febre" url="" id="3095">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_febre" id="5699" weight="1" value="false"/>
+    </questions>
+    <questions text="Aus&#xea;ncia de tosse" url="" id="3096">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_ausencia_de_tosse" id="5700" weight="1" value="false"/>
+    </questions>
+    <questions text="Adenomegalia cervical anterior blanda" url="" id="3097">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_adenomegalia" id="5701" weight="1" value="false"/>
+    </questions>
+    <questions text="Edema ou exsudado de amigdala" url="" id="3098">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_edema" id="5702" weight="1" value="false"/>
+    </questions>
+    <questions text="3 a 14 anos" url="" id="3099">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_3_a_14_anos" id="5703" weight="1" value="false"/>
+    </questions>
+    <questions text="15 a 44 anos" url="" id="3100">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_15_a_44_anos" id="5704" value="false"/>
+    </questions>
+    <questions text="Maior ou igual a 45 anos" url="" id="3101">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_maior_ou_igual_a_45_anos" id="5705" weight="-1" value="false"/>
+    </questions>
+    <questions text="Abscesso Periamigdaliano  (CID J 36)" url="" id="3102">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_I" id="5706" weight="1" value="false"/>
+    </questions>
+    <questions text="Desidrata&#xe7;&#xe3;o Moderada, Grave ou Severa" url="" id="3103">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_II" id="5707" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7313" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Viral] Consulta Pediatrica?" description="A consulta &#xe9; pedi&#xe1;trica?" inputSequences="//@sequence.0" outputSequences="//@sequence.2 //@sequence.19">
+    <questions text="Esta consulta &#xe9; pedi&#xe1;trica?" url="" id="3104">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="consulta_pediatrica" id="5708" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7314" type="Receita" type_verbose="Receita" url="" name="[Viral] Tratamento Adulto" description="Tratamento Adulto" inputSequences="//@sequence.2" outputSequences="//@sequence.9">
+    <item id="14132" url="" name="PARACETAMOL" med_code="-296562332" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="14133" url="" name="DIPIRONA SODICA" med_code="-2022350285" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7315" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Infeccao Estreprococica] Consulta Pedi&#xe1;trica?" description="Infec&#xe7;&#xe3;o Estreprococica, ou Valvulopatia card&#xed;aca ou Febre Reum&#xe1;tica ou Carditis" inputSequences="//@sequence.1" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Esta consulta &#xe9; pedi&#xe1;trica?" url="" id="3105">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="infec_estrep_consulta_pediatrica" id="5709" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7316" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Faringite Estreptococica] Pediatrico - Alegia a Penicilina?" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Este paciente &#xe9; al&#xe9;rgico a penicilina?" url="" id="3106">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pediatrico_alergia_penicilina" id="5710" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7317" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Infeccao Estreprococica] Adulto - Alergia a Penicilina?" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Este paciente &#xe9; al&#xe9;rgico a penicilina?" url="" id="3107">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="adulto_alergia_penicilina" id="5711" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7318" type="Receita" type_verbose="Receita" url="" name="[Adulto - Alergico a Penicilina] Tratamento" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.10">
+    <item id="14134" url="" name="PARACETAMOL" med_code="1854823454" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="14135" url="" name="IBUPROFENO" med_code="-296562185" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="14136" url="" name="AMOXICILINA" med_code="1462078884" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="14137" url="" name="AMOXICILINA" med_code="1854810410" presentation="-" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7319" type="Receita" type_verbose="Receita" url="" name="[Adulto - N&#xe3;o al&#xe9;rgico a Penicilina] Tratamento" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.11">
+    <item id="14138" url="" name="PARACETAMOL" med_code="1854823454" presentation="-" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="14139" url="" name="IBUPROFENO" med_code="-1921646732" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="14140" url="" name="BENZETACIL" med_code="1462573489" presentation="FRAP" access="5" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica"/>
+    <item id="14141" url="" name="AMOXICILINA" med_code="1462078915" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7320" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Definir Encaminhamentos" description="Avaliar sintomas para definir necessidade de encaminhamentos" inputSequences="//@sequence.9 //@sequence.10 //@sequence.11 //@sequence.12 //@sequence.13 //@sequence.20" outputSequences="//@sequence.14 //@sequence.15 //@sequence.18">
+    <questions text="Presen&#xe7;a de membrana  branca ou acinzentada em Faringe? Suspeitar de Difteria: encaminhar Urg&#xea;ncia" url="" id="3108">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_difteria" id="5712" weight="1" value="false"/>
+    </questions>
+    <questions text="Hist&#xf3;rico de 07 ou mais epis&#xf3;dios de amigdalites aguda no &#xfa;ltimo ano: encaminhar ao Otorrinolaringologista" url="" id="3109">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="7_ou_mais_episodios" id="5713" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente pedi&#xe1;trico com obesidade ou desnutri&#xe7;&#xe3;o?" url="" id="3110">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="imc_irregular" id="5714" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7321" type="Processo" type_verbose="Processo" url="" name="Encaminhar para Nutri&#xe7;&#xe3;o" description="Encaminhamento para Nutricionista" inputSequences="//@sequence.14" outputSequences="//@sequence.16">
+    <action id="521" process_id="7321" service="encaminhar_especialidade" description="Encaminhamento para Nutricionista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7322" type="Processo" type_verbose="Processo" url="" name="Encaminhar para Otorrino" description="Encaminhamento para Otorrinolaringologista" inputSequences="//@sequence.15" outputSequences="//@sequence.17">
+    <action id="522" process_id="7322" service="encaminhar_especialidade" description="Encaminhamento para Especialidade Otorrinolaringologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7323" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Orienta&#xe7;&#xe3;o de retorno" description="Orientar sobre retorno do paciente caso n&#xe3;o haja melhora ou piora dos sintomas" isTerminal="true" inputSequences="//@sequence.16 //@sequence.17 //@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:Information" id="7324" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Viral] Tratamento Pedi&#xe1;trico" description="&lt;p>&amp;nbsp;&amp;nbsp; &amp;nbsp;Paracetamol Gotas ou Xarope :10 -15 mg/kg &amp;nbsp;dose , VO, a cada 6/6 horas por por 03 dias ,&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;Ibuprofeno Gotas ou Xarope : 05- 10 mg/kg dose, VO, &amp;nbsp;a cada &amp;nbsp;6/6 horas por 03 dias.&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;Dipirona Gotas ou Xarope : 20/25 mg/kg dose, VO, a cada &amp;nbsp;6/6 horas por 03 dias&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;strong>[ATEN&amp;Ccedil;&amp;Atilde;O]&lt;/strong>: Calcular dose apropriada conforme peso do paciente e solicitar medica&amp;ccedil;&amp;atilde;o via conduta&amp;nbsp;&lt;br />&#xA;&amp;nbsp;&amp;nbsp; &amp;nbsp;complementar no menu lateral do sistema.&lt;/p>" inputSequences="//@sequence.19" outputSequences="//@sequence.20"/>
+  <element xsi:type="pathwayMetamodel:Information" id="7326" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Infantil - Al&#xe9;rgico a Penicilina] Tratamento" description="&lt;p>[Paciente Pedi&amp;aacute;trico] Receitar as seguintes medica&amp;ccedil;&amp;otilde;es:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Azitromicina 12mg/kg pro dia 1 vez ao dia (M&amp;aacute;xima 500 mg/dia) por 5 dias&lt;/li>&#xA;&#x9;&lt;li>Clindamicina 20mg/kd por dia de 8/8h (M&amp;aacute;xima 300mg/dose) por 10 dias&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/strong>&lt;/u>: Calcular a dosagem de cada medica&amp;ccedil;&amp;atilde;o conforme peso do paciente e solicitar via conduta complementar no menu lateral.&lt;/p>" inputSequences="//@sequence.5" outputSequences="//@sequence.12"/>
+  <element xsi:type="pathwayMetamodel:Information" id="7327" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Infantil - N&#xe3;o Al&#xe9;rgico a Penicilina] Tratamento" description="&lt;p>[Paciente Pedi&amp;aacute;trico]&lt;/p>&#xA;&#xA;&lt;p>Receitar as seguintes medica&amp;ccedil;&amp;otilde;es:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Azitromicina 12mg/kg por dia 1 vez por dia (M&amp;aacute;xima 500 mg/dia) por 5 dias&lt;/li>&#xA;&#x9;&lt;li>Clindamicina 20mg/kd por dia&amp;nbsp; de 8/8h&amp;nbsp;(M&amp;aacute;xima 300mg/dose)&amp;nbsp;por 10 dias&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Anatibiotico &amp;nbsp;terapia :&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Se &amp;lt; de 27 kg - Peniciina G &amp;nbsp;benzatina 600,000 U IM &amp;nbsp;uma s&amp;oacute; dose&lt;/li>&#xA;&#x9;&lt;li>Se &amp;gt;=&amp;nbsp;a&amp;nbsp;27 kg - Peniciina G &amp;nbsp;benzatina 600,000 U IM &amp;nbsp;uma s&amp;oacute; dose &amp;ndash; &amp;gt; de 27 &amp;nbsp;Kg&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Ou&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Se &amp;lt; de 27 kg - Amoxicilina Suspens&amp;atilde;o 40mg/kg por dia de 8/8h por 10 dias&lt;/li>&#xA;&#x9;&lt;li>Se &amp;gt;=&amp;nbsp;de 27 kg -&amp;nbsp;Amoxicilina 250mg/doses de 12/12h por 10 dias&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/strong>&lt;/u>: Calcular a dosagem de cada medica&amp;ccedil;&amp;atilde;o conforme peso do paciente e solicitar via conduta complementar no menu lateral.&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:Process" id="7328" type="Processo" type_verbose="Processo" url="" name="Encaminhar para Urg&#xea;ncia" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Aten&amp;ccedil;&amp;atilde;o&lt;br />&#xA;Encaminhar para Urg&amp;ecirc;ncia&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.21">
+    <action id="523" process_id="7328" service="encaminhar_urgencia_msf" description="Encaminhar"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="7329" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Infeccao Viral)" description="Infeccao Viral">
+    <operation name="Centor Score &lt; 2 &amp; sem urg&#xea;ncia" Operator="and" id="5723">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Centor Score &lt; 2" Operator="lessThan" id="5719">
+        <operand xsi:type="pathwayMetamodel:Operation" name="CENTOR SCORE" Operator="addition" id="5717">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_febre" id="5699" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_ausencia_de_tosse" id="5700" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_adenomegalia" id="5701" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_edema" id="5702" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_3_a_14_anos" id="5703" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_15_a_44_anos" id="5704" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_maior_ou_igual_a_45_anos" id="5705" weight="-1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5715" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Criterios Urgencia &lt; 1" Operator="lessThan" id="5722">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Criterios Urgencia" Operator="addition" id="5721">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_I" id="5706" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_II" id="5707" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5716" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="7330" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Infec&#xe7;&#xe3;o Estreptoc&#xf3;cica)" description="Infec&#xe7;&#xe3;o Estreptoc&#xf3;cica">
+    <operation name="Centor Score >= 2 &amp; sem urg&#xea;ncia" Operator="and" id="5724">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Centor Score >= 2" Operator="greaterOrEqual" id="5720">
+        <operand xsi:type="pathwayMetamodel:Operation" name="CENTOR SCORE" Operator="addition" id="5717">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_febre" id="5699" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_ausencia_de_tosse" id="5700" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_adenomegalia" id="5701" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_edema" id="5702" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_3_a_14_anos" id="5703" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_15_a_44_anos" id="5704" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_maior_ou_igual_a_45_anos" id="5705" weight="-1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5715" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Criterios Urgencia &lt; 1" Operator="lessThan" id="5722">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Criterios Urgencia" Operator="addition" id="5721">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_I" id="5706" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_II" id="5707" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5716" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="7331" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Adulto)" description="Adulto">
+    <operation name="adulto" id="5725">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="consulta_pediatrica" id="5708" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="7332" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Pediatrico)" description="Pediatrico">
+    <operation name="pediatrico" Operator="affirmation" id="5726">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="infec_estrep_consulta_pediatrica" id="5709" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="7333" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Adulto)" description="Adulto">
+    <operation name="adulto" id="5727">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="infec_estrep_consulta_pediatrica" id="5709" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.4" id="7334" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Com alergia)" description="Com alergia">
+    <operation name="pediatrico alergico" Operator="affirmation" id="5728">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pediatrico_alergia_penicilina" id="5710" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.4" id="7335" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (Sem alergia)" description="Sem alergia">
+    <operation name="pediatrico n&#xe3;o alergico" id="5729">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pediatrico_alergia_penicilina" id="5710" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="7336" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Com alergia)" description="Com alergia">
+    <operation name="adulto alergico" Operator="affirmation" id="5730">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="adulto_alergia_penicilina" id="5711" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="7337" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (Sem alergia)" description="Sem alergia">
+    <operation name="adulto n&#xe3;o alergico" id="5731">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="adulto_alergia_penicilina" id="5711" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="7338" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="7339" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="7340" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.13" id="7341" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.14" id="7342" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="7343" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (imc irregular)" description="Encaminhar ao nutricionista">
+    <operation name="imc irregular" Operator="affirmation" id="5732">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="imc_irregular" id="5714" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="7344" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (otorrino)" description="Encaminhar ao otorrino">
+    <operation name="encaminhar otorrino" Operator="affirmation" id="5733">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="7_ou_mais_episodios" id="5713" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="7345" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="7346" type="Sequencia" type_verbose="Sequencia" url="" name="S21" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.8" id="7347" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (sem encaminhamentos)" description="sem encaminhamentos">
+    <operation name="sem encaminhamentos" id="5734">
+      <operand xsi:type="pathwayMetamodel:Operation" name="total encaminhamentos" Operator="or" id="5718">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_difteria" id="5712" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="7_ou_mais_episodios" id="5713" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="imc_irregular" id="5714" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.1" id="7348" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Pediatrico)" description="S3 (Pediatrico)">
+    <operation name="pediatrico" Operator="affirmation" id="5735">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="consulta_pediatrica" id="5708" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.12" id="7349" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="S11"/>
+  <sequence inputStep="//@element.15" outputStep="//@element.0" id="7350" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (Com crit&#xe9;rios para urg&#xea;ncia)" description="Com crit&#xe9;rios para urg&#xea;ncia">
+    <operation name="Criterios Urgencia >= 1" Operator="greaterOrEqual" id="5736">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Criterios Urgencia" Operator="addition" id="5721">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_I" id="5706" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_II" id="5707" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5716" weight="1"/>
+    </operation>
+  </sequence>
+  <operation name="CENTOR SCORE" Operator="addition" id="5717">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_febre" id="5699" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_ausencia_de_tosse" id="5700" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_adenomegalia" id="5701" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_edema" id="5702" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_3_a_14_anos" id="5703" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_15_a_44_anos" id="5704" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_maior_ou_igual_a_45_anos" id="5705" weight="-1" value="false"/>
+  </operation>
+  <operation name="total encaminhamentos" Operator="or" id="5718">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_difteria" id="5712" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="7_ou_mais_episodios" id="5713" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="imc_irregular" id="5714" weight="1" value="false"/>
+  </operation>
+  <operation name="Centor Score &lt; 2" Operator="lessThan" id="5719">
+    <operand xsi:type="pathwayMetamodel:Operation" name="CENTOR SCORE" Operator="addition" id="5717">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_febre" id="5699" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_ausencia_de_tosse" id="5700" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_adenomegalia" id="5701" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_edema" id="5702" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_3_a_14_anos" id="5703" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_15_a_44_anos" id="5704" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_maior_ou_igual_a_45_anos" id="5705" weight="-1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5715" weight="1"/>
+  </operation>
+  <operation name="Centor Score >= 2" Operator="greaterOrEqual" id="5720">
+    <operand xsi:type="pathwayMetamodel:Operation" name="CENTOR SCORE" Operator="addition" id="5717">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_febre" id="5699" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_ausencia_de_tosse" id="5700" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_adenomegalia" id="5701" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_edema" id="5702" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_3_a_14_anos" id="5703" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_15_a_44_anos" id="5704" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_maior_ou_igual_a_45_anos" id="5705" weight="-1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5715" weight="1"/>
+  </operation>
+  <operation name="Criterios Urgencia" Operator="addition" id="5721">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_I" id="5706" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_II" id="5707" weight="1" value="false"/>
+  </operation>
+  <operation name="Criterios Urgencia &lt; 1" Operator="lessThan" id="5722">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Criterios Urgencia" Operator="addition" id="5721">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_I" id="5706" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_II" id="5707" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5716" weight="1"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_febre" id="5699" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_ausencia_de_tosse" id="5700" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_adenomegalia" id="5701" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_edema" id="5702" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_3_a_14_anos" id="5703" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_15_a_44_anos" id="5704" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_maior_ou_igual_a_45_anos" id="5705" weight="-1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_I" id="5706" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_II" id="5707" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="consulta_pediatrica" id="5708" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="infec_estrep_consulta_pediatrica" id="5709" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pediatrico_alergia_penicilina" id="5710" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="adulto_alergia_penicilina" id="5711" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_difteria" id="5712" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="7_ou_mais_episodios" id="5713" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="imc_irregular" id="5714" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="5715" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="5716" weight="1"/>
+</pathwayMetamodel:Pathway>

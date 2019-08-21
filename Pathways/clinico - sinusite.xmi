@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[M&#xe9;dico da Fam&#xed;lia] Sinusite" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7254" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Diagn&#xf3;stico Diferencial" description="" inputSequences="//@sequence.16" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2">
+    <questions text="Corpos estranhos nasais" url="" id="3053">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="corpos_estranhos_nasais" id="5631" weight="1" value="false"/>
+    </questions>
+    <questions text="Atr&#xe9;sia de coana unilateral" url="" id="3054">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="atresia_de_coana_unilateral" id="5632" weight="1" value="false"/>
+    </questions>
+    <questions text="Rinite Al&#xe9;rgica: em geral, n&#xe3;o apresenta rinorreia purulenta ou febre" url="" id="3055">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rinite_alergica" id="5633" weight="1" value="false"/>
+    </questions>
+    <questions text="Adenoidite: quadro cl&#xed;nico pode ser semelhante a rinite, com secre&#xe7;&#xe3;o nasal anterior ou posterior, purulenta, febre ou tosse, dificultando, muitas vezes, o diagn&#xf3;stico correto" url="" id="3056">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="adenoidite" id="5634" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7255" type="Processo" type_verbose="Processo" url="" name="Encaminhar ao Otorrino" description="Encaminhar paciente ao otorrino." isTerminal="true" inputSequences="//@sequence.0 //@sequence.24">
+    <action id="509" process_id="7255" service="encaminhar_especialidade" description="Otorrino"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7256" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sinusite] Avalia&#xe7;&#xe3;o do Quadro" description="" isInitial="true" outputSequences="//@sequence.3 //@sequence.6 //@sequence.9 //@sequence.16">
+    <questions text="Sinusite Aguda: Sem tratamento atual" url="" id="3057">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_Aguda" id="5635" weight="1" value="false"/>
+    </questions>
+    <questions text="Sinusite Recorrente: 6 ou mais epis&#xf3;dios NO ANO" url="" id="3058">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_recorrente" id="5636" weight="1" value="false"/>
+    </questions>
+    <questions text="Sinusite Cr&#xf4;nica: Quadro atual se estende por mais de 12 semanas" url="" id="3059">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_cronica" id="5637" weight="1" value="false"/>
+    </questions>
+    <questions text="Sinusite Complicada: Com tratamento atual e sem melhora, com sintomas e sinais de compromissos de seios paranasais ou sistema nervoso central" url="" id="3060">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_complicada" id="5638" weight="1" value="false"/>
+    </questions>
+    <questions text="Outras Doen&#xe7;as" url="" id="3121">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outras_doencas" id="5639" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7257" type="Receita" type_verbose="Receita" url="" name="[Sinusite Aguda] Tratamento" description="" inputSequences="//@sequence.17" outputSequences="//@sequence.19">
+    <item id="14096" url="" name="AMOXICILINA" med_code="1854815429" presentation="DOSE" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14097" url="" name="AMOXICILINA" med_code="1462078884" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14098" url="" name="AMOXICILINA+CLAVULANATO DE POTASSIO" med_code="1854829562" presentation="DOSE" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7258" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sinusite Aguda] Reavaliar" description="" inputSequences="//@sequence.20" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Paciente apresenta melhora?" url="" id="3122">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_melhora_sinusite_aguda" id="5640" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7259" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Sinusite Aguda] Manter Tratamento" description="Completar os 14 dias de tratamento inicialmente propostos." isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Process" id="7260" type="Processo" type_verbose="Processo" url="" name="[Sinusite Aguda sem melhora] Otorrino" description="Escalonar antibi&#xf3;tico (selecionar medica&#xe7;&#xe3;o e dose via aux&#xed;lio conduta) do paciente e/ou encaminhar ao otorrino." isTerminal="true" inputSequences="//@sequence.21">
+    <action id="510" process_id="7260" service="encaminhar_especialidade" description="Otorrino"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7361" type="Receita" type_verbose="Receita" url="" name="[Sinusite Complicada] Tratamento" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8">
+    <item id="14099" url="" name="AMOXICILINA" med_code="1854815429" presentation="DOSE" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14100" url="" name="AMOXICILINA+CLAV POTASSIO" med_code="1854813380" presentation="DOSE" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="7362" type="Tratamento" type_verbose="Tratamento" url="" name="[Sinusite Complicada] Apoio Diagn&#xf3;stico" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <examination url="" exam_id="34010084" limb_side="" quantity="1" reason="Paciente com sinusite complicada" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7363" type="Processo" type_verbose="Processo" url="" name="[Sinusite Complicada] Otorrino" description="" isTerminal="true" inputSequences="//@sequence.8">
+    <action id="511" process_id="7363" service="encaminhar_especialidade" description="Otorrino"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7364" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sinusite Recorrente ou Cr&#xf4;nica] Diagn&#xf3;sticos Diferenciais" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.10 //@sequence.11 //@sequence.12 //@sequence.13 //@sequence.14 //@sequence.15">
+    <questions text="Rinite Al&#xe9;rgica" url="" id="3123">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_rinite_alerGica" id="5741" weight="1" value="false"/>
+    </questions>
+    <questions text="Hipertrofia da Aden&#xf3;ide" url="" id="3124">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_hipertrofia_adenoide" id="5742" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;as Sist&#xea;micas" url="" id="3125">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_doencas_sistemicas" id="5743" weight="1" value="false"/>
+    </questions>
+    <questions text="Refluxo Gastroesof&#xe1;gico" url="" id="3126">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_refluxo" id="5744" weight="1" value="false"/>
+    </questions>
+    <questions text="Varia&#xe7;&#xf5;es anat&#xf4;micas da cavidade nasal (desvio septal, concha m&#xe9;dia bolhosa,&#xA;varia&#xe7;&#xf5;es do processo unciforme)" url="" id="3127">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_variacoes_anatomicas_cavidade_nasal" id="5745" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7365" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Otorrino ou conduta espec&#xed;fica" description="Encaminhar paciente ao otorrino ou executar conduta conforme crit&#xe9;rio do pediatra" isTerminal="true" inputSequences="//@sequence.14"/>
+  <element xsi:type="pathwayMetamodel:Information" id="7366" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Conduta Espec&#xed;fica" description="Conduta a ser executada a crit&#xe9;rio do pediatra." isTerminal="true" inputSequences="//@sequence.12"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="7367" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo de Dispepsia (Ainda n&#xe3;o existe)" description="" isTerminal="true" inputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="7368" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo de Rinite (Ainda n&#xe3;o existe)" description="" isTerminal="true" inputSequences="//@sequence.1 //@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7369" type="Receita" type_verbose="Receita" url="" name="[Sinusite Cr&#xf4;nica ou Recorrente] Tratamento" description="" isTerminal="true" inputSequences="//@sequence.2 //@sequence.15">
+    <item id="14161" url="" name="AMOXICILINA" med_code="1854815429" presentation="DOSE" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14162" url="" name="AMOXICILINA+CLAV POTASSIO" med_code="1854813380" presentation="DOSE" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7370" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Finalizar Protocolo" description="Paciente n&#xe3;o se enquadra no protocolo. Finalizar atendimento." isTerminal="true" inputSequences="//@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7371" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sinusite Aguda] Confirma&#xe7;&#xe3;o Diagn&#xf3;stica" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.17 //@sequence.18">
+    <questions text="Confirma&#xe7;&#xe3;o Diagn&#xf3;stica" url="" id="3128">
+      <answers xsi:type="pathwayMetamodel:Choice" name="confirmacao_diagnostica_sinusite_aguda" id="5746" weight="1" value="0.0">
+        <option description="Descarga nasal ou tosse persistente por mais de 10 dias" weight="1"/>
+        <option description="Piora do estado de sa&#xfa;de" weight="1"/>
+        <option description="Febre de in&#xed;cio agudo maior ou igual a 39&#xba;C" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="7372" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno" description="Paciente deve retornar de 48 a 72h" inputSequences="//@sequence.19" outputSequences="//@sequence.20"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7373" type="Receita" type_verbose="Receita" url="" name="[Sinusite Aguda sem melhora] Escalonar Antibi&#xf3;tico" description="Escalonar dose do antibi&#xf3;tico. Paciente n&#xe3;o apresenta melhora do quadro." inputSequences="//@sequence.23" outputSequences="//@sequence.21">
+    <item id="14163" url="" name="AMOXICILINA+CLAV POTASSIO" med_code="1854813380" presentation="DOSE" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7374" type="Processo" type_verbose="Processo" url="" name="Urg&#xea;ncia + Antibi&#xf3;tico EV" description="" isTerminal="true" inputSequences="//@sequence.22">
+    <action id="512" process_id="7374" service="encaminhar_urgencia_msf" description="Encaminhar &#xe0; Urg&#xea;ncia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7375" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sinusite Aguda] Avaliar Complica&#xe7;&#xe3;o" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.22 //@sequence.23">
+    <questions text="Estado F&#xed;sico Deteriorado" url="" id="3129">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_de_deterioramento" id="5747" weight="1" value="0.0">
+        <option description="Frequ&#xea;ncia Card&#xed;aca Aumentada" weight="1"/>
+        <option description="Temperatura > 39&#xba;C" weight="1"/>
+        <option description="Outros sinais de SEPSE" weight="1"/>
+        <option description="Adinamia" weight="1"/>
+        <option description="Corrimento Posterior Aumentado" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7377" type="Receita" type_verbose="Receita" url="" name="[Hipertrofia de Aden&#xf3;ide] Tratamento" description="" inputSequences="//@sequence.11" outputSequences="//@sequence.24">
+    <item id="14164" url="" name="AMOXICILINA" med_code="1854815429" presentation="DOSE" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14165" url="" name="AMOXICILINA+CLAV POTASSIO" med_code="1854813380" presentation="DOSE" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="7378" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (corpos estranhos nasais OU atesia de coroa unilateral)" description="corpos estranhos nasais OU atesia de coroa unilateral">
+    <operation name="corpos estranhos nasais OU atesia de coroa unilateral" Operator="or" id="5756">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="corpos_estranhos_nasais" id="5631" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="atresia_de_coana_unilateral" id="5632" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.0" id="7379" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Rinite)" description="Rinite">
+    <operation name="Rinite" Operator="affirmation" id="5757">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rinite_alergica" id="5633" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.0" id="7380" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Adenoidite)" description="Adenoidite">
+    <operation name="Adenoidite" Operator="affirmation" id="5758">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="adenoidite" id="5634" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.2" id="7381" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Sinusite Aguda)" description="Sinusite Aguda">
+    <operation name="Sinusite Aguda" Operator="affirmation" id="5759">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_Aguda" id="5635" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="7382" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Apresenta melhora)" description="Apresenta melhora">
+    <operation name="apresenta melhora" Operator="affirmation" id="5760">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_melhora_sinusite_aguda" id="5640" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.4" id="7383" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Sem melhora)" description="Sem melhora">
+    <operation name="Sem melhora" id="5761">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_melhora_sinusite_aguda" id="5640" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="7384" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Sinusite Complicada)" description="Sinusite Complicada">
+    <operation name="Sinusite Complicada" Operator="affirmation" id="5762">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_complicada" id="5638" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.8" id="7385" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="7386" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="Incondicional"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.2" id="7387" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (Sinusite Recorrente ou Cr&#xf4;nica)" description="Sinusite Recorrente ou Cr&#xf4;nica">
+    <operation name="Sinusite Recorrente ou Cr&#xf4;nica" Operator="or" id="5763">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_cronica" id="5637" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_recorrente" id="5636" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.10" id="7388" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (Rinite Alergica)" description="Rinite Alergica">
+    <operation name="Rinite Alergica" Operator="affirmation" id="5764">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_rinite_alerGica" id="5741" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.10" id="7389" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (Hipertrofia de Adenoide)" description="Hipertrofia de Adenoide">
+    <operation name="hipertrofia de adenoide" Operator="affirmation" id="5765">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_hipertrofia_adenoide" id="5742" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="7390" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (Doen&#xe7;as Sist&#xea;micas)" description="Doen&#xe7;as Sist&#xea;micas">
+    <operation name="Doen&#xe7;as Sist&#xea;micas" Operator="affirmation" id="5766">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_doencas_sistemicas" id="5743" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.10" id="7391" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (Refluxo Gastroesof&#xe1;gico)" description="Refluxo Gastroesof&#xe1;gico">
+    <operation name="Refluxo Gastroesof&#xe1;gico" Operator="affirmation" id="5767">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_refluxo" id="5744" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="7392" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (Varia&#xe7;&#xf5;es Anat&#xf4;micas da Cavidade Nasal)" description="Varia&#xe7;&#xf5;es Anat&#xf4;micas da Cavidade Nasal">
+    <operation name="Varia&#xe7;&#xf5;es Anat&#xf4;micas da Cavidade Nasal" Operator="affirmation" id="5768">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_variacoes_anatomicas_cavidade_nasal" id="5745" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.10" id="7393" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (sem diagnosticos diferenciais)" description="Incondicional">
+    <operation name="sem diagnosticos diferenciais" Operator="and" id="5769">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem rinite alergica" id="5751">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_rinite_alerGica" id="5741" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem hipertrofia da adenoide" id="5752">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_hipertrofia_adenoide" id="5742" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem doen&#xe7;as sist&#xea;micas" id="5753">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_doencas_sistemicas" id="5743" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem refluxo" id="5754">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_refluxo" id="5744" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem varia&#xe7;&#xf5;es anatomicas" id="5755">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_variacoes_anatomicas_cavidade_nasal" id="5745" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.2" id="7394" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (Outras Doen&#xe7;as)" description="Outras Doen&#xe7;as">
+    <operation name="Outras Doen&#xe7;as" Operator="affirmation" id="5770">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="outras_doencas" id="5639" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.17" id="7395" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (Confirma Sinusite Aguda)" description="Confirma Sinusite Aguda">
+    <operation name="Confirma Sinusite Aguda" Operator="greaterOrEqual" id="5771">
+      <operand xsi:type="pathwayMetamodel:Choice" name="confirmacao_diagnostica_sinusite_aguda" id="5746" weight="1" value="0.0">
+        <option description="Descarga nasal ou tosse persistente por mais de 10 dias" weight="1"/>
+        <option description="Piora do estado de sa&#xfa;de" weight="1"/>
+        <option description="Febre de in&#xed;cio agudo maior ou igual a 39&#xba;C" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5748" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.17" id="7396" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (N&#xe3;o Confirma Sinusite Aguda)" description="N&#xe3;o Confirma Sinusite Aguda">
+    <operation name="N&#xe3;o Confirma Sinusite Aguda" Operator="lessThan" id="5772">
+      <operand xsi:type="pathwayMetamodel:Choice" name="confirmacao_diagnostica_sinusite_aguda" id="5746" weight="1" value="0.0">
+        <option description="Descarga nasal ou tosse persistente por mais de 10 dias" weight="1"/>
+        <option description="Piora do estado de sa&#xfa;de" weight="1"/>
+        <option description="Febre de in&#xed;cio agudo maior ou igual a 39&#xba;C" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5748" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.3" id="7397" type="Sequencia" type_verbose="Sequencia" url="" name="S22" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.18" id="7398" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.19" id="7399" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="Incondicional"/>
+  <sequence inputStep="//@element.20" outputStep="//@element.21" id="7400" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (Com sinais de SEPSE)" description="Com sinais de SEPSE">
+    <operation name="Com sinais de SEPSE" Operator="greaterOrEqual" id="5773">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_deterioramento" id="5747" weight="1" value="0.0">
+        <option description="Frequ&#xea;ncia Card&#xed;aca Aumentada" weight="1"/>
+        <option description="Temperatura > 39&#xba;C" weight="1"/>
+        <option description="Outros sinais de SEPSE" weight="1"/>
+        <option description="Adinamia" weight="1"/>
+        <option description="Corrimento Posterior Aumentado" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5748" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.21" id="7401" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (Sem sinais de SEPSE)" description="Sem sinais de SEPSE">
+    <operation name="Sem sinais de SEPSE" Operator="lessThan" id="5774">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_deterioramento" id="5747" weight="1" value="0.0">
+        <option description="Frequ&#xea;ncia Card&#xed;aca Aumentada" weight="1"/>
+        <option description="Temperatura > 39&#xba;C" weight="1"/>
+        <option description="Outros sinais de SEPSE" weight="1"/>
+        <option description="Adinamia" weight="1"/>
+        <option description="Corrimento Posterior Aumentado" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5748" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.22" id="7402" type="Sequencia" type_verbose="Sequencia" url="" name="S25" description="Incondicional"/>
+  <operation name="sem_complicacoes_sinusite_aguda" id="5749"/>
+  <operation name="sem_melhora_sinusite_aguda" id="5750">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_melhora_sinusite_aguda" id="5640" weight="1" value="false"/>
+  </operation>
+  <operation name="sem rinite alergica" id="5751">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_rinite_alerGica" id="5741" weight="1" value="false"/>
+  </operation>
+  <operation name="sem hipertrofia da adenoide" id="5752">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_hipertrofia_adenoide" id="5742" weight="1" value="false"/>
+  </operation>
+  <operation name="sem doen&#xe7;as sist&#xea;micas" id="5753">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_doencas_sistemicas" id="5743" weight="1" value="false"/>
+  </operation>
+  <operation name="sem refluxo" id="5754">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_refluxo" id="5744" weight="1" value="false"/>
+  </operation>
+  <operation name="sem varia&#xe7;&#xf5;es anatomicas" id="5755">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_variacoes_anatomicas_cavidade_nasal" id="5745" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="corpos_estranhos_nasais" id="5631" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="atresia_de_coana_unilateral" id="5632" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rinite_alergica" id="5633" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="adenoidite" id="5634" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_Aguda" id="5635" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_recorrente" id="5636" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_cronica" id="5637" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinusite_complicada" id="5638" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outras_doencas" id="5639" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_melhora_sinusite_aguda" id="5640" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_rinite_alerGica" id="5741" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_hipertrofia_adenoide" id="5742" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_doencas_sistemicas" id="5743" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_refluxo" id="5744" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diagnosticos_diferenciais_variacoes_anatomicas_cavidade_nasal" id="5745" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="confirmacao_diagnostica_sinusite_aguda" id="5746" weight="1" value="0.0">
+    <option description="Descarga nasal ou tosse persistente por mais de 10 dias" weight="1"/>
+    <option description="Piora do estado de sa&#xfa;de" weight="1"/>
+    <option description="Febre de in&#xed;cio agudo maior ou igual a 39&#xba;C" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_de_deterioramento" id="5747" weight="1" value="0.0">
+    <option description="Frequ&#xea;ncia Card&#xed;aca Aumentada" weight="1"/>
+    <option description="Temperatura > 39&#xba;C" weight="1"/>
+    <option description="Outros sinais de SEPSE" weight="1"/>
+    <option description="Adinamia" weight="1"/>
+    <option description="Corrimento Posterior Aumentado" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="5748" weight="1"/>
+</pathwayMetamodel:Pathway>

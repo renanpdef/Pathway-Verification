@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Amniorrexe Prematura" code="">
+  <element xsi:type="pathwayMetamodel:Treatment" id="29766" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Inicial" description="Solicite os exames para iniciar o tratamento do paciente" isInitial="true" outputSequences="//@sequence.0">
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="Protocolo de Aminiorrexe Prematura" clinical_indication="Protocolo de Aminiorrexe Prematura"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="amniorexe  prematura" clinical_indication="amniorexe  prematura"/>
+    <examination url="SUMARIO DE URINA" exam_id="99130367" limb_side="" quantity="1" reason="Aminiorrexe Prematura" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Aminiorrexe prematura" clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA" exam_id="33010110" limb_side="" quantity="1" reason="Amniorrexe Prematura" clinical_indication="n/a"/>
+    <examination url="TOCOCARDIOGRAFIA ANTEPARTO" exam_id="45010072" limb_side="" quantity="1" reason="Amniorrexe Prematura" clinical_indication="N/A"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="29767" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Resultado dos Exames" description="Verifique o resultados dos exames." inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="H&#xe1; infec&#xe7;&#xe3;o?" url="" id="14348">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="presenca-infeccao" id="28932" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="29768" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Corioamnionite" description="Inicie o tratamento para Corioamnionite." inputSequences="//@sequence.1" outputSequences="//@sequence.3">
+    <medication url="" med_id="37400" id="16111" name="GENTAMICINA 80 MG AMPL 2 ML" brand="BIOCHIMICO" unit="MG" access="6" daily_dosage="240" cycles="1" treatement_time="16111" frequency="24" standard="null"/>
+    <medication url="" med_id="38822" id="16112" name="DALACIN 300 MG AMPL 2 ML" brand="UPJOHN" unit="MG" access="6" daily_dosage="900" cycles="1" treatement_time="16112" frequency="8" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="29769" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Idade Gestacional" description="Verifique a idade gestacional da paciente." inputSequences="//@sequence.2" outputSequences="//@sequence.4 //@sequence.5 //@sequence.6">
+    <questions text="Gesta&#xe7;&#xe3;o &lt; 24 semanas" url="" id="14349">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ig-menor-24" id="28933" weight="1" value="false"/>
+    </questions>
+    <questions text="Gesta&#xe7;&#xe3;o entre 24 semanas e 36 semanas e 6 dias." url="" id="14350">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ig-entre-24-33" id="28934" weight="1" value="false"/>
+    </questions>
+    <questions text="Gesta&#xe7;&#xe3;o >= 37 semanas" url="" id="14351">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ig-maior-igual-34" id="28935" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="29770" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Conduta Individualizada" description="Solicitar internamento e conduta individualizada." inputSequences="//@sequence.4" outputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="29771" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Gesta&#xe7;&#xe3;o Entre 24 e 36 Semanas e 6 dias" description="Sugerimos, iniciar antibi&#xf3;tico para prolongar lat&#xea;ncia. Ap&#xf3;s 48 horas, indicar substitui&#xe7;&#xe3;o do tratamento por: AMOXICILINA 500 MG VO 8/8H durante 5 Dias. Aten&#xe7;&#xe3;o: N&#xc3;O USAR AMOXICILINA-CLAVULONATO PELO RISCO DE ENTEROCOLITE NECROSANTE." inputSequences="//@sequence.17" outputSequences="//@sequence.10">
+    <medication url="" med_id="75116" id="16113" name="AMPICILINA 1 GR AMPL 1 UD" brand="BIOCHIMICO/BAYER" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="16113" frequency="6" standard="null"/>
+    <medication url="" med_id="37150" id="16114" name="CELESTONE SOLUSPAN AMPL 1 ML" brand="SHERING" unit="MG" access="5" daily_dosage="12" cycles="1" treatement_time="16114" frequency="24" standard="null"/>
+    <medication url="" med_id="130123" id="16115" name="ZITROMAX 500MG AMPL 1 UD" brand="" unit="GR" access="1" daily_dosage="1" cycles="1" treatement_time="16115" frequency="24" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="29772" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Tempo de Aminiorrexe" description="Verifique o tempo de aminiorrexe" inputSequences="//@sequence.6" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Aminiorrexe > 18 horas?" url="" id="14352">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aminiorexe-maior-18-horas" id="28936" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="29773" type="Tratamento" type_verbose="Tratamento" url="" name="Profilaxia para GBS - Parto Normal" description="Inicie o tratamento de profilaxia para GBS parto normal.&#xA;Manter antibi&#xf3;tico durante todo o trabalho de parto." inputSequences="//@sequence.15" outputSequences="//@sequence.9">
+    <medication url="" med_id="75116" id="16116" name="AMPICILINA 1 GR AMPL 1 UD" brand="BIOCHIMICO/BAYER" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="16116" frequency="6" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="29774" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Informativo: Conduta Ativa - Antecipa&#xe7;&#xe3;o do Parto" description="Solicitar interna&#xe7;&#xe3;o e avaliar indu&#xe7;&#xe3;o do parto vaginal caso a paciente n&#xe3;o apresente contraindica&#xe7;&#xf5;es." isTerminal="true" inputSequences="//@sequence.3 //@sequence.9 //@sequence.12 //@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="29775" type="Tratamento" type_verbose="Tratamento" url="" name="Profilaxia para GBS - Ces&#xe1;rea" description="Inicie o tratamento de profilaxia para GBS parto ces&#xe1;rea - Definir os medicamentos" inputSequences="//@sequence.14" outputSequences="//@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:Information" id="29776" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Informativo de Interna&#xe7;&#xe3;o no SAM" description="Solicite a internamento clinico/obst&#xe9;trico no PEP/SAM" isTerminal="true" inputSequences="//@sequence.10 //@sequence.19"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="29777" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Crit&#xe9;rios de Conduta" description="Avalie os crit&#xe9;rios a seguir para definir a conduta da paciente." inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Vitalidade Fetal?" url="" id="14353">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="28937" weight="1" value="false"/>
+    </questions>
+    <questions text="Trabalho de Parto?" url="" id="14354">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="28938" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente opta por conduta ativa?" url="" id="14355">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="28939" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="29778" type="Receita" type_verbose="Receita" url="" name="Receita Conduta Passiva" description="Adicionar texto e medicamentos da conduta passiva" isTerminal="true" inputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="29779" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Via de Parto" description="Verifique a via de parto desejada pela paciente." outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Normal" url="" id="14356">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-normal" id="28940" weight="1" value="false"/>
+    </questions>
+    <questions text="Ces&#xe1;rea" url="" id="14357">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-cesarea" id="28981" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="29780" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Trabalho de Parto" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.17 //@sequence.18">
+    <questions text="Paciente em Trabalho de Parto?" url="" id="14358">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto" id="28982" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="29821" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[&lt; 18h] Trabalho de Parto" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.24 //@sequence.25">
+    <questions text="Paciente est&#xe1; em trabalho de parto?" url="" id="14359">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_menor_18h" id="28983" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="29822" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[>= 18h] Trabalho de Parto" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.20 //@sequence.21">
+    <questions text="Paciente est&#xe1; em trabalho de parto?" url="" id="14360">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_amniorrexe_maior_18h" id="28984" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="29823" type="Tratamento" type_verbose="Tratamento" url="" name="Profilaxia para GBS (entre 24 e 36 semanas e 6 dias)" description="Observa&#xe7;&#xf5;es: &#xA;Dose de ataque de Ampicilina - 2g, correr em 20 min.&#xA;Dose de manuten&#xe7;&#xe3;o de Ampicilina - 1g de 6 em 6h at&#xe9; o parto.&#xA;Se paciente com IG entre 24 e 32 semanas, iniciar esquema de Sulfato de Magn&#xe9;sio para neuroprote&#xe7;&#xe3;o fetal (mesma dose usada na DHEG)." inputSequences="//@sequence.18" outputSequences="//@sequence.19">
+    <medication url="" med_id="75116" id="16117" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="16117" standard="null"/>
+    <medication url="" med_id="75116" id="16118" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="16118" frequency="6" standard="null"/>
+    <medication url="" med_id="37150" id="16119" name="CELESTONE SOLUSPAN AMPL 1 ML" brand="" unit="MG" access="5" daily_dosage="12" cycles="1" treatement_time="16119" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="29824" type="Tratamento" type_verbose="Tratamento" url="" name="[Amniorrexe >=18h em trabalho de parto] Profilaxia para GBS" description="Observa&#xe7;&#xf5;es: &#xA;Dose de ataque de Ampicilina - 2g, correr em 20 min.&#xA;Dose de manuten&#xe7;&#xe3;o de Ampicilina - 1g de 6 em 6h at&#xe9; o parto." inputSequences="//@sequence.20" outputSequences="//@sequence.22">
+    <medication url="" med_id="75116" id="16120" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="16120" standard="null"/>
+    <medication url="" med_id="75116" id="16141" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="16141" frequency="6" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="29825" type="Tratamento" type_verbose="Tratamento" url="" name="[Amniorrexe >= 18h, n&#xe3;o est&#xe1; em trabalho de parto] Profilaxia para GBS" description="Observa&#xe7;&#xf5;es: &#xA;Dose de ataque de Ampicilina - 2g, correr em 20 min.&#xA;Dose de manuten&#xe7;&#xe3;o de Ampicilina - 1g de 6 em 6h at&#xe9; o parto." inputSequences="//@sequence.21" outputSequences="//@sequence.23">
+    <medication url="" med_id="75116" id="16142" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="16142" standard="null"/>
+    <medication url="" med_id="75116" id="16143" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="16143" frequency="6" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="29826" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Informativo - Assist&#xea;ncia ao Parto (via vaginal)" description="Internamento e assist&#xea;ncia ao parto. Dar prefer&#xea;ncia a via vaginal." isTerminal="true" inputSequences="//@sequence.22"/>
+  <element xsi:type="pathwayMetamodel:Information" id="29827" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Informativo - Indu&#xe7;&#xe3;o do parto normal" description="Solicitar internamento e avaliar indu&#xe7;&#xe3;o do parto normal." isTerminal="true" inputSequences="//@sequence.23 //@sequence.24"/>
+  <element xsi:type="pathwayMetamodel:Information" id="29828" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Assist&#xea;ncia ao Parto" description="Interna&#xe7;&#xe3;o e assist&#xea;ncia ao parto." isTerminal="true" inputSequences="//@sequence.25"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="29829" type="Sequencia" type_verbose="Sequencia" url="" name="s1" description="s1"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="29830" type="Sequencia" type_verbose="Sequencia" url="" name="s2" description="s2">
+    <operation name="ha-infeccao" Operator="affirmation" id="28989">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca-infeccao" id="28932" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="29831" type="Sequencia" type_verbose="Sequencia" url="" name="s3" description="s3">
+    <operation name="sem-infeccao" id="28990">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca-infeccao" id="28932" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="29832" type="Sequencia" type_verbose="Sequencia" url="" name="s4" description="s4"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="29833" type="Sequencia" type_verbose="Sequencia" url="" name="s5" description="s5">
+    <operation name="s4-ig-menor-24-semanas" Operator="affirmation" id="28991">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig-menor-24" id="28933" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.3" id="29834" type="Sequencia" type_verbose="Sequencia" url="" name="s6" description="s6">
+    <operation name="s5-ig-entre-24-33" Operator="affirmation" id="28992">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig-entre-24-33" id="28934" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="29835" type="Sequencia" type_verbose="Sequencia" url="" name="s7" description="s7">
+    <operation name="s7-ig-maior-igual-34" Operator="affirmation" id="28993">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig-maior-igual-34" id="28935" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.6" id="29836" type="Sequencia" type_verbose="Sequencia" url="" name="s8" description="s8">
+    <operation name="aminio-maior-18h" Operator="affirmation" id="28994">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="aminiorexe-maior-18-horas" id="28936" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.6" id="29837" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="s9">
+    <operation name="aminio-menor-18h" id="28995">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="aminiorexe-maior-18-horas" id="28936" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="29838" type="Sequencia" type_verbose="Sequencia" url="" name="s10" description="s10"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.5" id="29839" type="Sequencia" type_verbose="Sequencia" url="" name="s11" description="navega para informa&#xe7;&#xe3;o de interna&#xe7;&#xe3;o no SAM"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.4" id="29840" type="Sequencia" type_verbose="Sequencia" url="" name="s12" description="s12"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.11" id="29841" type="Sequencia" type_verbose="Sequencia" url="" name="s13" description="s13">
+    <operation name="sem-vitalidade-fetal-ou-trabalho-de-parto-ou-opcao-ativa" Operator="or" id="28996">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem-vitalidade-fetal" id="28985">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="28937" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="trabalho-parto-ou-conduta-ativa" Operator="or" id="28986">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="28938" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="28939" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="29842" type="Sequencia" type_verbose="Sequencia" url="" name="s14" description="s14">
+    <operation name="vitalidade-fetal-sem-trabalho-parto-sem-optar-conduta-ativa" Operator="and" id="28997">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="28937" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem-trabalho-parto" id="28987">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="28938" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="nao-optante-conduta-ativa" id="28988">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="28939" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.13" id="29843" type="Sequencia" type_verbose="Sequencia" url="" name="s15" description="s15">
+    <operation name="optante-parto-cesarea" Operator="affirmation" id="28998">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-cesarea" id="28981" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.13" id="29844" type="Sequencia" type_verbose="Sequencia" url="" name="s16" description="s16">
+    <operation name="optante-parto-normal" Operator="affirmation" id="28999">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-normal" id="28940" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.9" id="29845" type="Sequencia" type_verbose="Sequencia" url="" name="s17" description="s17"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.14" id="29846" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (n&#xe3;o est&#xe1; em trabalho de parto)" description="">
+    <operation name="n&#xe3;o est&#xe1; em trabalho de parto" id="29000">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto" id="28982" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.14" id="29847" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (est&#xe1; em trabalho de parto)" description="">
+    <operation name="est&#xe1; em trabalho de parto" Operator="affirmation" id="29001">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto" id="28982" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.17" id="29848" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description=""/>
+  <sequence inputStep="//@element.18" outputStep="//@element.16" id="29849" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (em trabalho de parto)" description="">
+    <operation name="em trabalho de parto" Operator="affirmation" id="29002">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_amniorrexe_maior_18h" id="28984" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.16" id="29850" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (n&#xe3;o est&#xe1; em trabalho de parto)" description="">
+    <operation name="n&#xe3;o est&#xe1; em trabalho de parto" id="29003">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_amniorrexe_maior_18h" id="28984" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.18" id="29851" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.19" id="29852" type="Sequencia" type_verbose="Sequencia" url="" name="S24" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.15" id="29853" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (n&#xe3;o est&#xe1; em trabalho de parto)" description="">
+    <operation name="n&#xe3;o est&#xe1; em trabalho de parto" id="29004">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_menor_18h" id="28983" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.15" id="29854" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (est&#xe1; em trabalho de parto)" description="">
+    <operation name="est&#xe1; em trabalho de parto" Operator="affirmation" id="29005">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_menor_18h" id="28983" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="sem-vitalidade-fetal" id="28985">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="28937" weight="1" value="false"/>
+  </operation>
+  <operation name="trabalho-parto-ou-conduta-ativa" Operator="or" id="28986">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="28938" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="28939" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-trabalho-parto" id="28987">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="28938" weight="1" value="false"/>
+  </operation>
+  <operation name="nao-optante-conduta-ativa" id="28988">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="28939" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="presenca-infeccao" id="28932" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ig-menor-24" id="28933" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ig-entre-24-33" id="28934" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ig-maior-igual-34" id="28935" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aminiorexe-maior-18-horas" id="28936" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="28937" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="28938" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="28939" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-normal" id="28940" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-cesarea" id="28981" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto" id="28982" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_menor_18h" id="28983" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_amniorrexe_maior_18h" id="28984" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

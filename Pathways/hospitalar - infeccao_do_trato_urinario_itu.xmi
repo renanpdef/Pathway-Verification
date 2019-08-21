@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Infec&#xe7;&#xe3;o do Trato Urin&#xe1;rio (ITU)" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34237" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Informar Sexo do paciente" description="Informe o sexo do paciente para seguir com o tratamento adequado." inputSequences="//@sequence.22" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Masculino" url="" id="16070">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sexo_masculino" id="32903" weight="1" value="false"/>
+    </questions>
+    <questions text="Feminino" url="" id="16071">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sexo_feminino" id="32904" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34238" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Masculino] Avaliar Sintomas" description="Informe os sintomas apresentados pelo paciente." inputSequences="//@sequence.28" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Sintomas por mais de 7 dias" url="" id="16072">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="32905" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o" url="" id="16073">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="32906" weight="1" value="false"/>
+    </questions>
+    <questions text="DM" url="" id="16074">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="32907" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade > 65 anos" url="" id="16075">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="32908" weight="1" value="false"/>
+    </questions>
+    <questions text="Altera&#xe7;&#xf5;es Urol&#xf3;gicas ou DRC?" url="" id="16076">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="32909" weight="1" value="false"/>
+    </questions>
+    <questions text="Recorr&#xea;ncia dos sintomas por mais de 14 dias" url="" id="16077">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="32910" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente em uso de antibi&#xf3;tico recente (h&#xe1; 48-72H), sem melhora dos sintomas?" url="" id="16078">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="32911" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34239" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Feminino] Avaliar Sintomas" description="Informe os sintomas apresentados pelo paciente." inputSequences="//@sequence.3" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Sintomas por mais de 7 dias" url="" id="16079">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="32912" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o" url="" id="16080">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="32913" weight="1" value="false"/>
+    </questions>
+    <questions text="Diabetes Melitus" url="" id="16081">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="32914" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade > 65 anos" url="" id="16082">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="32915" weight="1" value="false"/>
+    </questions>
+    <questions text="Altera&#xe7;&#xf5;es Urol&#xf3;gicas ou DRC" url="" id="16083">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="32916" weight="1" value="false"/>
+    </questions>
+    <questions text="Recorr&#xea;ncia dos sintomas por mais de 14 dias" url="" id="16084">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="32917" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente em uso de antibi&#xf3;tico recente (h&#xe1; 48-72H), sem melhora dos sintomas?" url="" id="16085">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="32918" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34240" type="Tratamento" type_verbose="Tratamento" url="" name="[Masculino] Solicitar Exames + Hemograma" description="Avaliar a necessidade de solicitar urinocultura com TSA para paciente" inputSequences="//@sequence.11" outputSequences="//@sequence.4">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com suspeita de Cistite" clinical_indication="N/A"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com suspeita de cistite" clinical_indication="SUMARIO DE URINA  (TIPO I)"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34241" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Pielonefrite] Avaliar Resultados dos Exames" description="" inputSequences="//@sequence.25" outputSequences="//@sequence.26 //@sequence.27">
+    <questions text="Avaliar resultado dos exames:" url="" id="16086">
+      <answers xsi:type="pathwayMetamodel:Choice" name="resultado_exames" id="32919" weight="1" value="0.0">
+        <option description="PACIENTES EST&#xc1;VEL, SEM COMORBIDADES, SEM COMPLICA&#xc7;&#xd5;ES NO EXAME DE IMAGEM - ACOMPANHAMENTO AMBULATORIAL COM ANTIBIOTICOTERAPIA VIA ORAL" weight="1"/>
+        <option description="PACIENTE COM ALTERA&#xc7;&#xc3;O DA FUN&#xc7;&#xc3;O RENAL, UROPATIA OBSTRUTIVA NO EXAME DE IMAGEM, ABSCESSO, IMUNOSSUPRESS&#xc3;O, GESTANTE, SEXO MASCULINO, IDOSO, DIFICULDADE MANTER HIDRATA&#xc7;&#xc3;O VIA ORAL, D&#xda;VIDA QUANTO &#xc0; ADES&#xc3;O DO PACIENTE AO TRATAMENTO" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34242" type="Receita" type_verbose="Receita" url="" name="[Pielonefrite] Receita pra casa" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi&amp;oacute;tico.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.26">
+    <item id="12227" url="" name="Ciprofloxacino 500Mg ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="12228" url="" name="Levofloxacino 500Mg ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="12229" url="" name="Buscopan Composto ...... 1cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 8/8h se dor abdominal"/>
+    <item id="12230" url="" name="Paco 30Mg ...... 1cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 8/8h se dor intensa"/>
+    <item id="12231" url="" name="Tramadol 50Mg ......1cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 8/8h se dor intensa"/>
+    <item id="12232" url="" name="Bromoprida 10Mg ...... 1cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 8/8h se n&#xe1;useas ou v&#xf4;mitos."/>
+    <item id="12233" url="" name="Amoxicilina/Clavulanato 875/125 ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="12234" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 6/6h se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34243" type="Tratamento" type_verbose="Tratamento" url="" name="[Masculino] Solicitar Exames" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.5">
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com suspeita de cistite" clinical_indication="Protocolo de Cistite"/>
+    <medication url="" med_id="38008" id="18921" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="18921" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 500mg&quot;,&quot;id&quot;:8862,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:909}"/>
+    <medication url="" med_id="59609" id="18922" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="MG" access="6" daily_dosage="100" cycles="1" treatement_time="18922" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:8863,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:5,&quot;codigo_principio_ativo&quot;:635}"/>
+    <medication url="" med_id="42951" id="18923" name="PROFENID 100MG IM AMPL 2 ML" brand="" unit="MG" access="5" daily_dosage="100" cycles="1" treatement_time="18923" standard="null"/>
+    <medication url="" med_id="38008" id="18924" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="5" daily_dosage="1" cycles="1" treatement_time="18924" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="34244" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Aviso: Discutir tratamento espec&#xed;fico com l&#xed;der local" description="Paciente apresenta potencial de gravidade, sugere-se discutir o caso com o l&#xed;der local para defini&#xe7;&#xe3;o do tratamento mais adequado." isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34245" type="Receita" type_verbose="Receita" url="" name="[Masculino] Tratamento com antibi&#xf3;tico" description="Aten&#xe7;&#xe3;o! Caso n&#xe3;o apresente melhora dos sintomas, 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es a seguir, retornar imediatamente a emerg&#xea;ncia.&#xA;Solicitar exame de urinocultura com TSA eletivamente antes de iniciar tratamento com antibi&#xf3;tico." inputSequences="//@sequence.5" outputSequences="//@sequence.6">
+    <item id="12235" url="" name="Ciprofloxacino 500Mg ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="12236" url="" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir em um copo de agua e tomar em dose unica"/>
+    <item id="12237" url="" name="Nitrofurantoina 100Mg ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h"/>
+    <item id="12238" url="" name="Pyridium 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h"/>
+    <item id="12239" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido 6/6h se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="34246" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Aviso: Encaminhar paciente para urologista" description="Recomende ao paciente a que procure uma consulta eletiva com o urologista para avalia&#xe7;&#xe3;o do caso." isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34247" type="Tratamento" type_verbose="Tratamento" url="" name="[Feminino] Solicitar Exames + Hemograma" description="Exames com hemograma" inputSequences="//@sequence.14" outputSequences="//@sequence.7">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Suspeita de cistite" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com suspeita de cistite" clinical_indication="Protocolo de Cistite"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34248" type="Receita" type_verbose="Receita" url="" name="[Feminino] Tratamento com antibi&#xf3;tico" description="&lt;div class=&quot;box-header with-border&quot;>&#xA;&lt;h3>&lt;u>&lt;strong>Aten&amp;ccedil;&amp;atilde;o!&lt;/strong>&lt;/u>&lt;/h3>&#xA;&lt;/div>&#xA;&#xA;&lt;div class=&quot;box-body&quot;>&#xA;&lt;div>&#xA;&lt;div>&#xA;&lt;ul>&#xA;&#x9;&lt;li>Caso paciente tenha feito uso de antibi&amp;oacute;tico pr&amp;eacute;vio, discutir com l&amp;iacute;der local a possibilidade de troca para novo antibi&amp;oacute;tico.&lt;/li>&#xA;&#x9;&lt;li>Caso n&amp;atilde;o apresente melhora dos sintomas, 3 dias ap&amp;oacute;s in&amp;iacute;cio das medica&amp;ccedil;&amp;otilde;es a seguir, retornar imediatamente a emerg&amp;ecirc;ncia.&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Solicitar exame de urinocultura com TSA&amp;nbsp;eletivamente antes de iniciar tratamento com antibi&amp;oacute;tico.&lt;/p>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>" isTerminal="true" inputSequences="//@sequence.16">
+    <item id="12240" url="" name="Ciprofloxacino 500Mg ...... 10cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="12241" url="" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir sache em um copo de agua, tomar em dose unica"/>
+    <item id="12242" url="" name="Pyridium 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h"/>
+    <item id="12243" url="" name="Amoxicilina/Clavulanato 875/125 ...... 10cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="12244" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34249" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Feminino] Verificar Gesta&#xe7;&#xe3;o" description="Verificar se paciente est&#xe1; gestante." inputSequences="//@sequence.15" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Paciente gestante?" url="" id="16087">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="gravidez" id="32920" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34250" type="Receita" type_verbose="Receita" url="" name="[Feminino] Tratamento paciente gestante" description="Aten&#xe7;&#xe3;o! Caso n&#xe3;o apresente melhora dos sintomas, 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es a seguir, retornar imediatamente a emerg&#xea;ncia.&#xA;Aumente a ingest&#xe3;o h&#xed;drica para auxiliar no tratamento.&#xA;&#xA;Solicitar exame de urinocultura com TSA eletivamente antes de iniciar tratamento com antibi&#xf3;tico." isTerminal="true" inputSequences="//@sequence.8">
+    <item id="12245" url="" name="Cefalexina 500Mg ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h"/>
+    <item id="12246" url="" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir sache em um copo de agua e tomar em dose unica"/>
+    <item id="12247" url="" name="Paracetamol 500Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="12248" url="" name="Nitrofurantoina 100Mg ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34251" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Feminino] Verificar Fatores Agravantes" description="Verificar se a paciente apresenta presen&#xe7;a de leucorr&#xe9;ia ou irrita&#xe7;&#xe3;o vaginal." inputSequences="//@sequence.9" outputSequences="//@sequence.10 //@sequence.13">
+    <questions text="Paciente apresenta leucorr&#xe9;ia ou irrita&#xe7;&#xe3;o vaginal?" url="" id="16088">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="leucorreia_irritacao" id="32921" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34252" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Masculino] Corrimento Uretral?" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.0 //@sequence.28">
+    <questions text="Paciente apresenta corrimento uretral?" url="" id="16089">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="masculino_corrimento_uretral" id="32922" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34253" type="Receita" type_verbose="Receita" url="" name="[Masculino com corrimento uretral] Receita" description="&lt;p>Oferecer eletivamente para que o paciente realize exame de S&amp;iacute;filis e teste r&amp;aacute;pido para HIV.&lt;/p>" isTerminal="true" inputSequences="//@sequence.0">
+    <item id="12249" url="" name="Ceftriaxona 500mg" med_code="-1" presentation="AMPL" access="5" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica."/>
+    <item id="12250" url="" name="Azitromicina 500mg" med_code="-1" presentation="COMP" access="1" quantity="2" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica."/>
+    <item id="12251" url="" name="Doxiciclina 100mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34254" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Crit&#xe9;rios Pielonefrite" description="" inputSequences="//@sequence.20" outputSequences="//@sequence.21 //@sequence.22">
+    <questions text="Febre e/ou sinal de Giordano e/ou dor costovertebral e/ou n&#xe1;useas e v&#xf4;mitos?" url="" id="16090">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinais_pielonefrite" id="32923" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34255" type="Receita" type_verbose="Receita" url="" name="[N&#xe3;o-Gestante, com leucorr&#xe9;ia] Receita + Ginecologista" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Recomende a paciente a que procure uma consulta eletiva com o ginecologista para avalia&amp;ccedil;&amp;atilde;o do caso.&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.13">
+    <item id="12252" url="" name="Crevagin 1 tubo" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar via endovaginal, uma vez &#xe0; noite por 7 noites."/>
+    <item id="12253" url="" name="Colpist MT" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar via endovaginal, uma vez &#xe0; noite por 10 noites,"/>
+    <item id="12254" url="" name="Amoxicilina/Clavilanato 875/125mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="12255" url="" name="Fosfomicina 3g" med_code="-1" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica."/>
+    <item id="12256" url="" name="Nitrofurantoina 100mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="12257" url="" name="Metronidazol Creme Vaginal" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar uma vez &#xe0; noite por 7 noites."/>
+    <item id="12258" url="" name="METRONIDAZOL 250mg" med_code="-1" presentation="COMP" access="1" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="12259" url="" name="FLUCONAZOL 150MG COMP 150 MG" med_code="40630" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34256" type="Receita" type_verbose="Receita" url="" name="[Feminino] Tratamento de fatores agravantes com antibi&#xf3;tico" description="Aten&#xe7;&#xe3;o! Caso n&#xe3;o apresente melhora dos sintomas, 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es a seguir, retornar imediatamente a emerg&#xea;ncia. &#xA;Aumente a ingest&#xe3;o h&#xed;drica para auxiliar no tratamento.&#xA;&#xA;Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi&#xf3;tico." isTerminal="true" inputSequences="//@sequence.10">
+    <item id="12260" url="" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir sache em um copo de agua e tomar em dose unica"/>
+    <item id="12261" url="" name="Pyridium 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h"/>
+    <item id="12262" url="" name="Nitrofurantoina 100Mg ...... 20cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h"/>
+    <item id="12263" url="" name="Amoxicilina/Clavulanato 875/125 ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido 12/12h"/>
+    <item id="12264" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34257" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Feminino, com complica&#xe7;&#xf5;es] Paciente Gestante?" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.16 //@sequence.17">
+    <questions text="Paciente gestante?" url="" id="16091">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="feminino_complicacoes_gestante" id="32924" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34258" type="Receita" type_verbose="Receita" url="" name="[Feminino - Gestante - Com complica&#xe7;&#xf5;es] Tratamento" description="&lt;p>&lt;u>&lt;strong>Aten&amp;ccedil;&amp;atilde;o!&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Caso paciente tenha feito uso de antibi&amp;oacute;tico pr&amp;eacute;vio, discutir com l&amp;iacute;der local a possibilidade de troca para novo antibi&amp;oacute;tico.&lt;/li>&#xA;&#x9;&lt;li>Caso n&amp;atilde;o apresente melhora dos sintomas, 3 dias ap&amp;oacute;s in&amp;iacute;cio das medica&amp;ccedil;&amp;otilde;es a seguir, retornar imediatamente a emerg&amp;ecirc;ncia.&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi&amp;oacute;tico.&lt;/p>" isTerminal="true" inputSequences="//@sequence.23">
+    <item id="12265" url="" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir sache em um copo de agua, tomar em dose unica"/>
+    <item id="12266" url="" name="Amoxicilina/Clavulanato 875/125 ...... 10cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="12267" url="" name="Paracetamol 750mg ..... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se necess&#xe1;rio"/>
+    <item id="12268" url="" name="Nitrofurantoina 100mg  ..... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="12269" url="" name="Fosfomicina 3g" med_code="-1" presentation="-" access="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Diluir sache em um copo de &#xe1;gua, tomar em dose &#xfa;nica."/>
+    <item id="12270" url="" name="Amoxicilina/Clavulanato 875/120mg ... 10cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar 1 comprimido de 12/12h"/>
+    <item id="12271" url="" name="Paracetamol 750mg .... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se necess&#xe1;rio (dor ou febre)."/>
+    <item id="12272" url="" name="Nitrofurantoina 100mg .... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34259" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quick SOFA" description="" isInitial="true" outputSequences="//@sequence.18 //@sequence.19">
+    <questions text="Quick Sofa" url="" id="16092">
+      <answers xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="32925" weight="1" value="0.0">
+        <option description="FR > 22"/>
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="PAS &lt; 100" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="34260" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo SEPSE" description="" isTerminal="true" inputSequences="//@sequence.1 //@sequence.18">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34261" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Crit&#xe9;rios SIRS" description="" inputSequences="//@sequence.19" outputSequences="//@sequence.1 //@sequence.20">
+    <questions text="Crit&#xe9;rios SIRS" url="" id="16093">
+      <answers xsi:type="pathwayMetamodel:Choice" name="criterios_sirs" id="32926" weight="1" value="0.0">
+        <option description="Temperatura &lt; 36&#xb0;C ou > 38,3&#xb0;C" weight="1"/>
+        <option description="Leuc&#xf3;citos > 12 G/L (12.000/mm&#xb3;) ou Leuc&#xf3;citos &lt; 4 G/L (4.000/mm&#xb3;) ou Bast&#xf5;es > 10%" weight="1"/>
+        <option description="FR > 20 ipm" weight="1"/>
+        <option description="FC > 90 bpm" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34262" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Gestante, com complica&#xe7;&#xf5;es] Leucorr&#xe9;ia?" description="" inputSequences="//@sequence.17" outputSequences="//@sequence.23 //@sequence.24">
+    <questions text="Apresenta leucorr&#xe9;ia?" url="" id="16094">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="gestante_complicacoes_leucorreia" id="32927" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34263" type="Receita" type_verbose="Receita" url="" name="[Gestante, com complica&#xe7;&#xf5;es, com Leucorr&#xe9;ia] Receita" description="" isTerminal="true" inputSequences="//@sequence.24">
+    <item id="12273" url="" name="METRONIDAZOL 0,75% CREME VAGINAL" med_code="-1" presentation="-" access="4" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar uma vez &#xe0; noite por 7 noites."/>
+    <item id="12274" url="" name="METRONIDAZOL 400 MG COMP 1 UD" med_code="36706" presentation="COMP" access="1" quantity="5" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica."/>
+    <item id="12275" url="" name="METRONIDAZOL 250 MG COMP 1 UD" med_code="36684" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 2 comprimidos, de 12/12h, via oral, durante 7 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34264" type="Tratamento" type_verbose="Tratamento" url="" name="[Pielonefrite] Solicitar exames" description="&lt;p>Solicite exames para melhor defini&amp;ccedil;&amp;atilde;o do tratamento do paciente.&lt;/p>&#xA;&#xA;&lt;p>ADICIONAR EXAME DE IMAGEM&lt;/p>" inputSequences="//@sequence.21" outputSequences="//@sequence.25">
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="n/a"/>
+    <examination url="US APARELHO URINARIO (RINS E BEXIGA)" exam_id="33010030" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="n/a"/>
+    <medication url="" med_id="43290" id="18925" name="RINGER C/LACTATO 500ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="18925" standard="null"/>
+    <medication url="" med_id="43800" id="18926" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="18926" standard="null"/>
+    <medication url="" med_id="36064" id="18927" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="18927" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8864,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="36161" id="18928" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="ML" access="6" daily_dosage="1" cycles="1" treatement_time="18928" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8865,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="49581" id="18929" name="PLASIL AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18929" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8866,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="41564" id="18930" name="PLAMET 10MG AMPL 2 ML" brand="" unit="ML" access="6" daily_dosage="2" cycles="1" treatement_time="18930" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:8867,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="18931" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="10" cycles="1" treatement_time="18931" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:8868,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="39586" id="18932" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="MG" access="6" daily_dosage="100" cycles="1" treatement_time="18932" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8869,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+    <medication url="" med_id="59765" id="18933" name="TRAMAL 50MG AMPL 1 ML" brand="" unit="MG" access="6" daily_dosage="50" cycles="1" treatement_time="18933" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:8870,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="34265" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Pielonefrite] Discutir com l&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;color:#ffffff&quot;>&lt;u>&lt;strong>&lt;span style=&quot;background-color:#e74c3c&quot;>Aten&amp;ccedil;&amp;atilde;o&lt;/span>&lt;/strong>&lt;/u>&lt;/span>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Recomenda-se encaminhar para l&amp;iacute;der local! Aventar possibilidade de interna&amp;ccedil;&amp;atilde;o. Solicitar avalia&amp;ccedil;&amp;atilde;o da urologia caso apresente uropatia obstrutiva ou abscesso no exame de imagem.&lt;/span>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.27"/>
+  <sequence inputStep="//@element.16" outputStep="//@element.15" id="34266" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (homem com corrimento uretral)" description="homem com corrimento uretral">
+    <operation name="homem com corrimento uretral" Operator="affirmation" id="32934">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="masculino_corrimento_uretral" id="32922" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.24" id="34267" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (SIRS >= 2)" description="SIRS >= 2">
+    <operation name="Crit&#xe9;rios SIRS >= 2" Operator="greaterOrEqual" id="32935">
+      <operand xsi:type="pathwayMetamodel:Choice" name="criterios_sirs" id="32926" weight="1" value="0.0">
+        <option description="Temperatura &lt; 36&#xb0;C ou > 38,3&#xb0;C" weight="1"/>
+        <option description="Leuc&#xf3;citos > 12 G/L (12.000/mm&#xb3;) ou Leuc&#xf3;citos &lt; 4 G/L (4.000/mm&#xb3;) ou Bast&#xf5;es > 10%" weight="1"/>
+        <option description="FR > 20 ipm" weight="1"/>
+        <option description="FC > 90 bpm" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32928" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.0" id="34268" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Paciente homem)" description="">
+    <operation name="Paciente homem" Operator="affirmation" id="32936">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sexo_masculino" id="32903" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="34269" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Paciente mulher)" description="">
+    <operation name="Paciente mulher" Operator="affirmation" id="32937">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sexo_feminino" id="32904" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.3" id="34270" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description=""/>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="34271" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="34272" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description=""/>
+  <sequence inputStep="//@element.20" outputStep="//@element.10" id="34273" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description=""/>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="34274" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (paciente gravida)" description="">
+    <operation name="Paciente Gravida" Operator="affirmation" id="32938">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gravidez" id="32920" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.12" id="34275" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (paciente n&#xe3;o est&#xe1; gr&#xe1;vida)" description="">
+    <operation name="Paciente n&#xe3;o est&#xe1; gr&#xe1;vida" id="32939">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gravidez" id="32920" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.14" id="34276" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (N&#xe3;o apresenta leucorreia/irritacao)" description="Paciente n&#xe3;o apresenta leucorreia/irritacao">
+    <operation name="Sem Leucorreia" id="32940">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="leucorreia_irritacao" id="32921" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="34277" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="">
+    <operation name="um_ou_mais_sintomas" Operator="greaterOrEqual" id="32941">
+      <operand xsi:type="pathwayMetamodel:Operation" name="somatorio_sintomas_masc" Operator="addition" id="32932">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="32905" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="32906" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="32907" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="32908" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="32909" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="32910" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="32911" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32929" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="34278" type="Sequencia" type_verbose="Sequencia" url="" name="s10" description="">
+    <operation name="sem_sintomas_masculino" Operator="lessThan" id="32942">
+      <operand xsi:type="pathwayMetamodel:Operation" name="somatorio_sintomas_masc" Operator="addition" id="32932">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="32905" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="32906" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="32907" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="32908" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="32909" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="32910" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="32911" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32929" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.14" id="34279" type="Sequencia" type_verbose="Sequencia" url="" name="s12" description="">
+    <operation name="com_fatores_agravantes" Operator="affirmation" id="32943">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="leucorreia_irritacao" id="32921" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.2" id="34280" type="Sequencia" type_verbose="Sequencia" url="" name="s13" description="">
+    <operation name="um_ou_mais_sintomas_feminino" Operator="greaterOrEqual" id="32944">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_fem" Operator="addition" id="32933">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="32912" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="32913" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="32914" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="32915" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="32915" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="32916" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="32917" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="32918" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32929" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.2" id="34281" type="Sequencia" type_verbose="Sequencia" url="" name="s14" description="">
+    <operation name="sem_sintomas_feminino" Operator="lessThan" id="32945">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_fem" Operator="addition" id="32933">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="32912" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="32913" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="32914" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="32915" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="32915" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="32916" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="32917" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="32918" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32929" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.20" id="34282" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (n&#xe3;o gestante)" description="n&#xe3;o gestante">
+    <operation name="n&#xe3;o gestante" id="32946">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="feminino_complicacoes_gestante" id="32924" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.20" id="34283" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (paciente gestante)" description="paciente gestante">
+    <operation name="paciente gestante" Operator="affirmation" id="32947">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="feminino_complicacoes_gestante" id="32924" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.22" id="34284" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (Quick SOFA >= 1)" description="Quick SOFA >= 1">
+    <operation name="Quick SOFA >= 1" Operator="greaterOrEqual" id="32948">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="32925" weight="1" value="0.0">
+        <option description="FR > 22"/>
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="PAS &lt; 100" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32929" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.22" id="34285" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (Quick SOFA &lt; 1)" description="Quick SOFA &lt; 1">
+    <operation name="Quick SOFA &lt; 1" Operator="lessThan" id="32949">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="32925" weight="1" value="0.0">
+        <option description="FR > 22"/>
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="PAS &lt; 100" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32929" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.24" id="34286" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (SIRS &lt; 2)" description="SIRS &lt; 2">
+    <operation name="SIRS &lt; 2" Operator="lessThan" id="32950">
+      <operand xsi:type="pathwayMetamodel:Choice" name="criterios_sirs" id="32926" weight="1" value="0.0">
+        <option description="Temperatura &lt; 36&#xb0;C ou > 38,3&#xb0;C" weight="1"/>
+        <option description="Leuc&#xf3;citos > 12 G/L (12.000/mm&#xb3;) ou Leuc&#xf3;citos &lt; 4 G/L (4.000/mm&#xb3;) ou Bast&#xf5;es > 10%" weight="1"/>
+        <option description="FR > 20 ipm" weight="1"/>
+        <option description="FC > 90 bpm" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32928" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.17" id="34287" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (Apresenta crit&#xe9;rios pielonefrite)" description="Apresenta crit&#xe9;rios pielonefrite">
+    <operation name="Apresenta sinais de pielonefrite" Operator="affirmation" id="32951">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_pielonefrite" id="32923" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.17" id="34288" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (sem sinais de pielonefrite)" description="sem sinais de pielonefrite">
+    <operation name="N&#xe3;o apresenta sinais de pielonefrite" id="32952">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_pielonefrite" id="32923" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.25" id="34289" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (Gestante, sem leucorr&#xe9;ia)" description="Gestante, sem leucorr&#xe9;ia">
+    <operation name="Gestante, sem leucorr&#xe9;ia" id="32953">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gestante_complicacoes_leucorreia" id="32927" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.25" id="34290" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (gestante, com complica&#xe7;&#xf5;es, com leucorr&#xe9;ia)" description="gestante, com complica&#xe7;&#xf5;es, com leucorr&#xe9;ia">
+    <operation name="gestante, com complica&#xe7;&#xf5;es, com leucorr&#xe9;ia" Operator="affirmation" id="32954">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gestante_complicacoes_leucorreia" id="32927" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.27" id="34291" type="Sequencia" type_verbose="Sequencia" url="" name="S25" description="-"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="34292" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (caso 1)" description="caso 1">
+    <operation name="caso 1" Operator="equal" id="32955">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resultado_exames" id="32919" weight="1" value="0.0">
+        <option description="PACIENTES EST&#xc1;VEL, SEM COMORBIDADES, SEM COMPLICA&#xc7;&#xd5;ES NO EXAME DE IMAGEM - ACOMPANHAMENTO AMBULATORIAL COM ANTIBIOTICOTERAPIA VIA ORAL" weight="1"/>
+        <option description="PACIENTE COM ALTERA&#xc7;&#xc3;O DA FUN&#xc7;&#xc3;O RENAL, UROPATIA OBSTRUTIVA NO EXAME DE IMAGEM, ABSCESSO, IMUNOSSUPRESS&#xc3;O, GESTANTE, SEXO MASCULINO, IDOSO, DIFICULDADE MANTER HIDRATA&#xc7;&#xc3;O VIA ORAL, D&#xda;VIDA QUANTO &#xc0; ADES&#xc3;O DO PACIENTE AO TRATAMENTO" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="32929" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.4" id="34293" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (caso 2)" description="caso 2">
+    <operation name="caso 2" Operator="equal" id="32956">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resultado_exames" id="32919" weight="1" value="0.0">
+        <option description="PACIENTES EST&#xc1;VEL, SEM COMORBIDADES, SEM COMPLICA&#xc7;&#xd5;ES NO EXAME DE IMAGEM - ACOMPANHAMENTO AMBULATORIAL COM ANTIBIOTICOTERAPIA VIA ORAL" weight="1"/>
+        <option description="PACIENTE COM ALTERA&#xc7;&#xc3;O DA FUN&#xc7;&#xc3;O RENAL, UROPATIA OBSTRUTIVA NO EXAME DE IMAGEM, ABSCESSO, IMUNOSSUPRESS&#xc3;O, GESTANTE, SEXO MASCULINO, IDOSO, DIFICULDADE MANTER HIDRATA&#xc7;&#xc3;O VIA ORAL, D&#xda;VIDA QUANTO &#xc0; ADES&#xc3;O DO PACIENTE AO TRATAMENTO" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="32928" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.15" id="34294" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (homem sem corrimento uretral)" description="homem sem corrimento uretral">
+    <operation name="homem sem corrimento uretral" id="32957">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="masculino_corrimento_uretral" id="32922" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="Total Sintomas Homem" Operator="addition" id="32930">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="32905" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="32906" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="32907" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="32908" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="32909" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="32910" weight="1" value="false"/>
+  </operation>
+  <operation name="Total Sintomas Mulher" Operator="addition" id="32931">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="32912" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="32913" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="32914" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="32915" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="32916" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="32917" weight="1" value="false"/>
+  </operation>
+  <operation name="somatorio_sintomas_masc" Operator="addition" id="32932">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="32905" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="32906" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="32907" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="32908" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="32909" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="32910" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="32911" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_sintomas_fem" Operator="addition" id="32933">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="32912" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="32913" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="32914" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="32915" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="32915" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="32916" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="32917" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="32918" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sexo_masculino" id="32903" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sexo_feminino" id="32904" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_7_dias" id="32905" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_imunossupressao" id="32906" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_dm" id="32907" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_idoso" id="32908" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_alteracoes_urologicas" id="32909" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_homem_14_dias" id="32910" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_masc" id="32911" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_7_dias" id="32912" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_imunossupressao" id="32913" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_dm" id="32914" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_idosa" id="32915" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_alteracoes_urologicas" id="32916" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="avaliar_sintomas_mulher_14_dias" id="32917" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="antibiotico_recente_fem" id="32918" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="resultado_exames" id="32919" weight="1" value="0.0">
+    <option description="PACIENTES EST&#xc1;VEL, SEM COMORBIDADES, SEM COMPLICA&#xc7;&#xd5;ES NO EXAME DE IMAGEM - ACOMPANHAMENTO AMBULATORIAL COM ANTIBIOTICOTERAPIA VIA ORAL" weight="1"/>
+    <option description="PACIENTE COM ALTERA&#xc7;&#xc3;O DA FUN&#xc7;&#xc3;O RENAL, UROPATIA OBSTRUTIVA NO EXAME DE IMAGEM, ABSCESSO, IMUNOSSUPRESS&#xc3;O, GESTANTE, SEXO MASCULINO, IDOSO, DIFICULDADE MANTER HIDRATA&#xc7;&#xc3;O VIA ORAL, D&#xda;VIDA QUANTO &#xc0; ADES&#xc3;O DO PACIENTE AO TRATAMENTO" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="gravidez" id="32920" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="leucorreia_irritacao" id="32921" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="masculino_corrimento_uretral" id="32922" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinais_pielonefrite" id="32923" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="feminino_complicacoes_gestante" id="32924" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="32925" weight="1" value="0.0">
+    <option description="FR > 22"/>
+    <option description="Confus&#xe3;o Mental" weight="1"/>
+    <option description="PAS &lt; 100" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="criterios_sirs" id="32926" weight="1" value="0.0">
+    <option description="Temperatura &lt; 36&#xb0;C ou > 38,3&#xb0;C" weight="1"/>
+    <option description="Leuc&#xf3;citos > 12 G/L (12.000/mm&#xb3;) ou Leuc&#xf3;citos &lt; 4 G/L (4.000/mm&#xb3;) ou Bast&#xf5;es > 10%" weight="1"/>
+    <option description="FR > 20 ipm" weight="1"/>
+    <option description="FC > 90 bpm" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="gestante_complicacoes_leucorreia" id="32927" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="32928" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="32929" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

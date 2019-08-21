@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[Viver Bem] BAR + BBC + BETABLOQUEADOR [*]" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5861" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar PS/PD (1)" description="PS 130 -159 ou PD 80 - 99?" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="PS 130 -159 ou PD 80 - 99?" url="" id="2541">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_1" id="4381" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5862" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar PS/PD (2)" description="PS 160 - 179 ou PD 100 - 109?" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="PS 160-179 ou PD 100 -109?" url="" id="2542">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_2" id="4382" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5863" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Encaminhamento] Monoterapia BAR" description="" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>VB_BAR_MONO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5864" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Encaminhamento] Duploterapia BAR" description="" isTerminal="true" inputSequences="//@sequence.2">
+    <pathways>VB_BAR_DUPLO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5865" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Encaminhamento] Triploterapia BAR" description="" isTerminal="true" inputSequences="//@sequence.3">
+    <pathways>VB_BAR_TRIPLO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5866" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Encaminhamento] Tetraterapia BAR" description="" isTerminal="true">
+    <pathways>VB_BAR_TETRA</pathways>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="5867" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (PD/PS positivo(1))" description="">
+    <operation name="PD/PS positivo(1)" Operator="affirmation" id="4383">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_1" id="4381" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="5868" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (PD/PS negativo (1))" description="">
+    <operation name="PD/PS negativo (1)" id="4384">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_1" id="4381" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="5869" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (PD/PS positivo (2))" description="">
+    <operation name="PD/PS positivo (2)" Operator="affirmation" id="4385">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_2" id="4382" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="5870" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (PD/PS negativo (2))" description="">
+    <operation name="PD/PS negativo (2)" id="4386">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_2" id="4382" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_1" id="4381" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ps_pd_positivo_2" id="4382" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

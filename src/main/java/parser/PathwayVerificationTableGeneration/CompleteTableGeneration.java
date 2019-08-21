@@ -28,14 +28,21 @@ public class CompleteTableGeneration {
 	        OperationInformation opInfo = new OperationInformation(pathway); //object with functions to extract information about the pathways
 	   
 			String pathwayName = pathwayFiles[i].replaceAll(".xmi", "");
-			System.out.println(i + pathwayName);
-			ArrayList<Integer> problems = new ArrayList<Integer>(){{add(35);}}; //set with defective pathways
+			pathwayName = pathwayName.replaceAll(" - ", "_");
+			System.out.println(i + ": " + pathwayName);
+			ArrayList<Integer> problems = new ArrayList<Integer>(){{add(28);/*add(0); add(2); add(3); add(13); add(30);*/}}; //set with defective pathways
+			//Lembrar de olhar o 33 que demora muito
 			if(!problems.contains(i)) {
 				long beginTime = System.currentTimeMillis();
+//				System.out.println("oi1");
 				int deadlock = info.getDeadlockNumber();
+//				System.out.println("oi2");
 				int nonDeterminism = info.getNonDeterminismNumber();
+//				System.out.println("oi3");
 				int inaccessible = info.getInaccessibleStepNumber();
+//				System.out.println("oi4");
 		        int equivalentTransition = info.getEquivalentTransitionsNumber();
+//		        System.out.println("oi5");
 		        long executionTime = System.currentTimeMillis() - beginTime;
 		        int states = info.getStatesNumber();
 		        int transitions = info.getTransitionsNumber();
@@ -83,8 +90,10 @@ public class CompleteTableGeneration {
 		        recordTable.println(line);
 		        
 		        System.out.println(pathwayName + " gravado! " + i);
-			}else {
+			}else if(problems.contains(i)){
 				System.out.println(pathwayName + " COM PROBLEMA!!! " + i);
+			}else {
+				System.out.println(pathwayName + " PULOU!!! " + i);
 			}
 	        
 		}

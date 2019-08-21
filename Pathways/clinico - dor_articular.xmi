@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[M&#xe9;dico da Fam&#xed;lia] Dor Articular" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6950" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Padr&#xe3;o Inflamat&#xf3;rio" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Dor de padr&#xe3;o inflamat&#xf3;rio?" url="" id="2988">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_inflamatoria" id="5390" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6951" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Osteoartrose?" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Paciente apresenta sinais de Osteoartrose?" url="" id="2989">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tem_osteoartrose" id="5391" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6952" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Inflamat&#xf3;ria] Monoarticular ou Poliarticular?" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Monoarticular ou poliarticular?" url="" id="2990">
+      <answers xsi:type="pathwayMetamodel:Choice" name="mono_ou_poliarticular" id="5392" weight="1" value="0.0">
+        <option description="Monoarticular" weight="1"/>
+        <option description="Poliarticular" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="6953" type="Processo" type_verbose="Processo" url="" name="Encaminhar ao Ortopedista ou Reumatologista" description="&lt;p>Considerar encaminhamento ao especialista e &lt;u>tratar com sintom&amp;aacute;tico &lt;strong>caso necess&amp;aacute;rio&lt;/strong>&lt;/u>.&lt;/p>" isTerminal="true" inputSequences="//@sequence.2 //@sequence.10 //@sequence.18 //@sequence.19 //@sequence.25 //@sequence.33 //@sequence.37">
+    <action id="476" process_id="6953" service="encaminhar_especialidade" description="Reumatologista"/>
+    <action id="477" process_id="6953" service="encaminhar_especialidade" description="Ortopedista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6954" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Osteoartrose] Raio X de articula&#xe7;&#xe3;o acometida" description="&lt;p>&lt;span style=&quot;background-color:#ffffff; color:#000000; font-family:Calibri; font-size:12pt&quot;>Se necess&amp;aacute;rio : Solicitar Raio X da articula&amp;ccedil;&amp;atilde;o acometida de dor via conduta complementar no meu lateral.&lt;/span>&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6955" type="Receita" type_verbose="Receita" url="" name="[Osteoartrose] Receita" description="&lt;p>Orientar:&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Perda de peso&lt;/li>&#xA;&#x9;&lt;li>Fortalecimento muscular&lt;/li>&#xA;&#x9;&lt;li>Exerc&amp;iacute;cio aer&amp;oacute;bico&lt;/li>&#xA;&#x9;&lt;li>Alongamento&lt;/li>&#xA;&#x9;&lt;li>Evitar atividades de impacto e sobrecarga de articula&amp;ccedil;&amp;otilde;es&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" inputSequences="//@sequence.4" outputSequences="//@sequence.5">
+    <item id="14050" url="" name="DICLOFENACO SODICO" med_code="766250467" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="de 3 a 5 dias"/>
+    <item id="14051" url="" name="NAPROXENO" med_code="1962225120" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="de 3 a 5 dias"/>
+    <item id="14052" url="" name="OMEPRAZOL" med_code="1146321335" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uso cont&#xed;nuo ou enquanto durar tratamento com AINE"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6956" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Osteoartrose] Orienta&#xe7;&#xe3;o de Retorno" description="Retorno a crit&#xe9;rio m&#xe9;dico." isTerminal="true" inputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6957" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Monoarticular] Aguda ou Cr&#xf4;nica?" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Dor aguda ou cr&#xf4;nica?" url="" id="2991">
+      <answers xsi:type="pathwayMetamodel:Choice" name="monoarticular_dor_aguda_ou_cronica" id="5393" weight="1" value="0.0">
+        <option description="Aguda" weight="1"/>
+        <option description="Cr&#xf4;nica" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6958" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Monoarticular Aguda] Suspeita de diagn&#xf3;stico" description="&lt;p>Selecionar suspeita de diagn&amp;oacute;stico conforme sintomas (caso aplic&amp;aacute;vel)&lt;/p>" inputSequences="//@sequence.7" outputSequences="//@sequence.16 //@sequence.17 //@sequence.18">
+    <questions text="Gota?" url="" id="2992">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_gota" id="5394" weight="1" value="false"/>
+    </questions>
+    <questions text="Artrite S&#xe9;ptica?" url="" id="2993">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_artrite_septica" id="5395" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6959" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Monoarticular Cr&#xf4;nica] Suspeita de diagn&#xf3;stico" description="&lt;p>Selecione suspeita de diagn&amp;oacute;stico conforme sintomas (caso aplic&amp;aacute;vel)&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.10 //@sequence.11 //@sequence.12">
+    <questions text="Artrite Reativa (Doenca de Poncet) - Suspeita ou diagn&#xf3;stico de tuberculose" url="" id="2994">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_artrite_reativa" id="5396" weight="1" value="false"/>
+    </questions>
+    <questions text="Psor&#xed;ase - Acometimento de interfalangianas distais das m&#xe3;os, unhas em dedal" url="" id="2995">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_psoriase" id="5397" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6960" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Poliarticular] Aguda ou Cr&#xf4;nica?" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.24 //@sequence.26 //@sequence.32">
+    <questions text="Poliarticular aguda ou cr&#xf4;nica?" url="" id="2996">
+      <answers xsi:type="pathwayMetamodel:Choice" name="dor_poliarticular" id="5398" weight="1" value="0.0">
+        <option description="Aguda" weight="1"/>
+        <option description="Cr&#xf4;nica" weight="2"/>
+        <option description="Dor Inflamat&#xf3;ria da Coluna" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7101" type="Receita" type_verbose="Receita" url="" name="[Artrite Reativa Monoarticular Cr&#xf4;nica] Tratamento" description="" isTerminal="true" inputSequences="//@sequence.11">
+    <item id="14053" url="" name="PARACETAMOL" med_code="-296562332" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="de 3 a 5 dias"/>
+    <item id="14054" url="" name="DICLOFENACO SODICO" med_code="766250467" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="de 3 a 5 dias"/>
+    <item id="14055" url="" name="NAPROXENO" med_code="1962225120" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="de 3 a 5 dias"/>
+    <item id="14056" url="" name="OMEPRAZOL" med_code="1146321335" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="1 vez ao dia pela manh&#xe3;, de 3 a 5 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7102" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Psoriase Monoarticular Cr&#xf4;nica] Apoio Diagn&#xf3;stico?" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.13 //@sequence.14">
+    <questions text="Solicitar apoio diagn&#xf3;stico?" url="" id="2997">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="apoio_diagnostico_psoriase" id="5399" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="7103" type="Tratamento" type_verbose="Tratamento" url="" name="[Psor&#xed;ase] Exame" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.15">
+    <examination url="" exam_id="28040481" limb_side="" quantity="1" reason="Suspeita de psor&#xed;ase" clinical_indication="N/a"/>
+    <examination url="" exam_id="40304370" limb_side="" quantity="1" reason="Suspeita de psor&#xed;ase" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060865" limb_side="" quantity="1" reason="Suspeita de psor&#xed;ase" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7104" type="Receita" type_verbose="Receita" url="" name="[Gota Monoarticular Aguda] Tratamento" description="" isTerminal="true" inputSequences="//@sequence.16">
+    <item id="14057" url="" name="COLCHICINA" med_code="650388342" presentation="COMP" access="1" quantity="2" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Se n&#xe3;o melhorar, repetir doses 1 hora depois"/>
+    <item id="14058" url="" name="NAPROXENO" med_code="1962225127" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="De 3 a 5 dias"/>
+    <item id="14059" url="" name="PARACETAMOL+FOSFATO DE CODEINA" med_code="1462526198" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se apresentar dor"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7106" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Poliarticular Cr&#xf4;nica] Suspeita de Diagn&#xf3;stico" description="Selecionar suspeita de diagn&#xf3;stico conforme sintomas apresentados (caso aplic&#xe1;vel)" inputSequences="//@sequence.24" outputSequences="//@sequence.19 //@sequence.20 //@sequence.21">
+    <questions text="Artrite L&#xfa;pica - Hist&#xf3;rico cl&#xed;nico sugestivo de LES" url="" id="2998">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_lupica" id="5400" weight="1" value="false"/>
+    </questions>
+    <questions text="Suspeita de Artrite Reumat&#xf3;ide" url="" id="2999">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_reumatoide" id="5501" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7107" type="Processo" type_verbose="Processo" url="" name="Encaminhar ao Reumatologista" description="Encaminhamento ao reumatologista" isTerminal="true" inputSequences="//@sequence.14 //@sequence.15 //@sequence.20 //@sequence.34 //@sequence.36">
+    <action id="478" process_id="7107" service="encaminhar_especialidade" description="Reumatologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7108" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Artrite Reumat&#xf3;ide Poliarticular] SCORE" description="" inputSequences="//@sequence.21" outputSequences="//@sequence.22 //@sequence.23">
+    <questions text="Score para Artrite Reumat&#xf3;ide" url="" id="3000">
+      <answers xsi:type="pathwayMetamodel:Choice" name="score_artrite_reumatoide_poliarticular" id="5502" weight="1" value="0.0">
+        <option description="Acometimento de uma grande articula&#xe7;&#xe3;o"/>
+        <option description="FR negativo E anti-CCP negativo"/>
+        <option description="PCR normal E VHS normal"/>
+        <option description="Dura&#xe7;&#xe3;o por menos de 6 semanas"/>
+        <option description="PCR anormal OU VHS anormal" weight="1"/>
+        <option description="Dura&#xe7;&#xe3;o por 6 ou mais de 6 semanas" weight="1"/>
+        <option description="Acometimento de 2 a 10 grandes articula&#xe7;&#xf5;es" weight="1"/>
+        <option description="FR positivo OU anti-CCP positivo em baixos t&#xed;tulos (menor ou igual a 3 vezes o limite superior da normalidade)" weight="2"/>
+        <option description="Acometimento de 1  a 3 pequenas articula&#xe7;&#xf5;es (grandes n&#xe3;o contadas)" weight="2"/>
+        <option description="FR positivo OU anti-CCP positivo em altos t&#xed;tulos (superior a 3 vezes o limite superior da normalidade)" weight="3"/>
+        <option description="Acometimento de 4 a 10 pequenas articula&#xe7;&#xf5;es (grandes n&#xe3;o contadas)" weight="3"/>
+        <option description="Acometimento de mais de 10 articula&#xe7;&#xf5;es" weight="5"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7109" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Poliarticular Aguda] Suspeita de Diagn&#xf3;stico" description="Selecionar suspeita de diagn&#xf3;stico conforme sintomas apresentados (se aplic&#xe1;vel)" inputSequences="//@sequence.26" outputSequences="//@sequence.25 //@sequence.27 //@sequence.28">
+    <questions text="Gonococcemia: Artrite + les&#xf5;es vesico-pustulares com base eritematosa" url="" id="3041">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="gonococcemia_poliarticular_aguda" id="5503" weight="1" value="false"/>
+    </questions>
+    <questions text="Artrite Reativa: Poliartrite aguda + Faringite estreptoc&#xf3;cica recente OU febre atual" url="" id="3042">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="artrite_reativa_poliarticular_aguda" id="5504" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7111" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Artrite Reativa Poliarticular] Apoio Diagn&#xf3;stico?" description="" inputSequences="//@sequence.28" outputSequences="//@sequence.29 //@sequence.30">
+    <questions text="Necessita de exames para apoio diagn&#xf3;stico?" url="" id="3043">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="artrite_reativa_poliarticular_apoio_diagnostico" id="5505" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="7112" type="Tratamento" type_verbose="Tratamento" url="" name="[Artrite Reativa Poliarticular Aguda] Exames de Apoio" description="" inputSequences="//@sequence.29" outputSequences="//@sequence.31">
+    <examination url="" exam_id="28040481" limb_side="" quantity="1" reason="Artrite Reativa Poliarticular Aguda" clinical_indication="n/a"/>
+    <examination url="" exam_id="40304370" limb_side="" quantity="1" reason="Artrite Reativa Poliarticular Aguda" clinical_indication="n/a"/>
+    <examination url="" exam_id="28066162" limb_side="" quantity="1" reason="Artrite Reativa Poliarticular Aguda" clinical_indication="n/a"/>
+    <examination url="" exam_id="40306445" limb_side="" quantity="1" reason="Artrite Reativa Poliarticular Aguda" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7113" type="Receita" type_verbose="Receita" url="" name="[Artrite Reativa Poliarticular Aguda] Tratamento" description="" isTerminal="true" inputSequences="//@sequence.30 //@sequence.31">
+    <item id="14060" url="" name="PARACETAMOL" med_code="-296562332" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="de 3 a 5 dias"/>
+    <item id="14081" url="" name="DICLOFENACO SODICO" med_code="766250467" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="de 3 a 5 dias"/>
+    <item id="14082" url="" name="NAPROXENO" med_code="1962225120" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="de 3 a 5 dias"/>
+    <item id="14083" url="" name="OMEPRAZOL" med_code="1944311268" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="tomar uma vez por dia pela manh&#xe3;"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7114" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dor Inflamat&#xf3;ria da Coluna] Suspeita de Diagn&#xf3;stico" description="&lt;p>Selecionar suspeita de diagn&amp;oacute;stico conforme sintomas apresentados (se aplic&amp;aacute;vel)&lt;/p>" inputSequences="//@sequence.32" outputSequences="//@sequence.33 //@sequence.34 //@sequence.35">
+    <questions text="Dor Lombar Baixa - Lombalgia associada a rigidez matinal local, melhora com atividade f&#xed;sica e piora com repouso" url="" id="3044">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_lombar_baixa" id="5506" weight="1" value="false"/>
+    </questions>
+    <questions text="Suspeita de Espondilite Anquilosante" url="" id="3045">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="espongilite_anquilosante" id="5507" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7115" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Encaminhamento] Dor Lombar Baixa" description="Fazer encaminhamento para protocolo de Dor Lombar Baixa. Ainda n&#xe3;o est&#xe1; modelado, portanto ser&#xe1; atualizado futuramente com o encaminhamento." isTerminal="true" inputSequences="//@sequence.35"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="7116" type="Tratamento" type_verbose="Tratamento" url="" name="[Artrite Reumat&#xf3;ide Poliarticular] Passo apoio Diagn&#xf3;stico" description="" inputSequences="//@sequence.22" outputSequences="//@sequence.36">
+    <examination url="" exam_id="28040481" limb_side="" quantity="1" reason="Passo de apoio para diagn&#xf3;stico" clinical_indication="n/a"/>
+    <examination url="" exam_id="40304370" limb_side="" quantity="1" reason="Passo de apoio diagn&#xf3;stico" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060865" limb_side="" quantity="1" reason="Passo de apoio para diagn&#xf3;stico" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060504" limb_side="" quantity="1" reason="Passo apoio para diagn&#xf3;stico" clinical_indication="n/a"/>
+    <examination url="" exam_id="28066057" limb_side="" quantity="1" reason="Passo apoio para diagn&#xf3;stico" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="7117" type="Tratamento" type_verbose="Tratamento" url="" name="[Artrite Reumat&#xf3;ide Poliarticular] Passo apoio Diagn&#xf3;stico" description="" inputSequences="//@sequence.23" outputSequences="//@sequence.37">
+    <examination url="" exam_id="28040481" limb_side="" quantity="1" reason="Passo apoio para diagn&#xf3;stico" clinical_indication="n/a"/>
+    <examination url="" exam_id="40304370" limb_side="" quantity="1" reason="Passo apoio para diagn&#xf3;stico" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060865" limb_side="" quantity="1" reason="Passo apoio para diagn&#xf3;stico" clinical_indication="n/a"/>
+    <examination url="" exam_id="28060504" limb_side="" quantity="1" reason="Passo apoio para diagn&#xf3;stico" clinical_indication="n/a"/>
+    <examination url="" exam_id="28066057" limb_side="" quantity="1" reason="Passo apoio para diagn&#xf3;stico" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7118" type="Processo" type_verbose="Processo" url="" name="[Gonococcemia] Encaminhar Paciente &#xe0; Urg&#xea;ncia" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>ATEN&amp;Ccedil;&amp;Atilde;O&lt;br />&#xA;Paciente com Gonococcemia. Encaminhar &amp;agrave; urg&amp;ecirc;ncia.&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.27">
+    <action id="479" process_id="7118" service="encaminhar_urgencia_msf" description="Encaminhar"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7119" type="Processo" type_verbose="Processo" url="" name="[Artrite S&#xe9;ptica Monoarticular Aguda] Encaminhar Paciente &#xe0; urg&#xea;ncia" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Paciente s&amp;eacute;ptico. Encaminhar &amp;agrave; urg&amp;ecirc;ncia.&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.17">
+    <action id="480" process_id="7119" service="encaminhar_urgencia_msf" description="Encaminhar"/>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="7120" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (inflamat&#xf3;ria)" description="inflamat&#xf3;ria">
+    <operation name="inflamat&#xf3;ria" Operator="affirmation" id="5522">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_inflamatoria" id="5390" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="7121" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (n&#xe3;o inflamat&#xf3;ria)" description="n&#xe3;o inflamat&#xf3;ria">
+    <operation name="n&#xe3;o inflamat&#xf3;ria" id="5523">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_inflamatoria" id="5390" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="7122" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (n&#xe3;o &#xe9; osteoartrose)" description="n&#xe3;o &#xe9; osteoartrose">
+    <operation name="n&#xe3;o &#xe9; osteoartrose" id="5524">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tem_osteoartrose" id="5391" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="7123" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (&#xe9; osteoartrose)" description="&#xe9; osteoartrose">
+    <operation name="tem osteoartrose" Operator="affirmation" id="5525">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tem_osteoartrose" id="5391" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="7124" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="7125" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="7126" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (monoarticular cronica)" description="monoarticular cronica">
+    <operation name="cronica" Operator="equal" id="5526">
+      <operand xsi:type="pathwayMetamodel:Choice" name="monoarticular_dor_aguda_ou_cronica" id="5393" weight="1" value="0.0">
+        <option description="Aguda" weight="1"/>
+        <option description="Cr&#xf4;nica" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5508" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="7127" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (monoarticular aguda)" description="monoarticular aguda">
+    <operation name="aguda" Operator="equal" id="5527">
+      <operand xsi:type="pathwayMetamodel:Choice" name="monoarticular_dor_aguda_ou_cronica" id="5393" weight="1" value="0.0">
+        <option description="Aguda" weight="1"/>
+        <option description="Cr&#xf4;nica" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5509" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.2" id="7128" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (monoarticular)" description="monoarticular">
+    <operation name="mono" Operator="equal" id="5528">
+      <operand xsi:type="pathwayMetamodel:Choice" name="mono_ou_poliarticular" id="5392" weight="1" value="0.0">
+        <option description="Monoarticular" weight="1"/>
+        <option description="Poliarticular" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5509" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.2" id="7129" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (poliarticular)" description="poliarticular">
+    <operation name="poli" Operator="equal" id="5529">
+      <operand xsi:type="pathwayMetamodel:Choice" name="mono_ou_poliarticular" id="5392" weight="1" value="0.0">
+        <option description="Monoarticular" weight="1"/>
+        <option description="Poliarticular" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5508" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.9" id="7130" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (default)" description="default">
+    <operation name="default" Operator="and" id="5530">
+      <operand xsi:type="pathwayMetamodel:Operation" name="(mono) sem artrite reativa" id="5512">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_artrite_reativa" id="5396" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="(mono) sem psoriase" id="5513">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_psoriase" id="5397" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="7131" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (artrite reativa monoarticular)" description="artrite reativa monoarticular">
+    <operation name="artrite reativa monoarticular" Operator="affirmation" id="5531">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_artrite_reativa" id="5396" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.9" id="7132" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (Psoriase monoarticular cronica)" description="Psoriase monoarticular cronica">
+    <operation name="Psoriase monoarticular cronica" Operator="affirmation" id="5532">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_psoriase" id="5397" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="7133" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (psoriase com apoio diagnostico)" description="psoriase com apoio diagnostico">
+    <operation name="psoriase com apoio diagnostico" Operator="affirmation" id="5533">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="apoio_diagnostico_psoriase" id="5399" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.12" id="7134" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (psoriase sem apoio diagnostico)" description="psoriase sem apoio diagnostico">
+    <operation name="psoriase sem apoio diagnostico" id="5534">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="apoio_diagnostico_psoriase" id="5399" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.13" id="7135" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="Incondicional"/>
+  <sequence inputStep="//@element.14" outputStep="//@element.8" id="7136" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (gota)" description="gota">
+    <operation name="gota" Operator="affirmation" id="5535">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_gota" id="5394" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.8" id="7137" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (artrite septica)" description="artrite septica">
+    <operation name="artrite septica" Operator="affirmation" id="5536">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_artrite_septica" id="5395" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.8" id="7138" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (monoarticular aguda default)" description="monoarticular aguda default">
+    <operation name="default" Operator="and" id="5537">
+      <operand xsi:type="pathwayMetamodel:Operation" name="(mono) sem gota" id="5514">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_gota" id="5394" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="(mono) sem sepse" id="5515">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_artrite_septica" id="5395" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.15" id="7139" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (poliarticular cronica default)" description="poliarticular cronica default">
+    <operation name="default" Operator="and" id="5538">
+      <operand xsi:type="pathwayMetamodel:Operation" name="(poli) sem artrite lupica" id="5516">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_lupica" id="5400" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="(poli) sem artrite reumatoide" id="5517">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_reumatoide" id="5501" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.15" id="7140" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (artrite lupica)" description="artrite lupica">
+    <operation name="artrite lupica" Operator="affirmation" id="5539">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_lupica" id="5400" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.15" id="7141" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (artrite reumat&#xf3;ide)" description="artrite reumat&#xf3;ide">
+    <operation name="artrite reumat&#xf3;ide" Operator="affirmation" id="5540">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_reumatoide" id="5501" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.17" id="7142" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (score art reumatoide >= 6)" description="score art reumatoide >= 6">
+    <operation name="score art reumatoide >= 6" Operator="greaterOrEqual" id="5541">
+      <operand xsi:type="pathwayMetamodel:Choice" name="score_artrite_reumatoide_poliarticular" id="5502" weight="1" value="0.0">
+        <option description="Acometimento de uma grande articula&#xe7;&#xe3;o"/>
+        <option description="FR negativo E anti-CCP negativo"/>
+        <option description="PCR normal E VHS normal"/>
+        <option description="Dura&#xe7;&#xe3;o por menos de 6 semanas"/>
+        <option description="PCR anormal OU VHS anormal" weight="1"/>
+        <option description="Dura&#xe7;&#xe3;o por 6 ou mais de 6 semanas" weight="1"/>
+        <option description="Acometimento de 2 a 10 grandes articula&#xe7;&#xf5;es" weight="1"/>
+        <option description="FR positivo OU anti-CCP positivo em baixos t&#xed;tulos (menor ou igual a 3 vezes o limite superior da normalidade)" weight="2"/>
+        <option description="Acometimento de 1  a 3 pequenas articula&#xe7;&#xf5;es (grandes n&#xe3;o contadas)" weight="2"/>
+        <option description="FR positivo OU anti-CCP positivo em altos t&#xed;tulos (superior a 3 vezes o limite superior da normalidade)" weight="3"/>
+        <option description="Acometimento de 4 a 10 pequenas articula&#xe7;&#xf5;es (grandes n&#xe3;o contadas)" weight="3"/>
+        <option description="Acometimento de mais de 10 articula&#xe7;&#xf5;es" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="5510" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.17" id="7143" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (score art reumatoide &lt; 6)" description="score art reumatoide &lt; 6">
+    <operation name="score art reumatoide &lt; 6" Operator="lessThan" id="5542">
+      <operand xsi:type="pathwayMetamodel:Choice" name="score_artrite_reumatoide_poliarticular" id="5502" weight="1" value="0.0">
+        <option description="Acometimento de uma grande articula&#xe7;&#xe3;o"/>
+        <option description="FR negativo E anti-CCP negativo"/>
+        <option description="PCR normal E VHS normal"/>
+        <option description="Dura&#xe7;&#xe3;o por menos de 6 semanas"/>
+        <option description="PCR anormal OU VHS anormal" weight="1"/>
+        <option description="Dura&#xe7;&#xe3;o por 6 ou mais de 6 semanas" weight="1"/>
+        <option description="Acometimento de 2 a 10 grandes articula&#xe7;&#xf5;es" weight="1"/>
+        <option description="FR positivo OU anti-CCP positivo em baixos t&#xed;tulos (menor ou igual a 3 vezes o limite superior da normalidade)" weight="2"/>
+        <option description="Acometimento de 1  a 3 pequenas articula&#xe7;&#xf5;es (grandes n&#xe3;o contadas)" weight="2"/>
+        <option description="FR positivo OU anti-CCP positivo em altos t&#xed;tulos (superior a 3 vezes o limite superior da normalidade)" weight="3"/>
+        <option description="Acometimento de 4 a 10 pequenas articula&#xe7;&#xf5;es (grandes n&#xe3;o contadas)" weight="3"/>
+        <option description="Acometimento de mais de 10 articula&#xe7;&#xf5;es" weight="5"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="5510" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.10" id="7144" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (Poliarticular Cr&#xf4;nica)" description="Poliarticular Cr&#xf4;nica">
+    <operation name="Poliarticular Cr&#xf4;nica" Operator="equal" id="5543">
+      <operand xsi:type="pathwayMetamodel:Choice" name="dor_poliarticular" id="5398" weight="1" value="0.0">
+        <option description="Aguda" weight="1"/>
+        <option description="Cr&#xf4;nica" weight="2"/>
+        <option description="Dor Inflamat&#xf3;ria da Coluna" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5508" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.18" id="7145" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (Poliarticular Aguda Default)" description="Poliarticular Aguda Default">
+    <operation name="Poliarticular Aguda Default" Operator="and" id="5544">
+      <operand xsi:type="pathwayMetamodel:Operation" name="(poli) sem gonococcemia" id="5518">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="gonococcemia_poliarticular_aguda" id="5503" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="(poli) sem artrite reativa" id="5519">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="artrite_reativa_poliarticular_aguda" id="5504" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.10" id="7146" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (Poliarticular Aguda)" description="Poliarticular Aguda">
+    <operation name="Poliarticular Aguda" Operator="equal" id="5545">
+      <operand xsi:type="pathwayMetamodel:Choice" name="dor_poliarticular" id="5398" weight="1" value="0.0">
+        <option description="Aguda" weight="1"/>
+        <option description="Cr&#xf4;nica" weight="2"/>
+        <option description="Dor Inflamat&#xf3;ria da Coluna" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5509" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.18" id="7147" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (Gonococcemia)" description="Gonococcemia">
+    <operation name="Gonococcemia" Operator="affirmation" id="5546">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gonococcemia_poliarticular_aguda" id="5503" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="7148" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (Artrite Reativa Poliarticular)" description="Artrite Reativa Poliarticular">
+    <operation name="Artrite Reativa Poliarticular" Operator="affirmation" id="5547">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="artrite_reativa_poliarticular_aguda" id="5504" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="7149" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (com apoio diagnostico)" description="com apoio diagnostico">
+    <operation name="com apoio diagnostico" Operator="affirmation" id="5548">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="artrite_reativa_poliarticular_apoio_diagnostico" id="5505" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.19" id="7150" type="Sequencia" type_verbose="Sequencia" url="" name="S31 (sem apoio diagnostico)" description="sem apoio diagnostico">
+    <operation name="sem apoio diagnostico" id="5549">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="artrite_reativa_poliarticular_apoio_diagnostico" id="5505" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.20" id="7151" type="Sequencia" type_verbose="Sequencia" url="" name="S32" description="Incondicional"/>
+  <sequence inputStep="//@element.22" outputStep="//@element.10" id="7152" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (Poliarticular Inflamat&#xf3;ria da Coluna)" description="Poliarticular Inflamat&#xf3;ria da Coluna">
+    <operation name="Poliarticular Inflamat&#xf3;ria da Coluna" Operator="equal" id="5550">
+      <operand xsi:type="pathwayMetamodel:Choice" name="dor_poliarticular" id="5398" weight="1" value="0.0">
+        <option description="Aguda" weight="1"/>
+        <option description="Cr&#xf4;nica" weight="2"/>
+        <option description="Dor Inflamat&#xf3;ria da Coluna" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="5511" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.22" id="7153" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (Dor Inflamat&#xf3;ria da Coluna Default)" description="Dor Inflamat&#xf3;ria da Coluna Default">
+    <operation name="Dor Inflamat&#xf3;ria da Coluna Default" Operator="and" id="5551">
+      <operand xsi:type="pathwayMetamodel:Operation" name="(poli) sem dor lombar baixa" id="5520">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_lombar_baixa" id="5506" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="(poli) espongilite anquilosante" id="5521">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="espongilite_anquilosante" id="5507" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.22" id="7154" type="Sequencia" type_verbose="Sequencia" url="" name="S35 (Espongilite Anquilosante)" description="Espongilite Anquilosante">
+    <operation name="Espongilite Anquilosante" Operator="affirmation" id="5552">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="espongilite_anquilosante" id="5507" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.22" id="7155" type="Sequencia" type_verbose="Sequencia" url="" name="S36 (Dor Lombar Baixa)" description="Dor Lombar Baixa">
+    <operation name="Dor Lombar Baixa" Operator="affirmation" id="5553">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_lombar_baixa" id="5506" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.24" id="7156" type="Sequencia" type_verbose="Sequencia" url="" name="S36 (Passo apoio)" description="Passo apoio diagn&#xf3;stico"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.25" id="7157" type="Sequencia" type_verbose="Sequencia" url="" name="S37 (Passo apoio)" description="Passo apoio para diagn&#xf3;stico"/>
+  <operation name="(mono) sem artrite reativa" id="5512">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_artrite_reativa" id="5396" weight="1" value="false"/>
+  </operation>
+  <operation name="(mono) sem psoriase" id="5513">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_psoriase" id="5397" weight="1" value="false"/>
+  </operation>
+  <operation name="(mono) sem gota" id="5514">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_gota" id="5394" weight="1" value="false"/>
+  </operation>
+  <operation name="(mono) sem sepse" id="5515">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_artrite_septica" id="5395" weight="1" value="false"/>
+  </operation>
+  <operation name="(poli) sem artrite lupica" id="5516">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_lupica" id="5400" weight="1" value="false"/>
+  </operation>
+  <operation name="(poli) sem artrite reumatoide" id="5517">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_reumatoide" id="5501" weight="1" value="false"/>
+  </operation>
+  <operation name="(poli) sem gonococcemia" id="5518">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="gonococcemia_poliarticular_aguda" id="5503" weight="1" value="false"/>
+  </operation>
+  <operation name="(poli) sem artrite reativa" id="5519">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="artrite_reativa_poliarticular_aguda" id="5504" weight="1" value="false"/>
+  </operation>
+  <operation name="(poli) sem dor lombar baixa" id="5520">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_lombar_baixa" id="5506" weight="1" value="false"/>
+  </operation>
+  <operation name="(poli) espongilite anquilosante" id="5521">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="espongilite_anquilosante" id="5507" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_inflamatoria" id="5390" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tem_osteoartrose" id="5391" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="mono_ou_poliarticular" id="5392" weight="1" value="0.0">
+    <option description="Monoarticular" weight="1"/>
+    <option description="Poliarticular" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="monoarticular_dor_aguda_ou_cronica" id="5393" weight="1" value="0.0">
+    <option description="Aguda" weight="1"/>
+    <option description="Cr&#xf4;nica" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_gota" id="5394" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_aguda_artrite_septica" id="5395" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_artrite_reativa" id="5396" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="monoarticular_psoriase" id="5397" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="dor_poliarticular" id="5398" weight="1" value="0.0">
+    <option description="Aguda" weight="1"/>
+    <option description="Cr&#xf4;nica" weight="2"/>
+    <option description="Dor Inflamat&#xf3;ria da Coluna" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="apoio_diagnostico_psoriase" id="5399" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_lupica" id="5400" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="poliarticular_cronica_artrite_reumatoide" id="5501" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="score_artrite_reumatoide_poliarticular" id="5502" weight="1" value="0.0">
+    <option description="Acometimento de uma grande articula&#xe7;&#xe3;o"/>
+    <option description="FR negativo E anti-CCP negativo"/>
+    <option description="PCR normal E VHS normal"/>
+    <option description="Dura&#xe7;&#xe3;o por menos de 6 semanas"/>
+    <option description="PCR anormal OU VHS anormal" weight="1"/>
+    <option description="Dura&#xe7;&#xe3;o por 6 ou mais de 6 semanas" weight="1"/>
+    <option description="Acometimento de 2 a 10 grandes articula&#xe7;&#xf5;es" weight="1"/>
+    <option description="FR positivo OU anti-CCP positivo em baixos t&#xed;tulos (menor ou igual a 3 vezes o limite superior da normalidade)" weight="2"/>
+    <option description="Acometimento de 1  a 3 pequenas articula&#xe7;&#xf5;es (grandes n&#xe3;o contadas)" weight="2"/>
+    <option description="FR positivo OU anti-CCP positivo em altos t&#xed;tulos (superior a 3 vezes o limite superior da normalidade)" weight="3"/>
+    <option description="Acometimento de 4 a 10 pequenas articula&#xe7;&#xf5;es (grandes n&#xe3;o contadas)" weight="3"/>
+    <option description="Acometimento de mais de 10 articula&#xe7;&#xf5;es" weight="5"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="gonococcemia_poliarticular_aguda" id="5503" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="artrite_reativa_poliarticular_aguda" id="5504" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="artrite_reativa_poliarticular_apoio_diagnostico" id="5505" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_lombar_baixa" id="5506" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="espongilite_anquilosante" id="5507" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="5508" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="5509" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="6" id="5510" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="5511" weight="1"/>
+</pathwayMetamodel:Pathway>

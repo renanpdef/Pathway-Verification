@@ -33,8 +33,9 @@ public class StatisticsTableGeneration {
 	        FindInaccessibleStep inaccessibleStep = new FindInaccessibleStep(pathway);
 	        
 			String pathwayName = pathwayFiles[i].replaceAll(".xmi", "");
+			pathwayName = pathwayName.replaceAll(" - ", "_");
 			System.out.println(i + pathwayName);
-			ArrayList<Integer> problems = new ArrayList<Integer>(){{add(35);}}; //set with defective pathways
+			ArrayList<Integer> problems = new ArrayList<Integer>(){{add(28);}}; //set with defective pathways
 			if(!problems.contains(i)) {
 				Map<String, Double> mapStatistics = new HashMap<String, Double>();
 				if(function.equalsIgnoreCase("dl")) {

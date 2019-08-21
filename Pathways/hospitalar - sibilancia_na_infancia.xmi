@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Sibil&#xe2;ncia na inf&#xe2;ncia" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34550" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Satura&#xe7;&#xe3;o" description="" inputSequences="//@sequence.13 //@sequence.15" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Paciente apresenta Satura&#xe7;&#xe3;o &lt; 85%?" url="" id="16159">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="saturacao_menor_85" id="33126" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34551" type="Tratamento" type_verbose="Tratamento" url="" name="[Asma Grave] Sala de Cuidados" description="&lt;ul>&#xA;&#x9;&lt;li>Dieta Zero.&lt;/li>&#xA;&#x9;&lt;li>M&amp;aacute;scara de Venturi 50%&lt;/li>&#xA;&#x9;&lt;li>Pun&amp;ccedil;&amp;atilde;o com jelco&lt;/li>&#xA;&#x9;&lt;li>Aerossol 1h cont&amp;iacute;nua com&lt;strong> Aerolin nebules&lt;span style=&quot;color:#e74c3c&quot;> &lt;/span>&lt;/strong>+ SF 0,9%. Dose: Aerolin Nebules 1,2ml (&amp;lt;15kg) ou 2,5ml (&amp;gt; 15kg)&amp;nbsp;&lt;/li>&#xA;&#x9;&lt;li>Considerar Sulfato de Magn&amp;eacute;sio 50% ap&amp;oacute;s 1h de nebuliza&amp;ccedil;&amp;atilde;o cont&amp;iacute;nua. Dose: 50mg/kg - Max 2g. Correr 30 min.&lt;/li>&#xA;&#x9;&lt;li>Metilprednisolona 1mg/kg/dose EV ou Hidrocortisona 5 mg/kg/dose.&lt;/li>&#xA;&#x9;&lt;li>Hidrata&amp;ccedil;&amp;atilde;o Venosa - Manuten&amp;ccedil;&amp;atilde;o&lt;/li>&#xA;&#x9;&lt;li>Ox&amp;iacute;metro pulso cont&amp;iacute;nuo&lt;/li>&#xA;&#x9;&lt;li>Cabeceira 30&amp;ordm;&lt;/li>&#xA;&#x9;&lt;li>Sinais Vitais de 1/1h&lt;/li>&#xA;&#x9;&lt;li>&lt;strong>Considerar Interna&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>&lt;strong>Considerar IOT&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>&lt;strong>Considerar vaga na UTI&lt;/strong>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.0 //@sequence.10">
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Paciente com asma" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA VENOSA" exam_id="28011759" limb_side="" quantity="1" reason="Paciente com asma" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com asma" clinical_indication="n/a"/>
+    <procedure url="O2 C/MASCARA DE VENTURI/FACIAL" procedure="75010014" quantity="1"/>
+    <procedure url="PUNCAO C/ JELCO" procedure="76030002" quantity="1"/>
+    <procedure url="OXIMETRO DE PULSO" procedure="75130035" quantity="1"/>
+    <procedure url="CABECEIRA  ELEVADA" procedure="75130016" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="1" quantity="1"/>
+    <procedure url="ENTUBACAO OROTRAQUEAL" procedure="76010003" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34552" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Intensidade da Crise" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Intensidade da Crise" url="" id="16160">
+      <answers xsi:type="pathwayMetamodel:Choice" name="intensidade_crise" id="33127" weight="1" value="0.0">
+        <option description="Leve (Sat O2 > 94%)" weight="1"/>
+        <option description="Moderada (Sat O2 entre 85 e 94%)" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34553" type="Receita" type_verbose="Receita" url="" name="Alta com Receita" description="&lt;p>&lt;strong>Orientar acompanhamento ambulatorial com pneumopediatra&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.5 //@sequence.8 //@sequence.11">
+    <item id="12423" url="" name="Prednisolona 3mg/ml _______ 1 FR." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml 1x ao dia por 5 dias."/>
+    <item id="12424" url="" name="Aerossol com Berotec&#xae; ________ 1 FR" med_code="-1" presentation="-" access="20" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar aerossol de SF 0,9% 3ml + ______ gotas Berotec de 4/4h por 5 dias."/>
+    <item id="12425" url="" name="Aerolin Nebules&#xae; _______ 1 CX" med_code="-1" presentation="-" access="20" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar aerossol com ______ ml de 4/4h por 5 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34554" type="Tratamento" type_verbose="Tratamento" url="" name="[Asma Moderada] Tratamento" description="&lt;p>&lt;strong>&lt;u>Prescrever&lt;/u>&lt;/strong>:&lt;/p>&#xA;&#xA;&lt;p>Nebuliza&amp;ccedil;&amp;atilde;o de resgate 3x (de 20 em 20 min) com:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Aerolin Nebules&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>2,5ml (&amp;gt;15kg) &lt;strong>OU&lt;/strong>&lt;/li>&#xA;&#x9;&#x9;&lt;li>1,2ml (&amp;lt;15kg)&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>Prednisolona 3ml/ml oral (1-2mg/Kg/dose) ou na impossibilidade; realizar:&lt;/li>&#xA;&#x9;&lt;li>Hidrocortisona 5mg/kg/dose diluido em AD.&amp;nbsp;&lt;/li>&#xA;&#x9;&lt;li>Reavalia&amp;ccedil;&amp;atilde;o ap&amp;oacute;s resgate.&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.3" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34555" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Melhora" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Houve melhora?" url="" id="16161">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33128" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34556" type="Tratamento" type_verbose="Tratamento" url="" name="[Asma Moderada] Tratamento Alternativo" description="&lt;p>Repetir resgate 3x (20 em 20 min) com:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Aerolin Nebules 1,2ml (&amp;lt;15kg) ou 2,5ml (&amp;gt; 15kg) + Atrovent 10 gotas (&amp;lt; 6 anos) ou 20 gotas (&amp;gt; 6 anos).&lt;/li>&#xA;&#x9;&lt;li>Solicitar Gasometria Arterial&lt;/li>&#xA;&#x9;&lt;li>Se suspeita de infec&amp;ccedil;&amp;atilde;o:&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX Torax PA. Lat&lt;/li>&#xA;&#x9;&#x9;&lt;li>Hemograma Completo&lt;/li>&#xA;&#x9;&#x9;&lt;li>PCR&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Asma pedi&#xe1;trica" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Asma pedi&#xe1;trica" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Asma pedi&#xe1;trica" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34557" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Resposta" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9 //@sequence.10">
+    <questions text="Resposta" url="" id="16162">
+      <answers xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="33129" weight="1" value="0.0">
+        <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+        <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+        <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34558" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento + Chefia" description="&lt;p>&lt;u>&lt;strong>Comunicar Chefia&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>Encaminhar para sala de cuidados.&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Suporte O2 - Avaliar necessidade de m&amp;aacute;scara de venturi.&lt;/li>&#xA;&#x9;&lt;li>Ox&amp;iacute;metro Pulso&lt;/li>&#xA;&#x9;&lt;li>Aerossol 1h cont&amp;iacute;nua com:&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>Aerolin nebules (1,2ml em &amp;lt;15kg - 2,5ml em &amp;gt; 15 kg) + SF 0,9% 3 ml&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>Em caso de resposta insuficiente, considerar Sulfato de Magn&amp;eacute;sio 50% -&amp;nbsp; 50mg/kg/dose (M&amp;aacute;x 2g) EV em 30 min.&lt;/li>&#xA;&#x9;&lt;li>Deixar em observa&amp;ccedil;&amp;atilde;o na emerg&amp;ecirc;ncia (24-30h), reavalia&amp;ccedil;&amp;atilde;o peri&amp;oacute;dica.&lt;/li>&#xA;&#x9;&lt;li>Considerar dayclinic, se paciente n&amp;atilde;o apresentar melhora no per&amp;iacute;odo.&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34559" type="Tratamento" type_verbose="Tratamento" url="" name="[Asma Leve] Tratamento" description="&lt;p>Avaliar necessidade de medidas hospitalares:&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Realizar resgate 3x (20 em 20 min) com Aerolin Nebules 1,2ml (&amp;lt;15kg) ou 2,5ml (&amp;gt; 15kg).&lt;/li>&#xA;&#x9;&lt;li>Cortic&amp;oacute;ide oral -&amp;nbsp; Prednisolona&amp;nbsp;1mg/kg/dose - (Hidrocortisona EV deve ser ulitilizada apenas na impossibilidade de administra&amp;ccedil;&amp;atilde;o oral)&amp;nbsp;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.2" outputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34560" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar idade" description="" isInitial="true" outputSequences="//@sequence.12 //@sequence.14">
+    <questions text="Qual a idade do paciente?" url="" id="16163">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="idade_paciente" id="33130" weight="1" value="0.0"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34561" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[&lt; 2 anos] Verificar sintomas" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.13 //@sequence.16 //@sequence.25">
+    <questions text="Avaliar quadro paciente:" url="" id="16164">
+      <answers xsi:type="pathwayMetamodel:Choice" name="&lt;2anos_quadro_paciente" id="33131" weight="1" value="0.0">
+        <option description="CORPO ESTRANHO - VIAS A&#xc9;REAS (dispneia de inicio s&#xfa;bito, com hist&#xf3;ria compat&#xed;vel com aspira&#xe7;&#xe3;o de corpo estranho (&quot;engasgo&quot;), tosse, e/ou ausculta de sibil&#xe2;ncia localizada)" weight="1"/>
+        <option description="BRONQUIOLITE (BVA) (paciente com tosse, sibil&#xe2;ncia e/ou creptos difusos, dispneia leve &#xe0; grave, presen&#xe7;a ou n&#xe3;o de febre) (OBS: considerar sazonalidade: Norte e Nordeste (jan-maio); Sul e Sudeste (inverno)" weight="2"/>
+        <option description="LACTENTE SIBILANTE (presen&#xe7;a de sibil&#xe2;ncia transit&#xf3;ria, associada a coexist&#xea;ncia de IVAS, prematuridade, fatores gen&#xe9;ticos, tabagismo, atopias. Geralmente recorrente)" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34562" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[> 2 anos] Verificar sintomas" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.15 //@sequence.17">
+    <questions text="Avaliar quadro do paciente:" url="" id="16165">
+      <answers xsi:type="pathwayMetamodel:Choice" name=">2anos_quadro_paciente" id="33132" weight="1" value="0.0">
+        <option description="Corpo estranho vias a&#xe9;reas (dispneia de inicio s&#xfa;bito, com hist&#xf3;ria compat&#xed;vel com aspira&#xe7;&#xe3;o de corpo estranho (&quot;engasgo&quot;), tosse, e/ou ausculta de sibil&#xe2;ncia localizada)" weight="1"/>
+        <option description="Crise asm&#xe1;tica" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34563" type="Tratamento" type_verbose="Tratamento" url="" name="[Corpos estranhos] Exames" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>OBS: Situa&amp;ccedil;&amp;otilde;es de emerg&amp;ecirc;ncia por obstru&amp;ccedil;&amp;atilde;o total VA (asfixia) realizar Manobra HEIMLICH imediatamente.&lt;/span>&lt;/p>" inputSequences="//@sequence.16 //@sequence.17" outputSequences="//@sequence.18">
+    <examination url="RX COLUNA CERVICAL A P LAT T O OBLIQUAS" exam_id="32020023" limb_side="" quantity="1" reason="Paciente com corpo estranho vias a&#xe9;reas" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Paciente com corpo estranho nas vias a&#xe9;reas" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34564" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Corpos estranhos] Avaliar exame" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.19 //@sequence.20 //@sequence.21">
+    <questions text="Altera&#xe7;&#xe3;o na imagem?" url="" id="16166">
+      <answers xsi:type="pathwayMetamodel:Choice" name="corpos_estranhos_alteracao_imagem" id="33133" weight="1" value="0.0">
+        <option description="Pneumonia" weight="1"/>
+        <option description="Aus&#xea;ncia de corpo estranho e aus&#xea;ncia de infiltrado, com presen&#xe7;a retifica&#xe7;&#xe3;o arcos costais" weight="2"/>
+        <option description="Presen&#xe7;a corpo estranho" weight="3"/>
+        <option description="Sem altera&#xe7;&#xe3;o" weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="34565" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Corpos estranhos] Encaminhar pneumonia" description="" isTerminal="true" inputSequences="//@sequence.19">
+    <pathways>H039</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="34566" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Corpos estranhos] Discutir com chefia" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Discutir caso com chefia.&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Avaliar necessidade de EDA ou Broncoscopia.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Deixar dieta zero.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.20 //@sequence.24"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34567" type="Tratamento" type_verbose="Tratamento" url="" name="[Corpos estranhos] Realizar resgate" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Realizar resgate com&amp;nbsp;&amp;beta;2 3x (de 20 em 20 min):&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Aerolin Nebules&lt;/span>&#xA;&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>1,2ml (&amp;lt;15kg) OU&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>2,5ml (&amp;gt;15kg)&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.21" outputSequences="//@sequence.22"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34568" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Corpos estranhos] Avaliar melhora" description="" inputSequences="//@sequence.22" outputSequences="//@sequence.23 //@sequence.24">
+    <questions text="Houve melhora?" url="" id="16167">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="corpo_estranho_houve_melhora" id="33134" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34569" type="Receita" type_verbose="Receita" url="" name="[Corpos estranhos] Receita" description="" isTerminal="true" inputSequences="//@sequence.23">
+    <item id="12426" url="" name="Prednisolona 3mg/ml _______ 1 FR." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml 1x ao dia por 5 dias."/>
+    <item id="12427" url="" name="Aerossol com Berotec&#xae; ________ 1 FR" med_code="-1" presentation="-" access="20" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar aerossol de SF 0,9% 3ml + ______ gotas Berotec de 4/4h por 5 dias."/>
+    <item id="12428" url="" name="Aerolin Nebules&#xae; _______ 1 CX" med_code="-1" presentation="-" access="20" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar aerossol com ______ ml de 4/4h por 5 dias."/>
+    <item id="12429" url="" name="Sorine&#xae; _______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar 01 jato em cada narina de 6 &#xe0; 8 vezes por dia."/>
+    <item id="12430" url="" name="Rinosoro&#xae; ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar 01 jato em cada narina de 6 &#xe0; 8 vezes por dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34570" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[BVA] Avaliar satura&#xe7;&#xe3;o" description="" inputSequences="//@sequence.25" outputSequences="//@sequence.26 //@sequence.30">
+    <questions text="Avaliar satura&#xe7;&#xe3;o:" url="" id="16168">
+      <answers xsi:type="pathwayMetamodel:Choice" name="bva_saturacao" id="33135" weight="1" value="0.0">
+        <option description="&lt; 90%" weight="1"/>
+        <option description="> 90%" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34571" type="Tratamento" type_verbose="Tratamento" url="" name="[BVA] Eixo vermelho" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:20px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Encaminhar ao eixo vermelho&amp;nbsp;&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>O&lt;/span>&lt;span style=&quot;font-size:14px&quot;>2&lt;/span>&lt;span style=&quot;font-size:20px&quot;> complementar.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Dieta zero + HV Manuten&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Aerossol hipert&amp;ocirc;nico de 8/8h com:&lt;/span>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>AD - 2,8 ml +&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>NaCl 20% - 0,5 ml +&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Adrenalina 1 ml.&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Sem indica&amp;ccedil;&amp;atilde;o de cortic&amp;oacute;ide e antibi&amp;oacute;tico no momento.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>Avaliar a necessidade dos seguintes exames:&lt;/span>&lt;/p>" inputSequences="//@sequence.26" outputSequences="//@sequence.27">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com bronquiolite e satura&#xe7;&#xe3;o &lt; 90%" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Paciente com bronquiolite e satura&#xe7;&#xe3;o &lt; 90%" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA VENOSA" exam_id="28011759" limb_side="" quantity="1" reason="Paciente com bronquiolite e satura&#xe7;&#xe3;o &lt; 90%" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Paciente com bronquiolite e satura&#xe7;&#xe3;o &lt; 90%" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Paciente com bronquiolite" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34572" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[BVA] Avaliar altera&#xe7;&#xe3;o" description="" inputSequences="//@sequence.27" outputSequences="//@sequence.28 //@sequence.29">
+    <questions text="Avaliar altera&#xe7;&#xe3;o:" url="" id="16169">
+      <answers xsi:type="pathwayMetamodel:Choice" name="bva_alteracao" id="33136" weight="1" value="0.0">
+        <option description="Altera&#xe7;&#xe3;o significativa ou impossibilidade desmame O2" weight="1"/>
+        <option description="Sem altera&#xe7;&#xe3;o significativa em imagem e exames laboratoriais normais" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="34573" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[BVA] Com altera&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>- Em casos de altera&amp;ccedil;&amp;atilde;o significativa de Rx t&amp;oacute;rax ou exames laboratorias, considerar interna&amp;ccedil;&amp;atilde;o;&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>- Aus&amp;ecirc;ncia de altera&amp;ccedil;&amp;atilde;o em exames, por&amp;eacute;m sem condi&amp;ccedil;&amp;otilde;es de desmame de O&amp;sup2;:&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;a) Deixar paciente em observa&amp;ccedil;&amp;atilde;o na emerg&amp;ecirc;ncia (24-30h); Alta somente ap&amp;oacute;s melhora da dispn&amp;eacute;ia e satura&amp;ccedil;&amp;atilde;o &amp;gt; 92%.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;b) Realizar aerossol hipert&amp;ocirc;nico 8/8h. N&amp;atilde;o h&amp;aacute; necessidade de cortic&amp;oacute;ide ou antibi&amp;oacute;tico.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;c) Reavaliar paciente a cada turno. Se ap&amp;oacute;s 30h n&amp;atilde;o houver melhora da dispn&amp;eacute;ia e depend&amp;ecirc;ncia de O&amp;sup2;, considerar&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Dayclinic.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.28"/>
+  <element xsi:type="pathwayMetamodel:Information" id="34574" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[BVA] Sem altera&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Alta ap&amp;oacute;s melhora dispn&amp;eacute;ia e satura&amp;ccedil;&amp;atilde;o &amp;gt; 92%&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" inputSequences="//@sequence.29" outputSequences="//@sequence.35"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34575" type="Tratamento" type_verbose="Tratamento" url="" name="[BVA] > 90%" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Avaliar necessidade de aspira&amp;ccedil;&amp;atilde;o VAS.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Aerossol hipert&amp;ocirc;nico 1 vez com:&lt;/span>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>AD - 2,8 ml +&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>NaCl 20% - 0,5 ml +&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Adrenalina 1 ml.&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" inputSequences="//@sequence.30" outputSequences="//@sequence.31"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34576" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[BVA] Avaliar melhora" description="" inputSequences="//@sequence.31" outputSequences="//@sequence.32 //@sequence.33">
+    <questions text="Houve melhora?" url="" id="16170">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="bva_houve_melhora" id="33137" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34577" type="Receita" type_verbose="Receita" url="" name="[BVA] Receita" description="" isTerminal="true" inputSequences="//@sequence.32 //@sequence.35 //@sequence.37">
+    <item id="12431" url="" name="Aerossol com Berotec&#xae; ________ 1 FR" med_code="-1" presentation="-" access="20" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar aerossol de SF 0,9% 3ml + ______ gotas Berotec de 4/4h por 5 dias."/>
+    <item id="12432" url="" name="Aerolin&#xae; Nebules _______ 1 CX" med_code="-1" presentation="-" access="20" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar aerossol com ______ ml de 4/4h por 5 dias."/>
+    <item id="12433" url="" name="Sorine&#xae; _______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar 01 jato em cada narina de 6 &#xe0; 8 vezes por dia."/>
+    <item id="12434" url="" name="Rinosoro&#xae; ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Realizar 01 jato em cada narina de 6 &#xe0; 8 vezes por dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34578" type="Tratamento" type_verbose="Tratamento" url="" name="[BVA] Raio-X" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Avaliar a necessidade de Aerossol e observa&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/p>" inputSequences="//@sequence.33" outputSequences="//@sequence.34">
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Paciente com bronquiolite" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34579" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[BVA] Avaliar altera&#xe7;&#xe3;o RX" description="" inputSequences="//@sequence.34" outputSequences="//@sequence.36 //@sequence.37">
+    <questions text="Altera&#xe7;&#xe3;o significativa no RX?" url="" id="16171">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="bva_alteracao_rx" id="33138" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34580" type="Tratamento" type_verbose="Tratamento" url="" name="[BVA] Com altera&#xe7;&#xe3;o RX" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Altera&amp;ccedil;&amp;atilde;o significativa, discutir com chefia e&amp;nbsp;considerar interna&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Avaliar a necessidade dos seguintes exames:&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.36">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com bronquiolite" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Paciente com bronquiolite" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA" exam_id="28100298" limb_side="" quantity="1" reason="Paciente com bronquiolite" clinical_indication="n/a"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="34581" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Satura&#xe7;&#xe3;o menor que 85%)" description="Satura&#xe7;&#xe3;o menor que 85%">
+    <operation name="Satura&#xe7;&#xe3;o menor que 85%" Operator="affirmation" id="33145">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="saturacao_menor_85" id="33126" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="34582" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Satura&#xe7;&#xe3;o maior ou igual a 85%)" description="Satura&#xe7;&#xe3;o maior ou igual a 85%">
+    <operation name="Satura&#xe7;&#xe3;o maior ou igual a 85%" id="33146">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="saturacao_menor_85" id="33126" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.2" id="34583" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Crise Leve)" description="Crise Leve">
+    <operation name="Crise Leve" Operator="equal" id="33147">
+      <operand xsi:type="pathwayMetamodel:Choice" name="intensidade_crise" id="33127" weight="1" value="0.0">
+        <option description="Leve (Sat O2 > 94%)" weight="1"/>
+        <option description="Moderada (Sat O2 entre 85 e 94%)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33139" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="34584" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Crise Moderada)" description="Crise Moderada">
+    <operation name="Crise Moderada" Operator="equal" id="33148">
+      <operand xsi:type="pathwayMetamodel:Choice" name="intensidade_crise" id="33127" weight="1" value="0.0">
+        <option description="Leve (Sat O2 > 94%)" weight="1"/>
+        <option description="Moderada (Sat O2 entre 85 e 94%)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="34585" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.5" id="34586" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Houve melhora)" description="Houve melhora">
+    <operation name="Houve melhora" Operator="affirmation" id="33149">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33128" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="34587" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (N&#xe3;o houve melhora)" description="N&#xe3;o houve melhora">
+    <operation name="N&#xe3;o houve melhora" id="33150">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33128" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="34588" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.7" id="34589" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (Boa resposta)" description="Boa resposta">
+    <operation name="Boa resposta" Operator="equal" id="33151">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="33129" weight="1" value="0.0">
+        <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+        <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+        <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33139" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="34590" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (Resposta Incompleta)" description="Resposta Incompleta">
+    <operation name="Resposta Incompleta" Operator="equal" id="33152">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="33129" weight="1" value="0.0">
+        <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+        <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+        <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.7" id="34591" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (Resposta Ausente)" description="Resposta Ausente">
+    <operation name="Resposta Ausente" Operator="equal" id="33153">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="33129" weight="1" value="0.0">
+        <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+        <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+        <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33141" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.9" id="34592" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="34593" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (&lt; 2 anos)" description="&lt; 2 anos">
+    <operation name="&lt; 2 anos" Operator="lessThan" id="33154">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="idade_paciente" id="33130" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.11" id="34594" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (lactente sibilante)" description="lactente sibilante">
+    <operation name="lactente sibilante" Operator="equal" id="33155">
+      <operand xsi:type="pathwayMetamodel:Choice" name="&lt;2anos_quadro_paciente" id="33131" weight="1" value="0.0">
+        <option description="CORPO ESTRANHO - VIAS A&#xc9;REAS (dispneia de inicio s&#xfa;bito, com hist&#xf3;ria compat&#xed;vel com aspira&#xe7;&#xe3;o de corpo estranho (&quot;engasgo&quot;), tosse, e/ou ausculta de sibil&#xe2;ncia localizada)" weight="1"/>
+        <option description="BRONQUIOLITE (BVA) (paciente com tosse, sibil&#xe2;ncia e/ou creptos difusos, dispneia leve &#xe0; grave, presen&#xe7;a ou n&#xe3;o de febre) (OBS: considerar sazonalidade: Norte e Nordeste (jan-maio); Sul e Sudeste (inverno)" weight="2"/>
+        <option description="LACTENTE SIBILANTE (presen&#xe7;a de sibil&#xe2;ncia transit&#xf3;ria, associada a coexist&#xea;ncia de IVAS, prematuridade, fatores gen&#xe9;ticos, tabagismo, atopias. Geralmente recorrente)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33141" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="34595" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (> 2 anos)" description="> 2 anos">
+    <operation name="> 2 anos" Operator="greaterOrEqual" id="33156">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="idade_paciente" id="33130" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.12" id="34596" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (crise asm&#xe1;tica)" description="crise asm&#xe1;tica">
+    <operation name="crise asm&#xe1;tica" Operator="equal" id="33157">
+      <operand xsi:type="pathwayMetamodel:Choice" name=">2anos_quadro_paciente" id="33132" weight="1" value="0.0">
+        <option description="Corpo estranho vias a&#xe9;reas (dispneia de inicio s&#xfa;bito, com hist&#xf3;ria compat&#xed;vel com aspira&#xe7;&#xe3;o de corpo estranho (&quot;engasgo&quot;), tosse, e/ou ausculta de sibil&#xe2;ncia localizada)" weight="1"/>
+        <option description="Crise asm&#xe1;tica" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.11" id="34597" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (corpos estranho - &lt; 2 anos)" description="corpos estranho - &lt; 2 anos">
+    <operation name="corpos estranho - &lt; 2 anos" Operator="equal" id="33158">
+      <operand xsi:type="pathwayMetamodel:Choice" name="&lt;2anos_quadro_paciente" id="33131" weight="1" value="0.0">
+        <option description="CORPO ESTRANHO - VIAS A&#xc9;REAS (dispneia de inicio s&#xfa;bito, com hist&#xf3;ria compat&#xed;vel com aspira&#xe7;&#xe3;o de corpo estranho (&quot;engasgo&quot;), tosse, e/ou ausculta de sibil&#xe2;ncia localizada)" weight="1"/>
+        <option description="BRONQUIOLITE (BVA) (paciente com tosse, sibil&#xe2;ncia e/ou creptos difusos, dispneia leve &#xe0; grave, presen&#xe7;a ou n&#xe3;o de febre) (OBS: considerar sazonalidade: Norte e Nordeste (jan-maio); Sul e Sudeste (inverno)" weight="2"/>
+        <option description="LACTENTE SIBILANTE (presen&#xe7;a de sibil&#xe2;ncia transit&#xf3;ria, associada a coexist&#xea;ncia de IVAS, prematuridade, fatores gen&#xe9;ticos, tabagismo, atopias. Geralmente recorrente)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33139" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="34598" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (corpos estranho - > 2 anos)" description="corpos estranho - > 2 anos">
+    <operation name="corpos estranho - > 2 anos" Operator="equal" id="33159">
+      <operand xsi:type="pathwayMetamodel:Choice" name=">2anos_quadro_paciente" id="33132" weight="1" value="0.0">
+        <option description="Corpo estranho vias a&#xe9;reas (dispneia de inicio s&#xfa;bito, com hist&#xf3;ria compat&#xed;vel com aspira&#xe7;&#xe3;o de corpo estranho (&quot;engasgo&quot;), tosse, e/ou ausculta de sibil&#xe2;ncia localizada)" weight="1"/>
+        <option description="Crise asm&#xe1;tica" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33139" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="34599" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description="-"/>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="34600" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (pneumonia)" description="pneumonia">
+    <operation name="pneumonia" Operator="equal" id="33160">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corpos_estranhos_alteracao_imagem" id="33133" weight="1" value="0.0">
+        <option description="Pneumonia" weight="1"/>
+        <option description="Aus&#xea;ncia de corpo estranho e aus&#xea;ncia de infiltrado, com presen&#xe7;a retifica&#xe7;&#xe3;o arcos costais" weight="2"/>
+        <option description="Presen&#xe7;a corpo estranho" weight="3"/>
+        <option description="Sem altera&#xe7;&#xe3;o" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33139" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="34601" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (presen&#xe7;a corpo estranho)" description="presen&#xe7;a corpo estranho">
+    <operation name="presen&#xe7;a corpo estranho" Operator="equal" id="33161">
+      <operand xsi:type="pathwayMetamodel:Choice" name="corpos_estranhos_alteracao_imagem" id="33133" weight="1" value="0.0">
+        <option description="Pneumonia" weight="1"/>
+        <option description="Aus&#xea;ncia de corpo estranho e aus&#xea;ncia de infiltrado, com presen&#xe7;a retifica&#xe7;&#xe3;o arcos costais" weight="2"/>
+        <option description="Presen&#xe7;a corpo estranho" weight="3"/>
+        <option description="Sem altera&#xe7;&#xe3;o" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33141" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.14" id="34602" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (aus&#xea;ncia de CE ou sem altera&#xe7;&#xe3;o)" description="aus&#xea;ncia de CE ou sem altera&#xe7;&#xe3;o">
+    <operation name="aus&#xea;ncia de CE ou sem altera&#xe7;&#xe3;o" Operator="or" id="33162">
+      <operand xsi:type="pathwayMetamodel:Operation" name="corpos_estranhos_alteracao_imagem=2" Operator="equal" id="33143">
+        <operand xsi:type="pathwayMetamodel:Choice" name="corpos_estranhos_alteracao_imagem" id="33133" weight="1" value="0.0">
+          <option description="Pneumonia" weight="1"/>
+          <option description="Aus&#xea;ncia de corpo estranho e aus&#xea;ncia de infiltrado, com presen&#xe7;a retifica&#xe7;&#xe3;o arcos costais" weight="2"/>
+          <option description="Presen&#xe7;a corpo estranho" weight="3"/>
+          <option description="Sem altera&#xe7;&#xe3;o" weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="corpos_estranhos_alteracao_imagem=4" Operator="equal" id="33144">
+        <operand xsi:type="pathwayMetamodel:Choice" name="corpos_estranhos_alteracao_imagem" id="33133" weight="1" value="0.0">
+          <option description="Pneumonia" weight="1"/>
+          <option description="Aus&#xea;ncia de corpo estranho e aus&#xea;ncia de infiltrado, com presen&#xe7;a retifica&#xe7;&#xe3;o arcos costais" weight="2"/>
+          <option description="Presen&#xe7;a corpo estranho" weight="3"/>
+          <option description="Sem altera&#xe7;&#xe3;o" weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="33142" weight="1" value="4.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.17" id="34603" type="Sequencia" type_verbose="Sequencia" url="" name="S24" description="-"/>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="34604" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (com melhora)" description="com melhora">
+    <operation name="com melhora" Operator="affirmation" id="33163">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="corpo_estranho_houve_melhora" id="33134" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.18" id="34605" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (sem melhora)" description="sem melhora">
+    <operation name="sem melhora" id="33164">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="corpo_estranho_houve_melhora" id="33134" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.11" id="34606" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (BVA)" description="BVA">
+    <operation name="BVA" Operator="equal" id="33165">
+      <operand xsi:type="pathwayMetamodel:Choice" name="&lt;2anos_quadro_paciente" id="33131" weight="1" value="0.0">
+        <option description="CORPO ESTRANHO - VIAS A&#xc9;REAS (dispneia de inicio s&#xfa;bito, com hist&#xf3;ria compat&#xed;vel com aspira&#xe7;&#xe3;o de corpo estranho (&quot;engasgo&quot;), tosse, e/ou ausculta de sibil&#xe2;ncia localizada)" weight="1"/>
+        <option description="BRONQUIOLITE (BVA) (paciente com tosse, sibil&#xe2;ncia e/ou creptos difusos, dispneia leve &#xe0; grave, presen&#xe7;a ou n&#xe3;o de febre) (OBS: considerar sazonalidade: Norte e Nordeste (jan-maio); Sul e Sudeste (inverno)" weight="2"/>
+        <option description="LACTENTE SIBILANTE (presen&#xe7;a de sibil&#xe2;ncia transit&#xf3;ria, associada a coexist&#xea;ncia de IVAS, prematuridade, fatores gen&#xe9;ticos, tabagismo, atopias. Geralmente recorrente)" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.20" id="34607" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (sat &lt; 90%)" description="sat &lt; 90%">
+    <operation name="sat &lt; 90%" Operator="equal" id="33166">
+      <operand xsi:type="pathwayMetamodel:Choice" name="bva_saturacao" id="33135" weight="1" value="0.0">
+        <option description="&lt; 90%" weight="1"/>
+        <option description="> 90%" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33139" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.21" id="34608" type="Sequencia" type_verbose="Sequencia" url="" name="S29" description="-"/>
+  <sequence inputStep="//@element.23" outputStep="//@element.22" id="34609" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (com altera&#xe7;&#xe3;o)" description="com altera&#xe7;&#xe3;o">
+    <operation name="com altera&#xe7;&#xe3;o" Operator="equal" id="33167">
+      <operand xsi:type="pathwayMetamodel:Choice" name="bva_alteracao" id="33136" weight="1" value="0.0">
+        <option description="Altera&#xe7;&#xe3;o significativa ou impossibilidade desmame O2" weight="1"/>
+        <option description="Sem altera&#xe7;&#xe3;o significativa em imagem e exames laboratoriais normais" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33139" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.22" id="34610" type="Sequencia" type_verbose="Sequencia" url="" name="S31 (sem altera&#xe7;&#xe3;o)" description="sem melhora">
+    <operation name="sem altera&#xe7;&#xe3;o" Operator="equal" id="33168">
+      <operand xsi:type="pathwayMetamodel:Choice" name="bva_alteracao" id="33136" weight="1" value="0.0">
+        <option description="Altera&#xe7;&#xe3;o significativa ou impossibilidade desmame O2" weight="1"/>
+        <option description="Sem altera&#xe7;&#xe3;o significativa em imagem e exames laboratoriais normais" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.20" id="34611" type="Sequencia" type_verbose="Sequencia" url="" name="S32 (sat > 90%)" description="sat > 90%">
+    <operation name="sat > 90%" Operator="equal" id="33169">
+      <operand xsi:type="pathwayMetamodel:Choice" name="bva_saturacao" id="33135" weight="1" value="0.0">
+        <option description="&lt; 90%" weight="1"/>
+        <option description="> 90%" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.25" id="34612" type="Sequencia" type_verbose="Sequencia" url="" name="S33" description="-"/>
+  <sequence inputStep="//@element.27" outputStep="//@element.26" id="34613" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (Com melhora)" description="Com melhora">
+    <operation name="Com melhora" Operator="affirmation" id="33170">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="bva_houve_melhora" id="33137" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.26" id="34614" type="Sequencia" type_verbose="Sequencia" url="" name="S35 (Sem melhora)" description="Sem melhora">
+    <operation name="Sem melhora" id="33171">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="bva_houve_melhora" id="33137" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.29" outputStep="//@element.28" id="34615" type="Sequencia" type_verbose="Sequencia" url="" name="S36" description="-"/>
+  <sequence inputStep="//@element.27" outputStep="//@element.24" id="34616" type="Sequencia" type_verbose="Sequencia" url="" name="S36" description="-"/>
+  <sequence inputStep="//@element.30" outputStep="//@element.29" id="34617" type="Sequencia" type_verbose="Sequencia" url="" name="S37 (com altera&#xe7;&#xe3;o rx)" description="com altera&#xe7;&#xe3;o rx">
+    <operation name="com altera&#xe7;&#xe3;o rx" Operator="affirmation" id="33172">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="bva_alteracao_rx" id="33138" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.29" id="34618" type="Sequencia" type_verbose="Sequencia" url="" name="S38 (sem altera&#xe7;&#xe3;o rx)" description="sem altera&#xe7;&#xe3;o rx">
+    <operation name="sem altera&#xe7;&#xe3;o rx" id="33173">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="bva_alteracao_rx" id="33138" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="corpos_estranhos_alteracao_imagem=2" Operator="equal" id="33143">
+    <operand xsi:type="pathwayMetamodel:Choice" name="corpos_estranhos_alteracao_imagem" id="33133" weight="1" value="0.0">
+      <option description="Pneumonia" weight="1"/>
+      <option description="Aus&#xea;ncia de corpo estranho e aus&#xea;ncia de infiltrado, com presen&#xe7;a retifica&#xe7;&#xe3;o arcos costais" weight="2"/>
+      <option description="Presen&#xe7;a corpo estranho" weight="3"/>
+      <option description="Sem altera&#xe7;&#xe3;o" weight="4"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+  </operation>
+  <operation name="corpos_estranhos_alteracao_imagem=4" Operator="equal" id="33144">
+    <operand xsi:type="pathwayMetamodel:Choice" name="corpos_estranhos_alteracao_imagem" id="33133" weight="1" value="0.0">
+      <option description="Pneumonia" weight="1"/>
+      <option description="Aus&#xea;ncia de corpo estranho e aus&#xea;ncia de infiltrado, com presen&#xe7;a retifica&#xe7;&#xe3;o arcos costais" weight="2"/>
+      <option description="Presen&#xe7;a corpo estranho" weight="3"/>
+      <option description="Sem altera&#xe7;&#xe3;o" weight="4"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="33142" weight="1" value="4.0"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="saturacao_menor_85" id="33126" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="intensidade_crise" id="33127" weight="1" value="0.0">
+    <option description="Leve (Sat O2 > 94%)" weight="1"/>
+    <option description="Moderada (Sat O2 entre 85 e 94%)" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33128" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="33129" weight="1" value="0.0">
+    <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+    <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+    <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="idade_paciente" id="33130" weight="1" value="0.0"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="&lt;2anos_quadro_paciente" id="33131" weight="1" value="0.0">
+    <option description="CORPO ESTRANHO - VIAS A&#xc9;REAS (dispneia de inicio s&#xfa;bito, com hist&#xf3;ria compat&#xed;vel com aspira&#xe7;&#xe3;o de corpo estranho (&quot;engasgo&quot;), tosse, e/ou ausculta de sibil&#xe2;ncia localizada)" weight="1"/>
+    <option description="BRONQUIOLITE (BVA) (paciente com tosse, sibil&#xe2;ncia e/ou creptos difusos, dispneia leve &#xe0; grave, presen&#xe7;a ou n&#xe3;o de febre) (OBS: considerar sazonalidade: Norte e Nordeste (jan-maio); Sul e Sudeste (inverno)" weight="2"/>
+    <option description="LACTENTE SIBILANTE (presen&#xe7;a de sibil&#xe2;ncia transit&#xf3;ria, associada a coexist&#xea;ncia de IVAS, prematuridade, fatores gen&#xe9;ticos, tabagismo, atopias. Geralmente recorrente)" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name=">2anos_quadro_paciente" id="33132" weight="1" value="0.0">
+    <option description="Corpo estranho vias a&#xe9;reas (dispneia de inicio s&#xfa;bito, com hist&#xf3;ria compat&#xed;vel com aspira&#xe7;&#xe3;o de corpo estranho (&quot;engasgo&quot;), tosse, e/ou ausculta de sibil&#xe2;ncia localizada)" weight="1"/>
+    <option description="Crise asm&#xe1;tica" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="corpos_estranhos_alteracao_imagem" id="33133" weight="1" value="0.0">
+    <option description="Pneumonia" weight="1"/>
+    <option description="Aus&#xea;ncia de corpo estranho e aus&#xea;ncia de infiltrado, com presen&#xe7;a retifica&#xe7;&#xe3;o arcos costais" weight="2"/>
+    <option description="Presen&#xe7;a corpo estranho" weight="3"/>
+    <option description="Sem altera&#xe7;&#xe3;o" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="corpo_estranho_houve_melhora" id="33134" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="bva_saturacao" id="33135" weight="1" value="0.0">
+    <option description="&lt; 90%" weight="1"/>
+    <option description="> 90%" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="bva_alteracao" id="33136" weight="1" value="0.0">
+    <option description="Altera&#xe7;&#xe3;o significativa ou impossibilidade desmame O2" weight="1"/>
+    <option description="Sem altera&#xe7;&#xe3;o significativa em imagem e exames laboratoriais normais" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="bva_houve_melhora" id="33137" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="bva_alteracao_rx" id="33138" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="33139" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="33140" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="33141" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="33142" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

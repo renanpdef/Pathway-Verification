@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[M&#xe9;dico da Fam&#xed;lia] Vulvovaginite" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6178" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Sinais e Sintomas" description="&lt;p>Selecionar suspeita de diagn&amp;oacute;stico conforme sinais e sintomas.&lt;/p>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2">
+    <questions text="Vaginose Bacteriana: Secre&#xe7;&#xe3;o vaginal acinzentada, cremosa, aderente &#xe0;s paredes vaginais e ao colo, com odor f&#xe9;tido, sem sintomas inflamat&#xf3;rios" url="" id="2761">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vaginose_bacteriana" id="4683" weight="1" value="false"/>
+    </questions>
+    <questions text="Candid&#xed;ase: Prurido intenso, dispareunia superficial, edema de vulva, secre&#xe7;&#xe3;o vaginal esbranqui&#xe7;ada e grumosa aderente &#xe0;s paredes vaginais e ao colo, dis&#xfa;ria por irrita&#xe7;&#xe3;o da pele lesada pela urina." url="" id="2762">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="candidiase" id="4684" weight="1" value="false"/>
+    </questions>
+    <questions text="Tricomon&#xed;ase: Prurido intenso, edema de vulva, dispareunia, colo com pet&#xe9;quias, secre&#xe7;&#xe3;o vaginal amarelo-esverdeada, bolhosa e f&#xe9;tida, dis&#xfa;ria menos frequente." url="" id="2763">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tricomoniase" id="4685" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6179" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Candid&#xed;ase] Paciente Gestante?" description="Avalia se paciente est&#xe1; gestante" inputSequences="//@sequence.0" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Paciente gestante?" url="" id="2764">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="candidiase_gestante" id="4686" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6180" type="Receita" type_verbose="Receita" url="" name="[Candid&#xed;ase] Medica&#xe7;&#xe3;o (gestante) [*]" description="Receita de candid&#xed;ase para paciente gestante" inputSequences="//@sequence.3" outputSequences="//@sequence.5">
+    <item id="13671" url="" name="NITRATO DE MICONAZOL" med_code="1854822007" presentation="BISN" access="4" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Usar &#xe0; noite ao deitar-se"/>
+    <item id="13672" url="" name="NITRATO DE MICONAZOL" med_code="650344771" presentation="BISN" access="4" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Usar &#xe0; noite ao deitar-se"/>
+    <item id="13673" url="" name="CLOTRIMAZOL" med_code="1146377963" presentation="BISN" access="4" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Usar &#xe0; noite ao deitar-se"/>
+    <item id="13674" url="" name="CLOTRIMAZOL" med_code="1854821368" presentation="BISN" access="4" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Usar &#xe0; noite ao deitar-se"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6381" type="Receita" type_verbose="Receita" url="" name="[Candid&#xed;ase] Medica&#xe7;&#xe3;o" description="Prescri&#xe7;&#xe3;o de medica&#xe7;&#xe3;o para paciente n&#xe3;o gestante" inputSequences="//@sequence.4" outputSequences="//@sequence.6">
+    <item id="13675" url="" name="NITRATO DE MICONAZOL" med_code="1854822007" presentation="BISN" access="4" quantity="1" period="14" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13676" url="" name="CLOTRIMAZOL" med_code="1146377963" presentation="BISN" access="4" quantity="1" period="6" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13677" url="" name="FLUCONAZOL" med_code="1854813288" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica"/>
+    <item id="13678" url="" name="NITRATO DE MICONAZOL" med_code="1854822007" presentation="BISN" access="4" quantity="1" period="14" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13679" url="" name="NISTATINA" med_code="-712255337" presentation="BISN" access="4" quantity="1" period="14" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Aplicar &#xe0; noite ao deitar-se"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6382" type="Receita" type_verbose="Receita" url="" name="[Vaginose Bacteriana] Medica&#xe7;&#xe3;o" description="Prescri&#xe7;&#xe3;o de medica&#xe7;&#xe3;o para vaginose bacteriana" inputSequences="//@sequence.1" outputSequences="//@sequence.9">
+    <item id="13680" url="" name="METRONIDAZOL" med_code="-1730651535" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="13721" url="" name="CLORIDRATO DE CLINDAMICINA" med_code="1854830446" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="13722" url="" name="FLAGYL" med_code="1920710751" presentation="COMP" access="1" quantity="5" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica"/>
+    <item id="13723" url="" name="HELMIZOL" med_code="1962238867" presentation="COMP" access="1" quantity="5" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="6383" type="Tratamento" type_verbose="Tratamento" url="" name="[Tricomon&#xed;ase] Exames de apoio" description="Solicita&#xe7;&#xe3;o de exames de apoio para diagn&#xf3;stico de tricomon&#xed;ase" inputSequences="//@sequence.2" outputSequences="//@sequence.10">
+    <examination url="" exam_id="28061004" limb_side="" quantity="1" reason="Solicitar Exames de Apoio" clinical_indication="Solicitar Exames de Apoio"/>
+    <examination url="" exam_id="28061691" limb_side="" quantity="1" reason="Solicita&#xe7;&#xe3;o exame de apoio" clinical_indication="Solicita&#xe7;&#xe3;o exame de apoio"/>
+    <examination url="" exam_id="28061179" limb_side="" quantity="1" reason="Solicita&#xe7;&#xe3;o de exames de apoio" clinical_indication="Solicita&#xe7;&#xe3;o de exames de apoio"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6384" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Candid&#xed;ase] Recomenda&#xe7;&#xe3;o" description="Se o parceiro for sintom&#xe1;tico, prescrever Fluconazol 150mg Via Oral, dose &#xfa;nica." inputSequences="//@sequence.5 //@sequence.6" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6385" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Tricomon&#xed;ase] HIV Positivo?" description="Exame de HIV acusou positivo?" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Paciente HIV positivo?" url="" id="2765">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiv_positivo" id="4687" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="6386" type="Processo" type_verbose="Processo" url="" name="[HIV Positivo] Encaminhamento ao Infectologista" description="Encaminhar paciente ao infectologista" isTerminal="true" inputSequences="//@sequence.11 //@sequence.16">
+    <action id="421" process_id="6386" service="encaminhar_especialidade" description="Encaminhamento ao Infectologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="6387" type="Processo" type_verbose="Processo" url="" name="Retorno" description="Retorno a crit&#xe9;rio do m&#xe9;dico" inputSequences="//@sequence.7 //@sequence.9 //@sequence.19 //@sequence.20" outputSequences="//@sequence.8">
+    <action id="357" process_id="6387" service="aprazamento" description="Retorno Semanal"/>
+    <action id="358" process_id="6387" service="aprazamento" description="Retorno Quinzenal"/>
+    <action id="359" process_id="6387" service="aprazamento" description="Retorno Mensal"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="6388" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6389" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Consulta de Retorno" description="Avaliar se h&#xe1; recorr&#xea;ncia de vulvovaginite na paciente" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.15 //@sequence.16">
+    <questions text="Vulvovaginite recorrente" url="" id="2766">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vulvovaginite_recorrente" id="4688" weight="1" value="false"/>
+    </questions>
+    <questions text="Resolu&#xe7;&#xe3;o do quadro cl&#xed;nico" url="" id="2767">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="resolucao_do_quadro_clinico" id="4689" weight="1" value="false"/>
+    </questions>
+    <questions text="Exame acusou HIV Positivo" url="" id="2768">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_hiv_positiva" id="4690" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="6390" type="Processo" type_verbose="Processo" url="" name="Encaminhamento a Ginecologista" description="Encaminhamento a Ginecologista" isTerminal="true" inputSequences="//@sequence.14">
+    <action id="441" process_id="6390" service="encaminhar_especialidade" description="Encaminhar ao Ginecologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6391" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Finalizar Protocolo" description="Finalizar protocolo e liberar paciente" isTerminal="true" inputSequences="//@sequence.15"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6392" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Tricomon&#xed;ase] Paciente Gestante?" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.17 //@sequence.18">
+    <questions text="Paciente gestante?" url="" id="2769">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tricomoniase_paciente_gestante" id="4691" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6393" type="Receita" type_verbose="Receita" url="" name="[Tricomon&#xed;ase - N&#xe3;o gestante] Receita" description="&lt;p>Orienta&amp;ccedil;&amp;otilde;es:&lt;/p>&#xA;&#xA;&lt;p>Ao parceiro:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Metronidazol 250mg via oral de&amp;nbsp;8/8h por 7 dias&amp;nbsp;&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;OU&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Metronidazol 2g via oral&amp;nbsp;dose &amp;uacute;nica&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.18" outputSequences="//@sequence.20">
+    <item id="13724" url="" name="METRONIDAZOL" med_code="-1730651535" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="13725" url="" name="METRONIDAZOL" med_code="-1730651535" presentation="COMP" access="1" quantity="8" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="8 comprimidos, dose &#xfa;nica"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6394" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Tricomon&#xed;ase - Gestantes ou Nutrizes] Receita" description="&lt;p>&lt;u>&lt;strong>Orienta&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/u>: Solicitar medicamento via conduta complementar conforme necess&amp;aacute;rio.&lt;/p>&#xA;&#xA;&lt;p>Gestante somente ap&amp;oacute;s completado o primeiro m&amp;ecirc;s&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Metronidazol 250mg via oral de&amp;nbsp;8/8h por 7 dias&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;OU&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Metronidazol 2g&amp;nbsp; via oral dose &amp;uacute;nica&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Lactante&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Flagyl 400mg 5 comprimidos, via oral, dose &amp;uacute;nica (dose total de tratamento 2g)&lt;/li>&#xA;&#x9;&lt;li>Helmizol 400mg 5 comprimidos, via oral, dose &amp;uacute;nica (dose total de tratamento 2g)&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Parceiro&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Metronidazol 250mg via oral de&amp;nbsp;8/8h por 7 dias&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;OU&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Metronidazol 2g via oral&amp;nbsp;dose &amp;uacute;nica&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.17" outputSequences="//@sequence.19"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="6395" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Candid&#xed;ase)" description="Candid&#xed;ase">
+    <operation name="Candid&#xed;ase" Operator="affirmation" id="4693">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="candidiase" id="4684" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.0" id="6396" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Vaginose)" description="Vaginose Bacteriana">
+    <operation name="Vaginose" Operator="affirmation" id="4694">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vaginose_bacteriana" id="4683" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="6397" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Tricomon&#xed;ase)" description="Tricomon&#xed;ase">
+    <operation name="Tricomon&#xed;ase" Operator="affirmation" id="4695">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tricomoniase" id="4685" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="6398" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Gestante)" description="Gestante">
+    <operation name="Gestante" Operator="affirmation" id="4696">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="candidiase_gestante" id="4686" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="6399" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (n&#xe3;o gestante)" description="n&#xe3;o gestante">
+    <operation name="N&#xe3;o gestante" id="4697">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="candidiase_gestante" id="4686" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="6400" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="6401" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.6" id="6402" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="6403" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.4" id="6404" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="6405" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="6406" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="HIV Positivo">
+    <operation name="HIV Positivo" Operator="affirmation" id="4698">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiv_positivo" id="4687" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.7" id="6407" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (HIV Negativo)" description="HIV Negativo">
+    <operation name="HIV Negativo" id="4699">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiv_positivo" id="4687" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="6408" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="6409" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (com vulvovaginite recorrente)" description="com vulvovaginite recorrente">
+    <operation name="com vulvovaginite recorrente" Operator="affirmation" id="4700">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vulvovaginite_recorrente" id="4688" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.11" id="6410" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (resolu&#xe7;&#xe3;o do quadro cl&#xed;nico)" description="resolu&#xe7;&#xe3;o do quadro cl&#xed;nico">
+    <operation name="resolucao do quadro clinico E sem hiv" Operator="and" id="4881">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resolucao_do_quadro_clinico" id="4689" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem hiv" id="4692">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_hiv_positiva" id="4690" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.11" id="6411" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (exame acusou HIV)" description="exame acusou HIV">
+    <operation name="exame acusou HIV" Operator="affirmation" id="4882">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_hiv_positiva" id="4690" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="6412" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (tricomoniase gestante)" description="tricomoniase gestante">
+    <operation name="tricomoniase gestante" Operator="affirmation" id="4883">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tricomoniase_paciente_gestante" id="4691" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="6413" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (tricomoniase n&#xe3;o gestante)" description="tricomoniase n&#xe3;o gestante">
+    <operation name="tricomoniase n&#xe3;o gestante" id="4884">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tricomoniase_paciente_gestante" id="4691" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.16" id="6414" type="Sequencia" type_verbose="Sequencia" url="" name="S22" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.15" id="6415" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="Incondicional"/>
+  <operation name="sem hiv" id="4692">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_hiv_positiva" id="4690" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vaginose_bacteriana" id="4683" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="candidiase" id="4684" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tricomoniase" id="4685" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="candidiase_gestante" id="4686" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiv_positivo" id="4687" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vulvovaginite_recorrente" id="4688" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="resolucao_do_quadro_clinico" id="4689" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_hiv_positiva" id="4690" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tricomoniase_paciente_gestante" id="4691" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

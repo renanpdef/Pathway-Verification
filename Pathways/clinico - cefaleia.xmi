@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[M&#xe9;dico da Fam&#xed;lia] Cefal&#xe9;ia" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6685" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Consulta &#xe9; retorno?" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Consulta &#xe9; retorno?" url="" id="2855">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="consulta_retorno" id="5109" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6686" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Manter prescri&#xe7;&#xe3;o" description="&lt;p>No caso de melhora da dor, manter prescri&amp;ccedil;&amp;atilde;o&lt;/p>" isTerminal="true" inputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6687" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Realizar avalia&#xe7;&#xe3;o para Cefal&#xe9;ia Secund&#xe1;ria" description="&lt;p>Avaliar os sintomas abaixo:&lt;/p>&#xA;&#xA;&lt;p>A. Aparecimento s&amp;uacute;bito&lt;/p>&#xA;&#xA;&lt;p>B. Inicio de cefaleia em maiores de 50 anos&lt;/p>&#xA;&#xA;&lt;p>C. Mal enxaquecoso, refrat&amp;aacute;rio a tratamento&lt;/p>&#xA;&#xA;&lt;p>D. Cefaleia noturna ou ao acordar de inicio recente&lt;/p>&#xA;&#xA;&lt;p>E.&amp;nbsp; Altera&amp;ccedil;&amp;atilde;o do estado mental, n&amp;iacute;vel de consci&amp;ecirc;ncia, orienta&amp;ccedil;&amp;atilde;o, cogni&amp;ccedil;&amp;atilde;o&lt;/p>&#xA;&#xA;&lt;p>F.&amp;nbsp; Deficit Neurol&amp;oacute;gico focal&lt;/p>&#xA;&#xA;&lt;p>G. Cefaleia Asociada a esfor&amp;ccedil;o (pos-coito, atividade f&amp;iacute;sica, tose, espirro, manobra de valsalva)&lt;/p>&#xA;&#xA;&lt;p>H. Inicio post&amp;nbsp; trauma de cr&amp;acirc;nio recente&lt;/p>&#xA;&#xA;&lt;p>I. Cefaleia nova&amp;nbsp; associada a crise&amp;nbsp; epil&amp;eacute;ptica&lt;/p>&#xA;&#xA;&lt;p>J. Cefaleia associada a infec&amp;ccedil;&amp;atilde;o pelo (HIV), com&amp;nbsp; neoplasia ou discracia&amp;nbsp; sangu&amp;iacute;nea ( em uso de anticoagulante\)&lt;/p>&#xA;&#xA;&lt;p>K. Rigidez de nuca&lt;/p>&#xA;&#xA;&lt;p>L. Cefaleia associada a Febre, v&amp;ocirc;mitos, milagias&lt;/p>&#xA;&#xA;&lt;p>M. Cefaleia com vis&amp;atilde;o turva, respota assim&amp;eacute;trica pupilar,papiledema, diplopia&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Confirma diagn&#xf3;stico de Cefal&#xe9;ia Secund&#xe1;ria?" url="" id="2856">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="confirma_cefaleia_secundaria" id="5110" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6688" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar tipo de Cefal&#xe9;ia Tensional" description="" inputSequences="//@sequence.15" outputSequences="//@sequence.23">
+    <questions text="Cefal&#xe9;ia Tensional Epis&#xf3;dica Infrequente: &#xA;Pelo menos 10 crises, acontecendo em menos de 1 dia por m&#xea;s em m&#xe9;dia (menos de 12 dias por ano)." url="" id="2857">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_tensional_episodica_infrequente" id="5111" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefal&#xe9;ia Tensional Epis&#xf3;dica Frequente: &#xA;Pelo menos 10 crises que acontecem em 1 ou mais dias por m&#xea;s, por&#xe9;m, menos de 15 dias por m&#xea;s (12 ou mais dias por ano, por&#xe9;m menos de 180 dias por ano)." url="" id="2858">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_tensional_episodica_frequente" id="5112" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefal&#xe9;ia Tensional Cr&#xf4;nica: &#xA;Cefaleia que ocorre em, no m&#xed;nimo,15 ou mais dias por m&#xea;s, em m&#xe9;dia, por mais de 3 meses (mais que 180 dias por ano)." url="" id="2859">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_cefaleia_cronica" id="5113" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6689" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Prescrever tratamento" description="" inputSequences="//@sequence.4 //@sequence.21 //@sequence.22 //@sequence.23" outputSequences="//@sequence.6 //@sequence.9 //@sequence.11">
+    <questions text="Tratamento para crise de enxaqueca?" url="" id="2860">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_crise_enxaqueca" id="5114" weight="1" value="false"/>
+    </questions>
+    <questions text="Tratamento para Cefal&#xe9;ia Tensional Cr&#xf4;nica ?" url="" id="2861">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_cefaleia_tensional_cronica" id="5115" weight="1" value="false"/>
+    </questions>
+    <questions text="Tratamento para outros tipos de Cefal&#xe9;ia?" url="" id="2862">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_outros_tipos_cefaleia" id="5116" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6690" type="Receita" type_verbose="Receita" url="" name="Prescrever tratamento para Crise de Enxaqueca" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Arial&quot;>Caso necess&amp;aacute;rio adicionar sintom&amp;aacute;ticos (prescrever via Conduta Complementar).&lt;/span> &lt;/span>&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <item id="13853" url="" name="DIPIRONA SODICA" med_code="766253178" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13854" url="" name="NAPROXENO" med_code="1962225127" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13855" url="" name="CLORIDRATO DE NARATRIPTANA" med_code="1146214992" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Repetir a dose ap&#xf3;s 4h se dor persistir (m&#xe1;ximo 2cp por dia)"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6691" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Indica&#xe7;&#xe3;o de tratamento profil&#xe1;tico para enxaqueca" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.12">
+    <questions text="Cefaleia interfere significativamente no dia a dia do paciente, apesar do tratamento abortivo das crises?" url="" id="2863">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia" id="5117" weight="1" value="false"/>
+    </questions>
+    <questions text="Crises frequentes (mais de uma por semana)?" url="" id="2864">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes" id="5118" weight="1" value="false"/>
+    </questions>
+    <questions text="Uso excessivo de medicamentos (em raz&#xe3;o de crises frequentes, incapacitantes ou de longa dura&#xe7;&#xe3;o)?" url="" id="2865">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos" id="5119" weight="1" value="false"/>
+    </questions>
+    <questions text="As medica&#xe7;&#xf5;es utilizadas na terapia abortiva s&#xe3;o inefetivas, contraindicadas ou causam efeitos adversos intoler&#xe1;veis?" url="" id="2866">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas" id="5120" weight="1" value="false"/>
+    </questions>
+    <questions text="Prefer&#xea;ncia do paciente?" url="" id="2867">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_do_paciente" id="5121" weight="1" value="false"/>
+    </questions>
+    <questions text="Presen&#xe7;a de condi&#xe7;&#xf5;es incomuns de migr&#xe2;nea (potencialmente graves), incluindo migr&#xe2;nea hemipl&#xe9;gica, basilar, com aura prolongada ou infarto migranoso?" url="" id="2868">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea" id="5122" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6692" type="Receita" type_verbose="Receita" url="" name="Prescrever tratamento para cefal&#xe9;ia tensional cr&#xf4;nica" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.10">
+    <item id="13856" url="" name="DIPIRONA SODICA" med_code="766253178" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13857" url="" name="NAPROXENO" med_code="1962225127" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13858" url="" name="DIPIRONA SODICA" med_code="766253178" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="13859" url="" name="NAPROXENO" med_code="1962225127" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6693" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Realizar Avalia&#xe7;&#xe3;o para Cefal&#xe9;ia Prim&#xe1;ria" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.15 //@sequence.16">
+    <questions text="Suspeitar de Enxaqueca: Dor com localiza&#xe7;&#xe3;o uni ou bilateral, dura&#xe7;&#xe3;o de 4 a 72 horas, intensidade moderada a forte, presen&#xe7;a ou n&#xe3;o de n&#xe1;useas, fotofobia e fonofobia, dor puls&#xe1;til / latejante." url="" id="2869">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_enxaqueca" id="5123" weight="1" value="false"/>
+    </questions>
+    <questions text="Suspeitar de Cefal&#xe9;ia Tensional: Dor com localiza&#xe7;&#xe3;o bilateral, dura&#xe7;&#xe3;o de 30 minutos a dias, intensidade leve a moderada, sem presen&#xe7;a de n&#xe1;useas, fotofobia e fonofobia, dor n&#xe3;o &#xe9; puls&#xe1;til / latejante." url="" id="2870">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_cefaleia_tensional" id="5124" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente com outro tipo de Cefal&#xe9;ia?" url="" id="2871">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_outro_tipo_cefaleia" id="5125" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="6694" type="Processo" type_verbose="Processo" url="" name="Encaminhar para o Neurologista" description="&lt;p>Paciente dever&amp;aacute; ser encaminhado para o Neurologista&lt;/p>" isTerminal="true" inputSequences="//@sequence.11">
+    <action id="459" process_id="6694" service="encaminhar_especialidade" description="Encaminhar para o Neurologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6695" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Paciente" description="" inputSequences="//@sequence.0 //@sequence.5" outputSequences="//@sequence.3 //@sequence.13">
+    <questions text="Aparecimento s&#xfa;bito?" url="" id="2872">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aparecimento_subito" id="5126" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade maior que 50 anos?" url="" id="2873">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_50" id="5127" weight="1" value="false"/>
+    </questions>
+    <questions text="Mal enxaquecoso, refrat&#xe1;rio a tratamento?" url="" id="2874">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mal_enxaquecoso" id="5128" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefal&#xe9;ia noturna ou ao acordar de in&#xed;cio recente?" url="" id="2875">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_noturna" id="5129" weight="1" value="false"/>
+    </questions>
+    <questions text="Altera&#xe7;&#xe3;o do estado mental, n&#xed;vel de consci&#xea;ncia, orienta&#xe7;&#xe3;o, cogni&#xe7;&#xe3;o?" url="" id="2876">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_estado_mental" id="5130" weight="1" value="false"/>
+    </questions>
+    <questions text="D&#xe9;ficit Neurol&#xf3;gico focal?" url="" id="2877">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="deficit_neurologico" id="5131" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefal&#xe9;ia associada a esfor&#xe7;o (p&#xf3;s- coito, atividade f&#xed;sica, tosse, espirro, manobra de valsalva)?" url="" id="2878">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_esforco" id="5132" weight="1" value="false"/>
+    </questions>
+    <questions text="In&#xed;cio p&#xf3;s-trauma de cr&#xe2;nio recente?" url="" id="2879">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="postrauma_cranio" id="5133" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefal&#xe9;ia nova associada &#xe0; crise epil&#xe9;ptica?" url="" id="2880">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_crise_epileptica" id="5134" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefal&#xe9;ia associada &#xe0; infec&#xe7;&#xe3;o pelo (HIV), com neoplasia ou discracia sangu&#xed;nea (em uso de anticoagulante)?" url="" id="2881">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_HIV" id="5135" weight="1" value="false"/>
+    </questions>
+    <questions text="Rigidez de nuca?" url="" id="2882">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rigidez_nua" id="5136" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefaleia associada &#xe0; febre, v&#xf4;mitos, mialgias?" url="" id="2883">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_febre_vomitos" id="5137" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefaleia com vis&#xe3;o turva,resposta assim&#xe9;trica pupilar, papiledema, diplopia?" url="" id="2884">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_visao_turva" id="5138" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6696" type="Receita" type_verbose="Receita" url="" name="Tratamento profil&#xe1;tico para enxaqueca" description="" isTerminal="true" inputSequences="//@sequence.8">
+    <item id="13860" url="" name="CLORIDRATO DE AMITRIPTILINA" med_code="1462485308" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Se n&#xe3;o houve resposta satisfat&#xf3;ria &#xe0; aumentar a dose para 25mg &#xe0; noite.&#xA;Pode-se aumentar a dose caso necess&#xe1;rio at&#xe9; 75mg diariamente&#xA;Contraindica&#xe7;&#xf5;es: infarto agudo do mioc&#xe1;rdio recente (at&#xe9; quatro semanas), prostatismo ou reten&#xe7;&#xe3;o urin&#xe1;ria, dist&#xfa;rbios da condu&#xe7;&#xe3;o card&#xed;aca, glaucoma de &#xe2;ngulo fechado ou &#xed;leo paral&#xed;tico."/>
+    <item id="13861" url="" name="TOPIRAMATO" med_code="1462511576" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Se n&#xe3;o houve resposta satisfat&#xf3;ria &#xe0; aumentar progressivamente a dose at&#xe9; 200mg &#xe0; noite  &#xA;Contraindicado nos casos de insufici&#xea;ncia hep&#xe1;tica ou renal."/>
+    <item id="13862" url="" name="PROPRANOLOL AYERST" med_code="766660000" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Se n&#xe3;o houve resposta satisfat&#xf3;ria &#xe0; aumentar progressivamente a dose (m&#xe1;ximo 240mg ao dia).&#xA;Contraindicado em caso de bloqueio AV de segundo ou terceiro grau, bradicardia sinusal, insufici&#xea;ncia card&#xed;aca, doen&#xe7;a vascular perif&#xe9;rica, broncoespasmo, asma."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6697" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Indica&#xe7;&#xe3;o de tratamento profil&#xe1;tico para cefal&#xe9;ia tensional" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.17 //@sequence.18">
+    <questions text="Cefaleia interfere significativamente no dia a dia do paciente, apesar do tratamento abortivo das crises?" url="" id="2885">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia_tensional" id="5139" weight="1" value="false"/>
+    </questions>
+    <questions text="Crises frequentes (mais de uma por semana)?" url="" id="2886">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes_tensional" id="5140" weight="1" value="false"/>
+    </questions>
+    <questions text="Uso excessivo de medicamentos (em raz&#xe3;o de crises frequentes, incapacitantes ou de longa dura&#xe7;&#xe3;o)?" url="" id="2887">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos_tensional" id="5141" weight="1" value="false"/>
+    </questions>
+    <questions text="As medica&#xe7;&#xf5;es utilizadas na terapia abortiva s&#xe3;o inefetivas, contraindicadas ou causam efeitos adversos intoler&#xe1;veis?" url="" id="2888">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas_tensional" id="5142" weight="1" value="false"/>
+    </questions>
+    <questions text="Prefer&#xea;ncia do paciente?" url="" id="2889">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_paciente" id="5143" weight="1" value="false"/>
+    </questions>
+    <questions text="Presen&#xe7;a de condi&#xe7;&#xf5;es incomuns de migr&#xe2;nea (potencialmente graves), incluindo migr&#xe2;nea hemipl&#xe9;gica, basilar, com aura prolongada ou infarto migranoso?" url="" id="2890">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea_tensional" id="5144" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6698" type="Receita" type_verbose="Receita" url="" name="Tratamento profil&#xe1;tico para cefal&#xe9;ia tensional" description="" isTerminal="true" inputSequences="//@sequence.17">
+    <item id="13863" url="" name="CLORIDRATO DE AMITRIPTILINA" med_code="1462485308" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="N&#xe3;o houve resposta satisfat&#xf3;ria &#xe0; aumentar a dose para 25mg &#xe0; noite.&#xA;Pode-se aumentar a dose caso necess&#xe1;rio at&#xe9; 75mg diariamente."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6699" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar presen&#xe7;a de Aura" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.19 //@sequence.20">
+    <questions text="Sintomas visuais completamente revers&#xed;veis, incluindo caracter&#xed;sticas positivas (ex.: luzes tremulantes, manchas ou linhas) e/ou caracter&#xed;sticas negativas (ex.: perda de vis&#xe3;o)?" url="" id="2891" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_reversiveis" id="5145" weight="1" value="false"/>
+    </questions>
+    <questions text="Sintomas sensitivos completamente revers&#xed;veis, incluindo caracter&#xed;sticas positivas (ex.: formigamento) e/ou caracter&#xed;sticas negativas (ex.: adormecimento)?" url="" id="2892" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_sensitivos_reversiveis" id="5146" weight="1" value="false"/>
+    </questions>
+    <questions text="Disfasia completamente revers&#xed;vel?" url="" id="2893" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="disfasia_reversivel" id="5147" weight="1" value="false"/>
+    </questions>
+    <questions text="Sintomas visuais hom&#xf4;nimos e/ou sintomas sensitivos unilaterais?" url="" id="2894" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_homonimos" id="5148" weight="1" value="false"/>
+    </questions>
+    <questions text="Pelo menos um sintoma de aura desenvolve-se gradualmente em cinco minutos e/ou diferentes sintomas de aura ocorrem em sucess&#xe3;o em cinco minutos?" url="" id="2895" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_aura_cinco_minutos" id="5149" weight="1" value="false"/>
+    </questions>
+    <questions text="Cada sintoma dura entre 5 e 60 minutos?" url="" id="2896" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_dura_entre_cinco_e_sessenta" id="5150" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6700" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Enxaqueca com presen&#xe7;a de aura" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Paciente com suspeita positiva de Enxaqueca &lt;strong>com Aura&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.19" outputSequences="//@sequence.21"/>
+  <element xsi:type="pathwayMetamodel:Information" id="6701" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Enxaqueca sem presen&#xe7;a de aura" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Paciente com suspeita de enxaqueca &lt;strong>sem Aura&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.20" outputSequences="//@sequence.22"/>
+  <element xsi:type="pathwayMetamodel:Process" id="6702" type="Processo" type_verbose="Processo" url="" name="Encaminhar para o Neurologista" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Realizar encaminhamento para Neurologista.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.16 //@sequence.24">
+    <action id="373" process_id="6702" service="encaminhar_especialidade" description="Realizar encaminhamento para Neurologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6703" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar se houve melhora" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.24 //@sequence.25">
+    <questions text="Resposta satisfat&#xf3;ria ao Tratamento?" url="" id="2897">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="resposta_satisfatoria_tratamento" id="5151" weight="1" value="false"/>
+    </questions>
+    <questions text="Piora dos Sintomas ou Doen&#xe7;a Cr&#xf4;nica?" url="" id="2898">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="piora_sintomas" id="5152" weight="1" value="false"/>
+    </questions>
+    <questions text="Sintomas s&#xfa;bitos ou acometimento neurol&#xf3;gico?" url="" id="2899">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_neurologico" id="5153" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6704" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar para a Urg&#xea;ncia" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Realizar encaminhamento para a Urg&amp;ecirc;ncia.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.25"/>
+  <element xsi:type="pathwayMetamodel:Information" id="6705" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Finalizar Protocolo" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Finalizar o protocolo.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.12 //@sequence.18"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.0" id="6706" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Avaliar Paciente)" description="-">
+    <operation name="Nao_e_retorno" id="5161">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="consulta_retorno" id="5109" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.0" id="6707" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Paciente j&#xe1; diagnosticado)" description="-">
+    <operation name="consulta_e_retorno" Operator="affirmation" id="5162">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="consulta_retorno" id="5109" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.18" id="6708" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Consultar hist&#xf3;rico paciente)" description="-">
+    <operation name="houve_melhora" Operator="affirmation" id="5163">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resposta_satisfatoria_tratamento" id="5151" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.10" id="6709" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Cefal&#xe9;ia Secund&#xe1;ria)" description="-">
+    <operation name="suspeita_positiva_cefaleia_secundaria" Operator="greaterOrEqual" id="5164">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_avaliar_paciente" Operator="addition" id="5157">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aparecimento_subito" id="5126" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_50" id="5127" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mal_enxaquecoso" id="5128" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_noturna" id="5129" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_estado_mental" id="5130" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="deficit_neurologico" id="5131" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_esforco" id="5132" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="postrauma_cranio" id="5133" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_crise_epileptica" id="5134" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_HIV" id="5135" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rigidez_nua" id="5136" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_febre_vomitos" id="5137" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_visao_turva" id="5138" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="7" id="5154" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="6710" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Prescrever Tratamento)" description="-">
+    <operation name="suspeita_positiva_cefaleia_secundaria" Operator="affirmation" id="5165">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="confirma_cefaleia_secundaria" id="5110" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.2" id="6711" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-">
+    <operation name="suspeita_negativa_cefaleia_secundaria" id="5166">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="confirma_cefaleia_secundaria" id="5110" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="6712" type="Sequencia" type_verbose="Sequencia" url="" name="S29" description="-">
+    <operation name="tratamento_para_crise_enxaqueca" Operator="affirmation" id="5167">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_crise_enxaqueca" id="5114" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="6713" type="Sequencia" type_verbose="Sequencia" url="" name="S30" description="-"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.6" id="6714" type="Sequencia" type_verbose="Sequencia" url="" name="S31" description="-">
+    <operation name="tratamento_positivo_profilatico_enxaqueca" Operator="greaterOrEqual" id="5168">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_tratamento_profilatico" Operator="addition" id="5158">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia" id="5117" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes" id="5118" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos" id="5119" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas" id="5120" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_do_paciente" id="5121" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea" id="5122" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5155" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.4" id="6715" type="Sequencia" type_verbose="Sequencia" url="" name="S32" description="-">
+    <operation name="tratamento_para_cefaleia_tensional_cronica" Operator="affirmation" id="5169">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_cefaleia_tensional_cronica" id="5115" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.7" id="6716" type="Sequencia" type_verbose="Sequencia" url="" name="S33" description="-"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.4" id="6717" type="Sequencia" type_verbose="Sequencia" url="" name="S34" description="-">
+    <operation name="tratamento_para_outros_tipos_cefaleia" Operator="affirmation" id="5170">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_outros_tipos_cefaleia" id="5116" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.6" id="6718" type="Sequencia" type_verbose="Sequencia" url="" name="S37" description="-">
+    <operation name="tratamento_negativo_profilatico_enxaqueca" Operator="lessThan" id="5171">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_tratamento_profilatico" Operator="addition" id="5158">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia" id="5117" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes" id="5118" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos" id="5119" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas" id="5120" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_do_paciente" id="5121" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea" id="5122" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5155" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.10" id="6719" type="Sequencia" type_verbose="Sequencia" url="" name="S38" description="-">
+    <operation name="suspeita_positiva_cefaleia_primaria" Operator="lessThan" id="5172">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_avaliar_paciente" Operator="addition" id="5157">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aparecimento_subito" id="5126" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_50" id="5127" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mal_enxaquecoso" id="5128" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_noturna" id="5129" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_estado_mental" id="5130" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="deficit_neurologico" id="5131" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_esforco" id="5132" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="postrauma_cranio" id="5133" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_crise_epileptica" id="5134" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_HIV" id="5135" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rigidez_nua" id="5136" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_febre_vomitos" id="5137" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_visao_turva" id="5138" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="7" id="5154" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.8" id="6720" type="Sequencia" type_verbose="Sequencia" url="" name="S39" description="-">
+    <operation name="avaliar_tipo_enxaqueca" Operator="affirmation" id="5173">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_enxaqueca" id="5123" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.8" id="6721" type="Sequencia" type_verbose="Sequencia" url="" name="S40" description="-">
+    <operation name="avaliar_tipo_cefaleia_tensional" Operator="affirmation" id="5174">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_cefaleia_tensional" id="5124" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.8" id="6722" type="Sequencia" type_verbose="Sequencia" url="" name="S41" description="-">
+    <operation name="avaliar_outro_tipo_cefaleia" Operator="affirmation" id="5175">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_outro_tipo_cefaleia" id="5125" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="6723" type="Sequencia" type_verbose="Sequencia" url="" name="S39" description="-">
+    <operation name="tratamento_positivo_profilatico_cefaleia_tensional" Operator="greaterOrEqual" id="5176">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_profilaxia_cefaleia_tensional" Operator="addition" id="5159">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia_tensional" id="5139" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes_tensional" id="5140" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos_tensional" id="5141" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas_tensional" id="5142" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_paciente" id="5143" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea_tensional" id="5144" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5155" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.12" id="6724" type="Sequencia" type_verbose="Sequencia" url="" name="S39" description="-">
+    <operation name="tratamento_negativo_profilatico_cefaleia_tensional" Operator="lessThan" id="5177">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_profilaxia_cefaleia_tensional" Operator="addition" id="5159">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia_tensional" id="5139" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes_tensional" id="5140" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos_tensional" id="5141" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas_tensional" id="5142" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_paciente" id="5143" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea_tensional" id="5144" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5155" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="6725" type="Sequencia" type_verbose="Sequencia" url="" name="S42" description="-">
+    <operation name="presen&#xe7;a_de_aura" Operator="greaterOrEqual" id="5178">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_aura" Operator="addition" id="5160">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_reversiveis" id="5145" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_sensitivos_reversiveis" id="5146" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disfasia_reversivel" id="5147" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_homonimos" id="5148" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_aura_cinco_minutos" id="5149" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_dura_entre_cinco_e_sessenta" id="5150" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="5156" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="6726" type="Sequencia" type_verbose="Sequencia" url="" name="S43" description="-">
+    <operation name="sem_presen&#xe7;a_de_aura" Operator="lessThan" id="5179">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_aura" Operator="addition" id="5160">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_reversiveis" id="5145" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_sensitivos_reversiveis" id="5146" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="disfasia_reversivel" id="5147" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_homonimos" id="5148" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_aura_cinco_minutos" id="5149" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_dura_entre_cinco_e_sessenta" id="5150" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="5156" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.15" id="6727" type="Sequencia" type_verbose="Sequencia" url="" name="S44" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.16" id="6728" type="Sequencia" type_verbose="Sequencia" url="" name="S45" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="6729" type="Sequencia" type_verbose="Sequencia" url="" name="S31" description="-"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.18" id="6730" type="Sequencia" type_verbose="Sequencia" url="" name="S28" description="-">
+    <operation name="houve_piora_sintomas" Operator="affirmation" id="5180">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="piora_sintomas" id="5152" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="6731" type="Sequencia" type_verbose="Sequencia" url="" name="S29" description="-">
+    <operation name="sintomas_subitos" Operator="affirmation" id="5181">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_neurologico" id="5153" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <category name="Pelo menos duas crises que preencham os crit&#xe9;rios:" question="//@element.14/@questions.0 //@element.14/@questions.1 //@element.14/@questions.2"/>
+  <category name="Pelo menos dois dos seguintes sintomas:" question="//@element.14/@questions.3 //@element.14/@questions.4 //@element.14/@questions.5"/>
+  <operation name="soma_sintomas_avaliar_paciente" Operator="addition" id="5157">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="aparecimento_subito" id="5126" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_50" id="5127" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mal_enxaquecoso" id="5128" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_noturna" id="5129" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_estado_mental" id="5130" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="deficit_neurologico" id="5131" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_esforco" id="5132" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="postrauma_cranio" id="5133" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_crise_epileptica" id="5134" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_HIV" id="5135" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="rigidez_nua" id="5136" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_febre_vomitos" id="5137" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_visao_turva" id="5138" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_sintomas_tratamento_profilatico" Operator="addition" id="5158">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia" id="5117" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes" id="5118" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos" id="5119" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas" id="5120" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_do_paciente" id="5121" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea" id="5122" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_sintomas_profilaxia_cefaleia_tensional" Operator="addition" id="5159">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia_tensional" id="5139" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes_tensional" id="5140" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos_tensional" id="5141" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas_tensional" id="5142" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_paciente" id="5143" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea_tensional" id="5144" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_sintomas_aura" Operator="addition" id="5160">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_reversiveis" id="5145" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_sensitivos_reversiveis" id="5146" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="disfasia_reversivel" id="5147" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_homonimos" id="5148" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_aura_cinco_minutos" id="5149" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_dura_entre_cinco_e_sessenta" id="5150" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="consulta_retorno" id="5109" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="confirma_cefaleia_secundaria" id="5110" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_tensional_episodica_infrequente" id="5111" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_tensional_episodica_frequente" id="5112" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="suspeita_cefaleia_cronica" id="5113" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_crise_enxaqueca" id="5114" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_cefaleia_tensional_cronica" id="5115" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_outros_tipos_cefaleia" id="5116" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia" id="5117" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes" id="5118" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos" id="5119" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas" id="5120" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_do_paciente" id="5121" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea" id="5122" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_enxaqueca" id="5123" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_cefaleia_tensional" id="5124" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_outro_tipo_cefaleia" id="5125" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aparecimento_subito" id="5126" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_50" id="5127" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mal_enxaquecoso" id="5128" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_noturna" id="5129" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_estado_mental" id="5130" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="deficit_neurologico" id="5131" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_esforco" id="5132" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="postrauma_cranio" id="5133" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_crise_epileptica" id="5134" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_HIV" id="5135" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rigidez_nua" id="5136" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_febre_vomitos" id="5137" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_associada_visao_turva" id="5138" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="Cefaleia_interfere_dia_a_dia_tensional" id="5139" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="crises_frequentes_tensional" id="5140" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="uso_excessivo_medicamentos_tensional" id="5141" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="medicacoes_inefetivas_tensional" id="5142" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="preferencia_paciente" id="5143" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="presenca_condicoes_migranea_tensional" id="5144" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_reversiveis" id="5145" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_sensitivos_reversiveis" id="5146" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="disfasia_reversivel" id="5147" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_visuais_homonimos" id="5148" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_aura_cinco_minutos" id="5149" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintoma_dura_entre_cinco_e_sessenta" id="5150" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="resposta_satisfatoria_tratamento" id="5151" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="piora_sintomas" id="5152" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_neurologico" id="5153" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="7" id="5154" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="5155" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="5156" weight="1"/>
+</pathwayMetamodel:Pathway>

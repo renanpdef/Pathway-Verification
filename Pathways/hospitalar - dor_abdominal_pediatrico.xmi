@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Dor Abdominal Pedi&#xe1;trico" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31221" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar irrita&#xe7;&#xe3;o peritoneal" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.9">
+    <questions text="Paciente apresenta irrita&#xe7;&#xe3;o peritoneal?" url="" id="14961">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="irritacao_peritoneal" id="30221" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31222" type="Tratamento" type_verbose="Tratamento" url="" name="[Com irrita&#xe7;&#xe3;o peritoneal] Conduta" description="" inputSequences="//@sequence.0 //@sequence.10" outputSequences="//@sequence.1">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Paciente com dor abdominal" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com dor abdominal" clinical_indication="n/a"/>
+    <examination url="PROTEINA C REATIVA" exam_id="28060873" limb_side="" quantity="1" reason="Paciente com dor abdominal" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31223" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Com irrita&#xe7;&#xe3;o peritoneal]  Avaliar exames" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Exames com sinal de abdome agudo e/ou leucocitose > 20 mil?" url="" id="14962">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_exames_alterados" id="30222" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="31224" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Com irrita&#xe7;&#xe3;o peritoneal e exames alterados] L&#xed;der" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Discutir com l&amp;iacute;der para poss&amp;iacute;vel avalia&amp;ccedil;&amp;atilde;o com CIPED.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.2 //@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31225" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Com irrita&#xe7;&#xe3;o peritoneal] Avaliar dor" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.8">
+    <questions text="Paciente persiste com dor?" url="" id="14963">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_persiste_dor" id="30223" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31226" type="Receita" type_verbose="Receita" url="" name="[Com irrita&#xe7;&#xe3;o peritoneal] Receita" description="" isTerminal="true" inputSequences="//@sequence.6 //@sequence.8">
+    <item id="10801" url="" name="Dipirona solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se febre ou dor"/>
+    <item id="10802" url="" name="Dipirona 500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 01 comprimido de 6/6h se febre ou dor"/>
+    <item id="10803" url="" name="Buscopan Composto&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10804" url="" name="Buscopan Simples&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor."/>
+    <item id="10805" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10806" url="" name="Bromoprida gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+    <item id="10807" url="" name="Vonau&#xae; 4 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ comprimido de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31227" type="Tratamento" type_verbose="Tratamento" url="" name="[Com irrita&#xe7;&#xe3;o peritoneal e dor] Chefe + TC" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Discutir com l&amp;iacute;der;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Deixar paciente em jejum;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Solicitar TC com contraste;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>OBS: se paciente for adolescente e j&amp;aacute; teve menarca, solicitar Beta-HCG antes da tomografia.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.4" outputSequences="//@sequence.5">
+    <examination url="TC ABDOME TOTAL (SUP, PELVE, RETR)" exam_id="34010157" limb_side="" quantity="1" reason="Paciente com dor abdominal" clinical_indication="n/a"/>
+    <examination url="BETA-HCG" exam_id="26100126" limb_side="" quantity="1" reason="Paciente com irrita&#xe7;&#xe3;o peritoneal" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31228" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Com irrita&#xe7;&#xe3;o peritoneal] Avaliar TC" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="TC alterado?" url="" id="14964">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_tc_alterado" id="30224" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31229" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sem irrita&#xe7;&#xe3;o peritoneal] Avaliar foco" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.10 //@sequence.11 //@sequence.12 //@sequence.16 //@sequence.17 //@sequence.21 //@sequence.25 //@sequence.29 //@sequence.33 //@sequence.34 //@sequence.38 //@sequence.39 //@sequence.41 //@sequence.43">
+    <questions text="Avaliar foco da dor:" url="" id="14965">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31230" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita pancreatite aguda] Conduta" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.13">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente com dor abdominal" clinical_indication="n/a"/>
+    <examination url="AMILASE  (SANGUE)" exam_id="28010256" limb_side="" quantity="1" reason="Paciente com dor abdominal" clinical_indication="n/a"/>
+    <examination url="LIPASE" exam_id="28011082" limb_side="" quantity="1" reason="Paciente com dor abdominal" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31231" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Suspeita pancreatite aguda] Avaliar exames" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Exames apresentam altera&#xe7;&#xf5;es?" url="" id="14966">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pancreatite_exames_alterados" id="30226" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="31232" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der local, devido prov&amp;aacute;vel interna&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Deixar paciente em jejum.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.15 //@sequence.19 //@sequence.28 //@sequence.31 //@sequence.37"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31233" type="Tratamento" type_verbose="Tratamento" url="" name="[Obstru&#xe7;&#xe3;o intestinal] Solicitar Raio X" description="" inputSequences="//@sequence.17" outputSequences="//@sequence.18">
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Paciente com obstru&#xe7;&#xe3;o intestinal" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31234" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Obstru&#xe7;&#xe3;o intestinal] Avaliar Raio X" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.19 //@sequence.20">
+    <questions text="Exame de raio X alterado?" url="" id="14967">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_intestinal_raiox_alterado" id="30227" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31235" type="Tratamento" type_verbose="Tratamento" url="" name="[Cistite] Conduta" description="" inputSequences="//@sequence.21" outputSequences="//@sequence.22">
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com suspeita de cistite" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31236" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Cistite] Avaliar SU" description="" inputSequences="//@sequence.22" outputSequences="//@sequence.23 //@sequence.24">
+    <questions text="Exame de sum&#xe1;rio de urina apresenta altera&#xe7;&#xe3;o?" url="" id="14968">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cistite_su_alterado" id="30228" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31237" type="Receita" type_verbose="Receita" url="" name="[Cistite com SU alterado] Receita" description="&lt;p>&amp;nbsp;Tratamento:&lt;/p>&#xA;&#xA;&lt;p>- ATB venoso: Neonatos, urosepse ou pielonefrite:&amp;nbsp;&amp;nbsp;Passar caso para chefia, devido &amp;agrave; necessidade de interna&amp;ccedil;&amp;atilde;o hospitalar.&lt;/p>&#xA;&#xA;&lt;p>- ATBs orais:&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;a) Cefalosporinas de 1&amp;ordf; ou 2&amp;ordf; gera&amp;ccedil;&amp;atilde;o &lt;strong>(1&amp;ordf; escolha)&lt;/strong>&amp;nbsp;por 7-10 dias:&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- Cefalexina 50-100mg/kg/dia VO de 6/6h&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- Cefuroxime ou Cefadroxila 30mg/kg/dia VO de 12/12h&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- Amoxicilina + clavulanato 30-50 mg/kg/dia VO 12/12h&lt;/p>&#xA;&#xA;&lt;p>Em casos de intoler&amp;acirc;ncia do ATB oral ou V&amp;ocirc;mitos:&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;-&amp;nbsp;Ceftriaxona 50mg /kg/dia IM 24/24h, inicialmente por 48h, havendo boa resposta pode-se continuar com ATB oral, at&amp;eacute; completar 7 &amp;agrave; 10 dias.&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>- N&amp;Atilde;O TRATAR COM SMZ/TMT PELO ALTO &amp;Iacute;NDICE DE RESIST&amp;Ecirc;NCIA ANTIMICROBIANA EM NOSSA POPULA&amp;Ccedil;&amp;Atilde;O. &lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>- Se sinais de recorr&amp;ecirc;ncia ou pielonefrite at&amp;iacute;pica, a USG de rins e vias urin&amp;aacute;rias deve ser solicitado de imediato. Nos demais casos, a investiga&amp;ccedil;&amp;atilde;o por imagem pode ser solicitada ap&amp;oacute;s a fase aguda, em torno de 2 &amp;agrave; 4 semanas, juntamente com a urocultura de controle nas hapcl&amp;iacute;nicas.&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>- O SU de controle deve ser solicitado em caso de persist&amp;ecirc;ncia dos sintomas, desta forma, sempre deve-se orientar sinais de alarme.&lt;/p>" isTerminal="true" inputSequences="//@sequence.24">
+    <item id="10808" url="" name="Cefalexina 250 mg/5ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 6/6h por 7 dias."/>
+    <item id="10809" url="" name="Zinnat&#xae; 250 mg/5ml ____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 12/12h por 7 dias."/>
+    <item id="10810" url="" name="Amoxicilina + Clavulanato 400+57mg/5 ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 12/12h por 7 dias."/>
+    <item id="10811" url="" name="Ceftriaxona 1g _____ 3 ampolas" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 1 ampola IM 1 vez ao dia por 3 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31238" type="Tratamento" type_verbose="Tratamento" url="" name="[Dor p&#xf3;s trauma] Conduta" description="" inputSequences="//@sequence.25" outputSequences="//@sequence.26">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="dor p&#xf3;s trauma" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31239" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dor p&#xf3;s trauma] Avaliar US" description="" inputSequences="//@sequence.26" outputSequences="//@sequence.27 //@sequence.28">
+    <questions text="Exame de ultrassom apresenta altera&#xe7;&#xe3;o?" url="" id="14969">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="postrauma_us_alterado" id="30229" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31240" type="Tratamento" type_verbose="Tratamento" url="" name="[H&#xe9;rnia umbilical] Conduta" description="" inputSequences="//@sequence.29" outputSequences="//@sequence.30">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Paciente com h&#xe9;rnia umbilical" clinical_indication="n/a"/>
+    <examination url="US ESTUDO DE 2 VASOS C/DOPPLER CONVENCIONAL" exam_id="33010226" limb_side="" quantity="1" reason="Paciente com h&#xe9;rnia umbilical" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31241" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[H&#xe9;rnia umbilical] Avaliar USG" description="" inputSequences="//@sequence.30" outputSequences="//@sequence.31 //@sequence.32">
+    <questions text="Exame de USG apresenta altera&#xe7;&#xe3;o?" url="" id="14970">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hernia_usg_alterado" id="30230" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31242" type="Tratamento" type_verbose="Tratamento" url="" name="[DRGE/dispepsia] Conduta" description="" inputSequences="//@sequence.33" outputSequences="//@sequence.40"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31243" type="Tratamento" type_verbose="Tratamento" url="" name="[Nefrolit&#xed;ase] Conduta" description="" inputSequences="//@sequence.34" outputSequences="//@sequence.35">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Paciente com dor abdominal" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente com nefrolit&#xed;ase" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="31244" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Nefrolit&#xed;ase] Avaliar exames" description="" inputSequences="//@sequence.35" outputSequences="//@sequence.36 //@sequence.37">
+    <questions text="Exames apresentam altera&#xe7;&#xe3;o?" url="" id="14971">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nefrolitiase_exames_alterados" id="30231" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31245" type="Tratamento" type_verbose="Tratamento" url="" name="[Constipa&#xe7;&#xe3;o]" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Solicitar Clister Evacuativo 10 ml/kg (dose m&amp;aacute;xima 250 ml).&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Repetir se n&amp;atilde;o houver sucesso na primeira tentativa.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Avaliar necessidade de RX abdome simples.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.41" outputSequences="//@sequence.42">
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Paciente com constipa&#xe7;&#xe3;o" clinical_indication="n/a"/>
+    <procedure url="CLISTER EVACUATIVO" procedure="75130011" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31246" type="Receita" type_verbose="Receita" url="" name="[Constipa&#xe7;&#xe3;o] Receita" description="" isTerminal="true" inputSequences="//@sequence.42">
+    <item id="10812" url="" name="Lactolona&#xae; _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml 1 vez ao dia por 10 dias."/>
+    <item id="10813" url="" name="Muvinlax&#xae; 14 g _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Diluir 01 sach&#xea; em suco de laranja e oferecer 01 vez ao dia se constipa&#xe7;&#xe3;o maior de 04 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31247" type="Receita" type_verbose="Receita" url="" name="[C&#xf3;lica rec&#xe9;m-nascido] Receita" description="-" isTerminal="true" inputSequences="//@sequence.39">
+    <item id="10814" url="" name="Luftal&#xae; ______ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas de 6/6h se c&#xf3;lica."/>
+    <item id="10815" url="" name="Colidis&#xae; ________ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 5 gotas 01 vez ao dia at&#xe9; 3 meses de idade."/>
+    <item id="10816" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas de 6/6h se dor."/>
+    <item id="10817" url="" name="Dipirona gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas de 6/6h se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31248" type="Receita" type_verbose="Receita" url="" name="[Dor abdominal simples] Receita" description="" isTerminal="true" inputSequences="//@sequence.11">
+    <item id="10818" url="" name="Dipirona solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se febre ou dor"/>
+    <item id="10819" url="" name="Dipirona 500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 01 comprimido de 6/6h se febre ou dor"/>
+    <item id="10820" url="" name="Buscopan Composto&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10821" url="" name="Buscopan Simples&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor."/>
+    <item id="10822" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10823" url="" name="Bromoprida gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+    <item id="10824" url="" name="Vonau&#xae; 4 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ comprimido de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31249" type="Receita" type_verbose="Receita" url="" name="[Suspeita pancreatite aguda] Receita" description="" isTerminal="true" inputSequences="//@sequence.14">
+    <item id="10825" url="" name="Dipirona solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se febre ou dor"/>
+    <item id="10826" url="" name="Dipirona 500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 01 comprimido de 6/6h se febre ou dor"/>
+    <item id="10827" url="" name="Buscopan Composto&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10828" url="" name="Buscopan Simples&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor."/>
+    <item id="10829" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10830" url="" name="Bromoprida gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+    <item id="10831" url="" name="Vonau&#xae; 4 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ comprimido de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31250" type="Receita" type_verbose="Receita" url="" name="[Obstru&#xe7;&#xe3;o intestinal] Receita" description="" isTerminal="true" inputSequences="//@sequence.20">
+    <item id="10832" url="" name="Dipirona solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se febre ou dor"/>
+    <item id="10833" url="" name="Dipirona 500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 01 comprimido de 6/6h se febre ou dor"/>
+    <item id="10834" url="" name="Buscopan Composto&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10835" url="" name="Buscopan Simples&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor."/>
+    <item id="10836" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10837" url="" name="Bromoprida gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+    <item id="10838" url="" name="Vonau&#xae; 4 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ comprimido de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31251" type="Receita" type_verbose="Receita" url="" name="[Cistite com SU normal] Receita" description="" isTerminal="true" inputSequences="//@sequence.23">
+    <item id="10839" url="" name="Dipirona solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se febre ou dor"/>
+    <item id="10840" url="" name="Dipirona 500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 01 comprimido de 6/6h se febre ou dor"/>
+    <item id="10841" url="" name="Buscopan Composto&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10842" url="" name="Buscopan Simples&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor."/>
+    <item id="10843" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10844" url="" name="Bromoprida gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+    <item id="10845" url="" name="Vonau&#xae; 4 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ comprimido de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31252" type="Receita" type_verbose="Receita" url="" name="[Dor p&#xf3;s trauma] Receita" description="" isTerminal="true" inputSequences="//@sequence.27">
+    <item id="10846" url="" name="Dipirona solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se febre ou dor"/>
+    <item id="10847" url="" name="Dipirona 500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 01 comprimido de 6/6h se febre ou dor"/>
+    <item id="10848" url="" name="Buscopan Composto&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10849" url="" name="Buscopan Simples&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor."/>
+    <item id="10850" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10851" url="" name="Bromoprida gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+    <item id="10852" url="" name="Vonau&#xae; 4 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ comprimido de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31253" type="Receita" type_verbose="Receita" url="" name="[H&#xe9;rnia umbilical] Receita" description="" isTerminal="true" inputSequences="//@sequence.32">
+    <item id="10853" url="" name="Dipirona solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se febre ou dor"/>
+    <item id="10854" url="" name="Dipirona 500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 01 comprimido de 6/6h se febre ou dor"/>
+    <item id="10855" url="" name="Buscopan Composto&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10856" url="" name="Buscopan Simples&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor."/>
+    <item id="10857" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10858" url="" name="Bromoprida gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+    <item id="10859" url="" name="Vonau&#xae; 4 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ comprimido de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31254" type="Receita" type_verbose="Receita" url="" name="[Nefrolit&#xed;ase] Receita" description="" isTerminal="true" inputSequences="//@sequence.36">
+    <item id="10860" url="" name="Dipirona solu&#xe7;&#xe3;o _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se febre ou dor"/>
+    <item id="10861" url="" name="Dipirona 500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 01 comprimido de 6/6h se febre ou dor"/>
+    <item id="10862" url="" name="Buscopan Composto&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10863" url="" name="Buscopan Simples&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor."/>
+    <item id="10864" url="" name="Paracetamol gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ gotas de 6/6h se dor ou febre."/>
+    <item id="10865" url="" name="Bromoprida gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+    <item id="10866" url="" name="Vonau&#xae; 4 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ comprimido de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="31255" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Diagn&#xf3;stico inconclusivo] Conduta" description="&lt;p>&lt;span style=&quot;color:#ffffff&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:#e74c3c&quot;>Se houverem sinais de gravidade, como dor abdominal intensa, outros sintomas sist&amp;ecirc;micos, discutir&amp;nbsp;com chefe de equipe para avalia&amp;ccedil;&amp;atilde;o conjunta&amp;nbsp;e,&amp;nbsp;se necess&amp;aacute;rio,&amp;nbsp;solicitar exames complementares.&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Se n&amp;atilde;o houverem sinais de gravidade, orientar paciente a procurar atendimento especializado (Hapcl&amp;iacute;nicas) ou retornar imediatamente &amp;agrave; emerg&amp;ecirc;ncia caso n&amp;atilde;o melhora dos sintomas com sintom&amp;aacute;ticos.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Como aux&amp;iacute;lio diagn&amp;oacute;stico, as seguintes hip&amp;oacute;teses s&amp;atilde;o poss&amp;iacute;veis:&lt;/span>&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;5&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Hip&amp;oacute;steses diagn&amp;oacute;sticas conforme localiza&amp;ccedil;&amp;atilde;o:&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Dor difusa&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Dor no quadrante superior direito&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>&amp;nbsp;Dor no quadrante superior esquerdo&amp;nbsp;&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Dor no quadrante inferior direito&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>&amp;nbsp;Dor no quadrante inferior esquerdo&amp;nbsp;&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Peritonite&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Ves&amp;iacute;cula biliar (c&amp;oacute;lica, infec&amp;ccedil;&amp;atilde;o)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Dispepsia&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Apendicite&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Hematoma de parede abdominal&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Pancreatite aguda&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;F&amp;iacute;gado (hepatomegalia, hepatite, abscesso)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Pancreatite&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Afec&amp;ccedil;&amp;otilde;es de &amp;iacute;leo distal:&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp;(linfoma, doen&amp;ccedil;a de Crohn)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Tor&amp;ccedil;&amp;atilde;o ou ruptura de cisto de ov&amp;aacute;rio&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Anemia falciforme&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Pancreatite aguda&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp;(dor tamb&amp;eacute;m afeta quadrante esquerdo)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Ba&amp;ccedil;o (aumento, ruptura, abscesso)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Hematoma de parede abdominal&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;C&amp;aacute;lculo ureteral&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Fase inicial da apendicite aguda&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Apendicite retrocecal&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Pneumonia de base esquerda&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Tor&amp;ccedil;&amp;atilde;o ou ruptura de cisto do ov&amp;aacute;rio&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;H&amp;eacute;rnia inguinal&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Gastroenterite&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Pneumonia base direita&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;4&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;C&amp;aacute;lculo ureteral&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Infec&amp;ccedil;&amp;atilde;o urin&amp;aacute;ria&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Obstru&amp;ccedil;&amp;atilde;o intestinal&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;3&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Adenite mesent&amp;eacute;rica&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Doen&amp;ccedil;a inflamat&amp;oacute;ria instestinal&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Cetoacidose diab&amp;eacute;tica&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;H&amp;eacute;rnia inguinal&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Adenite mesent&amp;eacute;rica&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;Infec&amp;ccedil;&amp;atilde;o urin&amp;aacute;ria&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.38"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="31256" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Dor abdominal da diarreia] encaminhar para diarreia" description="" isTerminal="true" inputSequences="//@sequence.16">
+    <pathways>H028</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="31257" type="Receita" type_verbose="Receita" url="" name="[DRGE/dispepsia] Receita" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Liberar paciente ap&amp;oacute;s melhora dos sintomas.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Orientar agendamento de consulta em hapcl&amp;iacute;nica para avaliar necessidade de EDA.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.40">
+    <item id="10867" url="" name="Ranitidina gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 12/12h por 1 m&#xea;s."/>
+    <item id="10868" url="" name="Ranitidina 15 mg/ml _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 12/12h por 1 m&#xea;s."/>
+    <item id="10869" url="" name="Omeprazol 20 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 1 comprimido em jejum por 1 m&#xea;s."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="31258" type="Tratamento" type_verbose="Tratamento" url="" name="[Doen&#xe7;a inflamat&#xf3;ria] Conduta" description="" inputSequences="//@sequence.43" outputSequences="//@sequence.44"/>
+  <element xsi:type="pathwayMetamodel:Information" id="31259" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Doen&#xe7;a Inflamat&#xf3;ria] Alta" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Liberar paciente ap&amp;oacute;s melhora dos sintomas.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Encaminhar para hapcl&amp;iacute;nica para seguimento ambulatorial com gastropediatra.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.44"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="31260" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (com irrita&#xe7;&#xe3;o peritoneal)" description="com irrita&#xe7;&#xe3;o peritoneal">
+    <operation name="com irrita&#xe7;&#xe3;o peritoneal" Operator="affirmation" id="30246">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="irritacao_peritoneal" id="30221" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="31261" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="-"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="31262" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (exames alterados)" description="exames alterados">
+    <operation name="exames alterados" Operator="affirmation" id="30247">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_exames_alterados" id="30222" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="31263" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (exames normais)" description="exames normais">
+    <operation name="exames normais" id="30248">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_exames_alterados" id="30222" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="31264" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (persiste com dor)" description="persiste com dor">
+    <operation name="persiste com dor" Operator="affirmation" id="30249">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_persiste_dor" id="30223" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="31265" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.7" id="31266" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (TC normal)" description="TC normal">
+    <operation name="TC normal" id="30250">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_tc_alterado" id="30224" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.7" id="31267" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (TC alterado)" description="TC alterado">
+    <operation name="TC alterado" Operator="affirmation" id="30251">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_tc_alterado" id="30224" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="31268" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (n&#xe3;o persiste dor)" description="n&#xe3;o persiste dor">
+    <operation name="n&#xe3;o persiste dor" id="30252">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_persiste_dor" id="30223" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.0" id="31269" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (sem irrita&#xe7;&#xe3;o peritoneal)" description="sem irrita&#xe7;&#xe3;o peritoneal">
+    <operation name="sem irrita&#xe7;&#xe3;o peritoneal" id="30253">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="irritacao_peritoneal" id="30221" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.8" id="31270" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (apendicite)" description="apendicite">
+    <operation name="apendicite" Operator="equal" id="30254">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="30233" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.8" id="31271" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (dor abdominal simples)" description="dor abdominal simples">
+    <operation name="dor abdominal simples" Operator="equal" id="30255">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="30232" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="31272" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (suspeita pancreatite aguda)" description="suspeita pancreatite aguda">
+    <operation name="suspeita pancreatite aguda" Operator="equal" id="30256">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="30234" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="31273" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="-"/>
+  <sequence inputStep="//@element.28" outputStep="//@element.10" id="31274" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (pancreatite com exames normais)" description="pancreatite com exames normais">
+    <operation name="pancreatite com exames normais" id="30257">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pancreatite_exames_alterados" id="30226" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="31275" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (pancreatite com exames alterados)" description="pancreatite com exames alterados">
+    <operation name="pancreatite com exames alterados" Operator="affirmation" id="30258">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pancreatite_exames_alterados" id="30226" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.35" outputStep="//@element.8" id="31276" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (dor abdominal da diarreia)" description="dor abdominal da diarreia">
+    <operation name="dor abdominal da diarreia" Operator="equal" id="30259">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="30235" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.8" id="31277" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (obstru&#xe7;&#xe3;o intestinal)" description="obstru&#xe7;&#xe3;o intestinal">
+    <operation name="obstru&#xe7;&#xe3;o intestinal" Operator="equal" id="30260">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="5" id="30236" weight="1" value="5.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="31278" type="Sequencia" type_verbose="Sequencia" url="" name="S19" description="-"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.13" id="31279" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (raio x alterado)" description="raio x alterado">
+    <operation name="raio x alterado" Operator="affirmation" id="30261">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_intestinal_raiox_alterado" id="30227" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.29" outputStep="//@element.13" id="31280" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (raio x normal)" description="raio x normal">
+    <operation name="raio x normal" id="30262">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_intestinal_raiox_alterado" id="30227" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.8" id="31281" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (cistite)" description="cistite">
+    <operation name="cistite" Operator="equal" id="30263">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="30237" weight="1" value="6.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="31282" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="-"/>
+  <sequence inputStep="//@element.30" outputStep="//@element.15" id="31283" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (su normal)" description="su normal">
+    <operation name="su normal" id="30264">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cistite_su_alterado" id="30228" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.15" id="31284" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (su alterado)" description="su alterado">
+    <operation name="su alterado" Operator="affirmation" id="30265">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cistite_su_alterado" id="30228" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.8" id="31285" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (dor p&#xf3;s trauma)" description="dor p&#xf3;s trauma">
+    <operation name="dor p&#xf3;s trauma" Operator="equal" id="30266">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="7" id="30238" weight="1" value="7.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.17" id="31286" type="Sequencia" type_verbose="Sequencia" url="" name="S27" description="-"/>
+  <sequence inputStep="//@element.31" outputStep="//@element.18" id="31287" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (us normal)" description="us normal">
+    <operation name="us normal" id="30267">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="postrauma_us_alterado" id="30229" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.18" id="31288" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (us alterado)" description="us alterado">
+    <operation name="us alterado" Operator="affirmation" id="30268">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="postrauma_us_alterado" id="30229" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.8" id="31289" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (h&#xe9;rnia umbilical)" description="h&#xe9;rnia umbilical">
+    <operation name="h&#xe9;rnia umbilical" Operator="equal" id="30269">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="9" id="30240" weight="1" value="9.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="31290" type="Sequencia" type_verbose="Sequencia" url="" name="S31" description="-"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.20" id="31291" type="Sequencia" type_verbose="Sequencia" url="" name="S32 (usg alterado)" description="usg alterado">
+    <operation name="usg alterado" Operator="affirmation" id="30270">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hernia_usg_alterado" id="30230" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.32" outputStep="//@element.20" id="31292" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (usg normal)" description="usg normal">
+    <operation name="usg normal" id="30271">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hernia_usg_alterado" id="30230" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.8" id="31293" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (DRGE/dispneia)" description="DRGE/dispneia">
+    <operation name="DRGE/dispneia" Operator="equal" id="30272">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="10" id="30241" weight="1" value="10.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.8" id="31294" type="Sequencia" type_verbose="Sequencia" url="" name="S35 (nefrolit&#xed;ase)" description="nefrolit&#xed;ase">
+    <operation name="nefrolit&#xed;ase" Operator="equal" id="30273">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="11" id="30242" weight="1" value="11.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.22" id="31295" type="Sequencia" type_verbose="Sequencia" url="" name="S36" description="-"/>
+  <sequence inputStep="//@element.33" outputStep="//@element.23" id="31296" type="Sequencia" type_verbose="Sequencia" url="" name="S37 (nefrolit&#xed;ase com exames normais)" description="nefrolit&#xed;ase com exames normais">
+    <operation name="nefrolit&#xed;ase com exames normais" id="30274">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nefrolitiase_exames_alterados" id="30231" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.23" id="31297" type="Sequencia" type_verbose="Sequencia" url="" name="S38 (nefrolit&#xed;ase com exames alterados)" description="nefrolit&#xed;ase com exames alterados">
+    <operation name="nefrolit&#xed;ase com exames alterados" Operator="affirmation" id="30275">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nefrolitiase_exames_alterados" id="30231" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.34" outputStep="//@element.8" id="31298" type="Sequencia" type_verbose="Sequencia" url="" name="S39 (diagn&#xf3;stico inconclusivo)" description="diagn&#xf3;stico inconclusivo">
+    <operation name="diagn&#xf3;stico inconclusivo" Operator="equal" id="30276">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="8" id="30239" weight="1" value="8.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.8" id="31299" type="Sequencia" type_verbose="Sequencia" url="" name="S40 (c&#xf3;lica do rec&#xe9;m-nascido)" description="c&#xf3;lica do rec&#xe9;m-nascido">
+    <operation name="c&#xf3;lica do rec&#xe9;m-nascido" Operator="equal" id="30277">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="14" id="30245" weight="1" value="14.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.36" outputStep="//@element.21" id="31300" type="Sequencia" type_verbose="Sequencia" url="" name="S41" description="-"/>
+  <sequence inputStep="//@element.24" outputStep="//@element.8" id="31301" type="Sequencia" type_verbose="Sequencia" url="" name="S42 (Constipa&#xe7;&#xe3;o)" description="Constipa&#xe7;&#xe3;o">
+    <operation name="constipa&#xe7;&#xe3;o" Operator="equal" id="30278">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="13" id="30244" weight="1" value="13.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.24" id="31302" type="Sequencia" type_verbose="Sequencia" url="" name="S43" description="-"/>
+  <sequence inputStep="//@element.37" outputStep="//@element.8" id="31303" type="Sequencia" type_verbose="Sequencia" url="" name="S44 (doen&#xe7;a inflamat&#xf3;ria)" description="doen&#xe7;a inflamat&#xf3;ria">
+    <operation name="doen&#xe7;a inflamat&#xf3;ria" Operator="equal" id="30279">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+        <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+        <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+        <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+        <option description="Dor abdominal da diarreia" weight="4"/>
+        <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+        <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+        <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+        <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+        <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+        <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+        <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+        <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+        <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+        <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="12" id="30243" weight="1" value="12.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.38" outputStep="//@element.37" id="31304" type="Sequencia" type_verbose="Sequencia" url="" name="S45" description="-"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="irritacao_peritoneal" id="30221" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_exames_alterados" id="30222" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_persiste_dor" id="30223" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="com_irrit_tc_alterado" id="30224" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sem_irrit_avaliar_foco" id="30225" weight="1" value="0.0">
+    <option description="Dor abdominal simples sem altera&#xe7;&#xe3;o no exame f&#xed;sico, sem comorbidades" weight="1"/>
+    <option description="Apendicite = Dor FID ou Blumberg positivo" weight="2"/>
+    <option description="Suspeita de pancreatite aguda = dor em faixa de abdome superior, com irradia&#xe7;&#xe3;o para dorso associado &#xe0; n&#xe1;useas ou v&#xf4;mitos" weight="3"/>
+    <option description="Dor abdominal da diarreia" weight="4"/>
+    <option description="Obstru&#xe7;&#xe3;o intestinal: dor em c&#xf3;lica, v&#xf4;mitos, obstipa&#xe7;&#xe3;o e interrup&#xe7;&#xe3;o de elimina&#xe7;&#xe3;o de gases e fezes" weight="5"/>
+    <option description="Cistite: dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional" weight="6"/>
+    <option description="Dor p&#xf3;s-trauma (esportivo, viol&#xea;ncia, automobil&#xed;stico)" weight="7"/>
+    <option description="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames" weight="8"/>
+    <option description="H&#xe9;rnia umbilical/abdominal com sinais de encarceramento" weight="9"/>
+    <option description="DRGE/dispepsia: dor epig&#xe1;strica" weight="10"/>
+    <option description="Nefrolit&#xed;ase: dor intensa, s&#xfa;bita, localizada em laterais do abdome e dorso associada &#xe0; n&#xe1;useas e v&#xf4;mitos, mic&#xe7;&#xe3;o excessiva ou frequente. Pode ter hematuria associada ou n&#xe3;o." weight="11"/>
+    <option description="Doen&#xe7;a inflamat&#xf3;ria intestinal: suspeita Crohn, Doen&#xe7;a cel&#xed;aca, intoler&#xe2;ncia lactose, etc." weight="12"/>
+    <option description="Constipa&#xe7;&#xe3;o - Hist&#xf3;ria de mais de 5 dias sem evacuar" weight="13"/>
+    <option description="C&#xf3;lica do rec&#xe9;m-nascido (dor abdominal em RN maior de 14 dias associado a choro inconsol&#xe1;vel, abdome levemente distendido, hipertimp&#xe2;nico, com piora geralmente no fim do dia e aus&#xea;ncia de febre)" weight="14"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pancreatite_exames_alterados" id="30226" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_intestinal_raiox_alterado" id="30227" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cistite_su_alterado" id="30228" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="postrauma_us_alterado" id="30229" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hernia_usg_alterado" id="30230" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nefrolitiase_exames_alterados" id="30231" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="30232" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="30233" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="30234" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="30235" weight="1" value="4.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="30236" weight="1" value="5.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="6" id="30237" weight="1" value="6.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="7" id="30238" weight="1" value="7.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="8" id="30239" weight="1" value="8.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="9" id="30240" weight="1" value="9.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="10" id="30241" weight="1" value="10.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="11" id="30242" weight="1" value="11.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="12" id="30243" weight="1" value="12.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="13" id="30244" weight="1" value="13.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="14" id="30245" weight="1" value="14.0"/>
+</pathwayMetamodel:Pathway>

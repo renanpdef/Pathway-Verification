@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[M&#xe9;dico da Fam&#xed;lia] Rinite Al&#xe9;rgica" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6779" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Confirmar Suspeita de Rinite Al&#xe9;rgica" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Sintomas de Rinite Al&#xe9;rgica" url="" id="2902">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sintomas_rinite_alergica" id="5231" weight="1" value="0.0">
+        <option description="Prurido nos olhos" weight="1"/>
+        <option description="Prurido no nariz" weight="1"/>
+        <option description="Prurido no paladar" weight="1"/>
+        <option description="Prurido nos ouvidos" weight="1"/>
+        <option description="Coriza" weight="1"/>
+        <option description="Espirros" weight="1"/>
+        <option description="Congest&#xe3;o Nasal" weight="1"/>
+        <option description="Escorrimento Posterior" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6780" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Rinite N&#xe3;o-Al&#xe9;rgica" description="Paciente n&#xe3;o se enquadra no protocolo de Rinite Al&#xe9;rgica. Investigar outras poss&#xed;veis causas de doen&#xe7;a." isTerminal="true" inputSequences="//@sequence.1 //@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6881" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Exame F&#xed;sico" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.2 //@sequence.3 //@sequence.4">
+    <questions text="Conchas Nasais Hipertrofiadas" url="" id="2903">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exame_fisico_conchas_nasais_hipertrofiadas" id="5232" weight="1" value="false"/>
+    </questions>
+    <questions text="Corpo Estranho" url="" id="2904">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_corpo_estranho" id="5233" weight="1" value="false"/>
+    </questions>
+    <questions text="Desvio de Septo ou Altera&#xe7;&#xe3;o Anat&#xf4;mica" url="" id="2905">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_desvio_septo" id="5234" weight="1" value="false"/>
+    </questions>
+    <questions text="Mucosa P&#xe1;lida" url="" id="2906">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exame_fisico_mucosa_palida" id="5235" weight="1" value="false"/>
+    </questions>
+    <questions text="Rinorr&#xe9;ia" url="" id="2907">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exame_fisico_rinorreia" id="5236" weight="1" value="false"/>
+    </questions>
+    <questions text="P&#xf3;lipo ou tumor nasal" url="" id="2908">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_polipo_ou_tumor" id="5237" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="6882" type="Processo" type_verbose="Processo" url="" name="Encaminhar ao Otorrino" description="" isTerminal="true" inputSequences="//@sequence.2">
+    <action id="474" process_id="6882" service="encaminhar_especialidade" description="Otorrino"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6883" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classifica&#xe7;&#xe3;o da Rinite" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6 //@sequence.18">
+    <questions text="Classifica&#xe7;&#xe3;o da Rinite" url="" id="2909">
+      <answers xsi:type="pathwayMetamodel:Choice" name="classificacao_rinite" id="5238" weight="1" value="0.0">
+        <option description="Rinite Intermitente: sintomas em menos de 4 dias por semana OU por menos de 4 semanas" weight="1"/>
+        <option description="Rinite Persistente: sintomas pelo menos 4 dias por semana E pelo menos 4 semanas" weight="2"/>
+        <option description="Rinite Leve: sono normal E atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o normais E atividades normais na escola e no trabalho E n&#xe3;o h&#xe1; sintomas inc&#xf4;modos por MAIS DE 4 SEMANAS" weight="3"/>
+        <option description="Rinite Moderada a Grave: sono anormal OU interfer&#xea;ncia em atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o OU dificuldades na escola e no trabalho." weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6884" type="Receita" type_verbose="Receita" url="" name="[Rinite Intermitente] 6 a 11 meses" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.7">
+    <item id="13814" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2ml por dia."/>
+    <item id="13815" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6885" type="Receita" type_verbose="Receita" url="" name="[Rinite Leve, Moderada ou Grave] Tratamento" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina + Pseudoefedrina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>&lt;em>&lt;strong>&amp;nbsp; Idade &amp;gt; 2 e &amp;lt; 12 anos&amp;nbsp;&amp;nbsp;&lt;/strong>&lt;/em>&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 5 ml a cada 12h&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Menos de 30kg&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 2,5 ml a cada 12h&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;em>&lt;strong>Maior que 12 anos&lt;/strong>&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1 comprimido a cada 12h&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;background-color:null&quot;>Ebastina&amp;nbsp;&lt;/span>+ pseudoefedrina&lt;/strong>&lt;span style=&quot;background-color:null&quot;>: &lt;/span>&lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>Apenas para pacientes maiores que 12 anos&lt;/strong>&lt;/span>&lt;span style=&quot;background-color:null&quot;>. &lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:null&quot;>1 comprimido ao dia&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&amp;nbsp; Ebastina + pseudoefedrina (comprimido 10+120 mg)&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; Maiores de 12 anos&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1 comprimido ao dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&amp;nbsp; Propionato de Fluticasona&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 4 a 11 anos&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1 jato em cada fossa nasal 1 vez ao dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; Maiores de 12 anos e Adultos&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 2 jatos em cada fossa nasal, 1 vez ao dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>Se sintomas repercutirem sobre a qualidade de vida, associar &lt;strong>20 a 40 mg de prednisolona oral por 5 a 10 dias.&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" isTerminal="true">
+    <item id="13816" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dar medica&#xe7;&#xe3;o conforme seguinte orienta&#xe7;&#xe3;o: [Para pacientes maiores de 2 anos com menos de 30kg]: 5mg/dia (meio comprimido). [Para pacientes maiores de 30kg]: 10mg/dia (um comprimido inteiro)."/>
+    <item id="13817" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dar medica&#xe7;&#xe3;o conforme seguinte orienta&#xe7;&#xe3;o: [6 a 11 meses]: 1 mg oral /dia. [12 meses a 5 anos]: 1.25 mg oral /dia (1/4 de comprimido). [6 a 11 anos]: 2.5 mg oral dia (meio comprimido). [Maiores de 12 anos]: 5 mg /dia. [Adulto]: 5mg/dia"/>
+    <item id="13818" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Para pacientes menores de 12 anos."/>
+    <item id="13819" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Para pacientes adultos ou maiores de 12 anos."/>
+    <item id="13820" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar um jato em cada fossa nasal a cada 6 a 8 horas."/>
+    <item id="13901" url="" name="LORATADINA+SULFATO DE PSEUDOEFEDRINA" med_code="1854815047" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar dose de ___ml, duas vezes ao dia."/>
+    <item id="13902" url="" name="ALERFIN" med_code="-1772654831" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Fazer 2 jatos em cada fossa nasal, duas vezes ao dia."/>
+    <item id="13903" url="" name="PREDNISOLONA" med_code="1854843186" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1 a 2 comprimidos via oral, durante 5 a 10 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6886" type="Receita" type_verbose="Receita" url="" name="[Rinite Intermitente] 12 meses a 2 anos" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.8">
+    <item id="13904" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2,5ml por dia."/>
+    <item id="13905" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6887" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Rinite Intermitente] Peso" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.10 //@sequence.11 //@sequence.12 //@sequence.13 //@sequence.14 //@sequence.15">
+    <questions text="Peso do paciente" url="" id="2910">
+      <answers xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+        <option description="Mais de 30kg" weight="1"/>
+        <option description="Menos de 30kg" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6888" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Rinite Intermitente] Idade" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.7 //@sequence.8 //@sequence.9">
+    <questions text="6 a 11 meses" url="" id="2911">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_6_a_11_meses" id="5240" weight="1" value="false"/>
+    </questions>
+    <questions text="11 meses a 2 anos" url="" id="2912">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_11_meses_a_2_anos" id="5321" weight="1" value="false"/>
+    </questions>
+    <questions text="2 a 5 anos" url="" id="2913">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_2_a_5_anos" id="5322" weight="1" value="false"/>
+    </questions>
+    <questions text="6 a 11 anos" url="" id="2914">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_6_a_11_anos" id="5323" weight="1" value="false"/>
+    </questions>
+    <questions text="12 anos at&#xe9; adulto" url="" id="2915">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_12_anos_adulto" id="5324" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6889" type="Receita" type_verbose="Receita" url="" name="[Rinite Intermitente] 2 a 5 anos, menos de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.10">
+    <item id="13906" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2,5ml por dia."/>
+    <item id="13907" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13908" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6890" type="Receita" type_verbose="Receita" url="" name="[Rinite Intermitente] 2 a 5 anos, mais de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.11">
+    <item id="13909" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13910" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13911" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2,5ml por dia."/>
+    <item id="13912" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1/4 de um comprimido 1 vez ao dia."/>
+    <item id="13913" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13914" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6891" type="Receita" type_verbose="Receita" url="" name="[Rinite Intermitente] 6 a 11 anos, mais de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.13">
+    <item id="13915" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13916" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13917" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13918" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar meio comprimido uma vez ao dia."/>
+    <item id="13919" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13920" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6892" type="Receita" type_verbose="Receita" url="" name="[Rinite Intermitente] 6 a 11 anos, menos de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.12">
+    <item id="13921" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13922" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13923" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6893" type="Receita" type_verbose="Receita" url="" name="[Rinite Intermitente] Acima de 12 anos, menos de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.14">
+    <item id="13924" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13925" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar meio comprimido uma vez ao dia"/>
+    <item id="13926" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13927" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13928" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6894" type="Receita" type_verbose="Receita" url="" name="[Rinite Intermitente] Acima de 12 anos, mais de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.15">
+    <item id="13929" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13930" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13931" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13932" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13933" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6895" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Rinite Persistente] Idade" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.16 //@sequence.17 //@sequence.25">
+    <questions text="6 a 11 meses" url="" id="2916">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_6_a_11_meses" id="5325" weight="1" value="false"/>
+    </questions>
+    <questions text="12 meses a 2 anos" url="" id="2917">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_12_meses_a_2_anos" id="5326" weight="1" value="false"/>
+    </questions>
+    <questions text="2 a 5 anos" url="" id="2918">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_2_a_5_anos" id="5327" weight="1" value="false"/>
+    </questions>
+    <questions text="6 a 11 anos" url="" id="2919">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_6_a_11_anos" id="5328" weight="1" value="false"/>
+    </questions>
+    <questions text="12 anos at&#xe9; adulto" url="" id="2920">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_12_anos_a_adulto" id="5329" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6896" type="Receita" type_verbose="Receita" url="" name="[Rinite Persistente] 6 a 11 meses" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.16">
+    <item id="13934" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2ml por dia."/>
+    <item id="13935" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13936" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar a cada 6 ou 8 horas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6897" type="Receita" type_verbose="Receita" url="" name="[Rinite Persistente] 12 meses a 2 anos" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.17">
+    <item id="13937" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2,5ml por dia."/>
+    <item id="13938" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13939" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar um jato em cada narina a cada 6 ou 8 horas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6898" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Rinite Persisntente] Peso" description="" inputSequences="//@sequence.25" outputSequences="//@sequence.19 //@sequence.20 //@sequence.21 //@sequence.22 //@sequence.23 //@sequence.24">
+    <questions text="Peso" url="" id="2981">
+      <answers xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+        <option description="Mais de 30kg" weight="1"/>
+        <option description="Menos de 30kg" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6899" type="Receita" type_verbose="Receita" url="" name="[Rinite Persistente] 2 a 5 anos, menos de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.19">
+    <item id="13940" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2,5ml por dia."/>
+    <item id="13941" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13942" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13943" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar um jato em cada narina a cada 6 ou 8 horas"/>
+    <item id="13944" url="" name="LORATADINA+SULFATO DE PSEUDOEFEDRINA" med_code="1854815047" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar dose de 2,5ml"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6900" type="Receita" type_verbose="Receita" url="" name="[Rinite Persistente] 2 a 5 anos, mais de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.20">
+    <item id="13945" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13946" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13947" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2,5ml por dia."/>
+    <item id="13948" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1/4 de comprimido por dia."/>
+    <item id="13949" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13950" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 a 8 horas"/>
+    <item id="13951" url="" name="LORATADINA+SULFATO DE PSEUDOEFEDRINA" med_code="1854815047" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar doses de 5ml."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6901" type="Receita" type_verbose="Receita" url="" name="[Rinite Persistente] 6 a 11 anos, menos de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.21">
+    <item id="13952" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13953" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13954" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13955" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 a 8 horas."/>
+    <item id="13956" url="" name="LORATADINA+SULFATO DE PSEUDOEFEDRINA" med_code="1854815047" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar doses de 2,5ml."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6902" type="Receita" type_verbose="Receita" url="" name="[Rinite Persistente] 6 a 11 anos, mais de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.22">
+    <item id="13957" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13958" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13959" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13960" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar meio comprimido uma vez ao dia."/>
+    <item id="13961" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13962" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 a 8 horas."/>
+    <item id="13963" url="" name="LORATADINA+SULFATO DE PSEUDOEFEDRINA" med_code="1854815047" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar doses de 5ml"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6903" type="Receita" type_verbose="Receita" url="" name="[Rinite Persistente] Acima de 12 anos, menos de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.23">
+    <item id="13964" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13965" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar meio comprimido uma vez ao dia."/>
+    <item id="13966" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13967" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13968" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13969" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 a 8 horas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6904" type="Receita" type_verbose="Receita" url="" name="[Rinite Persistente] Acima de 12 anos, mais de 30kg" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.24">
+    <item id="13970" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13971" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13972" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13973" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13974" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13975" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 ou 8 horas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6905" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Rinite Leve, Moderada ou Grave] Idade" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.26 //@sequence.27 //@sequence.28">
+    <questions text="6 a 11 meses" url="" id="2982">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_6_a_11_meses" id="5331" weight="1" value="false"/>
+    </questions>
+    <questions text="12 meses a 2 anos" url="" id="2983">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_12_meses_2_anos" id="5332" weight="1" value="false"/>
+    </questions>
+    <questions text="2 a 5 anos" url="" id="2984">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_2_a_5_anos" id="5333" weight="1" value="false"/>
+    </questions>
+    <questions text="6 a 11 anos" url="" id="2985">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_6_a_11_anos" id="5334" weight="1" value="false"/>
+    </questions>
+    <questions text="Mais de 12 anos" url="" id="2986">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_acima_de_12_anos" id="5335" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6906" type="Receita" type_verbose="Receita" url="" name="[Rinite Leve, moderada ou grave] 6 a 11 meses" description="&lt;p>&lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>SE sintomas repercutem sobre a qualidade de vida, associar 20 a 40 mg de Prednisolona oral por 5 a 10 dias&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.26">
+    <item id="13976" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2ml por dia."/>
+    <item id="13977" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13978" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar a cada 6 ou 8 horas."/>
+    <item id="13979" url="" name="PREDNISOLONA" med_code="1854843186" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar 1 a 2 comprimidos, de 5 a 10 dias"/>
+    <item id="13980" url="" name="CLENIL NASAL AQUOSO" med_code="-1772655401" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="(Dipropionato de Beclometasona). 1 jato em cada narina."/>
+    <item id="13981" url="" name="CLENIL" med_code="-1772656302" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6907" type="Receita" type_verbose="Receita" url="" name="[Rinite Leve, Moderada ou Grave] 12 meses a 2 anos" description="&lt;p>Prescrever medica&amp;ccedil;&amp;otilde;es conforme esquema apresentado a seguir (baseado na idade e peso do paciente).&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;3&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Loratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;1&quot; rowspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp; &lt;strong>&lt;em>Maiores de 2 anos&lt;/em>&lt;/strong>&amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Menos de 30kg&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; 5mg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp; &lt;em>Mais de 30kg&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&amp;nbsp;10mg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Desloratadina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 meses&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>1 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>12 meses a 5 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 1.25 mg oral/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>6 a 11 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>2.5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp;&lt;em>Maior que 12 anos ou Adulto&lt;/em>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>5 mg oral/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; style=&quot;text-align:center&quot;>&lt;strong>Ceterizina&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>Menor que 12 anos&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; 0,5 mg/kg/dia&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;em>&amp;nbsp;Maior que 12 anos ou Adulto&amp;nbsp;&lt;/em>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>10 mg/kg/dia&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.27">
+    <item id="13982" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2,5ml por dia."/>
+    <item id="13983" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13984" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar um jato em cada narina a cada 6 ou 8 horas."/>
+    <item id="13985" url="" name="PREDNISOLONA" med_code="1854843186" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1 a 2 comprimidos ao dia, de 5 a 10 dias (Se necess&#xe1;rio)"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6908" type="Receita" type_verbose="Receita" url="" name="[Rinite Leve, Moderada ou Grave] 2 a 5 anos, menos de 30kg" description="&lt;p>&lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>SE sintomas repercutem sobre a qualidade de vida, associar 20 a 40 mg de Prednisolona oral por 5 a 10 dias&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.29">
+    <item id="13986" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2,5ml por dia."/>
+    <item id="13987" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13988" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="13989" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar um jato em cada narina a cada 6 ou 8 horas"/>
+    <item id="13990" url="" name="LORATADINA+SULFATO DE PSEUDOEFEDRINA" med_code="1854815047" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar dose de 2,5ml"/>
+    <item id="13991" url="" name="PREDNISOLONA" med_code="1854843186" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar de 1 a 2 comprimidos ao dia, de 5 a 10 dias (se necess&#xe1;rio)"/>
+    <item id="13992" url="" name="CLENIL" med_code="-1772656302" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="13993" url="" name="FLUTICAN" med_code="-971655577" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="1 a 2 jatos em cada narina, uma vez ao dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6909" type="Receita" type_verbose="Receita" url="" name="[Rinite Leve, Moderada ou Grave] 2 a 5 anos, mais de 30kg" description="&lt;p>&lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>SE sintomas repercutem sobre a qualidade de vida, associar 20 a 40 mg de Prednisolona oral por 5 a 10 dias&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.30">
+    <item id="13994" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="13995" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13996" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2,5ml por dia."/>
+    <item id="13997" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1/4 de comprimido uma vez ao dia."/>
+    <item id="13998" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13999" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 a 8 horas"/>
+    <item id="14000" url="" name="LORATADINA+SULFATO DE PSEUDOEFEDRINA" med_code="1854815047" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar doses de 5ml."/>
+    <item id="14001" url="" name="PREDNISOLONA" med_code="1854843186" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1 a 2 comprimidos ao dia, durante 5 a 10 dias (se necess&#xe1;rio)"/>
+    <item id="14002" url="" name="CLENIL" med_code="-1772656302" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14003" url="" name="FLUTICAN" med_code="-971655577" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="1 a 2 jatos em cada narina, uma vez ao dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6910" type="Receita" type_verbose="Receita" url="" name="[Rinite Leve, Moderada ou Grave] 6 a 11 anos, menos de 30kg" description="&lt;p>&lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>SE sintomas repercutem sobre a qualidade de vida, associar 20 a 40 mg de Prednisolona oral por 5 a 10 dias&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.31">
+    <item id="14004" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="14005" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="14006" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14007" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 a 8 horas."/>
+    <item id="14008" url="" name="LORATADINA+SULFATO DE PSEUDOEFEDRINA" med_code="1854815047" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar doses de 2,5ml."/>
+    <item id="14009" url="" name="PREDNISOLONA" med_code="1854843186" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1 a 2 comprimidos ao dia, durante 5 a 10 dias (se necess&#xe1;rio)"/>
+    <item id="14010" url="" name="CLENIL" med_code="-1772656302" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14011" url="" name="FLUTICAN" med_code="-971655577" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="1 a 2 jatos em cada narina, uma vez ao dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6911" type="Receita" type_verbose="Receita" url="" name="[Rinite Leve, Moderada ou Grave] 6 a 11 anos, mais de 30kg" description="&lt;p>&lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>SE sintomas repercutem sobre a qualidade de vida, associar 20 a 40 mg de Prednisolona oral por 5 a 10 dias&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.32">
+    <item id="14012" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="14013" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14014" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="14015" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14016" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="-2022350644" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14017" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 a 8 horas."/>
+    <item id="14018" url="" name="LORATADINA+SULFATO DE PSEUDOEFEDRINA" med_code="1854815047" presentation="DOSE" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar doses de 5ml"/>
+    <item id="14019" url="" name="PREDNISOLONA" med_code="1854843186" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1 a 2 comprimidos ao dia, durante 5 a 10 dias (se necess&#xe1;rio)"/>
+    <item id="14020" url="" name="CLENIL" med_code="-1772656302" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14021" url="" name="FLUTICAN" med_code="-971655577" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="1 a 2 jatos em cada narina, uma vez ao dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6912" type="Receita" type_verbose="Receita" url="" name="[Rinite Leve, Moderada ou Grave] Acima de 12 anos, menos de 30kg" description="&lt;p>&lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>SE sintomas repercutem sobre a qualidade de vida, associar 20 a 40 mg de Prednisolona oral por 5 a 10 dias&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.33">
+    <item id="14022" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 5ml por dia."/>
+    <item id="14023" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14024" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="14025" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14026" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14027" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 a 8 horas."/>
+    <item id="14028" url="" name="PREDNISOLONA" med_code="1854843186" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1 a 2 comprimidos ao dia, durante 5 a 10 dias (se necess&#xe1;rio)"/>
+    <item id="14029" url="" name="CLENIL" med_code="-1772656302" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="14030" url="" name="FLUTICAN" med_code="-971655577" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="1 a 2 jatos em cada narina, uma vez ao dia."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6913" type="Receita" type_verbose="Receita" url="" name="[Rinite Leve, Moderada ou Grave] Acima de 12 anos, mais de 30kg" description="&lt;p>&lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>SE sintomas repercutem sobre a qualidade de vida, associar 20 a 40 mg de Prednisolona oral por 5 a 10 dias&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.34">
+    <item id="14031" url="" name="LORATADINA" med_code="766252830" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="14032" url="" name="LORATADINA" med_code="1866347753" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14033" url="" name="DESLORATADINA" med_code="766255517" presentation="-" access="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 10ml por dia."/>
+    <item id="14034" url="" name="DESLORATADINA" med_code="766255411" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14035" url="" name="DICLORIDRATO DE CETIRIZINA" med_code="2032019825" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14036" url="" name="CROMOGLICATO DISSODICO" med_code="-1730636763" presentation="JATO" access="2" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar 1 jato em cada narina a cada 6 ou 8 horas."/>
+    <item id="14037" url="" name="PREDNISOLONA" med_code="1854843186" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1 a 2 comprimidos ao dia, durante 5 a 10 dias (se necess&#xe1;rio)"/>
+    <item id="14038" url="" name="CLENIL" med_code="-1772656302" presentation="JATO" access="2" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6914" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Rinite Leve, Persistente ou Grave] Peso" description="" inputSequences="//@sequence.28" outputSequences="//@sequence.29 //@sequence.30 //@sequence.31 //@sequence.32 //@sequence.33 //@sequence.34">
+    <questions text="Peso" url="" id="2987">
+      <answers xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+        <option description="Mais de 30kg" weight="1"/>
+        <option description="Menos de 30kg" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="6915" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Sintomas de Rinite >= 2)" description="Sintomas de Rinite >= 2">
+    <operation name="Sintomas de Rinite >= 2" Operator="greaterOrEqual" id="5355">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintomas_rinite_alergica" id="5231" weight="1" value="0.0">
+        <option description="Prurido nos olhos" weight="1"/>
+        <option description="Prurido no nariz" weight="1"/>
+        <option description="Prurido no paladar" weight="1"/>
+        <option description="Prurido nos ouvidos" weight="1"/>
+        <option description="Coriza" weight="1"/>
+        <option description="Espirros" weight="1"/>
+        <option description="Congest&#xe3;o Nasal" weight="1"/>
+        <option description="Escorrimento Posterior" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="6916" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Sintomas de Rinite &lt; 2)" description="Sintomas de Rinite &lt; 2">
+    <operation name="Sintomas de Rinite &lt; 2" Operator="lessThan" id="5356">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintomas_rinite_alergica" id="5231" weight="1" value="0.0">
+        <option description="Prurido nos olhos" weight="1"/>
+        <option description="Prurido no nariz" weight="1"/>
+        <option description="Prurido no paladar" weight="1"/>
+        <option description="Prurido nos ouvidos" weight="1"/>
+        <option description="Coriza" weight="1"/>
+        <option description="Espirros" weight="1"/>
+        <option description="Congest&#xe3;o Nasal" weight="1"/>
+        <option description="Escorrimento Posterior" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="6917" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Possui P&#xf3;lipo ou Tumor)" description="Possui P&#xf3;lipo ou Tumor">
+    <operation name="Possui P&#xf3;lipo ou Tumor" Operator="affirmation" id="5357">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_polipo_ou_tumor" id="5237" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.2" id="6918" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Com obstru&#xe7;&#xe3;o unilateral, sem tumor ou p&#xf3;lipo)" description="Com obstru&#xe7;&#xe3;o unilateral, sem tumor ou p&#xf3;lipo">
+    <operation name="Com obstru&#xe7;&#xe3;o unilateral, sem tumor ou p&#xf3;lipo" Operator="and" id="5358">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Com Obstru&#xe7;&#xe3;o Unilateral" Operator="greaterOrEqual" id="5347">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Obstru&#xe7;&#xe3;o Unilateral (Crit&#xe9;rios)" Operator="addition" id="5346">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_desvio_septo" id="5234" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_corpo_estranho" id="5233" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_polipo_ou_tumor" id="5237" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sem Tumor ou P&#xf3;lipo" id="5348">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_polipo_ou_tumor" id="5237" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="6919" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Sem obstru&#xe7;&#xe3;o unilateral)" description="Sem obstru&#xe7;&#xe3;o unilateral">
+    <operation name="Sem obstru&#xe7;&#xe3;o unilateral" Operator="lessThan" id="5359">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Obstru&#xe7;&#xe3;o Unilateral (Crit&#xe9;rios)" Operator="addition" id="5346">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_desvio_septo" id="5234" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_corpo_estranho" id="5233" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_polipo_ou_tumor" id="5237" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.4" id="6920" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Rinite Intermitente)" description="Rinite Intermitente">
+    <operation name="Rinite Intermitente" Operator="equal" id="5360">
+      <operand xsi:type="pathwayMetamodel:Choice" name="classificacao_rinite" id="5238" weight="1" value="0.0">
+        <option description="Rinite Intermitente: sintomas em menos de 4 dias por semana OU por menos de 4 semanas" weight="1"/>
+        <option description="Rinite Persistente: sintomas pelo menos 4 dias por semana E pelo menos 4 semanas" weight="2"/>
+        <option description="Rinite Leve: sono normal E atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o normais E atividades normais na escola e no trabalho E n&#xe3;o h&#xe1; sintomas inc&#xf4;modos por MAIS DE 4 SEMANAS" weight="3"/>
+        <option description="Rinite Moderada a Grave: sono anormal OU interfer&#xea;ncia em atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o OU dificuldades na escola e no trabalho." weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.4" id="6921" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (Rinite Leve, Moderada ou Grave)" description="Rinite Leve, Moderada ou Grave">
+    <operation name="Rinite Leve, Moderada ou Grave" Operator="or" id="5361">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Leve" Operator="equal" id="5344">
+        <operand xsi:type="pathwayMetamodel:Choice" name="classificacao_rinite" id="5238" weight="1" value="0.0">
+          <option description="Rinite Intermitente: sintomas em menos de 4 dias por semana OU por menos de 4 semanas" weight="1"/>
+          <option description="Rinite Persistente: sintomas pelo menos 4 dias por semana E pelo menos 4 semanas" weight="2"/>
+          <option description="Rinite Leve: sono normal E atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o normais E atividades normais na escola e no trabalho E n&#xe3;o h&#xe1; sintomas inc&#xf4;modos por MAIS DE 4 SEMANAS" weight="3"/>
+          <option description="Rinite Moderada a Grave: sono anormal OU interfer&#xea;ncia em atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o OU dificuldades na escola e no trabalho." weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="5340" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Moderada ou Grave" Operator="equal" id="5345">
+        <operand xsi:type="pathwayMetamodel:Choice" name="classificacao_rinite" id="5238" weight="1" value="0.0">
+          <option description="Rinite Intermitente: sintomas em menos de 4 dias por semana OU por menos de 4 semanas" weight="1"/>
+          <option description="Rinite Persistente: sintomas pelo menos 4 dias por semana E pelo menos 4 semanas" weight="2"/>
+          <option description="Rinite Leve: sono normal E atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o normais E atividades normais na escola e no trabalho E n&#xe3;o h&#xe1; sintomas inc&#xf4;modos por MAIS DE 4 SEMANAS" weight="3"/>
+          <option description="Rinite Moderada a Grave: sono anormal OU interfer&#xea;ncia em atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o OU dificuldades na escola e no trabalho." weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="5341" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.9" id="6922" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (6 a 11 meses)" description="S9 (6 a 11 meses)">
+    <operation name="6 a 11 meses" Operator="affirmation" id="5362">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_6_a_11_meses" id="5240" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.9" id="6923" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (12 meses a 2 anos)" description="12 meses a 2 anos">
+    <operation name="12 meses a 2 anos" Operator="affirmation" id="5363">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_11_meses_a_2_anos" id="5321" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.9" id="6924" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (maior de 2 anos)" description="maior de 2 anos">
+    <operation name="maior de 2 anos" Operator="or" id="5364">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_2_a_5_anos" id="5322" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_6_a_11_anos" id="5323" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_12_anos_adulto" id="5324" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="6925" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (2 a 5 anos, menos de 30kg)" description="2 a 5 anos, menos de 30kg">
+    <operation name="2 a 5 anos, menos de 30kg" Operator="and" id="5365">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_2_a_5_anos" id="5322" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rin Interm &lt; 30kg" Operator="equal" id="5350">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.8" id="6926" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (2 a 5 anos, mais de 30kg)" description="2 a 5 anos, mais de 30kg">
+    <operation name="2 a 5 anos, mais de 30kg" Operator="and" id="5366">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_2_a_5_anos" id="5322" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rin Interm >= 30kg" Operator="equal" id="5349">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.8" id="6927" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (6 a 11 anos, menos de 30kg)" description="6 a 11 anos, menos de 30kg">
+    <operation name="6 a 11 anos, menos de 30kg" Operator="and" id="5367">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_6_a_11_anos" id="5323" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rin Interm &lt; 30kg" Operator="equal" id="5350">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.8" id="6928" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (6 a 11 anos, mais de 30kg)" description="6 a 11 anos, mais de 30kg">
+    <operation name="6 a 11 anos, mais de 30kg" Operator="and" id="5368">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_6_a_11_anos" id="5323" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rin Interm >= 30kg" Operator="equal" id="5349">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.8" id="6929" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (Acima de 12 anos, menos de 30kg)" description="Acima de 12 anos, menos de 30kg">
+    <operation name="Acima de 12 anos, menos de 30kg" Operator="and" id="5369">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_12_anos_adulto" id="5324" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rin Interm &lt; 30kg" Operator="equal" id="5350">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.8" id="6930" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (Acima de 12 anos, mais de 30kg)" description="Acima de 12 anos, mais de 30kg">
+    <operation name="Acima de 12 anos, mais de 30kg" Operator="and" id="5370">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_12_anos_adulto" id="5324" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rin Interm >= 30kg" Operator="equal" id="5349">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.16" id="6931" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (rinite persistente 6 a 11 meses)" description="rinite persistente 6 a 11 meses">
+    <operation name="rinite persistente 6 a 11 meses" Operator="affirmation" id="5371">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_6_a_11_meses" id="5325" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.16" id="6932" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (rinite persistente 12 meses a 2 anos)" description="rinite persistente 12 meses a 2 anos">
+    <operation name="rinite persistente 12 meses a 2 anos" Operator="affirmation" id="5372">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_12_meses_a_2_anos" id="5326" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.4" id="6933" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Rinite Persistente)" description="Rinite Persistente">
+    <operation name="Rinite Persistente" Operator="equal" id="5373">
+      <operand xsi:type="pathwayMetamodel:Choice" name="classificacao_rinite" id="5238" weight="1" value="0.0">
+        <option description="Rinite Intermitente: sintomas em menos de 4 dias por semana OU por menos de 4 semanas" weight="1"/>
+        <option description="Rinite Persistente: sintomas pelo menos 4 dias por semana E pelo menos 4 semanas" weight="2"/>
+        <option description="Rinite Leve: sono normal E atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o normais E atividades normais na escola e no trabalho E n&#xe3;o h&#xe1; sintomas inc&#xf4;modos por MAIS DE 4 SEMANAS" weight="3"/>
+        <option description="Rinite Moderada a Grave: sono anormal OU interfer&#xea;ncia em atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o OU dificuldades na escola e no trabalho." weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="6934" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (Rinite persistente 2 a 5 anos, menos de 30kg)" description="Rinite persistente 2 a 5 anos, menos de 30kg">
+    <operation name="Rinite persistente 2 a 5 anos, menos de 30kg" Operator="and" id="5374">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_2_a_5_anos" id="5327" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Persistente - Menos de 30kg" Operator="equal" id="5351">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.19" id="6935" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (Rinite persistente 2 a 5 anos, mais de 30kg)" description="Rinite persistente 2 a 5 anos, mais de 30kg">
+    <operation name="Rinite persistente 2 a 5 anos, mais de 30kg" Operator="and" id="5375">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_2_a_5_anos" id="5327" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Persistente - Mais de 30kg" Operator="equal" id="5352">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.19" id="6936" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (Rinite persistente 6 a 11 anos, menos de 30kg)" description="Rinite persistente 6 a 11 anos, menos de 30kg">
+    <operation name="Rinite persistente 6 a 11 anos, menos de 30kg" Operator="and" id="5376">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_6_a_11_anos" id="5328" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Persistente - Menos de 30kg" Operator="equal" id="5351">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.19" id="6937" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (Rinite persistente 6 a 11 anos, mais de 30kg)" description="Rinite persistente 6 a 11 anos, mais de 30kg">
+    <operation name="Rinite persistente 6 a 11 anos, mais de 30kg" Operator="and" id="5377">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_6_a_11_anos" id="5328" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Persistente - Mais de 30kg" Operator="equal" id="5352">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.19" id="6938" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (Rinite persistente mais de 12 anos, menos de 30kg)" description="Rinite persistente mais de 12 anos, menos de 30kg">
+    <operation name="Rinite persistente mais de 12 anos, menos de 30kg" Operator="and" id="5378">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_12_anos_a_adulto" id="5329" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Persistente - Menos de 30kg" Operator="equal" id="5351">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.19" id="6939" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (Rinite persistente mais de 12 anos, mais de 30kg)" description="Rinite persistente mais de 12 anos, mais de 30kg">
+    <operation name="Rinite persistente mais de 12 anos, mais de 30kg" Operator="and" id="5379">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_12_anos_a_adulto" id="5329" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Persistente - Mais de 30kg" Operator="equal" id="5352">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.16" id="6940" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (Rinite Persistente - Mais de 2 anos)" description="Rinite Persistente - Mais de 2 anos">
+    <operation name="Rinite Persistente - Mais de 2 anos" Operator="or" id="5380">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_2_a_5_anos" id="5327" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_6_a_11_anos" id="5328" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_12_anos_a_adulto" id="5329" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.26" id="6941" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (Rinite L/M/G - 6 a 11 meses)" description="Rinite L/M/G - 6 a 11 meses">
+    <operation name="Rinite L/M/G - 6 a 11 meses" Operator="affirmation" id="5381">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_6_a_11_meses" id="5331" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.26" id="6942" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (Rinite L/M/G - 12 meses a 2 anos)" description="Rinite L/M/G - 12 meses a 2 anos">
+    <operation name="Rinite L/M/G - 12 meses a 2 anos" Operator="affirmation" id="5382">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_12_meses_2_anos" id="5332" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.35" outputStep="//@element.26" id="6943" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (Rinite L/M/G - mais de 2 anos)" description="mais de 2 anos">
+    <operation name="Rinite L/M/G - Mais de 2 anos" Operator="or" id="5383">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_2_a_5_anos" id="5333" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_6_a_11_anos" id="5334" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_acima_de_12_anos" id="5335" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.29" outputStep="//@element.35" id="6944" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (L/M/G - 2 a 5 anos, menos de 30kg)" description="2 a 5 anos, menos de 30kg">
+    <operation name="L/M/G - 2 a 5 anos, menos de 30kg" Operator="and" id="5384">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_2_a_5_anos" id="5333" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Leve/Mod/Grave - Menos de 30kg" Operator="equal" id="5353">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.35" id="6945" type="Sequencia" type_verbose="Sequencia" url="" name="S31 (L/M/G - 2 a 5 anos, mais de 30kg)" description="L/M/G - 2 a 5 anos, mais de 30kg">
+    <operation name="L/M/G - 2 a 5 anos, mais de 30kg" Operator="and" id="5385">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_2_a_5_anos" id="5333" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Leve/Mod/Grave - Mais de 30kg" Operator="equal" id="5354">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.31" outputStep="//@element.35" id="6946" type="Sequencia" type_verbose="Sequencia" url="" name="S32 (L/M/G - 6 a 11 anos, menos de 30kg)" description="L/M/G - 6 a 11 anos, menos de 30kg">
+    <operation name="L/M/G - 6 a 11 anos, menos de 30kg" Operator="and" id="5386">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_6_a_11_anos" id="5334" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Leve/Mod/Grave - Menos de 30kg" Operator="equal" id="5353">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.32" outputStep="//@element.35" id="6947" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (L/M/G - 6 a 11 anos, mais de 30kg)" description="L/M/G - 6 a 11 anos, mais de 30kg">
+    <operation name="L/M/G - 6 a 11 anos, mais de 30kg" Operator="and" id="5387">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_6_a_11_anos" id="5334" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Leve/Mod/Grave - Mais de 30kg" Operator="equal" id="5354">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.33" outputStep="//@element.35" id="6948" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (L/M/G - Mais de 12 anos, menos de 30kg)" description="L/M/G - Mais de 12 anos, menos de 30kg">
+    <operation name="L/M/G - Mais de 12 anos, menos de 30kg" Operator="and" id="5388">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_acima_de_12_anos" id="5335" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Leve/Mod/Grave - Menos de 30kg" Operator="equal" id="5353">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.34" outputStep="//@element.35" id="6949" type="Sequencia" type_verbose="Sequencia" url="" name="S35 (L/M/G - Mais de 12 anos, mais de 30kg)" description="L/M/G - Mais de 12 anos, mais de 30kg">
+    <operation name="L/M/G - Mais de 12 anos, mais de 30kg" Operator="and" id="5389">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_acima_de_12_anos" id="5335" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Rinite Leve/Mod/Grave - Mais de 30kg" Operator="equal" id="5354">
+        <operand xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+          <option description="Mais de 30kg" weight="1"/>
+          <option description="Menos de 30kg" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <operation name="Obstru&#xe7;&#xe3;o Unilateral >= 1" Operator="greaterOrEqual" id="5342">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+  </operation>
+  <operation name="Obstru&#xe7;&#xe3;o Unilateral &lt; 100" Operator="lessThan" id="5343">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="100" id="5338" weight="1"/>
+  </operation>
+  <operation name="Rinite Leve" Operator="equal" id="5344">
+    <operand xsi:type="pathwayMetamodel:Choice" name="classificacao_rinite" id="5238" weight="1" value="0.0">
+      <option description="Rinite Intermitente: sintomas em menos de 4 dias por semana OU por menos de 4 semanas" weight="1"/>
+      <option description="Rinite Persistente: sintomas pelo menos 4 dias por semana E pelo menos 4 semanas" weight="2"/>
+      <option description="Rinite Leve: sono normal E atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o normais E atividades normais na escola e no trabalho E n&#xe3;o h&#xe1; sintomas inc&#xf4;modos por MAIS DE 4 SEMANAS" weight="3"/>
+      <option description="Rinite Moderada a Grave: sono anormal OU interfer&#xea;ncia em atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o OU dificuldades na escola e no trabalho." weight="4"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="5340" weight="1"/>
+  </operation>
+  <operation name="Rinite Moderada ou Grave" Operator="equal" id="5345">
+    <operand xsi:type="pathwayMetamodel:Choice" name="classificacao_rinite" id="5238" weight="1" value="0.0">
+      <option description="Rinite Intermitente: sintomas em menos de 4 dias por semana OU por menos de 4 semanas" weight="1"/>
+      <option description="Rinite Persistente: sintomas pelo menos 4 dias por semana E pelo menos 4 semanas" weight="2"/>
+      <option description="Rinite Leve: sono normal E atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o normais E atividades normais na escola e no trabalho E n&#xe3;o h&#xe1; sintomas inc&#xf4;modos por MAIS DE 4 SEMANAS" weight="3"/>
+      <option description="Rinite Moderada a Grave: sono anormal OU interfer&#xea;ncia em atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o OU dificuldades na escola e no trabalho." weight="4"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="5341" weight="1"/>
+  </operation>
+  <operation name="Obstru&#xe7;&#xe3;o Unilateral (Crit&#xe9;rios)" Operator="addition" id="5346">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_desvio_septo" id="5234" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_corpo_estranho" id="5233" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_polipo_ou_tumor" id="5237" weight="1" value="false"/>
+  </operation>
+  <operation name="Com Obstru&#xe7;&#xe3;o Unilateral" Operator="greaterOrEqual" id="5347">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Obstru&#xe7;&#xe3;o Unilateral (Crit&#xe9;rios)" Operator="addition" id="5346">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_desvio_septo" id="5234" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_corpo_estranho" id="5233" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_polipo_ou_tumor" id="5237" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+  </operation>
+  <operation name="Sem Tumor ou P&#xf3;lipo" id="5348">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_polipo_ou_tumor" id="5237" weight="1" value="false"/>
+  </operation>
+  <operation name="Rin Interm >= 30kg" Operator="equal" id="5349">
+    <operand xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+      <option description="Mais de 30kg" weight="1"/>
+      <option description="Menos de 30kg" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+  </operation>
+  <operation name="Rin Interm &lt; 30kg" Operator="equal" id="5350">
+    <operand xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+      <option description="Mais de 30kg" weight="1"/>
+      <option description="Menos de 30kg" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+  </operation>
+  <operation name="Rinite Persistente - Menos de 30kg" Operator="equal" id="5351">
+    <operand xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+      <option description="Mais de 30kg" weight="1"/>
+      <option description="Menos de 30kg" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+  </operation>
+  <operation name="Rinite Persistente - Mais de 30kg" Operator="equal" id="5352">
+    <operand xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+      <option description="Mais de 30kg" weight="1"/>
+      <option description="Menos de 30kg" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+  </operation>
+  <operation name="Rinite Leve/Mod/Grave - Menos de 30kg" Operator="equal" id="5353">
+    <operand xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+      <option description="Mais de 30kg" weight="1"/>
+      <option description="Menos de 30kg" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+  </operation>
+  <operation name="Rinite Leve/Mod/Grave - Mais de 30kg" Operator="equal" id="5354">
+    <operand xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+      <option description="Mais de 30kg" weight="1"/>
+      <option description="Menos de 30kg" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sintomas_rinite_alergica" id="5231" weight="1" value="0.0">
+    <option description="Prurido nos olhos" weight="1"/>
+    <option description="Prurido no nariz" weight="1"/>
+    <option description="Prurido no paladar" weight="1"/>
+    <option description="Prurido nos ouvidos" weight="1"/>
+    <option description="Coriza" weight="1"/>
+    <option description="Espirros" weight="1"/>
+    <option description="Congest&#xe3;o Nasal" weight="1"/>
+    <option description="Escorrimento Posterior" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exame_fisico_conchas_nasais_hipertrofiadas" id="5232" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_corpo_estranho" id="5233" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_desvio_septo" id="5234" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exame_fisico_mucosa_palida" id="5235" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exame_fisico_rinorreia" id="5236" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="obstrucao_unilateral_polipo_ou_tumor" id="5237" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="classificacao_rinite" id="5238" weight="1" value="0.0">
+    <option description="Rinite Intermitente: sintomas em menos de 4 dias por semana OU por menos de 4 semanas" weight="1"/>
+    <option description="Rinite Persistente: sintomas pelo menos 4 dias por semana E pelo menos 4 semanas" weight="2"/>
+    <option description="Rinite Leve: sono normal E atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o normais E atividades normais na escola e no trabalho E n&#xe3;o h&#xe1; sintomas inc&#xf4;modos por MAIS DE 4 SEMANAS" weight="3"/>
+    <option description="Rinite Moderada a Grave: sono anormal OU interfer&#xea;ncia em atividades di&#xe1;rias, esportivas e de recrea&#xe7;&#xe3;o OU dificuldades na escola e no trabalho." weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="rin_interm_peso" id="5239" weight="1" value="0.0">
+    <option description="Mais de 30kg" weight="1"/>
+    <option description="Menos de 30kg" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_6_a_11_meses" id="5240" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_11_meses_a_2_anos" id="5321" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_2_a_5_anos" id="5322" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_6_a_11_anos" id="5323" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_interm_12_anos_adulto" id="5324" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_6_a_11_meses" id="5325" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_12_meses_a_2_anos" id="5326" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_2_a_5_anos" id="5327" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_6_a_11_anos" id="5328" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_pers_12_anos_a_adulto" id="5329" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="rin_pers_peso" id="5330" weight="1" value="0.0">
+    <option description="Mais de 30kg" weight="1"/>
+    <option description="Menos de 30kg" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_6_a_11_meses" id="5331" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_12_meses_2_anos" id="5332" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_2_a_5_anos" id="5333" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_6_a_11_anos" id="5334" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rin_leve_acima_de_12_anos" id="5335" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="rinite_leve_peso" id="5336" weight="1" value="0.0">
+    <option description="Mais de 30kg" weight="1"/>
+    <option description="Menos de 30kg" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="5337" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="100" id="5338" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="5339" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="5340" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="5341" weight="1"/>
+</pathwayMetamodel:Pathway>

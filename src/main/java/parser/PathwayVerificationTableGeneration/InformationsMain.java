@@ -18,17 +18,20 @@ public class InformationsMain {
 //		CompleteTableGeneration completeTableGaneration = new CompleteTableGeneration();
 //		completeTableGaneration.createTable();
 		
-//		RunTimeTableGeneration runTimeTableGaneration = new RunTimeTableGeneration();
-//		runTimeTableGaneration.createTable();
+		RunTimeTableGeneration runTimeTableGaneration = new RunTimeTableGeneration();
+		runTimeTableGaneration.createTable("dl");
+		runTimeTableGaneration.createTable("nd");
+		runTimeTableGaneration.createTable("is");
+		runTimeTableGaneration.createTable("et");
 		
-		StatisticsTableGeneration statisticsTableGeneration = new StatisticsTableGeneration();
-		System.out.println("DEADLOCK");
-		statisticsTableGeneration.createStatisticTable("dl");
-		System.out.println("NON DETERMINISM");
-		statisticsTableGeneration.createStatisticTable("nd");
-		System.out.println("EQUIVALENT TRANSITIONS");
-		statisticsTableGeneration.createStatisticTable("et");
-		System.out.println("INACCESSIBLE STEPS");
-		statisticsTableGeneration.createStatisticTable("is");
+//		StatisticsTableGeneration statisticsTableGeneration = new StatisticsTableGeneration();
+//		System.out.println("DEADLOCK");
+//		statisticsTableGeneration.createStatisticTable("dl");
+//		System.out.println("NON DETERMINISM");
+//		statisticsTableGeneration.createStatisticTable("nd");
+//		System.out.println("EQUIVALENT TRANSITIONS");
+//		statisticsTableGeneration.createStatisticTable("et");
+//		System.out.println("INACCESSIBLE STEPS");
+//		statisticsTableGeneration.createStatisticTable("is");
 	}
 }

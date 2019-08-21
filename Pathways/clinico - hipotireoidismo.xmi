@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[M&#xe9;dico da Fam&#xed;lia] Hipotireoidismo" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6781" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Escala de Billewicz" description="" inputSequences="//@sequence.26 //@sequence.27 //@sequence.28" outputSequences="//@sequence.0 //@sequence.23">
+    <questions text="Sudorese diminu&#xed;da" url="" id="2598">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billiewicz_sudorese_diminuida" id="4462" weight="1" value="0.0">
+        <option description="Ausente" weight="-2"/>
+        <option description="Presente" weight="6"/>
+      </answers>
+    </questions>
+    <questions text="Pele Seca/Ressecada" url="" id="2599">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billiewicz_pele_ressecada" id="4463" weight="1" value="0.0">
+        <option description="Ausente" weight="-6"/>
+        <option description="Presente" weight="3"/>
+      </answers>
+    </questions>
+    <questions text="Intoler&#xe2;ncia ao Frio" url="" id="2600">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billiewicz_intolerancia_frio" id="4464" weight="1" value="0.0">
+        <option description="Ausente" weight="-5"/>
+        <option description="Presente" weight="4"/>
+      </answers>
+    </questions>
+    <questions text="Ganho de Peso" url="" id="2921">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_ganho_peso" id="4465" weight="1" value="0.0">
+        <option description="Ausente" weight="-1"/>
+        <option description="Presente" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="Pris&#xe3;o de Ventre" url="" id="2922">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_prisao_ventre" id="4466" weight="1" value="0.0">
+        <option description="Ausente" weight="-1"/>
+        <option description="Presente" weight="2"/>
+      </answers>
+    </questions>
+    <questions text="Disfonia" url="" id="2923">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_disfonia" id="4467" weight="1" value="0.0">
+        <option description="Ausente" weight="-6"/>
+        <option description="Presente" weight="5"/>
+      </answers>
+    </questions>
+    <questions text="Parestesias" url="" id="2924">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_parestesias" id="4468" weight="1" value="0.0">
+        <option description="Ausente" weight="-4"/>
+        <option description="Presente" weight="5"/>
+      </answers>
+    </questions>
+    <questions text="Surdez" url="" id="2925">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_surdez" id="4469" weight="1" value="0.0">
+        <option description="Ausente"/>
+        <option description="Presente" weight="2"/>
+      </answers>
+    </questions>
+    <questions text="Movimentos Lentos" url="" id="2926">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_movimentos_lentos" id="4470" weight="1" value="0.0">
+        <option description="Ausente" weight="-3"/>
+        <option description="Presente" weight="11"/>
+      </answers>
+    </questions>
+    <questions text="Pele Fria" url="" id="2927">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_pele_fria" id="4471" weight="1" value="0.0">
+        <option description="Ausente" weight="-2"/>
+        <option description="Presente" weight="3"/>
+      </answers>
+    </questions>
+    <questions text="Espessamento de pele" url="" id="2928">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_espessamento_pele" id="4472" weight="1" value="0.0">
+        <option description="Ausente" weight="-7"/>
+        <option description="Presente" weight="7"/>
+      </answers>
+    </questions>
+    <questions text="Incha&#xe7;o Periorbital" url="" id="2929">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_inchaco_periorbital" id="4473" weight="1" value="0.0">
+        <option description="Ausente" weight="-6"/>
+        <option description="Presente" weight="4"/>
+      </answers>
+    </questions>
+    <questions text="Frequ&#xea;ncia Card&#xed;aca menor de 75 x min" url="" id="2930">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_freq_cardiaca" id="4474" weight="1" value="0.0">
+        <option description="Ausente" weight="-4"/>
+        <option description="Presente" weight="4"/>
+      </answers>
+    </questions>
+    <questions text="Atraso no relaxamento do reflexo aquiliano" url="" id="2931">
+      <answers xsi:type="pathwayMetamodel:Choice" name="billewicz_atraso_no_relaxamento" id="4475" weight="1" value="0.0">
+        <option description="Ausente" weight="-6"/>
+        <option description="Presente" weight="15"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6782" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar TSH" description="" inputSequences="//@sequence.17 //@sequence.18" outputSequences="//@sequence.1 //@sequence.2 //@sequence.3 //@sequence.4">
+    <questions text="Taxa TSH" url="" id="2932">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="6783" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Reavaliar Paciente" description="Paciente apresenta probabilidade muito baixa de Hipotireoidismo conforme escala de Billewicz." isTerminal="true" inputSequences="//@sequence.0 //@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="6784" type="Tratamento" type_verbose="Tratamento" url="" name="Repetir TSH Imediatamente" description="Solicitar exame de TSH imediatamente para confirma&#xe7;&#xe3;o de valores. Consultar L&#xed;der de Equipe se necess&#xe1;rio." inputSequences="//@sequence.1" outputSequences="//@sequence.5">
+    <examination url="" exam_id="28050703" limb_side="" quantity="1" reason="Paciente com suspeita de hipotireoidismo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="6785" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar TSH e T4 Livre em 4 semanas" description="Fazer solicita&#xe7;&#xe3;o do exame e instruir paciente a realiz&#xe1;-lo em 4 semanas, para compara&#xe7;&#xe3;o de valores." inputSequences="//@sequence.3" outputSequences="//@sequence.6">
+    <examination url="" exam_id="28050703" limb_side="" quantity="1" reason="Paciente com suspeita de hipotireoidismo" clinical_indication="n/a"/>
+    <examination url="" exam_id="40712494" limb_side="" quantity="1" reason="Paciente com suspeita de hipotireoidismo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6786" type="Receita" type_verbose="Receita" url="" name="Levotiroxina" description="" inputSequences="//@sequence.4 //@sequence.14" outputSequences="//@sequence.8">
+    <item id="13418" url="" name="LEVOTIROXINA SODICA" med_code="1866097396" presentation="COMP" access="1" quantity="1" period="8" period_unit="SS" frequency="1" frequency_unit="DD" orientations="2 caixas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="6787" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar TSH em 8 semanas" description="" inputSequences="//@sequence.8 //@sequence.16" outputSequences="//@sequence.7">
+    <examination url="" exam_id="28050703" limb_side="" quantity="1" reason="Paciente com suspeita de hipotireoidismo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6788" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar TSH e T4 livre (ap&#xf3;s 4 semanas)" description="" inputSequences="//@sequence.19" outputSequences="//@sequence.13 //@sequence.29">
+    <questions text="Valor do TSH" url="" id="2933">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_4_semanas" id="4477" weight="1"/>
+    </questions>
+    <questions text="T4 Normal?" url="" id="2934">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="t4_normal" id="4478" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6789" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar TSH" description="" inputSequences="//@sequence.20 //@sequence.21" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Valor do TSH" url="" id="2935">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6790" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Sintomas (Quais sintomas?)" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Sintomas" url="" id="2936">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sintomas_hipotireoidismo" id="4480" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6791" type="Receita" type_verbose="Receita" url="" name="Manter dose de Levotiroxina" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.11">
+    <item id="13419" url="" name="LEVOTIROXINA SODICA" med_code="1866097396" presentation="COMP" access="1" quantity="1" period="6" period_unit="MJ" frequency="1" frequency_unit="DD" orientations="6 caixas"/>
+    <item id="13420" url="" name="LEVOTIROXINA SODICA" med_code="1866097396" presentation="COMP" access="1" quantity="1" period="12" period_unit="MJ" frequency="1" frequency_unit="DD" orientations="12 caixas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6792" type="Receita" type_verbose="Receita" url="" name="Ajustar Levotiroxina" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.16">
+    <item id="13881" url="" name="LEVOTIROXINA SODICA" med_code="1866097441" presentation="COMP" access="1" quantity="1" period="8" period_unit="SS" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="13882" url="" name="LEVOTIROXINA SODICA" med_code="1866097342" presentation="COMP" access="1" quantity="1" period="8" period_unit="SS" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="6793" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar TSH (6 a 12 meses)" description="" inputSequences="//@sequence.11 //@sequence.15" outputSequences="//@sequence.12">
+    <examination url="" exam_id="28050703" limb_side="" quantity="1" reason="Paciente com hipotireoidismo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="6794" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno (1)" description="" inputSequences="//@sequence.22" outputSequences="//@sequence.17"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="6795" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno (2)" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="6796" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno (3)" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.19"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="6797" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno (4)" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.20"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="6798" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno (5)" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.21"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="6799" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar TSH" description="Solicitar exame de TSH como comprova&#xe7;&#xe3;o diagn&#xf3;stica de hipotireoidite." inputSequences="//@sequence.23" outputSequences="//@sequence.22">
+    <examination url="" exam_id="28050703" limb_side="" quantity="1" reason="Paciente com suspeita de hipotireoidismo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="6800" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Crit&#xe9;rios de Encaminhamento" description="" isInitial="true" outputSequences="//@sequence.24 //@sequence.25 //@sequence.28">
+    <questions text="Menor de 18 anos" url="" id="2937">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_menor_18_anos" id="5241" weight="1" value="false"/>
+    </questions>
+    <questions text="Tratamento sem resposta ap&#xf3;s 1 ano" url="" id="2938">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_tratamento_sem_resposta" id="5242" weight="1" value="false"/>
+    </questions>
+    <questions text="Gestante" url="" id="2939">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_gestante" id="5243" weight="1" value="false"/>
+    </questions>
+    <questions text="B&#xf3;cio ou n&#xf3;dulo na tire&#xf3;ide" url="" id="2940">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_bocio_ou_nodulo" id="5244" weight="1" value="false"/>
+    </questions>
+    <questions text="Hipotireoidismo secund&#xe1;rio ou terci&#xe1;rio" url="" id="2941">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipotireoidismo_secundario" id="5245" weight="1" value="false"/>
+    </questions>
+    <questions text="Hipertireoidismo" url="" id="2942">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipertireoidismo" id="5246" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="6801" type="Processo" type_verbose="Processo" url="" name="Encaminhar ao Endocrinologista" description="" inputSequences="//@sequence.24 //@sequence.29" outputSequences="//@sequence.26">
+    <action id="460" process_id="6801" service="encaminhar_especialidade" description="Endocrinologia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="6802" type="Processo" type_verbose="Processo" url="" name="Encaminhar ao Obstetra" description="" inputSequences="//@sequence.25" outputSequences="//@sequence.27">
+    <action id="481" process_id="6802" service="encaminhar_especialidade" description="Obstetra"/>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="6803" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Billewicz &lt; 30)" description="Billewicz &lt; 30">
+    <operation name="Escala de Billewicz &lt; 30" Operator="lessThan" id="5265">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Escala de Billewicz" Operator="addition" id="5258">
+        <operand xsi:type="pathwayMetamodel:Choice" name="billiewicz_sudorese_diminuida" id="4462" weight="1" value="0.0">
+          <option description="Ausente" weight="-2"/>
+          <option description="Presente" weight="6"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billiewicz_pele_ressecada" id="4463" weight="1" value="0.0">
+          <option description="Ausente" weight="-6"/>
+          <option description="Presente" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billiewicz_intolerancia_frio" id="4464" weight="1" value="0.0">
+          <option description="Ausente" weight="-5"/>
+          <option description="Presente" weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_ganho_peso" id="4465" weight="1" value="0.0">
+          <option description="Ausente" weight="-1"/>
+          <option description="Presente" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_prisao_ventre" id="4466" weight="1" value="0.0">
+          <option description="Ausente" weight="-1"/>
+          <option description="Presente" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_disfonia" id="4467" weight="1" value="0.0">
+          <option description="Ausente" weight="-6"/>
+          <option description="Presente" weight="5"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_parestesias" id="4468" weight="1" value="0.0">
+          <option description="Ausente" weight="-4"/>
+          <option description="Presente" weight="5"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_surdez" id="4469" weight="1" value="0.0">
+          <option description="Ausente"/>
+          <option description="Presente" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_movimentos_lentos" id="4470" weight="1" value="0.0">
+          <option description="Ausente" weight="-3"/>
+          <option description="Presente" weight="11"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_pele_fria" id="4471" weight="1" value="0.0">
+          <option description="Ausente" weight="-2"/>
+          <option description="Presente" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_espessamento_pele" id="4472" weight="1" value="0.0">
+          <option description="Ausente" weight="-7"/>
+          <option description="Presente" weight="7"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_inchaco_periorbital" id="4473" weight="1" value="0.0">
+          <option description="Ausente" weight="-6"/>
+          <option description="Presente" weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_freq_cardiaca" id="4474" weight="1" value="0.0">
+          <option description="Ausente" weight="-4"/>
+          <option description="Presente" weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_atraso_no_relaxamento" id="4475" weight="1" value="0.0">
+          <option description="Ausente" weight="-6"/>
+          <option description="Presente" weight="15"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="30" id="5247" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="6804" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (TSH &lt; 0,27)" description="TSH &lt; 0,27">
+    <operation name="TSH &lt; 2.7" Operator="affirmation" id="5266">
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH &lt; 0,27" Operator="lessThan" id="5261">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="0,27" id="5248" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="6805" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (TSH >= 0,27 e &lt; 4,2)" description="TSH >= 2,7 e &lt; 4,2">
+    <operation name="TSH >= 0,27 e &lt; 4,2" Operator="and" id="5267">
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH >= 0,27" Operator="greaterOrEqual" id="5260">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="0,27" id="5248" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH &lt; 4,2" Operator="lessThan" id="5252">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="4,2" id="5249" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="6806" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (TSH >= 4,2 e &lt; 10)" description="TSH >= 4,2 e &lt; 10">
+    <operation name="TSH >= 4,2 e &lt; 10" Operator="and" id="5268">
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH >= 4,2" Operator="greaterOrEqual" id="5253">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="4,2" id="5249" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH &lt; 10" Operator="lessThan" id="5254">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="10" id="5250" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="6807" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (TSH >= 10)" description="TSH >= 10">
+    <operation name="TSH >= 10.0" Operator="affirmation" id="5269">
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH >= 10" Operator="greaterOrEqual" id="5255">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="10" id="5250" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.3" id="6808" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.15" outputStep="//@element.4" id="6809" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.16" outputStep="//@element.6" id="6810" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="6811" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="Incondicional"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="6812" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (TSH(Reavalia&#xe7;&#xe3;o 8 sem) >= 0,27 e &lt; 4,2)" description="TSH >= 0,27 e &lt;= 4,2">
+    <operation name="TSH(Reavalia&#xe7;&#xe3;o 8 sem) >= 0,27 e &lt; 4,2" Operator="and" id="5270">
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) >= 0,27" Operator="greaterOrEqual" id="5262">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="0,27" id="5248" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) &lt;= 4,2" Operator="lessOrEqual" id="5256">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="4,2" id="5249" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.8" id="6813" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) &lt; 0,27 OU > 4,2)" description="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) &lt; 0,25 OU > 4,2">
+    <operation name="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) &lt; 0,27 OU > 4,2" Operator="or" id="5271">
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) &lt; 0,27" Operator="lessThan" id="5263">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="0,27" id="5248" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) > 4,2" Operator="greaterThan" id="5257">
+        <operand xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="4,2" id="5249" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="6814" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="Incondicional"/>
+  <sequence inputStep="//@element.17" outputStep="//@element.12" id="6815" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="6816" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (T4 Normal)" description="Condi&#xe7;&#xe3;o a decidir">
+    <operation name="T4 Normal" Operator="affirmation" id="5272">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="t4_normal" id="4478" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.9" id="6817" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (Sintomas >= 1)" description="Sintomas >= 1">
+    <operation name="Sintomas >= 1" Operator="greaterOrEqual" id="5273">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintomas_hipotireoidismo" id="4480" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5251" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.9" id="6818" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (Sintomas &lt; 1)" description="Sintomas &lt; 1">
+    <operation name="Sintomas &lt; 1" Operator="lessThan" id="5274">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintomas_hipotireoidismo" id="4480" weight="1" value="0.0">
+        <option description="N&#xe3;o"/>
+        <option description="Sim" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5251" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.11" id="6819" type="Sequencia" type_verbose="Sequencia" url="" name="S19" description="Incondicional"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.13" id="6820" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description="Incondicional"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.14" id="6821" type="Sequencia" type_verbose="Sequencia" url="" name="S21" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.15" id="6822" type="Sequencia" type_verbose="Sequencia" url="" name="S22" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.16" id="6823" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.17" id="6824" type="Sequencia" type_verbose="Sequencia" url="" name="S24" description="Incondicional"/>
+  <sequence inputStep="//@element.13" outputStep="//@element.18" id="6825" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.18" outputStep="//@element.0" id="6826" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Escala de Billewicz >= 30)" description="Escala de Billewicz >= 30">
+    <operation name="Escala de Billewicz >= 30" Operator="greaterOrEqual" id="5275">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Escala de Billewicz" Operator="addition" id="5258">
+        <operand xsi:type="pathwayMetamodel:Choice" name="billiewicz_sudorese_diminuida" id="4462" weight="1" value="0.0">
+          <option description="Ausente" weight="-2"/>
+          <option description="Presente" weight="6"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billiewicz_pele_ressecada" id="4463" weight="1" value="0.0">
+          <option description="Ausente" weight="-6"/>
+          <option description="Presente" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billiewicz_intolerancia_frio" id="4464" weight="1" value="0.0">
+          <option description="Ausente" weight="-5"/>
+          <option description="Presente" weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_ganho_peso" id="4465" weight="1" value="0.0">
+          <option description="Ausente" weight="-1"/>
+          <option description="Presente" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_prisao_ventre" id="4466" weight="1" value="0.0">
+          <option description="Ausente" weight="-1"/>
+          <option description="Presente" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_disfonia" id="4467" weight="1" value="0.0">
+          <option description="Ausente" weight="-6"/>
+          <option description="Presente" weight="5"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_parestesias" id="4468" weight="1" value="0.0">
+          <option description="Ausente" weight="-4"/>
+          <option description="Presente" weight="5"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_surdez" id="4469" weight="1" value="0.0">
+          <option description="Ausente"/>
+          <option description="Presente" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_movimentos_lentos" id="4470" weight="1" value="0.0">
+          <option description="Ausente" weight="-3"/>
+          <option description="Presente" weight="11"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_pele_fria" id="4471" weight="1" value="0.0">
+          <option description="Ausente" weight="-2"/>
+          <option description="Presente" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_espessamento_pele" id="4472" weight="1" value="0.0">
+          <option description="Ausente" weight="-7"/>
+          <option description="Presente" weight="7"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_inchaco_periorbital" id="4473" weight="1" value="0.0">
+          <option description="Ausente" weight="-6"/>
+          <option description="Presente" weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_freq_cardiaca" id="4474" weight="1" value="0.0">
+          <option description="Ausente" weight="-4"/>
+          <option description="Presente" weight="4"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_atraso_no_relaxamento" id="4475" weight="1" value="0.0">
+          <option description="Ausente" weight="-6"/>
+          <option description="Presente" weight="15"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="30" id="5247" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="6827" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (Encaminhar ao Endocrinologista)" description="Encaminhar ao Endocrinologista">
+    <operation name="Crit&#xe9;rios Endocrinologista >= 1" Operator="or" id="5276">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_menor_18_anos" id="5241" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_tratamento_sem_resposta" id="5242" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_bocio_ou_nodulo" id="5244" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipotireoidismo_secundario" id="5245" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipertireoidismo" id="5246" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.19" id="6828" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (Encaminhar ao obstetra)" description="Encaminhar ao obstetra">
+    <operation name="Paciente gestantee" Operator="affirmation" id="5277">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_gestante" id="5243" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.20" id="6829" type="Sequencia" type_verbose="Sequencia" url="" name="S27" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.21" id="6830" type="Sequencia" type_verbose="Sequencia" url="" name="S28" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.19" id="6831" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (Sem criterios de encaminhamento)" description="Sem criterios de encaminhamento">
+    <operation name="Criterios Encaminhamento &lt; 1" Operator="lessThan" id="5278">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Criterios Encaminhamento" Operator="addition" id="5264">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_menor_18_anos" id="5241" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_tratamento_sem_resposta" id="5242" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_gestante" id="5243" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_bocio_ou_nodulo" id="5244" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipotireoidismo_secundario" id="5245" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipertireoidismo" id="5246" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="5251" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.7" id="6832" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (T4 Alterado)" description="T4 Alterado">
+    <operation name="T4 Alterado" id="5279">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="t4_normal" id="4478" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <operation name="TSH &lt; 4,2" Operator="lessThan" id="5252">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="4,2" id="5249" weight="1"/>
+  </operation>
+  <operation name="TSH >= 4,2" Operator="greaterOrEqual" id="5253">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="4,2" id="5249" weight="1"/>
+  </operation>
+  <operation name="TSH &lt; 10" Operator="lessThan" id="5254">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="10" id="5250" weight="1"/>
+  </operation>
+  <operation name="TSH >= 10" Operator="greaterOrEqual" id="5255">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="10" id="5250" weight="1"/>
+  </operation>
+  <operation name="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) &lt;= 4,2" Operator="lessOrEqual" id="5256">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="4,2" id="5249" weight="1"/>
+  </operation>
+  <operation name="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) > 4,2" Operator="greaterThan" id="5257">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="4,2" id="5249" weight="1"/>
+  </operation>
+  <operation name="Escala de Billewicz" Operator="addition" id="5258">
+    <operand xsi:type="pathwayMetamodel:Choice" name="billiewicz_sudorese_diminuida" id="4462" weight="1" value="0.0">
+      <option description="Ausente" weight="-2"/>
+      <option description="Presente" weight="6"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billiewicz_pele_ressecada" id="4463" weight="1" value="0.0">
+      <option description="Ausente" weight="-6"/>
+      <option description="Presente" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billiewicz_intolerancia_frio" id="4464" weight="1" value="0.0">
+      <option description="Ausente" weight="-5"/>
+      <option description="Presente" weight="4"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_ganho_peso" id="4465" weight="1" value="0.0">
+      <option description="Ausente" weight="-1"/>
+      <option description="Presente" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_prisao_ventre" id="4466" weight="1" value="0.0">
+      <option description="Ausente" weight="-1"/>
+      <option description="Presente" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_disfonia" id="4467" weight="1" value="0.0">
+      <option description="Ausente" weight="-6"/>
+      <option description="Presente" weight="5"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_parestesias" id="4468" weight="1" value="0.0">
+      <option description="Ausente" weight="-4"/>
+      <option description="Presente" weight="5"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_surdez" id="4469" weight="1" value="0.0">
+      <option description="Ausente"/>
+      <option description="Presente" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_movimentos_lentos" id="4470" weight="1" value="0.0">
+      <option description="Ausente" weight="-3"/>
+      <option description="Presente" weight="11"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_pele_fria" id="4471" weight="1" value="0.0">
+      <option description="Ausente" weight="-2"/>
+      <option description="Presente" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_espessamento_pele" id="4472" weight="1" value="0.0">
+      <option description="Ausente" weight="-7"/>
+      <option description="Presente" weight="7"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_inchaco_periorbital" id="4473" weight="1" value="0.0">
+      <option description="Ausente" weight="-6"/>
+      <option description="Presente" weight="4"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_freq_cardiaca" id="4474" weight="1" value="0.0">
+      <option description="Ausente" weight="-4"/>
+      <option description="Presente" weight="4"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="billewicz_atraso_no_relaxamento" id="4475" weight="1" value="0.0">
+      <option description="Ausente" weight="-6"/>
+      <option description="Presente" weight="15"/>
+    </operand>
+  </operation>
+  <operation name="Mock Billiewicz" Operator="addition" id="5259"/>
+  <operation name="TSH >= 0,27" Operator="greaterOrEqual" id="5260">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="0,27" id="5248" weight="1"/>
+  </operation>
+  <operation name="TSH &lt; 0,27" Operator="lessThan" id="5261">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="0,27" id="5248" weight="1"/>
+  </operation>
+  <operation name="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) >= 0,27" Operator="greaterOrEqual" id="5262">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="0,27" id="5248" weight="1"/>
+  </operation>
+  <operation name="TSH (Reavalia&#xe7;&#xe3;o de 8 semanas) &lt; 0,27" Operator="lessThan" id="5263">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="0,27" id="5248" weight="1"/>
+  </operation>
+  <operation name="Criterios Encaminhamento" Operator="addition" id="5264">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_menor_18_anos" id="5241" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_tratamento_sem_resposta" id="5242" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_gestante" id="5243" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_bocio_ou_nodulo" id="5244" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipotireoidismo_secundario" id="5245" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipertireoidismo" id="5246" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billiewicz_sudorese_diminuida" id="4462" weight="1" value="0.0">
+    <option description="Ausente" weight="-2"/>
+    <option description="Presente" weight="6"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billiewicz_pele_ressecada" id="4463" weight="1" value="0.0">
+    <option description="Ausente" weight="-6"/>
+    <option description="Presente" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billiewicz_intolerancia_frio" id="4464" weight="1" value="0.0">
+    <option description="Ausente" weight="-5"/>
+    <option description="Presente" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_ganho_peso" id="4465" weight="1" value="0.0">
+    <option description="Ausente" weight="-1"/>
+    <option description="Presente" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_prisao_ventre" id="4466" weight="1" value="0.0">
+    <option description="Ausente" weight="-1"/>
+    <option description="Presente" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_disfonia" id="4467" weight="1" value="0.0">
+    <option description="Ausente" weight="-6"/>
+    <option description="Presente" weight="5"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_parestesias" id="4468" weight="1" value="0.0">
+    <option description="Ausente" weight="-4"/>
+    <option description="Presente" weight="5"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_surdez" id="4469" weight="1" value="0.0">
+    <option description="Ausente"/>
+    <option description="Presente" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_movimentos_lentos" id="4470" weight="1" value="0.0">
+    <option description="Ausente" weight="-3"/>
+    <option description="Presente" weight="11"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_pele_fria" id="4471" weight="1" value="0.0">
+    <option description="Ausente" weight="-2"/>
+    <option description="Presente" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_espessamento_pele" id="4472" weight="1" value="0.0">
+    <option description="Ausente" weight="-7"/>
+    <option description="Presente" weight="7"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_inchaco_periorbital" id="4473" weight="1" value="0.0">
+    <option description="Ausente" weight="-6"/>
+    <option description="Presente" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_freq_cardiaca" id="4474" weight="1" value="0.0">
+    <option description="Ausente" weight="-4"/>
+    <option description="Presente" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="billewicz_atraso_no_relaxamento" id="4475" weight="1" value="0.0">
+    <option description="Ausente" weight="-6"/>
+    <option description="Presente" weight="15"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="tsh" id="4476" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_4_semanas" id="4477" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="t4_normal" id="4478" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="TSH_reavaliacao_8_semanas" id="4479" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sintomas_hipotireoidismo" id="4480" weight="1" value="0.0">
+    <option description="N&#xe3;o"/>
+    <option description="Sim" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_menor_18_anos" id="5241" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_tratamento_sem_resposta" id="5242" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_gestante" id="5243" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_bocio_ou_nodulo" id="5244" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipotireoidismo_secundario" id="5245" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="encaminhamento_hipertireoidismo" id="5246" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="30" id="5247" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="0,27" id="5248" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4,2" id="5249" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="10" id="5250" weight="1"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="5251" weight="1"/>
+</pathwayMetamodel:Pathway>

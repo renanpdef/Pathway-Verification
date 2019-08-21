@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Verificar arbovirose" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="32133" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar tipo de arbovirose" description="&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; dir=&quot;ltr&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Sinais/Sintomas&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Dengue&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Zika&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Chikunguya&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Febre (dura&amp;ccedil;&amp;atilde;o)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; Acima de 38&amp;ordm;C (4 a 7 dias)&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; Sem febre ou subfebril 38&amp;ordm;C (1-2 dias subfebril)&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Febre alta &amp;gt; 38&amp;ordm; (2-3 dias)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Manchas na pele (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>A partir do 4&amp;ordm; dia&lt;br />&#xA;&#x9;&#x9;&#x9;(30-50% dos casos)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Surge no 1&amp;ordm; ou no 2&amp;ordm; dia (90-100% dos casos)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Surge 2-5 dia&lt;br />&#xA;&#x9;&#x9;&#x9;(50% dos casos)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Dor nos m&amp;uacute;sculos (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+++/+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>++/+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+/+++&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Dor na articula&amp;ccedil;&amp;atilde;o (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+/+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>++/+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+++/+++&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Intensidade da dor articular&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve/Moderada&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Moderada/Intensa&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Edema da articula&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Raro&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Frequente e leve intensidade&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;nbsp; Frequente e de moderada a intensa&amp;nbsp;&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Conjuntivite&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Raro&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>50-90% dos casos&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>30%&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>&amp;nbsp; Dor de Cabe&amp;ccedil;a (Frequ&amp;ecirc;ncia e Intensidade)&amp;nbsp;&amp;nbsp;&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>+++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>++&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>++&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Coceira&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Moderada/Intensa&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Hipertrofia ganglionar (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Intensa&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Moderada&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Discrasia hemorr&amp;aacute;gica (Frequ&amp;ecirc;ncia)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Moderada&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Ausente&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Leve&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Acometimento neurol&amp;oacute;gico&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Raro&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Mais frequente que Dengue e Chikunguya&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Raro (predominante em Neonatos)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2">
+    <questions text="Escolha a arbovirose que se encaixa com o quadro do paciente:" url="" id="15320">
+      <answers xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31049" weight="1" value="0.0">
+        <option description="Dengue" weight="1"/>
+        <option description="Zika" weight="2"/>
+        <option description="Chikunguya" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32134" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Dengue" description="" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>H063</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32135" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Zika" description="" isTerminal="true" inputSequences="//@sequence.1">
+    <pathways>H064</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="32136" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Chikunguya" description="" isTerminal="true" inputSequences="//@sequence.2">
+    <pathways>H062</pathways>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="32137" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Dengue)" description="Dengue">
+    <operation name="Dengue" Operator="equal" id="31053">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31049" weight="1" value="0.0">
+        <option description="Dengue" weight="1"/>
+        <option description="Zika" weight="2"/>
+        <option description="Chikunguya" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="31050" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="32138" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Zika)" description="Zika">
+    <operation name="Zika" Operator="equal" id="31054">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31049" weight="1" value="0.0">
+        <option description="Dengue" weight="1"/>
+        <option description="Zika" weight="2"/>
+        <option description="Chikunguya" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="31051" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="32139" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Chikunguya)" description="Chikunguya">
+    <operation name="Chikunguya" Operator="equal" id="31055">
+      <operand xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31049" weight="1" value="0.0">
+        <option description="Dengue" weight="1"/>
+        <option description="Zika" weight="2"/>
+        <option description="Chikunguya" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="31052" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:Choice" name="tipo_arbovirose" id="31049" weight="1" value="0.0">
+    <option description="Dengue" weight="1"/>
+    <option description="Zika" weight="2"/>
+    <option description="Chikunguya" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="31050" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="31051" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="31052" weight="1" value="3.0"/>
+</pathwayMetamodel:Pathway>

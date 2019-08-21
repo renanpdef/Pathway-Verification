@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="GECA Pedi&#xe1;trico" code="">
+  <element xsi:type="pathwayMetamodel:Treatment" id="34481" type="Tratamento" type_verbose="Tratamento" url="" name="[Desidrata&#xe7;&#xe3;o Leve] > 2 meses" description="&lt;div class=&quot;box-body&quot;>&#xA;&lt;div>&#xA;&lt;div>&#xA;&lt;div class=&quot;box-body&quot;>&#xA;&lt;div>&#xA;&lt;div>&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Expans&amp;atilde;o em 30 minutos com SF 0,9% / &lt;strong>20ml/kg&lt;/strong>.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Reavaliar e repetir at&amp;eacute; hidrata&amp;ccedil;&amp;atilde;o (3x).&lt;/span>&lt;/p>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>" inputSequences="//@sequence.5" outputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34482" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Presen&#xe7;a Sangue Fezes" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Presen&#xe7;a de sangue nas fezes?" url="" id="16141">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="presenca_sangue_fezes" id="33081" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="34483" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar para Protocolo de Disenteria" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Encaminhar para o Protocolo de Disenteria (Em constru&amp;ccedil;&amp;atilde;o)&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34484" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Grau de Desidrata&#xe7;&#xe3;o" description="&lt;table align=&quot;center&quot; border=&quot;1&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:500px&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>OBSERVAR&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>GRUPO A&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>GRUPO B&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>GRUPO C&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Condi&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Bem alerta&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Irritado, inquieto&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Comatoso, hipot&amp;ocirc;nico *&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Olhos&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Normais&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Fundos&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Muito fundos&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>L&amp;aacute;grimas&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Presentes&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Ausentes&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Ausentes&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Boca e L&amp;iacute;ngua&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&amp;Uacute;midas&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Secas&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Muito secas&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Sede&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Bebe normalmente&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Sedento, bebe r&amp;aacute;pido e avidamente&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Bebe mal ou n&amp;atilde;o &amp;eacute; capaz de beber *&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Sinal da Prega&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Desaparece rapidamente&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Desaparece lentamente&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Desaparece muito lentamente (&amp;gt;2-3 seg)&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Pulso&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Cheio&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>R&amp;aacute;pido, d&amp;eacute;bil&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Muito d&amp;eacute;bil ou ausente *&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Enchimento capilar&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Normal (at&amp;eacute; 3 seg)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Prejudicado (3-5 seg)&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>Muito prejudicado (&amp;gt;5 seg) *&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>CONCLUS&amp;Atilde;O&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>N&amp;Atilde;O TEM DESIDRATA&amp;Ccedil;&amp;Atilde;O&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Se 2 ou mais sintomas descritos: DESIDRATA&amp;Ccedil;&amp;Atilde;O&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Se 2 ou + sintomas descritos, incluindo 1 com *, existe DESIDRATA&amp;Ccedil;&amp;Atilde;O GRAVE.&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>-&lt;/p>" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3 //@sequence.13 //@sequence.15">
+    <questions text="Sem diarreia ou sinais de desidrata&#xe7;&#xe3;o, apenas com n&#xe1;useas e v&#xf4;mitos" url="" id="16142">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nauseas_vomitos" id="33082" weight="1" value="false"/>
+    </questions>
+    <questions text="Grupo A?" url="" id="16143">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grupo_A" id="33083" weight="1" value="false"/>
+    </questions>
+    <questions text="Grupo B?" url="" id="16144">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grupo_b" id="33084" weight="1" value="false"/>
+    </questions>
+    <questions text="Grupo C?" url="" id="16145">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grupo_c" id="33085" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="34485" type="Receita" type_verbose="Receita" url="" name="[Sem Desidrata&#xe7;&#xe3;o] Receita" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>Dose do Tiorfan:&amp;nbsp;&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Menor de 9kg: 10mg de 8/8h&lt;/li>&#xA;&#x9;&lt;li>De 9 a 13 kg: 20mg de 8/8h&lt;/li>&#xA;&#x9;&lt;li>De 14 a 25 kg: 30mg de 8/8h&lt;/li>&#xA;&#x9;&lt;li>De 26 a 40 kg: 60mg de 8/8h.&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.2 //@sequence.6 //@sequence.11">
+    <item id="12401" url="" name="Dipirona Solu&#xe7;&#xe3;o 50mg/ml _______ 1 Fr." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ ml de 6/6h se dor ou febre."/>
+    <item id="12402" url="" name="Dipirona gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor ou febre."/>
+    <item id="12403" url="" name="Dipirona 500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 01 comprimido de 6/6h se dor ou febre."/>
+    <item id="12404" url="" name="Paracetamol gotas  __________ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor ou febre."/>
+    <item id="12405" url="" name="Buscopan Simples&#xae; gotas _____ 1 FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 6/6h se dor."/>
+    <item id="12406" url="" name="Digesan&#xae; Gotas 4mg/ml _______ 1 Fr." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ____ gotas de 8/8h se n&#xe1;usea ou v&#xf4;mito."/>
+    <item id="12407" url="" name="Vonau&#xae; 4 mg ____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ______ comp. de 8/8h se n&#xe1;usea ou v&#xf4;mito"/>
+    <item id="12408" url="" name="Luftal&#xae;  ________ 1 Fr." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas de 6/6h se distens&#xe3;o."/>
+    <item id="12409" url="" name="Floratil&#xae; 200mg 1 Cx." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Diluir um sach&#xea; em &#xe1;gua ou suco e dar 2 vezes ao dia por 5 dias."/>
+    <item id="12410" url="" name="Biozinc&#xae;  ________ 1 Fr." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ______ ml, 1 vez ao dia por 10 dias."/>
+    <item id="12411" url="" name="Tiorfan&#xae; 10mg _______ 1cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ sach&#xea;s de 8/8h enquanto durar a diarreia."/>
+    <item id="12412" url="" name="Tiorfan&#xae; 30mg ________ 1cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ sach&#xea;s de 8/8h enquanto durar a diarreia."/>
+    <item id="12413" url="" name="Soro de Reidrata&#xe7;&#xe3;o Oral ______ 2 sach&#xea;s" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Oferecer livremente ap&#xf3;s epis&#xf3;dios de diarreia ou v&#xf4;mito."/>
+    <item id="12414" url="" name="Floralyte&#xae; 90 ______ 2 sach&#xea;s" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Oferecer livremente ap&#xf3;s epis&#xf3;dios de diarreia ou v&#xf4;mito."/>
+    <item id="12385" url="" name="Provance&#xae; _______ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar 1 comprimido de 12/12h por 5 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34486" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Desidrata&#xe7;&#xe3;o Leve] Idade do Paciente" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Paciente &lt; 2 meses?" url="" id="16146">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="menor_dois_meses" id="33086" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente > 2 meses?" url="" id="16147">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="maior_dois_meses" id="33087" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34487" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Paciente Hidratado" description="" inputSequences="//@sequence.8 //@sequence.9 //@sequence.16" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Paciente hidratado?" url="" id="16148">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_hidratado" id="33088" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34488" type="Tratamento" type_verbose="Tratamento" url="" name="Reavalia&#xe7;&#xe3;o e Sintom&#xe1;ticos" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>- Comunicar quadro para L&amp;iacute;der Local.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:14px&quot;>- HV Manuten&amp;ccedil;&amp;atilde;o Novo Holliday / &lt;strong>SGF 1:1 + KCL 10%&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:14px&quot;>- Reavaliar quadro do paciente a cada 2 horas.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:14px&quot;>- Prescrever:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Dipirona 500mg/ml - 15-25mg/kg/dose, dilu&amp;iacute;do em AD, de 6/6h SN&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Paracetamol gotas - 15mg/kg/dose (1gota/kg), VO, de 6/6h SN&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Plamet 5mg/ml - 0,2mg/kg/dose, dilu&amp;iacute;do em AD, de 8/8h SN&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Dramin 50mg/ml - 1-1,5mg/kg/dose, dilu&amp;iacute;do em SF0,9% 100ml, de 6/6h SN&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Antak 25mg/ml - 1mg/kg/dose, dilu&amp;iacute;do em AD, de 12/12h SN&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" inputSequences="//@sequence.7" outputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="34489" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar Quadro do Paciente" description="" inputSequences="//@sequence.10 //@sequence.14" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Houve melhora?" url="" id="16149">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33089" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="34490" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Sem melhora no quadro] Conduta" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Aumentar velocidade de infus&amp;atilde;o.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Iniciar HV de Manuten&amp;ccedil;&amp;atilde;o (Novo Holliday - SG1:1 + KCl10%).&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Iniciar dieta oral assim que poss&amp;iacute;vel.&amp;nbsp;&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Prescrever sintom&amp;aacute;ticos.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:18px&quot;>Avaliar interna&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.12"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34491" type="Tratamento" type_verbose="Tratamento" url="" name="[Desidrata&#xe7;&#xe3;o Grave] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Sala de cuidados - passar caso para chefia;&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Monitoriza&amp;ccedil;&amp;atilde;o + oximetro de pulso&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Acesso calibroso&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Realizar DX&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- SV = FC + FR + SAT + TEMP + PA de 1/1h&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>- Expans&amp;atilde;o em 30 minutos SF 0,9% / 20ml/kg (Repetir at&amp;eacute; 3x)&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.13" outputSequences="//@sequence.14">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Desidrata&#xe7;&#xe3;o Grave" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Desidrata&#xe7;&#xe3;o Grave" clinical_indication="n/a"/>
+    <examination url="CREATINA (SANGUE)" exam_id="28010531" limb_side="" quantity="1" reason="Desidrata&#xe7;&#xe3;o Grave" clinical_indication="n/a"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Desidrata&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Desidrata&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Desidrata&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Desidrata&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34492" type="Tratamento" type_verbose="Tratamento" url="" name="[Desidrata&#xe7;&#xe3;o Leve] &lt; 2 meses" description="&lt;div class=&quot;box-body&quot;>&#xA;&lt;div>&#xA;&lt;div>&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Expans&amp;atilde;o em 30 minutos com SF 0,9% /10ml/kg.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Reavaliar e repetir at&amp;eacute; hidrata&amp;ccedil;&amp;atilde;o (3x).&lt;/span>&lt;/p>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>" inputSequences="//@sequence.4" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="34493" type="Tratamento" type_verbose="Tratamento" url="" name="[Sem diarreia apenas n&#xe1;useas ou v&#xf4;mitos] Conduta" description="&lt;div class=&quot;box-body&quot;>&#xA;&lt;div>&#xA;&lt;div>&#xA;&lt;div class=&quot;box-body&quot;>&#xA;&lt;div>&#xA;&lt;div>&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Expans&amp;atilde;o em 30 minutos com SF 0,9% / &lt;strong>20ml/kg&lt;/strong>.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:18px&quot;>Reavaliar e repetir at&amp;eacute; hidrata&amp;ccedil;&amp;atilde;o (3x).&lt;/span>&lt;/p>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>" inputSequences="//@sequence.15" outputSequences="//@sequence.16"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="34494" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="-">
+    <operation name="presen&#xe7;a_sangue_fezes" Operator="affirmation" id="33090">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca_sangue_fezes" id="33081" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="34495" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="-">
+    <operation name="Nao_contem_sangue_nas_fezes" id="33091">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca_sangue_fezes" id="33081" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="34496" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-">
+    <operation name="Grupo_A" Operator="affirmation" id="33092">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grupo_A" id="33083" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="34497" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-">
+    <operation name="Grupo_B" Operator="affirmation" id="33093">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grupo_b" id="33084" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.5" id="34498" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-">
+    <operation name="Paciente_menor_dois_meses" Operator="affirmation" id="33094">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="menor_dois_meses" id="33086" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.5" id="34499" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-">
+    <operation name="Paciente_maior_dois_meses" Operator="affirmation" id="33095">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="maior_dois_meses" id="33087" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.6" id="34500" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="-">
+    <operation name="Paciente_Hidratado_" Operator="affirmation" id="33096">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_hidratado" id="33088" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="34501" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-">
+    <operation name="Paciente_n&#xe3;o_hidratado" id="33097">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_hidratado" id="33088" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.11" id="34502" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="-"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="34503" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="34504" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.8" id="34505" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-">
+    <operation name="houve_melhora_" Operator="affirmation" id="33098">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33089" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="34506" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="-">
+    <operation name="N&#xe3;o_houve_melhora" id="33099">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33089" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.3" id="34507" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="-">
+    <operation name="Grupo_C" Operator="affirmation" id="33100">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grupo_c" id="33085" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.10" id="34508" type="Sequencia" type_verbose="Sequencia" url="" name="S17" description="-"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.3" id="34509" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (sem diarreia)" description="sem diarreia">
+    <operation name="sem diarreia" Operator="affirmation" id="33101">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nauseas_vomitos" id="33082" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.12" id="34510" type="Sequencia" type_verbose="Sequencia" url="" name="S17" description="-"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="presenca_sangue_fezes" id="33081" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nauseas_vomitos" id="33082" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grupo_A" id="33083" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grupo_b" id="33084" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grupo_c" id="33085" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="menor_dois_meses" id="33086" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="maior_dois_meses" id="33087" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_hidratado" id="33088" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="33089" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

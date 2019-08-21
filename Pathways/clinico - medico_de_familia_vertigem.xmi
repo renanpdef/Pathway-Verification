@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="[M&#xe9;dico de Fam&#xed;lia] Vertigem" code="">
+  <element xsi:type="pathwayMetamodel:Information" id="7028" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Exame F&#xed;sico" description="&lt;p>Itens necess&amp;aacute;rios ao exame f&amp;iacute;sico:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Otoscopia&lt;/li>&#xA;&#x9;&lt;li>Avalia&amp;ccedil;&amp;atilde;o de Nistagmo&lt;/li>&#xA;&#x9;&lt;li>Realiza&amp;ccedil;&amp;atilde;o da Manobra de Epley&lt;/li>&#xA;&#x9;&lt;li>Realiza&amp;ccedil;&amp;atilde;o da Manobra de Dix-Hallpike&lt;/li>&#xA;&lt;/ul>" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7029" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar Vertigem" description="Classificar tipo de vertigem" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Vertigem Intensa" url="" id="3004" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_intensa" id="5459" weight="1" value="false"/>
+    </questions>
+    <questions text="Nistagmo Horizontal" url="" id="3005" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_horizontal" id="5460" weight="1" value="false"/>
+    </questions>
+    <questions text="Nistagmo Fatig&#xe1;vel Esgot&#xe1;vel" url="" id="3006" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_fatigavel" id="5641" weight="1" value="false"/>
+    </questions>
+    <questions text="Pode haver tinitus e/ou Hipocacusia" url="" id="3007" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tinitus_ou_hipocacusia" id="5642" weight="1" value="false"/>
+    </questions>
+    <questions text="Vertigem Branda" url="" id="3008" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_branda" id="5643" weight="1" value="false"/>
+    </questions>
+    <questions text="Nistagmo Ataxico (n&#xe3;o horizontal)" url="" id="3009" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_ataxico" id="5644" weight="1" value="false"/>
+    </questions>
+    <questions text="Nistagmo n&#xe3;o fatig&#xe1;vel esgot&#xe1;vel" url="" id="3010" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_nao_fatigavel" id="5645" weight="1" value="false"/>
+    </questions>
+    <questions text="Outros sintomas Neurol&#xf3;gicos presentes" url="" id="3011" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outros_sintomas_neurologicos" id="5646" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7030" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Reabilita&#xe7;&#xe3;o Labir&#xed;ntica" description="Prescrever Reabilita&#xe7;&#xe3;o Labir&#xed;ntica" inputSequences="//@sequence.7" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="7031" type="Receita" type_verbose="Receita" url="" name="[Doen&#xe7;a de M&#xe9;ni&#xe8;re] Tratamento" description="Prescri&#xe7;&#xe3;o do tratamento para doen&#xe7;a de m&#xe9;ni&#xe8;re" inputSequences="//@sequence.6" outputSequences="//@sequence.4">
+    <item id="13659" url="" name="CINARIZINA" med_code="1146371978" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Cinarizina 12,5  - 25 mg 8/8 dia  ( 7  dias )"/>
+    <item id="13660" url="" name="DICLORIDRATO DE BETAISTINA" med_code="1462556058" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="14101" url="" name="FLUZIX" med_code="-413889895" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar de 3 a 5 dias"/>
+    <item id="14102" url="" name="VERTIX" med_code="-1786844614" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar de 3 a 5 dias"/>
+    <item id="14103" url="" name="DRAMIN CAPSGEL" med_code="-1803049810" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar por 3 a 5 dias"/>
+    <item id="14104" url="" name="EMET" med_code="1462546309" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar por 3 a 5 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="7032" type="Processo" type_verbose="Processo" url="" name="Encaminhamento ao Neurologista" description="&lt;p style=&quot;margin-left:0cm; margin-right:0cm&quot;>&lt;span style=&quot;font-size:11pt&quot;>&lt;span style=&quot;font-family:Calibri,sans-serif&quot;>Considerar encaminhar para Urg&amp;ecirc;ncia em caso de:&amp;nbsp;&lt;/span>&lt;/span>&lt;span style=&quot;font-size:11pt&quot;>&lt;span style=&quot;font-family:Calibri,sans-serif&quot;>Altera&amp;ccedil;&amp;atilde;o s&amp;uacute;bita de fala, altera&amp;ccedil;&amp;atilde;o s&amp;uacute;bita de marcha, altera&amp;ccedil;&amp;atilde;o s&amp;uacute;bita de n&amp;iacute;vel de consci&amp;ecirc;ncia, v&amp;ocirc;mitos incoerc&amp;iacute;veis ou manifesta&amp;ccedil;&amp;otilde;es vertiginosas graves.&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.2 //@sequence.12">
+    <action id="409" process_id="7032" service="encaminhar_especialidade" description="Encaminhar para Neurologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7033" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Considerar Encaminhamentos" description="&lt;p>Considerar encaminhamento em caso de:&lt;/p>" inputSequences="//@sequence.4 //@sequence.5" outputSequences="//@sequence.3 //@sequence.8">
+    <questions text="Encaminhar para Urg&#xea;ncia: Altera&#xe7;&#xe3;o s&#xfa;bita de fala, altera&#xe7;&#xe3;o s&#xfa;bita de marcha, altera&#xe7;&#xe3;o s&#xfa;bita de n&#xed;vel de consci&#xea;ncia, v&#xf4;mitos incoerc&#xed;veis ou manifesta&#xe7;&#xf5;es vertiginosas graves" url="" id="3012">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_urgencia" id="5647" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7035" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar Vertigem Posicional" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Vertigem de Posicionamento Parox&#xed;stica Benigna (VPPB) - Vertigem rotat&#xf3;ria de curta dura&#xe7;&#xe3;o desencadeada por movimentos r&#xe1;pidos de cabe&#xe7;a. Ao exame f&#xed;sico: Nistagmo de posicionamento vertical para da cima, rotat&#xf3;rio para o lado comprometido." url="" id="3013">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_vppb" id="5648" weight="1" value="false"/>
+    </questions>
+    <questions text="M&#xe9;ni&#xe8;re - Tr&#xed;ade de ataques recorrentes de vertigem, d&#xe9;ficit auditivo flutuante, zumbidos, press&#xe3;o no ouvido do lado comprometido. Ao exame f&#xed;sico: nistagmo horizonto-rotat&#xf3;rio para o lado lesado ou para o lado saud&#xe1;vel, desequil&#xed;brio e hipoacusia." url="" id="3014">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_meniere" id="5649" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="7036" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Retorno em 72h" description="Orientar paciente a retornar em 72h" inputSequences="//@sequence.8" outputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="7037" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Melhora" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Houve melhora?" url="" id="3015">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="5650" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="7038" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Information" id="7039" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Finalizar Protocolo" description="Liberar paciente e finalizar protocolo" isTerminal="true" inputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Process" id="7040" type="Processo" type_verbose="Processo" url="" name="Encaminhar Paciente &#xe0; Urg&#xea;ncia" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Aten&amp;ccedil;&amp;atilde;o!&lt;br />&#xA;Encaminhar paciente para Urg&amp;ecirc;ncia&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.3">
+    <action id="410" process_id="7040" service="encaminhar_urgencia_msf" description="Encaminhar"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="7261" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="7262" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Vertigem Posicional)" description="Vertigem Posicional">
+    <operation name="Vertigem Posicional" Operator="greaterOrEqual" id="5654">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas Vertigem Periferica" Operator="addition" id="5652">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_intensa" id="5459" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_horizontal" id="5460" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_fatigavel" id="5641" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="tinitus_ou_hipocacusia" id="5642" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5651" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="7263" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Vertigem Central)" description="Paciente apresenta sinais de Vertigem Central">
+    <operation name="Vertigem Central" Operator="greaterOrEqual" id="5655">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas Vertigem Central" Operator="addition" id="5653">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_branda" id="5643" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_ataxico" id="5644" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_nao_fatigavel" id="5645" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="outros_sintomas_neurologicos" id="5646" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="5651" weight="1"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.5" id="7264" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (sintomas para urgencia)" description="sintomas para urgencia">
+    <operation name="sintomas para urgencia" Operator="affirmation" id="5656">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_urgencia" id="5647" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="7265" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="7266" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.6" id="7267" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (M&#xe9;ni&#xe8;re)" description="M&#xe9;ni&#xe8;re">
+    <operation name="M&#xe9;ni&#xe8;re" Operator="affirmation" id="5657">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_meniere" id="5649" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.6" id="7268" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (VPPB)" description="VPPB">
+    <operation name="VPPB" Operator="affirmation" id="5658">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_vppb" id="5648" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="7269" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (sem encaminhamentos)" description="sem encaminhamentos">
+    <operation name="sem sintomas de urgencia" id="5659">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_urgencia" id="5647" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="7270" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.9" id="7271" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="Incondicional"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="7272" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (houve melhora)" description="houve melhora">
+    <operation name="houve melhor" Operator="affirmation" id="5660">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="5650" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.8" id="7273" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhor" id="5661">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="5650" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <category name="Vertigem  Perif&#xe9;rico" question="//@element.1/@questions.0 //@element.1/@questions.1 //@element.1/@questions.2 //@element.1/@questions.3"/>
+  <category name="Vertigem  central" question="//@element.1/@questions.4 //@element.1/@questions.5 //@element.1/@questions.6 //@element.1/@questions.7"/>
+  <operation name="Sintomas Vertigem Periferica" Operator="addition" id="5652">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_intensa" id="5459" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_horizontal" id="5460" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_fatigavel" id="5641" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="tinitus_ou_hipocacusia" id="5642" weight="1" value="false"/>
+  </operation>
+  <operation name="Sintomas Vertigem Central" Operator="addition" id="5653">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_branda" id="5643" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_ataxico" id="5644" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_nao_fatigavel" id="5645" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="outros_sintomas_neurologicos" id="5646" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_intensa" id="5459" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_horizontal" id="5460" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_fatigavel" id="5641" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tinitus_ou_hipocacusia" id="5642" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_branda" id="5643" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_ataxico" id="5644" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nistagmo_nao_fatigavel" id="5645" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outros_sintomas_neurologicos" id="5646" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="encaminhar_urgencia" id="5647" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_vppb" id="5648" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_meniere" id="5649" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="5650" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="5651" weight="1"/>
+</pathwayMetamodel:Pathway>

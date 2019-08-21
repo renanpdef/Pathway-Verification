@@ -14,10 +14,11 @@ public class PathwayVerificationMain {
 		String path = "Pathways/";
 		File file = new File(path);
 		String[] pathwayFiles =  file.list();
-		String pathwayFile = path + pathwayFiles[0];
+		String pathwayFile = path + pathwayFiles[73];
         
         PathwayReader pathwayReader = new PathwayReader(pathwayFile);
         Pathway pathway = pathwayReader.createPathway();
+        System.out.println(pathway.getName());
         FindSolutions findSolutions = new FindSolutions(pathway);
         FindInaccessibleStep inaccessibleStep = new FindInaccessibleStep(pathway);
         

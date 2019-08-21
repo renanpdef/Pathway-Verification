@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" url="" name="Trabalho de Parto Prematuro" code="">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35181" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar condi&#xe7;&#xf5;es" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>IG entre 24 semanas e 36 semanas e 6 dias.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Contra&amp;ccedil;&amp;otilde;es persistentes.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Discreto STV.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:20px&quot;>Perda de tamp&amp;atilde;o mucoso.&lt;/span>&lt;/li>&#xA;&lt;/ul>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Avaliar condi&#xe7;&#xf5;es:" url="" id="16441">
+      <answers xsi:type="pathwayMetamodel:Choice" name="condicoes" id="33581" weight="1" value="0.0">
+        <option description="&lt; 3 cm e &lt; 80% apagado" weight="1"/>
+        <option description=">= 3 cm ou 80% apagado" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35182" type="Tratamento" type_verbose="Tratamento" url="" name="Internamento" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:20px&quot;>INTERNAR PACIENTE&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>N&amp;Atilde;O INIBIR SE MEMBRANA ROTA, A MENOS QUE A UNIDADE N&amp;Atilde;O TENHA SUPORTE PARA O REC&amp;Eacute;M NASCIDO.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Sulfato Mg+2 em IG &amp;lt; 32 semanas.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Usar antibi&amp;oacute;tico somente se:&lt;/span>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>SWAB positivo ou desconhecido.&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.0 //@sequence.6">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente em trabalho de parto prematuro" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente em trabalho de parto prematuro" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="Paciente em trabalho de parto prematuro" clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA" exam_id="33010110" limb_side="" quantity="1" reason="TRABALHO DE PARTO PREMATURO" clinical_indication="n/a"/>
+    <medication url="" med_id="182122" id="19901" name="NIFEDIPINO RETARD 20 MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="20" cycles="1" treatement_time="19901" frequency="1" standard="null"/>
+    <medication url="" med_id="182122" id="19902" name="NIFEDIPINO RETARD 20 MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="20" cycles="1" treatement_time="19902" frequency="8" standard="null"/>
+    <medication url="" med_id="37125" id="19903" name="CELESTONE 4MG AMPL 1 ML" brand="" unit="MG" access="5" daily_dosage="12" cycles="1" treatement_time="19903" frequency="24" standard="null"/>
+    <medication url="" med_id="75116" id="19904" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="19904" frequency="6" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:9581,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:197}"/>
+    <medication url="" med_id="75116" id="19905" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="19905" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:4,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:9582,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:197}"/>
+    <medication url="" med_id="43931" id="19906" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="GR" access="6" daily_dosage="6" cycles="1" treatement_time="19906" standard="null"/>
+    <medication url="" med_id="43931" id="19907" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="GR" access="6" daily_dosage="12" cycles="1" treatement_time="19907" standard="null"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente em trabalho de parto prematuro" clinical_indication="n/a" quantity="1"/>
+    <procedure url="CARDIOTOCOGRAFIA INTRAPARTO (POR HORA) ATE 6 HORAS EXTERNA" procedure="20202024" quantity="1"/>
+    <procedure url="SCALP SALINIZADO" procedure="75130064" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35183" type="Tratamento" type_verbose="Tratamento" url="" name="[&lt; 3 cm e &lt; 80% apagado] Conduta" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Avaliar vitalidade fetal e infec&amp;ccedil;&amp;otilde;es.&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Obs: Entre 24s - 27s6d, ausculta fetal intermitente.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Paciente em trabalho de parto prematuro" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Paciente em trabalho de parto prematuro" clinical_indication="n/a"/>
+    <medication url="" med_id="43800" id="19908" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="19908" standard="null"/>
+    <medication url="" med_id="36161" id="19909" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="ML" access="6" daily_dosage="1" cycles="1" treatement_time="19909" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:9583,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1325}"/>
+    <medication url="" med_id="36064" id="19910" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="19910" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;DILUIDO EM &#xc1;GUA DESTILADA&quot;,&quot;id&quot;:9584,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Cont&#xed;nuo&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1717}"/>
+    <procedure url="CARDIOTOCOGRAFIA INTRAPARTO (POR HORA) ATE 6 HORAS EXTERNA" procedure="20202024" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35184" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar" description="" inputSequences="//@sequence.2 //@sequence.5" outputSequences="//@sequence.3 //@sequence.4 //@sequence.6 //@sequence.7 //@sequence.8 //@sequence.9">
+    <questions text="Reavaliar ap&#xf3;s 2 &#xe0; 6 horas:" url="" id="16442">
+      <answers xsi:type="pathwayMetamodel:Choice" name="reavaliacao" id="33582" weight="1" value="0.0">
+        <option description="Melhorou" weight="1"/>
+        <option description="N&#xe3;o melhorou" weight="2"/>
+        <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="3"/>
+        <option description="Cistete/Pielonefrite" weight="4"/>
+        <option description="SFA/Descolamento placenta" weight="5"/>
+        <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="35185" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Reavaliar novamente" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Reavaliar novamente ap&amp;oacute;s 2 &amp;agrave; 6 horas.&amp;nbsp;&lt;/span>&lt;/p>"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="35186" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Encaminhar para ITU" description="" isTerminal="true" inputSequences="//@sequence.7">
+    <pathways>H057</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="35187" type="Receita" type_verbose="Receita" url="" name="Alta com orienta&#xe7;&#xf5;es" description="" isTerminal="true" inputSequences="//@sequence.3">
+    <item id="12801" url="" name="Paracetamol 750 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 06/06h se dor."/>
+    <item id="12802" url="" name="Buscoduo 10 mg/500 mg _____ 1 cx" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Tomar 01 comprimido de 06/06h se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="35188" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar 2&#xba;" description="">
+    <questions text="Reavaliar ap&#xf3;s 2 &#xe0; 6 horas:" url="" id="16443">
+      <answers xsi:type="pathwayMetamodel:Choice" name="2_reavaliacao" id="33583" weight="1" value="0.0">
+        <option description="Melhorou" weight="1"/>
+        <option description="N&#xe3;o melhorou" weight="2"/>
+        <option description="SFA/Deslocamento placenta" weight="3"/>
+        <option description="Cistete/Pielonefrite" weight="4"/>
+        <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="5"/>
+        <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35189" type="Tratamento" type_verbose="Tratamento" url="" name="Reavaliar novamente ap&#xf3;s 2 &#xe0; 6 horas." description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Discutir caso com&amp;nbsp;equipe na segunda reavalia&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/p>" inputSequences="//@sequence.4" outputSequences="//@sequence.5">
+    <admission url="ADMISSION" admission="45990000" reason="n/a" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35190" type="Tratamento" type_verbose="Tratamento" url="" name="Internar" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:20px&quot;>Internar para resolu&amp;ccedil;&amp;atilde;o da gesta&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.8">
+    <admission url="ADMISSION" admission="45990000" reason="trabalho de parto prematuro" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="35191" type="Tratamento" type_verbose="Tratamento" url="" name="Individualizar conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:20px&quot;>Individualizar conduta em internamento.&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.9">
+    <admission url="ADMISSION" admission="45990000" reason="Trabalho de parto prematuro" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="35192" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (>=3 cm ou 80% apagado)" description=">=3 cm ou 80% apagado">
+    <operation name=">=3 cm ou 80% apagado" Operator="equal" id="33590">
+      <operand xsi:type="pathwayMetamodel:Choice" name="condicoes" id="33581" weight="1" value="0.0">
+        <option description="&lt; 3 cm e &lt; 80% apagado" weight="1"/>
+        <option description=">= 3 cm ou 80% apagado" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33585" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="35193" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (&lt; 3 cm e &lt; 80% apagado)" description="&lt; 3 cm e &lt; 80% apagado">
+    <operation name="&lt; 3 cm e &lt; 80% apagado" Operator="equal" id="33591">
+      <operand xsi:type="pathwayMetamodel:Choice" name="condicoes" id="33581" weight="1" value="0.0">
+        <option description="&lt; 3 cm e &lt; 80% apagado" weight="1"/>
+        <option description=">= 3 cm ou 80% apagado" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33584" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="35194" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="35195" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (melhorou)" description="melhorou">
+    <operation name="melhorou" Operator="equal" id="33592">
+      <operand xsi:type="pathwayMetamodel:Choice" name="reavaliacao" id="33582" weight="1" value="0.0">
+        <option description="Melhorou" weight="1"/>
+        <option description="N&#xe3;o melhorou" weight="2"/>
+        <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="3"/>
+        <option description="Cistete/Pielonefrite" weight="4"/>
+        <option description="SFA/Descolamento placenta" weight="5"/>
+        <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="33584" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.3" id="35196" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (n&#xe3;o melhorou)" description="n&#xe3;o melhorou">
+    <operation name="n&#xe3;o melhorou" Operator="equal" id="33593">
+      <operand xsi:type="pathwayMetamodel:Choice" name="reavaliacao" id="33582" weight="1" value="0.0">
+        <option description="Melhorou" weight="1"/>
+        <option description="N&#xe3;o melhorou" weight="2"/>
+        <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="3"/>
+        <option description="Cistete/Pielonefrite" weight="4"/>
+        <option description="SFA/Descolamento placenta" weight="5"/>
+        <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="33585" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.8" id="35197" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.3" id="35198" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (evolu&#xe7;&#xe3;o)" description="evolu&#xe7;&#xe3;o">
+    <operation name="evolu&#xe7;&#xe3;o" Operator="equal" id="33594">
+      <operand xsi:type="pathwayMetamodel:Choice" name="reavaliacao" id="33582" weight="1" value="0.0">
+        <option description="Melhorou" weight="1"/>
+        <option description="N&#xe3;o melhorou" weight="2"/>
+        <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="3"/>
+        <option description="Cistete/Pielonefrite" weight="4"/>
+        <option description="SFA/Descolamento placenta" weight="5"/>
+        <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="33586" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="35199" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (cistite/pielonefrite)" description="cistite/pielonefrite">
+    <operation name="cistite/pielonefrite" Operator="equal" id="33595">
+      <operand xsi:type="pathwayMetamodel:Choice" name="reavaliacao" id="33582" weight="1" value="0.0">
+        <option description="Melhorou" weight="1"/>
+        <option description="N&#xe3;o melhorou" weight="2"/>
+        <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="3"/>
+        <option description="Cistete/Pielonefrite" weight="4"/>
+        <option description="SFA/Descolamento placenta" weight="5"/>
+        <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="33587" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.3" id="35200" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (SFA/descolamento placenta)" description="SFA/descolamento placenta">
+    <operation name="SFA/descolamento placenta" Operator="equal" id="33596">
+      <operand xsi:type="pathwayMetamodel:Choice" name="reavaliacao" id="33582" weight="1" value="0.0">
+        <option description="Melhorou" weight="1"/>
+        <option description="N&#xe3;o melhorou" weight="2"/>
+        <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="3"/>
+        <option description="Cistete/Pielonefrite" weight="4"/>
+        <option description="SFA/Descolamento placenta" weight="5"/>
+        <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="5" id="33588" weight="1" value="5.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.3" id="35201" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (corioamnionite)" description="corioamnionite">
+    <operation name="corioamnionite" Operator="equal" id="33597">
+      <operand xsi:type="pathwayMetamodel:Choice" name="reavaliacao" id="33582" weight="1" value="0.0">
+        <option description="Melhorou" weight="1"/>
+        <option description="N&#xe3;o melhorou" weight="2"/>
+        <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="3"/>
+        <option description="Cistete/Pielonefrite" weight="4"/>
+        <option description="SFA/Descolamento placenta" weight="5"/>
+        <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="6" id="33589" weight="1" value="6.0"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:Choice" name="condicoes" id="33581" weight="1" value="0.0">
+    <option description="&lt; 3 cm e &lt; 80% apagado" weight="1"/>
+    <option description=">= 3 cm ou 80% apagado" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="reavaliacao" id="33582" weight="1" value="0.0">
+    <option description="Melhorou" weight="1"/>
+    <option description="N&#xe3;o melhorou" weight="2"/>
+    <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="3"/>
+    <option description="Cistete/Pielonefrite" weight="4"/>
+    <option description="SFA/Descolamento placenta" weight="5"/>
+    <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="2_reavaliacao" id="33583" weight="1" value="0.0">
+    <option description="Melhorou" weight="1"/>
+    <option description="N&#xe3;o melhorou" weight="2"/>
+    <option description="SFA/Deslocamento placenta" weight="3"/>
+    <option description="Cistete/Pielonefrite" weight="4"/>
+    <option description="Evolu&#xe7;&#xe3;o para >=3 cm ou 80% apagado" weight="5"/>
+    <option description="Corioamnionite ou outras infec&#xe7;&#xf5;es graves" weight="6"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="33584" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="33585" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="33586" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="33587" weight="1" value="4.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="33588" weight="1" value="5.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="6" id="33589" weight="1" value="6.0"/>
+</pathwayMetamodel:Pathway>
