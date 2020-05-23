@@ -1,6 +1,6 @@
 # Protocol Verification
 
-Perform a verification of protocols on XMI file. To right protocols, it is analysed if there are not deadlock or nondeterminism in the protocol.
+Perform a verification of care pathways on XMI file. To right pathway, it is analysed if there are no deadlock, nondeterminism, inaccessible step and equivalent transition in the pathway.
 
 ## Getting Started
 
